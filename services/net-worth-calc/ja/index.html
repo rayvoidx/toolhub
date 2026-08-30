@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-Ooh320aUE858nHu2PWDEXddrJvbD5Ro3rS5f4tYx9X0=' 'sha256-lUGS088Z9pX5MOwfEj4V0vYMao/guSeUnRA+Pf0yhBg=' 'sha256-cscWP5KAyhCt/t6BrxtbjsfyYJIbFMIts9v4OR664QQ='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>純資産計算ツール — 資産から負債を引いた額</title>
+<meta name="description" content="現金・投資・住宅・車を足し、住宅ローンや学費ローン、カード残高を引いて純資産を即座に計算します。負債比率と流動・非流動資産の内訳も表示します。">
+<meta name="keywords" content="net worth calculator, how to calculate net worth, net worth by age, assets minus liabilities, personal balance sheet, debt to asset ratio">
+<link rel="canonical" href="https://tool-hub.me/net-worth-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/net-worth-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/net-worth-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/net-worth-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/net-worth-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/net-worth-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/net-worth-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/net-worth-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/net-worth-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/net-worth-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/net-worth-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/net-worth-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/net-worth-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/net-worth-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/net-worth-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/net-worth-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="純資産計算ツール — 資産から負債を引いた額">
+<meta property="og:description" content="現金・投資・住宅・車を足し、住宅ローンや学費ローン、カード残高を引いて純資産を即座に計算します。負債比率と流動・非流動資産の内訳も表示します。">
+<meta property="og:url" content="https://tool-hub.me/net-worth-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/net-worth-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14532d">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Net Worth Calculator",
+  "description": "Calculate your net worth in seconds. Add cash, investments, home and vehicles, subtract mortgage, loans and credit cards, and see your debt-to-asset ratio.",
+  "url": "https://tool-hub.me/net-worth-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Net Worth Calculator",
+      "item": "https://tool-hub.me/net-worth-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I include my house in net worth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There are two camps, and this calculator includes it: a home is an asset with a market value, and subtracting the mortgage leaves only your equity. The objection is fair though — home equity cannot pay next month's bills. That is why the liquid versus illiquid line is shown separately, so you can read both views from one calculation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the median net worth by age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "From the Federal Reserve's 2022 Survey of Consumer Finances, US medians run roughly $39,000 under 35, $135,000 for 35-44, $247,000 for 45-54 and $364,000 for 55-64. These are medians, not averages, because averages are pulled upward by the very wealthy. Treat them as ballpark context rather than a target — housing costs and pension type shift the picture enormously."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I recalculate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quarterly is the sweet spot. Monthly turns ordinary market noise into false progress or false panic, and yearly is too slow to catch a habit drifting the wrong way. Pick the same day each quarter and value everything the same way each time, so the trend line means something."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a 401(k) or pension count at face value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is counted in full here, but a traditional 401(k), IRA or SIPP is pre-tax money, so income tax is due on withdrawal. The spendable value is nearer 70-85% of the balance depending on your retirement tax band. Roth and ISA balances are already after tax, so no discount applies to those."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Net Worth Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Net Worth Calculator</span></nav>
+  <section class="hero">
+    <h1>Net Worth Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Everything you own minus everything you owe. One honest number, checked every quarter.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+      #tool h3 { font-size:15px; margin:0 0 8px; }
+      #tool label { display:block; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:28px; }
+      #tool .rc-val.negative { color:#dc2626; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool #r-neg { font-size:14px; margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:560px){ #tool .cols { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="cols">
+      <div>
+        <h3 data-i18n="tool.assets.h">Assets — what you own</h3>
+        <label for="a-cash" data-i18n="tool.a.cash">Cash and savings</label>
+        <input type="number" id="a-cash" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="15000">
+        <label for="a-invest" data-i18n="tool.a.invest">Investments and retirement</label>
+        <input type="number" id="a-invest" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="60000">
+        <label for="a-home" data-i18n="tool.a.home">Home and property value</label>
+        <input type="number" id="a-home" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="350000">
+        <label for="a-vehicles" data-i18n="tool.a.vehicles">Vehicles</label>
+        <input type="number" id="a-vehicles" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="18000">
+        <label for="a-other" data-i18n="tool.a.other">Other assets</label>
+        <input type="number" id="a-other" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="5000">
+        <label for="a-taxrate" data-i18n="tool.a.taxrate">Retirement tax rate on pre-tax accounts (optional, %)</label>
+        <input type="number" id="a-taxrate" inputmode="decimal" min="0" max="60" step="any" autocomplete="off" placeholder="0">
+      </div>
+      <div>
+        <h3 data-i18n="tool.liab.h">Liabilities — what you owe</h3>
+        <label for="l-mortgage" data-i18n="tool.l.mortgage">Mortgage balance</label>
+        <input type="number" id="l-mortgage" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="280000">
+        <label for="l-car" data-i18n="tool.l.car">Car loans</label>
+        <input type="number" id="l-car" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12000">
+        <label for="l-student" data-i18n="tool.l.student">Student loans</label>
+        <input type="number" id="l-student" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="20000">
+        <label for="l-cards" data-i18n="tool.l.cards">Credit cards</label>
+        <input type="number" id="l-cards" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="3000">
+        <label for="l-other" data-i18n="tool.l.other">Other debts</label>
+        <input type="number" id="l-other" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate net worth</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.net">Net worth</div>
+          <div class="rc-val" id="r-net">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.assets">Total assets</div><div class="rc-val" id="r-assets">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.liab">Total liabilities</div><div class="rc-val" id="r-liab">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.ratio">Debt-to-asset ratio</div><div class="rc-val" id="r-ratio">—</div></div>
+        <div class="rcard" id="c-equity" hidden><div class="rc-label" data-i18n="tool.r.equity">Home equity</div><div class="rc-val" id="r-equity">—</div></div>
+        <div class="rcard" id="c-aftertax" hidden><div class="rc-label" data-i18n="tool.r.aftertax">Net worth after retirement tax</div><div class="rc-val" id="r-aftertax">—</div></div>
+        <div class="rcard" id="c-exhome" hidden><div class="rc-label" data-i18n="tool.r.exhome">Net worth excluding home</div><div class="rc-val" id="r-exhome">—</div></div>
+      </div>
+      <p class="subtle" id="r-split"></p>
+      <p id="r-neg" data-i18n="tool.neg" hidden>A negative number is a starting line, not a verdict. Paying down the highest-rate balance moves it fastest — keep going.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Estimates only. Property values are your own guess and pre-tax retirement accounts are counted at face value.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How to calculate net worth</h2>
+    <p>Net worth is the simplest number in personal finance and the hardest to fake: add up everything you own, subtract everything you owe, and whatever is left is yours. Income tells you what came in this month. Net worth tells you what you actually kept. Someone earning 
+
+  80,000 with a leased car, a maxed card and no savings can easily sit below someone earning $70,000 who has paid down a mortgage for a decade.</p>
+    <p>The formula is <strong>assets minus liabilities</strong>. Assets are cash and savings, brokerage and retirement balances, the market value of your home, vehicles at resale value, and anything else you could sell. Liabilities are the payoff balances — not the monthly payments — on your mortgage, car loans, student loans, credit cards and everything else you owe.</p>
+
+    <h3>Worked example: a typical US household</h3>
+    <p>Take the sample values loaded in the calculator. Assets: 
+
+  5,000 cash and savings, $60,000 in investments and retirement, a $350,000 home, 
+
+  8,000 of vehicles and $5,000 of other assets — <strong>$448,000 total</strong>. Liabilities: a $280,000 mortgage balance, 
+
+  2,000 in car loans, $20,000 of student loans and $3,000 on credit cards — <strong>$315,000 total</strong>. Net worth is $448,000 − $315,000 = <strong>
+
+  33,000</strong>.</p>
+    <p>Two secondary numbers do the real work. The debt-to-asset ratio here is 315,000 ÷ 448,000 = <strong>70.3%</strong>, which is normal early in a mortgage and should fall every year. And the liquidity split: only $75,000 of that $448,000 — about 17% — is liquid. The other 83% is a house you live in and cars you drive. That is why a household with six figures of net worth can still be one boiler failure away from the credit card.</p>
+
+    <h3>Should the house be in there?</h3>
+    <p>Two camps, both reasonable. Include it, and the number reflects your full balance sheet the way a lender sees it; a mortgage paid down is genuine wealth, and ignoring the asset while counting the debt would be nonsense. Exclude it, and you get "investable net worth" — the number that actually funds retirement or an emergency. This calculator includes the home and subtracts the mortgage, so only your equity counts, then reports the liquid share separately so you get both readings from one entry.</p>
+
+    <h2>Net worth by age: a sanity check, not a scoreboard</h2>
+    <p>The Federal Reserve's 2022 Survey of Consumer Finances puts median US household net worth near $39,000 under age 35, about 
+
+  35,000 for 35 to 44, roughly $247,000 for 45 to 54, and around $364,000 for 55 to 64. Medians, not averages — the average for the 55 to 64 bracket is several times its median, because a handful of very wealthy households drag the mean upward. UK figures from the ONS Wealth and Assets Survey follow a similar curve once private pension wealth is included.</p>
+    <p>Read those brackets as terrain, not as a grade. A 32-year-old doctor with 
+
+  80,000 of student debt can be deeply negative and doing fine; a 60-year-old with a paid-off house and a defined-benefit pension may look average on paper and be extremely secure. The bracket you sit in matters far less than the direction you are moving each quarter.</p>
+
+    <h2>Which lever moves the number fastest</h2>
+    <p>In rough priority order: kill balances above about 8% interest first — credit cards at 22% are a guaranteed 22% return, which no investment offers reliably. Second, capture any employer retirement match in full; that is an instant 50-100% return on those dollars. Third, raise the gap between income and spending, because every long-term projection is driven by savings rate far more than by picking good funds. Fourth, avoid new depreciating debt: a financed car destroys net worth from both ends, adding a liability while the asset behind it loses value.</p>
+
+    <h3>What this calculator will not tell you</h3>
+    <p>It counts pre-tax retirement accounts at face value, so a traditional 401(k) or SIPP is worth perhaps 70-85% of the figure shown once withdrawal tax is applied. Property values are your own estimate, and estimates drift optimistic — check a recent comparable sale rather than the number in your head. Illiquid business equity, restricted stock before vesting and pending legal settlements all need judgment this tool does not have. Recalculate on the same day each quarter using the same valuation method; the slope of the line, not any single reading, is the information you are after.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.federalreserve.gov/econres/scfindex.htm" target="_blank" rel="noopener">Federal Reserve Survey of Consumer Finances — US household net worth, assets and debt by age and income</a></li>
+      <li><a href="https://www.consumerfinance.gov/consumer-tools/debt-collection/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — guidance on managing and paying down consumer debt</a></li>
+      <li><a href="https://www.irs.gov/retirement-plans" target="_blank" rel="noopener">IRS Retirement Plans — how 401(k) and IRA balances are taxed on withdrawal</a></li>
+      <li><a href="https://www.gov.uk/plan-retirement-income" target="_blank" rel="noopener">GOV.UK — planning retirement income and valuing UK pensions</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/npv-irr-calc/"><span class="related-ico" aria-hidden="true">📉</span><span class="related-name">NPV Calculator</span></a><a class="related-item" href="https://tool-hub.me/overtime-pay-calc/"><span class="related-ico" aria-hidden="true">⏰</span><span class="related-name">Overtime Pay Calculator</span></a><a class="related-item" href="https://tool-hub.me/paycheck-calc/"><span class="related-ico" aria-hidden="true">💵</span><span class="related-name">Paycheck Calculator</span></a><a class="related-item" href="https://tool-hub.me/percent-calc/"><span class="related-ico" aria-hidden="true">％</span><span class="related-name">Percentage Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Should I include my house in net worth?</summary><p data-i18n="faq.a1">There are two camps, and this calculator includes it: a home is an asset with a market value, and subtracting the mortgage leaves only your equity. The objection is fair though — home equity cannot pay next month's bills. That is why the liquid versus illiquid line is shown separately, so you can read both views from one calculation.</p></details>
+    <details><summary data-i18n="faq.q2">What is the median net worth by age?</summary><p data-i18n="faq.a2">From the Federal Reserve's 2022 Survey of Consumer Finances, US medians run roughly $39,000 under 35, $135,000 for 35-44, $247,000 for 45-54 and $364,000 for 55-64. These are medians, not averages, because averages are pulled upward by the very wealthy. Treat them as ballpark context rather than a target — housing costs and pension type shift the picture enormously.</p></details>
+    <details><summary data-i18n="faq.q3">How often should I recalculate?</summary><p data-i18n="faq.a3">Quarterly is the sweet spot. Monthly turns ordinary market noise into false progress or false panic, and yearly is too slow to catch a habit drifting the wrong way. Pick the same day each quarter and value everything the same way each time, so the trend line means something.</p></details>
+    <details><summary data-i18n="faq.q4">Does a 401(k) or pension count at face value?</summary><p data-i18n="faq.a4">It is counted in full here, but a traditional 401(k), IRA or SIPP is pre-tax money, so income tax is due on withdrawal. The spendable value is nearer 70-85% of the balance depending on your retirement tax band. Roth and ISA balances are already after tax, so no discount applies to those.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

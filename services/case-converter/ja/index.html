@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-pgHjoI2LFUGBUgB9MxFaJvFvGS7QlSb13145iMMQx78=' 'sha256-/NW2ftNF7+N8buRmYKS29Sb7eondZIJ2wKDNK/X7wtg=' 'sha256-81LcsZtk3M97+exSg+Ii3gf2Bqfn/wtIksmbK+13hUE='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大文字・小文字変換ツール</title>
+<meta name="description" content="無料のオンライン大文字・小文字変換ツール。テキストを貼り付けるだけで、UPPERCASE・小文字・Title Case・Sentence case・camelCase・PascalCase・snake_case・CONSTANT_CASE・kebab-case・dot.case に即変換 — どの結果もワンクリックでコピー。すべてブラウザ内で動作し、何もアップロードされません。">
+<meta name="keywords" content="case converter, 대소문자 변환기, convert case online, uppercase lowercase converter, camelCase snake_case converter">
+<link rel="canonical" href="https://tool-hub.me/case-converter/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/case-converter/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/case-converter/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/case-converter/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/case-converter/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/case-converter/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/case-converter/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/case-converter/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/case-converter/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/case-converter/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/case-converter/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/case-converter/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/case-converter/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/case-converter/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/case-converter/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/case-converter/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="大文字・小文字変換ツール">
+<meta property="og:description" content="無料のオンライン大文字・小文字変換ツール。テキストを貼り付けるだけで、UPPERCASE・小文字・Title Case・Sentence case・camelCase・PascalCase・snake_case・CONSTANT_CASE・kebab-case・dot.case に即変換 — どの結果もワンクリックでコピー。すべてブラウザ内で動作し、何もアップロードされません。">
+<meta property="og:url" content="https://tool-hub.me/case-converter/ja/">
+<meta property="og:image" content="https://tool-hub.me/case-converter/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c3aed">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Case Converter",
+  "description": "Free online case converter. Paste text to instantly convert it to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case and dot.case — copy any result with one click. Runs entirely in your browser; nothing is uploaded.",
+  "url": "https://tool-hub.me/case-converter/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Case Converter",
+      "item": "https://tool-hub.me/case-converter/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What text case formats does this case converter support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This convert case tool outputs twelve formats at once. The general cases are UPPERCASE, lowercase, Title Case, Sentence case, aLtErNaTiNg and tOGGLE cASE — a complete uppercase lowercase converter for everyday writing. The programmer cases are camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case and dot.case. Every result is shown on its own card so you can click to copy the exact case you need."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "camelCase vs snake_case vs kebab-case — when should I use each?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "These are naming conventions programmers use for identifiers. camelCase (myVariableName) is common for JavaScript and Java variables; PascalCase (MyClassName) for classes and types; snake_case (my_variable_name) for Python and Ruby; CONSTANT_CASE for constants and environment variables; kebab-case (my-file-name) for URLs, CSS classes and file names; and dot.case for config keys and namespaces. This camelCase snake_case converter lets you switch any identifier between them instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is my text split into words for the programmer cases, and why are non-Latin characters skipped?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For the programmer cases the converter first tokenises your text into words: it inserts a boundary between a lowercase or digit and an uppercase letter (so myXML becomes my XML), keeps acronyms intact (HTTPServer becomes HTTP Server), and then splits on any separator — spaces, underscores, hyphens or dots. Only Latin letters and digits (A–Z, 0–9) form identifier tokens, so Chinese, Korean, Arabic or emoji are skipped because those scripts have no case and are not valid in code identifiers. The general cases keep your original text and spacing untouched."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do Title Case and Sentence case differ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Title Case capitalises the first letter of every word — Convert Your Text Like This — which suits headlines and titles. Sentence case capitalises only the first letter of each sentence (after a period, question mark or exclamation mark) and leaves the rest lowercase — Convert your text like this. Use Title Case for headings and Sentence case for body copy and normal prose."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This case converter runs entirely in your browser — nothing you type is ever uploaded, logged or shared, so it is safe for confidential text and code. Your most recent input is optionally saved to this browser's local storage so it is still here when you return; untick the save option to keep it for this session only, and clearing the box removes the stored copy."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 2026-08-02 모바일 360px 오버플로 수리 (qa-deep) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Case Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#7c3aed" href="https://tool-hub.me/text-tools/">Text</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Case Converter</span></nav>
+  <section class="hero">
+    <h1>Case Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Paste your text and get every case at once — UPPERCASE, lowercase, Title, camelCase, snake_case and more. Click any card to copy.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <label for="cc-text" data-i18n="tool.textLabel">Your text</label>
+    <textarea id="cc-text" rows="6" dir="auto" autocomplete="off" spellcheck="false"
+      placeholder="Paste or type your text here…" data-i18n-placeholder="tool.textPlaceholder"
+      style="resize:vertical;line-height:1.6;"></textarea>
+
+    <div style="display:flex;align-items:center;gap:.9rem;margin-top:.8rem;flex-wrap:wrap;">
+      <button type="button" class="btn" id="cc-clear" data-i18n="tool.clear" style="width:auto;">Clear</button>
+      <label style="display:flex;align-items:center;gap:.45rem;margin:0;font-weight:400;cursor:pointer;">
+        <input type="checkbox" id="cc-remember" checked style="width:auto;margin:0;">
+        <span data-i18n="tool.remember">Save my text in this browser</span>
+      </label>
+    </div>
+
+    <div class="result" id="cc-result">
+      <p id="cc-hint" style="margin:0" data-i18n="tool.hint">Type or paste text above and every case appears here — click any card to copy its result.</p>
+      <p id="cc-feedback" aria-live="polite" hidden style="margin:.5rem 0 0;font-weight:600;color:var(--accent);"></p>
+    </div>
+
+    <h3 data-i18n="tool.generalHeading" style="font-size:.9rem;letter-spacing:.02em;text-transform:uppercase;color:var(--muted);margin:1.4rem 0 .1rem;">General cases</h3>
+    <div id="cc-grid-general" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.7rem;margin-top:.6rem;">
+      <button type="button" class="case-card" id="cc-upper" title="Click to copy" data-i18n-title="tool.copyHint" style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);display:flex;flex-direction:column;gap:.3rem;min-width:0;">
+        <span style="font-size:.74rem;font-weight:700;color:var(--muted);" data-i18n="tool.upper">UPPERCASE</span>
+        <span class="case-val" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95rem;line-height:1.4;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere;">—</span>
+      </button>
+      <button type="button" class="case-card" id="cc-lower" title="Click to copy" data-i18n-title="tool.copyHint" style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);display:flex;flex-direction:column;gap:.3rem;min-width:0;">
+        <span style="font-size:.74rem;font-weight:700;color:var(--muted);" data-i18n="tool.lower">lowercase</span>
+        <span class="case-val" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95rem;line-height:1.4;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere;">—</span>
+      </button>
+      <button type="button" class="case-card" id="cc-title" title="Click to copy" data-i18n-title="tool.copyHint" style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);display:flex;flex-direction:column;gap:.3rem;min-width:0;">
+        <span style="font-size:.74rem;font-weight:700;color:var(--muted);" data-i18n="tool.title">Title Case</span>
+        <span class="case-val" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95rem;line-height:1.4;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere;">—</span>
+      </button>
+      <button type="button" class="case-card" id="cc-sentence" title="Click to copy" data-i18n-title="tool.copyHint" style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);display:flex;flex-direction:column;gap:.3rem;min-width:0;">
+        <span style="font-size:.74rem;font-weight:700;color:var(--muted);" data-i18n="tool.sentence">Sentence case</span>
+        <span class="case-val" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95rem;line-height:1.4;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere;">—</span>
+      </button>
+      <button type="button" class="case-card" id="cc-alternating" title="Click to copy" data-i18n-title="tool.copyHint" style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);display:flex;flex-direction:column;gap:.3rem;min-width:0;">
+        <span style="font-size:.74rem;font-weight:700;color:var(--muted);" data-i18n="tool.alternating">aLtErNaTiNg</span>
+        <span class="case-val" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95rem;line-height:1.4;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere;">—</span>
+      </button>
+      <button type="button" class="case-card" id="cc-toggle" title="Click to copy" data-i18n-title="tool.copyHint" style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);display:flex;flex-direction:column;gap:.3rem;min-width:0;">
+        <span style="font-size:.74rem;font-weight:700;color:var(--muted);" data-i18n="tool.toggle">tOGGLE cASE</span>
+        <span class="case-val" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95rem;line-height:1.4;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere;">—</span>
+      </button>
+    </div>
+
+    <h3 data-i18n="tool.developerHeading" style="font-size:.9rem;letter-spacing:.02em;text-transform:uppercase;color:var(--muted);margin:1.4rem 0 .1rem;">Programmer cases</h3>
+    <div id="cc-grid-developer" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.7rem;margin-top:.6rem;">
+      <button type="button" class="case-card" id="cc-camel" title="Click to copy" data-i18n-title="tool.copyHint" style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);display:flex;flex-direction:column;gap:.3rem;min-width:0;">
+        <span style="font-size:.74rem;font-weight:700;color:var(--muted);" data-i18n="tool.camel">camelCase</span>
+        <span class="case-val" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95rem;line-height:1.4;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere;">—</span>
+      </button>
+      <button type="button" class="case-card" id="cc-pascal" title="Click to copy" data-i18n-title="tool.copyHint" style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);display:flex;flex-direction:column;gap:.3rem;min-width:0;">
+        <span style="font-size:.74rem;font-weight:700;color:var(--muted);" data-i18n="tool.pascal">PascalCase</span>
+        <span class="case-val" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95rem;line-height:1.4;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere;">—</span>
+      </button>
+      <button type="button" class="case-card" id="cc-snake" title="Click to copy" data-i18n-title="tool.copyHint" style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);display:flex;flex-direction:column;gap:.3rem;min-width:0;">
+        <span style="font-size:.74rem;font-weight:700;color:var(--muted);" data-i18n="tool.snake">snake_case</span>
+        <span class="case-val" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95rem;line-height:1.4;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere;">—</span>
+      </button>
+      <button type="button" class="case-card" id="cc-constant" title="Click to copy" data-i18n-title="tool.copyHint" style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);display:flex;flex-direction:column;gap:.3rem;min-width:0;">
+        <span style="font-size:.74rem;font-weight:700;color:var(--muted);" data-i18n="tool.constant">CONSTANT_CASE</span>
+        <span class="case-val" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95rem;line-height:1.4;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere;">—</span>
+      </button>
+      <button type="button" class="case-card" id="cc-kebab" title="Click to copy" data-i18n-title="tool.copyHint" style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);display:flex;flex-direction:column;gap:.3rem;min-width:0;">
+        <span style="font-size:.74rem;font-weight:700;color:var(--muted);" data-i18n="tool.kebab">kebab-case</span>
+        <span class="case-val" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95rem;line-height:1.4;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere;">—</span>
+      </button>
+      <button type="button" class="case-card" id="cc-dot" title="Click to copy" data-i18n-title="tool.copyHint" style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);display:flex;flex-direction:column;gap:.3rem;min-width:0;">
+        <span style="font-size:.74rem;font-weight:700;color:var(--muted);" data-i18n="tool.dot">dot.case</span>
+        <span class="case-val" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95rem;line-height:1.4;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere;">—</span>
+      </button>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why text case is not just cosmetic</h2>
+    <p>The same word can be a valid variable name, an invalid one, or a completely different identifier depending on how it is cased. <code>userName</code>, <code>UserName</code>, <code>user_name</code> and <code>user-name</code> all describe the same concept, but a JavaScript linter, a Python module, a URL router and a CSS class list each expect a different one of these four. Outside code, case carries meaning too: writing a product name in ALL CAPS reads as shouting in an email but as a legitimate brand style on packaging, and a headline in Title Case signals "heading" to a reader before they've read a single word. This tool exists because switching a block of text between all of these conventions by hand — retyping capitals, swapping every space for an underscore or a hyphen, deciding where word boundaries fall inside a mashed-together identifier — is slow and error-prone, especially across a whole file of variable names or a full paragraph of copy.</p>
+
+    <h3>How to use it</h3>
+    <ol>
+      <li>Paste or type any text into the box — a sentence, a heading, a single identifier, or a multi-line list.</li>
+      <li>All twelve results update as you type; nothing is calculated on a server, so long or sensitive text (API keys, internal field names) never leaves your browser.</li>
+      <li>Click any result card to copy just that case to your clipboard — the card briefly confirms the copy.</li>
+      <li>Leave "Save my text in this browser" ticked to have the box repopulate next time you open the page, or untick it to keep the session private and unsaved.</li>
+    </ol>
+
+    <h3>The two families of case, and how words are found</h3>
+    <p>The six general cases — UPPERCASE, lowercase, Title Case, Sentence case, aLtErNaTiNg and tOGGLE cASE — operate on your text character by character and never touch spacing or punctuation. Sentence case additionally looks for sentence-ending punctuation (<code>.</code>, <code>?</code>, <code>!</code>) so it knows where a new sentence — and therefore a new capital letter — begins.</p>
+    <p>The six programmer cases — camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case and dot.case — work differently: the converter first has to split your input into discrete words, because programming identifiers carry no spaces of their own. It does this by (1) splitting on any existing separator — a space, underscore, hyphen or dot — and (2) inserting an extra boundary wherever a lowercase letter or digit is immediately followed by an uppercase letter, so an identifier like <code>orderTotal2Tax</code> is read as three words: <code>order</code>, <code>total2</code>, <code>tax</code>. A run of consecutive capitals is treated as one acronym rather than split letter-by-letter, so <code>parseHTTPResponse</code> becomes <code>parse</code>, <code>HTTP</code>, <code>response</code> — not <code>parse</code>, <code>h</code>, <code>t</code>, <code>t</code>, <code>p</code>. Once the words are found, each target case reassembles them with its own rule: camelCase lowercases the first word and capitalizes the rest with no separator; snake_case lowercases every word and joins with <code>_</code>; kebab-case does the same with <code>-</code>; CONSTANT_CASE uppercases every word and joins with <code>_</code>.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <strong>Example 1 — a UI label:</strong> input <code>total order amount</code><br>
+      UPPERCASE: <code>TOTAL ORDER AMOUNT</code> · Title Case: <code>Total Order Amount</code> · camelCase: <code>totalOrderAmount</code> · snake_case: <code>total_order_amount</code> · kebab-case: <code>total-order-amount</code> · CONSTANT_CASE: <code>TOTAL_ORDER_AMOUNT</code>
+    </div>
+    <div class="example">
+      <strong>Example 2 — an existing identifier with an acronym:</strong> input <code>getUserIDFromJWT</code><br>
+      Tokenized as: <code>get</code>, <code>user</code>, <code>ID</code>, <code>from</code>, <code>JWT</code> → snake_case: <code>get_user_id_from_jwt</code> · kebab-case: <code>get-user-id-from-jwt</code> · PascalCase: <code>GetUserIdFromJwt</code> · dot.case: <code>get.user.id.from.jwt</code>
+    </div>
+    <div class="example">
+      <strong>Example 3 — a sentence, general cases only:</strong> input <code>please review this. it is urgent!</code><br>
+      Sentence case: <code>Please review this. It is urgent!</code> · Title Case: <code>Please Review This. It Is Urgent!</code> · tOGGLE cASE: <code>PLEASE review THIS. it IS urgent!</code>
+    </div>
+
+    <h3>Quick reference</h3>
+    <table>
+      <tr><th>Case</th><th>Sample</th><th>Typical home</th></tr>
+      <tr><td>camelCase</td><td>orderTotal</td><td>JavaScript / Java / C# variables and functions</td></tr>
+      <tr><td>PascalCase</td><td>OrderTotal</td><td>Class, type and component names</td></tr>
+      <tr><td>snake_case</td><td>order_total</td><td>Python, Ruby, SQL columns</td></tr>
+      <tr><td>CONSTANT_CASE</td><td>ORDER_TOTAL</td><td>Constants, environment variables</td></tr>
+      <tr><td>kebab-case</td><td>order-total</td><td>URLs, CSS classes, file and package names</td></tr>
+      <tr><td>dot.case</td><td>order.total</td><td>Config keys, i18n namespaces, packages</td></tr>
+    </table>
+
+    <h3>Mistakes worth avoiding</h3>
+    <ul>
+      <li>Mixing conventions inside one codebase (a <code>snake_case</code> function calling a <code>camelCase</code> one from the same file) is a common review comment — pick the convention the language community expects and convert everything to match, rather than guessing at each identifier by hand.</li>
+      <li>Renaming an existing identifier is a text transform only — this tool does not update every place that name is referenced in a project. Use it to generate the new name, then rename with your editor's "rename symbol" or a project-wide find-and-replace.</li>
+      <li>Case folding is not reversible in every language: Turkish "İ"/"I" and German "ß" behave differently under case changes than in English, so text mixing scripts or diacritics can produce results that look slightly off compared to a same-language reader's expectation.</li>
+      <li>Only Latin letters and digits form words for the six programmer cases — punctuation-only or non-Latin input (emoji, Korean, Arabic, Chinese) has no letter case, so it passes through the general cases unchanged and is dropped when building identifier cases.</li>
+    </ul>
+
+    <h3>What this tool does not do</h3>
+    <p>It does not validate that a resulting identifier is legal in a specific language (for instance, some languages disallow identifiers that start with a digit) and it does not check for reserved keywords. It also does not translate text between human languages — only the letter casing and word-joining style change, never the words themselves.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.unicode.org/" target="_blank" rel="noopener">Unicode Consortium — case mapping rules for upper, lower and title case</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" rel="noopener">MDN Web Docs — JavaScript String methods used for case conversion</a></li>
+      <li><a href="https://www.w3.org/International/articles/typography/" target="_blank" rel="noopener">W3C Internationalization — how casing behaves across writing systems</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/char-count/"><span class="related-ico" aria-hidden="true">字</span><span class="related-name">Character Counter</span></a><a class="related-item" href="https://tool-hub.me/csv-dedupe/"><span class="related-ico" aria-hidden="true">🧹</span><span class="related-name">CSV Duplicate Remover</span></a><a class="related-item" href="https://tool-hub.me/csv-diff/"><span class="related-ico" aria-hidden="true">📑</span><span class="related-name">Csv Diff</span></a><a class="related-item" href="https://tool-hub.me/find-replace-text/"><span class="related-ico" aria-hidden="true">🔎</span><span class="related-name">Find and Replace Text</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What text case formats does this case converter support?</summary>
+      <p data-i18n="faq.a1">This convert case tool outputs twelve formats at once. The general cases are UPPERCASE, lowercase, Title Case, Sentence case, aLtErNaTiNg and tOGGLE cASE — a complete uppercase lowercase converter for everyday writing. The programmer cases are camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case and dot.case. Every result is shown on its own card so you can click to copy the exact case you need.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">camelCase vs snake_case vs kebab-case — when should I use each?</summary>
+      <p data-i18n="faq.a2">These are naming conventions programmers use for identifiers. camelCase (myVariableName) is common for JavaScript and Java variables; PascalCase (MyClassName) for classes and types; snake_case (my_variable_name) for Python and Ruby; CONSTANT_CASE for constants and environment variables; kebab-case (my-file-name) for URLs, CSS classes and file names; and dot.case for config keys and namespaces. This camelCase snake_case converter lets you switch any identifier between them instantly.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How is my text split into words for the programmer cases, and why are non-Latin characters skipped?</summary>
+      <p data-i18n="faq.a3">For the programmer cases the converter first tokenises your text into words: it inserts a boundary between a lowercase or digit and an uppercase letter (so myXML becomes my XML), keeps acronyms intact (HTTPServer becomes HTTP Server), and then splits on any separator — spaces, underscores, hyphens or dots. Only Latin letters and digits (A–Z, 0–9) form identifier tokens, so Chinese, Korean, Arabic or emoji are skipped because those scripts have no case and are not valid in code identifiers. The general cases keep your original text and spacing untouched.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How do Title Case and Sentence case differ?</summary>
+      <p data-i18n="faq.a4">Title Case capitalises the first letter of every word — Convert Your Text Like This — which suits headlines and titles. Sentence case capitalises only the first letter of each sentence (after a period, question mark or exclamation mark) and leaves the rest lowercase — Convert your text like this. Use Title Case for headings and Sentence case for body copy and normal prose.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my text sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This case converter runs entirely in your browser — nothing you type is ever uploaded, logged or shared, so it is safe for confidential text and code. Your most recent input is optionally saved to this browser's local storage so it is still here when you return; untick the save option to keep it for this session only, and clearing the box removes the stored copy.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

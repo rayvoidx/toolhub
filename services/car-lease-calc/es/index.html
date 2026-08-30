@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-/Re4/dW2UsGEGrxSVpSd67PdLkrH1knBaTRg6yILeDo=' 'sha256-fu49slZPENNFLcq57DuOQrehjoE6vdPv+f4yk/ARXgc=' 'sha256-+u74zPSA/dg09kQvBl5+8giE/Mef41rkXYnYcr3pIp8='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de leasing de coches — cuota mensual</title>
+<meta name="description" content="Calcula la cuota de un leasing con el PVP, el precio negociado, el valor residual y el money factor. Verás el desglose entre depreciación e intereses y la TAE equivalente.">
+<meta name="keywords" content="car lease calculator, lease payment calculator, money factor, residual value lease, auto lease payment, money factor to APR">
+<link rel="canonical" href="https://tool-hub.me/car-lease-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/car-lease-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/car-lease-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/car-lease-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/car-lease-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/car-lease-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/car-lease-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/car-lease-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/car-lease-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/car-lease-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/car-lease-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/car-lease-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/car-lease-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/car-lease-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/car-lease-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/car-lease-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de leasing de coches — cuota mensual">
+<meta property="og:description" content="Calcula la cuota de un leasing con el PVP, el precio negociado, el valor residual y el money factor. Verás el desglose entre depreciación e intereses y la TAE equivalente.">
+<meta property="og:url" content="https://tool-hub.me/car-lease-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/car-lease-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Car Lease Calculator",
+  "description": "Calculate a car lease payment from MSRP, negotiated price, residual and money factor. See the depreciation and finance split, total cost and APR equivalent.",
+  "url": "https://tool-hub.me/car-lease-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Car Lease Calculator",
+      "item": "https://tool-hub.me/car-lease-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I turn a money factor into an APR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the money factor by 2400. A money factor of 0.00275 is roughly a 6.6% APR, and 0.00125 is about 3%. The 2400 comes from 2 x 1200 — the doubling accounts for the fact that lease interest is charged on the average of what you owe now and the residual you will still owe at the end."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who sets the residual value, and can I change it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The leasing bank sets it, usually from an ALG or Black Book forecast of what the car will be worth at lease end. You cannot negotiate it. A high residual is good for you: less of the car's value is consumed during the lease, so your depreciation charge drops."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I negotiate the monthly payment or the price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Always negotiate the selling price, then check the payment. A dealer can hit any monthly target by stretching the term or rolling in a down payment, and neither saves you money. Agree the capitalized cost first, ask for the money factor and residual in writing, then run the numbers yourself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my quoted payment higher than this result?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool prices the lease itself. Quotes usually add an acquisition fee of $595 to $1,095, a documentation fee, registration and sometimes a security deposit. Some states also tax the full selling price rather than each payment, which changes the tax line substantially."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Car Lease Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Car Lease Calculator</span></nav>
+  <section class="hero">
+    <h1>Car Lease Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Two numbers drive a lease: what the car loses, and what the money costs.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .hint { font-size:12px; color:var(--muted); margin:4px 0 0; }
+      #tool .warn { font-size:13px; color:#b45309; font-weight:600; margin-top:12px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="msrp" data-i18n="tool.msrp.label">MSRP (sticker price)</label>
+        <input type="number" id="msrp" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="35000">
+      </div>
+      <div>
+        <label for="price" data-i18n="tool.price.label">Negotiated selling price</label>
+        <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="33000">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="residual" data-i18n="tool.residual.label">Residual value (% of MSRP)</label>
+        <input type="number" id="residual" inputmode="decimal" min="1" max="99" step="any" autocomplete="off" placeholder="58">
+      </div>
+      <div>
+        <label for="mf" data-i18n="tool.mf.label">Money factor</label>
+        <input type="number" id="mf" inputmode="decimal" min="0" max="0.05" step="any" autocomplete="off" placeholder="0.00275">
+        <p class="hint" data-i18n="tool.mf.note">× 2400 ≈ APR. A 0.00275 factor is about 6.6% APR.</p>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="term" data-i18n="tool.term.label">Lease term</label>
+        <select id="term">
+          <option value="24" data-i18n="tool.term.24">24 months</option>
+          <option value="36" selected data-i18n="tool.term.36">36 months</option>
+          <option value="48" data-i18n="tool.term.48">48 months</option>
+          <option value="custom" data-i18n="tool.term.custom">Other term…</option>
+        </select>
+        <div id="term-custom-wrap" hidden style="margin-top:8px;">
+          <label for="term-months" data-i18n="tool.term.months.label">Term in months</label>
+          <input type="number" id="term-months" inputmode="numeric" min="12" max="72" step="1" autocomplete="off" placeholder="39">
+        </div>
+      </div>
+      <div>
+        <label for="down" data-i18n="tool.down.label">Down payment / cap cost reduction</label>
+        <input type="number" id="down" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="2000">
+      </div>
+    </div>
+
+    <label for="tax" data-i18n="tool.tax.label">Sales tax on payment (%)</label>
+    <input type="number" id="tax" inputmode="decimal" min="0" max="30" step="any" autocomplete="off" placeholder="7">
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate payment</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.monthly">Monthly payment (with tax)</div>
+          <div class="rc-val" id="r-monthly">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.dep">Depreciation part</div><div class="rc-val" id="r-dep">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.fin">Finance charge part</div><div class="rc-val" id="r-fin">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.residual">Residual value</div><div class="rc-val" id="r-res">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.total">Total lease cost</div><div class="rc-val" id="r-total">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.apr">APR equivalent</div><div class="rc-val" id="r-apr">—</div></div>
+      </div>
+      <p class="warn" id="warn" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.driveoff" style="margin-top:12px;">Estimate only. Drive-off costs — acquisition fee, doc fee, registration and the first payment — are excluded and vary by lender and state.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>A lease payment is two payments stapled together</h2>
+    <p>Every lease monthly payment is the sum of a depreciation charge and a finance charge, plus tax. The depreciation charge is the part of the car's value you actually use up: capitalized cost minus residual value, spread over the term. The finance charge — dealers call it the rent charge — is interest on the money the bank has tied up, and it is calculated on the capitalized cost <em>plus</em> the residual, because the bank is financing the whole car the entire time, not just the part you consume.</p>
+    <p>That second formula surprises people. It is why a lease with a huge residual still carries real interest, and why a low money factor matters even on a short term. Understanding it is the difference between negotiating a lease and being sold one.</p>
+
+    <h3>Worked example: the default numbers in the calculator</h3>
+    <p>Take a car with a $35,000 MSRP that you negotiate to $33,000, a 58% residual, a 0.00275 money factor, 36 months, $2,000 down and 7% tax on the payment.</p>
+    <ul>
+      <li>Capitalized cost: $33,000 − $2,000 = <strong>$31,000</strong></li>
+      <li>Residual value: $35,000 × 0.58 = <strong>$20,300</strong> (always a percentage of MSRP, never of your negotiated price)</li>
+      <li>Depreciation: ($31,000 − $20,300) ÷ 36 = <strong>$297.22/month</strong></li>
+      <li>Finance charge: ($31,000 + $20,300) × 0.00275 = <strong>
+
+  41.07/month</strong></li>
+      <li>Pre-tax payment: $438.30 — the calculator carries full precision, so it can land a cent away from the rounded parts. With 7% tax: <strong>$468.98/month</strong></li>
+      <li>Total outlay: $468.98 × 36 + $2,000 = <strong>
+
+  8,883</strong></li>
+    </ul>
+    <p>The APR equivalent is 0.00275 × 2400 = 6.60%. Notice the split: 68% of the payment is depreciation, 32% is interest. On a car with a weak residual that ratio skews further toward depreciation, and no amount of rate shopping will fix it.</p>
+
+    <h3>What a down payment really buys you</h3>
+    <p>Run the same deal with $0 down and the payment rises to $534.31, with a total outlay of 
+
+  9,235. So paying $2,000 up front saved $352 over three years — the rent charge on $2,000 for 36 months, plus the tax on it. That is a real saving, but it is small, and it comes with a catch: if the car is stolen or totaled in month four, the insurer pays the leasing bank the car's value and your $2,000 is gone. Gap coverage protects the bank, not your cap cost reduction. Most experienced lessees put as little down as the deal allows.</p>
+
+    <h3>Shop the money factor, not the payment</h3>
+    <p>Money factors are quoted to five decimals and dealers can mark them up, typically by 0.0004 (about 1% APR) as backend profit. In our example, cutting the factor from 0.00275 to 0.00125 drops the finance charge from 
+
+  41.07 to $64.13 — roughly $2,960 less over the lease, and the payment falls to $386.64. Ask for the buy rate, the residual percentage and the capitalized cost in writing before you talk about monthly payments. If a salesperson answers "what payment do you want?", they are telling you they intend to reach that number by moving the term or the down payment rather than the price.</p>
+
+    <h2>Lease versus buy: where the lines cross</h2>
+    <p>Leasing is cheapest per month, always, because you only fund the depreciation. Buying is cheapest per mile if you keep the car past the loan. The crossover for most mainstream cars is around year six or seven of ownership: by then a purchased car is paid off and its remaining value is yours, while a serial lessee has made 84 straight payments and owns nothing. Leasing wins when you genuinely want a new car every three years, when you drive predictable low mileage, when the residual is unusually strong, or when a business deduction changes the math. It loses badly if you break the contract early — early termination often costs the remaining payments minus a discounted resale value.</p>
+
+    <h3>Mileage, wear and the fees this calculator ignores</h3>
+    <p>Leases quote 10,000, 12,000 or 15,000 miles per year. Exceeding the cap costs $0.15 to $0.25 per mile, so 6,000 extra miles on a 36-month lease is $900 to 
+
+  ,500 at turn-in. Buying extra miles up front is usually cheaper than paying the penalty later, but unused prepaid miles are not refunded. Excess wear — kerbed alloys, a cracked windscreen, tyres below the tread minimum — is billed at lease end too.</p>
+    <p>Two limitations to keep in mind. First, this tool leaves out drive-off costs: an acquisition fee of roughly $595 to 
+
+  ,095, documentation and registration fees, and the first month's payment due at signing. Second, it applies tax to each monthly payment, which is how most US states and the UK treat lease rentals — but a handful tax the full selling price up front, and some tax the capitalized cost reduction as well. Use the payment here as your negotiating benchmark, then reconcile the dealer's worksheet line by line against it.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.consumerfinance.gov/consumer-tools/auto-loans/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — auto financing and leasing basics for US consumers</a></li>
+      <li><a href="https://www.federalreserve.gov/consumerscommunities/consumer-laws-regulations.htm" target="_blank" rel="noopener">Federal Reserve Board — Regulation M, the consumer leasing disclosure rules behind a lease worksheet</a></li>
+      <li><a href="https://www.irs.gov/credits-deductions" target="_blank" rel="noopener">IRS — deduction rules that apply when a leased vehicle is used for business</a></li>
+      <li><a href="https://www.gov.uk/vehicle-tax" target="_blank" rel="noopener">GOV.UK — UK vehicle tax rules affecting lease rental costs</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/car-payment-calc/"><span class="related-ico" aria-hidden="true">🚗</span><span class="related-name">Car Payment Calculator</span></a><a class="related-item" href="https://tool-hub.me/cd-calc/"><span class="related-ico" aria-hidden="true">📜</span><span class="related-name">CD Calculator</span></a><a class="related-item" href="https://tool-hub.me/coast-fire-calc/"><span class="related-ico" aria-hidden="true">🏖️</span><span class="related-name">Coast FIRE Calculator</span></a><a class="related-item" href="https://tool-hub.me/commission-calc/"><span class="related-ico" aria-hidden="true">🤝</span><span class="related-name">Commission Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How do I turn a money factor into an APR?</summary><p data-i18n="faq.a1">Multiply the money factor by 2400. A money factor of 0.00275 is roughly a 6.6% APR, and 0.00125 is about 3%. The 2400 comes from 2 x 1200 — the doubling accounts for the fact that lease interest is charged on the average of what you owe now and the residual you will still owe at the end.</p></details>
+    <details><summary data-i18n="faq.q2">Who sets the residual value, and can I change it?</summary><p data-i18n="faq.a2">The leasing bank sets it, usually from an ALG or Black Book forecast of what the car will be worth at lease end. You cannot negotiate it. A high residual is good for you: less of the car's value is consumed during the lease, so your depreciation charge drops.</p></details>
+    <details><summary data-i18n="faq.q3">Should I negotiate the monthly payment or the price?</summary><p data-i18n="faq.a3">Always negotiate the selling price, then check the payment. A dealer can hit any monthly target by stretching the term or rolling in a down payment, and neither saves you money. Agree the capitalized cost first, ask for the money factor and residual in writing, then run the numbers yourself.</p></details>
+    <details><summary data-i18n="faq.q4">Why is my quoted payment higher than this result?</summary><p data-i18n="faq.a4">This tool prices the lease itself. Quotes usually add an acquisition fee of $595 to $1,095, a documentation fee, registration and sometimes a security deposit. Some states also tax the full selling price rather than each payment, which changes the tax line substantially.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

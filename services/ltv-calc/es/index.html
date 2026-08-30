@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-pcjDr73DNyYZ4ASaLmVWfiSnhxgKe0oXYF3efBzhsJU=' 'sha256-L/wnDhU1PxT/6ktDqVqqRyRwv3zSYwNbGALZHzcq8BA=' 'sha256-uL84Psty0ZEdB0Z/XhgK+6na1VJLN2kMsIdgr/zG8fE='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora LTV — ratio préstamo-valor</title>
+<meta name="description" content="Calcula tu ratio préstamo-valor al instante: introduce el valor del inmueble y el saldo del préstamo para ver LTV, CLTV con segunda hipoteca, patrimonio y tramo de PMI.">
+<meta name="keywords" content="ltv calculator, loan to value, ltv ratio mortgage, combined ltv, cltv calculator, loan to value ratio calculator, mortgage ltv, home equity ltv">
+<link rel="canonical" href="https://tool-hub.me/ltv-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/ltv-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/ltv-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/ltv-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/ltv-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/ltv-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/ltv-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/ltv-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/ltv-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/ltv-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/ltv-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/ltv-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/ltv-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/ltv-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/ltv-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/ltv-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora LTV — ratio préstamo-valor">
+<meta property="og:description" content="Calcula tu ratio préstamo-valor al instante: introduce el valor del inmueble y el saldo del préstamo para ver LTV, CLTV con segunda hipoteca, patrimonio y tramo de PMI.">
+<meta property="og:url" content="https://tool-hub.me/ltv-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/ltv-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0c4a6e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "LTV Calculator",
+  "description": "Work out your loan to value ratio in seconds. Enter property value and loan balance for LTV, combined LTV with a second lien, equity and your PMI tier.",
+  "url": "https://tool-hub.me/ltv-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "LTV Calculator",
+      "item": "https://tool-hub.me/ltv-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does 80% LTV matter so much?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At 80% or below, a conventional lender treats you as low risk: no private mortgage insurance and access to the best rate tiers. Above 80% you pay PMI or a rate add-on that can cost hundreds a year. In the US, PMI must be cancelled automatically once the balance amortises to 78% of the original value, and you can request removal at 80%. UK lenders price in bands too, typically 60%, 75%, 85% and 90%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the lender use the purchase price or the appraisal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The lower of the two, every time. If you agree a price of 400,000 but the appraisal comes back at 385,000, a 320,000 loan is 83.1% LTV rather than the 80% you planned. That single point can trigger PMI, so on a purchase enter the appraised value here once you have it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I lower my LTV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Four levers: put more cash down, pay the principal down faster, challenge a low appraisal with comparable sales, or simply wait while amortisation and price growth do the work. Paying 8,000 extra on a 400,000 property moves LTV by two points, which is often the difference between two rate tiers. A fresh appraisal after a renovation can also reset the value side of the ratio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is CLTV and when do lenders use it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Combined LTV adds every lien on the property — first mortgage, second mortgage, home equity loan — and divides by the value. Home equity lenders underwrite to CLTV, commonly capping it at 80% to 90%. Some use HCLTV, which counts the full HELOC credit line rather than the drawn balance, so an unused line still limits how much you can borrow."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>LTV Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">LTV Calculator</span></nav>
+  <section class="hero">
+    <h1>LTV Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">The one number every mortgage lender prices off. Find your LTV, CLTV and where the 80% line falls.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rc-val.neg { color:#dc2626; }
+      #tool .tier { margin-top:12px; padding:8px 10px; border-left:3px solid var(--accent); background:rgba(12,74,110,0.08); font-size:14px; font-weight:600; }
+      #tool .warn { margin-top:10px; padding:8px 10px; border-left:3px solid #d97706; background:rgba(217,119,6,0.08); color:#b45309; font-size:14px; font-weight:600; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="mode" data-i18n="tool.mode.label">What do you want to work out?</label>
+    <select id="mode">
+      <option value="ltv" data-i18n="tool.mode.ltv">LTV from loan amount and property value</option>
+      <option value="maxloan" data-i18n="tool.mode.maxloan">Max loan from property value and target LTV</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="value" data-i18n="tool.value.label">Property value (or purchase price)</label>
+        <input type="number" id="value" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="400000">
+      </div>
+      <div id="loan-wrap">
+        <label for="loan" data-i18n="tool.loan.label">Loan amount</label>
+        <input type="number" id="loan" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="320000">
+      </div>
+      <div id="target-wrap" hidden>
+        <label for="target" data-i18n="tool.target.label">Target LTV %</label>
+        <input type="number" id="target" inputmode="decimal" min="1" max="125" step="any" autocomplete="off" placeholder="80">
+      </div>
+      <div>
+        <label for="second" data-i18n="tool.second.label">Second mortgage / HELOC balance (optional)</label>
+        <input type="number" id="second" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" id="r-hero-label" data-i18n="tool.r.ltv">LTV</div>
+          <div class="rc-val" id="r-hero">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.ltv">LTV</div><div class="rc-val" id="r-ltv">—</div></div>
+        <div class="rcard" id="cltv-card"><div class="rc-label" data-i18n="tool.r.cltv">Combined LTV (CLTV)</div><div class="rc-val" id="r-cltv">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.equity">Equity</div><div class="rc-val" id="r-equity">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.equitypct">Equity %</div><div class="rc-val" id="r-equitypct">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.down">Down payment equivalent</div><div class="rc-val" id="r-down">—</div></div>
+        <div class="rcard" id="to80-card" hidden><div class="rc-label" data-i18n="tool.r.to80">Cash to reach 80% LTV</div><div class="rc-val" id="r-to80">—</div></div>
+      </div>
+      <p class="tier" id="tier"></p>
+      <p class="warn" id="warn" hidden data-i18n="tool.warn.sanity">The loan is far larger than the property value. Check both figures use the same currency and no digits are missing.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.disclaimer" style="margin-top:12px;">An estimate for planning. Lenders use their own appraised value and their own rules, so treat the result as a guide rather than an approval.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What loan to value actually measures</h2>
+    <p>LTV is the share of a property that is financed with borrowed money. Divide the loan by the value and multiply by 100. A 320,000 mortgage on a 400,000 home is 320,000 ÷ 400,000 = 0.80, or 80% LTV, which means you hold 20% — 80,000 — as equity. That single percentage decides more about your mortgage than almost anything except your credit score: whether you pay mortgage insurance, which rate sheet you are quoted from, and whether a lender will look at your file at all.</p>
+    <p>The reason lenders care is loss severity. If a borrower defaults and the property is sold, the lender recovers the sale proceeds minus costs. At 60% LTV a 20% price fall still leaves a comfortable cushion. At 97% LTV the same fall wipes out the equity and the lender takes a loss, so the price of that risk gets passed back to you as insurance premiums or a higher rate.</p>
+
+    <h3>Worked example: the 400,000 / 320,000 purchase</h3>
+    <p>You are buying at 400,000 with 80,000 down and a 320,000 first mortgage. LTV is exactly 80.0%, equity is 80,000, and you land in the best conventional tier with no PMI. Now suppose the appraisal comes back at 385,000. The lender uses the lower of price and appraisal, so LTV becomes 320,000 ÷ 385,000 = 83.1%. You have crossed the line. At a typical PMI rate of 0.5% of the loan per year that is about 1,600 annually, roughly 133 a month, until you get back under 80%. Bringing an extra 12,000 to closing restores the 80% and removes the premium.</p>
+
+    <h3>Worked example: how long PMI lasts</h3>
+    <p>Take that 83.1% case and leave it alone. On a 30-year loan at 6.5%, the 320,000 balance amortises to about 308,000 after three years and roughly 292,000 after six. Against the original 385,000 appraisal, the automatic PMI termination point under the US Homeowners Protection Act is 78% — about 300,300 — which arrives a little past year four. You can request cancellation at 80% (308,000), reached in roughly three years, provided payments are current. If local prices rise 3% a year, a new appraisal after two years might show 408,000, and the balance of about 312,000 would be 76% of that — grounds for a borrower-requested removal based on current value, which many servicers allow after two years of seasoning.</p>
+
+    <h3>Worked example: refinancing thresholds</h3>
+    <p>Refinance pricing follows the same ladder but with tighter caps. A conventional rate-and-term refinance is usually available up to 95% LTV; a cash-out refinance on a primary residence typically stops at 80%, and at 75% for a second home or investment property. Say your home is now worth 500,000 with a 350,000 balance: LTV is 70%. An 80% cash-out ceiling means a maximum new loan of 400,000, so you could take out about 50,000 before costs. Switch the calculator to "max loan from value and target LTV", enter 500000 and 80, and it produces that 400,000 directly.</p>
+
+    <h3>Combined LTV and second liens</h3>
+    <p>Once you add a home equity loan or HELOC, the first-lien LTV stops telling the whole story. Enter the second balance and the tool reports CLTV, which is every lien divided by value. With a 500,000 home, a 350,000 first mortgage and a 40,000 HELOC balance, LTV is 70% but CLTV is 78%. Home equity lenders underwrite against CLTV, usually capping it between 80% and 90%, so the extra 40,000 has already used most of the headroom. Some lenders go further and use HCLTV, counting the entire approved credit line rather than the drawn balance — an untouched 100,000 line still consumes capacity on paper.</p>
+
+    <h2>UK bands and how they differ</h2>
+    <p>British lenders do not use PMI. Instead the rate itself is banded, with the sharpest deals at 60% LTV and progressively higher rates at 75%, 85%, 90% and 95%. The bands are cliffs rather than slopes: 75.4% prices as if it were 80%, so overpaying a small amount to slip under a band boundary before a remortgage can be worth far more than the cash involved. Help to Buy and 95% mortgage guarantee products occupy the top band, and lenders apply their own valuation exactly as US lenders do.</p>
+
+    <h2>Limitations worth knowing</h2>
+    <p>This calculator works on the numbers you give it. It does not know your lender's appraisal, and appraised value is the figure that counts — a Zestimate or an asking price is a guess. It ignores closing costs rolled into the loan, which quietly raise LTV on a refinance; if you finance 8,000 of costs into a 320,000 loan on a 400,000 home, the true LTV is 82%, not 80%. Government programmes have their own arithmetic too: FHA loans add an upfront mortgage insurance premium to the balance and charge annual MIP for the life of the loan at above 90% LTV, while VA loans permit 100% financing with a funding fee instead. Treat the output as the underwriting starting point, then confirm the value and the programme rules with the lender before you count on a rate.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.consumerfinance.gov/owning-a-home/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — mortgage basics, loan-to-value and private mortgage insurance rules</a></li>
+      <li><a href="https://www.federalreserve.gov/consumerscompliance.htm" target="_blank" rel="noopener">Federal Reserve — consumer compliance guidance on mortgage lending and home equity credit</a></li>
+      <li><a href="https://www.gov.uk/government/organisations/hm-land-registry" target="_blank" rel="noopener">HM Land Registry — official UK property price data used to check valuations</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/margin-calc/"><span class="related-ico" aria-hidden="true">💹</span><span class="related-name">Margin Calculator</span></a><a class="related-item" href="https://tool-hub.me/markup-calc/"><span class="related-ico" aria-hidden="true">🏷️</span><span class="related-name">Markup Calculator</span></a><a class="related-item" href="https://tool-hub.me/mileage-reimbursement-calc/"><span class="related-ico" aria-hidden="true">🧭</span><span class="related-name">Mileage Reimbursement Calculator</span></a><a class="related-item" href="https://tool-hub.me/mortgage-calc/"><span class="related-ico" aria-hidden="true">🏠</span><span class="related-name">Mortgage Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why does 80% LTV matter so much?</summary><p data-i18n="faq.a1">At 80% or below, a conventional lender treats you as low risk: no private mortgage insurance and access to the best rate tiers. Above 80% you pay PMI or a rate add-on that can cost hundreds a year. In the US, PMI must be cancelled automatically once the balance amortises to 78% of the original value, and you can request removal at 80%. UK lenders price in bands too, typically 60%, 75%, 85% and 90%.</p></details>
+    <details><summary data-i18n="faq.q2">Does the lender use the purchase price or the appraisal?</summary><p data-i18n="faq.a2">The lower of the two, every time. If you agree a price of 400,000 but the appraisal comes back at 385,000, a 320,000 loan is 83.1% LTV rather than the 80% you planned. That single point can trigger PMI, so on a purchase enter the appraised value here once you have it.</p></details>
+    <details><summary data-i18n="faq.q3">How do I lower my LTV?</summary><p data-i18n="faq.a3">Four levers: put more cash down, pay the principal down faster, challenge a low appraisal with comparable sales, or simply wait while amortisation and price growth do the work. Paying 8,000 extra on a 400,000 property moves LTV by two points, which is often the difference between two rate tiers. A fresh appraisal after a renovation can also reset the value side of the ratio.</p></details>
+    <details><summary data-i18n="faq.q4">What is CLTV and when do lenders use it?</summary><p data-i18n="faq.a4">Combined LTV adds every lien on the property — first mortgage, second mortgage, home equity loan — and divides by the value. Home equity lenders underwrite to CLTV, commonly capping it at 80% to 90%. Some use HCLTV, which counts the full HELOC credit line rather than the drawn balance, so an unused line still limits how much you can borrow.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

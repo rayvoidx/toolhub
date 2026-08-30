@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-BAI/jo+ZpruHS7mL7kvG5Ip31oCp0AMorv5TKs3hiwY=' 'sha256-X2KvgJETrPiQK0XFq+e07DOYnBl/Iaw3ouU4upm/VoM=' 'sha256-lEHynjklSkqN8R2LzQ3MsKV5aablRL11siYIdMDvYX8='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>借金返済シミュレーター — 雪だるま式と高金利優先</title>
+<meta name="description" content="同じ予算で「少額優先（スノーボール）」と「高金利優先（アバランチ）」を比較。残高・年率・最低返済額を最大3件入力すると、完済までの期間と総利息が出ます。">
+<meta name="keywords" content="debt payoff calculator, debt snowball calculator, debt avalanche calculator, pay off debt faster, credit card payoff calculator">
+<link rel="canonical" href="https://tool-hub.me/debt-payoff-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/debt-payoff-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/debt-payoff-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/debt-payoff-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/debt-payoff-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/debt-payoff-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/debt-payoff-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/debt-payoff-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/debt-payoff-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/debt-payoff-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/debt-payoff-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/debt-payoff-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/debt-payoff-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/debt-payoff-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/debt-payoff-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/debt-payoff-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="借金返済シミュレーター — 雪だるま式と高金利優先">
+<meta property="og:description" content="同じ予算で「少額優先（スノーボール）」と「高金利優先（アバランチ）」を比較。残高・年率・最低返済額を最大3件入力すると、完済までの期間と総利息が出ます。">
+<meta property="og:url" content="https://tool-hub.me/debt-payoff-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/debt-payoff-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#dc2626">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Debt Payoff Calculator",
+  "description": "Compare the debt snowball and debt avalanche on one budget. Enter up to three balances, APRs and minimums to see months to debt-free and total interest.",
+  "url": "https://tool-hub.me/debt-payoff-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Debt Payoff Calculator",
+      "item": "https://tool-hub.me/debt-payoff-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Debt avalanche or debt snowball — which is better?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The avalanche always wins on arithmetic: attacking the highest APR first means less interest and usually an earlier finish. The snowball wins on momentum, because wiping out a whole account in a few months is a visible reward that keeps people paying. Run both here and look at the gap — if it is a few hundred, take the plan you will stick with; if it is thousands, the avalanche is worth the patience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I stop paying the minimums on my other debts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every account still gets its minimum every month; only the extra goes to the target debt. Missing a minimum triggers late fees, a penalty APR and a credit-report mark that costs far more than any ordering advantage. When one debt is cleared its minimum rolls into the next target, and that snowballing budget is what makes both plans accelerate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as the APR to enter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the purchase APR on your statement, not a promotional or cash-advance rate. If one card carries balances at several rates, enter the rate holding most of the balance or split it across two rows. Store cards often run above 25 percent, while car loans and federal student loans are usually single digits — that spread is exactly what the avalanche exploits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where should the extra payment come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anything repeatable: a cancelled subscription, a cheaper phone plan, overtime, or the payment freed when a debt clears. Build a small emergency buffer first — roughly one month of expenses — otherwise the next unexpected bill goes straight back on the card and undoes the progress. Even 50 a month shortens most payoff plans by several months."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Debt Payoff Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Debt Payoff Calculator</span></nav>
+  <section class="hero">
+    <h1>Debt Payoff Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Two payoff orders, one budget. See which clears your balances sooner — and what the difference costs.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .debt { border:1px solid var(--line); border-radius:8px; padding:10px 12px; margin-bottom:10px; }
+      #tool .debt-name { font-size:13px; font-weight:700; color:var(--muted); margin-bottom:4px; }
+      #tool .debt-row { display:grid; grid-template-columns:1.1fr 0.8fr 1fr; gap:10px; }
+      #tool .debt-row label { font-size:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:19px; line-height:1.45; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .orders { margin-top:10px; margin-bottom:0; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:520px){ #tool .debt-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="debt">
+      <div class="debt-name" data-i18n="tool.row1">Debt 1</div>
+      <div class="debt-row">
+        <div>
+          <label for="bal1" data-i18n="tool.h.bal">Balance</label>
+          <input type="number" id="bal1" inputmode="decimal" min="0" max="1000000" step="any" autocomplete="off" placeholder="4500">
+        </div>
+        <div>
+          <label for="apr1" data-i18n="tool.h.apr">APR %</label>
+          <input type="number" id="apr1" inputmode="decimal" min="0" max="100" step="any" autocomplete="off" placeholder="22.9">
+        </div>
+        <div>
+          <label for="min1" data-i18n="tool.h.min">Minimum payment</label>
+          <input type="number" id="min1" inputmode="decimal" min="0" max="100000" step="any" autocomplete="off" placeholder="135">
+        </div>
+      </div>
+    </div>
+
+    <div class="debt">
+      <div class="debt-name" data-i18n="tool.row2">Debt 2</div>
+      <div class="debt-row">
+        <div>
+          <label for="bal2" data-i18n="tool.h.bal">Balance</label>
+          <input type="number" id="bal2" inputmode="decimal" min="0" max="1000000" step="any" autocomplete="off" placeholder="12000">
+        </div>
+        <div>
+          <label for="apr2" data-i18n="tool.h.apr">APR %</label>
+          <input type="number" id="apr2" inputmode="decimal" min="0" max="100" step="any" autocomplete="off" placeholder="6.5">
+        </div>
+        <div>
+          <label for="min2" data-i18n="tool.h.min">Minimum payment</label>
+          <input type="number" id="min2" inputmode="decimal" min="0" max="100000" step="any" autocomplete="off" placeholder="220">
+        </div>
+      </div>
+    </div>
+
+    <div class="debt">
+      <div class="debt-name" data-i18n="tool.row3">Debt 3 — optional</div>
+      <div class="debt-row">
+        <div>
+          <label for="bal3" data-i18n="tool.h.bal">Balance</label>
+          <input type="number" id="bal3" inputmode="decimal" min="0" max="1000000" step="any" autocomplete="off" placeholder="900">
+        </div>
+        <div>
+          <label for="apr3" data-i18n="tool.h.apr">APR %</label>
+          <input type="number" id="apr3" inputmode="decimal" min="0" max="100" step="any" autocomplete="off" placeholder="17.9">
+        </div>
+        <div>
+          <label for="min3" data-i18n="tool.h.min">Minimum payment</label>
+          <input type="number" id="min3" inputmode="decimal" min="0" max="100000" step="any" autocomplete="off" placeholder="35">
+        </div>
+      </div>
+    </div>
+
+    <div class="debt">
+      <div class="debt-name" data-i18n="tool.row4">Debt 4 — optional</div>
+      <div class="debt-row">
+        <div>
+          <label for="bal4" data-i18n="tool.h.bal">Balance</label>
+          <input type="number" id="bal4" inputmode="decimal" min="0" max="1000000" step="any" autocomplete="off">
+        </div>
+        <div>
+          <label for="apr4" data-i18n="tool.h.apr">APR %</label>
+          <input type="number" id="apr4" inputmode="decimal" min="0" max="100" step="any" autocomplete="off">
+        </div>
+        <div>
+          <label for="min4" data-i18n="tool.h.min">Minimum payment</label>
+          <input type="number" id="min4" inputmode="decimal" min="0" max="100000" step="any" autocomplete="off">
+        </div>
+      </div>
+    </div>
+
+    <div class="debt">
+      <div class="debt-name" data-i18n="tool.row5">Debt 5 — optional</div>
+      <div class="debt-row">
+        <div>
+          <label for="bal5" data-i18n="tool.h.bal">Balance</label>
+          <input type="number" id="bal5" inputmode="decimal" min="0" max="1000000" step="any" autocomplete="off">
+        </div>
+        <div>
+          <label for="apr5" data-i18n="tool.h.apr">APR %</label>
+          <input type="number" id="apr5" inputmode="decimal" min="0" max="100" step="any" autocomplete="off">
+        </div>
+        <div>
+          <label for="min5" data-i18n="tool.h.min">Minimum payment</label>
+          <input type="number" id="min5" inputmode="decimal" min="0" max="100000" step="any" autocomplete="off">
+        </div>
+      </div>
+    </div>
+
+    <label for="extra" data-i18n="tool.extra.label">Extra monthly payment (on top of the minimums)</label>
+    <input type="number" id="extra" inputmode="decimal" min="0" max="100000" step="any" autocomplete="off" placeholder="200">
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Compare strategies</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.verdict">Avalanche vs snowball</div>
+          <div class="rc-val" id="r-verdict">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.avtime">Avalanche — debt-free in</div><div class="rc-val" id="r-av-time">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.avint">Avalanche — total interest</div><div class="rc-val" id="r-av-int">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.sbtime">Snowball — debt-free in</div><div class="rc-val" id="r-sb-time">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.sbint">Snowball — total interest</div><div class="rc-val" id="r-sb-int">—</div></div>
+      </div>
+      <p class="subtle orders"><span data-i18n="tool.r.avorder">Avalanche payoff order</span>: <span id="r-av-order">—</span></p>
+      <p class="subtle orders"><span data-i18n="tool.r.sborder">Snowball payoff order</span>: <span id="r-sb-order">—</span></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.assume" style="margin-top:12px;">Assumes fixed rates, no new spending and every payment on time. Keep every field in the same currency.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How a debt payoff plan actually works</h2>
+    <p>Every payoff plan starts from the same place: you pay the minimum on every account, then throw whatever is left of your budget at exactly one debt. That one debt is the target. When it hits zero, its minimum payment does not disappear from your budget — it rolls onto the next target, which is why the plan speeds up month after month. That rolling is the "snowball" everyone talks about, and both strategies use it.</p>
+    <p>The only thing that separates the two methods is which debt gets the extra money first. The <strong>avalanche</strong> targets the highest APR, because that is where interest accrues fastest. The <strong>snowball</strong> targets the smallest balance, because that account disappears soonest and gives you a win you can see. The calculator runs a month-by-month simulation of both: it adds interest at balance x APR / 12, applies every minimum, then pours the remaining budget into the current target until the balance hits zero and cascades any leftover into the next one.</p>
+
+    <h3>Worked example: two debts, 200 extra a month</h3>
+    <p>Take a credit card with a 4,500 balance at 22.9% APR and a 135 minimum, plus a car loan of 12,000 at 6.5% with a 220 minimum. Your total budget is 135 + 220 + 200 extra = 555 a month. Month one interest is 4,500 x 22.9 / 1200 = 85.88 on the card and 65.00 on the car loan, so 150.88 of that 555 buys you nothing — it just holds the line.</p>
+    <p>Run it out and both strategies clear everything in 34 months (2 years 10 months) with 2,162.88 of interest. They tie because the card is both the highest rate and the smallest balance — one debt is the obvious first target either way. That happens more often than debt-payoff articles admit, and when it does, the whole avalanche-versus-snowball argument is moot.</p>
+    <p>What is not moot is the extra 200. Drop it and the same two debts take 61 months and cost 4,952.73 in interest. The 200 a month buys back 27 months and 2,789 of interest — a far larger effect than any ordering decision.</p>
+
+    <h3>Worked example: when the order really matters</h3>
+    <p>Now three debts: 18,000 on a card at 25.99% (450 minimum), 3,000 on a personal loan at 3.9% (60 minimum), and 5,000 on a second card at 21.9% (125 minimum), with 150 extra. Budget is 785 a month.</p>
+    <ul>
+      <li><strong>Avalanche</strong> — pays the 25.99% card first, then the 21.9% card, then the cheap loan: debt-free in 53 months with 15,239 of interest.</li>
+      <li><strong>Snowball</strong> — clears the 3,000 loan first for the quick win: 56 months and 17,960 of interest.</li>
+    </ul>
+    <p>Same money, same discipline, 2,720 and three months apart. The gap opens up because the snowball spends its early firepower on a 3.9% loan while a 25.99% balance keeps compounding. As a rule of thumb: the wider the spread between your best and worst rate, and the larger the balance sitting on the worst rate, the more the avalanche wins.</p>
+
+    <h2>Which one should you pick?</h2>
+    <p>Run your real numbers and look at the gap the tool reports. If the avalanche saves a couple of hundred, that is not worth abandoning a plan you will follow — behavioural research on debt repayment consistently finds that people who close accounts early stay motivated and keep paying. If the gap is in the thousands, treat the avalanche as the default and find your motivation elsewhere: a chart on the fridge, a shared spreadsheet, an automatic transfer on payday so the decision is never re-litigated.</p>
+    <p>A useful hybrid: clear one small nuisance balance first for the psychological win, then switch to strict avalanche ordering for everything else. You give up a little interest for a lot of momentum.</p>
+
+    <h2>Limits of this model</h2>
+    <p>The simulation assumes fixed APRs, no new charges, and every payment made on time. Reality intrudes in three common ways. Variable card rates move with the base rate, so a 22.9% card can be 24.9% next year. Fees — annual fees, late fees, cash-advance fees — are not modelled and land straight on the balance. And minimum payments on credit cards usually shrink as the balance falls (typically 1-3% of the balance, or a floor of 25-35), whereas this model holds them constant, which slightly understates how long a minimum-only plan really takes.</p>
+    <p>Two things worth checking before you commit to any ordering: whether a 0% balance transfer would beat both plans outright, and whether the debt is on a promotional rate that expires. A card at 0% until next March should not be the avalanche target today, but it absolutely should be paid down before the promotional window closes and the regular rate applies to the whole balance.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.consumerfinance.gov/consumer-tools/debt-collection/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — official guidance on managing and repaying consumer debt</a></li>
+      <li><a href="https://www.federalreserve.gov/releases/g19/current/" target="_blank" rel="noopener">Federal Reserve G.19 Consumer Credit release — published average credit card and auto loan interest rates</a></li>
+      <li><a href="https://www.mymoney.gov/" target="_blank" rel="noopener">MyMoney.gov (U.S. Financial Literacy and Education Commission) — budgeting and borrowing basics</a></li>
+      <li><a href="https://www.gov.uk/options-for-paying-off-your-debts" target="_blank" rel="noopener">GOV.UK — options for paying off your debts in the UK</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/discount-calc/"><span class="related-ico" aria-hidden="true">🏷️</span><span class="related-name">Discount Calculator</span></a><a class="related-item" href="https://tool-hub.me/dividend-calc/"><span class="related-ico" aria-hidden="true">💰</span><span class="related-name">Dividend Calc</span></a><a class="related-item" href="https://tool-hub.me/electricity-cost-calc/"><span class="related-ico" aria-hidden="true">⚡</span><span class="related-name">Electricity Cost Calculator</span></a><a class="related-item" href="https://tool-hub.me/emergency-fund-calc/"><span class="related-ico" aria-hidden="true">🛟</span><span class="related-name">Emergency Fund Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Debt avalanche or debt snowball — which is better?</summary><p data-i18n="faq.a1">The avalanche always wins on arithmetic: attacking the highest APR first means less interest and usually an earlier finish. The snowball wins on momentum, because wiping out a whole account in a few months is a visible reward that keeps people paying. Run both here and look at the gap — if it is a few hundred, take the plan you will stick with; if it is thousands, the avalanche is worth the patience.</p></details>
+    <details><summary data-i18n="faq.q2">Do I stop paying the minimums on my other debts?</summary><p data-i18n="faq.a2">No. Every account still gets its minimum every month; only the extra goes to the target debt. Missing a minimum triggers late fees, a penalty APR and a credit-report mark that costs far more than any ordering advantage. When one debt is cleared its minimum rolls into the next target, and that snowballing budget is what makes both plans accelerate.</p></details>
+    <details><summary data-i18n="faq.q3">What counts as the APR to enter?</summary><p data-i18n="faq.a3">Use the purchase APR on your statement, not a promotional or cash-advance rate. If one card carries balances at several rates, enter the rate holding most of the balance or split it across two rows. Store cards often run above 25 percent, while car loans and federal student loans are usually single digits — that spread is exactly what the avalanche exploits.</p></details>
+    <details><summary data-i18n="faq.q4">Where should the extra payment come from?</summary><p data-i18n="faq.a4">Anything repeatable: a cancelled subscription, a cheaper phone plan, overtime, or the payment freed when a debt clears. Build a small emergency buffer first — roughly one month of expenses — otherwise the next unexpected bill goes straight back on the card and undoes the progress. Even 50 a month shortens most payoff plans by several months.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

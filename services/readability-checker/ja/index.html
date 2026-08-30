@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-aLeRHyDL74RmFxEEHe7fwHYi5adm0umrpe46tUzWifA=' 'sha256-RIJnLopROs/HOL5+/aOGMF3mdBeNfG2MSxeQkS+jr6c=' 'sha256-ZWWdBhLEG83say4+5QQcK8SN/STR1lV3zRqvgTYCAZU='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>リーダビリティ判定 — Flesch読みやすさスコア</title>
+<meta name="description" content="英文を貼り付けるだけでFlesch読みやすさスコア、Flesch-Kincaid学年レベル、1文あたりの語数と音節統計を即座に算出します。無料でブラウザ内処理。">
+<meta name="keywords" content="readability checker, flesch kincaid calculator, readability score, reading level checker, flesch reading ease, grade level checker, text readability test">
+<link rel="canonical" href="https://tool-hub.me/readability-checker/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/readability-checker/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/readability-checker/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/readability-checker/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/readability-checker/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/readability-checker/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/readability-checker/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/readability-checker/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/readability-checker/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/readability-checker/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/readability-checker/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/readability-checker/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/readability-checker/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/readability-checker/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/readability-checker/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/readability-checker/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="リーダビリティ判定 — Flesch読みやすさスコア">
+<meta property="og:description" content="英文を貼り付けるだけでFlesch読みやすさスコア、Flesch-Kincaid学年レベル、1文あたりの語数と音節統計を即座に算出します。無料でブラウザ内処理。">
+<meta property="og:url" content="https://tool-hub.me/readability-checker/ja/">
+<meta property="og:image" content="https://tool-hub.me/readability-checker/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4338ca">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Readability Checker",
+  "description": "Paste any English text to get its Flesch Reading Ease score, Flesch-Kincaid grade level, words per sentence and syllable stats. Free, instant, private.",
+  "url": "https://tool-hub.me/readability-checker/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Readability Checker",
+      "item": "https://tool-hub.me/readability-checker/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a good readability score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a general audience aim for a Flesch Reading Ease of 60 to 70, which lands near an 8th-grade reading level. Plain-language guidance in the US and UK, including many government and insurance rules, targets that same band. Technical writing for specialists can sit at 30 to 50 without being a problem, but marketing copy below 50 usually loses readers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the syllable count?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The checker counts vowel groups and strips silent endings such as a final 'e' or '-ed', which is how most Flesch tools work without a dictionary. It agrees with a dictionary for the large majority of ordinary English words but slips on names, acronyms and odd spellings like 'queue' or 'business'. Across a paragraph the errors mostly cancel out, so treat a two-point difference between drafts as noise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a high score mean the writing is good?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The formula only measures sentence length and word length, and it never reads meaning. You can score 90 with short nonsense sentences and 40 with precise, beautiful prose. Use it as a smoke alarm for long sentences and heavy vocabulary, not as a grade for quality."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Flesch compare with SMOG or Gunning Fog?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All three use the same two ingredients, sentence length and word difficulty, but weight them differently. Gunning Fog and SMOG count words of three or more syllables and return a school grade, while Flesch Reading Ease returns a 0 to 100 score where higher is easier. The Flesch-Kincaid grade shown here converts the same inputs into a US school grade, so it usually lands within a grade or two of SMOG."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Readability Checker</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#7c3aed" href="https://tool-hub.me/text-tools/">Text</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Readability Checker</span></nav>
+  <section class="hero">
+    <h1>Readability Checker</h1>
+    <p class="lede" data-i18n="hero.lede">Paste your writing and see the Flesch score, the reading grade level, and the sentence stats behind them.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool textarea { width:100%; min-height:150px; font-size:15px; line-height:1.6; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard .rc-sub { font-size:12px; color:var(--muted); margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:34px; line-height:1.15; }
+      #tool .rcard.hero-card .rc-band { font-weight:700; font-size:16px; margin-top:2px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+    </style>
+
+    <label for="text-input" data-i18n="tool.input.label">Your text</label>
+    <textarea id="text-input" spellcheck="false" placeholder="The office moves to a new building next month. Every team has a desk on the third floor, and the old parking passes will still work. Ask Dana if you need a key."></textarea>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Check readability</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.ease">Flesch Reading Ease</div>
+          <div class="rc-val" id="r-ease">—</div>
+          <div class="rc-band" id="r-band"></div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.grade">Flesch-Kincaid grade</div>
+          <div class="rc-val" id="r-grade">—</div>
+          <div class="rc-sub" id="r-gradetext"></div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.words">Words</div><div class="rc-val" id="r-words">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.sentences">Sentences</div><div class="rc-val" id="r-sentences">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.syllables">Syllables</div><div class="rc-val" id="r-syllables">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.wps">Words per sentence</div><div class="rc-val" id="r-wps">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.spw">Syllables per word</div><div class="rc-val" id="r-spw">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.fog">Gunning Fog index</div><div class="rc-val" id="r-fog">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.longest">Longest sentence</div><div class="rc-val" id="r-longest">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.time">Reading time</div><div class="rc-val" id="r-time">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.english" style="margin-top:12px;">Tuned for English. Syllables come from a spelling heuristic, so scores are close but not exact, and text in other languages will read as harder than it is.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a readability score actually measures</h2>
+    <p>Rudolf Flesch published the Reading Ease formula in 1948 with a deliberately narrow ambition: predict how much effort a passage costs a reader using only two things a clerk could count by hand. Those two things are still all any readability checker uses. The first is average sentence length, words divided by sentences. The second is average word length measured in syllables, syllables divided by words. Everything else about your writing, including whether it is true, kind, organised or interesting, is invisible to the score.</p>
+
+    <h3>The formula, component by component</h3>
+    <p>Reading Ease = 206.835 - 1.015 x (words per sentence) - 84.6 x (syllables per word). The constant 206.835 is just a starting ceiling. Every extra word per sentence costs about one point, so trimming a 25-word sentence to 15 buys you roughly ten points. Every extra tenth of a syllable per word costs 8.5 points, which is why swapping "utilise" for "use" moves the needle far more than most writers expect. The Flesch-Kincaid Grade Level shown next to it, 0.39 x (words per sentence) + 11.8 x (syllables per word) - 15.59, feeds the same two numbers into a US school grade instead of a 0 to 100 scale.</p>
+
+    <h2>A rewrite, scored at each step</h2>
+    <p>Start with a sentence from a real rejection letter: "In the event that the aforementioned documentation is not received by the department prior to the specified deadline, your application will be subject to administrative closure without further notification." That is 29 words in one sentence with 2.03 syllables per word. Reading Ease lands at 5.3 and the grade level at 19.7 — beyond a doctorate, and a fair description of how it feels to receive.</p>
+    <p>First pass, split the sentence and cut the padding: "Send your documents before the deadline. If they arrive late, we will close your application without contacting you again." Now it is 19 words across two sentences, 9.5 words per sentence, 1.63 syllables per word. Reading Ease jumps to 59.2 and the grade level drops to 7.4. Nothing was removed except ceremony.</p>
+    <p>Second pass, prefer short words: "If we do not get your papers by the deadline, we will close your case. We will not write to you again." That is 99.5 on Reading Ease at grade 2.1. Notice this is now arguably too simple for an adult audience — the point of the exercise is that the first rewrite did almost all the useful work. Most writing improves fastest between a score of 20 and 60, then hits diminishing returns.</p>
+
+    <h2>Who reads comfortably at which score</h2>
+    <p>Above 90 you are in the territory of early readers and safety instructions. The 70 to 79 range is where consumer magazines, popular newspapers and good product pages live; almost any adult reads it without effort. The 60 to 69 band is the plain-English target used by the US Plain Writing Act guidance and by the UK Government Digital Service, which asks teams to write for a reading age of around nine. From 50 to 59 you are in broadsheet feature territory, readable but demanding. Between 30 and 49 sit academic papers and dense B2B copy, and below 30 you find insurance contracts and legal boilerplate. Some US states legislate against that last band: Florida requires life and health insurance policies to score at least 45.</p>
+
+    <h3>Grade level versus reading ease</h3>
+    <p>The two outputs answer different questions. Reading Ease answers "how hard is this?" on a scale readers can compare across drafts. Grade level answers "how many years of schooling does this assume?" and is easier to explain to a client or a compliance team. In the UK, US grade 8 corresponds roughly to Year 9, and grade 12 to Year 13. If a stakeholder asks for "8th grade reading level", they are asking for a Reading Ease somewhere in the low 60s.</p>
+
+    <h2>Where the number misleads</h2>
+    <p>Because the formula counts syllables rather than meaning, short jargon is invisible to it. "We will net the spread on the churn cohort" is nine short words and scores beautifully while communicating nothing to an outsider. The reverse also happens: familiar long words such as "information" or "opportunity" drag the score down without troubling a single reader. Syllable counting itself is a spelling heuristic, so names, acronyms and irregular spellings each cost a syllable or two of accuracy.</p>
+    <p>Sample size matters as well. One sentence gives a number that swings by twenty points if you add a comma clause, which is why this tool refuses to score fewer than ten words. Headings, bullet fragments and code blocks also distort the sentence count, so paste running prose when you want a comparable reading. The practical workflow is simple: score a section, fix the three longest sentences, swap the five heaviest words, then score it again and see whether the change was worth the edit.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.plainlanguage.gov" target="_blank" rel="noopener">PlainLanguage.gov — US federal plain-language guidelines and the Plain Writing Act</a></li>
+      <li><a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk" target="_blank" rel="noopener">GOV.UK Content Design — writing for a reading age of nine</a></li>
+      <li><a href="https://www.w3.org/WAI/" target="_blank" rel="noopener">W3C Web Accessibility Initiative — reading level and understandable content requirements</a></li>
+      <li><a href="https://www.cdc.gov/health-literacy/" target="_blank" rel="noopener">CDC Health Literacy — plain-language standards for public health materials</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/remove-duplicate-lines/"><span class="related-ico" aria-hidden="true">🧹</span><span class="related-name">Remove Duplicate Lines</span></a><a class="related-item" href="https://tool-hub.me/remove-line-breaks/"><span class="related-ico" aria-hidden="true">↩️</span><span class="related-name">Remove Line Breaks</span></a><a class="related-item" href="https://tool-hub.me/reverse-text/"><span class="related-ico" aria-hidden="true">🔁</span><span class="related-name">Reverse Text Generator</span></a><a class="related-item" href="https://tool-hub.me/sort-lines/"><span class="related-ico" aria-hidden="true">🔤</span><span class="related-name">Alphabetical Order Tool</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is a good readability score?</summary><p data-i18n="faq.a1">For a general audience aim for a Flesch Reading Ease of 60 to 70, which lands near an 8th-grade reading level. Plain-language guidance in the US and UK, including many government and insurance rules, targets that same band. Technical writing for specialists can sit at 30 to 50 without being a problem, but marketing copy below 50 usually loses readers.</p></details>
+    <details><summary data-i18n="faq.q2">How accurate is the syllable count?</summary><p data-i18n="faq.a2">The checker counts vowel groups and strips silent endings such as a final 'e' or '-ed', which is how most Flesch tools work without a dictionary. It agrees with a dictionary for the large majority of ordinary English words but slips on names, acronyms and odd spellings like 'queue' or 'business'. Across a paragraph the errors mostly cancel out, so treat a two-point difference between drafts as noise.</p></details>
+    <details><summary data-i18n="faq.q3">Does a high score mean the writing is good?</summary><p data-i18n="faq.a3">No. The formula only measures sentence length and word length, and it never reads meaning. You can score 90 with short nonsense sentences and 40 with precise, beautiful prose. Use it as a smoke alarm for long sentences and heavy vocabulary, not as a grade for quality.</p></details>
+    <details><summary data-i18n="faq.q4">How does Flesch compare with SMOG or Gunning Fog?</summary><p data-i18n="faq.a4">All three use the same two ingredients, sentence length and word difficulty, but weight them differently. Gunning Fog and SMOG count words of three or more syllables and return a school grade, while Flesch Reading Ease returns a 0 to 100 score where higher is easier. The Flesch-Kincaid grade shown here converts the same inputs into a US school grade, so it usually lands within a grade or two of SMOG.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

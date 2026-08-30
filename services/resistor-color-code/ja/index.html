@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-OLxW33GoWxr2ybpavQEnL1Y8FOmtVUumBvLwHOVeOek=' 'sha256-K/dRSp/qfffoGF2vDHZFjYHJYn0LZxfUcd5hMTo5mvw=' 'sha256-zOurf25jV/R2eHlgc3SV1kKiYRoKGejP4+uto5RDuiQ='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>抵抗カラーコード計算ツール — 4本・5本帯</title>
+<meta name="description" content="4本帯・5本帯の抵抗カラーコードをその場で解読。各帯の色を選ぶだけで抵抗値（Ω）と許容差、最小・最大の範囲がわかります。">
+<meta name="keywords" content="resistor color code calculator, resistor color code, 4 band resistor, 5 band resistor, resistor values, resistor color code chart, resistor tolerance">
+<link rel="canonical" href="https://tool-hub.me/resistor-color-code/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/resistor-color-code/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/resistor-color-code/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/resistor-color-code/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/resistor-color-code/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/resistor-color-code/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/resistor-color-code/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/resistor-color-code/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/resistor-color-code/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/resistor-color-code/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/resistor-color-code/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/resistor-color-code/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/resistor-color-code/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/resistor-color-code/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/resistor-color-code/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/resistor-color-code/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="抵抗カラーコード計算ツール — 4本・5本帯">
+<meta property="og:description" content="4本帯・5本帯の抵抗カラーコードをその場で解読。各帯の色を選ぶだけで抵抗値（Ω）と許容差、最小・最大の範囲がわかります。">
+<meta property="og:url" content="https://tool-hub.me/resistor-color-code/ja/">
+<meta property="og:image" content="https://tool-hub.me/resistor-color-code/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#a16207">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Resistor Color Code Calculator",
+  "description": "Decode 4-band and 5-band resistor color codes instantly. Pick each band color and get the resistance in ohms, the tolerance and the min-max range.",
+  "url": "https://tool-hub.me/resistor-color-code/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resistor Color Code Calculator",
+      "item": "https://tool-hub.me/resistor-color-code/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which end of the resistor do I start reading from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start at the end where the bands are bunched together. The tolerance band sits slightly apart and is usually gold or silver, so if one end carries a gold or silver band, that end is the tail and you read from the other side. When both ends look identical, decode it in both directions — only one of them gives a standard value such as 4.7 kΩ or 220 Ω."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a 4-band and a 5-band resistor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 4-band resistor uses two significant digits, a multiplier and a tolerance band, which is plenty for everyday 5% and 10% parts. A 5-band resistor adds a third significant digit before the multiplier, so it can express precision values like 4.99 kΩ that four bands simply cannot. In practice most 5-band parts are 1% metal-film resistors with a brown tolerance band."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is 4.7 kΩ everywhere but 5 kΩ almost never?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mass-produced resistors follow the E-series of preferred values. E12, used for 10% parts, is 10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68 and 82, while E24 fills the gaps for 5% parts — 4.7 is on both lists and 5.0 is on neither. The spacing is chosen so each value's tolerance band just meets the next, covering the whole range with the fewest distinct parts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The resistor is burnt and I cannot read the colors. What now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Do not guess from a scorched body, because heat pushes brown towards red and darkens orange until it looks brown. Measure the part out of circuit with a multimeter on the resistance range, or recover the value from the schematic or an identical resistor elsewhere on the board. If it is charred, replace it and check what it feeds: a resistor that burnt usually did so because something downstream failed."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Resistor Color Code Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Resistor Color Code Calculator</span></nav>
+  <section class="hero">
+    <h1>Resistor Color Code Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Pick the bands, read the value. Four-band and five-band resistors, decoded with their tolerance range.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
+      #tool .resistor { display:flex; align-items:center; justify-content:center; margin:18px 0 6px; }
+      #tool .lead { width:26px; height:5px; background:#94a3b8; }
+      #tool .rbody { display:flex; align-items:center; gap:9px; padding:11px 16px; border-radius:12px;
+        background:#e9d8b4; box-shadow:inset 0 -8px 14px rgba(0,0,0,.14); }
+      #tool .band { width:13px; height:56px; border-radius:2px; border:1px solid rgba(0,0,0,.22); }
+      #tool .band.tol { margin-left:20px; }
+      #tool .reading { text-align:center; font-size:13px; color:var(--muted); margin:0; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .band { width:11px; height:48px; } #tool .rbody { gap:7px; padding:9px 12px; } }
+    </style>
+
+    <label for="bands" data-i18n="tool.bands.label">Number of bands</label>
+    <select id="bands">
+      <option value="4" data-i18n="tool.bands.4">4 bands</option>
+      <option value="5" data-i18n="tool.bands.5">5 bands</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="b1" data-i18n="tool.b1">Band 1 — 1st digit</label>
+        <select id="b1"></select>
+      </div>
+      <div>
+        <label for="b2" data-i18n="tool.b2">Band 2 — 2nd digit</label>
+        <select id="b2"></select>
+      </div>
+      <div id="b3wrap" hidden>
+        <label for="b3" data-i18n="tool.b3">Band 3 — 3rd digit</label>
+        <select id="b3"></select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="mult" data-i18n="tool.mult">Multiplier</label>
+        <select id="mult"></select>
+      </div>
+      <div>
+        <label for="tol" data-i18n="tool.tol">Tolerance</label>
+        <select id="tol"></select>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Decode</button>
+
+    <div id="result" hidden>
+      <div class="resistor">
+        <span class="lead"></span>
+        <div class="rbody" id="strip"></div>
+        <span class="lead"></span>
+      </div>
+      <p class="reading" id="r-reading">&mdash;</p>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.value">Resistance</div>
+          <div class="rc-val" id="r-value">&mdash;</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.tol">Tolerance</div><div class="rc-val" id="r-tol">&mdash;</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.range">Value range</div><div class="rc-val" id="r-range">&mdash;</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Read from the end where the bands are bunched together — the tolerance band sits apart, on the right.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How the resistor color code works</h2>
+    <p>Through-hole resistors are too small to print a number on, so the value is painted on as rings of color defined by IEC 60062. On a four-band part the first two bands are significant digits, the third is a power-of-ten multiplier, and the fourth — set slightly apart from the rest — is the tolerance. A five-band part inserts a third significant digit before the multiplier, which is how precision resistors express values that two digits cannot reach. The digits run in spectrum order: black 0, brown 1, red 2, orange 3, yellow 4, green 5, blue 6, violet 7, grey 8, white 9. Gold and silver never appear as digits; they only ever mean a fractional multiplier or a loose tolerance.</p>
+
+    <h3>Worked example: yellow, violet, red, gold</h3>
+    <p>This is the resistor sitting in every hobby kit. Yellow is 4 and violet is 7, giving 47. Red as the multiplier means x100, so 47 x 100 = 4,700 ohms, written 4.7 kΩ. Gold is ±5%, which is 235 ohms either side, so any part that measures between 4,465 Ω and 4,935 Ω is in spec. If your meter reads 4.63 kΩ, the resistor is fine — that is normal spread, not a fault.</p>
+
+    <h3>Worked example: a five-band 4.99 kΩ</h3>
+    <p>Yellow, white, white, brown, brown decodes as 4, 9, 9 then x10, giving 4,990 Ω with a brown ±1% tolerance band. The in-spec window is 4,940 to 5,040 ohms. Notice that this is the closest a real catalogue part gets to a round 5 kΩ, and it exists only because the fifth band buys a third digit. Miscounting the bands is the classic mistake here: read the same part as four bands and yellow-white-white-brown becomes 49 x 1G, which is nonsense, and that absurd answer is your clue to recount.</p>
+
+    <h3>Small values: the gold and silver multipliers</h3>
+    <p>Brown, black, gold, gold is 10 x 0.1 = 1 Ω ±5%. Silver as a multiplier means x0.01, so brown-black-silver is 0.1 Ω. These sub-ohm parts are current-sense and inrush-limiting resistors, and they are worth double-checking because a gold band at the wrong end turns a 1 Ω part into a 1 MΩ reading.</p>
+
+    <h2>Remembering the order</h2>
+    <p>The old shop-floor mnemonic for the color order is offensive and best forgotten. A clean one that maps to the same sequence is "Better Be Right Or Your Great Big Values Go Wrong": Black, Brown, Red, Orange, Yellow, Green, Blue, Violet, Grey, White — 0 through 9 in order. The multiplier column follows the same list, each color adding one more zero, and gold and silver hang off the bottom as x0.1 and x0.01.</p>
+    <table>
+      <thead><tr><th>Color</th><th>Digit</th><th>Multiplier</th><th>Tolerance</th></tr></thead>
+      <tbody>
+        <tr><td>Black</td><td>0</td><td>x1</td><td>—</td></tr>
+        <tr><td>Brown</td><td>1</td><td>x10</td><td>±1%</td></tr>
+        <tr><td>Red</td><td>2</td><td>x100</td><td>±2%</td></tr>
+        <tr><td>Orange</td><td>3</td><td>x1k</td><td>—</td></tr>
+        <tr><td>Yellow</td><td>4</td><td>x10k</td><td>—</td></tr>
+        <tr><td>Green</td><td>5</td><td>x100k</td><td>±0.5%</td></tr>
+        <tr><td>Blue</td><td>6</td><td>x1M</td><td>±0.25%</td></tr>
+        <tr><td>Violet</td><td>7</td><td>x10M</td><td>±0.1%</td></tr>
+        <tr><td>Grey</td><td>8</td><td>x100M</td><td>±0.05%</td></tr>
+        <tr><td>White</td><td>9</td><td>x1G</td><td>—</td></tr>
+        <tr><td>Gold</td><td>—</td><td>x0.1</td><td>±5%</td></tr>
+        <tr><td>Silver</td><td>—</td><td>x0.01</td><td>±10%</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Verify with a multimeter</h2>
+    <p>Color reading is a guess until a meter agrees with it. Set a digital multimeter to resistance, touch the probes together first to see the lead resistance (typically 0.2 to 0.5 Ω) and subtract that from low readings. Measure the resistor out of circuit whenever you can: anything in parallel on the board — another resistor, a coil, a semiconductor junction — will pull the reading low and make a good part look faulty. Under fluorescent light, brown, red and orange are genuinely hard to separate, and grey against silver is worse; a phone torch at an angle, or simply reading the part against a white sheet, resolves most of it.</p>
+
+    <h2>What about SMD resistors?</h2>
+    <p>Surface-mount chips carry no color bands, so the same values arrive as printed codes. A three-digit code is two digits plus a zero count: 472 is 47 followed by two zeros, or 4.7 kΩ. A four-digit code on precision parts is three digits plus a count: 4702 is 470 followed by two zeros, 47 kΩ. An R marks the decimal point, so 4R7 is 4.7 Ω. The tightest 1% parts use EIA-96, a two-digit lookup code plus a letter multiplier, where 01C means 100 x 100 = 10 kΩ. And a plain 0 or 000 is a zero-ohm link — a jumper wearing a resistor body, which the color code writes as a single black band.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.iso.org/standards.html" target="_blank" rel="noopener">ISO — international standards catalogue, including the IEC/ISO marking standards that define resistor band coding</a></li>
+      <li><a href="https://www.nist.gov/pml" target="_blank" rel="noopener">NIST Physical Measurement Laboratory — US reference for electrical units, resistance standards and measurement uncertainty</a></li>
+      <li><a href="https://www.khanacademy.org/science/physics" target="_blank" rel="noopener">Khan Academy Physics — free lessons on Ohm's law and resistance in DC circuits</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/robots-txt-generator/"><span class="related-ico" aria-hidden="true">🤖</span><span class="related-name">Robots.txt Generator</span></a><a class="related-item" href="https://tool-hub.me/slug-generator/"><span class="related-ico" aria-hidden="true">🔗</span><span class="related-name">URL Slug Generator</span></a><a class="related-item" href="https://tool-hub.me/sql-formatter/"><span class="related-ico" aria-hidden="true">🗄️</span><span class="related-name">SQL Formatter</span></a><a class="related-item" href="https://tool-hub.me/subnet-calc/"><span class="related-ico" aria-hidden="true">🌐</span><span class="related-name">IP Subnet Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Which end of the resistor do I start reading from?</summary><p data-i18n="faq.a1">Start at the end where the bands are bunched together. The tolerance band sits slightly apart and is usually gold or silver, so if one end carries a gold or silver band, that end is the tail and you read from the other side. When both ends look identical, decode it in both directions — only one of them gives a standard value such as 4.7 kΩ or 220 Ω.</p></details>
+    <details><summary data-i18n="faq.q2">What is the difference between a 4-band and a 5-band resistor?</summary><p data-i18n="faq.a2">A 4-band resistor uses two significant digits, a multiplier and a tolerance band, which is plenty for everyday 5% and 10% parts. A 5-band resistor adds a third significant digit before the multiplier, so it can express precision values like 4.99 kΩ that four bands simply cannot. In practice most 5-band parts are 1% metal-film resistors with a brown tolerance band.</p></details>
+    <details><summary data-i18n="faq.q3">Why is 4.7 kΩ everywhere but 5 kΩ almost never?</summary><p data-i18n="faq.a3">Mass-produced resistors follow the E-series of preferred values. E12, used for 10% parts, is 10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68 and 82, while E24 fills the gaps for 5% parts — 4.7 is on both lists and 5.0 is on neither. The spacing is chosen so each value's tolerance band just meets the next, covering the whole range with the fewest distinct parts.</p></details>
+    <details><summary data-i18n="faq.q4">The resistor is burnt and I cannot read the colors. What now?</summary><p data-i18n="faq.a4">Do not guess from a scorched body, because heat pushes brown towards red and darkens orange until it looks brown. Measure the part out of circuit with a multimeter on the resistance range, or recover the value from the schematic or an identical resistor elsewhere on the board. If it is charred, replace it and check what it feeds: a resistor that burnt usually did so because something downstream failed.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

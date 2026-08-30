@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-XA8Gi0MDHXfCxgyoFap6OhLGO26zApy39yI/Om2B5b4=' 'sha256-Cr1WPX3ii6B/DFcjuT9EfPzaMxgEmVII77Gnk7qmjXA=' 'sha256-1PCnbB4BeRDlJfth3zDe+9RBvaX5amXPprKVHQ8KKLs='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>昼寝タイマー計算 — 最適な仮眠時間と起床時刻</title>
+<meta name="description" content="最適な仮眠の長さと、アラームを設定すべき正確な時刻を計算します。パワーナップ、NASAの26分仮眠、90分の完全睡眠サイクルから選べ、寝つくまでの時間も加味します。">
+<meta name="keywords" content="nap calculator, how long should i nap, power nap length, best nap time, 20 minute nap, nap alarm time, NASA nap">
+<link rel="canonical" href="https://tool-hub.me/nap-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/nap-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/nap-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/nap-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/nap-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/nap-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/nap-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/nap-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/nap-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/nap-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/nap-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/nap-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/nap-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/nap-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/nap-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/nap-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="昼寝タイマー計算 — 最適な仮眠時間と起床時刻">
+<meta property="og:description" content="最適な仮眠の長さと、アラームを設定すべき正確な時刻を計算します。パワーナップ、NASAの26分仮眠、90分の完全睡眠サイクルから選べ、寝つくまでの時間も加味します。">
+<meta property="og:url" content="https://tool-hub.me/nap-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/nap-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6d28d9">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Nap Calculator",
+  "description": "Work out the best nap length and the exact time to set your alarm. Power nap, the NASA 26-minute nap or a full 90-minute cycle, fall-asleep time included.",
+  "url": "https://tool-hub.me/nap-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Nap Calculator",
+      "item": "https://tool-hub.me/nap-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long should a nap be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a quick recharge, 20 minutes of actual sleep is the sweet spot: you stay in light stages 1 and 2, so waking is easy and alertness picks up within minutes. If you have a full 90 minutes, that covers one complete sleep cycle and ends back near light sleep. The lengths to avoid are roughly 45 to 75 minutes, which tend to wake you mid deep sleep."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is the best time of day to nap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most people hit a circadian dip between about 1pm and 3pm, which is when a nap comes easiest and costs the least. Napping after 3pm starts eating into the sleep pressure that helps you fall asleep at night. A good rule is to be awake from the nap at least six hours before your usual bedtime."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do I wake up groggy from a 60-minute nap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Around 30 to 60 minutes in, you are usually in slow-wave (deep) sleep. An alarm there produces sleep inertia — the heavy, confused feeling that can last 15 to 30 minutes and briefly leaves you worse off than no nap at all. Either stop at 20 to 26 minutes or ride the full 90-minute cycle to its end."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the coffee nap really work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drink an espresso or strong coffee quickly, then nap 20 minutes. Caffeine needs about 20 to 30 minutes to reach peak effect, so it arrives just as you wake, and the nap has already cleared some of the adenosine that caffeine competes with. Small driving-alertness studies found the combination beat either the coffee or the nap alone."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Nap Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#e11d48" href="https://tool-hub.me/health-calculators/">Health</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Nap Calculator</span></nav>
+  <section class="hero">
+    <h1>Nap Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Twenty minutes leaves you sharp. Sixty leaves you wrecked. Here is the alarm time for the nap you are about to take.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:30px; letter-spacing:-0.5px; }
+      #tool .alts { list-style:none; padding:0; margin:12px 0 0; }
+      #tool .alts li { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; padding:8px 0; border-top:1px solid var(--line); }
+      #tool .alts .a-len { font-weight:700; min-width:64px; }
+      #tool .alts .a-time { font-weight:600; }
+      #tool .alts .a-tag { font-size:12px; color:var(--muted); }
+      #tool .alts li.warn .a-tag { color:#b45309; }
+      #tool .alts li.picked { background:rgba(109,40,217,0.07); border-radius:6px; padding-left:8px; padding-right:8px; }
+      #tool .alts-title { font-size:13px; color:var(--muted); margin:14px 0 0; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .warn-line { color:#b45309; font-size:13px; font-weight:600; margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="style" data-i18n="tool.style.label">Nap type</label>
+    <select id="style">
+      <option value="20" data-i18n="tool.style.power">Power nap — 20 min, light sleep only</option>
+      <option value="26" data-i18n="tool.style.nasa">NASA nap — 26 min, the pilot-study length</option>
+      <option value="90" data-i18n="tool.style.cycle">Full sleep cycle — 90 min, includes REM</option>
+      <option value="custom" data-i18n="tool.style.custom">Custom length</option>
+    </select>
+
+    <div id="custom-wrap" hidden>
+      <label for="custom-min" data-i18n="tool.custom.label">Custom nap length (minutes)</label>
+      <input type="number" id="custom-min" inputmode="numeric" min="5" max="180" step="1" autocomplete="off" placeholder="45">
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="start" data-i18n="tool.start.label">Lie down at</label>
+        <input type="time" id="start" step="60" autocomplete="off">
+      </div>
+      <div>
+        <label for="buffer" data-i18n="tool.buffer.label">Time to fall asleep</label>
+        <select id="buffer">
+          <option value="0" data-i18n="tool.buffer.0">0 minutes — I'm already drowsy</option>
+          <option value="5" data-i18n="tool.buffer.5">5 minutes — out like a light</option>
+          <option value="10" selected data-i18n="tool.buffer.10">10 minutes — typical</option>
+          <option value="15" data-i18n="tool.buffer.15">15 minutes — slow to drift off</option>
+          <option value="20" data-i18n="tool.buffer.20">20 minutes — restless mind</option>
+          <option value="30" data-i18n="tool.buffer.30">30 minutes — takes me a while</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate nap</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.alarm">Set your alarm for</div>
+          <div class="rc-val" id="r-alarm">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.window">Nap window</div><div class="rc-val" id="r-window">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.total">Total time away</div><div class="rc-val" id="r-total">—</div></div>
+      </div>
+      <p class="warn-line" id="r-late" hidden></p>
+      <p class="alts-title" data-i18n="tool.r.alts">Other wake-up times from the same start</p>
+      <ul class="alts" id="alts"></ul>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.dip" style="margin-top:12px;">The natural dip is 1–3pm. Naps after 3pm eat into the sleep pressure you need at night.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How long a nap should be, and why the length matters more than the hour</h2>
+    <p>A nap is not a small night's sleep. It is a ride through the first part of a sleep cycle, and where the alarm catches you decides whether you wake up sharp or wrecked. The cycle runs roughly like this: stage 1 (drifting, 1 to 5 minutes), stage 2 (light but real sleep, about 20 minutes), stage 3 (slow-wave or deep sleep, roughly minutes 25 to 60), then REM near the 70 to 90 minute mark. Wake in stage 1 or 2 and you feel fine within a minute. Wake in stage 3 and you get sleep inertia — the heavy, slightly stupid feeling that can last 15 to 30 minutes.</p>
+    <p>That is the whole design of this calculator. You give it the time you are lying down and how long you usually take to fall asleep; it adds the sleep length on top of the moment you actually fall asleep, not the moment your head hits the pillow. Ten minutes of staring at the ceiling is the difference between a 20-minute nap and a 30-minute one, and 30 minutes is right at the edge of deep sleep.</p>
+
+    <h3>Worked example: the 2pm office nap</h3>
+    <p>You have a meeting at 3pm and it is 1:45pm. You pick the power nap (20 minutes) and the typical 10-minute fall-asleep buffer. The tool adds 10 minutes to 1:45pm, so you are actually asleep at about 1:55pm, and 20 minutes of sleep puts the alarm at 2:15pm. Total time away from the desk: 30 minutes. You are back at your keyboard by 2:20pm with fifteen minutes to spare and no grogginess to shake off before the meeting.</p>
+    <p>Change one input and see how it moves. Say you know you take 15 minutes to drop off — the same 1:45pm start now means the alarm should be at 2:20pm, not 2:15pm. People who set the alarm for "twenty minutes from now" are usually giving themselves about ten minutes of real sleep, then wondering why the nap did nothing.</p>
+
+    <h3>Worked example: the 90-minute weekend nap</h3>
+    <p>It is Saturday, you are running a sleep debt from the week, and you have a genuinely free block. Lie down at 1:30pm with a 10-minute buffer: asleep around 1:40pm, one full cycle through deep sleep and REM, alarm at 3:10pm. You end the cycle back in light sleep, which is why 90 minutes wakes cleanly even though it is more than four times the length of a power nap. REM is also where the memory consolidation happens that a 20-minute nap does not reach.</p>
+
+    <h3>Why 60 minutes is the worst choice</h3>
+    <p>The alternatives list flags the 60-minute option for a reason. An hour lands you deep in slow-wave sleep, the stage with the highest arousal threshold. Waking there triggers the strongest sleep inertia, and studies of shift workers have measured reaction times immediately after such a nap that are worse than before it. The benefit is still there underneath — it arrives after the fog clears — but if you need to be useful in the next half hour, an hour is the one length to avoid. Either cut it to 20 to 26 minutes or extend it to 90.</p>
+
+    <h3>The NASA 26-minute nap</h3>
+    <p>The famous number comes from a NASA and FAA study of long-haul pilots: a planned 26-minute cockpit nap improved performance by 34 percent and alertness by 54 percent compared with the control group. Twenty-six minutes is a compromise — long enough to bank real stage 2 sleep, short enough that most sleepers have not yet sunk far into slow-wave sleep. It is the option to pick when 20 minutes never feels like enough.</p>
+
+    <h3>The coffee nap</h3>
+    <p>Adenosine builds up in the brain across the day and is what makes you feel sleepy. Caffeine works by blocking adenosine receptors, and sleep clears adenosine itself. Drink an espresso quickly, nap 20 minutes, and the two mechanisms line up: caffeine reaches peak plasma concentration at roughly 20 to 30 minutes, arriving exactly as you wake into a brain that has already dumped some of its adenosine load. Small studies on simulated driving found the combination beat either intervention alone.</p>
+
+    <h3>Shift workers and night workers</h3>
+    <p>If you work nights, the 1 to 3pm advice does not apply to you — your circadian dip has moved. The useful rule is the structural one: nap before the shift rather than during the deepest part of it if you can, keep it to 20 minutes when you must be operational immediately afterwards, and if you have a two-hour break, take the full 90 and allow 20 minutes of recovery before doing anything safety-critical. Set the start time in this tool to your planned lie-down time, whatever the clock says.</p>
+
+    <h3>Limits of this calculator</h3>
+    <p>Sleep stage timings are population averages. Your own cycle may run 80 or 100 minutes rather than 90, sleep debt makes you drop into deep sleep much faster than usual, and alcohol, medication and age all shift the picture. If you are chronically exhausted, a 20-minute nap can go straight to slow-wave sleep and still leave you groggy — that is a signal about your night sleep, not a fault in the arithmetic. This tool covers daytime naps; for bedtime and wake-up planning across a whole night, use a sleep cycle calculator instead.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.cdc.gov/sleep/" target="_blank" rel="noopener">CDC — sleep health basics, sleep need and daytime sleepiness</a></li>
+      <li><a href="https://www.nhlbi.nih.gov/health/sleep" target="_blank" rel="noopener">NIH NHLBI — sleep stages, sleep cycles and how sleep works</a></li>
+      <li><a href="https://www.cdc.gov/niosh/" target="_blank" rel="noopener">CDC NIOSH — napping and fatigue management for shift workers</a></li>
+      <li><a href="https://www.nasa.gov/" target="_blank" rel="noopener">NASA — origin of the 26-minute planned cockpit nap research</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/one-rep-max-calc/"><span class="related-ico" aria-hidden="true">🏋</span><span class="related-name">One Rep Max Calculator</span></a><a class="related-item" href="https://tool-hub.me/ovulation-calc/"><span class="related-ico" aria-hidden="true">♀</span><span class="related-name">Ovulation Calculator</span></a><a class="related-item" href="https://tool-hub.me/pace-calc/"><span class="related-ico" aria-hidden="true">👟</span><span class="related-name">Running Pace Calculator</span></a><a class="related-item" href="https://tool-hub.me/period-calc/"><span class="related-ico" aria-hidden="true">🩸</span><span class="related-name">Period Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How long should a nap be?</summary><p data-i18n="faq.a1">For a quick recharge, 20 minutes of actual sleep is the sweet spot: you stay in light stages 1 and 2, so waking is easy and alertness picks up within minutes. If you have a full 90 minutes, that covers one complete sleep cycle and ends back near light sleep. The lengths to avoid are roughly 45 to 75 minutes, which tend to wake you mid deep sleep.</p></details>
+    <details><summary data-i18n="faq.q2">When is the best time of day to nap?</summary><p data-i18n="faq.a2">Most people hit a circadian dip between about 1pm and 3pm, which is when a nap comes easiest and costs the least. Napping after 3pm starts eating into the sleep pressure that helps you fall asleep at night. A good rule is to be awake from the nap at least six hours before your usual bedtime.</p></details>
+    <details><summary data-i18n="faq.q3">Why do I wake up groggy from a 60-minute nap?</summary><p data-i18n="faq.a3">Around 30 to 60 minutes in, you are usually in slow-wave (deep) sleep. An alarm there produces sleep inertia — the heavy, confused feeling that can last 15 to 30 minutes and briefly leaves you worse off than no nap at all. Either stop at 20 to 26 minutes or ride the full 90-minute cycle to its end.</p></details>
+    <details><summary data-i18n="faq.q4">Does the coffee nap really work?</summary><p data-i18n="faq.a4">Drink an espresso or strong coffee quickly, then nap 20 minutes. Caffeine needs about 20 to 30 minutes to reach peak effect, so it arrives just as you wake, and the nap has already cleared some of the adenosine that caffeine competes with. Small driving-alertness studies found the combination beat either the coffee or the nap alone.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

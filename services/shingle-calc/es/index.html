@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-ylA5J9OMQvqGa7j3qhRv03fQcE9jrGm3hUnzU+e4yDQ=' 'sha256-D4AH0B1GzUmQHpTOFoZEkWVFjC8aXzU4ib6EZDf6mYE=' 'sha256-FFMbsHb8V78RGiJabzyJceOHSXH62Ne1zzOwaDlWV6c='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de tejas — fardos, cuadros y clavos</title>
+<meta name="description" content="Calcula cuántos fardos de tejas asfálticas necesita tu tejado. Introduce la planta, la pendiente y el vuelo del alero para obtener cuadros, rollos de fieltro, caballete y clavos.">
+<meta name="keywords" content="shingle calculator, roofing calculator, how many shingles do i need, roofing squares, shingle bundles per square, roof area calculator">
+<link rel="canonical" href="https://tool-hub.me/shingle-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/shingle-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/shingle-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/shingle-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/shingle-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/shingle-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/shingle-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/shingle-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/shingle-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/shingle-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/shingle-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/shingle-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/shingle-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/shingle-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/shingle-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/shingle-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de tejas — fardos, cuadros y clavos">
+<meta property="og:description" content="Calcula cuántos fardos de tejas asfálticas necesita tu tejado. Introduce la planta, la pendiente y el vuelo del alero para obtener cuadros, rollos de fieltro, caballete y clavos.">
+<meta property="og:url" content="https://tool-hub.me/shingle-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/shingle-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7f1d1d">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Roof Shingle Calculator",
+  "description": "Find out how many shingle bundles your roof needs. Enter the footprint, pitch and overhang to get roofing squares, underlayment rolls, ridge cap and nails.",
+  "url": "https://tool-hub.me/shingle-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Shingle Calculator",
+      "item": "https://tool-hub.me/shingle-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a roofing square?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A square is 100 square feet of finished roof surface — a 10 ft by 10 ft patch. Roofers price and order in squares because it keeps the arithmetic simple: a 1,500 sq ft roof is 15 squares. Shingles themselves are sold in bundles, and it takes three bundles to cover one square with standard architectural shingles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many bundles are in a square?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three bundles per square is the standard for architectural (laminated) shingles and for most three-tab shingles. Heavier designer or luxury shingles run four or even five bundles per square, so check the coverage printed on the wrapper before you order. This calculator uses three bundles per square and then adds your waste allowance on top."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I measure roof pitch from the ground?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hold a 12 inch level against a rafter, a gable end or even a photo of the roofline, keep it level, then measure straight down from the 12 inch mark to the roof surface. That drop in inches is the rise over a 12 inch run, so a 6 inch drop is a 6 in 12 pitch. From inside the attic the same trick works against a rafter, which is safer than climbing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a tear-off or can I shingle over?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most US building codes allow a maximum of two layers of asphalt shingles, and only over a deck that is sound and reasonably flat. A second layer traps heat, hides rotten decking and adds roughly 250 lb per square to the structure. Tear-off costs more up front but lets you inspect the deck, replace flashing and start the underlayment from scratch."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Roof Shingle Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Shingle Calculator</span></nav>
+  <section class="hero">
+    <h1>Roof Shingle Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Footprint, pitch and waste turn into bundles, squares, underlayment and nails.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:480px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Measurement units</label>
+        <select id="unit">
+          <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+          <option value="m" data-i18n="tool.unit.m">Metres</option>
+        </select>
+      </div>
+      <div>
+        <label for="overhang" data-i18n="tool.overhang.label">Eave overhang (inches)</label>
+        <input type="number" id="overhang" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="length" data-i18n="tool.length.label">Footprint length</label>
+        <input type="number" id="length" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="40">
+      </div>
+      <div>
+        <label for="width" data-i18n="tool.width.label">Footprint width</label>
+        <input type="number" id="width" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="30">
+      </div>
+    </div>
+
+    <label for="pitch" data-i18n="tool.pitch.label">Roof pitch</label>
+    <select id="pitch">
+      <option value="1.031" data-i18n="tool.pitch.p3">3 in 12 — low slope, walkable (x1.031)</option>
+      <option value="1.054" selected data-i18n="tool.pitch.p4">4 in 12 — low slope, walkable (x1.054)</option>
+      <option value="1.083" data-i18n="tool.pitch.p5">5 in 12 — low slope, walkable (x1.083)</option>
+      <option value="1.118" data-i18n="tool.pitch.p6">6 in 12 — most common (x1.118)</option>
+      <option value="1.158" data-i18n="tool.pitch.p7">7 in 12 — steep (x1.158)</option>
+      <option value="1.202" data-i18n="tool.pitch.p8">8 in 12 — steep (x1.202)</option>
+      <option value="1.250" data-i18n="tool.pitch.p9">9 in 12 — steep (x1.250)</option>
+      <option value="1.302" data-i18n="tool.pitch.p10">10 in 12 — very steep (x1.302)</option>
+      <option value="1.414" data-i18n="tool.pitch.p12">12 in 12 — 45 degrees (x1.414)</option>
+    </select>
+
+    <label for="cover" data-i18n="tool.cover.label">Shingle coverage</label>
+    <select id="cover">
+      <option value="3" selected data-i18n="tool.cover.b3">3 bundles per square — standard architectural</option>
+      <option value="4" data-i18n="tool.cover.b4">4 bundles per square — designer / heavyweight</option>
+      <option value="5" data-i18n="tool.cover.b5">5 bundles per square — luxury / premium</option>
+    </select>
+
+    <label for="waste" data-i18n="tool.waste.label">Waste allowance</label>
+    <select id="waste">
+      <option value="10" selected data-i18n="tool.waste.w10">10% — simple gable roof</option>
+      <option value="15" data-i18n="tool.waste.w15">15% — hips, valleys or dormers</option>
+      <option value="20" data-i18n="tool.waste.w20">20% — complex roof with many cut-ups</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate shingles</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.bundles">Shingle bundles</div>
+          <div class="rc-val" id="r-bundles">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.squares">Roofing squares</div><div class="rc-val" id="r-squares">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Roof surface area</div><div class="rc-val" id="r-area">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.underlay">Underlayment rolls</div><div class="rc-val" id="r-underlay">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.ridge">Ridge cap bundles</div><div class="rc-val" id="r-ridge">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.nails">Roofing nails</div><div class="rc-val" id="r-nails">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.rates" style="margin-top:12px;">Assumes a simple gable roof: 3 bundles per square of architectural shingles, 4 squares per synthetic underlayment roll, one ridge cap bundle per 33 linear feet, and 2.5 lb of nails per square.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How a shingle take-off actually works</h2>
+    <p>Every roofing estimate follows the same four steps. First, measure the building footprint on the ground — length and width — because nobody wants to run a tape across a slope. Second, add the eave and rake overhang, since the shingles cover the deck out past the walls. Third, multiply by a pitch factor to convert the flat plan area into the real sloped surface. Fourth, divide by 100 to get roofing squares, multiply by three bundles per square, and add waste. That chain is what this calculator runs, and it is worth understanding because the pitch step is where most DIY estimates go wrong.</p>
+
+    <h3>The pitch multiplier, explained</h3>
+    <p>Roof pitch in the US and UK is written as rise over a 12 inch run: 6 in 12 means the roof climbs 6 inches for every 12 inches of horizontal travel. The sloped length of that triangle is the hypotenuse, so the multiplier is the square root of (12² + rise²) divided by 12. For 6 in 12 that is the square root of 1.25, or <strong>1.118</strong> — the roof surface is 11.8% bigger than the footprint under it. A 4 in 12 roof adds only 5.4%; a 12 in 12 roof adds a full 41.4%. Get this factor wrong on a steep roof and you are short by ten squares before you start.</p>
+
+    <h3>Worked example: a 40 x 30 ft house, 6 in 12 pitch</h3>
+    <p>Take a typical rectangular single-storey home measuring 40 feet by 30 feet with a 12 inch overhang all round and a simple gable roof.</p>
+    <p>Add the overhang first: 40 + 2 x 1 ft = <strong>42 ft</strong> long, and 30 + 2 x 1 ft = <strong>32 ft</strong> wide. The covered plan area is 42 x 32 = <strong>1,344 sq ft</strong>. Apply the 6 in 12 multiplier: 1,344 x 1.118 = <strong>1,503 sq ft</strong> of actual roof surface, which is <strong>15.0 squares</strong>.</p>
+    <p>Now the materials. Shingles: 15.03 squares x 3 bundles x 1.10 for waste = 49.6, so you buy <strong>50 bundles</strong>. Underlayment: 15.03 ÷ 4 squares per synthetic roll = <strong>4 rolls</strong>. Ridge cap: the ridge on a simple gable runs the 40 ft length of the house, and at 33 linear feet per bundle that is <strong>2 bundles</strong>. Nails: 15.03 x 2.5 lb = <strong>38 lb</strong>, usually bought as two 25 lb boxes of 1-1/4 in coil or hand-drive roofing nails. Change nothing but the pitch to 8 in 12 and the same house needs 16.2 squares and 56 bundles at 15% waste — one extra pallet layer for the same footprint.</p>
+
+    <h2>What actually drives the waste number</h2>
+    <p>Ten percent is the honest allowance for a plain gable roof: two rectangles, straight cuts at the rake, and starter course off-cuts that mostly get reused. Fifteen percent is for roofs where shingles have to be cut on an angle and the off-cut is dead. Every valley eats material on both sides, every hip means a diagonal cut down two planes, and every dormer creates four short runs plus its own tiny ridge. Cut-up roofs with several dormers and intersecting gables can genuinely run 18 to 20% waste, and a professional estimator measures those plane by plane rather than trusting a percentage.</p>
+    <p>Two other things quietly add material. Starter strip along the eaves and rakes is a separate product on most jobs, roughly one bundle per 100 linear feet of edge. Ridge cap on a hip roof is not just the ridge — it is the ridge plus every hip line, which can easily triple the cap count compared with the gable assumption used here.</p>
+
+    <h3>Budgeting a tear-off: skip size and disposal</h3>
+    <p>If you are stripping the old roof, plan the skip or dumpster with the same square count. One square of stripped asphalt shingles weighs roughly 250 lb for a single layer, so our 15 square roof produces about 3,750 lb, or just under two tons. A 10 yard roll-off dumpster is rated for about 20 to 25 squares of single-layer tear-off; a 20 yard handles roughly 40. Two layers doubles the weight, not the volume, and disposal is normally priced by weight over an included allowance — that surprise fee is the most common overrun on a DIY re-roof. UK readers should size a 4 yard midi skip for a small single-layer strip and check whether the tip charges separately for bituminous waste.</p>
+
+    <h2>Limitations of this estimate</h2>
+    <p>The calculator models a plain rectangular gable roof. L-shaped and T-shaped houses, hip roofs, gambrels, porches, garages, dormers, chimneys and skylights all need to be measured and added as separate rectangles or triangles. It assumes three bundles per square, which is right for architectural and three-tab shingles but not for heavy designer or luxury profiles that run four or five. It does not include starter strip, drip edge, ice-and-water shield in the eave zone, ventilation, flashing or the extra plywood you will find once the deck is exposed. Use the output to price a job and stage a delivery, then have your roofer confirm with an itemised measure before the truck arrives — and order one spare bundle, because a colour-matched top-up six months later is rarely a match at all.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.energy.gov/energysaver/roofs" target="_blank" rel="noopener">U.S. Department of Energy — roofing materials, cool roofs and attic ventilation guidance</a></li>
+      <li><a href="https://www.epa.gov/smm/sustainable-management-construction-and-demolition-materials" target="_blank" rel="noopener">U.S. EPA — construction and demolition debris, including asphalt shingle tear-off disposal</a></li>
+      <li><a href="https://www.nist.gov/engineering-laboratory" target="_blank" rel="noopener">NIST Engineering Laboratory — building materials and structural performance research</a></li>
+      <li><a href="https://www.gov.uk/planning-permission-england-wales" target="_blank" rel="noopener">GOV.UK — when roof work in England and Wales needs planning permission</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/siding-calc/"><span class="related-ico" aria-hidden="true">🏠</span><span class="related-name">Siding Calculator</span></a><a class="related-item" href="https://tool-hub.me/sleep-cycle-calc/"><span class="related-ico" aria-hidden="true">😴</span><span class="related-name">Sleep Cycle Calculator</span></a><a class="related-item" href="https://tool-hub.me/smoking-cost-calc/"><span class="related-ico" aria-hidden="true">🚭</span><span class="related-name">Smoking Cost Calculator</span></a><a class="related-item" href="https://tool-hub.me/sod-calc/"><span class="related-ico" aria-hidden="true">🌿</span><span class="related-name">Sod Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is a roofing square?</summary><p data-i18n="faq.a1">A square is 100 square feet of finished roof surface — a 10 ft by 10 ft patch. Roofers price and order in squares because it keeps the arithmetic simple: a 1,500 sq ft roof is 15 squares. Shingles themselves are sold in bundles, and it takes three bundles to cover one square with standard architectural shingles.</p></details>
+    <details><summary data-i18n="faq.q2">How many bundles are in a square?</summary><p data-i18n="faq.a2">Three bundles per square is the standard for architectural (laminated) shingles and for most three-tab shingles. Heavier designer or luxury shingles run four or even five bundles per square, so check the coverage printed on the wrapper before you order. This calculator uses three bundles per square and then adds your waste allowance on top.</p></details>
+    <details><summary data-i18n="faq.q3">How do I measure roof pitch from the ground?</summary><p data-i18n="faq.a3">Hold a 12 inch level against a rafter, a gable end or even a photo of the roofline, keep it level, then measure straight down from the 12 inch mark to the roof surface. That drop in inches is the rise over a 12 inch run, so a 6 inch drop is a 6 in 12 pitch. From inside the attic the same trick works against a rafter, which is safer than climbing.</p></details>
+    <details><summary data-i18n="faq.q4">Do I need a tear-off or can I shingle over?</summary><p data-i18n="faq.a4">Most US building codes allow a maximum of two layers of asphalt shingles, and only over a deck that is sound and reasonably flat. A second layer traps heat, hides rotten decking and adds roughly 250 lb per square to the structure. Tear-off costs more up front but lets you inspect the deck, replace flashing and start the underlayment from scratch.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

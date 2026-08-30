@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-CxlICI8ppxogM314Jn2b6O9hv31YKrRwaSItXEP/LMw=' 'sha256-PL0NRP+XOIXv53s7tJzj2okeXdHaKI8nKgtmgezS7/c=' 'sha256-v93Fc8l1GWggmuVbggzs3A1OOfgXiBzNAOOyOJvIhBo='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>昇給率計算ツール — 昇給パーセントと新年収</title>
+<meta name="description" content="現在の年収と新しい年収から昇給率を、または昇給率から新しい年収を計算します。年間の増加額と月あたりの差額（額面）も表示します。">
+<meta name="keywords" content="salary hike percentage calculator, hike calculator, salary increment percentage, ctc hike, salary increase calculator, new salary after hike">
+<link rel="canonical" href="https://tool-hub.me/salary-hike-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/salary-hike-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/salary-hike-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/salary-hike-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/salary-hike-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/salary-hike-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/salary-hike-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/salary-hike-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/salary-hike-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/salary-hike-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/salary-hike-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/salary-hike-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/salary-hike-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/salary-hike-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/salary-hike-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/salary-hike-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="昇給率計算ツール — 昇給パーセントと新年収">
+<meta property="og:description" content="現在の年収と新しい年収から昇給率を、または昇給率から新しい年収を計算します。年間の増加額と月あたりの差額（額面）も表示します。">
+<meta property="og:url" content="https://tool-hub.me/salary-hike-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/salary-hike-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b45309">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Salary Hike Calculator",
+  "description": "Work out your salary hike percentage from the old and new CTC, or the new salary from a hike %. Shows the absolute increase and the monthly gross difference.",
+  "url": "https://tool-hub.me/salary-hike-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Salary Hike Calculator",
+      "item": "https://tool-hub.me/salary-hike-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a CTC hike the same as a hike in take-home pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and the gap surprises people every appraisal season. CTC bundles employer PF, gratuity, insurance premiums and variable pay, so a 20% CTC hike can land as a 12-15% rise in monthly bank credit if most of the increase goes into those components. Compare offers on fixed monthly gross first, then on CTC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I combine hikes from two years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the growth factors, do not add the percentages. A 25% hike followed by a 20% hike is 1.25 x 1.20 = 1.50, so 50% over two years, not 45%. On a 600,000 base that is 900,000, which is 30,000 more than naive addition suggests."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use a percentage when negotiating with a competing offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anchor on the absolute number your other offer gives you, then express the gap as a percentage of your current salary so it sounds proportionate. Asking for a 22% hike reads better than asking for 132,000 more, even when they are the same thing. Have both numbers ready, because HR budgets are set in percentage bands."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is my real hike after inflation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Subtract the inflation rate from your nominal hike for a quick read. With CPI inflation around 5-6%, a 9% hike is a real gain of roughly 3-4% in purchasing power, and anything under inflation is a pay cut in real terms. For precision, divide the growth factors: 1.09 / 1.055 = 1.033, so 3.3%."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Salary Hike Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Salary Hike Calculator</span></nav>
+  <section class="hero">
+    <h1>Salary Hike Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Two directions: the percentage from two salary figures, or the new salary from a percentage.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:28px; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:10px; }
+      #tool .cut-note { color:#b45309; font-weight:600; font-size:14px; margin-top:12px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+    </style>
+
+    <label for="mode" data-i18n="tool.mode.label">What do you want to work out?</label>
+    <select id="mode">
+      <option value="pct" data-i18n="tool.mode.pct">Hike % — from old and new salary</option>
+      <option value="new" data-i18n="tool.mode.new">New salary — from old salary and hike %</option>
+    </select>
+
+    <label for="period" data-i18n="tool.period.label">The salary figures I enter are</label>
+    <select id="period">
+      <option value="year" data-i18n="tool.period.year">Per year (annual)</option>
+      <option value="month" data-i18n="tool.period.month">Per month</option>
+    </select>
+
+    <label for="old-salary" data-i18n="tool.old.label">Current salary / CTC (per year)</label>
+    <input type="number" id="old-salary" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="600000">
+
+    <div id="new-field">
+      <label for="new-salary" data-i18n="tool.new.label">New salary / CTC (per year)</label>
+      <input type="number" id="new-salary" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="750000">
+    </div>
+
+    <div id="hike-field" hidden>
+      <label for="hike-pct" data-i18n="tool.hike.label">Hike percentage (%)</label>
+      <input type="number" id="hike-pct" inputmode="decimal" step="any" autocomplete="off" placeholder="25">
+    </div>
+
+    <label for="infl-pct" data-i18n="tool.infl.label">Inflation rate (%, optional)</label>
+    <input type="number" id="infl-pct" inputmode="decimal" step="any" autocomplete="off" placeholder="3">
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" id="r-hero-label" data-i18n="tool.r.hike">Hike percentage</div>
+          <div class="rc-val" id="r-hero">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.increase">Increase per year</div><div class="rc-val" id="r-increase">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.monthly">Difference per month (gross)</div><div class="rc-val" id="r-monthly">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.newmonthly">New monthly salary (gross)</div><div class="rc-val" id="r-newmonthly">—</div></div>
+        <div class="rcard" id="real-card" hidden><div class="rc-label" data-i18n="tool.r.real">Real hike after inflation</div><div class="rc-val" id="r-real">—</div></div>
+      </div>
+      <p class="cut-note" id="cut-note" hidden></p>
+      <p class="subtle" data-i18n="tool.note.gross">Monthly figures are gross: annual divided by 12. Take-home moves by less, because tax and deductions rise with the raise.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.currency">Currency-agnostic — enter both figures in the same currency and the percentage holds.</p>
+    <p class="subtle" data-i18n="tool.note.bands">Anecdotal market ranges, not a benchmark: roughly 8-12% for an annual increment and 20-40% on a job switch in the Indian market. Levels and industries vary widely.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How a salary hike percentage is actually calculated</h2>
+    <p>The formula has two forms and people need both at different moments. When you already know the old and new numbers, the hike percentage is the increase divided by the old salary: (new - old) / old x 100. When you know the percentage you have been promised and want the resulting figure, it flips to new = old x (1 + hike / 100). The single most common mistake is dividing by the new salary instead of the old one, which quietly understates every raise you have ever had.</p>
+
+    <h3>Worked example, both directions</h3>
+    <p>Suppose you earn 600,000 a year and the revised letter says 750,000. The increase is 150,000. Divide by the old salary: 150,000 / 600,000 = 0.25, so a 25% hike. Per month the gross difference is 150,000 / 12 = 12,500, and the new gross monthly figure is 62,500. Run it the other way and you get the same picture: 600,000 x 1.25 = 750,000. That symmetry is the whole tool — the mode selector just decides which of the two numbers you supply and which one you get back.</p>
+    <p>Note what the percentage does not tell you. A 25% hike on 600,000 and a 25% hike on 6,000,000 are the same percentage and wildly different amounts of money. When you compare two offers, look at the absolute increase as well as the rate; when you compare against market norms, the percentage is the more useful lens.</p>
+
+    <h3>Stacking hikes across years: multiply, never add</h3>
+    <p>Two years of raises do not add up the way instinct suggests. A 25% hike followed by a 20% hike is 1.25 x 1.20 = 1.50, a 50% total increase, not 45%. On a 600,000 base that is 900,000 rather than the 870,000 addition would predict — a 30,000 gap created purely by compounding. Over a longer run the effect grows: five consecutive 10% hikes give 1.10^5 = 1.61, a 61% increase, not 50%.</p>
+    <p>The reverse question shows up in interviews just as often: if your salary went from 400,000 to 700,000 over three years, what was the average annual hike? Take the cube root of 700,000 / 400,000 = 1.75, which is about 1.205 — roughly 20.5% a year compounded. Averaging the three individual percentages would give a slightly different and less honest answer.</p>
+
+    <h2>Why CTC hikes and take-home hikes diverge</h2>
+    <p>In markets that quote cost-to-company, the headline number bundles things that never reach your bank account in cash. Employer provident fund contributions, gratuity accrual, insurance premiums, meal allowances and a variable or performance component all sit inside CTC. If a company grants a 20% CTC hike but loads most of it into variable pay and employer contributions, the fixed monthly gross may rise only 12-15%, and the net after tax rises less again because a higher salary usually means a higher marginal rate.</p>
+    <p>The practical defence is to compare offers on three lines rather than one: fixed monthly gross, guaranteed annual fixed pay, and total CTC. Ask what percentage of the package is variable and what the payout history looks like. A 30% CTC hike where variable jumps from 5% to 20% of the package can be worth less in a bad year than a 20% hike that is entirely fixed.</p>
+    <p>US and UK readers meet the same problem under different names. A raise quoted as "total compensation" can include equity that vests over four years, a bonus target that is not guaranteed, and employer pension or 401(k) contributions. Converting everything to a single annual number is fine for comparison, as long as you know which parts are contractual and which are aspirational.</p>
+
+    <h2>Nominal hike versus real hike</h2>
+    <p>Inflation quietly taxes every raise. The quick approximation is to subtract the inflation rate from the nominal hike: with prices rising 5.5% a year, a 9% hike leaves you about 3.5% better off in purchasing power. The exact calculation divides the growth factors, 1.09 / 1.055 = 1.033, giving 3.3% — close enough that the subtraction shortcut is fine for anything under about 10%.</p>
+    <p>This reframes what a "low" raise means. A 4% hike in a 6% inflation year is a real pay cut of roughly 2%, even though the letter says increase. Conversely a 6% hike when inflation is 2% is a genuine gain. When you benchmark yourself against the anecdotal 8-12% annual increment range, check what inflation was doing in the same period before deciding you were treated badly.</p>
+
+    <h3>Using the percentage in a negotiation</h3>
+    <p>Percentages are the language of HR budgets, which are usually approved as bands — a 10% pool for the team, a 25% ceiling for external hires. Framing your ask inside that vocabulary makes it easier to approve. Anchor on the absolute figure a competing offer gives you, then convert the gap into a percentage of your current salary so it sounds proportionate: "a 22% adjustment" lands better than "132,000 more" while meaning exactly the same thing. Bring both numbers, because the person across the table needs the percentage to get approval and the absolute figure to build the letter.</p>
+
+    <h2>Limitations of this calculator</h2>
+    <p>It is arithmetic, not tax advice. The monthly figures are gross — annual divided by twelve — and take no account of income tax, national insurance, provident fund, student loan deductions or any local levy, all of which change as your salary crosses thresholds. It assumes twelve equal monthly payments, so it does not model a thirteenth-month bonus, quarterly variable pay or joining bonuses that inflate only the first year. Market ranges quoted in the tool are common anecdotal figures, not survey data. For anything with contractual consequences, check the actual offer letter and, where the numbers are large, a tax professional.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.bls.gov/eci/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics, Employment Cost Index — official quarterly data on wage and benefit growth</a></li>
+      <li><a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics, Consumer Price Index — inflation figures for converting a nominal raise into a real one</a></li>
+      <li><a href="https://www.gov.uk/browse/working/tax-minimum-wage" target="_blank" rel="noopener">GOV.UK: Income Tax and the National Minimum Wage — how UK gross pay turns into take-home pay</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/sales-tax-calc/"><span class="related-ico" aria-hidden="true">🧾</span><span class="related-name">Sales Tax Calculator</span></a><a class="related-item" href="https://tool-hub.me/savings-calc/"><span class="related-ico" aria-hidden="true">🐷</span><span class="related-name">Savings Calculator</span></a><a class="related-item" href="https://tool-hub.me/self-employment-tax-calc/"><span class="related-ico" aria-hidden="true">🧾</span><span class="related-name">Self-Employment Tax Calculator</span></a><a class="related-item" href="https://tool-hub.me/sip-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">SIP Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Is a CTC hike the same as a hike in take-home pay?</summary><p data-i18n="faq.a1">No, and the gap surprises people every appraisal season. CTC bundles employer PF, gratuity, insurance premiums and variable pay, so a 20% CTC hike can land as a 12-15% rise in monthly bank credit if most of the increase goes into those components. Compare offers on fixed monthly gross first, then on CTC.</p></details>
+    <details><summary data-i18n="faq.q2">How do I combine hikes from two years?</summary><p data-i18n="faq.a2">Multiply the growth factors, do not add the percentages. A 25% hike followed by a 20% hike is 1.25 x 1.20 = 1.50, so 50% over two years, not 45%. On a 600,000 base that is 900,000, which is 30,000 more than naive addition suggests.</p></details>
+    <details><summary data-i18n="faq.q3">How do I use a percentage when negotiating with a competing offer?</summary><p data-i18n="faq.a3">Anchor on the absolute number your other offer gives you, then express the gap as a percentage of your current salary so it sounds proportionate. Asking for a 22% hike reads better than asking for 132,000 more, even when they are the same thing. Have both numbers ready, because HR budgets are set in percentage bands.</p></details>
+    <details><summary data-i18n="faq.q4">What is my real hike after inflation?</summary><p data-i18n="faq.a4">Subtract the inflation rate from your nominal hike for a quick read. With CPI inflation around 5-6%, a 9% hike is a real gain of roughly 3-4% in purchasing power, and anything under inflation is a pay cut in real terms. For precision, divide the growth factors: 1.09 / 1.055 = 1.033, so 3.3%.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-MYKPHsBST57L5RKg6f9QfxUAATPcVB198ovVzzqZl4g=' 'sha256-pud0ddffwh/UpAC92YdqKqUrjcYO2/MKnPZuzozeD54=' 'sha256-NJbBIpftcJVoRbuWIJVQwKDqrA8XnIwS/7xKD0EnXRc='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日割り家賃計算ツール — 月途中入居の家賃</title>
+<meta name="description" content="月の途中に入居する場合の日割り家賃をすぐ計算。実日数方式、30日（銀行方式）、365日日割りの3方式を並べて比較できます。">
+<meta name="keywords" content="prorated rent calculator, prorate rent, partial month rent, move in rent calculator, daily rent rate, rent proration">
+<link rel="canonical" href="https://tool-hub.me/prorated-rent-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/prorated-rent-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/prorated-rent-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/prorated-rent-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/prorated-rent-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/prorated-rent-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/prorated-rent-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/prorated-rent-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/prorated-rent-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/prorated-rent-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/prorated-rent-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/prorated-rent-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/prorated-rent-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/prorated-rent-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/prorated-rent-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/prorated-rent-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="日割り家賃計算ツール — 月途中入居の家賃">
+<meta property="og:description" content="月の途中に入居する場合の日割り家賃をすぐ計算。実日数方式、30日（銀行方式）、365日日割りの3方式を並べて比較できます。">
+<meta property="og:url" content="https://tool-hub.me/prorated-rent-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/prorated-rent-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0284c7">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Prorated Rent Calculator",
+  "description": "Work out prorated rent for a partial month in seconds. Compare the actual-days, 30-day banker's month and 365-day daily rates before you sign or pay.",
+  "url": "https://tool-hub.me/prorated-rent-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Prorated Rent Calculator",
+      "item": "https://tool-hub.me/prorated-rent-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which proration method do landlords actually use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most US and UK leases prorate on the actual number of days in the move-in month, so a 31-day month produces a lower daily rate than a 28-day one. Some property managers prefer a flat 30-day banker's month because the daily rate never changes, and a few divide annual rent by 365. The lease language controls it, and where the lease is silent, actual days is the default most landlord-tenant guides assume."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I prorate rent when I move out mid-month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the same arithmetic mirrored. On move-out you owe from the 1st through your last day, so the day count equals the day of the month you hand back the keys. Take the daily rate shown here and multiply by that number: a 15th move-out at a 58.06 daily rate is 870.90."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does proration work with first and last month's rent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually you pay the partial month plus a full month up front, so the prepaid amount lands on a whole month rather than the stub. If your lease collects last month's rent too, that money sits untouched until the final full month and the partial period at move-in is billed separately. Ask which order applies before the transfer — it changes your move-in cheque by hundreds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is a February move-in more expensive per day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under the actual-days method the monthly rent is divided by 28, so each day costs more than in a 31-day month. You occupy fewer days, so the total is still lower, but the daily rate is the highest of the year. This is exactly why some landlords use the 30-day banker's month — it removes the month-to-month swing."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Prorated Rent Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Prorated Rent Calculator</span></nav>
+  <section class="hero">
+    <h1>Prorated Rent Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Moving in mid-month? See exactly what you owe — and how the three standard methods differ.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .cmp-title { font-size:14px; margin:18px 0 6px; }
+      #tool table { width:100%; border-collapse:collapse; font-size:14px; }
+      #tool th, #tool td { border-bottom:1px solid var(--line); padding:7px 6px; text-align:right; }
+      #tool th:first-child, #tool td:first-child { text-align:left; }
+      #tool tr.sel td { font-weight:700; color:var(--accent); }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="rent" data-i18n="tool.rent.label">Monthly rent</label>
+        <input type="number" id="rent" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="1800">
+      </div>
+      <div>
+        <label for="movein" data-i18n="tool.date.label">Move-in date</label>
+        <input type="date" id="movein" min="1900-01-01" max="2100-12-31" autocomplete="off" placeholder="2026-08-18">
+      </div>
+    </div>
+
+    <label for="period" data-i18n="tool.period.label">Billing period</label>
+    <select id="period">
+      <option value="in" data-i18n="tool.period.in">Move-in — pay to month end</option>
+      <option value="out" data-i18n="tool.period.out">Move-out — pay from the 1st</option>
+    </select>
+
+    <label for="method" data-i18n="tool.method.label">Proration method</label>
+    <select id="method">
+      <option value="actual" data-i18n="tool.method.actual">Actual days in month</option>
+      <option value="banker" data-i18n="tool.method.banker">Banker's 30-day month</option>
+      <option value="year" data-i18n="tool.method.year">365-day daily rate</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.prorated">Prorated rent due</div>
+          <div class="rc-val" id="r-prorated">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.daily">Daily rate</div><div class="rc-val" id="r-daily">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.days">Days occupied</div><div class="rc-val" id="r-days">—</div></div>
+      </div>
+
+      <h3 class="cmp-title" data-i18n="tool.cmp.title">All three methods compared</h3>
+      <table>
+        <thead><tr>
+          <th data-i18n="tool.cmp.method">Method</th>
+          <th data-i18n="tool.cmp.daily">Daily rate</th>
+          <th data-i18n="tool.cmp.total">Amount due</th>
+        </tr></thead>
+        <tbody id="cmp-body"></tbody>
+      </table>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Your lease decides the method. Where it is silent, actual days in the month is the usual default.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How prorated rent is actually calculated</h2>
+    <p>Prorated rent is the rent you owe for a partial month. Leases run in whole months, but move-in dates rarely do, so the first payment covers only the days you actually hold the keys. Every method works the same way in two steps: find a daily rate, then multiply it by the number of days you occupy the unit. The methods differ only in what they divide the monthly rent by, and that single choice can move your first cheque by tens of dollars.</p>
+    <p>The day count is the part people get wrong. If you move in on the 18th of a 31-day month, you occupy the 18th through the 31st inclusive, which is 31 - 18 + 1 = 14 days, not 13. The move-in day itself is a billed day because you have possession from that morning. The same inclusive rule is why a move-in on the 1st gives a full month and a move-in on the last day gives exactly one day.</p>
+
+    <h3>Worked example: 
+
+  ,800 rent, moving in on the 18th of July</h3>
+    <p>July has 31 days, so you occupy 14 of them. Here is what each method produces.</p>
+    <ul>
+      <li><strong>Actual days in the month:</strong> 1,800 / 31 = 58.06 per day. 58.06 x 14 = <strong>812.90</strong>.</li>
+      <li><strong>Banker's 30-day month:</strong> 1,800 / 30 = 60.00 per day. 60.00 x 14 = <strong>840.00</strong>.</li>
+      <li><strong>365-day daily rate:</strong> 1,800 x 12 / 365 = 59.18 per day. 59.18 x 14 = <strong>828.49</strong>.</li>
+    </ul>
+    <p>Same rent, same date, a spread of 27.10 between the cheapest and dearest method. Over a 14-day stub that is a restaurant dinner; on a $4,000 New York two-bedroom the same spread is about 60 dollars. It is small enough that nobody argues and large enough that you should know which number your landlord is using before the money leaves your account.</p>
+
+    <h3>Why the method matters more in short months</h3>
+    <p>The actual-days method is the only one where the daily rate moves through the year, and February is where it bites. Take the same 
+
+  ,800 rent and a February 18 move-in: you occupy 11 days at 1,800 / 28 = 64.29 per day, which is 707.14. The banker's month charges 60.00 x 11 = 660.00, and the 365-day rate charges 650.96. Because February compresses the same monthly rent into 28 days, the actual-days daily rate is the highest of the year, even though the total bill is the lowest of the three.</p>
+    <table>
+      <thead><tr><th>Move-in month (18th, 
+
+  ,800)</th><th>Days billed</th><th>Actual days</th><th>30-day month</th><th>365-day rate</th></tr></thead>
+      <tbody>
+        <tr><td>February (28 days)</td><td>11</td><td>707.14</td><td>660.00</td><td>650.96</td></tr>
+        <tr><td>April (30 days)</td><td>13</td><td>780.00</td><td>780.00</td><td>769.32</td></tr>
+        <tr><td>July (31 days)</td><td>14</td><td>812.90</td><td>840.00</td><td>828.49</td></tr>
+      </tbody>
+    </table>
+    <p>Notice April: in a 30-day month the actual-days and banker's methods agree exactly. All the disagreement lives in the 28-, 29- and 31-day months, which is two thirds of the calendar.</p>
+
+    <h2>What to check in the lease before you pay</h2>
+    <p>Most US state landlord-tenant guides and standard UK assured shorthold tenancy templates assume actual days when the agreement is silent, but the agreement usually is not silent. Read for four things:</p>
+    <ul>
+      <li>The exact wording: "daily rate equal to 1/30th of the monthly rent" is a banker's month, "pro rata for the days occupied" is actual days.</li>
+      <li>Whether the stub period is billed with the first full month or invoiced separately.</li>
+      <li>Whether last month's rent, if collected, applies to the final full month or to the final partial month.</li>
+      <li>Whether the possession date and the lease start date are the same day. If the lease starts on the 15th but keys are released on the 18th, you should be billed from the 18th.</li>
+    </ul>
+
+    <h3>A negotiation note worth 200 dollars</h3>
+    <p>Partial months are the easiest concession a leasing office can give, because a discount on 12 days does not show up in the advertised monthly rate that their revenue software tracks. If you are moving into a building with visible vacancy, ask for the stub period free rather than asking for a lower monthly rent. On a 
+
+  ,800 unit with a 14-day stub, that request is worth 812.90 and costs the landlord nothing on paper. Get it in writing in the lease or in an addendum; a verbal promise from a leasing agent is not a rent credit.</p>
+
+    <h2>Limitations</h2>
+    <p>This calculator handles the rent line only. Utilities, parking, pet rent and amenity fees are often prorated on the same daily basis, but some buildings charge them in full for any month you occupy at all, and renters insurance and deposits are never prorated. Local rules can also override the lease: a few rent-stabilised jurisdictions specify a proration formula by statute. When your figure and the landlord's disagree by more than a few dollars, the cause is almost always the day count, not the method, so confirm the move-in day and whether it is billed before you argue about arithmetic.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.consumerfinance.gov/consumer-tools/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — consumer guidance on housing costs, leases and fees</a></li>
+      <li><a href="https://www.hud.gov/topics/rental_assistance" target="_blank" rel="noopener">U.S. Department of Housing and Urban Development — tenant rights and rental assistance basics</a></li>
+      <li><a href="https://www.gov.uk/private-renting" target="_blank" rel="noopener">GOV.UK — private renting rules on rent, deposits and tenancy start dates in England</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/rd-calc/"><span class="related-ico" aria-hidden="true">🏦</span><span class="related-name">RD Calculator</span></a><a class="related-item" href="https://tool-hub.me/refinance-calc/"><span class="related-ico" aria-hidden="true">🔄</span><span class="related-name">Refinance Calculator</span></a><a class="related-item" href="https://tool-hub.me/rent-affordability-calc/"><span class="related-ico" aria-hidden="true">🏠</span><span class="related-name">Rent Affordability Calculator</span></a><a class="related-item" href="https://tool-hub.me/rent-split-calc/"><span class="related-ico" aria-hidden="true">🚪</span><span class="related-name">Rent Split Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Which proration method do landlords actually use?</summary><p data-i18n="faq.a1">Most US and UK leases prorate on the actual number of days in the move-in month, so a 31-day month produces a lower daily rate than a 28-day one. Some property managers prefer a flat 30-day banker's month because the daily rate never changes, and a few divide annual rent by 365. The lease language controls it, and where the lease is silent, actual days is the default most landlord-tenant guides assume.</p></details>
+    <details><summary data-i18n="faq.q2">How do I prorate rent when I move out mid-month?</summary><p data-i18n="faq.a2">It is the same arithmetic mirrored. On move-out you owe from the 1st through your last day, so the day count equals the day of the month you hand back the keys. Take the daily rate shown here and multiply by that number: a 15th move-out at a 58.06 daily rate is 870.90.</p></details>
+    <details><summary data-i18n="faq.q3">How does proration work with first and last month's rent?</summary><p data-i18n="faq.a3">Usually you pay the partial month plus a full month up front, so the prepaid amount lands on a whole month rather than the stub. If your lease collects last month's rent too, that money sits untouched until the final full month and the partial period at move-in is billed separately. Ask which order applies before the transfer — it changes your move-in cheque by hundreds.</p></details>
+    <details><summary data-i18n="faq.q4">Why is a February move-in more expensive per day?</summary><p data-i18n="faq.a4">Under the actual-days method the monthly rent is divided by 28, so each day costs more than in a 31-day month. You occupy fewer days, so the total is still lower, but the daily rate is the highest of the year. This is exactly why some landlords use the 30-day banker's month — it removes the month-to-month swing.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

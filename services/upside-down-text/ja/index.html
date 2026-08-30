@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-pjpVgcR9bmubydUtbOM4Wci3bZT9Km8Dht6VrCg26U4=' 'sha256-fRcPOIK7H0ZBvan1j40Ejo3XoP7D83fQMw0QU+aOiq8=' 'sha256-Ppst8/ubgQSR+JA5w2Avb15AWyT8mPRR5pxF3f4QbDQ='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>さかさま文字ジェネレーター — 反転・鏡文字・スモールキャップス</title>
+<meta name="description" content="テキストを入力するだけで、Unicodeの類似文字を使った上下反転・鏡文字・スモールキャップス版を生成。無料、ワンクリックでコピー、すべてブラウザ内で完結。">
+<meta name="keywords" content="upside down text, flip text, upside down text generator, flipped text copy paste, text flipper, 거꾸로 텍스트">
+<link rel="canonical" href="https://tool-hub.me/upside-down-text/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/upside-down-text/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/upside-down-text/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/upside-down-text/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/upside-down-text/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/upside-down-text/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/upside-down-text/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/upside-down-text/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/upside-down-text/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/upside-down-text/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/upside-down-text/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/upside-down-text/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/upside-down-text/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/upside-down-text/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/upside-down-text/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/upside-down-text/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="さかさま文字ジェネレーター — 反転・鏡文字・スモールキャップス">
+<meta property="og:description" content="テキストを入力するだけで、Unicodeの類似文字を使った上下反転・鏡文字・スモールキャップス版を生成。無料、ワンクリックでコピー、すべてブラウザ内で完結。">
+<meta property="og:url" content="https://tool-hub.me/upside-down-text/ja/">
+<meta property="og:image" content="https://tool-hub.me/upside-down-text/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#a21caf">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Upside Down Text Generator",
+  "description": "Type any text and get upside-down, mirrored, and small-caps versions using Unicode lookalike characters. Free, one-click copy, computed in your browser.",
+  "url": "https://tool-hub.me/upside-down-text/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Upside Down Text Generator", "item": "https://tool-hub.me/upside-down-text/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does this upside down text generator actually do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool takes whatever you type and produces three different transformations at once. Upside down replaces each character with a Unicode lookalike that resembles the original rotated 180 degrees, then reverses the order of characters and lines — so \"Toolhub\" becomes \"qnɥloo⊥\", the same way a whole line of text would read if you physically turned the page upside down. Mirrored swaps in a small set of characters that genuinely resemble their left-right mirror image (like b/d, p/q, S) and reverses the character order within each line, while keeping line order unchanged. Small caps replaces lowercase letters with smaller capital-letter lookalikes without changing order at all. Click any of the three result cards to copy that version."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some letters not look properly upside down or mirrored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unicode has no built-in way to physically rotate or mirror a letter — every character here is a substitute symbol that happens to look similar, borrowed from other alphabets and phonetic notation. Most lowercase letters have a convincing rotated match, but a handful of characters — capital Q, X, and most digits — have no good visual equivalent, so the closest available symbol is used, or the original character is left unchanged in the mirrored mode. A few upside-down letters, like the substitute for capital B, come from character blocks outside the common range and may render as a blank box on older devices or unusual fonts. This is a novelty and creative-writing effect, not a font feature, so results can vary slightly between browsers, operating systems, and typefaces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use upside down text as an Instagram or TikTok bio, and will screen readers read it normally?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — you can copy any of the three results and paste them into a bio, caption, username, or comment on most platforms, since they're just ordinary Unicode characters. However, be aware that screen readers and text-to-speech tools do not recognize these characters as the letters they resemble; they will either read out the character's real (often unrelated) name, mispronounce it, or skip it entirely, which makes upside-down, mirrored, and small-caps text harder to understand for people using assistive technology. For that reason, this effect is best used sparingly for decorative headings or novelty captions rather than for text that carries important information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the actual difference between the \"upside down\" and \"mirrored\" results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They flip text along different axes. Upside down simulates rotating the whole page 180 degrees: it reverses the character order within each line and also reverses the order of the lines themselves, so a multi-line upside-down result reads from the last line to the first. Mirrored simulates holding the text up to a vertical mirror: it reverses the character order within each line but keeps the lines in their original top-to-bottom order, since a mirror only flips left-to-right. Short, symmetric-looking words highlight the difference well — mirroring \"SOS\" gives \"ƧOƧ\", while \"bad\" mirrors right back to \"bad\" because b and d are swapped in exactly the right places."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This upside down text generator runs entirely in your browser — nothing you type or paste is uploaded, logged, or shared with any server. Your most recent input is optionally saved to this browser's local storage so it's still here next time you open the page; untick \"Save my text in this browser\" to keep it private to the current session, and clearing the box removes any stored copy immediately."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Upside Down Text Generator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#7c3aed" href="https://tool-hub.me/text-tools/">Text</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Upside Down Text Generator</span></nav>
+  <section class="hero">
+    <h1>Upside Down Text Generator</h1>
+    <p class="lede" data-i18n="hero.lede">Type or paste any text and instantly flip it upside down, mirror it, or convert it to small caps — free, one-click copy, computed right in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <style>
+      #tool .udt-toolbar{display:flex;align-items:center;gap:.9rem;margin-top:.7rem;flex-wrap:wrap}
+      #tool .udt-count{margin:0;font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+      #tool .udt-disclaimer{margin:.9rem 0 0;font-size:12.5px;line-height:1.55;color:var(--muted);border-left:3px solid var(--line);padding-left:.6rem}
+      #tool #udt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.7rem;margin-top:1rem}
+      #tool .udt-card{text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);display:flex;flex-direction:column;gap:.3rem;min-width:0}
+      #tool .udt-card:hover{border-color:var(--accent)}
+      #tool .udt-label{font-size:.74rem;font-weight:700;color:var(--muted)}
+      #tool .udt-val{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:1.05rem;line-height:1.4;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere}
+      @media (max-width:420px){
+        #tool #udt-grid{grid-template-columns:1fr}
+        #tool .udt-toolbar{gap:.6rem}
+      }
+    </style>
+    <label for="udt-text" data-i18n="tool.textLabel">Your text</label>
+    <textarea id="udt-text" rows="5" maxlength="5000" dir="auto" autocomplete="off" spellcheck="false"
+      placeholder="Type or paste your text here…" data-i18n-placeholder="tool.textPlaceholder"
+      style="resize:vertical;line-height:1.6;"></textarea>
+
+    <div class="udt-toolbar">
+      <button type="button" class="btn" id="udt-clear" data-i18n="tool.clear" style="width:auto;">Clear</button>
+      <label style="display:flex;align-items:center;gap:.45rem;margin:0;font-weight:400;cursor:pointer;">
+        <input type="checkbox" id="udt-remember" checked style="width:auto;margin:0;">
+        <span data-i18n="tool.remember">Save my text in this browser</span>
+      </label>
+      <p class="udt-count" id="udt-count" aria-hidden="true">0 / 5000 characters</p>
+    </div>
+
+    <p class="udt-disclaimer" data-i18n="tool.disclaimer">These are Unicode lookalike characters, not a real font rotation — appearance can vary by device/font, and screen readers will not read them correctly.</p>
+
+    <p id="udt-feedback" role="status" aria-live="polite" hidden style="margin:.7rem 0 0;font-weight:600;color:var(--accent);"></p>
+
+    <div id="udt-grid">
+      <button type="button" class="udt-card" id="udt-upside" title="Click to copy" data-i18n-title="tool.copyHint">
+        <span class="udt-label" data-i18n="tool.upside">Upside down</span>
+        <span class="udt-val">—</span>
+      </button>
+      <button type="button" class="udt-card" id="udt-mirror" title="Click to copy" data-i18n-title="tool.copyHint">
+        <span class="udt-label" data-i18n="tool.mirror">Mirrored</span>
+        <span class="udt-val">—</span>
+      </button>
+      <button type="button" class="udt-card" id="udt-smallcaps" title="Click to copy" data-i18n-title="tool.copyHint">
+        <span class="udt-label" data-i18n="tool.smallcaps">Small caps</span>
+        <span class="udt-val">—</span>
+      </button>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:color-mix(in srgb,var(--accent) 8%,var(--surface));padding:1px 5px;border-radius:4px}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Three ways to flip text, explained honestly</h2>
+    <p>There is no such thing as truly rotating or mirroring a letter in plain text — a web page can't spin a single character 180 degrees just because you typed it. What every "upside down text" tool actually does, including this one, is character substitution: swap each letter for a different Unicode character that happens to already look like the original one flipped, borrowed mostly from the International Phonetic Alphabet and a handful of other alphabets. This generator computes three such substitutions at once so you can compare them and copy whichever fits.</p>
+
+    <h3>Upside down</h3>
+    <p>Every character is replaced with its rotated-looking lookalike, and then the whole line is reversed — both the order of the characters and, for multi-line input, the order of the lines themselves. That second reversal matters: it's exactly what would happen if you printed your text and physically turned the page 180 degrees, where the last line ends up on top. Skipping it would leave you with flipped letters in their original reading order, which doesn't look upside down at all.</p>
+
+    <h3>Mirrored</h3>
+    <p>Mirroring simulates holding a strip of text up to a vertical mirror. Only a small set of letters have a genuine left-right mirror-image Unicode lookalike — pairs like <code>b</code>/<code>d</code> and <code>p</code>/<code>q</code>, plus a few single-letter substitutes such as <code>S</code>, <code>C</code>, <code>E</code>, <code>N</code>, and <code>R</code>. Everything else has no honest mirror character in Unicode, so it's left unchanged. The character order within each line is reversed, exactly like a real mirror, but the order of separate lines is not touched, because a mirror held up to a page only flips it left-to-right, not top-to-bottom.</p>
+
+    <h3>Small caps</h3>
+    <p>Small caps is the odd one out: nothing is reversed. Lowercase letters are swapped for smaller capital-letter lookalikes, so a sentence keeps its normal reading order but takes on a distinct typographic look often used for stylized headings, usernames, or social bios. Uppercase letters, digits, and punctuation are left as-is.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <strong>Example 1 — a single word.</strong> Input <code>Toolhub</code><br>
+      Upside down: <code>qnɥloo⊥</code> · Mirrored: <code>duhlooT</code> · Small caps: <code>Tᴏᴏʟʜᴜʙ</code>
+    </div>
+    <div class="example">
+      <strong>Example 2 — two words.</strong> Input <code>hello world</code><br>
+      Upside down: <code>plɹoʍ ollǝɥ</code> (note the word order itself is reversed too, along with every letter) · Mirrored: <code>blrow ollǝh</code> · Small caps: <code>ʜᴇʟʟᴏ ᴡᴏʀʟᴅ</code>
+    </div>
+    <div class="example">
+      <strong>Example 3 — a symmetric-looking word.</strong> Input <code>bad</code><br>
+      Mirrored gives <code>bad</code> right back — because <code>b</code> and <code>d</code> swap places in exactly the positions that undo each other. Upside down gives <code>pɐq</code> instead, since upside-down and mirrored use different substitution tables.
+    </div>
+    <div class="example">
+      <strong>Example 4 — punctuation and a rare character.</strong> Input <code>Happy Birthday!</code><br>
+      Upside down: <code>¡ʎɐpɥʇɹᴉ𐐒 ʎddɐH</code> — the flipped stand-in for capital <code>B</code> comes from a rare Unicode block and may show as a blank box (▯) on some older devices or fonts, which is a good example of the rendering caveat covered in the FAQ.
+    </div>
+
+    <h3>Where these lookalike characters come from</h3>
+    <p>Most of the letter shapes used in the upside-down set are not invented for this purpose — they're real Unicode characters that already existed for entirely different reasons, mainly the International Phonetic Alphabet (used by linguists to write pronunciation) plus a scattering of characters from other scripts such as Cyrillic, Deseret, Hangul, and Bopomofo that happen to resemble a rotated Latin letter. That's why the effect works consistently across devices at all: no custom font or image is required, just characters every modern system already knows how to display (with the rare exception noted above).</p>
+
+    <h3>Common uses</h3>
+    <ul>
+      <li><strong>Novelty captions and bios:</strong> a quick, eye-catching effect for social posts, party invitations, or "read this upside down" jokes.</li>
+      <li><strong>Small-caps styling:</strong> a distinct look for headings, usernames, or short labels that still reads perfectly normally.</li>
+      <li><strong>Puzzles and wordplay:</strong> comparing upside-down and mirrored output for short, symmetric words is a fun way to spot letters that flip back on themselves.</li>
+    </ul>
+
+    <h3>Mistakes worth avoiding</h3>
+    <ul>
+      <li><strong>Using it for important or accessible content:</strong> screen readers and search engines don't parse these substitute characters as the letters they resemble — keep upside-down and mirrored text to decorative, optional use.</li>
+      <li><strong>Expecting every letter to flip convincingly:</strong> a few characters, especially capital <code>Q</code>, capital <code>X</code>, and most digits, have no strong lookalike and only approximate the original shape.</li>
+      <li><strong>Assuming mirrored text works like upside-down text:</strong> they reverse different things (see the FAQ) — mirroring "SOS" gives <code>ƧOƧ</code>, but flipping it upside down leaves it as plain <code>SOS</code>, since none of those three letters have an upside-down lookalike in this table.</li>
+    </ul>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.unicode.org/charts/" target="_blank" rel="noopener">Unicode Consortium Code Charts — the official character blocks the flipped letters are drawn from</a></li>
+      <li><a href="https://www.unicode.org/reports/tr9/" target="_blank" rel="noopener">Unicode Bidirectional Algorithm (UAX #9) — how text direction and reversal are actually handled</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" rel="noopener">MDN Web Docs: JavaScript String — code point handling behind character-by-character transforms</a></li>
+      <li><a href="https://www.w3.org/International/articles/definitions-characters/" target="_blank" rel="noopener">W3C Internationalization — characters, code points and encodings explained</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/whitespace-remover/"><span class="related-ico" aria-hidden="true">✂️</span><span class="related-name">Extra Space Remover</span></a><a class="related-item" href="https://tool-hub.me/word-counter/"><span class="related-ico" aria-hidden="true">📝</span><span class="related-name">Word Counter</span></a><a class="related-item" href="https://tool-hub.me/word-frequency-counter/"><span class="related-ico" aria-hidden="true">📊</span><span class="related-name">Word Frequency Counter</span></a><a class="related-item" href="https://tool-hub.me/words-to-pages/"><span class="related-ico" aria-hidden="true">📄</span><span class="related-name">Words to Pages Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What does this upside down text generator actually do?</summary>
+      <p data-i18n="faq.a1">This tool takes whatever you type and produces three different transformations at once. Upside down replaces each character with a Unicode lookalike that resembles the original rotated 180 degrees, then reverses the order of characters and lines — so "Toolhub" becomes "qnɥloo⊥", the same way a whole line of text would read if you physically turned the page upside down. Mirrored swaps in a small set of characters that genuinely resemble their left-right mirror image (like b/d, p/q, S) and reverses the character order within each line, while keeping line order unchanged. Small caps replaces lowercase letters with smaller capital-letter lookalikes without changing order at all. Click any of the three result cards to copy that version.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Why do some letters not look properly upside down or mirrored?</summary>
+      <p data-i18n="faq.a2">Unicode has no built-in way to physically rotate or mirror a letter — every character here is a substitute symbol that happens to look similar, borrowed from other alphabets and phonetic notation. Most lowercase letters have a convincing rotated match, but a handful of characters — capital Q, X, and most digits — have no good visual equivalent, so the closest available symbol is used, or the original character is left unchanged in the mirrored mode. A few upside-down letters, like the substitute for capital B, come from character blocks outside the common range and may render as a blank box on older devices or unusual fonts. This is a novelty and creative-writing effect, not a font feature, so results can vary slightly between browsers, operating systems, and typefaces.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Can I use upside down text as an Instagram or TikTok bio, and will screen readers read it normally?</summary>
+      <p data-i18n="faq.a3">Yes — you can copy any of the three results and paste them into a bio, caption, username, or comment on most platforms, since they're just ordinary Unicode characters. However, be aware that screen readers and text-to-speech tools do not recognize these characters as the letters they resemble; they will either read out the character's real (often unrelated) name, mispronounce it, or skip it entirely, which makes upside-down, mirrored, and small-caps text harder to understand for people using assistive technology. For that reason, this effect is best used sparingly for decorative headings or novelty captions rather than for text that carries important information.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What's the actual difference between the "upside down" and "mirrored" results?</summary>
+      <p data-i18n="faq.a4">They flip text along different axes. Upside down simulates rotating the whole page 180 degrees: it reverses the character order within each line and also reverses the order of the lines themselves, so a multi-line upside-down result reads from the last line to the first. Mirrored simulates holding the text up to a vertical mirror: it reverses the character order within each line but keeps the lines in their original top-to-bottom order, since a mirror only flips left-to-right. Short, symmetric-looking words highlight the difference well — mirroring "SOS" gives "ƧOƧ", while "bad" mirrors right back to "bad" because b and d are swapped in exactly the right places.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my text sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This upside down text generator runs entirely in your browser — nothing you type or paste is uploaded, logged, or shared with any server. Your most recent input is optionally saved to this browser's local storage so it's still here next time you open the page; untick "Save my text in this browser" to keep it private to the current session, and clearing the box removes any stored copy immediately.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

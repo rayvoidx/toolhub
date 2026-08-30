@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-uLZ5kXoOG+6kdrhJqAIXC4NJOSaySrTN4ELazSSPER0=' 'sha256-BhiMlR4hn9xA43lR02giwHeqVgBVUGkFkCyKuflFXss=' 'sha256-utxQVdjXHuQcwmMlwsVrcsJWsHgxEH4kl+tSrqWbdAY='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de VAN y TIR — valor actual neto</title>
+<meta name="description" content="Calcula el valor actual neto y la tasa interna de retorno con hasta diez años de flujos de caja. Obtén periodo de recuperación, índice de rentabilidad y tabla descontada.">
+<meta name="keywords" content="npv calculator, irr calculator, net present value calculator, internal rate of return, discounted cash flow calculator, payback period calculator, profitability index">
+<link rel="canonical" href="https://tool-hub.me/npv-irr-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/npv-irr-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/npv-irr-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/npv-irr-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/npv-irr-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/npv-irr-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/npv-irr-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/npv-irr-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/npv-irr-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/npv-irr-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/npv-irr-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/npv-irr-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/npv-irr-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/npv-irr-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/npv-irr-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/npv-irr-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de VAN y TIR — valor actual neto">
+<meta property="og:description" content="Calcula el valor actual neto y la tasa interna de retorno con hasta diez años de flujos de caja. Obtén periodo de recuperación, índice de rentabilidad y tabla descontada.">
+<meta property="og:url" content="https://tool-hub.me/npv-irr-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/npv-irr-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1e3a8a">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "NPV and IRR Calculator",
+  "description": "Calculate net present value and internal rate of return from up to ten years of cash flows. Get payback period, profitability index and a full discounted table.",
+  "url": "https://tool-hub.me/npv-irr-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "NPV Calculator",
+      "item": "https://tool-hub.me/npv-irr-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "NPV and IRR disagree — which one do I follow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For mutually exclusive projects, follow NPV. IRR is a percentage, so it ignores scale: a 60% return on $10,000 creates less value than a 20% return on $500,000. IRR also assumes interim cash flows are reinvested at the IRR itself, which is rarely realistic, while NPV assumes reinvestment at your discount rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What discount rate should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most companies use their weighted average cost of capital, or a hurdle rate set above it for riskier work. For a personal investment, use the return you would earn on the next best alternative. NPV is sensitive to this input, so run the numbers at two or three rates and check whether the decision flips."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a project have more than one IRR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Descartes' rule of signs means a series can have as many IRRs as it has sign changes, so a project with a big clean-up cost at the end may have two. This calculator brackets the rate between -99% and 1000% and returns the first root it finds, so when the signs flip more than once treat IRR as indicative and decide on NPV."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is payback period not enough on its own?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Payback ignores the time value of money and everything after the break-even point. A project that repays in three years then stops beats nothing, but one that repays in four and earns for another decade is worth far more. Use payback as a liquidity check next to NPV, never as the deciding number."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>NPV and IRR Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">NPV Calculator</span></nav>
+  <section class="hero">
+    <h1>NPV and IRR Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter a project's cash flows and see whether it actually creates value at your hurdle rate.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .legend { font-weight:600; margin:16px 0 4px; }
+      #tool .cf-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+      #tool .cf-grid label { font-size:13px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rc-note { font-size:13px; color:var(--muted); margin-top:4px; }
+      #tool .pos { color:#15803d; }
+      #tool .neg { color:#dc2626; }
+      #tool .pv-wrap { overflow-x:auto; margin-top:14px; }
+      #tool table.pv-table { width:100%; border-collapse:collapse; font-size:14px; }
+      #tool .pv-table th, #tool .pv-table td { border-bottom:1px solid var(--line); padding:6px 8px; text-align:right; white-space:nowrap; }
+      #tool .pv-table th:first-child, #tool .pv-table td:first-child { text-align:left; }
+      #tool .pv-table th { font-size:13px; color:var(--muted); font-weight:600; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } #tool .cf-grid { grid-template-columns:repeat(2,1fr); } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="c0" data-i18n="tool.c0.label">Initial investment</label>
+        <input type="number" id="c0" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="100000">
+      </div>
+      <div>
+        <label for="rate" data-i18n="tool.rate.label">Discount rate (% per year)</label>
+        <input type="number" id="rate" inputmode="decimal" step="any" autocomplete="off" placeholder="10">
+      </div>
+    </div>
+    <p class="subtle" data-i18n="tool.c0.hint">Enter it as a positive number. It is treated as a year-0 cash outflow.</p>
+
+    <p class="legend" data-i18n="tool.cf.legend">Cash flows by year</p>
+    <div class="cf-grid">
+      <div><label for="cf1" id="lab-cf1">Year 1</label><input type="number" id="cf1" inputmode="decimal" step="any" autocomplete="off" placeholder="25000"></div>
+      <div><label for="cf2" id="lab-cf2">Year 2</label><input type="number" id="cf2" inputmode="decimal" step="any" autocomplete="off" placeholder="30000"></div>
+      <div><label for="cf3" id="lab-cf3">Year 3</label><input type="number" id="cf3" inputmode="decimal" step="any" autocomplete="off" placeholder="35000"></div>
+      <div><label for="cf4" id="lab-cf4">Year 4</label><input type="number" id="cf4" inputmode="decimal" step="any" autocomplete="off" placeholder="30000"></div>
+      <div><label for="cf5" id="lab-cf5">Year 5</label><input type="number" id="cf5" inputmode="decimal" step="any" autocomplete="off" placeholder="25000"></div>
+      <div><label for="cf6" id="lab-cf6">Year 6</label><input type="number" id="cf6" inputmode="decimal" step="any" autocomplete="off"></div>
+      <div><label for="cf7" id="lab-cf7">Year 7</label><input type="number" id="cf7" inputmode="decimal" step="any" autocomplete="off"></div>
+      <div><label for="cf8" id="lab-cf8">Year 8</label><input type="number" id="cf8" inputmode="decimal" step="any" autocomplete="off"></div>
+      <div><label for="cf9" id="lab-cf9">Year 9</label><input type="number" id="cf9" inputmode="decimal" step="any" autocomplete="off"></div>
+      <div><label for="cf10" id="lab-cf10">Year 10</label><input type="number" id="cf10" inputmode="decimal" step="any" autocomplete="off"></div>
+    </div>
+    <p class="subtle" data-i18n="tool.cf.blank">Leave a year blank to end the series — later years are ignored.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.npv">Net present value</div>
+          <div class="rc-val" id="r-npv">—</div>
+          <div class="rc-note" id="r-verdict"></div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.irr">Internal rate of return</div><div class="rc-val" id="r-irr">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.payback">Payback period</div><div class="rc-val" id="r-payback">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.dpayback">Discounted payback</div><div class="rc-val" id="r-dpayback">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.pi">Profitability index</div><div class="rc-val" id="r-pi">—</div></div>
+      </div>
+      <div class="pv-wrap">
+        <table class="pv-table">
+          <thead>
+            <tr>
+              <th data-i18n="tool.th.year">Year</th>
+              <th data-i18n="tool.th.cf">Cash flow</th>
+              <th data-i18n="tool.th.factor">Discount factor</th>
+              <th data-i18n="tool.th.pv">Present value</th>
+              <th data-i18n="tool.th.cum">Cumulative PV</th>
+            </tr>
+          </thead>
+          <tbody id="pv-body"></tbody>
+        </table>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Cash flows are assumed to arrive at the end of each year. Tax and inflation only count if you build them into the flows.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What net present value and internal rate of return actually tell you</h2>
+    <p>Net present value answers one question: after paying for a project and waiting for the money to come back, how much value is left in today's dollars? Every future cash flow is divided by (1 + r) raised to the power of the year it arrives, which strips out the return you could have earned elsewhere. The initial investment is already in today's money, so it is subtracted at full face value. If what remains is positive, the project beats the alternative use of the same capital.</p>
+    <p>The internal rate of return flips the question around. Instead of assuming a discount rate and solving for value, it assumes zero value and solves for the rate. The IRR is the discount rate at which NPV equals exactly zero — the break-even cost of capital. Anything cheaper than the IRR and the project makes money; anything more expensive and it loses money.</p>
+
+    <h3>Worked example: a 
+
+  00,000 project at a 10% discount rate</h3>
+    <p>Suppose a piece of equipment costs 
+
+  00,000 today and produces $25,000, $30,000, $35,000, $30,000 and $25,000 of net cash over the next five years. At a 10% hurdle rate the discounting looks like this:</p>
+    <table>
+      <thead><tr><th>Year</th><th>Cash flow</th><th>Factor at 10%</th><th>Present value</th><th>Cumulative PV</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td>-100,000</td><td>1.0000</td><td>-100,000.00</td><td>-100,000.00</td></tr>
+        <tr><td>1</td><td>25,000</td><td>0.9091</td><td>22,727.27</td><td>-77,272.73</td></tr>
+        <tr><td>2</td><td>30,000</td><td>0.8264</td><td>24,793.39</td><td>-52,479.34</td></tr>
+        <tr><td>3</td><td>35,000</td><td>0.7513</td><td>26,296.02</td><td>-26,183.32</td></tr>
+        <tr><td>4</td><td>30,000</td><td>0.6830</td><td>20,490.40</td><td>-5,692.92</td></tr>
+        <tr><td>5</td><td>25,000</td><td>0.6209</td><td>15,523.03</td><td>9,830.12</td></tr>
+      </tbody>
+    </table>
+    <p>The last cumulative figure is the NPV: $9,830.12. The undiscounted total is 
+
+  45,000, which looks like a 45% gain until you charge for the five years of waiting. The profitability index is the present value of the inflows divided by the outlay, 
+
+  09,830.12 / 
+
+  00,000 = 1.098 — you get about 
+
+  .10 of value per dollar committed. Simple payback ignores discounting entirely: cumulative cash reaches $90,000 after year three and 
+
+  20,000 after year four, so the break-even lands a third of the way through year four, at 3.33 years.</p>
+
+    <h3>How the IRR gets found, one guess at a time</h3>
+    <p>There is no closed-form formula for the IRR of an arbitrary cash flow series, so calculators search for it. NPV falls as the rate rises: at 0% this project is worth $45,000, at 10% it is worth $9,830, at 12% it is $4,401, and at 14% it has turned negative at -$616. The root sits between 12% and 14%. Bisection repeatedly halves that bracket — 13%, 13.5%, 13.75% — until NPV is within a cent of zero, arriving at an IRR of 13.75%. Any cost of capital below that leaves the project profitable; anything above it does not.</p>
+
+    <h3>When NPV and IRR point different ways</h3>
+    <p>Take two mutually exclusive options with the same 10% cost of capital. Project A costs 
+
+  0,000 and returns $20,000 in one year: IRR of 100%, NPV of $8,181.82. Project B costs 
+
+  00,000 and returns 
+
+  50,000 in one year: IRR of 50%, NPV of $36,363.64. Project A wins on IRR by a mile and loses on value by a factor of four. Percentages cannot tell you how big the pot is, and shareholders are paid in dollars, not in rates of return. When the two measures conflict and you can only pick one project, NPV is the tie-breaker.</p>
+
+    <h3>Test the discount rate before you trust the answer</h3>
+    <p>The discount rate is usually the shakiest input in the whole model. Run the same equipment project across a range and watch the verdict move: NPV is 
+
+  5,718 at 8%, $9,830 at 10%, $4,401 at 12%, and -$616 at 14%. A project with that little headroom flips from accept to reject on a two-point change in the cost of capital. If your WACC estimate could plausibly be wrong by that much, the honest conclusion is that the project is marginal rather than good. Projects with an IRR far above the hurdle rate survive this test; ones sitting a point or two above it do not.</p>
+
+    <h2>Limitations worth remembering</h2>
+    <p>This calculator assumes annual, end-of-year cash flows and a single constant discount rate. Real projects have mid-year timing, changing risk profiles, tax shields, working capital swings and terminal values, and each of those has to be baked into the cash flow figures you enter. Cash flow series that change sign more than once can have multiple IRRs, in which case the number shown is one root among several and NPV is the only reliable guide. And the whole exercise is only as good as the forecast: precision to the cent in the table does not make year-five revenue any more certain than it was when you guessed it.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.federalreserve.gov/releases/h15/" target="_blank" rel="noopener">Federal Reserve H.15 Selected Interest Rates — benchmark rates used when estimating a discount rate</a></li>
+      <li><a href="https://www.gov.uk/government/collections/the-green-book-and-accompanying-guidance-and-documents" target="_blank" rel="noopener">HM Treasury Green Book — UK government guidance on discounting and appraisal of investment options</a></li>
+      <li><a href="https://www.khanacademy.org/economics-finance-domain" target="_blank" rel="noopener">Khan Academy Economics &amp; Finance — tutorials on present value, NPV and internal rate of return</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/overtime-pay-calc/"><span class="related-ico" aria-hidden="true">⏰</span><span class="related-name">Overtime Pay Calculator</span></a><a class="related-item" href="https://tool-hub.me/paycheck-calc/"><span class="related-ico" aria-hidden="true">💵</span><span class="related-name">Paycheck Calculator</span></a><a class="related-item" href="https://tool-hub.me/percent-calc/"><span class="related-ico" aria-hidden="true">％</span><span class="related-name">Percentage Calculator</span></a><a class="related-item" href="https://tool-hub.me/position-size-calc/"><span class="related-ico" aria-hidden="true">🛡️</span><span class="related-name">Position Size Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">NPV and IRR disagree — which one do I follow?</summary><p data-i18n="faq.a1">For mutually exclusive projects, follow NPV. IRR is a percentage, so it ignores scale: a 60% return on $10,000 creates less value than a 20% return on $500,000. IRR also assumes interim cash flows are reinvested at the IRR itself, which is rarely realistic, while NPV assumes reinvestment at your discount rate.</p></details>
+    <details><summary data-i18n="faq.q2">What discount rate should I use?</summary><p data-i18n="faq.a2">Most companies use their weighted average cost of capital, or a hurdle rate set above it for riskier work. For a personal investment, use the return you would earn on the next best alternative. NPV is sensitive to this input, so run the numbers at two or three rates and check whether the decision flips.</p></details>
+    <details><summary data-i18n="faq.q3">Can a project have more than one IRR?</summary><p data-i18n="faq.a3">Yes. Descartes' rule of signs means a series can have as many IRRs as it has sign changes, so a project with a big clean-up cost at the end may have two. This calculator brackets the rate between -99% and 1000% and returns the first root it finds, so when the signs flip more than once treat IRR as indicative and decide on NPV.</p></details>
+    <details><summary data-i18n="faq.q4">Why is payback period not enough on its own?</summary><p data-i18n="faq.a4">Payback ignores the time value of money and everything after the break-even point. A project that repays in three years then stops beats nothing, but one that repays in four and earns for another decade is worth far more. Use payback as a liquidity check next to NPV, never as the deciding number.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

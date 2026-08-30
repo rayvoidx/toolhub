@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-b69Q6Sr944YqRIukSFmFjtrlNbi1Jsg2gnjWJ4eVAeg=' 'sha256-G1RUqjfFDwHiaN4VW9r/g3e0MQ4/2nFIZqK63vE12LY=' 'sha256-JDDWbbE4GQ3m7chNEooUBWLIPMbPD+Lvt1REix1btCk='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversor de Temperatura de Horno — °F, °C y Gas Mark al Instante</title>
+<meta name="description" content="Convierte la temperatura del horno entre Fahrenheit, Celsius y Gas Mark al instante, con ajuste para horno de convección. Gratis, calculado en tu navegador.">
+<meta name="keywords" content="oven temperature conversion, 180 c to f, gas mark to celsius, fan oven conversion, 350 f in celsius, 오븐 온도 변환">
+<link rel="canonical" href="https://tool-hub.me/oven-temp-conv/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/oven-temp-conv/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/oven-temp-conv/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/oven-temp-conv/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/oven-temp-conv/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/oven-temp-conv/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/oven-temp-conv/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/oven-temp-conv/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/oven-temp-conv/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/oven-temp-conv/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/oven-temp-conv/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/oven-temp-conv/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/oven-temp-conv/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/oven-temp-conv/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/oven-temp-conv/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/oven-temp-conv/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Conversor de Temperatura de Horno — °F, °C y Gas Mark al Instante">
+<meta property="og:description" content="Convierte la temperatura del horno entre Fahrenheit, Celsius y Gas Mark al instante, con ajuste para horno de convección. Gratis, calculado en tu navegador.">
+<meta property="og:url" content="https://tool-hub.me/oven-temp-conv/es/">
+<meta property="og:image" content="https://tool-hub.me/oven-temp-conv/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#c2410c">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Oven Temperature Converter",
+  "description": "Convert oven temperatures between Fahrenheit, Celsius, and Gas Mark instantly, with a fan/convection adjustment. Free, computed entirely in your browser.",
+  "url": "https://tool-hub.me/oven-temp-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Oven Temperature Converter", "item": "https://tool-hub.me/oven-temp-conv/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Gas Mark, and how does it relate to Celsius and Fahrenheit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gas Mark is the numbering system British gas ovens have used since the 1950s, running from a very cool 1/4 up to a very hot 10. It isn't a straight-line formula like the Celsius-to-Fahrenheit conversion — each mark corresponds to a standardized temperature band that manufacturers agreed on, so the scale is a lookup table rather than math. Gas Mark 4, the classic \"moderate\" oven for cakes and most everyday baking, is 180°C or 350°F. This converter matches any Celsius or Fahrenheit value you type to the nearest Gas Mark automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is 350°F in Celsius, and what Gas Mark is that?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "350°F converts exactly to about 176.7°C, which nearly every recipe and oven dial rounds to 180°C — Gas Mark 4, described as a moderate oven and the most common setting for cakes, biscuits, and casseroles. Type 350 into the Fahrenheit field above to see the exact Celsius figure alongside the matching Gas Mark and its fan-oven adjustment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should I lower the temperature for a fan or convection oven?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The widely used rule of thumb is to lower a conventional (static) oven temperature by 20°C, or about 25-30°F, when switching to a fan or convection oven, because the moving air cooks food faster at the same setting. This converter applies that -20°C convention automatically once you turn on the fan/convection toggle. It's a good starting point, but ovens vary by manufacturer, so check your oven's manual or keep an eye on the first bake if precision matters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Gas Mark conversions to Celsius and Fahrenheit exact?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — Gas Mark is a stepped scale of only 12 fixed points (1/4 through 10), while Celsius and Fahrenheit are continuous. When you type a temperature that falls between two Gas Mark points, this tool shows the nearest match with an approximate (≈) mark rather than inventing a fractional Gas Mark that doesn't exist. If your number is well outside the normal oven range, the tool tells you there's no sensible Gas Mark match instead of guessing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my oven temperature sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This oven temperature converter runs entirely in your browser — every Fahrenheit, Celsius, and Gas Mark calculation happens on your device using plain JavaScript. Nothing you type is uploaded, stored, or tracked, and the page keeps working offline once it has loaded."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 2026-08-02 모바일 360px 오버플로 수리 (qa-deep) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Oven Temperature Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#d97706" href="https://tool-hub.me/unit-converters/">Units</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Oven Temperature Converter</span></nav>
+  <section class="hero">
+    <h1>Oven Temperature Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type a temperature in Fahrenheit or Celsius, or pick a Gas Mark — the other two update instantly, along with the fan/convection oven adjustment.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Oven temperature converter" data-i18n-aria-label="tool.aria">
+    <style>
+      /* 도구 전용 스킨 — TOOL 영역 한정 (공통 style.css 는 건드리지 않음) */
+      .ot-fields { display: grid; gap: 2px; }
+      .ot-inrow { display: flex; gap: 8px; align-items: stretch; }
+      .tool-card .ot-input { flex: 1 1 auto; }
+      .ot-copy {
+        flex: 0 0 auto; width: 48px; border: 1px solid var(--line); border-radius: 10px;
+        background: var(--bg); color: var(--muted); font-size: 18px; cursor: pointer; line-height: 1;
+      }
+      .ot-copy:hover { border-color: var(--accent); color: var(--accent); }
+      .ot-copy:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+      .ot-gm-field { margin-top: 14px; }
+      .ot-fan-row {
+        display: flex; align-items: center; gap: 10px; margin-top: 18px; padding: 12px 14px;
+        border: 1px solid var(--line); border-radius: 10px; background: var(--bg); cursor: pointer;
+      }
+      .ot-fan-row input { width: auto; flex: 0 0 auto; }
+      .ot-fan-row span { font-weight: 600; font-size: 14.5px; }
+      .ot-fan-hint { margin: 6px 0 0; font-size: 12.5px; color: var(--muted); }
+      .ot-offset-field { margin-top: 14px; }
+      .ot-copymsg { margin: 12px 0 0; font-size: 13.5px; font-weight: 600; color: var(--accent-strong); }
+      .ot-placeholder { margin: 0; color: var(--muted); }
+      .ot-summary { margin: 0; font-size: 20px; font-weight: 800; color: var(--accent-strong); word-break: break-word; letter-spacing: -0.01em; }
+      .ot-gmnote { margin: 9px 0 0; font-size: 15px; font-weight: 650; color: var(--ink); }
+      .ot-equiv { margin: 8px 0 0; font-size: 14px; color: var(--muted); }
+      .ot-warn { margin: 10px 0 0; font-size: 14px; font-weight: 600; color: #b91c1c; }
+      .ot-hint { margin: 16px 0 0; font-size: 13px; color: var(--muted); }
+      .ot-note { margin: 6px 0 0; font-size: 12.5px; color: var(--muted); }
+      [data-theme="dark"] .ot-copymsg, [data-theme="dark"] .ot-summary { color: var(--accent); }
+      [data-theme="dark"] .ot-warn { color: #fca5a5; }
+      @media (prefers-color-scheme: dark) {
+        [data-theme="auto"] .ot-copymsg, [data-theme="auto"] .ot-summary { color: var(--accent); }
+        [data-theme="auto"] .ot-warn { color: #fca5a5; }
+      }
+      .ot-chart-wrap { margin-top: 24px; overflow-x: auto; }
+      .ot-chart { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 480px; }
+      .ot-chart th, .ot-chart td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+      .ot-chart th { color: var(--muted); font-weight: 650; }
+      .ot-chart tr.ot-row-active { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+      .ot-chart summary { font-weight: 600; font-size: 14px; color: var(--muted); cursor: pointer; margin-top: 22px; }
+      @media (max-width: 420px) {
+        .ot-chart { font-size: 12px; min-width: 420px; }
+      }
+    </style>
+
+    <div class="ot-fields">
+      <div class="ot-field">
+        <label for="c-input" data-i18n="tool.celsius.label">Celsius (°C)</label>
+        <div class="ot-inrow">
+          <input id="c-input" class="ot-input" type="number" inputmode="decimal" step="any" placeholder="e.g. 180" data-i18n-placeholder="tool.celsius.ph" autocomplete="off">
+          <button type="button" class="ot-copy" data-target="c-input" aria-label="Copy Celsius value" data-i18n-aria-label="tool.copy.celsius">⧉</button>
+        </div>
+      </div>
+      <div class="ot-field">
+        <label for="f-input" data-i18n="tool.fahrenheit.label">Fahrenheit (°F)</label>
+        <div class="ot-inrow">
+          <input id="f-input" class="ot-input" type="number" inputmode="decimal" step="any" placeholder="e.g. 350" data-i18n-placeholder="tool.fahrenheit.ph" autocomplete="off">
+          <button type="button" class="ot-copy" data-target="f-input" aria-label="Copy Fahrenheit value" data-i18n-aria-label="tool.copy.fahrenheit">⧉</button>
+        </div>
+      </div>
+      <div class="ot-field ot-gm-field">
+        <label for="gm-select" data-i18n="tool.gasmark.label">Gas Mark</label>
+        <select id="gm-select"></select>
+      </div>
+    </div>
+
+    <label class="ot-fan-row" for="fan-toggle">
+      <input type="checkbox" id="fan-toggle">
+      <span data-i18n="tool.fan.toggle">This is a fan / convection oven temperature</span>
+    </label>
+    <p class="ot-fan-hint" data-i18n="tool.fan.hint">Turn this on if your recipe already gives a fan-oven temperature — off means a conventional (static) oven.</p>
+
+    <div class="ot-field ot-offset-field">
+      <label for="fan-offset" data-i18n="tool.fan.offset.label">Fan oven reduction</label>
+      <select id="fan-offset">
+        <option value="10">−10 °C (−18 °F)</option>
+        <option value="15">−15 °C (−27 °F)</option>
+        <option value="20" selected>−20 °C (−36 °F)</option>
+        <option value="25">−25 °C (−45 °F)</option>
+        <option value="30">−30 °C (−54 °F)</option>
+      </select>
+    </div>
+
+    <p class="ot-copymsg" id="ot-copymsg" role="status" aria-live="polite" hidden></p>
+
+    <div class="result" id="ot-result" aria-live="polite">
+      <p class="ot-placeholder" id="ot-placeholder" data-i18n="tool.result.placeholder">Type a temperature, or pick a Gas Mark above, to see the full conversion.</p>
+      <p class="ot-summary" id="ot-summary" hidden></p>
+      <p class="ot-gmnote" id="ot-gmnote" hidden></p>
+      <p class="ot-equiv" id="ot-equiv" hidden></p>
+      <p class="ot-warn" id="ot-warn" role="alert" hidden></p>
+    </div>
+
+    <p class="ot-hint" data-i18n="tool.hint">Everything is calculated in your browser — nothing is sent to a server.</p>
+    <p class="ot-note" data-i18n="tool.note.approx">Gas Mark numbers are a stepped scale, not a straight-line formula — treat matches as close reference points, not exact equivalents.</p>
+
+    <details class="ot-chart-details">
+      <summary data-i18n="tool.chart.heading">Full Gas Mark conversion chart</summary>
+      <div class="ot-chart-wrap">
+        <table class="ot-chart">
+          <thead>
+            <tr>
+              <th data-i18n="tool.chart.gm">Gas Mark</th>
+              <th data-i18n="tool.chart.c">°C (conventional)</th>
+              <th data-i18n="tool.chart.f">°F</th>
+              <th data-i18n="tool.chart.fanc">Fan / convection °C</th>
+              <th data-i18n="tool.chart.desc">Description</th>
+            </tr>
+          </thead>
+          <tbody id="ot-chart-body"></tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why oven temperatures need three different scales</h2>
+    <p>A recipe written in the United States gives Fahrenheit. One written in most of the rest of the world gives Celsius. A recipe from a British cookbook — or an older oven with a dial instead of a digital display — gives a Gas Mark instead of either. None of these are wrong; they are just different eras and regions of kitchen equipment. This converter turns any one of the three into the other two instantly, and adds the one adjustment recipes rarely spell out clearly: what to do if your oven has a fan.</p>
+
+    <h3>The Fahrenheit-Celsius formula</h3>
+    <ul>
+      <li>Celsius to Fahrenheit: F = C &times; 9/5 + 32</li>
+      <li>Fahrenheit to Celsius: C = (F &minus; 32) &times; 5/9</li>
+    </ul>
+    <p>That part is exact math. Gas Mark is different: it is a stepped, historical scale with only twelve defined points, so this tool matches your number to the nearest one rather than computing a Gas Mark with a formula.</p>
+
+    <div class="example">
+      <strong>Example 1 — the classic "350 degrees."</strong> (350&minus;32)&times;5/9 = 176.7°C, which recipes round to 180°C — Gas Mark 4, a moderate oven, the single most common baking temperature there is.
+    </div>
+    <div class="example">
+      <strong>Example 2 — a hot roast.</strong> 220°C converts to 220&times;9/5+32 = 428°F, matching Gas Mark 7, described as "hot" and typical for roasting vegetables or finishing a loaf of bread with a crisp crust.
+    </div>
+    <div class="example">
+      <strong>Example 3 — a low, slow bake.</strong> Gas Mark 1/4 is 110°C or 225°F — a "very low" oven used for meringues, slow-cooked stews, and drying fruit, where the goal is gentle heat over a long time rather than fast cooking.
+    </div>
+
+    <h3>Fan / convection ovens: the -20°C rule</h3>
+    <p>A fan (convection) oven circulates hot air with a built-in fan, which cooks food faster and more evenly than a conventional (static) oven at the same dial setting. Because of that, most recipe books and oven manufacturers recommend lowering the temperature by about 20°C (roughly 25-30°F) when using a fan oven, or lowering the time instead if you keep the same temperature. This tool applies the -20°C convention once you switch the toggle to fan/convection, and always shows the other oven type's equivalent number alongside your result so you can convert a recipe either direction.</p>
+    <p>The 20°C figure is a widely used rule of thumb, not a physical law — some ovens run hotter or cooler than their dial suggests, and manufacturers occasionally suggest slightly different offsets. If a specific bake is sensitive (delicate pastry, soufflés), it is worth checking your oven's manual or doing a first test bake with an oven thermometer.</p>
+
+    <h2>Full Gas Mark, Celsius, and Fahrenheit reference chart</h2>
+    <table>
+      <thead><tr><th>Gas Mark</th><th>°C (conventional)</th><th>°F</th><th>Fan/convection °C</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>1/4</td><td>110</td><td>225</td><td>90</td><td>Very low</td></tr>
+        <tr><td>1/2</td><td>120</td><td>250</td><td>100</td><td>Very low</td></tr>
+        <tr><td>1</td><td>140</td><td>275</td><td>120</td><td>Low</td></tr>
+        <tr><td>2</td><td>150</td><td>300</td><td>130</td><td>Low</td></tr>
+        <tr><td>3</td><td>160</td><td>325</td><td>140</td><td>Warm</td></tr>
+        <tr><td>4</td><td>180</td><td>350</td><td>160</td><td>Moderate</td></tr>
+        <tr><td>5</td><td>190</td><td>375</td><td>170</td><td>Moderately hot</td></tr>
+        <tr><td>6</td><td>200</td><td>400</td><td>180</td><td>Fairly hot</td></tr>
+        <tr><td>7</td><td>220</td><td>425</td><td>200</td><td>Hot</td></tr>
+        <tr><td>8</td><td>230</td><td>450</td><td>210</td><td>Hot</td></tr>
+        <tr><td>9</td><td>240</td><td>475</td><td>220</td><td>Very hot</td></tr>
+        <tr><td>10</td><td>260</td><td>500</td><td>240</td><td>Very hot</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Treating Gas Mark as exact math:</strong> it's a lookup table of twelve standardized points, not a linear conversion — a Celsius value between two marks doesn't have its own "true" Gas Mark, only a nearest one.</li>
+      <li><strong>Forgetting the fan adjustment:</strong> following a conventional-oven recipe at full temperature in a fan oven commonly over-browns the outside before the inside finishes.</li>
+      <li><strong>Assuming every oven is calibrated correctly:</strong> home ovens can run 10-20°C off their dial reading; an oven thermometer settles the question for temperature-sensitive bakes.</li>
+    </ul>
+    <p>Every conversion on this page runs locally in your browser; nothing you type is sent anywhere.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation" target="_blank" rel="noopener">USDA Food Safety and Inspection Service — safe cooking and minimum internal temperatures</a></li>
+      <li><a href="https://www.foodsafety.gov/food-safety-charts/safe-minimum-cooking-temperature" target="_blank" rel="noopener">FoodSafety.gov — safe minimum cooking temperature charts</a></li>
+      <li><a href="https://www.nist.gov/pml/owm/metric-si/si-units-temperature" target="_blank" rel="noopener">NIST — SI temperature units and Celsius/Fahrenheit definitions</a></li>
+      <li><a href="https://www.food.gov.uk/" target="_blank" rel="noopener">UK Food Standards Agency — cooking guidance used with Gas Mark ovens</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/power-conv/"><span class="related-ico" aria-hidden="true">🔌</span><span class="related-name">Power Converter</span></a><a class="related-item" href="https://tool-hub.me/pressure-conv/"><span class="related-ico" aria-hidden="true">🔩</span><span class="related-name">Pressure Converter</span></a><a class="related-item" href="https://tool-hub.me/ring-size-conv/"><span class="related-ico" aria-hidden="true">💍</span><span class="related-name">Ring Size Converter</span></a><a class="related-item" href="https://tool-hub.me/roman-numeral-conv/"><span class="related-ico" aria-hidden="true">Ⅹ</span><span class="related-name">Roman Numeral Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is Gas Mark, and how does it relate to Celsius and Fahrenheit?</summary>
+      <p data-i18n="faq.a1">Gas Mark is the numbering system British gas ovens have used since the 1950s, running from a very cool 1/4 up to a very hot 10. It isn't a straight-line formula like the Celsius-to-Fahrenheit conversion — each mark corresponds to a standardized temperature band that manufacturers agreed on, so the scale is a lookup table rather than math. Gas Mark 4, the classic "moderate" oven for cakes and most everyday baking, is 180°C or 350°F. This converter matches any Celsius or Fahrenheit value you type to the nearest Gas Mark automatically.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What is 350°F in Celsius, and what Gas Mark is that?</summary>
+      <p data-i18n="faq.a2">350°F converts exactly to about 176.7°C, which nearly every recipe and oven dial rounds to 180°C — Gas Mark 4, described as a moderate oven and the most common setting for cakes, biscuits, and casseroles. Type 350 into the Fahrenheit field above to see the exact Celsius figure alongside the matching Gas Mark and its fan-oven adjustment.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How much should I lower the temperature for a fan or convection oven?</summary>
+      <p data-i18n="faq.a3">The widely used rule of thumb is to lower a conventional (static) oven temperature by 20°C, or about 25-30°F, when switching to a fan or convection oven, because the moving air cooks food faster at the same setting. This converter applies that -20°C convention automatically once you turn on the fan/convection toggle. It's a good starting point, but ovens vary by manufacturer, so check your oven's manual or keep an eye on the first bake if precision matters.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Are Gas Mark conversions to Celsius and Fahrenheit exact?</summary>
+      <p data-i18n="faq.a4">No — Gas Mark is a stepped scale of only 12 fixed points (1/4 through 10), while Celsius and Fahrenheit are continuous. When you type a temperature that falls between two Gas Mark points, this tool shows the nearest match with an approximate (≈) mark rather than inventing a fractional Gas Mark that doesn't exist. If your number is well outside the normal oven range, the tool tells you there's no sensible Gas Mark match instead of guessing.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my oven temperature sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This oven temperature converter runs entirely in your browser — every Fahrenheit, Celsius, and Gas Mark calculation happens on your device using plain JavaScript. Nothing you type is uploaded, stored, or tracked, and the page keeps working offline once it has loaded.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

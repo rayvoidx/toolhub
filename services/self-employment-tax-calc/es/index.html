@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-EodwZXGNTdUwLhzm8ZCWcqEMZT1mDjMhcOyMkI247jQ=' 'sha256-EVZZQKu3CasPpyqXZ1Bxl/7JGLEVMHaUuHH8iaHqXX8=' 'sha256-4r5nRQFI5cjlMIg8SVBgnlGLX0JmRA1wNnKuIgGeFPo='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de impuesto por trabajo autónomo (1099)</title>
+<meta name="description" content="Calcula el self-employment tax de 2025 sobre tus beneficios como autónomo o 1099. Verás el reparto entre Seguro Social y Medicare, la mitad deducible y el pago trimestral.">
+<meta name="keywords" content="self employment tax calculator, se tax, 1099 tax calculator, freelance tax calculator, schedule se calculator, quarterly estimated tax">
+<link rel="canonical" href="https://tool-hub.me/self-employment-tax-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/self-employment-tax-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/self-employment-tax-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/self-employment-tax-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/self-employment-tax-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/self-employment-tax-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/self-employment-tax-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/self-employment-tax-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/self-employment-tax-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/self-employment-tax-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/self-employment-tax-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/self-employment-tax-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/self-employment-tax-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/self-employment-tax-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/self-employment-tax-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/self-employment-tax-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de impuesto por trabajo autónomo (1099)">
+<meta property="og:description" content="Calcula el self-employment tax de 2025 sobre tus beneficios como autónomo o 1099. Verás el reparto entre Seguro Social y Medicare, la mitad deducible y el pago trimestral.">
+<meta property="og:url" content="https://tool-hub.me/self-employment-tax-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/self-employment-tax-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#047857">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Self-Employment Tax Calculator",
+  "description": "Estimate 2025 self-employment tax on your 1099 or freelance profit. See the Social Security and Medicare split, the deductible half, and what to send in each quarter.",
+  "url": "https://tool-hub.me/self-employment-tax-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Self-Employment Tax Calculator",
+      "item": "https://tool-hub.me/self-employment-tax-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is self-employment tax based on 92.35% of my profit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An employee never pays payroll tax on the employer's half, because the employer deducts it as a business cost. The 92.35% factor rebuilds that fairness for the self-employed: it removes the employer-equivalent 7.65% before the 15.3% rate is applied. On 60,000 of profit you are taxed on 55,410, not the full 60,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is self-employment tax the same as income tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and this is the shock that catches most first-year freelancers. Self-employment tax funds Social Security and Medicare at 15.3%, and federal income tax is charged separately on the same profit. A freelancer in the 22% bracket is looking at roughly 32% combined before any state tax, which is why a 25-30% set-aside is the standard advice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do quarterly estimated payments work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you expect to owe 1,000 or more, the IRS wants payments on roughly 15 April, 15 June, 15 September and 15 January. The safe-harbour rule protects you from penalties if you pay 90% of this year's tax or 100% of last year's total, rising to 110% when your prior-year AGI was over 150,000. Paying the safe-harbour amount is easier than forecasting a variable year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I legally reduce self-employment tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deducting every legitimate business expense is the first lever, because SE tax is charged on profit, not revenue. Retirement contributions to a SEP-IRA or solo 401(k) cut income tax but not SE tax. An S-corp election can move part of your profit from wages to distributions and cut SE tax, but it demands a reasonable salary, payroll filings and roughly 1,000-2,000 a year of admin, so it usually only pays above about 50,000 of profit."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Self-Employment Tax Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Self-Employment Tax Calculator</span></nav>
+  <section class="hero">
+    <h1>Self-Employment Tax Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Freelance profit is taxed twice over: SE tax first, income tax on top. This is the SE tax half.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .hint { font-size:12px; color:var(--muted); margin:4px 0 0; }
+      #tool .year-tag { font-size:12px; color:var(--muted); margin:0 0 10px; font-weight:600; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .warn { color:#b45309; font-size:13px; font-weight:600; margin-top:10px; }
+      #tool .note { font-size:13px; color:var(--muted); margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <p class="year-tag" data-i18n="tool.year">2025 tax year, United States — federal rates, US dollars.</p>
+
+    <label for="taxyear" data-i18n="tool.taxyear.label">Tax year</label>
+    <select id="taxyear">
+      <option value="2025" selected>2025</option>
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+    </select>
+
+    <label for="net" data-i18n="tool.net.label">Net self-employment profit</label>
+    <input type="text" id="net" inputmode="decimal" autocomplete="off" placeholder="60000">
+    <p class="hint" data-i18n="tool.net.hint">Income minus business expenses — Schedule C line 31.</p>
+
+    <label for="w2" data-i18n="tool.w2.label">W-2 wages this year (optional)</label>
+    <input type="text" id="w2" inputmode="decimal" autocomplete="off" placeholder="0">
+    <p class="hint" data-i18n="tool.w2.hint">Job wages already taxed for Social Security. They use up the wage base first.</p>
+
+    <label for="filing" data-i18n="tool.filing.label">Filing status (Additional Medicare threshold)</label>
+    <select id="filing">
+      <option value="single" data-i18n="tool.filing.single">Single or head of household</option>
+      <option value="mfj" data-i18n="tool.filing.mfj">Married filing jointly</option>
+      <option value="mfs" data-i18n="tool.filing.mfs">Married filing separately</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate SE tax</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.setax">Self-employment tax</div>
+          <div class="rc-val" id="r-setax">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.ss">Social Security (12.4%)</div><div class="rc-val" id="r-ss">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.medicare">Medicare (2.9%)</div><div class="rc-val" id="r-medicare">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.base">Taxable SE earnings (92.35%)</div><div class="rc-val" id="r-base">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.deduction">Deductible half (Schedule 1)</div><div class="rc-val" id="r-deduction">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.quarterly">Per quarter (SE tax / 4)</div><div class="rc-val" id="r-quarterly">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.rate">Effective rate on profit</div><div class="rc-val" id="r-rate">—</div></div>
+      </div>
+      <p class="warn" id="warn" hidden></p>
+      <p class="note" id="note" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.disclaimer" style="margin-top:12px;">An estimate using federal SE tax rules, not tax advice. Your actual bill depends on income tax brackets, credits, state rules and other income.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What self-employment tax actually is</h2>
+    <p>Self-employment tax is Social Security and Medicare for people without an employer. When you work a normal job, 7.65% comes out of your paycheque and your employer quietly pays another 7.65% you never see. Go freelance and both halves land on you: 15.3% on your business profit, filed on Schedule SE and due whether or not you owe a cent of income tax. This is the single biggest reason a 1099 contract at the same headline rate as a salary leaves you poorer.</p>
+    <p>The tax applies to net profit, not revenue. Revenue minus legitimate business expenses gives the Schedule C line 31 figure that feeds this calculator. If you invoiced 85,000 and spent 25,000 on subcontractors, software, insurance and mileage, your SE tax is calculated on 60,000.</p>
+
+    <h3>Worked example: 60,000 of freelance profit</h3>
+    <p>Start with 60,000 net profit. Multiply by 92.35% to get taxable self-employment earnings of 55,410 — that step exists so you are not taxed on the employer-equivalent portion an employee never pays tax on. Social Security is 12.4% of 55,410, or 6,871, because the whole amount fits under the 2025 wage base of 176,100. Medicare is 2.9% of 55,410, or 1,607. Add them and self-employment tax is 8,478, an effective 14.13% of your profit rather than the headline 15.3%.</p>
+    <p>Half of that, 4,239, is deductible on Schedule 1 as an adjustment to income. It does not reduce the SE tax itself; it reduces the income your federal income tax is calculated on. Divide the 8,478 by four and each quarterly payment carries 2,119 of SE tax — before you add a single dollar of income tax.</p>
+
+    <h3>Employee versus freelancer on the same money</h3>
+    <table>
+      <thead><tr><th>Item</th><th>W-2 employee, 60,000</th><th>Freelancer, 60,000 profit</th></tr></thead>
+      <tbody>
+        <tr><td>Payroll tax rate you pay</td><td>7.65%</td><td>15.3%</td></tr>
+        <tr><td>Base it is charged on</td><td>60,000</td><td>55,410</td></tr>
+        <tr><td>Social Security</td><td>3,720</td><td>6,871</td></tr>
+        <tr><td>Medicare</td><td>870</td><td>1,607</td></tr>
+        <tr><td>Total payroll or SE tax</td><td>4,590</td><td>8,478</td></tr>
+        <tr><td>Income tax</td><td>Owed separately</td><td>Owed separately</td></tr>
+      </tbody>
+    </table>
+    <p>The freelancer pays 3,888 more on identical earnings. That gap is the number to remember when you convert a salary offer into a contract rate, and it is why experienced contractors add 25-30% to a salary equivalent before quoting.</p>
+
+    <h3>The Social Security wage base and W-2 wages</h3>
+    <p>Social Security stops at 176,100 of combined earnings in 2025; Medicare never stops. If you earned 150,000 in W-2 wages and 40,000 of freelance profit, only 26,100 of your self-employment earnings still fit under the base, so the remaining profit is charged Medicare alone. Entering your W-2 wages above captures this, and it can cut a five-figure estimate substantially. Above 200,000 of combined earnings an extra 0.9% Additional Medicare Tax applies on Form 8959; the calculator flags the amount separately because it is not part of Schedule SE.</p>
+
+    <h2>Quarterly payment calendar</h2>
+    <p>Estimated payments are due roughly 15 April, 15 June, 15 September and 15 January of the following year, covering income earned in the preceding periods. The safe harbour rule is the practical shield: pay 90% of the current year's total tax, or 100% of last year's total (110% if your prior-year AGI topped 150,000), and penalties are off the table even if you end up owing more in April. Most freelancers with lumpy income pay the prior-year safe harbour and settle the difference at filing.</p>
+
+    <h3>Is an S-corp election worth it?</h3>
+    <p>An S-corp lets you split profit into a reasonable salary, which carries payroll tax, and distributions, which do not. On 120,000 of profit with a 70,000 salary, roughly 50,000 escapes the 15.3%, saving about 7,000 before costs. Against that sit payroll processing, a separate business return, higher accounting fees and audit exposure if your salary is unreasonably low. The costs run 1,000-2,000 a year, so the maths rarely works below about 50,000 of profit and gets compelling above 80,000-100,000. Retirement plans are a different lever: SEP-IRA and solo 401(k) contributions reduce income tax but never SE tax.</p>
+
+    <h2>Limitations of this estimate</h2>
+    <p>This calculator covers federal self-employment tax only. It does not model income tax brackets, the qualified business income deduction, state or city taxes, church employee income, farm optional methods, or partnership adjustments. The Additional Medicare threshold follows the filing status you pick: 200,000 single or head of household, 250,000 married filing jointly, 125,000 married filing separately. Treat the output as the size of the SE tax bucket you must fund, not as a filed return, and speak to a CPA before making an S-corp election or a large retirement contribution.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes" target="_blank" rel="noopener">IRS — Self-employment tax rates for Social Security and Medicare</a></li>
+      <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes" target="_blank" rel="noopener">IRS — Estimated taxes, quarterly due dates and safe harbour rules</a></li>
+      <li><a href="https://www.ssa.gov/oact/cola/cbb.html" target="_blank" rel="noopener">Social Security Administration — Annual Social Security wage base limits</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/sip-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">SIP Calculator</span></a><a class="related-item" href="https://tool-hub.me/split-bill-calc/"><span class="related-ico" aria-hidden="true">🤝</span><span class="related-name">Split Bill Calculator</span></a><a class="related-item" href="https://tool-hub.me/stamp-duty-calc/"><span class="related-ico" aria-hidden="true">🇬🇧</span><span class="related-name">Stamp Duty Calculator</span></a><a class="related-item" href="https://tool-hub.me/stock-average-calc/"><span class="related-ico" aria-hidden="true">📉</span><span class="related-name">Stock Average Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why is self-employment tax based on 92.35% of my profit?</summary><p data-i18n="faq.a1">An employee never pays payroll tax on the employer's half, because the employer deducts it as a business cost. The 92.35% factor rebuilds that fairness for the self-employed: it removes the employer-equivalent 7.65% before the 15.3% rate is applied. On 60,000 of profit you are taxed on 55,410, not the full 60,000.</p></details>
+    <details><summary data-i18n="faq.q2">Is self-employment tax the same as income tax?</summary><p data-i18n="faq.a2">No, and this is the shock that catches most first-year freelancers. Self-employment tax funds Social Security and Medicare at 15.3%, and federal income tax is charged separately on the same profit. A freelancer in the 22% bracket is looking at roughly 32% combined before any state tax, which is why a 25-30% set-aside is the standard advice.</p></details>
+    <details><summary data-i18n="faq.q3">How do quarterly estimated payments work?</summary><p data-i18n="faq.a3">If you expect to owe 1,000 or more, the IRS wants payments on roughly 15 April, 15 June, 15 September and 15 January. The safe-harbour rule protects you from penalties if you pay 90% of this year's tax or 100% of last year's total, rising to 110% when your prior-year AGI was over 150,000. Paying the safe-harbour amount is easier than forecasting a variable year.</p></details>
+    <details><summary data-i18n="faq.q4">Can I legally reduce self-employment tax?</summary><p data-i18n="faq.a4">Deducting every legitimate business expense is the first lever, because SE tax is charged on profit, not revenue. Retirement contributions to a SEP-IRA or solo 401(k) cut income tax but not SE tax. An S-corp election can move part of your profit from wages to distributions and cut SE tax, but it demands a reasonable salary, payroll filings and roughly 1,000-2,000 a year of admin, so it usually only pays above about 50,000 of profit.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

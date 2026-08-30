@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-pWuOmJme3VNljGPhD0iBNp+GbfVN+iCQ5UtpX05JOd4=' 'sha256-Z+rDSel3D5amd2Lue7f/9QEIBqv3d9mzSa8Wc+MuETE=' 'sha256-pBCEmJnuL41sVKqTaDBvt9o61TGxFIq0+qdp+L4o1ac='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>値入率計算機 — 原価から売価、値入率と粗利率</title>
+<meta name="description" content="原価と値入率を入力すると売価と利益がわかり、原価と売価を入力すると値入率と粗利率がわかります。無料・即座に・すべてブラウザ内で計算。">
+<meta name="keywords" content="markup calculator, markup percentage, cost plus markup, markup to margin, how to calculate markup, 마크업 계산기">
+<link rel="canonical" href="https://tool-hub.me/markup-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/markup-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/markup-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/markup-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/markup-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/markup-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/markup-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/markup-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/markup-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/markup-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/markup-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/markup-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/markup-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/markup-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/markup-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/markup-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="値入率計算機 — 原価から売価、値入率と粗利率">
+<meta property="og:description" content="原価と値入率を入力すると売価と利益がわかり、原価と売価を入力すると値入率と粗利率がわかります。無料・即座に・すべてブラウザ内で計算。">
+<meta property="og:url" content="https://tool-hub.me/markup-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/markup-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Markup Calculator",
+  "description": "Enter cost and markup % to get the selling price and profit, or enter cost and price to find the markup % and profit margin. Free, instant, all in your browser.",
+  "url": "https://tool-hub.me/markup-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Markup Calculator", "item": "https://tool-hub.me/markup-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the difference between markup and margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Markup is profit divided by cost, while margin is profit divided by selling price — the same profit produces two different percentages because the denominators differ. A product costing $20 and sold for $30 has $10 profit: markup is 10 ÷ 20 = 50%, but margin is 10 ÷ 30 = 33.3%. Markup is always higher than margin on a profitable sale because cost is smaller than the selling price. Mixing the two up is one of the most common pricing mistakes small businesses make."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate a selling price from cost and a markup percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the cost by 1 plus the markup as a decimal: selling price = cost × (1 + markup ÷ 100). For a $40 cost with a 25% markup, that's 40 × 1.25 = $50. Switch to the “Find selling price” tab, enter the cost and markup percentage, and the tool calculates the price, profit, and resulting margin percentage instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does a 100% markup equal only a 50% margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 100% markup means you doubled the cost to set the price, so profit equals cost. Margin measures that same profit against the larger selling price instead of the cost, so profit ÷ price = cost ÷ (2 × cost) = 50%. The conversion table on this page shows more examples, including the classic case: 25%, 50%, and 100% markup convert to 20%, 33%, and 50% margin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I find my margin if I only know my cost and selling price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — switch to the “Find markup %” tab and enter the cost and the selling price you already charge. The calculator returns the profit per unit, the markup percentage, and the profit margin percentage in one step, so you don't need to rearrange the formulas yourself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my cost and pricing data sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This markup calculator runs entirely in your browser — the cost, price, and currency you enter never leave your device and nothing is uploaded or stored on a server. There's no sign-up and no tracking of your numbers, so you can price products or services with confidence."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Markup Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Markup Calculator</span></nav>
+  <section class="hero">
+    <h1>Markup Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Turn a cost into a selling price, or find the markup and profit margin from a price you already charge — instantly, right in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       i18n contract (docs/I18N.md): every user-visible string carries a data-i18n hook,
+         with the same key added to all 14 language blocks in js/locales.js. Dynamic JS
+         strings are looked up via window.I18N.t("key"); subscribe to the document
+         "i18n:change" event when a re-render on language switch is needed. -->
+  <section class="tool-card" id="tool" aria-label="Markup calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .curr-row { display:flex; justify-content:flex-end; margin-bottom:4px; }
+      #tool .curr-row select { width:auto; min-width:120px; }
+      #tool .tab-bar { display:flex; gap:8px; border-bottom:1px solid var(--line); margin-bottom:16px; }
+      #tool .tab-btn { flex:1 1 0; background:none; border:none; border-bottom:2px solid transparent; padding:10px 6px; font-size:14.5px; font-weight:700; font-family:inherit; color:var(--muted); cursor:pointer; margin:0; }
+      #tool .tab-btn.active { color:var(--accent-strong); border-bottom-color:var(--accent); }
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin:6px 0 4px; }
+      #tool .chip { padding:6px 12px; font-size:13.5px; font-weight:700; font-family:inherit; border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .chip.is-active { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:20px; margin-top:2px; font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; color:var(--accent-strong); }
+      #tool .pl-pos { color:#059669; } #tool .pl-neg { color:#dc2626; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .zero-note { font-size:13px; color:#dc2626; margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      #tool .ref-table-wrap { margin-top:26px; padding-top:18px; border-top:1px solid var(--line); overflow-x:auto; }
+      #tool .ref-table-wrap h3 { font-size:15px; margin:0 0 8px; }
+      #tool table.markup-table { width:100%; border-collapse:collapse; font-size:14px; min-width:280px; }
+      #tool table.markup-table th, #tool table.markup-table td { text-align:right; padding:6px 8px; border-bottom:1px solid var(--line); }
+      #tool table.markup-table th:first-child, #tool table.markup-table td:first-child { text-align:left; }
+      #tool table.markup-table th { color:var(--muted); font-weight:650; }
+      #tool table.markup-table tr.is-active td { background:color-mix(in srgb, var(--accent) 10%, transparent); font-weight:700; }
+      #tool .use-btn { padding:4px 10px; font-size:12.5px; font-weight:700; font-family:inherit; border:1px solid var(--line); border-radius:7px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .use-btn:hover { border-color:var(--accent); color:var(--accent-strong); }
+      #tool .note { font-size:13px; color:var(--muted); margin-top:10px; }
+      @media(max-width:420px){ #tool .result-cards { grid-template-columns:1fr 1fr; } #tool table.markup-table { font-size:12.5px; } }
+    </style>
+
+    <div class="curr-row">
+      <label for="currency-select" class="sr-only" data-i18n="tool.currency.label">Currency</label>
+      <select id="currency-select" aria-label="Currency" data-i18n-aria-label="tool.currency.label"></select>
+    </div>
+
+    <div class="tab-bar" role="tablist" aria-label="Select calculation mode" data-i18n-aria-label="tool.tablist">
+      <button class="tab-btn active" id="tab-price" role="tab" aria-selected="true" aria-controls="mode-price" type="button" data-i18n="tool.tab.price">Find selling price</button>
+      <button class="tab-btn" id="tab-markup" role="tab" aria-selected="false" aria-controls="mode-markup" type="button" data-i18n="tool.tab.markup">Find markup %</button>
+    </div>
+
+    <!-- Mode A: cost + markup % → selling price -->
+    <div id="mode-price" role="tabpanel" aria-labelledby="tab-price">
+      <label for="p-cost" data-i18n="tool.price.cost.label">Cost (unit cost)</label>
+      <input id="p-cost" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 20.00" data-i18n-placeholder="tool.price.cost.ph" autofocus>
+
+      <label for="p-markup" style="margin-top:14px;" data-i18n="tool.price.markup.label">Markup %</label>
+      <div class="chips" id="p-chips" role="group" aria-label="Common markup percentages" data-i18n-aria-label="tool.price.chips.label">
+        <button type="button" class="chip" data-markup="10">10%</button>
+        <button type="button" class="chip" data-markup="20">20%</button>
+        <button type="button" class="chip" data-markup="25">25%</button>
+        <button type="button" class="chip" data-markup="30">30%</button>
+        <button type="button" class="chip" data-markup="50">50%</button>
+        <button type="button" class="chip" data-markup="75">75%</button>
+        <button type="button" class="chip" data-markup="100">100%</button>
+        <button type="button" class="chip" data-markup="150">150%</button>
+        <button type="button" class="chip" data-markup="200">200%</button>
+      </div>
+      <input id="p-markup" type="number" inputmode="decimal" step="any" placeholder="e.g. 50" data-i18n-placeholder="tool.price.markup.ph" autocomplete="off">
+
+      <button type="button" id="p-calc" class="btn" data-i18n="tool.price.calc">Calculate selling price</button>
+
+      <div id="p-result-wrap">
+        <p id="p-empty" data-i18n="tool.price.placeholder" style="margin:14px 0 0;color:var(--muted);">Enter cost and markup % to see the selling price</p>
+        <p class="err" id="p-err" role="alert" hidden></p>
+        <div id="p-grid" hidden>
+          <div class="result-cards">
+            <div class="rcard hero-card"><div class="rc-label" data-i18n="tool.price.result.price">Selling price</div><div class="rc-val" id="p-r-price">—</div></div>
+            <div class="rcard"><div class="rc-label" data-i18n="tool.price.result.profit">Profit per unit</div><div class="rc-val" id="p-r-profit">—</div></div>
+            <div class="rcard"><div class="rc-label" data-i18n="tool.price.result.margin">Profit margin</div><div class="rc-val" id="p-r-margin">—</div></div>
+          </div>
+          <p class="subtle" id="p-r-sub" style="margin-top:10px;"></p>
+          <p class="zero-note" id="p-r-zero" hidden></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mode B: cost + selling price → markup %, margin % -->
+    <div id="mode-markup" role="tabpanel" aria-labelledby="tab-markup" hidden>
+      <label for="m-cost" data-i18n="tool.markup.cost.label">Cost (unit cost)</label>
+      <input id="m-cost" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 20.00" data-i18n-placeholder="tool.markup.cost.ph">
+
+      <label for="m-price" style="margin-top:14px;" data-i18n="tool.markup.price.label">Selling price</label>
+      <input id="m-price" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 30.00" data-i18n-placeholder="tool.markup.price.ph">
+
+      <button type="button" id="m-calc" class="btn" data-i18n="tool.markup.calc">Calculate markup %</button>
+
+      <div id="m-result-wrap">
+        <p id="m-empty" data-i18n="tool.markup.placeholder" style="margin:14px 0 0;color:var(--muted);">Enter cost and selling price to see the markup %</p>
+        <p class="err" id="m-err" role="alert" hidden></p>
+        <div id="m-grid" hidden>
+          <div class="result-cards">
+            <div class="rcard"><div class="rc-label" data-i18n="tool.markup.result.profit">Profit per unit</div><div class="rc-val" id="m-r-profit">—</div></div>
+            <div class="rcard hero-card"><div class="rc-label" data-i18n="tool.markup.result.markup">Markup %</div><div class="rc-val" id="m-r-markup">—</div></div>
+            <div class="rcard"><div class="rc-label" data-i18n="tool.markup.result.margin">Profit margin</div><div class="rc-val" id="m-r-margin">—</div></div>
+          </div>
+          <p class="subtle" id="m-r-sub" style="margin-top:10px;"></p>
+          <p class="zero-note" id="m-r-zero" hidden></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-table-wrap">
+      <h3 data-i18n="tool.table.heading">Markup ↔ margin conversion table</h3>
+      <table class="markup-table">
+        <thead><tr><th data-i18n="tool.table.markupCol">Markup %</th><th data-i18n="tool.table.marginCol">Margin %</th><th></th></tr></thead>
+        <tbody id="markup-table-body"></tbody>
+      </table>
+      <p class="note" data-i18n="tool.table.note">Markup is profit divided by cost; margin is profit divided by selling price. The same profit always makes markup % higher than margin % — that's why a 100% markup is only a 50% margin.</p>
+    </div>
+
+    <p class="note" data-i18n="tool.note.disclaimer" style="margin-top:16px;">Educational information only — not financial, accounting, or tax advice for pricing decisions.</p>
+    <p class="note" data-i18n="tool.note.privacy">All calculations run in your browser — nothing is sent to a server.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Markup vs. margin: two different percentages from the same profit</h2>
+    <p>Markup and margin both start from the same profit figure — selling price minus cost — but they divide that profit by different numbers. Markup divides profit by <strong>cost</strong>, answering "how much did I add on top of what I paid?" Margin divides profit by <strong>selling price</strong>, answering "what share of the revenue is profit?" Because the selling price is always larger than the cost on a profitable sale, markup is always a bigger number than margin for the same transaction. Confusing the two is one of the most common — and costly — mistakes in small-business pricing: aiming for a "50% margin" but typing a 50% markup into a spreadsheet leaves real profit on the table.</p>
+
+    <h2>The formulas</h2>
+    <ul>
+      <li><strong>Profit</strong> = selling price − cost</li>
+      <li><strong>Markup %</strong> = profit ÷ cost × 100</li>
+      <li><strong>Margin %</strong> = profit ÷ selling price × 100</li>
+      <li><strong>Selling price from cost + markup</strong> = cost × (1 + markup% ÷ 100)</li>
+    </ul>
+
+    <div class="example">
+      <p><strong>Example 1 — pricing from cost.</strong> A product costs $40 to make. Apply a 25% markup: price = 40 × 1.25 = <strong>$50</strong>. Profit is $10, so markup is 10 ÷ 40 = 25% (as set), but margin is only 10 ÷ 50 = <strong>20%</strong> — the classic 25%-markup-equals-20%-margin pair.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — reverse-engineering from a price you already charge.</strong> You sell a $20-cost item for $30. Profit is $10. Markup = 10 ÷ 20 = <strong>50%</strong>. Margin = 10 ÷ 30 = <strong>33.3%</strong>. Same $10 profit, two different percentages depending on which number you divide by.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — the 100% markup myth.</strong> Doubling the price (a 100% markup) is a common retail rule of thumb, but it converts to only a <strong>50% margin</strong> — not 100%. Profit ($cost) ÷ price (2 × cost) is always exactly one-half at a 100% markup, no matter the cost.</p>
+    </div>
+
+    <h2>Markup-to-margin conversion table</h2>
+    <p>Because the relationship is fixed by the formula margin = markup ÷ (100 + markup) × 100, a few common markups always convert to the same margins:</p>
+    <table>
+      <thead><tr><th>Markup %</th><th>Margin %</th></tr></thead>
+      <tbody>
+        <tr><td>10%</td><td>9.1%</td></tr>
+        <tr><td>25%</td><td>20%</td></tr>
+        <tr><td>50%</td><td>33.3%</td></tr>
+        <tr><td>100%</td><td>50%</td></tr>
+        <tr><td>200%</td><td>66.7%</td></tr>
+        <tr><td>300%</td><td>75%</td></tr>
+      </tbody>
+    </table>
+    <p>The full interactive table above the fold covers more presets and lets you jump straight to that markup in the calculator.</p>
+
+    <h2>Typical markup ranges by industry</h2>
+    <p>There's no single "correct" markup — it depends on turnover, spoilage risk, competition, and how much service is bundled into the price. These are rough, commonly cited starting points, not rules:</p>
+    <table>
+      <thead><tr><th>Industry</th><th>Typical markup</th></tr></thead>
+      <tbody>
+        <tr><td>Grocery / supermarket</td><td>10&ndash;25%</td></tr>
+        <tr><td>General retail / apparel</td><td>50&ndash;100%</td></tr>
+        <tr><td>Restaurants (food cost)</td><td>200&ndash;300% (25&ndash;33% food cost)</td></tr>
+        <tr><td>Furniture</td><td>50&ndash;100%</td></tr>
+        <tr><td>Jewelry</td><td>100&ndash;300%+</td></tr>
+        <tr><td>Wholesale / distribution</td><td>15&ndash;40%</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Common pricing mistakes</h2>
+    <ul>
+      <li><strong>Treating "markup" and "margin" as interchangeable</strong> in a spreadsheet formula — they aren't, and swapping them systematically under- or over-prices every item.</li>
+      <li><strong>Forgetting that margin has a ceiling of 100%</strong> (that would mean cost is $0), while markup has no upper limit — a very high markup can still be a modest margin.</li>
+      <li><strong>Not accounting for all costs</strong> in "cost" — packaging, shipping, payment processing fees, and returns all belong in the cost basis before applying a markup, or the real margin will be lower than the calculator shows.</li>
+    </ul>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.sba.gov/business-guide/manage-your-business" target="_blank" rel="noopener">U.S. Small Business Administration — guidance on pricing, costs and managing business finances</a></li>
+      <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed" target="_blank" rel="noopener">IRS Small Business &amp; Self-Employed — cost of goods sold and business expense rules</a></li>
+      <li><a href="https://www.bls.gov/ppi/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics, Producer Price Indexes — wholesale price trends that shift your cost basis</a></li>
+      <li><a href="https://www.khanacademy.org/math/arithmetic/x18ca194a:percent" target="_blank" rel="noopener">Khan Academy — percentage arithmetic behind markup and margin formulas</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/mileage-reimbursement-calc/"><span class="related-ico" aria-hidden="true">🧭</span><span class="related-name">Mileage Reimbursement Calculator</span></a><a class="related-item" href="https://tool-hub.me/mortgage-calc/"><span class="related-ico" aria-hidden="true">🏠</span><span class="related-name">Mortgage Calculator</span></a><a class="related-item" href="https://tool-hub.me/net-worth-calc/"><span class="related-ico" aria-hidden="true">💎</span><span class="related-name">Net Worth Calculator</span></a><a class="related-item" href="https://tool-hub.me/npv-irr-calc/"><span class="related-ico" aria-hidden="true">📉</span><span class="related-name">NPV Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What's the difference between markup and margin?</summary>
+      <p data-i18n="faq.a1">Markup is profit divided by cost, while margin is profit divided by selling price — the same profit produces two different percentages because the denominators differ. A product costing $20 and sold for $30 has $10 profit: markup is 10 ÷ 20 = 50%, but margin is 10 ÷ 30 = 33.3%. Markup is always higher than margin on a profitable sale because cost is smaller than the selling price. Mixing the two up is one of the most common pricing mistakes small businesses make.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How do I calculate a selling price from cost and a markup percentage?</summary>
+      <p data-i18n="faq.a2">Multiply the cost by 1 plus the markup as a decimal: selling price = cost × (1 + markup ÷ 100). For a $40 cost with a 25% markup, that's 40 × 1.25 = $50. Switch to the “Find selling price” tab, enter the cost and markup percentage, and the tool calculates the price, profit, and resulting margin percentage instantly.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why does a 100% markup equal only a 50% margin?</summary>
+      <p data-i18n="faq.a3">A 100% markup means you doubled the cost to set the price, so profit equals cost. Margin measures that same profit against the larger selling price instead of the cost, so profit ÷ price = cost ÷ (2 × cost) = 50%. The conversion table on this page shows more examples, including the classic case: 25%, 50%, and 100% markup convert to 20%, 33%, and 50% margin.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Can I find my margin if I only know my cost and selling price?</summary>
+      <p data-i18n="faq.a4">Yes — switch to the “Find markup %” tab and enter the cost and the selling price you already charge. The calculator returns the profit per unit, the markup percentage, and the profit margin percentage in one step, so you don't need to rearrange the formulas yourself.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my cost and pricing data sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This markup calculator runs entirely in your browser — the cost, price, and currency you enter never leave your device and nothing is uploaded or stored on a server. There's no sign-up and no tracking of your numbers, so you can price products or services with confidence.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

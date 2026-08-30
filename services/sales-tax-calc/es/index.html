@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-YEAjRboBvo8AXdH3NFmkr7s9Z9ehIJLyLQ85JBrJ9/8=' 'sha256-ZWadbu5fIsc0B/to+Hy6mDg1GRysBssEHyYlXnCwo4w=' 'sha256-mWYjVY19Ygbd6wKSNYtO4oBS6gEeEC8MnFVWcd/OdDg='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de impuesto sobre ventas — sumar o quitar por estado</title>
+<meta name="description" content="Introduce un precio y elige un estado de EE. UU. para obtener el impuesto y el total, o parte del total del recibo para hallar el precio sin impuestos. Añade tu tasa local encima.">
+<meta name="keywords" content="sales tax calculator, us sales tax by state, reverse sales tax calculator, tax rate calculator, price plus tax">
+<link rel="canonical" href="https://tool-hub.me/sales-tax-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/sales-tax-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/sales-tax-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/sales-tax-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/sales-tax-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/sales-tax-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/sales-tax-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/sales-tax-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/sales-tax-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/sales-tax-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/sales-tax-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/sales-tax-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/sales-tax-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/sales-tax-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/sales-tax-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/sales-tax-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de impuesto sobre ventas — sumar o quitar por estado">
+<meta property="og:description" content="Introduce un precio y elige un estado de EE. UU. para obtener el impuesto y el total, o parte del total del recibo para hallar el precio sin impuestos. Añade tu tasa local encima.">
+<meta property="og:url" content="https://tool-hub.me/sales-tax-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/sales-tax-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Sales Tax Calculator",
+  "description": "Enter a price and pick a US state to get the sales tax and total, or work backwards from a receipt total to the pre-tax price. Add your local county or city rate on top.",
+  "url": "https://tool-hub.me/sales-tax-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-28",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sales Tax Calculator",
+      "item": "https://tool-hub.me/sales-tax-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate sales tax on a price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the price by the combined rate as a decimal. At 8.25 percent, a 40.00 item is 40 x 0.0825 = 3.30 in tax and 43.30 total. The combined rate is the state rate plus any county, city or district rate that applies at the point of sale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the pre-tax price from a receipt total?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide, do not subtract. A 43.30 total at 8.25 percent is 43.30 / 1.0825 = 40.00 before tax, and the tax was 3.30. Subtracting 8.25 percent from the total would give 39.73, which is wrong by 27 cents — the classic mistake when reclaiming expenses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my actual rate higher than the state rate shown?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most states let counties, cities and special districts add their own sales tax. The state rate is only the floor: in parts of Louisiana, Alabama and Colorado the combined rate is more than double it. Look up your exact ZIP code rate and enter the difference in the local rate field."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Sales Tax Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Sales Tax Calculator</span></nav>
+  <section class="hero">
+    <h1>Sales Tax Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Price to total, or total back to price — with every state's base rate built in.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .mode-row { display:flex; gap:18px; flex-wrap:wrap; margin:4px 0 12px; }
+      #tool .mode-row label { display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14px; margin:0; cursor:pointer; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <p id="mode-label" style="font-weight:600;font-size:14px;margin:0 0 2px;" data-i18n="tool.mode.label">What do you have?</p>
+    <div class="mode-row" role="radiogroup" aria-labelledby="mode-label">
+      <label><input type="radio" name="mode" value="add" checked><span data-i18n="tool.mode.add">Price before tax</span></label>
+      <label><input type="radio" name="mode" value="remove"><span data-i18n="tool.mode.remove">Total after tax</span></label>
+    </div>
+
+    <label for="amount" data-i18n="tool.amount.label">Amount</label>
+    <input type="text" id="amount" inputmode="decimal" autocomplete="off" placeholder="40.00">
+
+    <div class="field-row">
+      <div>
+        <label for="state" data-i18n="tool.state.label">State</label>
+        <select id="state">
+          <option value="4">Alabama (4%)</option>
+          <option value="0">Alaska (0%)</option>
+          <option value="5.6">Arizona (5.6%)</option>
+          <option value="6.5">Arkansas (6.5%)</option>
+          <option value="7.25" selected>California (7.25%)</option>
+          <option value="2.9">Colorado (2.9%)</option>
+          <option value="6.35">Connecticut (6.35%)</option>
+          <option value="0">Delaware (0%)</option>
+          <option value="6">District of Columbia (6%)</option>
+          <option value="6">Florida (6%)</option>
+          <option value="4">Georgia (4%)</option>
+          <option value="4">Hawaii (4%)</option>
+          <option value="6">Idaho (6%)</option>
+          <option value="6.25">Illinois (6.25%)</option>
+          <option value="7">Indiana (7%)</option>
+          <option value="6">Iowa (6%)</option>
+          <option value="6.5">Kansas (6.5%)</option>
+          <option value="6">Kentucky (6%)</option>
+          <option value="4.45">Louisiana (4.45%)</option>
+          <option value="5.5">Maine (5.5%)</option>
+          <option value="6">Maryland (6%)</option>
+          <option value="6.25">Massachusetts (6.25%)</option>
+          <option value="6">Michigan (6%)</option>
+          <option value="6.875">Minnesota (6.875%)</option>
+          <option value="7">Mississippi (7%)</option>
+          <option value="4.225">Missouri (4.225%)</option>
+          <option value="0">Montana (0%)</option>
+          <option value="5.5">Nebraska (5.5%)</option>
+          <option value="6.85">Nevada (6.85%)</option>
+          <option value="0">New Hampshire (0%)</option>
+          <option value="6.625">New Jersey (6.625%)</option>
+          <option value="4.875">New Mexico (4.875%)</option>
+          <option value="4">New York (4%)</option>
+          <option value="4.75">North Carolina (4.75%)</option>
+          <option value="5">North Dakota (5%)</option>
+          <option value="5.75">Ohio (5.75%)</option>
+          <option value="4.5">Oklahoma (4.5%)</option>
+          <option value="0">Oregon (0%)</option>
+          <option value="6">Pennsylvania (6%)</option>
+          <option value="7">Rhode Island (7%)</option>
+          <option value="6">South Carolina (6%)</option>
+          <option value="4.2">South Dakota (4.2%)</option>
+          <option value="7">Tennessee (7%)</option>
+          <option value="6.25">Texas (6.25%)</option>
+          <option value="6.1">Utah (6.1%)</option>
+          <option value="6">Vermont (6%)</option>
+          <option value="5.3">Virginia (5.3%)</option>
+          <option value="6.5">Washington (6.5%)</option>
+          <option value="6">West Virginia (6%)</option>
+          <option value="5">Wisconsin (5%)</option>
+          <option value="4">Wyoming (4%)</option>
+          <option value="custom" data-i18n="tool.state.custom">Custom rate</option>
+        </select>
+      </div>
+      <div>
+        <label for="local" data-i18n="tool.local.label">Local (county/city) rate %</label>
+        <input type="number" id="local" inputmode="decimal" min="0" max="10" step="any" autocomplete="off" placeholder="2">
+      </div>
+    </div>
+
+    <div id="custom-wrap" hidden>
+      <label for="custom-rate" data-i18n="tool.rate.label">Tax rate %</label>
+      <input type="number" id="custom-rate" inputmode="decimal" min="0" max="30" step="any" autocomplete="off" placeholder="8.25">
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.total">Total</div>
+          <div class="rc-val" id="r-total">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.pre">Price before tax</div><div class="rc-val" id="r-pre">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.tax">Sales tax</div><div class="rc-val" id="r-tax">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.rate">Combined rate</div><div class="rc-val" id="r-rate">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.rates" style="margin-top:12px;">State base rates only. Not tax advice.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>Adding tax and removing it are different sums</h2>
+    <p>Adding sales tax is a multiplication: price times rate, added to the price. Removing it is a division, not a subtraction, because the tax was calculated on the smaller pre-tax figure rather than on the total you are holding. Getting this backwards is the most common receipt error, and it always understates the pre-tax price.</p>
+    <p>The gap is small on one coffee and material on a laptop. At 8.25 percent, subtracting the rate from a 2,000 total gives 1,835 when the correct answer is 1,847.58 — a 12.58 difference that will not reconcile with the invoice.</p>
+
+    <h3>Worked example 1: adding tax at the register</h3>
+    <p>A 40.00 item in a city with a 6.25 percent state rate and 2.00 percent local rate faces a combined 8.25 percent. Tax = 40 x 0.0825 = 3.30. Total = 43.30. Entering 2 in the local rate field is what makes this match the receipt, because the state figure alone would predict 42.50.</p>
+
+    <h3>Worked example 2: reclaiming the pre-tax price</h3>
+    <p>Your receipt says 43.30 and you need the net figure for an expense claim. Switch the mode to "total after tax": 43.30 / 1.0825 = 40.00 net, 3.30 tax. The division undoes the multiplication exactly, which subtraction never does.</p>
+
+    <h3>Worked example 3: comparing two states</h3>
+    <p>The same 1,200 laptop costs 1,275 in Texas at the 6.25 percent state rate before local additions, and exactly 1,200 in Oregon, which levies no sales tax at all. Delaware, Montana, New Hampshire and Alaska are the other zero-rate states, though Alaska allows local taxes that can still push a purchase above the sticker price.</p>
+
+    <h2>States with no statewide sales tax</h2>
+    <table>
+      <thead><tr><th>State</th><th>State rate</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Alaska</td><td>0%</td><td>Local boroughs and cities may still charge</td></tr>
+        <tr><td>Delaware</td><td>0%</td><td>No local sales tax either</td></tr>
+        <tr><td>Montana</td><td>0%</td><td>Some resort areas levy a local tax</td></tr>
+        <tr><td>New Hampshire</td><td>0%</td><td>Meals and rooms taxed separately</td></tr>
+        <tr><td>Oregon</td><td>0%</td><td>No local sales tax either</td></tr>
+      </tbody>
+    </table>
+
+    <h2>What the state rate does not include</h2>
+    <p>Every rate in the dropdown is the statewide base. Counties, cities and special districts add their own on top, and the combined figure can be far higher: parts of Louisiana and Alabama exceed 10 percent once local taxes are counted, while Colorado's 2.9 percent state rate hides local additions that more than double it. Look up the rate for the exact ZIP code of the sale and enter the extra in the local field.</p>
+    <p>Rates also change, usually at the start of a quarter, and categories complicate things further: many states exempt groceries or prescription medicine, tax prepared food at a higher rate, or run temporary sales tax holidays for school supplies. This calculator applies one flat rate to one amount, which is right for a typical retail purchase and wrong for a mixed basket of exempt and taxable goods.</p>
+    <p>Treat the output as an estimate for planning and checking receipts. For filing, remittance or anything a tax authority will read, use the current published rate for your jurisdiction and, when the amounts matter, a professional.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.irs.gov/" target="_blank" rel="noopener">IRS — federal guidance on deducting state and local sales taxes</a></li>
+      <li><a href="https://www.census.gov/programs-surveys/qtax.html" target="_blank" rel="noopener">U.S. Census Bureau Quarterly Summary of State and Local Tax Revenue — official sales tax collection data</a></li>
+      <li><a href="https://www.usa.gov/state-taxes" target="_blank" rel="noopener">USA.gov State Taxes — links to each state revenue department for current rates</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/savings-calc/"><span class="related-ico" aria-hidden="true">🐷</span><span class="related-name">Savings Calculator</span></a><a class="related-item" href="https://tool-hub.me/self-employment-tax-calc/"><span class="related-ico" aria-hidden="true">🧾</span><span class="related-name">Self-Employment Tax Calculator</span></a><a class="related-item" href="https://tool-hub.me/sip-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">SIP Calculator</span></a><a class="related-item" href="https://tool-hub.me/split-bill-calc/"><span class="related-ico" aria-hidden="true">🤝</span><span class="related-name">Split Bill Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How do I calculate sales tax on a price?</summary><p data-i18n="faq.a1">Multiply the price by the combined rate as a decimal. At 8.25 percent, a 40.00 item is 40 x 0.0825 = 3.30 in tax and 43.30 total. The combined rate is the state rate plus any county, city or district rate that applies at the point of sale.</p></details>
+    <details><summary data-i18n="faq.q2">How do I find the pre-tax price from a receipt total?</summary><p data-i18n="faq.a2">Divide, do not subtract. A 43.30 total at 8.25 percent is 43.30 / 1.0825 = 40.00 before tax, and the tax was 3.30. Subtracting 8.25 percent from the total would give 39.73, which is wrong by 27 cents — the classic mistake when reclaiming expenses.</p></details>
+    <details><summary data-i18n="faq.q3">Why is my actual rate higher than the state rate shown?</summary><p data-i18n="faq.a3">Most states let counties, cities and special districts add their own sales tax. The state rate is only the floor: in parts of Louisiana, Alabama and Colorado the combined rate is more than double it. Look up your exact ZIP code rate and enter the difference in the local rate field.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-mfVukr/R9FM7Sp9FRgKs0CQ3VxQtOkUHhL0j1P+38EQ=' 'sha256-zYM5fiWoZV5TRBvmoNSjo0viPuJ7ol2f5GrWFVUUbqk=' 'sha256-WtoiatjgnDfELyvt8NVN9Y0AqYhfy9rENcTv2xMozRk='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2つのリストを比較 — Aのみ・Bのみ・両方</title>
+<meta name="description" content="2つのリストやCSV列を比較する無料のブラウザ完結ツール。Aのみ・Bのみ・積集合・和集合を一度に取得し、パネルごとにCSV出力。国別の氏名照合が誤った不一致を防ぎます。リストはブラウザから外に出ません。">
+<meta name="keywords" content="compare two lists, list comparison tool, find differences between two lists, list diff online, 명단 비교, intersection and difference of lists">
+<link rel="canonical" href="https://tool-hub.me/list-compare/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/list-compare/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/list-compare/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/list-compare/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/list-compare/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/list-compare/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/list-compare/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/list-compare/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/list-compare/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/list-compare/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/list-compare/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/list-compare/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/list-compare/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/list-compare/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/list-compare/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/list-compare/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="2つのリストを比較 — Aのみ・Bのみ・両方">
+<meta property="og:description" content="2つのリストやCSV列を比較する無料のブラウザ完結ツール。Aのみ・Bのみ・積集合・和集合を一度に取得し、パネルごとにCSV出力。国別の氏名照合が誤った不一致を防ぎます。リストはブラウザから外に出ません。">
+<meta property="og:url" content="https://tool-hub.me/list-compare/ja/">
+<meta property="og:image" content="https://tool-hub.me/list-compare/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d9488">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Compare Two Lists",
+  "description": "Free browser-only tool to compare two lists or CSV columns. Paste or drop lists A and B and instantly get A-only, B-only, intersection and union with per-panel CSV export. Country-aware name matching (whitespace, fullwidth, accents, Turkish case) prevents false mismatches. Your lists never leave the browser.",
+  "url": "https://tool-hub.me/list-compare/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-22",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Compare Two Lists",
+      "item": "https://tool-hub.me/list-compare/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is my list sent to a server, and why can I use this without security approval?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This list comparison tool runs 100% in your browser — the two lists you paste or drop are parsed, normalized and compared with JavaScript on your own machine, and nothing is uploaded, logged or stored on any server. There is no account and no network request carrying your data. That is exactly why teams that handle names, member IDs or customer lists can compare two lists here even when an upload-based SaaS would fail a security review: the data never leaves the tab. Close the tab and the lists are gone; only your matching options and column choices are remembered in this browser's local storage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are \"홍 길동\" and \"홍길동\" treated as different, and what does \"remove all spaces\" do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By default a plain text compare treats \"홍 길동\" (with a space) and \"홍길동\" (without) as two different strings, so they land in A-only and B-only instead of the intersection — the single most common false mismatch when reconciling Korean or Japanese name lists. That is why the \"Remove all spaces\" option is on in the Korea and Japan presets: it strips every space from the matching key so spaced and unspaced names line up. It changes matching only — your original spelling is preserved for display and CSV export. Combined with \"Trim & collapse spaces\", it also fixes stray leading, trailing and double spaces that Excel copies often leave behind."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between A-only, B-only, intersection and union, and when do I use each?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tool shows all four sets at once so you can find differences between two lists in a single pass. A-only (A minus B) is everyone in A who is missing from B — attendees who did not pay, items ordered but not received. B-only (B minus A) is the reverse — payments with no matching attendee, receipts with no order. The intersection (A and B) is what appears in both — the matched, reconciled rows. The union is every distinct item across both lists combined, with no duplicates. For a reconciliation you usually watch A-only and B-only (the exceptions); the intersection and difference of lists together must add up to the union, which is a quick sanity check on the counts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I compare just one column from two CSV files?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paste or drop each file into its own box. When a list has more than one column, the tool auto-detects the delimiter (comma, semicolon, tab or pipe), shows a preview, and lets you pick the \"Compare by column\" for each side independently — so you can match column C of one export against column A of another. Tick \"First row is a header\" if the top row holds column names; it is left out of the comparison. Everything else in the row is ignored for matching but the chosen cell is what you export. This makes list diff online practical for real spreadsheet exports, not just clean one-item-per-line lists."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does it handle country-specific name spelling — surname order, fullwidth characters and accents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pick the country preset that matches your data and the right normalization rules switch on. Korea uses NFC so decomposed and composed Hangul jamo match, plus space removal. Japan and China add NFKC so fullwidth ＡＢＣ and halfwidth ABC (and fullwidth digits) are treated as equal. Europe adds accent folding so café and cafe match. Türkiye uses a Turkish-safe lowercase so the dotless ı and dotted İ are not mangled by a naive lowercase. What the tool cannot know is field order: if one list writes \"Gil-dong Hong\" and the other \"Hong Gil-dong\", split the name into columns and compare the surname column, because reordering words automatically would create false matches. For 명단 비교 in practice, remove-spaces plus NFC clears the large majority of mismatches."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Compare Two Lists</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#7c3aed" href="https://tool-hub.me/text-tools/">Text</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Compare Two Lists</span></nav>
+  <section class="hero">
+    <h1>Compare Two Lists</h1>
+    <p class="lede" data-i18n="hero.lede">Find what's only in A, only in B, and in both — in your browser, nothing uploaded.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool h3 { font-size: 15px; font-weight: 800; letter-spacing: -0.01em; margin: 26px 0 8px; }
+      #tool h3.lc-first { margin-top: 0; }
+      #tool .lc-scope { margin: 0 0 6px; padding: 10px 12px; border-radius: 10px; background: var(--bg); border: 1px solid var(--line); color: var(--muted); font-size: 13px; line-height: 1.5; }
+      #tool .lc-sub { margin: 6px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+      #tool .lc-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      @media (max-width: 620px) { #tool .lc-inputs { grid-template-columns: 1fr; } }
+      #tool .lc-side h3 { margin-top: 0; }
+      #tool .lc-drop { border: 2px dashed var(--line); border-radius: 12px; padding: 12px; background: var(--bg); }
+      #tool .lc-drop.is-over { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--bg)); }
+      #tool .lc-drop textarea { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; resize: vertical; width: 100%; box-sizing: border-box; }
+      #tool .lc-hint { margin: 8px 2px 0; color: var(--muted); font-size: 13px; }
+      #tool .lc-link { background: none; border: none; padding: 0; font: inherit; color: var(--accent); text-decoration: underline; cursor: pointer; }
+      #tool .lc-btnrow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+      #tool .lc-btnrow .btn { margin-top: 0; padding: 9px 16px; font-size: 14px; }
+      #tool .btn.lc-ghost { background: none; border: 1px solid var(--line); color: var(--ink); }
+      #tool .btn.lc-ghost:hover { border-color: var(--accent); background: none; }
+      #tool .lc-banner { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 10px 0 0; padding: 10px 12px; border-radius: 10px; font-size: 13px; line-height: 1.5;
+        background: color-mix(in srgb, var(--accent) 10%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); }
+      #tool .lc-map { margin-top: 10px; }
+      #tool .lc-check { display: flex; align-items: center; gap: 9px; cursor: pointer; margin: 10px 0 0; font-weight: 600; font-size: 14px; }
+      #tool .lc-check input { width: auto; flex: 0 0 auto; }
+      #tool .lc-progress { display: flex; align-items: center; gap: 10px; margin-top: 14px; font-size: 13px; color: var(--muted); }
+      #tool .lc-progress progress { flex: 1 1 auto; height: 8px; }
+      #tool .lc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0 14px; }
+      #tool .lc-opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 2px 16px; margin-top: 6px; }
+      #tool .lc-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 10px; border: 1px solid var(--line); border-radius: 10px; }
+      #tool table.lc-table { border-collapse: collapse; width: 100%; font-size: 13px; background: var(--surface); }
+      #tool table.lc-table th, #tool table.lc-table td { padding: 7px 10px; border-bottom: 1px solid var(--line); text-align: start; white-space: nowrap; }
+      #tool table.lc-table th { background: var(--bg); font-size: 12px; font-weight: 700; color: var(--muted); position: sticky; top: 0; }
+      #tool table.lc-table td.lc-num { text-align: end; color: var(--muted); font-variant-numeric: tabular-nums; width: 1%; }
+      #tool table.lc-table tbody tr:last-child td { border-bottom: none; }
+      #tool .lc-badge { display: inline-block; margin-inline-start: 6px; padding: 1px 7px; border-radius: 999px; font-size: 11px; font-weight: 700; vertical-align: middle;
+        background: color-mix(in srgb, var(--accent) 16%, var(--surface)); color: var(--accent-strong); border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line)); }
+      [data-theme="dark"] #tool .lc-badge { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .lc-badge { color: var(--accent); } }
+      #tool .lc-mem { display: inline-block; padding: 1px 7px; border-radius: 999px; font-size: 11px; font-weight: 700; }
+      #tool .lc-mem.a { background: color-mix(in srgb, var(--accent) 14%, var(--surface)); color: var(--accent-strong); }
+      #tool .lc-mem.b { background: color-mix(in srgb, #f59e0b 16%, var(--surface)); color: #b45309; }
+      #tool .lc-mem.both { background: color-mix(in srgb, var(--accent) 22%, var(--surface)); color: var(--accent-strong); }
+      [data-theme="dark"] #tool .lc-mem.a, [data-theme="dark"] #tool .lc-mem.both { color: var(--accent); }
+      [data-theme="dark"] #tool .lc-mem.b { color: #fbbf24; }
+      #tool .lc-msg { margin: 0; color: var(--muted); }
+      #tool .lc-msg.is-err { color: var(--accent-strong); font-weight: 700; }
+      [data-theme="dark"] #tool .lc-msg.is-err { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .lc-msg.is-err { color: var(--accent); } }
+      #tool .lc-warn { margin: 0 0 14px; padding: 10px 12px; border-radius: 10px; font-size: 13px; line-height: 1.55;
+        background: color-mix(in srgb, var(--accent) 10%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); }
+      #tool .lc-warn p { margin: 0 0 6px; } #tool .lc-warn p:last-child { margin-bottom: 0; }
+      #tool .lc-tabs { display: flex; gap: 6px; margin: 4px 0 0; flex-wrap: wrap; }
+      #tool .lc-tab { background: none; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font: inherit; font-size: 13px; font-weight: 700; padding: 6px 13px; cursor: pointer; }
+      #tool .lc-tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+      #tool .lc-tab .lc-cnt { font-variant-numeric: tabular-nums; }
+      #tool .lc-panelhead { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+      #tool .lc-panelhead .lc-btnrow { margin-top: 0; }
+      #tool .lc-panelhead .btn { margin-top: 0; padding: 8px 14px; font-size: 13px; }
+      #tool .lc-count { font-size: 14px; font-weight: 800; color: var(--ink); }
+      #tool .lc-status { font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .lc-status { color: var(--accent); }
+      #tool .lc-fix { background: var(--surface); border: 1px solid var(--accent); border-radius: 8px; color: var(--accent-strong); font: inherit; font-size: 12.5px; font-weight: 700; padding: 5px 10px; cursor: pointer; }
+      [data-theme="dark"] #tool .lc-fix { color: var(--accent); }
+    </style>
+
+    <p class="lc-scope" data-i18n="tool.scope">Nothing you paste is uploaded — the two lists are compared entirely in this browser, so it can be used without a security review.</p>
+
+    <div class="lc-inputs">
+      <div class="lc-side">
+        <h3 class="lc-first" data-i18n="tool.listA">List A</h3>
+        <div class="lc-drop" id="lc-drop-a">
+          <textarea id="lc-paste-a" rows="7" spellcheck="false" autocomplete="off" data-i18n-placeholder="tool.paste.ph" placeholder="Paste a list here — one item per line, or a column copied from Excel."></textarea>
+          <p class="lc-hint"><span data-i18n="tool.drop.hint">Or drop a CSV/TXT file —</span> <button type="button" class="lc-link" id="lc-pick-a" data-i18n="tool.drop.pick">choose a file</button></p>
+          <input type="file" id="lc-file-a" accept=".csv,.tsv,.txt,text/csv,text/plain" hidden>
+        </div>
+        <p class="lc-banner" id="lc-enc-a" hidden>
+          <span id="lc-enc-a-text" data-i18n="tool.enc.broken">This file does not look like UTF-8 — some characters may be garbled.</span>
+          <button type="button" class="lc-fix" id="lc-enc-a-btn" data-i18n="tool.enc.retry">Re-read as CP949 (EUC-KR)</button>
+        </p>
+        <div class="lc-map" id="lc-map-a" hidden>
+          <label class="lc-check" for="lc-header-a"><input type="checkbox" id="lc-header-a"><span data-i18n="tool.map.header">First row is a header</span></label>
+          <label for="lc-col-a" data-i18n="tool.map.keyCol">Compare by column</label>
+          <select id="lc-col-a" autocomplete="off"></select>
+        </div>
+        <p class="lc-sub" id="lc-stat-a"></p>
+      </div>
+      <div class="lc-side">
+        <h3 class="lc-first" data-i18n="tool.listB">List B</h3>
+        <div class="lc-drop" id="lc-drop-b">
+          <textarea id="lc-paste-b" rows="7" spellcheck="false" autocomplete="off" data-i18n-placeholder="tool.paste.ph" placeholder="Paste a list here — one item per line, or a column copied from Excel."></textarea>
+          <p class="lc-hint"><span data-i18n="tool.drop.hint">Or drop a CSV/TXT file —</span> <button type="button" class="lc-link" id="lc-pick-b" data-i18n="tool.drop.pick">choose a file</button></p>
+          <input type="file" id="lc-file-b" accept=".csv,.tsv,.txt,text/csv,text/plain" hidden>
+        </div>
+        <p class="lc-banner" id="lc-enc-b" hidden>
+          <span id="lc-enc-b-text" data-i18n="tool.enc.broken">This file does not look like UTF-8 — some characters may be garbled.</span>
+          <button type="button" class="lc-fix" id="lc-enc-b-btn" data-i18n="tool.enc.retry">Re-read as CP949 (EUC-KR)</button>
+        </p>
+        <div class="lc-map" id="lc-map-b" hidden>
+          <label class="lc-check" for="lc-header-b"><input type="checkbox" id="lc-header-b"><span data-i18n="tool.map.header">First row is a header</span></label>
+          <label for="lc-col-b" data-i18n="tool.map.keyCol">Compare by column</label>
+          <select id="lc-col-b" autocomplete="off"></select>
+        </div>
+        <p class="lc-sub" id="lc-stat-b"></p>
+      </div>
+    </div>
+
+    <div class="lc-btnrow">
+      <button type="button" class="btn lc-ghost" id="lc-sample" data-i18n="tool.sample">Load sample lists</button>
+      <button type="button" class="btn lc-ghost" id="lc-swap" data-i18n="tool.swap">Swap A &#8644; B</button>
+      <button type="button" class="btn lc-ghost" id="lc-clear" data-i18n="tool.clear">Clear</button>
+    </div>
+
+    <h3 data-i18n="tool.optsTitle">Matching options</h3>
+    <div class="lc-grid">
+      <div>
+        <label for="lc-preset" data-i18n="tool.preset.label">Country preset</label>
+        <select id="lc-preset" autocomplete="off">
+          <option value="EN" data-i18n="tool.preset.en">International / English</option>
+          <option value="KR" data-i18n="tool.preset.kr">Korea — names</option>
+          <option value="JP" data-i18n="tool.preset.jp">Japan / China — fullwidth</option>
+          <option value="EU" data-i18n="tool.preset.eu">Europe — accents</option>
+          <option value="TR" data-i18n="tool.preset.tr">T&#252;rkiye — i / &#304;</option>
+        </select>
+      </div>
+    </div>
+    <div class="lc-opts">
+      <label class="lc-check" for="lc-o-trim"><input type="checkbox" id="lc-o-trim"><span data-i18n="tool.opt.trim">Trim &amp; collapse spaces</span></label>
+      <label class="lc-check" for="lc-o-space"><input type="checkbox" id="lc-o-space"><span data-i18n="tool.opt.space">Remove all spaces (홍 길동 = 홍길동)</span></label>
+      <label class="lc-check" for="lc-o-case"><input type="checkbox" id="lc-o-case"><span data-i18n="tool.opt.case">Ignore upper / lower case</span></label>
+      <label class="lc-check" for="lc-o-nfc"><input type="checkbox" id="lc-o-nfc"><span data-i18n="tool.opt.nfc">Unicode NFC (Korean jamo)</span></label>
+      <label class="lc-check" for="lc-o-nfkc"><input type="checkbox" id="lc-o-nfkc"><span data-i18n="tool.opt.nfkc">Fullwidth &#8596; halfwidth (NFKC)</span></label>
+      <label class="lc-check" for="lc-o-accent"><input type="checkbox" id="lc-o-accent"><span data-i18n="tool.opt.accent">Ignore accents (caf&#233; = cafe)</span></label>
+      <label class="lc-check" for="lc-o-tr"><input type="checkbox" id="lc-o-tr"><span data-i18n="tool.opt.tr">Turkish-safe case (i / &#304;)</span></label>
+      <label class="lc-check" for="lc-o-zeros"><input type="checkbox" id="lc-o-zeros"><span data-i18n="tool.opt.zeros">Ignore leading zeros (00123 = 123)</span></label>
+      <label class="lc-check" for="lc-o-punct"><input type="checkbox" id="lc-o-punct"><span data-i18n="tool.opt.punct">Ignore punctuation &amp; symbols (ABC-123 = ABC123)</span></label>
+    </div>
+    <p class="lc-sub" data-i18n="tool.opt.note">Options change matching only — your original text is always kept for display and export.</p>
+
+    <div class="lc-progress" id="lc-progress" hidden>
+      <progress id="lc-bar" max="100" value="0"></progress>
+      <span id="lc-progress-text"></span>
+      <button type="button" class="lc-fix" id="lc-cancel" data-i18n="tool.cancel">Cancel</button>
+    </div>
+
+    <div class="result" id="lc-result" aria-live="polite">
+      <p class="lc-msg" id="lc-msg" data-i18n="tool.n.empty">Paste or drop two lists above — or load the sample — to see what is only in A, only in B, and in both.</p>
+      <div id="lc-out" hidden>
+        <div id="lc-warn"></div>
+        <div class="lc-tabs" role="tablist">
+          <button type="button" class="lc-tab" id="lc-tab-onlyA" role="tab" aria-selected="true" aria-controls="lc-panel" data-tab="onlyA"><span data-i18n="tool.tab.onlyA">Only in A</span> <span class="lc-cnt" id="lc-cnt-onlyA"></span></button>
+          <button type="button" class="lc-tab" id="lc-tab-onlyB" role="tab" aria-selected="false" aria-controls="lc-panel" data-tab="onlyB"><span data-i18n="tool.tab.onlyB">Only in B</span> <span class="lc-cnt" id="lc-cnt-onlyB"></span></button>
+          <button type="button" class="lc-tab" id="lc-tab-both" role="tab" aria-selected="false" aria-controls="lc-panel" data-tab="both"><span data-i18n="tool.tab.both">In both</span> <span class="lc-cnt" id="lc-cnt-both"></span></button>
+          <button type="button" class="lc-tab" id="lc-tab-union" role="tab" aria-selected="false" aria-controls="lc-panel" data-tab="union"><span data-i18n="tool.tab.union">Union</span> <span class="lc-cnt" id="lc-cnt-union"></span></button>
+        </div>
+        <div id="lc-panel" role="tabpanel">
+          <div class="lc-panelhead">
+            <span class="lc-count" id="lc-panel-count"></span>
+            <div class="lc-btnrow">
+              <button type="button" class="btn" id="lc-copy" data-i18n="tool.copy">Copy</button>
+              <button type="button" class="btn lc-ghost" id="lc-csv" data-i18n="tool.download">Download CSV</button>
+              <button type="button" class="btn lc-ghost" id="lc-csv-all" data-i18n="tool.downloadAll">Combined CSV</button>
+              <span class="lc-status" id="lc-status" hidden></span>
+            </div>
+          </div>
+          <div class="lc-scroll"><table class="lc-table" id="lc-tbl"></table></div>
+          <p class="lc-sub" id="lc-trunc" hidden></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+    <h2>Reading two lists as sets, not just text</h2>
+    <p>Comparing two lists sounds trivial until the lists are real: a 640-row event registration export against a 615-row payment log, or last month's CRM contact export against this month's. Manually scrolling for mismatches stops working past a few dozen rows, and copy-paste eyeballing tends to miss exactly the cases that matter — near-duplicate spellings, trailing whitespace, a header row accidentally counted as data. This tool treats each list as a mathematical set and computes the four relationships that answer almost every "did these two things line up" question: what is only in A, what is only in B, what is in both, and what the combined total looks like.</p>
+
+    <h3>How to use it</h3>
+    <ol>
+      <li>Paste or drop List A and List B — one item per line, or a raw CSV/TSV export.</li>
+      <li>If a file has more than one column, a preview and column picker appear; choose which column is the comparison key (for example "email" or "order ID") for each side independently.</li>
+      <li>Pick a country preset, or leave it on International, to switch on the text-normalization rules that fit your data.</li>
+      <li>Read the four result tabs — Only in A, Only in B, In both, Union — and copy or download any of them as CSV.</li>
+    </ol>
+
+    <h3>The set logic</h3>
+    <p>Let A and B be the two lists after normalization. The tool computes four values from them:</p>
+    <div class="example">
+      <p style="margin:0 0 6px"><strong>A − B</strong> (Only in A) — items in A with no match in B</p>
+      <p style="margin:0 0 6px"><strong>B − A</strong> (Only in B) — items in B with no match in A</p>
+      <p style="margin:0 0 6px"><strong>A ∩ B</strong> (In both) — items present in both lists</p>
+      <p style="margin:0"><strong>A ∪ B</strong> (Union) — every distinct item from either list, counted once</p>
+    </div>
+    <p>A useful sanity check on any run: |A − B| + |B − A| + |A ∩ B| should equal |A ∪ B|. If the counts don't add up, a duplicate <em>inside</em> one list — not between the two — is usually the cause; the union collapses it but the A-only/B-only counts don't.</p>
+
+    <h3>Worked example 1 — event check-in reconciliation</h3>
+    <div class="example">
+      <p style="margin:0 0 6px">List A (RSVPs, 6 names): Kim, Lee, Park, Choi, Jung, Han.<br>List B (checked in, 5 names): Lee, Park, Choi, Jung, Song.</p>
+      <p style="margin:0 0 6px"><strong>Only in A:</strong> Kim, Han — RSVP'd but never checked in.</p>
+      <p style="margin:0 0 6px"><strong>Only in B:</strong> Song — checked in without an RSVP (a walk-in).</p>
+      <p style="margin:0 0 6px"><strong>In both:</strong> Lee, Park, Choi, Jung.</p>
+      <p style="margin:0"><strong>Union:</strong> 7 people touched the event in some way — 2 + 1 + 4 = 7.</p>
+    </div>
+
+    <h3>Worked example 2 — SKU inventory audit</h3>
+    <div class="example">
+      <p style="margin:0 0 6px">The warehouse system lists 1,204 SKUs. The sales platform lists 1,187 SKUs.</p>
+      <p style="margin:0 0 6px">After comparing: 22 SKUs are only in the warehouse (discontinued but never delisted online), 5 SKUs are only on the sales platform (listed but never received), and 1,182 SKUs match.</p>
+      <p style="margin:0">Check: 22 + 5 + 1,182 = 1,209 = the union. The warehouse team now has an exact 22-item delist queue instead of a guess.</p>
+    </div>
+
+    <h3>Worked example 3 — a Korean name list with a hidden mismatch</h3>
+    <div class="example">
+      <p style="margin:0 0 6px">List A has "홍 길동" (with a space). List B has "홍길동" (no space). A plain text compare puts both in the "only in" columns even though they refer to the same person — the single most common false mismatch when reconciling Korean or Japanese name lists.</p>
+      <p style="margin:0">Turning on the Korea preset (which enables "Remove all spaces" plus NFC normalization) merges them into the intersection instead, without changing how the names are displayed or exported.</p>
+    </div>
+
+    <h3>Normalization options at a glance</h3>
+    <table>
+      <tr><th>Option</th><th>Fixes</th><th>Example</th></tr>
+      <tr><td>Trim &amp; collapse spaces</td><td>Leading/trailing/double spaces from Excel copies</td><td>"&nbsp;&nbsp;Kim&nbsp;" → "Kim"</td></tr>
+      <tr><td>Remove all spaces</td><td>Spaced vs. unspaced names</td><td>"홍 길동" = "홍길동"</td></tr>
+      <tr><td>Ignore case</td><td>Capitalization differences</td><td>"Alice" = "alice"</td></tr>
+      <tr><td>NFC</td><td>Decomposed vs. composed Hangul jamo</td><td>matches regardless of which IME typed it</td></tr>
+      <tr><td>NFKC</td><td>Fullwidth vs. halfwidth characters</td><td>"ＡＢＣ" = "ABC"</td></tr>
+      <tr><td>Ignore accents</td><td>Diacritic variants</td><td>"café" = "cafe"</td></tr>
+      <tr><td>Turkish-safe case</td><td>Dotless ı / dotted İ</td><td>"İstanbul" lowercased without corruption</td></tr>
+      <tr><td>Ignore leading zeros</td><td>Zero-padded IDs</td><td>"00123" = "123"</td></tr>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li>Assuming every mismatch is an error, when it is often a naming-convention gap — surname-first vs. given-name-first entries look identical to a human but not to a plain string compare.</li>
+      <li>Forgetting to tick "First row is a header," which lets a column title get compared as if it were real data.</li>
+      <li>Turning on every normalization option at once — over-normalizing can merge two genuinely different items, such as accent-folding "Peña" onto "Pena" when a dataset actually contains both as distinct people.</li>
+      <li>Comparing whole CSV rows instead of a single key column — one extra trailing field makes otherwise-identical rows look different.</li>
+    </ul>
+
+    <h3>Limitations</h3>
+    <p>The tool matches on text after normalization — it cannot infer that "Bob Smith" and "Robert Smith" are the same person, and it will not reorder "Gil-dong Hong" into "Hong Gil-dong" for you. For reordered names, split the name into separate columns and compare the surname column on its own. This is built for exact-after-normalization matching, not fuzzy or approximate matching, and it does not perform record linkage across differently structured datasets.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.unicode.org/reports/tr15/" target="_blank" rel="noopener">Unicode Standard Annex #15 — defines the NFC/NFD/NFKC/NFKD normalization forms used for text matching</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize" target="_blank" rel="noopener">MDN Web Docs — how String.prototype.normalize() applies those forms in the browser</a></li>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc4180" target="_blank" rel="noopener">RFC 4180 — the common format and MIME type for CSV files, including header rows and quoting</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/lorem-ipsum-gen/"><span class="related-ico" aria-hidden="true">📄</span><span class="related-name">Lorem Ipsum Generator</span></a><a class="related-item" href="https://tool-hub.me/morse-code-translator/"><span class="related-ico" aria-hidden="true">📡</span><span class="related-name">Morse Code Translator</span></a><a class="related-item" href="https://tool-hub.me/number-to-words/"><span class="related-ico" aria-hidden="true">✍️</span><span class="related-name">Number to Words Converter</span></a><a class="related-item" href="https://tool-hub.me/random-word-gen/"><span class="related-ico" aria-hidden="true">🎲</span><span class="related-name">Random Word Generator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다.
+         ★ FAQ 작성 후 반드시: node factory/gen-faq-schema.js <slug> --apply
+           → FAQPage JSON-LD 를 주입해 검색결과 리치 스니펫(FAQ 펼침)을 받는다.
+           스키마는 여기 보이는 원문과 일치해야 하므로(Google 요건) 문구를 고치면 다시 돌린다. -->
+    <details><summary data-i18n="faq.q1">Is my list sent to a server, and why can I use this without security approval?</summary><p data-i18n="faq.a1">No. This list comparison tool runs 100% in your browser — the two lists you paste or drop are parsed, normalized and compared with JavaScript on your own machine, and nothing is uploaded, logged or stored on any server. There is no account and no network request carrying your data. That is exactly why teams that handle names, member IDs or customer lists can compare two lists here even when an upload-based SaaS would fail a security review: the data never leaves the tab. Close the tab and the lists are gone; only your matching options and column choices are remembered in this browser's local storage.</p></details>
+    <details><summary data-i18n="faq.q2">Why are "홍 길동" and "홍길동" treated as different, and what does "remove all spaces" do?</summary><p data-i18n="faq.a2">By default a plain text compare treats "홍 길동" (with a space) and "홍길동" (without) as two different strings, so they land in A-only and B-only instead of the intersection — the single most common false mismatch when reconciling Korean or Japanese name lists. That is why the "Remove all spaces" option is on in the Korea and Japan presets: it strips every space from the matching key so spaced and unspaced names line up. It changes matching only — your original spelling is preserved for display and CSV export. Combined with "Trim &amp; collapse spaces", it also fixes stray leading, trailing and double spaces that Excel copies often leave behind.</p></details>
+    <details><summary data-i18n="faq.q3">What is the difference between A-only, B-only, intersection and union, and when do I use each?</summary><p data-i18n="faq.a3">The tool shows all four sets at once so you can find differences between two lists in a single pass. A-only (A minus B) is everyone in A who is missing from B — attendees who did not pay, items ordered but not received. B-only (B minus A) is the reverse — payments with no matching attendee, receipts with no order. The intersection (A and B) is what appears in both — the matched, reconciled rows. The union is every distinct item across both lists combined, with no duplicates. For a reconciliation you usually watch A-only and B-only (the exceptions); the intersection and difference of lists together must add up to the union, which is a quick sanity check on the counts.</p></details>
+    <details><summary data-i18n="faq.q4">How do I compare just one column from two CSV files?</summary><p data-i18n="faq.a4">Paste or drop each file into its own box. When a list has more than one column, the tool auto-detects the delimiter (comma, semicolon, tab or pipe), shows a preview, and lets you pick the "Compare by column" for each side independently — so you can match column C of one export against column A of another. Tick "First row is a header" if the top row holds column names; it is left out of the comparison. Everything else in the row is ignored for matching but the chosen cell is what you export. This makes list diff online practical for real spreadsheet exports, not just clean one-item-per-line lists.</p></details>
+    <details><summary data-i18n="faq.q5">How does it handle country-specific name spelling — surname order, fullwidth characters and accents?</summary><p data-i18n="faq.a5">Pick the country preset that matches your data and the right normalization rules switch on. Korea uses NFC so decomposed and composed Hangul jamo match, plus space removal. Japan and China add NFKC so fullwidth ＡＢＣ and halfwidth ABC (and fullwidth digits) are treated as equal. Europe adds accent folding so café and cafe match. Türkiye uses a Turkish-safe lowercase so the dotless ı and dotted İ are not mangled by a naive lowercase. What the tool cannot know is field order: if one list writes "Gil-dong Hong" and the other "Hong Gil-dong", split the name into columns and compare the surname column, because reordering words automatically would create false matches. For 명단 비교 in practice, remove-spaces plus NFC clears the large majority of mismatches.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

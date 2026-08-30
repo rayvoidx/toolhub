@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-A1BAtoxl8NBgrMipt2GIvF5O1P6/uWqAoKjSXhHYEMA=' 'sha256-a9R34uYIOwsSDbtECe4ol05nCbGuhAejhqXIDiSfpGQ=' 'sha256-TNI1zA3pA9wMuJ7I2+CDIXJ1VGhdKVDmNsmE8ta+hUo='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de costo de combustible</title>
+<meta name="description" content="Introduce la distancia del viaje, el consumo y el precio del combustible para ver al instante cuánto combustible necesitas y cuánto costará. Funciona con km o millas, km/L, L/100km y MPG (EE. UU. o RU), cualquier moneda, con ida y vuelta y costo por pasajero — todo en tu navegador.">
+<meta name="keywords" content="fuel cost calculator, gas cost calculator, trip fuel calculator, mpg gas cost, L/100km cost, 유류비 계산기, 기름값 계산기, 주유비 계산기">
+<link rel="canonical" href="https://tool-hub.me/fuel-cost-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/fuel-cost-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/fuel-cost-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/fuel-cost-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/fuel-cost-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/fuel-cost-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/fuel-cost-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/fuel-cost-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/fuel-cost-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/fuel-cost-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/fuel-cost-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/fuel-cost-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/fuel-cost-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/fuel-cost-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/fuel-cost-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/fuel-cost-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de costo de combustible">
+<meta property="og:description" content="Introduce la distancia del viaje, el consumo y el precio del combustible para ver al instante cuánto combustible necesitas y cuánto costará. Funciona con km o millas, km/L, L/100km y MPG (EE. UU. o RU), cualquier moneda, con ida y vuelta y costo por pasajero — todo en tu navegador.">
+<meta property="og:url" content="https://tool-hub.me/fuel-cost-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/fuel-cost-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f59e0b">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Fuel Cost Calculator",
+  "description": "Free online fuel cost calculator. Enter your trip distance, fuel economy and fuel price to instantly see how much fuel you need and what the trip will cost. Works with km or miles, km/L, L/100km and MPG (US or UK), any currency, with round-trip and cost-per-passenger — all in your browser, no live-price server.",
+  "url": "https://tool-hub.me/fuel-cost-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Fuel Cost Calculator",
+      "item": "https://tool-hub.me/fuel-cost-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is fuel cost calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This fuel cost calculator works out total cost = distance ÷ fuel economy × fuel price. Pick your country first and it sets the units and currency the way you actually buy fuel — miles, MPG and price per gallon in the US; kilometers, L/100km and price per liter across most of Europe; km/L in Korea, Japan, Brazil and India. Everything is normalized to liters and kilometers internally, so you only type three numbers: distance, fuel economy and price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MPG vs L/100km vs km/L — which unit should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Whichever your car shows — and your country already picked it for you. The US measures in miles per gallon (MPG), the UK uses imperial MPG, most of Europe and China use L/100km (liters per 100 km), and Korea, Japan, Brazil and India use km/L (kilometers per liter). This gas cost calculator converts all of them, so read the number off your dashboard and enter it as-is. Driving an imported car? Change the unit next to the field and the rest keeps working."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the UK price fuel in liters but rate cars in MPG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Britain sells fuel by the liter but still rates cars in miles per imperial gallon — so a UK trip needs both units at once, which is exactly what this calculator does when you pick the United Kingdom. Watch out for the two gallons: a US gallon is about 3.785 liters and a UK (imperial) gallon about 4.546 liters, roughly 20% larger. So 40 MPG (UK) is only about 33 MPG (US) — never compare the two figures directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I split fuel cost or add a round trip?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open \"Round trip and passengers\" under the price. Tick round trip to count the drive there and back (distance × 2), and set the number of passengers with the − and + buttons — the calculator then shows the cost per passenger so everyone can chip in a fair share. Both are optional: leave them alone for a plain one-way estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are live fuel prices included?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. You enter the current fuel price yourself, so the result is always up to date and never depends on an external server. Every calculation runs locally in your browser — nothing you type is uploaded, saved, or shared."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Fuel Cost Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Fuel Cost Calculator</span></nav>
+  <section class="hero">
+    <h1>Fuel Cost Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">How much will this trip cost in gas? Pick your country — we set the units and currency — then enter distance, fuel economy and price.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool label { margin-top: 18px; }
+      #tool label:first-of-type { margin-top: 0; }
+      #tool .fcc-row { display: flex; gap: 8px; align-items: stretch; }
+      #tool .fcc-row input { flex: 1 1 auto; min-width: 0; }
+      #tool .fcc-row select { flex: 0 0 auto; width: auto; }
+      #tool .fcc-curbadge {
+        flex: 0 0 auto; display: flex; align-items: center; justify-content: center;
+        min-width: 54px; padding: 0 10px; border: 1px solid var(--line); border-radius: 10px;
+        background: var(--bg); color: var(--muted); font-weight: 700; font-variant-numeric: tabular-nums;
+      }
+      #tool .fcc-note { margin: 10px 0 0; font-size: 13.5px; line-height: 1.55; color: var(--muted); }
+      #tool .fcc-more { margin-top: 18px; }
+      #tool .fcc-more > summary { font-weight: 600; font-size: 14px; color: var(--muted); cursor: pointer; }
+      #tool .fcc-more label:first-of-type { margin-top: 12px; }
+      #tool .fcc-check { display: flex; align-items: center; gap: 10px; cursor: pointer; margin-top: 18px; font-weight: 600; font-size: 15px; }
+      #tool .fcc-check input { width: auto; flex: 0 0 auto; }
+      #tool .fcc-stepper { display: flex; gap: 8px; align-items: stretch; max-width: 240px; }
+      #tool .fcc-step { flex: 0 0 50px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--accent); font-size: 22px; font-weight: 700; cursor: pointer; line-height: 1; }
+      #tool .fcc-step:hover { border-color: var(--accent); }
+      #tool .fcc-stepper input { text-align: center; font-variant-numeric: tabular-nums; }
+      #tool .fcc-msg { margin: 0; color: var(--muted); }
+      #tool .fcc-msg.is-err { color: var(--accent-strong); font-weight: 700; }
+      [data-theme="dark"] #tool .fcc-msg.is-err { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .fcc-msg.is-err { color: var(--accent); } }
+      #tool .fcc-heroLabel { font-size: 14px; font-weight: 700; color: var(--muted); }
+      #tool .fcc-big {
+        display: inline-block; font-size: clamp(32px, 8vw, 48px); font-weight: 900;
+        letter-spacing: -0.04em; line-height: 1.15; color: var(--accent-strong);
+        cursor: pointer; background: none; border: none; padding: 0; margin-top: 2px;
+        font-family: inherit; text-align: left;
+      }
+      [data-theme="dark"] #tool .fcc-big { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .fcc-big { color: var(--accent); } }
+      #tool .fcc-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 16px 0 0; }
+      #tool .fcc-cell { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; cursor: pointer; }
+      #tool .fcc-cell:hover { border-color: var(--accent); }
+      #tool .fcc-cell dt { font-size: 13px; font-weight: 700; color: var(--muted); margin: 0 0 4px; }
+      #tool .fcc-cell dd { margin: 0; font-size: 17px; font-weight: 800; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+      #tool .fcc-copyrow { margin-top: 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+      #tool .fcc-copyrow .btn { margin-top: 0; padding: 10px 18px; font-size: 14px; }
+      #tool .fcc-status { font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .fcc-status { color: var(--accent); }
+      #tool .fcc-hint { margin: 10px 0 0; font-size: 12.5px; color: var(--muted); }
+    </style>
+
+    <label for="fcc-country" data-i18n="tool.country.label">Where are you driving?</label>
+    <select id="fcc-country" autocomplete="off">
+      <option value="US">United States</option>
+    </select>
+    <p class="fcc-note" id="fcc-country-note" role="status"></p>
+
+    <label for="fcc-dist" data-i18n="tool.dist.label">Trip distance</label>
+    <div class="fcc-row">
+      <input type="text" id="fcc-dist" inputmode="decimal" autocomplete="off" placeholder="e.g. 200" autofocus>
+      <select id="fcc-dist-unit" aria-label="Distance unit" data-i18n-aria-label="tool.distUnit.aria">
+        <option value="km">km</option>
+        <option value="mi">mi</option>
+      </select>
+    </div>
+
+    <label for="fcc-eff" data-i18n="tool.eff.label">Fuel economy</label>
+    <div class="fcc-row">
+      <input type="text" id="fcc-eff" inputmode="decimal" autocomplete="off" placeholder="e.g. 30">
+      <select id="fcc-eff-unit" aria-label="Fuel economy unit" data-i18n-aria-label="tool.effUnit.aria">
+        <option value="kmL">km/L</option>
+        <option value="l100">L/100km</option>
+        <option value="mpgUS">MPG (US)</option>
+        <option value="mpgUK">MPG (UK)</option>
+      </select>
+    </div>
+
+    <label for="fcc-price" data-i18n="tool.price.label">Fuel price</label>
+    <div class="fcc-row">
+      <span class="fcc-curbadge" id="fcc-curbadge" aria-hidden="true">$</span>
+      <input type="text" id="fcc-price" inputmode="decimal" autocomplete="off" placeholder="e.g. 3.5">
+      <select id="fcc-price-unit" aria-label="Price unit" data-i18n-aria-label="tool.priceUnit.aria">
+        <option value="perL" data-i18n="tool.pu.perL">per L</option>
+        <option value="usgal" data-i18n="tool.pu.usgal">per US gal</option>
+        <option value="ukgal" data-i18n="tool.pu.ukgal">per UK gal</option>
+      </select>
+    </div>
+
+    <details class="fcc-more" id="fcc-more">
+      <summary data-i18n="tool.details.summary">Round trip and passengers</summary>
+
+      <label class="fcc-check" for="fcc-roundtrip">
+        <input type="checkbox" id="fcc-roundtrip">
+        <span data-i18n="tool.roundtrip.label">Round trip (there and back)</span>
+      </label>
+
+      <label for="fcc-people" data-i18n="tool.people.label">Passengers</label>
+      <div class="fcc-stepper">
+        <button type="button" class="fcc-step" id="fcc-minus" aria-label="One fewer passenger" data-i18n-aria-label="tool.people.dec">&#8722;</button>
+        <input type="number" id="fcc-people" min="1" step="1" value="1" inputmode="numeric" autocomplete="off">
+        <button type="button" class="fcc-step" id="fcc-plus" aria-label="One more passenger" data-i18n-aria-label="tool.people.inc">+</button>
+      </div>
+    </details>
+
+    <div class="result" id="fcc-result" aria-live="polite">
+      <p class="fcc-msg" id="fcc-msg" data-i18n="tool.n.empty">Enter distance, fuel economy and price to see the trip cost.</p>
+      <div class="fcc-out" id="fcc-out" hidden>
+        <div class="fcc-heroLabel" data-i18n="tool.res.total">Total fuel cost</div>
+        <button type="button" class="fcc-big" id="fcc-total" data-copy="" title="Tap to copy" data-i18n-title="tool.copyOne">&mdash;</button>
+        <dl class="fcc-cards">
+          <div class="fcc-cell" id="fcc-fuel-cell" data-copy="" role="button" tabindex="0">
+            <dt data-i18n="tool.res.fuel">Fuel needed</dt><dd id="fcc-fuel">&mdash;</dd>
+          </div>
+          <div class="fcc-cell" id="fcc-perdist-cell" data-copy="" role="button" tabindex="0">
+            <dt id="fcc-perdist-label">Cost per km</dt><dd id="fcc-perdist">&mdash;</dd>
+          </div>
+          <div class="fcc-cell" id="fcc-perperson-cell" data-copy="" role="button" tabindex="0" hidden>
+            <dt data-i18n="tool.res.perPerson">Per passenger</dt><dd id="fcc-perperson">&mdash;</dd>
+          </div>
+        </dl>
+        <div class="fcc-copyrow">
+          <button type="button" class="btn" id="fcc-copy" data-copy="" data-i18n="tool.copy">Copy result</button>
+          <span class="fcc-status" id="fcc-status" hidden></span>
+        </div>
+        <p class="fcc-hint" data-i18n="tool.copyHint">Tip: tap any figure to copy just that number.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why bother working out trip fuel cost in advance</h2>
+    <p>A fuel cost calculator answers one very practical question before you leave: how much cash does this drive actually burn? That number changes how people plan. A weekend road trip might be worth taking the scenic route if the extra fuel is only a few dollars, or worth reconsidering if a rental car turns out to be much thirstier than your own. A carpool needs a fair number to split, not a guess. Someone comparing two cars before buying wants to know what a daily commute costs each of them over a year, not just which one has the "better" spec sheet number.</p>
+    <p>The tricky part is that fuel economy is reported in at least four different, mutually unhelpful units depending on where you live and what your dashboard shows, and gallons themselves come in two different sizes. This tool exists to remove that friction: pick your country, enter three numbers, and the unit conversion happens for you.</p>
+
+    <h2>How to use the three inputs</h2>
+    <ol>
+      <li><strong>Where are you driving</strong> — this sets the default distance unit, fuel-economy unit and currency to match local convention, so you're not stuck converting km to miles in your head before you even start.</li>
+      <li><strong>Trip distance</strong> — the length of the drive as you'd actually measure it (odometer, map route, or GPS trip). Enter it one-way; use the round-trip toggle below for the return leg instead of doubling it yourself.</li>
+      <li><strong>Fuel economy</strong> — read this straight off your car's spec sheet, window sticker, or trip computer, in whichever of km/L, L/100km, MPG (US) or MPG (UK) it's already shown. Don't convert it by hand; pick the matching unit from the dropdown instead.</li>
+      <li><strong>Fuel price</strong> — what you're actually paying at the pump, matched to a per-liter, per-US-gallon or per-UK-gallon price using the unit selector next to the field.</li>
+      <li><strong>Round trip and passengers</strong> (optional, under the details toggle) — tick round trip to double the distance automatically, and set a passenger count to see a fair per-person share of the total.</li>
+    </ol>
+
+    <h2>The math underneath</h2>
+    <div class="example">
+      <p><strong>fuel needed = distance ÷ fuel economy</strong> (converted to liters and kilometers internally, however you entered it)<br>
+      <strong>total cost = fuel needed × price per liter</strong> (or per gallon, matched to your price unit)<br>
+      <strong>cost per passenger = total cost ÷ number of passengers</strong></p>
+      <p>L/100km works backwards from km/L and MPG: it measures fuel used per fixed distance, so a <em>smaller</em> number means better economy — the opposite of km/L and MPG, where <em>bigger</em> is better. The calculator handles that inversion for you, but it's worth knowing which direction you're reading.</p>
+    </div>
+
+    <h3>Worked example 1 — a US road trip in MPG</h3>
+    <div class="example">
+      <p>600 miles, a sedan rated at 28 MPG (US), gas at $3.29 per US gallon, one-way, one driver.<br>
+      Fuel needed: 600 ÷ 28 ≈ <strong>21.43 gallons</strong>.<br>
+      Total cost: 21.43 × $3.29 ≈ <strong>$70.50</strong> — about 11.8¢ per mile.</p>
+    </div>
+
+    <h3>Worked example 2 — a European trip in L/100km, split three ways</h3>
+    <div class="example">
+      <p>425 km one-way (round trip ticked, so 850 km total), a hatchback rated at 6.5 L/100km, diesel at €1.75 per liter, 3 passengers.<br>
+      Fuel needed: 850 × 6.5 ÷ 100 = <strong>55.25 liters</strong>.<br>
+      Total cost: 55.25 × €1.75 ≈ <strong>€96.69</strong>.<br>
+      Per passenger: €96.69 ÷ 3 ≈ <strong>€32.23</strong> each.</p>
+    </div>
+
+    <h3>Worked example 3 — a daily commute in km/L</h3>
+    <div class="example">
+      <p>40 km one-way to work and back (round trip ticked → 80 km), a car rated at 13 km/L, gasoline at ₩1,650 per liter.<br>
+      Fuel needed: 80 ÷ 13 ≈ <strong>6.15 liters</strong> per day.<br>
+      Daily cost: 6.15 × ₩1,650 ≈ <strong>₩10,150</strong> — roughly ₩223,000 over a 22-workday month.</p>
+    </div>
+
+    <h2>Reference: rough real-world fuel economy by vehicle class</h2>
+    <p>Actual figures vary by model, engine, and driving style — use these only as a sanity check on whatever number you enter.</p>
+    <table>
+      <tr><th>Vehicle class</th><th>km/L</th><th>L/100km</th><th>MPG (US)</th></tr>
+      <tr><td>Hybrid compact</td><td>21</td><td>4.8</td><td>50</td></tr>
+      <tr><td>Compact car</td><td>16</td><td>6.3</td><td>38</td></tr>
+      <tr><td>Midsize sedan</td><td>13</td><td>7.7</td><td>31</td></tr>
+      <tr><td>Compact SUV</td><td>11.5</td><td>8.7</td><td>27</td></tr>
+      <tr><td>Full-size SUV</td><td>8.5</td><td>11.8</td><td>20</td></tr>
+      <tr><td>Pickup truck</td><td>7.5</td><td>13.3</td><td>18</td></tr>
+    </table>
+
+    <h2>Common mistakes worth avoiding</h2>
+    <ul>
+      <li><strong>Mixing up gallons.</strong> A US gallon is about 3.785 liters; a UK (imperial) gallon is about 4.546 liters — roughly 20% larger. Using the wrong one skews both the fuel-needed figure and the price you match it to.</li>
+      <li><strong>Reading L/100km the wrong way.</strong> A drop from 8.0 to 6.0 L/100km is a real improvement, even though the number went down — the opposite instinct from km/L or MPG.</li>
+      <li><strong>Forgetting the round-trip toggle.</strong> Entering the one-way distance but expecting a round-trip cost (or vice versa) is the single most common way this kind of estimate ends up half or double what actually gets spent.</li>
+      <li><strong>Using the sticker number instead of the observed one.</strong> Manufacturer combined ratings are measured under ideal conditions; city traffic, cold starts, air conditioning, hills, and a full trunk typically push real consumption 10–20% higher. If you know your car's actual average from past fill-ups, use that instead of the spec sheet.</li>
+      <li><strong>Mismatched price units.</strong> If your receipt shows a per-gallon price but the selector is set to per-liter (or the reverse), the total will be off by a factor of roughly 3.785 or 4.546 — always check the unit next to the price field matches how you actually pay.</li>
+    </ul>
+
+    <h2>What this calculator doesn't cover</h2>
+    <p>This is a fuel-cost estimate only — it doesn't add tolls, parking, wear-and-tear, or depreciation, and it assumes one constant fuel-economy figure for the whole trip, even though mountain roads, heavy traffic, and towing all use more fuel per kilometer than flat highway cruising. Fuel prices are also whatever you type in; there's no live price feed, so the result is only as current as the number you entered. Electric vehicles aren't covered either — their running cost is driven by electricity price and kWh per 100 km or miles per kWh, a different kind of math than liters and gallons.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.fueleconomy.gov/" target="_blank" rel="noopener">U.S. DOE / EPA fueleconomy.gov — official MPG ratings and fuel-cost estimates by vehicle</a></li>
+      <li><a href="https://www.eia.gov/petroleum/gasdiesel/" target="_blank" rel="noopener">U.S. Energy Information Administration — weekly retail gasoline and diesel price data</a></li>
+      <li><a href="https://www.epa.gov/greenvehicles" target="_blank" rel="noopener">U.S. EPA Green Vehicle Guide — how fuel economy is measured and what affects it</a></li>
+      <li><a href="https://www.gov.uk/government/collections/road-fuel-and-other-petroleum-product-price-statistics" target="_blank" rel="noopener">UK Government — road fuel price statistics for per-litre pricing</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/furnace-size-calc/"><span class="related-ico" aria-hidden="true">🔥</span><span class="related-name">Furnace Size Calculator</span></a><a class="related-item" href="https://tool-hub.me/generator-size-calc/"><span class="related-ico" aria-hidden="true">🔌</span><span class="related-name">Generator Size Calculator</span></a><a class="related-item" href="https://tool-hub.me/golf-handicap-calc/"><span class="related-ico" aria-hidden="true">⛳</span><span class="related-name">Golf Handicap Calculator</span></a><a class="related-item" href="https://tool-hub.me/gpa-calc/"><span class="related-ico" aria-hidden="true">🎓</span><span class="related-name">GPA Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details><summary data-i18n="faq.q1">How is fuel cost calculated?</summary><p data-i18n="faq.a1">This fuel cost calculator works out total cost = distance ÷ fuel economy × fuel price. Pick your country first and it sets the units and currency the way you actually buy fuel — miles, MPG and price per gallon in the US; kilometers, L/100km and price per liter across most of Europe; km/L in Korea, Japan, Brazil and India. Everything is normalized to liters and kilometers internally, so you only type three numbers: distance, fuel economy and price.</p></details>
+    <details><summary data-i18n="faq.q2">MPG vs L/100km vs km/L — which unit should I use?</summary><p data-i18n="faq.a2">Whichever your car shows — and your country already picked it for you. The US measures in miles per gallon (MPG), the UK uses imperial MPG, most of Europe and China use L/100km (liters per 100 km), and Korea, Japan, Brazil and India use km/L (kilometers per liter). This gas cost calculator converts all of them, so read the number off your dashboard and enter it as-is. Driving an imported car? Change the unit next to the field and the rest keeps working.</p></details>
+    <details><summary data-i18n="faq.q3">Why does the UK price fuel in liters but rate cars in MPG?</summary><p data-i18n="faq.a3">Britain sells fuel by the liter but still rates cars in miles per imperial gallon — so a UK trip needs both units at once, which is exactly what this calculator does when you pick the United Kingdom. Watch out for the two gallons: a US gallon is about 3.785 liters and a UK (imperial) gallon about 4.546 liters, roughly 20% larger. So 40 MPG (UK) is only about 33 MPG (US) — never compare the two figures directly.</p></details>
+    <details><summary data-i18n="faq.q4">How do I split fuel cost or add a round trip?</summary><p data-i18n="faq.a4">Open "Round trip and passengers" under the price. Tick round trip to count the drive there and back (distance × 2), and set the number of passengers with the − and + buttons — the calculator then shows the cost per passenger so everyone can chip in a fair share. Both are optional: leave them alone for a plain one-way estimate.</p></details>
+    <details><summary data-i18n="faq.q5">Are live fuel prices included?</summary><p data-i18n="faq.a5">No. You enter the current fuel price yourself, so the result is always up to date and never depends on an external server. Every calculation runs locally in your browser — nothing you type is uploaded, saved, or shared.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

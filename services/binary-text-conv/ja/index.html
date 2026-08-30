@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-DiivCdjZsrXhsRA833J4Pa0v0U819Sa57BVf0V1cbQ4=' 'sha256-HI1kva16lSZ5iJH51Wy4XoAecpai5wvOkXg6+/uOavc=' 'sha256-kFpBRe9rZhX/Ylkc85yhEFxtA3tnGWDrawngdWc37KQ='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>バイナリ変換ツール — テキストを2進数・16進数・10進数に変換</title>
+<meta name="description" content="テキストを2進数コード、16進数、または10進数のバイト値に変換し、また元のテキストに戻せます。ライブの双方向変換、柔軟な解析、すべてブラウザ内で完結します。">
+<meta name="keywords" content="binary translator, text to binary, binary to text, binary code translator, hello in binary, text to hex converter, binary to text converter, 이진수 변환기">
+<link rel="canonical" href="https://tool-hub.me/binary-text-conv/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/binary-text-conv/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/binary-text-conv/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/binary-text-conv/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/binary-text-conv/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/binary-text-conv/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/binary-text-conv/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/binary-text-conv/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/binary-text-conv/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/binary-text-conv/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/binary-text-conv/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/binary-text-conv/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/binary-text-conv/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/binary-text-conv/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/binary-text-conv/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/binary-text-conv/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="バイナリ変換ツール — テキストを2進数・16進数・10進数に変換">
+<meta property="og:description" content="テキストを2進数コード、16進数、または10進数のバイト値に変換し、また元のテキストに戻せます。ライブの双方向変換、柔軟な解析、すべてブラウザ内で完結します。">
+<meta property="og:url" content="https://tool-hub.me/binary-text-conv/ja/">
+<meta property="og:image" content="https://tool-hub.me/binary-text-conv/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Binary Translator",
+  "description": "Convert text to binary code, hexadecimal, or decimal byte values — and back again. Live two-way conversion with tolerant parsing, 100% in your browser.",
+  "url": "https://tool-hub.me/binary-text-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Binary Translator", "item": "https://tool-hub.me/binary-text-conv/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert text to binary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Type or paste any text into the Plain text box on the Binary tab. Each character is converted to its UTF-8 byte value, then written as an 8-digit binary number — for example the letter A (byte value 65) becomes 01000001. The Binary code box fills in live as you type, with one 8-bit group per byte separated by a space."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is \"hello\" written in binary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lowercase \"hello\" is five bytes in UTF-8 — h, e, l, l, o — which convert to 01101000 01100101 01101100 01101100 01101111. Type \"hello\" into the Plain text box and the Binary tab shows exactly this sequence, or click \"Try an example\" for a ready-made demo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can this tool convert binary back to text?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — paste a binary string into the Binary code box and it decodes to text instantly. Parsing is tolerant of formatting: spaces, tabs and line breaks between bytes are ignored, so \"01001000 01101001\", \"0100100001101001\", and binary copied from a multi-line list all work, as long as the digits form complete groups of 8 zeros and ones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between the Binary, Hex, and Decimal tabs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All three tabs represent the exact same underlying bytes, just written in a different number base: Binary shows each byte as 8 bits (0 and 1), Hex shows it as two base-16 digits (0-9, A-F), and Decimal shows it as a plain base-10 number from 0 to 255. Switch tabs any time and the code box updates to match your current text without losing anything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text sent to a server when I convert it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This binary translator runs entirely in your browser — your text and its binary, hex or decimal code never leave your device and nothing is uploaded or stored on a server. Only your last input and chosen tab are saved to this browser's local storage for convenience."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Binary Translator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#7c3aed" href="https://tool-hub.me/text-tools/">Text</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Binary Translator</span></nav>
+  <section class="hero">
+    <h1>Binary Translator</h1>
+    <p class="lede" data-i18n="hero.lede">Type text and watch it turn into binary code instantly, or paste binary, hex, or decimal byte values to decode them back to text — nothing ever leaves your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .mode-tabs{display:flex;gap:8px;margin-bottom:16px;}
+      #tool .mode-tab{flex:1;padding:10px 6px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font-weight:700;font-family:inherit;font-size:14px;cursor:pointer;}
+      #tool .btc-field-head{display:flex;justify-content:space-between;align-items:flex-end;gap:8px;margin:14px 0 6px;}
+      #tool .btc-field-head label{margin:0;font-weight:600;font-size:14px;}
+      #tool .btc-copy{padding:4px 12px;font-size:13px;font-weight:600;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--accent);cursor:pointer;font-family:inherit;margin:0;}
+      #tool textarea{width:100%;box-sizing:border-box;padding:12px 14px;font-size:16px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);resize:vertical;line-height:1.5;}
+      #tool textarea:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent;}
+      #tool .btc-mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;letter-spacing:.02em;word-break:break-all;}
+      #tool .btc-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+      #tool .btc-btn-secondary{background:var(--bg);color:var(--muted);border:1px solid var(--line);font-weight:600;margin-top:0;}
+      #tool .btc-count{margin:0 0 8px;font-size:13px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums;}
+      #tool #btc-hint{margin:0;color:var(--muted);font-size:13.5px;}
+      #tool #btc-error{margin:10px 0 0;font-weight:600;color:#b91c1c;font-size:14px;}
+      #tool #btc-feedback{margin:10px 0 0;font-weight:600;color:var(--accent);font-size:14px;}
+      @media (max-width:420px){ #tool .mode-tab{font-size:12.5px;padding:9px 4px;} }
+    </style>
+
+    <div id="btc-tabs" class="mode-tabs" role="tablist" aria-label="Conversion format">
+      <button type="button" class="mode-tab" data-mode="binary" role="tab" aria-selected="true" data-i18n="tool.tab.binary">Binary</button>
+      <button type="button" class="mode-tab" data-mode="hex" role="tab" aria-selected="false" data-i18n="tool.tab.hex">Hex</button>
+      <button type="button" class="mode-tab" data-mode="decimal" role="tab" aria-selected="false" data-i18n="tool.tab.decimal">Decimal</button>
+    </div>
+
+    <div class="btc-field-head">
+      <label for="btc-text" data-i18n="tool.text.label">Plain text</label>
+      <button type="button" class="btc-copy" data-copy="btc-text" data-i18n="tool.copy">Copy</button>
+    </div>
+    <textarea id="btc-text" rows="4" dir="auto" autocomplete="off" spellcheck="false" placeholder="Type or paste text to convert…" data-i18n-placeholder="tool.text.ph" autofocus></textarea>
+
+    <div class="btc-field-head">
+      <label id="btc-encoded-label" for="btc-encoded" data-i18n="tool.encoded.label.binary">Binary code</label>
+      <button type="button" class="btc-copy" data-copy="btc-encoded" data-i18n="tool.copy">Copy</button>
+    </div>
+    <textarea id="btc-encoded" class="btc-mono" rows="4" dir="ltr" autocomplete="off" spellcheck="false" placeholder="e.g. 01001000 01101001" data-i18n-placeholder="tool.encoded.ph.binary"></textarea>
+
+    <div class="btc-actions">
+      <button type="button" class="btn btc-btn-secondary" id="btc-clear" data-i18n="tool.clear">Clear</button>
+      <button type="button" class="btn btc-btn-secondary" id="btc-example" data-i18n="tool.example">Try an example</button>
+    </div>
+
+    <div class="result" id="result">
+      <p id="btc-count" class="btc-count">0 bytes (UTF-8)</p>
+      <p id="btc-hint" data-i18n="tool.hint">Type in either box — the other updates instantly. Spaces and line breaks in the code box are ignored.</p>
+      <p id="btc-error" role="alert" hidden></p>
+      <p id="btc-feedback" hidden></p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;background:color-mix(in srgb,var(--accent) 8%,var(--surface));padding:.1em .35em;border-radius:4px}
+      .guide-content table code{white-space:nowrap}
+    </style>
+
+    <h2>What binary code actually represents</h2>
+    <p>Every character you type is stored by a computer as one or more bytes — 8-bit numbers from 0 to 255. Binary code simply writes each of those bytes out in base 2, using only the digits 0 and 1, so a single byte always looks like an 8-digit string such as <code>01001000</code>. This binary translator does that conversion for you: it reads your text as UTF-8 bytes (the same encoding used on the web, in files, and in network protocols), then writes each byte as 8 bits, two hex digits, or a plain decimal number, and can reverse the process to rebuild the original text from any of the three.</p>
+
+    <h2>How to convert text to binary (and back) here</h2>
+    <ol>
+      <li><strong>Text → binary:</strong> type or paste into the <em>Plain text</em> box on the Binary tab. The <em>Binary code</em> box fills in live, one 8-digit group per byte, separated by a space.</li>
+      <li><strong>Binary → text:</strong> paste a binary string into the <em>Binary code</em> box instead, and the <em>Plain text</em> box decodes it instantly. Extra spaces, tabs, or line breaks between the 8-bit groups are ignored, so binary copied from anywhere — a textbook, a spreadsheet, a multi-line list — still works.</li>
+      <li><strong>Hex and Decimal tabs:</strong> switch tabs to see the same bytes as two-digit hexadecimal (<code>48 65 6c 6c 6f</code>) or plain decimal (<code>72 101 108 108 111</code>) instead of binary. Nothing is recalculated from scratch — it's the same underlying bytes shown in a different base.</li>
+    </ol>
+
+    <h2>Worked example: "hello" in binary</h2>
+    <p>The word "hello" is five characters and, in plain ASCII/UTF-8, exactly five bytes. Converting each letter separately:</p>
+    <table>
+      <thead><tr><th>Character</th><th>Decimal</th><th>Hex</th><th>Binary</th></tr></thead>
+      <tbody>
+        <tr><td><code>h</code></td><td>104</td><td>68</td><td>01101000</td></tr>
+        <tr><td><code>e</code></td><td>101</td><td>65</td><td>01100101</td></tr>
+        <tr><td><code>l</code></td><td>108</td><td>6c</td><td>01101100</td></tr>
+        <tr><td><code>l</code></td><td>108</td><td>6c</td><td>01101100</td></tr>
+        <tr><td><code>o</code></td><td>111</td><td>6f</td><td>01101111</td></tr>
+      </tbody>
+    </table>
+    <div class="example">
+      <strong>So "hello" in binary is:</strong><br>
+      <code>01101000 01100101 01101100 01101100 01101111</code>
+    </div>
+    <p>Type "hello" into the Plain text box (or click "Try an example") and the Binary tab shows exactly this sequence — five groups of 8 digits, one per letter.</p>
+
+    <h2>ASCII to binary quick-reference chart</h2>
+    <p>A handful of common characters, for quick lookup or to sanity-check your own conversions:</p>
+    <table>
+      <thead><tr><th>Character</th><th>Decimal</th><th>Hex</th><th>Binary</th></tr></thead>
+      <tbody>
+        <tr><td>Space</td><td>32</td><td>20</td><td>00100000</td></tr>
+        <tr><td><code>!</code></td><td>33</td><td>21</td><td>00100001</td></tr>
+        <tr><td><code>0</code></td><td>48</td><td>30</td><td>00110000</td></tr>
+        <tr><td><code>9</code></td><td>57</td><td>39</td><td>00111001</td></tr>
+        <tr><td><code>A</code></td><td>65</td><td>41</td><td>01000001</td></tr>
+        <tr><td><code>Z</code></td><td>90</td><td>5a</td><td>01011010</td></tr>
+        <tr><td><code>a</code></td><td>97</td><td>61</td><td>01100001</td></tr>
+        <tr><td><code>z</code></td><td>122</td><td>7a</td><td>01111010</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Binary vs. hex vs. decimal byte codes</h2>
+    <p>All three tabs describe the exact same bytes — only the number base changes:</p>
+    <ul>
+      <li><strong>Binary (base 2):</strong> every byte as exactly 8 digits of 0/1. Easiest to see the raw bits, but long to type or read (<code>01001000</code>).</li>
+      <li><strong>Hex (base 16):</strong> every byte as exactly 2 digits, 0-9 and A-F. Compact and the standard for hash values, color codes, and memory dumps (<code>48</code>).</li>
+      <li><strong>Decimal (base 10):</strong> every byte as a plain number from 0 to 255, the same values used in an ASCII table (<code>72</code>).</li>
+    </ul>
+    <div class="example">
+      <strong>Example — "Hi!" in all three:</strong><br>
+      Decimal: <code>72 105 33</code> &nbsp;|&nbsp; Hex: <code>48 69 21</code> &nbsp;|&nbsp; Binary: <code>01001000 01101001 00100001</code>
+    </div>
+
+    <h2>Multi-byte characters: emoji and non-English text</h2>
+    <p>Not every character fits in one byte. This translator converts text to UTF-8 first, so accented letters, Korean, Japanese, Chinese, Arabic, and emoji all round-trip correctly — a single visible character can produce two, three, or four bytes. For example, the Korean syllable "한" is 3 bytes (<code>ed 95 9c</code> in hex), and the emoji 😀 is 4 bytes (<code>f0 9f 98 80</code> in hex). The byte counter under the code box always shows how many bytes your text actually became, which is often more than the number of characters you typed.</p>
+
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Mixing up bits and bytes.</strong> A single letter is one <em>byte</em>, written as 8 <em>bits</em> — not 8 bytes. A word like "hello" is 5 bytes, i.e. 40 bits total, shown here as five 8-digit groups.</li>
+      <li><strong>Forgetting multi-byte characters.</strong> Non-ASCII text (accents, CJK, emoji) is longer in bytes than in visible characters — don't assume 1 character = 1 byte = 8 digits when converting international text.</li>
+      <li><strong>Losing the byte boundaries.</strong> If you strip every space from a binary string, this tool still parses it correctly by re-splitting it into 8-digit groups — but manual reading by eye gets error-prone past a few bytes, so let the converter re-add the spacing for you.</li>
+    </ul>
+
+    <h2>What this tool doesn't do</h2>
+    <p>This is a straightforward byte-level converter, not a general-purpose data compressor or a cryptographic tool — binary code by itself provides no security or size reduction, it's simply a different way of writing the same bytes. For pasted binary, hex, or decimal input that doesn't form complete, valid byte groups, the tool reports the problem instead of guessing at a result.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.unicode.org/standard/standard.html" target="_blank" rel="noopener">Unicode Consortium — the character standard behind UTF-8 encoding</a></li>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc3629" target="_blank" rel="noopener">RFC 3629 (IETF) — the formal definition of UTF-8 byte sequences</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64" target="_blank" rel="noopener">MDN Web Docs — how bytes, bits and text encodings relate on the web</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/case-converter/"><span class="related-ico" aria-hidden="true">🔠</span><span class="related-name">Case Converter</span></a><a class="related-item" href="https://tool-hub.me/char-count/"><span class="related-ico" aria-hidden="true">字</span><span class="related-name">Character Counter</span></a><a class="related-item" href="https://tool-hub.me/csv-dedupe/"><span class="related-ico" aria-hidden="true">🧹</span><span class="related-name">CSV Duplicate Remover</span></a><a class="related-item" href="https://tool-hub.me/csv-diff/"><span class="related-ico" aria-hidden="true">📑</span><span class="related-name">Csv Diff</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I convert text to binary?</summary>
+      <p data-i18n="faq.a1">Type or paste any text into the Plain text box on the Binary tab. Each character is converted to its UTF-8 byte value, then written as an 8-digit binary number — for example the letter A (byte value 65) becomes 01000001. The Binary code box fills in live as you type, with one 8-bit group per byte separated by a space.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How is "hello" written in binary?</summary>
+      <p data-i18n="faq.a2">Lowercase "hello" is five bytes in UTF-8 — h, e, l, l, o — which convert to 01101000 01100101 01101100 01101100 01101111. Type "hello" into the Plain text box and the Binary tab shows exactly this sequence, or click "Try an example" for a ready-made demo.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Can this tool convert binary back to text?</summary>
+      <p data-i18n="faq.a3">Yes — paste a binary string into the Binary code box and it decodes to text instantly. Parsing is tolerant of formatting: spaces, tabs and line breaks between bytes are ignored, so "01001000 01101001", "0100100001101001", and binary copied from a multi-line list all work, as long as the digits form complete groups of 8 zeros and ones.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What's the difference between the Binary, Hex, and Decimal tabs?</summary>
+      <p data-i18n="faq.a4">All three tabs represent the exact same underlying bytes, just written in a different number base: Binary shows each byte as 8 bits (0 and 1), Hex shows it as two base-16 digits (0-9, A-F), and Decimal shows it as a plain base-10 number from 0 to 255. Switch tabs any time and the code box updates to match your current text without losing anything.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my text sent to a server when I convert it?</summary>
+      <p data-i18n="faq.a5">No. This binary translator runs entirely in your browser — your text and its binary, hex or decimal code never leave your device and nothing is uploaded or stored on a server. Only your last input and chosen tab are saved to this browser's local storage for convenience.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

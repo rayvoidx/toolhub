@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-cY+QQ2Pr3DJgE/j8Y8wK5keZkXc5tW7eNk3Uticpd/M=' 'sha256-1UVqxx9vTXJXtGF9/cn8v0Sg0ksbQr4jkcHn5/gD1fw=' 'sha256-8nMJdz0jzLivd7K0KNkF1wa+0rMdqGXA+MFnW2Xp3IA='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de pintura — cuánta pintura necesito</title>
+<meta name="description" content="Calcula cuánta pintura necesitas para una habitación. Introduce largo, ancho y altura de pared, descuenta puertas y ventanas, elige las manos y obtén galones y litros.">
+<meta name="keywords" content="paint calculator, how much paint do i need, paint coverage calculator, wall paint estimator, room paint calculator, gallons of paint needed">
+<link rel="canonical" href="https://tool-hub.me/paint-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/paint-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/paint-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/paint-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/paint-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/paint-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/paint-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/paint-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/paint-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/paint-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/paint-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/paint-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/paint-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/paint-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/paint-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/paint-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de pintura — cuánta pintura necesito">
+<meta property="og:description" content="Calcula cuánta pintura necesitas para una habitación. Introduce largo, ancho y altura de pared, descuenta puertas y ventanas, elige las manos y obtén galones y litros.">
+<meta property="og:url" content="https://tool-hub.me/paint-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/paint-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ea580c">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Paint Calculator",
+  "description": "Find out how much paint you need for any room. Enter length, width and wall height, subtract doors and windows, pick your coats — get gallons and litres.",
+  "url": "https://tool-hub.me/paint-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Paint Calculator",
+      "item": "https://tool-hub.me/paint-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does primer count as one of the coats?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Primer is a separate product with its own coverage, so the coat count here is for your finish paint only. Size the primer by running the calculator again with one coat, since primer is almost always a single pass. You need it on bare drywall, on patched repairs, on glossy surfaces, and any time a light colour has to cover a dark one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does one gallon of paint cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A US gallon covers roughly 350 square feet in one coat on smooth, previously painted drywall — about 32.5 m², or 8.6 m² per litre. Tins often print 400 sq ft, which assumes perfect conditions and a roller sleeve that gives every drop back. This tool uses 350 because real rooms have cut-in edges, drips, and a tray you scrape but never quite empty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do flat and eggshell paints cover differently?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Barely. Sheen changes how light bounces off the finish far more than how far the paint stretches, and most flat, eggshell, satin and semi-gloss lines from one manufacturer quote coverage within about 25 sq ft per gallon of each other. What really moves your total is opacity: deep bases tinted to strong reds, yellows and oranges hide poorly and often need a third coat whatever the sheen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should I store the leftover paint?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wipe the rim clean, tap the lid down flat, and keep the can upright somewhere that never freezes — a cupboard beats a garage or a shed. Latex paint that has not frozen or skinned over stays usable for two to five years; stir it and check for lumps or a sour smell before it touches a wall. Write the room name and the date on the lid, and hold back a quart for touch-ups even if you get rid of the rest."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Paint Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Paint Calculator</span></nav>
+  <section class="hero">
+    <h1>Paint Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Room size in, gallons out — doors, windows and second coats already accounted for.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .field-row.three { grid-template-columns:repeat(3,1fr); }
+      #tool .check { display:flex; align-items:center; gap:8px; font-weight:600; font-size:14px; margin:16px 0 6px; cursor:pointer; }
+      #tool .check input { width:auto; margin:0; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:480px){ #tool .field-row, #tool .field-row.three { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Measurement units</label>
+        <select id="unit">
+          <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+          <option value="m" data-i18n="tool.unit.m">Metres</option>
+        </select>
+      </div>
+      <div>
+        <label for="coats" data-i18n="tool.coats.label">Number of coats</label>
+        <select id="coats">
+          <option value="1" data-i18n="tool.coats.1">1 coat</option>
+          <option value="2" selected data-i18n="tool.coats.2">2 coats (standard)</option>
+          <option value="3" data-i18n="tool.coats.3">3 coats</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row three">
+      <div>
+        <label for="room-length" data-i18n="tool.length.label">Room length</label>
+        <input type="number" id="room-length" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12">
+      </div>
+      <div>
+        <label for="room-width" data-i18n="tool.width.label">Room width</label>
+        <input type="number" id="room-width" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="10">
+      </div>
+      <div>
+        <label for="wall-height" data-i18n="tool.height.label">Wall height</label>
+        <input type="number" id="wall-height" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="8">
+      </div>
+    </div>
+
+    <div class="field-row three">
+      <div>
+        <label for="doors" data-i18n="tool.doors.label">Doors</label>
+        <input type="number" id="doors" inputmode="numeric" min="0" step="1" autocomplete="off" placeholder="1">
+      </div>
+      <div>
+        <label for="windows" data-i18n="tool.windows.label">Windows</label>
+        <input type="number" id="windows" inputmode="numeric" min="0" step="1" autocomplete="off" placeholder="2">
+      </div>
+      <div>
+        <label for="coverage" data-i18n="tool.coverage.label">Coverage per gallon (optional)</label>
+        <input type="number" id="coverage" inputmode="decimal" min="150" max="600" step="any" autocomplete="off" placeholder="350">
+      </div>
+    </div>
+    <p class="subtle" data-i18n="tool.coverage.hint">Square feet per gallon per coat, as printed on the tin. Leave blank for the default 350; allowed range 150–600.</p>
+
+    <label class="check" for="ceiling"><input type="checkbox" id="ceiling"><span data-i18n="tool.ceiling.label">Paint the ceiling too</span></label>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate paint</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.gallons">Paint needed</div>
+          <div class="rc-val" id="r-gallons">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.buy">What to buy</div><div class="rc-val" id="r-buy">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.liters">In litres</div><div class="rc-val" id="r-liters">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Paintable area (one coat)</div><div class="rc-val" id="r-area">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.total">Total surface, all coats</div><div class="rc-val" id="r-total">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.assume" style="margin-top:12px;">Assumes 350 ft² (32.5 m²) per gallon per coat, 21 ft² per door and 15 ft² per window. Bare, porous or heavily textured walls drink 10–20% more.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How the paint estimate is built</h2>
+    <p>Every paint calculation is the same four steps, and doing them by hand is where people go wrong. First you find the perimeter of the room and multiply it by the wall height: <strong>2 × (length + width) × height</strong>. That gives the gross wall area, including the parts you will never paint. Second you subtract the openings — this tool uses 21 square feet for a standard door (roughly 3 ft × 7 ft) and 15 square feet for an average window (about 3 ft × 5 ft). Third you add the ceiling if you are painting it, which is simply length × width. Fourth you multiply the whole thing by the number of coats and divide by the coverage rate of a gallon.</p>
+    <p>The coverage rate is where estimates diverge. Tins commonly claim 400 square feet per gallon. That figure comes from a laboratory draw-down on sealed, smooth stock — not from a real bedroom with corners to cut in, a tray you cannot scrape clean, and a roller sleeve holding a quarter pint hostage. This calculator uses 350 square feet per gallon per coat (32.5 m², or 8.6 m² per litre), which is what most professional painters plan around.</p>
+
+    <h3>Worked example: a 12 × 10 ft bedroom</h3>
+    <p>Take a typical US bedroom, 12 feet by 10 feet, with 8-foot ceilings, one door and two windows, painted in two coats with the ceiling left white.</p>
+    <p>The perimeter is 2 × (12 + 10) = 44 feet. Multiplied by the 8-foot wall height, that is <strong>352 square feet</strong> of gross wall. Subtract one door at 21 and two windows at 15 each — 51 square feet of openings — and you are left with <strong>301 square feet</strong> of paintable wall. Two coats means covering 602 square feet of surface, and at 350 square feet per gallon that is <strong>1.7 gallons</strong>, or about 6.5 litres. Since paint is sold in gallons and quarts, the practical answer is one gallon plus three quarts. Most people in this situation buy two gallons and accept a little left over for touch-ups, which is a perfectly reasonable call.</p>
+
+    <h3>Worked example: adding the ceiling</h3>
+    <p>Same room, but now the ceiling gets two coats as well. The ceiling adds 12 × 10 = 120 square feet, bringing the paintable area to 421 square feet and the two-coat total to 842. Divided by 350 that is <strong>2.4 gallons</strong> — nine litres. Note that this assumes the same paint everywhere. In practice most people use a dedicated flat ceiling paint, so run the tool twice: once with the ceiling box unticked for your wall colour, once with only the ceiling in mind. A 120-square-foot ceiling at two coats needs about 0.7 gallons, so a single gallon of ceiling paint does the job.</p>
+
+    <h3>Why two coats is the default</h3>
+    <p>One coat only works when you are repainting the same colour on a sound, previously painted wall, and even then the finish tends to look patchy in raking light. Two coats is the standard because the first coat is doing structural work — filling the surface, evening out absorbency — while the second delivers the colour and the uniform sheen. Choose three coats when you are going from a dark colour to a light one without primer, or when you are using a saturated red, orange or yellow. Those pigments are transparent by nature and notoriously need an extra pass.</p>
+
+    <h3>Dark to light, and when primer earns its keep</h3>
+    <p>Covering a deep charcoal wall with a pale grey is the classic case for primer rather than extra coats. A tinted grey primer costs less than finish paint, blocks the old colour in a single pass, and lets you get away with two topcoats instead of four. Primer is also non-negotiable on bare drywall, on patched or skim-coated repairs, over glossy or oil-based surfaces, and over stains such as water damage or smoke. Do not count primer as a coat in this calculator — estimate it separately using a one-coat run.</p>
+
+    <h3>Texture, porosity and the fudge factor</h3>
+    <p>Coverage rates assume a smooth, sealed surface. Anything rougher increases the actual surface area you are painting, sometimes dramatically. Add roughly 10% for lightly textured or orange-peel walls, 15 to 20% for knockdown texture, popcorn ceilings, or new drywall that has only been primed once, and up to 50% for masonry, stucco and rough brick where paint has to bridge every pit. Sprayers also use more material than rollers because of overspray — plan on 20 to 30% extra if you are spraying an interior.</p>
+
+    <h2>What this calculator does not account for</h2>
+    <p>It treats the room as a plain rectangular box. Bay windows, sloped or vaulted ceilings, stairwells, closets and alcoves all change the geometry, and the honest fix is to measure those surfaces separately and add them. Trim, skirting boards, doors and window frames are not included either — they take a different product entirely, and a gallon of trim enamel typically handles the woodwork of two or three average rooms. Finally, the door and window deductions are averages: if your room has a wall of glass or a pair of sliding doors, measure the openings yourself rather than counting them.</p>
+    <p>When you are on the fence between two quantities, buy the larger one. Paint is cheap relative to a second trip, and returning to the shop for a half-gallon mid-project risks a batch with a slightly different tint. Have the store record your colour formula on the receipt so a follow-up can be matched exactly.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.epa.gov/lead" target="_blank" rel="noopener">US EPA — lead-based paint rules for repainting and renovating pre-1978 homes</a></li>
+      <li><a href="https://www.epa.gov/indoor-air-quality-iaq" target="_blank" rel="noopener">US EPA — indoor air quality guidance on VOCs released by paints and solvents</a></li>
+      <li><a href="https://www.cdc.gov" target="_blank" rel="noopener">CDC — health guidance on lead exposure from old paint during surface prep</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/party-drink-calc/"><span class="related-ico" aria-hidden="true">🥂</span><span class="related-name">Party Drink Calculator</span></a><a class="related-item" href="https://tool-hub.me/paver-calc/"><span class="related-ico" aria-hidden="true">🧱</span><span class="related-name">Paver Calculator</span></a><a class="related-item" href="https://tool-hub.me/plant-spacing-calc/"><span class="related-ico" aria-hidden="true">🌷</span><span class="related-name">Plant Spacing Calculator</span></a><a class="related-item" href="https://tool-hub.me/pool-volume-calc/"><span class="related-ico" aria-hidden="true">🏊</span><span class="related-name">Pool Volume Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Does primer count as one of the coats?</summary><p data-i18n="faq.a1">No. Primer is a separate product with its own coverage, so the coat count here is for your finish paint only. Size the primer by running the calculator again with one coat, since primer is almost always a single pass. You need it on bare drywall, on patched repairs, on glossy surfaces, and any time a light colour has to cover a dark one.</p></details>
+    <details><summary data-i18n="faq.q2">How much does one gallon of paint cover?</summary><p data-i18n="faq.a2">A US gallon covers roughly 350 square feet in one coat on smooth, previously painted drywall — about 32.5 m², or 8.6 m² per litre. Tins often print 400 sq ft, which assumes perfect conditions and a roller sleeve that gives every drop back. This tool uses 350 because real rooms have cut-in edges, drips, and a tray you scrape but never quite empty.</p></details>
+    <details><summary data-i18n="faq.q3">Do flat and eggshell paints cover differently?</summary><p data-i18n="faq.a3">Barely. Sheen changes how light bounces off the finish far more than how far the paint stretches, and most flat, eggshell, satin and semi-gloss lines from one manufacturer quote coverage within about 25 sq ft per gallon of each other. What really moves your total is opacity: deep bases tinted to strong reds, yellows and oranges hide poorly and often need a third coat whatever the sheen.</p></details>
+    <details><summary data-i18n="faq.q4">How should I store the leftover paint?</summary><p data-i18n="faq.a4">Wipe the rim clean, tap the lid down flat, and keep the can upright somewhere that never freezes — a cupboard beats a garage or a shed. Latex paint that has not frozen or skinned over stays usable for two to five years; stir it and check for lumps or a sour smell before it touches a wall. Write the room name and the date on the lid, and hold back a quart for touch-ups even if you get rid of the rest.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

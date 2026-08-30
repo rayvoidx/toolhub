@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-oA8QWNJoJqgDSy6YoCCMdwj14em7T3I0BTeGFtzJGsM=' 'sha256-OoR5HrzT1xIH8BRxPxNvL2DCIGgpphx9G4yw0VwSFPw=' 'sha256-P3Xvr1kNh2p5b5aV8+93gPIInAhxg13UcnQf+5R86n0='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de subredes IP — CIDR, máscara y rango de hosts al instante</title>
+<meta name="description" content="Introduce una dirección IPv4 y un prefijo CIDR o máscara de subred para obtener al instante la dirección de red, la de difusión, el rango de hosts utilizables, la máscara wildcard y un desglose binario, todo en tu navegador.">
+<meta name="keywords" content="subnet calculator, ip subnet calculator, cidr calculator, subnet mask calculator, ipv4 calculator, wildcard mask calculator, 서브넷 계산기">
+<link rel="canonical" href="https://tool-hub.me/subnet-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/subnet-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/subnet-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/subnet-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/subnet-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/subnet-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/subnet-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/subnet-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/subnet-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/subnet-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/subnet-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/subnet-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/subnet-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/subnet-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/subnet-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/subnet-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de subredes IP — CIDR, máscara y rango de hosts al instante">
+<meta property="og:description" content="Introduce una dirección IPv4 y un prefijo CIDR o máscara de subred para obtener al instante la dirección de red, la de difusión, el rango de hosts utilizables, la máscara wildcard y un desglose binario, todo en tu navegador.">
+<meta property="og:url" content="https://tool-hub.me/subnet-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/subnet-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "IP Subnet Calculator",
+  "description": "Enter an IPv4 address and CIDR prefix or netmask to get the network address, broadcast address, usable host range, wildcard mask, and a binary breakdown — instantly, free, computed in your browser.",
+  "url": "https://tool-hub.me/subnet-calc/",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "IP Subnet Calculator", "item": "https://tool-hub.me/subnet-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a CIDR prefix and how does it relate to a subnet mask?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A CIDR prefix like /24 counts how many leading bits of the 32-bit IPv4 address are reserved for the network portion — the rest identify hosts within that network. /24 means the first 24 bits are network bits, which converts to the dotted netmask 255.255.255.0. A smaller prefix like /16 covers more addresses (a bigger network, fewer host bits reserved for the network), while a larger prefix like /28 covers fewer addresses. This subnet calculator accepts either form — type 24 or 255.255.255.0 — and converts between them automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate the number of usable hosts in a subnet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The formula is 2 raised to the number of host bits, minus 2: usable hosts = 2^(32 − prefix) − 2. The minus 2 removes the network address (all host bits 0) and the broadcast address (all host bits 1), which can't be assigned to a device. For example, a /26 subnet has 6 host bits, so 2^6 − 2 = 62 usable addresses. A /24 has 8 host bits, giving 2^8 − 2 = 254 usable addresses. This calculator applies the formula automatically and also handles the /31 and /32 exceptions described below."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do /31 and /32 subnets have no broadcast address?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 2-address-minimum rule assumes a network needs a network address and a broadcast address, leaving the rest for hosts. RFC 3021 makes an exception for /31: since a point-to-point link (like a router-to-router connection) only ever has two endpoints, both addresses are treated as usable and neither is reserved. A /32 is a route to a single specific host — commonly used for loopback interfaces or host routes — so the one address is simultaneously its own network, broadcast, and usable address. This calculator detects both cases and adjusts the usable host count and address range accordingly instead of showing a network/broadcast split that wouldn't apply."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert a subnet mask like 255.255.255.0 into a CIDR prefix?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Count the number of 1 bits in the mask's binary form, from the left. 255.255.255.0 in binary is 11111111.11111111.11111111.00000000 — 24 ones followed by 8 zeros — so it's a /24. A valid netmask always has its 1 bits contiguous starting from the left with no gaps; if you type a mask that doesn't follow that pattern, this calculator flags it as invalid rather than guessing. Type the dotted netmask directly into the prefix field and the CIDR number appears automatically alongside the rest of the subnet breakdown."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my IP address sent to a server when I use this calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculation — parsing the address, deriving the netmask, computing the network, broadcast and usable range — runs locally in your browser's JavaScript. Nothing you type is uploaded, logged, or stored anywhere except your own browser's localStorage (used only to remember your last input for next time). You can look up private or internal network ranges with this subnet calculator without exposing them to the network."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 2026-08-02 모바일 360px 오버플로 수리 (qa-deep) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>IP Subnet Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">IP Subnet Calculator</span></nav>
+  <section class="hero">
+    <h1>IP Subnet Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">What's my subnet? Enter an IPv4 address and CIDR prefix (or netmask) to see the network, broadcast, and usable host range instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="IP subnet calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .sc-hint { margin: 6px 0 0; font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+      #tool input#sc-ip, #tool input#sc-prefix {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 16px; letter-spacing: .02em;
+      }
+      #tool .sc-error {
+        margin-top: 14px; padding: 12px 14px; border-radius: 10px; font-size: 14.5px; line-height: 1.5;
+        background: color-mix(in srgb, #dc2626 10%, var(--surface)); border: 1px solid color-mix(in srgb, #dc2626 30%, var(--line)); color: #dc2626;
+        overflow-wrap: anywhere;
+      }
+      #tool .sc-empty { margin: 14px 0 0; padding: 12px 14px; color: var(--muted); font-size: 14px; border: 1px dashed var(--line); border-radius: 10px; }
+      #tool .sc-note {
+        margin: 0 0 16px; padding: 12px 14px; border-radius: 10px; font-size: 13.5px; line-height: 1.5;
+        background: color-mix(in srgb, var(--accent) 8%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--line)); color: var(--ink);
+      }
+      #tool .sc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+      #tool .res-card {
+        text-align: left; display: flex; flex-direction: column; gap: 4px; padding: 12px 14px;
+        border: 1px solid var(--line); border-radius: 10px; background: var(--surface); cursor: pointer;
+        font-family: inherit; color: var(--ink); min-width: 0;
+      }
+      #tool .res-card:hover { border-color: var(--accent); }
+      #tool .rc-label { font-size: 12.5px; color: var(--muted); font-weight: 600; }
+      #tool .rc-value {
+        font-size: 17px; font-weight: 800; color: var(--accent-strong); font-variant-numeric: tabular-nums;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere; line-height: 1.3;
+      }
+      #tool .sc-copy-hint { margin: 12px 0 0; font-size: 12.5px; color: var(--muted); text-align: center; }
+      #tool .sc-section-label { font-weight: 700; font-size: 14px; margin: 22px 0 10px; color: var(--ink); }
+      #tool .sc-binary { margin-top: 4px; }
+      #tool .sc-bin-row { display: flex; align-items: baseline; gap: 10px; margin: 8px 0; flex-wrap: wrap; }
+      #tool .sc-bin-tag { flex: 0 0 96px; font-size: 12.5px; font-weight: 650; color: var(--muted); }
+      #tool .sc-bin-bits {
+        display: flex; align-items: center; flex-wrap: wrap; gap: 0;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14px; line-height: 1.6;
+      }
+      #tool .sc-bin-oct { display: inline-flex; }
+      #tool .sc-bit { display: inline-block; width: 12px; text-align: center; }
+      #tool .sc-bit-net { color: #fff; background: var(--accent); font-weight: 700; border-radius: 2px; }
+      #tool .sc-bit-host { color: var(--muted); }
+      #tool .sc-bin-dot { display: inline-block; width: 8px; text-align: center; color: var(--muted); }
+      #tool .sc-bin-legend { display: flex; gap: 16px; margin-top: 6px; font-size: 12px; color: var(--muted); }
+      #tool .sc-bin-legend span { display: inline-flex; align-items: center; gap: 5px; }
+      #tool .sc-swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; }
+      #tool .sc-swatch-net { background: var(--accent); }
+      #tool .sc-swatch-host { background: var(--muted); }
+      #tool #sc-table-wrap { margin-top: 22px; }
+      #tool #sc-table-wrap summary { font-weight: 650; font-size: 14px; color: var(--muted); cursor: pointer; }
+      #tool .sc-table { width: 100%; border-collapse: collapse; margin: 10px 0 0; font-size: 13px; }
+      #tool .sc-table th, #tool .sc-table td {
+        text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line);
+        font-variant-numeric: tabular-nums; white-space: nowrap;
+      }
+      #tool .sc-table th { color: var(--muted); font-weight: 650; }
+      @media (max-width: 420px) {
+        #tool .sc-grid { grid-template-columns: 1fr; }
+        #tool .sc-bin-tag { flex-basis: 100%; }
+        #tool .sc-bit { width: 9px; font-size: 12px; }
+        #tool .sc-table { font-size: 11.5px; }
+        #tool .sc-table th, #tool .sc-table td { padding: 5px 4px; }
+      }
+    </style>
+
+    <div class="input-group">
+      <label for="sc-ip" data-i18n="tool.ip.label">IPv4 address</label>
+      <input id="sc-ip" type="text" inputmode="decimal" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+        placeholder="192.168.1.10" data-i18n-placeholder="tool.ip.ph" aria-label="IPv4 address" data-i18n-aria-label="tool.ip.label" autofocus>
+    </div>
+    <div class="input-group">
+      <label for="sc-prefix" data-i18n="tool.prefix.label">CIDR prefix or netmask</label>
+      <input id="sc-prefix" type="text" inputmode="decimal" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+        value="24" placeholder="24 or 255.255.255.0" data-i18n-placeholder="tool.prefix.ph" aria-label="CIDR prefix or netmask" data-i18n-aria-label="tool.prefix.label">
+      <p class="sc-hint" data-i18n="tool.prefix.hint">Enter a prefix length from 0–32, or a dotted netmask like 255.255.255.0</p>
+    </div>
+
+    <p id="sc-err" class="sc-error" role="alert" hidden></p>
+    <p id="sc-empty" class="sc-empty" data-i18n="tool.placeholder">Enter an IPv4 address and prefix to see the subnet breakdown</p>
+
+    <div id="sc-result" hidden aria-live="polite">
+      <p id="sc-note" class="sc-note" hidden></p>
+
+      <div class="sc-grid" id="sc-grid">
+        <button type="button" class="res-card" data-copy="cidr"><span class="rc-label" data-i18n="tool.res.cidr">CIDR notation</span><span class="rc-value">—</span></button>
+        <button type="button" class="res-card" data-copy="netmask"><span class="rc-label" data-i18n="tool.res.netmask">Netmask</span><span class="rc-value">—</span></button>
+        <button type="button" class="res-card" data-copy="network"><span class="rc-label" data-i18n="tool.res.network">Network address</span><span class="rc-value">—</span></button>
+        <button type="button" class="res-card" data-copy="broadcast"><span class="rc-label" data-i18n="tool.res.broadcast">Broadcast address</span><span class="rc-value">—</span></button>
+        <button type="button" class="res-card" data-copy="first"><span class="rc-label" data-i18n="tool.res.first">First usable host</span><span class="rc-value">—</span></button>
+        <button type="button" class="res-card" data-copy="last"><span class="rc-label" data-i18n="tool.res.last">Last usable host</span><span class="rc-value">—</span></button>
+        <button type="button" class="res-card" data-copy="usable"><span class="rc-label" data-i18n="tool.res.usable">Usable hosts</span><span class="rc-value">—</span></button>
+        <button type="button" class="res-card" data-copy="wildcard"><span class="rc-label" data-i18n="tool.res.wildcard">Wildcard mask</span><span class="rc-value">—</span></button>
+        <button type="button" class="res-card" data-copy="total"><span class="rc-label" data-i18n="tool.res.total">Total addresses</span><span class="rc-value">—</span></button>
+        <button type="button" class="res-card" data-copy="type"><span class="rc-label" data-i18n="tool.res.type">Address type</span><span class="rc-value">—</span></button>
+      </div>
+      <p id="sc-copy-hint" class="sc-copy-hint" data-i18n="tool.copyHint" hidden>Tap a card to copy the value</p>
+
+      <div class="sc-binary">
+        <p class="sc-section-label" data-i18n="tool.binary.heading">Binary view</p>
+        <div class="sc-bin-row">
+          <span class="sc-bin-tag" data-i18n="tool.binary.ipRow">IP address</span>
+          <div class="sc-bin-bits" id="sc-bin-ip"></div>
+        </div>
+        <div class="sc-bin-row">
+          <span class="sc-bin-tag" data-i18n="tool.binary.maskRow">Subnet mask</span>
+          <div class="sc-bin-bits" id="sc-bin-mask"></div>
+        </div>
+        <div class="sc-bin-legend">
+          <span><i class="sc-swatch sc-swatch-net" aria-hidden="true"></i><span data-i18n="tool.binary.network">Network bits</span></span>
+          <span><i class="sc-swatch sc-swatch-host" aria-hidden="true"></i><span data-i18n="tool.binary.host">Host bits</span></span>
+        </div>
+      </div>
+    </div>
+
+    <details id="sc-table-wrap">
+      <summary data-i18n="tool.table.summary">CIDR quick-reference table (/0 – /32)</summary>
+      <div style="overflow-x:auto;">
+        <table class="sc-table">
+          <thead>
+            <tr>
+              <th data-i18n="tool.table.prefix">Prefix</th>
+              <th data-i18n="tool.table.netmask">Netmask</th>
+              <th data-i18n="tool.table.wildcard">Wildcard</th>
+              <th data-i18n="tool.table.total">Total addresses</th>
+              <th data-i18n="tool.table.usable">Usable hosts</th>
+            </tr>
+          </thead>
+          <tbody id="sc-table-body"></tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:color-mix(in srgb,var(--accent) 8%,var(--surface));padding:1px 5px;border-radius:4px;font-size:.92em}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>How IPv4 subnetting actually works</h2>
+    <p>Every IPv4 address is 32 bits, usually written as four decimal octets separated by dots, like <code>192.168.1.10</code>. A CIDR prefix — the <code>/24</code> in <code>192.168.1.10/24</code> — splits those 32 bits into two parts: a network portion (shared by every device on the subnet) and a host portion (unique to each device). This subnet calculator takes an address and a prefix or netmask, does the bitwise math instantly, and shows you exactly where that split lands.</p>
+
+    <h2>What each result means</h2>
+    <ul>
+      <li><strong>Network address</strong> — the address with every host bit set to 0. It identifies the subnet itself and is never assigned to a device.</li>
+      <li><strong>Broadcast address</strong> — the address with every host bit set to 1. Traffic sent here is meant for every host on the subnet, so it's also never assigned to a single device.</li>
+      <li><strong>First / last usable host</strong> — the network address plus one, through the broadcast address minus one. This is the actual range you can hand out to routers, servers, or workstations.</li>
+      <li><strong>Usable hosts</strong> — how many addresses fall in that assignable range: <code>2^(32 − prefix) − 2</code> for ordinary subnets.</li>
+      <li><strong>Netmask</strong> and <strong>wildcard mask</strong> — the same boundary expressed as a dotted-decimal mask (netmask) or its bitwise inverse (wildcard mask, used by tools like Cisco access lists).</li>
+    </ul>
+
+    <div class="example">
+      <p><strong>Example — a typical office subnet.</strong> <code>192.168.1.10/24</code> has a 24-bit network portion and an 8-bit host portion. Network address <strong>192.168.1.0</strong>, broadcast <strong>192.168.1.255</strong>, usable range <strong>192.168.1.1 – 192.168.1.254</strong> (254 hosts), netmask <strong>255.255.255.0</strong>.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example — a smaller subnet for a VLAN.</strong> <code>192.168.1.10/26</code> only reserves the last 6 bits for hosts: network <strong>192.168.1.0</strong>, broadcast <strong>192.168.1.63</strong>, usable range <strong>192.168.1.1 – 192.168.1.62</strong> (62 hosts) — 4 subnets of this size fit inside the original /24.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example — a router link.</strong> <code>10.0.0.0/31</code> is a 2-address point-to-point link (RFC 3021): both <strong>10.0.0.0</strong> and <strong>10.0.0.1</strong> are usable host addresses, and neither is a network or broadcast address — this is the standard way to number a link between two routers without wasting a /30's worth of addresses.</p>
+    </div>
+
+    <h2>CIDR prefix, netmask, and wildcard mask side by side</h2>
+    <p>A handful of prefixes come up constantly when subnetting a network — this is a shorter version of the full /8–/32 table above the fold:</p>
+    <table>
+      <thead><tr><th>CIDR</th><th>Netmask</th><th>Wildcard</th><th>Usable hosts</th></tr></thead>
+      <tbody>
+        <tr><td>/8</td><td>255.0.0.0</td><td>0.255.255.255</td><td>16,777,214</td></tr>
+        <tr><td>/16</td><td>255.255.0.0</td><td>0.0.255.255</td><td>65,534</td></tr>
+        <tr><td>/24</td><td>255.255.255.0</td><td>0.0.0.255</td><td>254</td></tr>
+        <tr><td>/27</td><td>255.255.255.224</td><td>0.0.0.31</td><td>30</td></tr>
+        <tr><td>/30</td><td>255.255.255.252</td><td>0.0.0.3</td><td>2</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Why /31 and /32 don't follow the usual formula</h2>
+    <p>The standard "usable = total − 2" rule assumes a network needs one address reserved for the network itself and one for broadcast. Two RFCs carve out exceptions that this calculator handles automatically:</p>
+    <ul>
+      <li><strong>/31 (RFC 3021):</strong> a point-to-point link only ever has two endpoints, so both addresses are usable and neither is reserved — this is the modern standard for router-to-router and other WAN links, replacing the older habit of burning a full /30 on a 2-host link.</li>
+      <li><strong>/32:</strong> a route to exactly one host, common for loopback interfaces and static host routes. The single address is simultaneously its own network, its own broadcast, and its only usable host.</li>
+    </ul>
+
+    <h2>Common subnetting mistakes</h2>
+    <ul>
+      <li><strong>Confusing the network address with a usable host:</strong> <code>192.168.1.0/24</code>'s network address (<code>192.168.1.0</code>) can't be assigned to a device — the first usable host is <code>192.168.1.1</code>.</li>
+      <li><strong>Assuming every mask is a valid netmask:</strong> a netmask's 1 bits must be contiguous from the left (like <code>255.255.255.192</code>); something like <code>255.255.255.64</code> is not a valid netmask, and this calculator flags it rather than guessing what you meant.</li>
+      <li><strong>Forgetting the /31 and /32 exceptions:</strong> applying the "minus 2" formula to a /31 or /32 undercounts the usable addresses — see the section above for why those two prefixes behave differently.</li>
+    </ul>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc4632" target="_blank" rel="noopener">RFC 4632 (RFC Editor) — Classless Inter-Domain Routing (CIDR) address assignment and aggregation</a></li>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc1918" target="_blank" rel="noopener">RFC 1918 (RFC Editor) — address allocation for private internets (10/8, 172.16/12, 192.168/16)</a></li>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc3021" target="_blank" rel="noopener">RFC 3021 (RFC Editor) — using /31 prefixes on point-to-point links</a></li>
+      <li><a href="https://www.nist.gov/publications" target="_blank" rel="noopener">NIST Publications — network and IP addressing security guidance</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/unix-timestamp-conv/"><span class="related-ico" aria-hidden="true">🕐</span><span class="related-name">Unix Timestamp Converter</span></a><a class="related-item" href="https://tool-hub.me/url-encoder/"><span class="related-ico" aria-hidden="true">🔗</span><span class="related-name">URL Encoder / Decoder</span></a><a class="related-item" href="https://tool-hub.me/url-parser/"><span class="related-ico" aria-hidden="true">🔗</span><span class="related-name">URL Parser</span></a><a class="related-item" href="https://tool-hub.me/utm-builder/"><span class="related-ico" aria-hidden="true">🔗</span><span class="related-name">Bulk UTM Builder</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is a CIDR prefix and how does it relate to a subnet mask?</summary>
+      <p data-i18n="faq.a1">A CIDR prefix like /24 counts how many leading bits of the 32-bit IPv4 address are reserved for the network portion — the rest identify hosts within that network. /24 means the first 24 bits are network bits, which converts to the dotted netmask 255.255.255.0. A smaller prefix like /16 covers more addresses (a bigger network, fewer host bits reserved for the network), while a larger prefix like /28 covers fewer addresses. This subnet calculator accepts either form — type 24 or 255.255.255.0 — and converts between them automatically.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How do I calculate the number of usable hosts in a subnet?</summary>
+      <p data-i18n="faq.a2">The formula is 2 raised to the number of host bits, minus 2: usable hosts = 2^(32 − prefix) − 2. The minus 2 removes the network address (all host bits 0) and the broadcast address (all host bits 1), which can't be assigned to a device. For example, a /26 subnet has 6 host bits, so 2^6 − 2 = 62 usable addresses. A /24 has 8 host bits, giving 2^8 − 2 = 254 usable addresses. This calculator applies the formula automatically and also handles the /31 and /32 exceptions described below.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why do /31 and /32 subnets have no broadcast address?</summary>
+      <p data-i18n="faq.a3">The 2-address-minimum rule assumes a network needs a network address and a broadcast address, leaving the rest for hosts. RFC 3021 makes an exception for /31: since a point-to-point link (like a router-to-router connection) only ever has two endpoints, both addresses are treated as usable and neither is reserved. A /32 is a route to a single specific host — commonly used for loopback interfaces or host routes — so the one address is simultaneously its own network, broadcast, and usable address. This calculator detects both cases and adjusts the usable host count and address range accordingly instead of showing a network/broadcast split that wouldn't apply.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How do I convert a subnet mask like 255.255.255.0 into a CIDR prefix?</summary>
+      <p data-i18n="faq.a4">Count the number of 1 bits in the mask's binary form, from the left. 255.255.255.0 in binary is 11111111.11111111.11111111.00000000 — 24 ones followed by 8 zeros — so it's a /24. A valid netmask always has its 1 bits contiguous starting from the left with no gaps; if you type a mask that doesn't follow that pattern, this calculator flags it as invalid rather than guessing. Type the dotted netmask directly into the prefix field and the CIDR number appears automatically alongside the rest of the subnet breakdown.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my IP address sent to a server when I use this calculator?</summary>
+      <p data-i18n="faq.a5">No. Every calculation — parsing the address, deriving the netmask, computing the network, broadcast and usable range — runs locally in your browser's JavaScript. Nothing you type is uploaded, logged, or stored anywhere except your own browser's localStorage (used only to remember your last input for next time). You can look up private or internal network ranges with this subnet calculator without exposing them to the network.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-/8nH5G7xX+LCJ2JeCuJyEPkGCjrmvVGWP/bHiHUGTys=' 'sha256-V3XbP1DqeEJ5JifFsFs27f40i0m7ZFKtA1XyX5Obr3g=' 'sha256-hjH+f1/WV693pTVk2ppwT70Lioas7M657+Lvek5riH4='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de A1C — A1C a glucosa media estimada</title>
+<meta name="description" content="Convierte la A1C en glucosa media estimada (eAG) o la eAG en A1C con la fórmula de la ADA. Verás tu categoría ADA y una tabla de A1C del 5% al 12%.">
+<meta name="keywords" content="a1c calculator, a1c to blood sugar, estimated average glucose, a1c chart, hba1c conversion, a1c to eag">
+<link rel="canonical" href="https://tool-hub.me/a1c-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/a1c-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/a1c-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/a1c-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/a1c-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/a1c-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/a1c-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/a1c-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/a1c-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/a1c-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/a1c-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/a1c-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/a1c-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/a1c-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/a1c-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/a1c-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de A1C — A1C a glucosa media estimada">
+<meta property="og:description" content="Convierte la A1C en glucosa media estimada (eAG) o la eAG en A1C con la fórmula de la ADA. Verás tu categoría ADA y una tabla de A1C del 5% al 12%.">
+<meta property="og:url" content="https://tool-hub.me/a1c-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/a1c-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#be185d">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "A1C Calculator",
+  "description": "Convert A1C to estimated average glucose, or eAG back to A1C, with the official ADA formula. See your ADA category and an A1C chart from 5% to 12%.",
+  "url": "https://tool-hub.me/a1c-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "A1C Calculator",
+      "item": "https://tool-hub.me/a1c-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does an A1C actually measure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A1C is the share of your haemoglobin that has sugar permanently stuck to it. Because red blood cells live around three months, the figure reflects average glucose over roughly the last 8 to 12 weeks, weighted towards the most recent month. A single high reading after a heavy meal barely moves it; weeks of high readings do."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my meter average differ from the eAG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The eAG is what your average would be if you sampled glucose continuously, day and night. Fingerstick meters are usually used before meals and while awake, so they miss post-meal peaks and overnight lows, and the meter average often reads lower than the eAG. A continuous glucose monitor closes most of that gap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What A1C should I aim for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The ADA suggests below 7% for many non-pregnant adults with diabetes, but targets are individualised. Tighter goals near 6.5% may suit someone young with a long life expectancy and no hypoglycaemia; looser goals of 8% or above can be safer with age, heart disease or a history of severe lows. Your clinician sets the number, not a calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly does A1C change?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Changes show up within two to three weeks and settle after about three months. That is why repeat testing is usually spaced three months apart, or six months once you are stable at target. Expect roughly a 0.5 to 1 point drop from a solid change in diet, activity or medication over one full cycle."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>A1C Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#e11d48" href="https://tool-hub.me/health-calculators/">Health</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">A1C Calculator</span></nav>
+  <section class="hero">
+    <h1>A1C Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Your A1C in the units your meter speaks — and where it sits on the ADA scale.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard .rc-sub { font-size:13px; color:var(--muted); margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .badge { display:inline-block; border-radius:999px; padding:3px 12px; font-weight:700; font-size:15px; color:#fff; }
+      #tool .badge.cat-normal { background:#16a34a; }
+      #tool .badge.cat-pre { background:#d97706; }
+      #tool .badge.cat-dia { background:#dc2626; }
+      #tool table.chart { width:100%; border-collapse:collapse; margin-top:16px; font-size:14px; }
+      #tool table.chart caption { text-align:left; color:var(--muted); font-size:13px; padding-bottom:6px; }
+      #tool table.chart th, #tool table.chart td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--line); }
+      #tool table.chart th { color:var(--muted); font-weight:600; }
+      #tool table.chart tr.hit td { font-weight:700; color:var(--accent); }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="direction" data-i18n="tool.dir.label">Direction</label>
+    <select id="direction">
+      <option value="a2g" data-i18n="tool.dir.a2g">A1C to average glucose</option>
+      <option value="g2a" data-i18n="tool.dir.g2a">Average glucose to A1C</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="value" id="value-label" data-i18n="tool.val.a1c">A1C (%)</label>
+        <input type="number" id="value" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="6.5">
+      </div>
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Glucose unit</label>
+        <select id="unit">
+          <option value="mgdl" data-i18n="tool.unit.mgdl">mg/dL (US)</option>
+          <option value="mmol" data-i18n="tool.unit.mmol">mmol/L (UK, EU)</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" id="r-main-label" data-i18n="tool.r.eag">Estimated average glucose</div>
+          <div class="rc-val" id="r-main">—</div>
+          <div class="rc-sub" id="r-sub"></div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.cat">ADA category</div>
+          <div class="rc-val"><span class="badge" id="r-cat">—</span></div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" id="r-alt-label" data-i18n="tool.r.a1c">A1C</div>
+          <div class="rc-val" id="r-alt">—</div>
+        </div>
+      </div>
+      <table class="chart">
+        <caption id="chart-cap" data-i18n="tool.table.cap">A1C reference chart</caption>
+        <thead><tr>
+          <th data-i18n="tool.th.a1c">A1C</th>
+          <th id="th-eag">Estimated average glucose</th>
+        </tr></thead>
+        <tbody id="chart-body"></tbody>
+      </table>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.med" style="margin-top:12px;">Estimates from the ADA A1C-Derived Average Glucose formula. Information only — not medical advice or a diagnosis.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What A1C is, and why it converts to a glucose number at all</h2>
+    <p>Glucose in the bloodstream attaches itself to haemoglobin inside red blood cells, and once attached it stays there for the life of the cell. A1C — also written HbA1c — is simply the percentage of haemoglobin carrying that sugar. Red cells survive about 120 days, so the test is a slow-moving average of the last two to three months rather than a snapshot, which is exactly what makes it useful for judging control and useless for judging this morning.</p>
+    <p>The conversion shown here comes from the A1C-Derived Average Glucose study published by the American Diabetes Association in 2008. Researchers fitted continuous glucose monitoring data from 507 participants against their A1C results and found a strikingly linear relationship: estimated average glucose in mg/dL equals 28.7 multiplied by A1C, minus 46.7. Reverse it and A1C equals average glucose plus 46.7, divided by 28.7. For mmol/L, divide the mg/dL figure by 18.016.</p>
+
+    <h3>Worked example: an A1C of 6.5%</h3>
+    <p>Take 28.7 x 6.5 = 186.55, then subtract 46.7 to get 139.85 — call it 140 mg/dL, or 7.8 mmol/L. That is the average glucose level a continuous monitor would have recorded across roughly the last three months, day and night. It also sits exactly on the diagnostic threshold: 6.5% is the point at which the ADA labels a confirmed result as diabetes.</p>
+
+    <h3>Worked example in reverse: a meter average of 154 mg/dL</h3>
+    <p>Add 46.7 to get 200.7, divide by 28.7, and the answer is 7.0%. This is the single most quoted pairing in diabetes care, because 7% is the general A1C target for many adults and 154 mg/dL (8.6 mmol/L) is what that target feels like day to day. If your meter has been averaging 180 mg/dL, the same arithmetic gives 7.9% — a full point above target, and a concrete reason to review the plan rather than wait for the next blood draw.</p>
+
+    <h2>How the categories are drawn</h2>
+    <table>
+      <thead><tr><th>A1C</th><th>eAG (mg/dL)</th><th>eAG (mmol/L)</th><th>ADA category</th></tr></thead>
+      <tbody>
+        <tr><td>5.0%</td><td>97</td><td>5.4</td><td>Normal</td></tr>
+        <tr><td>5.6%</td><td>114</td><td>6.3</td><td>Normal</td></tr>
+        <tr><td>6.0%</td><td>126</td><td>7.0</td><td>Prediabetes</td></tr>
+        <tr><td>6.4%</td><td>137</td><td>7.6</td><td>Prediabetes</td></tr>
+        <tr><td>7.0%</td><td>154</td><td>8.6</td><td>Diabetes range</td></tr>
+        <tr><td>8.0%</td><td>183</td><td>10.2</td><td>Diabetes range</td></tr>
+        <tr><td>10.0%</td><td>240</td><td>13.4</td><td>Diabetes range</td></tr>
+        <tr><td>12.0%</td><td>298</td><td>16.5</td><td>Diabetes range</td></tr>
+      </tbody>
+    </table>
+    <p>Below 5.7% is normal, 5.7% to 6.4% is prediabetes, and 6.5% or above meets the criterion for diabetes when confirmed by a second test. Those cut-offs are diagnostic thresholds, not treatment targets. Someone already living with diabetes is not aiming for 5.6%; they are usually aiming below 7%, and their clinician may set a higher or lower number depending on age, other conditions and how often blood sugar runs low.</p>
+
+    <h2>Two labelling systems, one test</h2>
+    <p>Clinics in the United States report A1C as a percentage. The UK, Ireland and much of Europe switched to IFCC units, reported in mmol/mol, where 6.5% appears as 48 mmol/mol and 7.0% as 53 mmol/mol. The bridge is mmol/mol = (percentage - 2.15) x 10.929. If a lab result looks impossibly large, check which scale it is on before panicking — a "48" is a 6.5%, not a catastrophe.</p>
+
+    <h2>Where the estimate breaks down</h2>
+    <p>The formula assumes red blood cells with a normal lifespan. Anything that shortens or lengthens that lifespan pushes A1C away from the true average: iron-deficiency anaemia can raise it, haemolytic anaemia and recent blood loss or transfusion lower it, and advanced kidney disease, pregnancy and haemoglobin variants such as HbS, HbC or HbE all interfere. In those situations clinicians lean on fructosamine, direct glucose monitoring or time-in-range from a sensor instead.</p>
+    <p>Even in a straightforward case, an eAG is an average and averages hide their spread. Two people can both convert to 154 mg/dL, one gliding smoothly between 120 and 190 and the other swinging from 50 to 300. The second person has the same A1C and a far worse day. Use this conversion to translate a lab number into something intuitive, then take the pattern — not the single figure — to whoever manages your care.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://diabetes.org/about-diabetes/a1c" target="_blank" rel="noopener">American Diabetes Association — A1C, estimated average glucose and diagnostic thresholds</a></li>
+      <li><a href="https://www.cdc.gov/diabetes/" target="_blank" rel="noopener">CDC Diabetes — testing, prediabetes ranges and management basics</a></li>
+      <li><a href="https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test" target="_blank" rel="noopener">NIDDK (NIH) — how the A1C test works and when it is unreliable</a></li>
+      <li><a href="https://www.who.int/health-topics/diabetes" target="_blank" rel="noopener">World Health Organization — global guidance on diabetes diagnosis and care</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/army-body-fat-calc/"><span class="related-ico" aria-hidden="true">🎖️</span><span class="related-name">Army Body Fat Calculator</span></a><a class="related-item" href="https://tool-hub.me/blood-alcohol-calc/"><span class="related-ico" aria-hidden="true">🍺</span><span class="related-name">Blood Alcohol Calculator (BAC)</span></a><a class="related-item" href="https://tool-hub.me/blood-pressure-checker/"><span class="related-ico" aria-hidden="true">🫀</span><span class="related-name">Blood Pressure Checker</span></a><a class="related-item" href="https://tool-hub.me/blood-sugar-conv/"><span class="related-ico" aria-hidden="true">🩸</span><span class="related-name">Blood Sugar Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What does an A1C actually measure?</summary><p data-i18n="faq.a1">A1C is the share of your haemoglobin that has sugar permanently stuck to it. Because red blood cells live around three months, the figure reflects average glucose over roughly the last 8 to 12 weeks, weighted towards the most recent month. A single high reading after a heavy meal barely moves it; weeks of high readings do.</p></details>
+    <details><summary data-i18n="faq.q2">Why does my meter average differ from the eAG?</summary><p data-i18n="faq.a2">The eAG is what your average would be if you sampled glucose continuously, day and night. Fingerstick meters are usually used before meals and while awake, so they miss post-meal peaks and overnight lows, and the meter average often reads lower than the eAG. A continuous glucose monitor closes most of that gap.</p></details>
+    <details><summary data-i18n="faq.q3">What A1C should I aim for?</summary><p data-i18n="faq.a3">The ADA suggests below 7% for many non-pregnant adults with diabetes, but targets are individualised. Tighter goals near 6.5% may suit someone young with a long life expectancy and no hypoglycaemia; looser goals of 8% or above can be safer with age, heart disease or a history of severe lows. Your clinician sets the number, not a calculator.</p></details>
+    <details><summary data-i18n="faq.q4">How quickly does A1C change?</summary><p data-i18n="faq.a4">Changes show up within two to three weeks and settle after about three months. That is why repeat testing is usually spaced three months apart, or six months once you are stable at target. Expect roughly a 0.5 to 1 point drop from a solid change in diet, activity or medication over one full cycle.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

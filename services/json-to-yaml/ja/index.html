@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-xco8SlvUb28b0uOp6PYiz212bHZzwk1AG35pqxa7dpw=' 'sha256-H2BgeTAdQtHVaGErhvj09RjkD/vfiwoLV8tPEpUMQhE=' 'sha256-Zdsm/r6+v0PvlvGBxMI8pUNxgX8HwpsZU4PsFrV1rN8='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON to YAML 変換ツール — JSONをYAMLに</title>
+<meta name="description" content="ブラウザ上でJSONをYAMLに変換します。JSONを貼り付けてインデント2または4を選ぶだけで、YAML 1.2流の安全なクォート処理をした結果をコピーできます。">
+<meta name="keywords" content="json to yaml, json to yaml converter, convert json to yaml online, yaml converter, json to yml, yaml formatter">
+<link rel="canonical" href="https://tool-hub.me/json-to-yaml/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/json-to-yaml/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/json-to-yaml/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/json-to-yaml/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/json-to-yaml/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/json-to-yaml/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/json-to-yaml/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/json-to-yaml/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/json-to-yaml/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/json-to-yaml/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/json-to-yaml/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/json-to-yaml/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/json-to-yaml/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/json-to-yaml/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/json-to-yaml/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/json-to-yaml/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JSON to YAML 変換ツール — JSONをYAMLに">
+<meta property="og:description" content="ブラウザ上でJSONをYAMLに変換します。JSONを貼り付けてインデント2または4を選ぶだけで、YAML 1.2流の安全なクォート処理をした結果をコピーできます。">
+<meta property="og:url" content="https://tool-hub.me/json-to-yaml/ja/">
+<meta property="og:image" content="https://tool-hub.me/json-to-yaml/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#854d0e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "JSON to YAML Converter",
+  "description": "Convert JSON to YAML online in your browser. Paste any JSON object, choose 2 or 4 space indent, and copy clean YAML with safe 1.2 style quoting.",
+  "url": "https://tool-hub.me/json-to-yaml/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "JSON to YAML Converter",
+      "item": "https://tool-hub.me/json-to-yaml/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does the converter put quotes around no and on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "YAML 1.1 parsers read y, n, yes, no, on and off as booleans, so an unquoted no silently becomes false. The classic casualty is Norway, whose country code NO turns into false in a list of country codes. Quoting every string that looks like a boolean keeps the value a string in both YAML 1.1 and 1.2 parsers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I keep comments when converting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JSON has no comment syntax, so there is nothing to carry over — anything you wrote as a fake comment key is converted as a normal key. Add YAML comments with # after converting. If your source file had JavaScript-style comments it was JSONC, not JSON, and you need to strip them before pasting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this also convert YAML back to JSON?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and that is deliberate. Parsing arbitrary YAML safely is a much larger job than emitting it: anchors, aliases, merge keys, tags and multiple documents all have to be handled, and careless YAML loaders have caused real security incidents. This tool only goes one way, JSON to YAML."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are anchors and aliases created for repeated blocks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Repeated objects are written out in full every time, because JSON has no concept of a shared reference. If you want &anchor and *alias to deduplicate a Kubernetes or docker-compose file, add them by hand after conversion. The output stays a plain expanded tree, which is what most tools expect anyway."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>JSON to YAML Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">JSON to YAML Converter</span></nav>
+  <section class="hero">
+    <h1>JSON to YAML Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Paste JSON, get YAML a strict parser will accept — quoting and all.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool textarea { width:100%; min-height:150px; resize:vertical;
+        font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px; line-height:1.55; }
+      #tool textarea#out { min-height:200px; background:var(--bg); }
+      #tool .out-head { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:14px; }
+      #tool .out-head label { margin:0; }
+      #tool .copy-btn { padding:6px 11px; font-size:12px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .copy-btn:hover { border-color:var(--accent); }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-top:12px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; word-break:break-word; }
+    </style>
+
+    <label for="src" data-i18n="tool.input.label">JSON input</label>
+    <textarea id="src" spellcheck="false" autocomplete="off" placeholder='{"name":"web-app","replicas":2,"ports":[80,443],"env":{"DEBUG":"false"}}'></textarea>
+
+    <label for="indent" data-i18n="tool.indent.label">Indent size</label>
+    <select id="indent">
+      <option value="1" data-i18n="tool.indent.1">1 space</option>
+      <option value="2" data-i18n="tool.indent.2" selected>2 spaces</option>
+      <option value="3" data-i18n="tool.indent.3">3 spaces</option>
+      <option value="4" data-i18n="tool.indent.4">4 spaces</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Convert to YAML</button>
+
+    <div id="result" hidden>
+      <div class="out-head">
+        <label for="out" data-i18n="tool.r.out">YAML output</label>
+        <button type="button" class="copy-btn" id="copy-btn" data-i18n="tool.copy">Copy</button>
+      </div>
+      <textarea id="out" readonly spellcheck="false"></textarea>
+      <div class="result-cards">
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.lines">Lines</div><div class="rc-val" id="r-lines">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.keys">Keys</div><div class="rc-val" id="r-keys">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.depth">Max depth</div><div class="rc-val" id="r-depth">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.local" style="margin-top:12px;">YAML 1.2 style quoting: strings that could be read as numbers, booleans or nulls are quoted so they stay strings. Nothing leaves your browser.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>Converting JSON to YAML without breaking the config</h2>
+    <p>YAML is a superset of JSON, so in the strictest sense any JSON file is already valid YAML and you could rename the extension and walk away. Nobody does that, because the whole point of YAML is that a human has to read it during an incident at two in the morning. The real job of a converter is turning braces and commas into indentation while making sure every value keeps the type it had in the JSON — and that second half is where hand conversion goes wrong.</p>
+    <p>This tool parses your input with the browser's own JSON parser, then walks the resulting tree and emits block-style YAML. Objects become indented mappings, arrays become dash lists, and every scalar is checked against a list of patterns that would change its meaning if left bare. Nothing is uploaded; the conversion runs entirely in the page.</p>
+
+    <h3>Worked example: a small Kubernetes-style deployment</h3>
+    <p>Take this JSON, which is close to what a Helm template spits out: a name, a replica count, two ports and an environment block where the values are strings.</p>
+    <p><strong>Input:</strong> {"name":"web-app","replicas":2,"ports":[80,443],"env":{"DEBUG":"false","REGION":"no"}}</p>
+    <p>With a 2 space indent the output is six lines. The scalar treatment differs on every single one:</p>
+    <table>
+      <thead><tr><th>YAML line</th><th>Why it looks like that</th></tr></thead>
+      <tbody>
+        <tr><td>name: web-app</td><td>Plain string, no special characters, so no quotes are needed.</td></tr>
+        <tr><td>replicas: 2</td><td>JSON number stays a number — quoting it here would break the schema.</td></tr>
+        <tr><td>ports:</td><td>Array key on its own line; the items follow, indented.</td></tr>
+        <tr><td>&nbsp;&nbsp;- 80</td><td>Dash plus space. The indent under a key is your chosen 2 or 4 spaces.</td></tr>
+        <tr><td>&nbsp;&nbsp;- 443</td><td>Same rule; numeric items are never quoted.</td></tr>
+        <tr><td>env:</td><td>Nested object becomes a nested mapping one level deeper.</td></tr>
+        <tr><td>&nbsp;&nbsp;DEBUG: "false"</td><td>The JSON value was the string "false", so it is quoted to stay a string.</td></tr>
+        <tr><td>&nbsp;&nbsp;REGION: "no"</td><td>Same reason, and the more dangerous one — see below.</td></tr>
+      </tbody>
+    </table>
+    <p>Feed the unquoted version into a YAML 1.1 loader and DEBUG becomes the boolean false. Your container then gets the string "False" or "0" depending on the language runtime, environment variables being strings by definition, and you spend an hour wondering why debug logging never turns off.</p>
+
+    <h3>The Norway problem, in one line</h3>
+    <p>YAML 1.1 resolves y, Y, yes, no, on, off, true and false — in any capitalisation — to booleans. A list of ISO country codes written as GB, US, FR, NO therefore loads as GB, US, FR, false. This is known as the Norway problem, and it has bitten enough teams that YAML 1.2 dropped the y/n/on/off shortcuts entirely. The catch is that many parsers still in production, including PyYAML's default loader, follow the 1.1 rules. Emitting "no" with quotes costs two characters and removes the whole class of bug, so this converter always quotes strings that match a boolean-ish word, look like a number, look like null or a tilde, start with an indicator character such as - ? : , [ ] { } # &amp; * ! | &gt; ' " % @, or contain a colon followed by a space.</p>
+
+    <h3>Two spaces or four?</h3>
+    <p>YAML does not care, as long as you are consistent and never use tabs — a literal tab character for indentation is a parse error in every conformant parser. Convention decides for you in practice. Kubernetes manifests, docker-compose files, GitHub Actions workflows and Ansible playbooks are all published with 2 spaces, and most linters ship with that default. Four spaces show up in older Ruby and Java projects and in documents with shallow nesting where the extra width aids scanning. Pick 2 if the file is going anywhere near a Kubernetes cluster or a CI pipeline; the diff noise of converting later is not worth it. Sequence items add one more wrinkle: this converter indents dashes under their parent key, which is the style kubectl and the Kubernetes docs use, and both indented and non-indented dashes parse identically.</p>
+
+    <h3>Migrating a config file, end to end</h3>
+    <p>The most common reason people search for a JSON to YAML converter is a migration: an application that read config.json now wants config.yaml, or a serverless project is moving from a JSON template to a YAML one. The reliable sequence is convert, read, then verify. Convert here, read the output for values that changed shape — version numbers such as 1.10 are a classic, because as a JSON string "1.10" it must stay quoted or YAML will read the number 1.1 and drop your patch release — and then verify by loading the YAML in the tool that will consume it. If you have Python to hand, python -c "import yaml,json,sys; json.dump(yaml.safe_load(open('config.yaml')), sys.stdout)" round-trips it back to JSON so you can diff against the original. A clean diff means the conversion preserved every type.</p>
+    <p>Multiline strings are the other thing worth checking. A JSON string containing newline escapes is emitted here as a literal block using the pipe character, which is far more readable than one enormous quoted line — useful for embedded scripts, certificates or SQL. When the string ends without a trailing newline the block is written with a strip indicator so the value round-trips exactly; when the shape cannot be represented safely as a block, the converter falls back to a quoted single line rather than guessing.</p>
+
+    <h2>What this converter deliberately does not do</h2>
+    <p>It does not go backwards. Turning YAML into JSON means implementing or trusting a full YAML parser, complete with anchors, aliases, merge keys, custom tags and multi-document streams, and unsafe YAML loaders have a long history of remote code execution bugs. One direction, done carefully, is the safer product.</p>
+    <p>It does not invent anchors or aliases. If the same block appears five times in your JSON it appears five times in the YAML, because JSON has no shared-reference concept to detect. Add &amp;anchor and *alias by hand if you want the deduplication. It also cannot carry comments, since JSON has none to carry, and it does not reorder or sort keys — insertion order from your JSON is preserved so that a diff against the original stays readable. Duplicate keys are impossible to preserve for the same reason: JSON.parse keeps the last one, exactly as your JSON consumer already did.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc8259" target="_blank" rel="noopener">IETF RFC 8259 — the JSON data interchange format, including type and duplicate-key rules</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank" rel="noopener">MDN Web Docs — how JSON.parse and JSON.stringify handle strings, numbers and escapes</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Glossary/YAML" target="_blank" rel="noopener">MDN Web Docs — YAML overview and how it relates to JSON as a superset</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/jwt-decoder/"><span class="related-ico" aria-hidden="true">🔑</span><span class="related-name">JWT Decoder</span></a><a class="related-item" href="https://tool-hub.me/markdown-preview/"><span class="related-ico" aria-hidden="true">📝</span><span class="related-name">Markdown Preview</span></a><a class="related-item" href="https://tool-hub.me/markdown-table-generator/"><span class="related-ico" aria-hidden="true">📋</span><span class="related-name">Markdown Table Generator</span></a><a class="related-item" href="https://tool-hub.me/meta-tag-generator/"><span class="related-ico" aria-hidden="true">🏷️</span><span class="related-name">Meta Tag Generator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why does the converter put quotes around no and on?</summary><p data-i18n="faq.a1">YAML 1.1 parsers read y, n, yes, no, on and off as booleans, so an unquoted no silently becomes false. The classic casualty is Norway, whose country code NO turns into false in a list of country codes. Quoting every string that looks like a boolean keeps the value a string in both YAML 1.1 and 1.2 parsers.</p></details>
+    <details><summary data-i18n="faq.q2">Can I keep comments when converting?</summary><p data-i18n="faq.a2">JSON has no comment syntax, so there is nothing to carry over — anything you wrote as a fake comment key is converted as a normal key. Add YAML comments with # after converting. If your source file had JavaScript-style comments it was JSONC, not JSON, and you need to strip them before pasting.</p></details>
+    <details><summary data-i18n="faq.q3">Does this also convert YAML back to JSON?</summary><p data-i18n="faq.a3">No, and that is deliberate. Parsing arbitrary YAML safely is a much larger job than emitting it: anchors, aliases, merge keys, tags and multiple documents all have to be handled, and careless YAML loaders have caused real security incidents. This tool only goes one way, JSON to YAML.</p></details>
+    <details><summary data-i18n="faq.q4">Are anchors and aliases created for repeated blocks?</summary><p data-i18n="faq.a4">No. Repeated objects are written out in full every time, because JSON has no concept of a shared reference. If you want &amp;anchor and *alias to deduplicate a Kubernetes or docker-compose file, add them by hand after conversion. The output stays a plain expanded tree, which is what most tools expect anyway.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

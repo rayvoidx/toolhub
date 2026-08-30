@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-fm150biFBi3qDgb6+IvcJLHivNyRRKMXquF4JU5oE0o=' 'sha256-e9mBFz6nHTXCmi2DH1A/hDtGpWPBsY+XKmLq0fafcts=' 'sha256-covDsQe2z+CKC7/aurLkw1NKWmBnrAjWLcvqBG047+4='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>通勤費用計算ツール — 車通勤の本当のコスト</title>
+<meta name="description" content="通勤に実際いくらかかっているかを計算します。片道距離・出社日数・駐車場・有料道路を入力すると、月額と年額、さらに公共交通との差額まで出ます。">
+<meta name="keywords" content="commute cost calculator, cost of commuting, gas cost to work, commute calculator, cost of driving to work, commuting cost per year">
+<link rel="canonical" href="https://tool-hub.me/commute-cost-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/commute-cost-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/commute-cost-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/commute-cost-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/commute-cost-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/commute-cost-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/commute-cost-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/commute-cost-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/commute-cost-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/commute-cost-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/commute-cost-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/commute-cost-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/commute-cost-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/commute-cost-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/commute-cost-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/commute-cost-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="通勤費用計算ツール — 車通勤の本当のコスト">
+<meta property="og:description" content="通勤に実際いくらかかっているかを計算します。片道距離・出社日数・駐車場・有料道路を入力すると、月額と年額、さらに公共交通との差額まで出ます。">
+<meta property="og:url" content="https://tool-hub.me/commute-cost-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/commute-cost-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0e7490">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Commute Cost Calculator",
+  "description": "See what your commute truly costs. Enter distance, office days, parking and tolls for the monthly and yearly cost of driving to work, plus a transit comparison.",
+  "url": "https://tool-hub.me/commute-cost-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Commute Cost Calculator",
+      "item": "https://tool-hub.me/commute-cost-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I use the IRS mileage rate or just my gas cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use gas only when you are deciding whether one extra trip is worth taking, because fuel is the only cost that changes that day. Use the IRS rate of $0.70 a mile when the question is what commuting costs you over a year, since it also carries depreciation, insurance, maintenance and tyres. At 28 mpg and $3.60 a gallon, fuel is about 13 cents a mile — under a fifth of the all-in rate. The rest is real money; it just leaves your account later, as repairs and a weaker trade-in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I work out the cost of a hybrid week?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter the days you actually travel in, not five. The tool multiplies your round trip by that number, so three days in the office costs 40% less than five, and the parking and toll lines shrink with it. The monthly figure uses 4.33 weeks — 52 divided by 12 — so months with an extra commuting week are already averaged in. If your pattern changes by season, run it twice and average the two answers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use this to ask for another remote day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Take the yearly number, not the daily one — $37 a day sounds trivial, $7,700 a year does not. One extra day at home cuts a five-day commute bill by 20% and hands back around 70 hours of unpaid travel time a year. Framed to a manager it is a retention argument: the commute is a pay cut you absorb after tax, so removing a day is a raise that costs the company nothing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I pay for commuting with pre-tax money?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the US, IRS section 132(f) lets employees set aside up to $325 a month in 2025 for transit passes and qualified parking before tax, which trims the true cost by your marginal rate — roughly a quarter to a third for most filers. Ask payroll for the commuter benefit or transit FSA; it is not automatic. Ordinary driving between home and work is never deductible for employees, so the pre-tax route only exists for transit and parking. In the UK, season-ticket loans and Cycle to Work are the nearest equivalents."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Commute Cost Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Commute Cost Calculator</span></nav>
+  <section class="hero">
+    <h1>Commute Cost Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Gas is the small part of the bill. Depreciation, insurance and parking are the rest.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool [hidden] { display:none; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard .rc-unit { font-size:12px; color:var(--muted); margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="dist" data-i18n="tool.dist.label">One-way distance to work</label>
+        <input type="number" id="dist" inputmode="decimal" min="0" max="500" step="any" autocomplete="off" placeholder="18">
+      </div>
+      <div>
+        <label for="units" data-i18n="tool.units.label">Units</label>
+        <select id="units">
+          <option value="mi" selected data-i18n="tool.unit.mi">Miles</option>
+          <option value="km" data-i18n="tool.unit.km">Kilometres</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="days" data-i18n="tool.days.label">Office days per week</label>
+        <input type="number" id="days" inputmode="decimal" min="1" max="7" step="any" autocomplete="off" placeholder="4">
+      </div>
+      <div>
+        <label for="method" data-i18n="tool.method.label">How to cost the driving</label>
+        <select id="method">
+          <option value="irs" selected data-i18n="tool.method.irs">IRS standard rate — $0.70 a mile, all-in</option>
+          <option value="gas" data-i18n="tool.method.gas">Gas only — from mpg and pump price</option>
+          <option value="custom" data-i18n="tool.method.custom">Custom rate per mile</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row" id="gas-row" hidden>
+      <div>
+        <label for="mpg" data-i18n="tool.mpg.label">Fuel economy (mpg)</label>
+        <input type="number" id="mpg" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="28">
+      </div>
+      <div>
+        <label for="gasprice" data-i18n="tool.gasprice.label">Price per gallon</label>
+        <input type="number" id="gasprice" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="3.60">
+      </div>
+    </div>
+
+    <div id="rate-row" hidden>
+      <label for="rate" id="rate-label" data-i18n="tool.rate.label">Your cost per mile</label>
+      <input type="number" id="rate" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0.50">
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="parking" data-i18n="tool.parking.label">Parking cost</label>
+        <input type="number" id="parking" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12">
+      </div>
+      <div>
+        <label for="tolls" data-i18n="tool.tolls.label">Tolls per day (round trip)</label>
+        <input type="number" id="tolls" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0">
+      </div>
+      <div>
+        <label for="parkbasis" data-i18n="tool.parking.basis.label">Parking charged</label>
+        <select id="parkbasis">
+          <option value="day" selected data-i18n="tool.parking.basis.day">Per day</option>
+          <option value="month" data-i18n="tool.parking.basis.month">Per month</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="transit" data-i18n="tool.transit.label">Monthly transit pass (optional)</label>
+        <input type="number" id="transit" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="130">
+      </div>
+      <div>
+        <label for="minutes" data-i18n="tool.minutes.label">One-way travel time, minutes (optional)</label>
+        <input type="number" id="minutes" inputmode="decimal" min="0" max="300" step="any" autocomplete="off" placeholder="40">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate commute cost</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.month">Cost per month</div>
+          <div class="rc-val" id="r-month">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.year">Cost per year</div><div class="rc-val" id="r-year">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.trip">Cost per round trip</div><div class="rc-val" id="r-trip">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.dist">Distance per week</div><div class="rc-val" id="r-dist">—</div></div>
+        <div class="rcard" id="card-transit" hidden>
+          <div class="rc-label" data-i18n="tool.r.transit">Transit vs driving</div>
+          <div class="rc-val" id="r-transit">—</div>
+          <div class="rc-unit" id="r-transit-note"></div>
+        </div>
+        <div class="rcard" id="card-hours" hidden>
+          <div class="rc-label" data-i18n="tool.r.hours">Hours commuting per year</div>
+          <div class="rc-val" id="r-hours">—</div>
+        </div>
+      </div>
+      <p class="subtle" id="note-irs" data-i18n="tool.note.irs" style="margin-top:10px;">The 2025 IRS rate of $0.70 a mile covers fuel, depreciation, insurance, maintenance and tyres. Pump-price-only maths shows roughly a fifth of that.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.est" style="margin-top:12px;">Money figures carry no currency symbol — enter everything in yours. The $0.70 default is a US rate; use a custom rate elsewhere.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a commute actually costs</h2>
+    <p>Most people price their commute at the pump. That number feels honest — it is money leaving your account on a Tuesday morning — but it is the smallest slice of the bill. Driving to work wears out a car, and the cost of that wear shows up years later as depreciation on the trade-in, an extra set of tyres, brake work, a shorter gap between services and a higher insurance band for the mileage you declare. The IRS publishes one number that rolls all of it together: <strong>70 cents per mile for 2025</strong>. That is the rate this calculator uses by default, and switching between it and the gas-only method is the fastest way to see how much of your commute is invisible.</p>
+
+    <h3>Worked example: 18 miles each way, four days a week</h3>
+    <p>Start with distance. Eighteen miles one way is 36 miles a day, and four office days makes <strong>144 miles a week</strong>. Now cost the driving two ways:</p>
+    <ul>
+      <li><strong>IRS all-in:</strong> 144 × $0.70 = <strong>
+
+  00.80</strong> a week.</li>
+      <li><strong>Gas only</strong> at 28 mpg and $3.60 a gallon: 144 ÷ 28 = 5.14 gallons, × $3.60 = <strong>
+
+  8.51</strong> a week.</li>
+    </ul>
+    <p>Add parking at 
+
+  2 a day — $48 a week — and the two methods land at 
+
+  48.80 and $66.51 a week. Over a year that is <strong>$7,738 against $3,459</strong>, a gap of roughly $4,280. Nothing was double counted; the difference is depreciation, insurance, maintenance and tyres, all of which you are paying whether or not you notice. Fuel is under a fifth of the true per-mile cost at these prices, which is why gas-only maths makes long commutes look cheap.</p>
+    <p>The per-round-trip card puts the same figure at human scale: $37.20 each time you drive in. That is the number to hold next to a lunch out, a parking upgrade, or the price of the train.</p>
+
+    <h3>Why the monthly figure uses 4.33 weeks</h3>
+    <p>A month is not four weeks. Fifty-two weeks divided by twelve is 4.333, so budgeting at "four weeks" quietly deletes a month of commuting every year. On the example above, four weeks would show $595 a month instead of $644.80 — a $600 annual error, which is most of a set of tyres.</p>
+
+    <h2>The remote-day argument, in numbers</h2>
+    <p>The strongest use of this tool is not budgeting; it is negotiation. Run the same commute at five days a week and it costs 
+
+  86 a week, or $9,672 a year. Drop to four and it falls to $7,738. <strong>One remote day is worth about 
+
+  ,934 a year</strong> — and that is take-home money, so a salaried worker in the 24% bracket would need roughly $2,500 of extra gross pay to match it.</p>
+    <p>The time side is just as concrete. At 40 minutes each way, four days a week, the tool shows about <strong>277 hours a year</strong> in the car: seven working weeks of unpaid time. Removing one day gives back around 69 hours. Managers respond better to "this is 69 hours and 
+
+  ,900 a year to me, and it costs the company nothing" than to a vague preference, and the yearly framing is what makes a $37 daily figure sound like a real sum.</p>
+
+    <h2>Should you move closer? A quick break-even</h2>
+    <p>Suppose the same worker considers a flat four miles from the office. Weekly driving drops to 32 miles, or $22.40, and parking stays at $48, giving $70.40 a week and about $305 a month. The saving is roughly <strong>$340 a month</strong>, so any rent increase under that figure pays for itself in cash alone — before counting the 194 hours a year handed back. Above it, you are buying time rather than saving money, which is a legitimate choice as long as you know which one you are doing.</p>
+
+    <h2>Transit, pre-tax dollars and the honest limits</h2>
+    <p>Enter a monthly pass and the tool compares it with the all-in driving cost, not just the fuel. Against $644.80 a month, a 
+
+  30 pass looks like $515 a month cheaper — but a fair comparison also weighs the extra door-to-door time and the days you genuinely need the car. If your employer offers a commuter benefit under IRS section 132(f), transit and qualified parking can be paid with pre-tax income up to $325 a month in 2025, which knocks your marginal tax rate off the true cost. Driving itself is never deductible for an employee.</p>
+    <p>Three limits worth stating. Parking is entered as a daily rate; if you pay for a monthly garage space, divide by the days you actually use it or the figure will run high. The mpg and price-per-gallon inputs are US units, so drivers working in litres and kilometres should switch to the custom rate per mile after converting their own numbers. And the IRS rate is an average across a fleet of ordinary cars — a paid-off ten-year-old hatchback costs less per mile, a new SUV or a leased vehicle costs more, and an EV shifts the balance further toward depreciation and away from fuel. Use the custom method if you know your own cost per mile; the point of the default is to stop the estimate at zero being wrong by a factor of four.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.irs.gov/tax-professionals/standard-mileage-rates" target="_blank" rel="noopener">IRS — official standard mileage rates covering fuel, depreciation, insurance and maintenance</a></li>
+      <li><a href="https://www.irs.gov/forms-pubs/about-publication-15-b" target="_blank" rel="noopener">IRS Publication 15-B — qualified transportation (commuter) fringe benefit limits under section 132(f)</a></li>
+      <li><a href="https://www.fueleconomy.gov/" target="_blank" rel="noopener">FuelEconomy.gov (US DOE/EPA) — official mpg ratings and fuel cost estimates by vehicle</a></li>
+      <li><a href="https://www.bls.gov/cex/" target="_blank" rel="noopener">BLS Consumer Expenditure Surveys — average US household spending on transportation</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/concrete-calc/"><span class="related-ico" aria-hidden="true">🧱</span><span class="related-name">Concrete Calculator</span></a><a class="related-item" href="https://tool-hub.me/cooking-conv/"><span class="related-ico" aria-hidden="true">🥄</span><span class="related-name">Cups to Grams Converter</span></a><a class="related-item" href="https://tool-hub.me/decking-calc/"><span class="related-ico" aria-hidden="true">🏗️</span><span class="related-name">Decking Calculator</span></a><a class="related-item" href="https://tool-hub.me/dog-age-calc/"><span class="related-ico" aria-hidden="true">🐕</span><span class="related-name">Dog Age Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Should I use the IRS mileage rate or just my gas cost?</summary><p data-i18n="faq.a1">Use gas only when you are deciding whether one extra trip is worth taking, because fuel is the only cost that changes that day. Use the IRS rate of $0.70 a mile when the question is what commuting costs you over a year, since it also carries depreciation, insurance, maintenance and tyres. At 28 mpg and $3.60 a gallon, fuel is about 13 cents a mile — under a fifth of the all-in rate. The rest is real money; it just leaves your account later, as repairs and a weaker trade-in.</p></details>
+    <details><summary data-i18n="faq.q2">How do I work out the cost of a hybrid week?</summary><p data-i18n="faq.a2">Enter the days you actually travel in, not five. The tool multiplies your round trip by that number, so three days in the office costs 40% less than five, and the parking and toll lines shrink with it. The monthly figure uses 4.33 weeks — 52 divided by 12 — so months with an extra commuting week are already averaged in. If your pattern changes by season, run it twice and average the two answers.</p></details>
+    <details><summary data-i18n="faq.q3">How do I use this to ask for another remote day?</summary><p data-i18n="faq.a3">Take the yearly number, not the daily one — $37 a day sounds trivial, $7,700 a year does not. One extra day at home cuts a five-day commute bill by 20% and hands back around 70 hours of unpaid travel time a year. Framed to a manager it is a retention argument: the commute is a pay cut you absorb after tax, so removing a day is a raise that costs the company nothing.</p></details>
+    <details><summary data-i18n="faq.q4">Can I pay for commuting with pre-tax money?</summary><p data-i18n="faq.a4">In the US, IRS section 132(f) lets employees set aside up to $325 a month in 2025 for transit passes and qualified parking before tax, which trims the true cost by your marginal rate — roughly a quarter to a third for most filers. Ask payroll for the commuter benefit or transit FSA; it is not automatic. Ordinary driving between home and work is never deductible for employees, so the pre-tax route only exists for transit and parking. In the UK, season-ticket loans and Cycle to Work are the nearest equivalents.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

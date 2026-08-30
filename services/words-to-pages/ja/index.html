@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-VLGGV2ZSxV9Qtnr9O2kafPJc51bOjAvfRXTMH5vSKkY=' 'sha256-kuDuIRKFvruWXpru9FC2kuX0jKJGWkm3cBKVEBdDuBU=' 'sha256-hskQGLNjcJPqrS4h8uHKfgJBaLkmrEYmdOpD+v0etSQ='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文字数・単語数からページ数を計算</title>
+<meta name="description" content="Times New Roman・Arial・Verdanaと1行・1.5行・2行送りの設定で、単語数をページ数に換算します。1,000語や1,500語が何ページになるか、読了時間まで分かります。">
+<meta name="keywords" content="words to pages, how many pages is 1000 words, word count to pages, essay length calculator, words per page, 1500 words in pages">
+<link rel="canonical" href="https://tool-hub.me/words-to-pages/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/words-to-pages/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/words-to-pages/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/words-to-pages/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/words-to-pages/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/words-to-pages/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/words-to-pages/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/words-to-pages/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/words-to-pages/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/words-to-pages/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/words-to-pages/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/words-to-pages/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/words-to-pages/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/words-to-pages/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/words-to-pages/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/words-to-pages/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="文字数・単語数からページ数を計算">
+<meta property="og:description" content="Times New Roman・Arial・Verdanaと1行・1.5行・2行送りの設定で、単語数をページ数に換算します。1,000語や1,500語が何ページになるか、読了時間まで分かります。">
+<meta property="og:url" content="https://tool-hub.me/words-to-pages/ja/">
+<meta property="og:image" content="https://tool-hub.me/words-to-pages/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#57534e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Words to Pages Converter",
+  "description": "Convert word count to pages for Times New Roman, Arial or Verdana at single, 1.5 or double spacing. See how many pages 1,000 or 1,500 words fill.",
+  "url": "https://tool-hub.me/words-to-pages/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Words to Pages Converter",
+      "item": "https://tool-hub.me/words-to-pages/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is 275 words per page a universal rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a convention, not a standard. The 275 figure comes from Times New Roman 12 pt, double spaced, with 1-inch margins — the default American academic page. Change the font to Arial or Verdana, or widen the margins, and the same page holds 10 to 20 percent fewer words."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do teachers ask for word counts instead of page counts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because pages are trivially inflated. Larger fonts, wider margins, extra line spacing and short paragraphs can stretch 1,000 words across six pages. A word count is font-independent, so most universities and journals now specify words and treat pages as a rough guide only."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many pages is 500, 1,000 or 2,000 words?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Times New Roman 12 pt, 500 words fills about 0.9 of a page single spaced and 1.8 pages double spaced. 1,000 words gives roughly 1.8 and 3.6 pages, and 2,000 words gives 3.6 and 7.3. Those are the numbers people round to 1, 2, 4 and 8 pages in everyday conversation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many pages should a 10-minute speech be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A comfortable spoken pace is around 130 words per minute, so ten minutes is roughly 1,300 words. Double spaced in Times New Roman that is about 4.7 pages of script. Read your draft aloud once with a timer, because pauses, slides and questions eat more time than the arithmetic suggests."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Words to Pages Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#7c3aed" href="https://tool-hub.me/text-tools/">Text</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Words to Pages Converter</span></nav>
+  <section class="hero">
+    <h1>Words to Pages Converter</h1>
+    <p class="lede" data-i18n="hero.lede">How many pages is 1,500 words? Font and line spacing decide it — set both and get a real page count.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool #r-rev { margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="words" data-i18n="tool.words.label">Word count</label>
+    <input type="number" id="words" inputmode="numeric" min="1" max="200000" step="1" autocomplete="off" placeholder="1500">
+
+    <div class="field-row">
+      <div>
+        <label for="font" data-i18n="tool.font.label">Font and size</label>
+        <select id="font">
+          <option value="times" data-i18n="tool.font.times">Times New Roman</option>
+          <option value="arial" data-i18n="tool.font.arial">Arial</option>
+          <option value="verdana" data-i18n="tool.font.verdana">Verdana</option>
+          <option value="calibri" data-i18n="tool.font.calibri">Calibri</option>
+        </select>
+      </div>
+      <div>
+        <label for="size" data-i18n="tool.size.label">Font size</label>
+        <select id="size">
+          <option value="10">10 pt</option>
+          <option value="11">11 pt</option>
+          <option value="12" selected>12 pt</option>
+          <option value="13">13 pt</option>
+          <option value="14">14 pt</option>
+          <option value="16">16 pt</option>
+        </select>
+      </div>
+      <div>
+        <label for="spacing" data-i18n="tool.spacing.label">Line spacing</label>
+        <select id="spacing">
+          <option value="double" data-i18n="tool.spacing.double">Double spaced</option>
+          <option value="onehalf" data-i18n="tool.spacing.onehalf">1.5 spaced</option>
+          <option value="single" data-i18n="tool.spacing.single">Single spaced</option>
+        </select>
+      </div>
+      <div>
+        <label for="margin" data-i18n="tool.margin.label">Margins</label>
+        <select id="margin">
+          <option value="0.5">0.5 in / 1.3 cm</option>
+          <option value="0.75">0.75 in / 1.9 cm</option>
+          <option value="1" selected>1 in / 2.5 cm</option>
+          <option value="1.25">1.25 in / 3.2 cm</option>
+          <option value="1.5">1.5 in / 3.8 cm</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Convert to pages</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.pages">Page count</div>
+          <div class="rc-val" id="r-pages">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.read">Reading time</div><div class="rc-val" id="r-read">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.speak">Speaking time</div><div class="rc-val" id="r-speak">—</div></div>
+      </div>
+      <p class="subtle" id="r-rev"></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Assumes 1-inch margins and continuous paragraph text. Headings, block quotes, tables and images move the count.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How many pages is your word count, really</h2>
+    <p>A page is not a unit of writing — it is a unit of layout. The same 1,500 words can fill three pages or seven depending on the typeface, the point size, the line spacing and how generous your margins are. That is why "how many pages is 1,000 words" has no single answer, and why every honest converter starts by asking about formatting. This tool uses three common typefaces at 12 pt with 1-inch margins, the default academic page in the United States and the standard business page in the UK.</p>
+    <p>The reference numbers are words per page at single spacing: Times New Roman 12 pt holds about 550, Arial 12 pt about 500, and Verdana 12 pt about 460. Verdana is wider by design — it was drawn for screen legibility — so it eats pages faster than anything else on the list. Line spacing then divides straight into that figure. Double spacing halves it, 1.5 spacing cuts it by a third. Times New Roman double spaced lands on roughly 275 words per page, the number most style guides quote.</p>
+
+    <h3>Worked example: planning a 1,500-word essay</h3>
+    <p>Your professor asks for 1,500 words in Times New Roman 12 pt, double spaced. The effective capacity is 550 divided by 2, or 275 words per page. Dividing 1,500 by 275 gives 5.45, so you are writing about 5.5 pages. If the brief instead says "six pages" and leaves the font open, you now know the real target is somewhere between 1,380 words (Verdana double spaced, 230 per page) and 1,650 (Times double spaced). That 270-word spread is a full paragraph of argument — worth clarifying before you start.</p>
+
+    <h3>Worked example: turning a page limit into a writing plan</h3>
+    <p>Suppose you have a 10-page limit, single spaced, in Arial 12 pt. Ten pages times 500 words gives 5,000 words. Split that across a structure: 500 for the introduction, 3,750 across five body sections of 750, and 750 for the conclusion. Now each writing session has a countable target instead of a vague page goal, and you will not discover on the last day that your introduction quietly consumed two pages.</p>
+
+    <h2>Common assignment lengths at a glance</h2>
+    <table>
+      <thead><tr><th>Words</th><th>Single (Times 12)</th><th>1.5 spaced</th><th>Double spaced</th></tr></thead>
+      <tbody>
+        <tr><td>250</td><td>0.5</td><td>0.7</td><td>0.9</td></tr>
+        <tr><td>500</td><td>0.9</td><td>1.4</td><td>1.8</td></tr>
+        <tr><td>1,000</td><td>1.8</td><td>2.7</td><td>3.6</td></tr>
+        <tr><td>1,500</td><td>2.7</td><td>4.1</td><td>5.5</td></tr>
+        <tr><td>2,500</td><td>4.5</td><td>6.8</td><td>9.1</td></tr>
+        <tr><td>5,000</td><td>9.1</td><td>13.6</td><td>18.2</td></tr>
+        <tr><td>10,000</td><td>18.2</td><td>27.3</td><td>36.4</td></tr>
+      </tbody>
+    </table>
+    <p>For context on where those word counts come from: a high school essay is typically 300 to 1,000 words, a college paper 1,500 to 5,000, a UK undergraduate dissertation 8,000 to 12,000, and a master's thesis 15,000 to 25,000. A standard blog post that ranks well tends to sit between 1,200 and 2,000 words, which is four to seven single-spaced pages — longer than most writers expect when they set out.</p>
+
+    <h2>Reading time and speaking time</h2>
+    <p>The tool also converts your word count into minutes, because that is often the real constraint. Silent reading of ordinary prose runs at roughly 200 to 250 words per minute for adults; this calculator uses 200 to stay conservative for dense or technical material. Speaking is far slower. A relaxed presentation pace is about 130 words per minute, which is why a 1,300-word script fills ten minutes and why cramming 2,000 words into that slot forces you to rush.</p>
+    <p>If you are writing a speech, plan from the clock backwards. A five-minute conference lightning talk is around 650 words — barely two and a half double-spaced pages. A 20-minute lecture is about 2,600 words. Then subtract for pauses, slide transitions and audience laughter, which realistically claim 10 to 15 percent of your allotted time.</p>
+
+    <h2>What this estimate cannot see</h2>
+    <p>Every converter, including this one, models a page of uninterrupted paragraph text. Real documents are not that tidy. Headings, subheadings and white space around them can add half a page per section. Block quotes indented on both sides hold fewer words per line. Tables, figures, footnotes and a bibliography all occupy space that contains few or no counted words. Dialogue-heavy fiction, with a new line for each speaker, can run 30 percent fewer words per page than the same word count set as prose.</p>
+    <p>Margins matter more than most people realise too. Going from 1-inch to 1.25-inch margins on all sides removes roughly 12 percent of the text area, which turns a tight nine-page paper into a comfortable ten. If a submission is graded on page count, check the required margin, font and spacing in the style guide before you optimise anything else — and if the brief gives a word count, trust that number and treat pages as scenery.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.plainlanguage.gov/guidelines/" target="_blank" rel="noopener">PlainLanguage.gov — US federal guidelines on document length, structure and readable writing</a></li>
+      <li><a href="https://www.gov.uk/guidance/content-design" target="_blank" rel="noopener">GOV.UK Content Design — official guidance on word counts, headings and page structure</a></li>
+      <li><a href="https://www.w3.org/WAI/tips/designing/" target="_blank" rel="noopener">W3C Web Accessibility Initiative — how font size, line spacing and margins affect text layout</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/ad-copy-limit-check/"><span class="related-ico" aria-hidden="true">📣</span><span class="related-name">Ad Copy Length Checker</span></a><a class="related-item" href="https://tool-hub.me/binary-text-conv/"><span class="related-ico" aria-hidden="true">💻</span><span class="related-name">Binary Translator</span></a><a class="related-item" href="https://tool-hub.me/case-converter/"><span class="related-ico" aria-hidden="true">🔠</span><span class="related-name">Case Converter</span></a><a class="related-item" href="https://tool-hub.me/char-count/"><span class="related-ico" aria-hidden="true">字</span><span class="related-name">Character Counter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Is 275 words per page a universal rule?</summary><p data-i18n="faq.a1">It is a convention, not a standard. The 275 figure comes from Times New Roman 12 pt, double spaced, with 1-inch margins — the default American academic page. Change the font to Arial or Verdana, or widen the margins, and the same page holds 10 to 20 percent fewer words.</p></details>
+    <details><summary data-i18n="faq.q2">Why do teachers ask for word counts instead of page counts?</summary><p data-i18n="faq.a2">Because pages are trivially inflated. Larger fonts, wider margins, extra line spacing and short paragraphs can stretch 1,000 words across six pages. A word count is font-independent, so most universities and journals now specify words and treat pages as a rough guide only.</p></details>
+    <details><summary data-i18n="faq.q3">How many pages is 500, 1,000 or 2,000 words?</summary><p data-i18n="faq.a3">In Times New Roman 12 pt, 500 words fills about 0.9 of a page single spaced and 1.8 pages double spaced. 1,000 words gives roughly 1.8 and 3.6 pages, and 2,000 words gives 3.6 and 7.3. Those are the numbers people round to 1, 2, 4 and 8 pages in everyday conversation.</p></details>
+    <details><summary data-i18n="faq.q4">How many pages should a 10-minute speech be?</summary><p data-i18n="faq.a4">A comfortable spoken pace is around 130 words per minute, so ten minutes is roughly 1,300 words. Double spaced in Times New Roman that is about 4.7 pages of script. Read your draft aloud once with a timer, because pauses, slides and questions eat more time than the arithmetic suggests.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

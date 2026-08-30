@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-/lnOuc1UIX6YEOugkMPXxC+70vw5JIcxKrWU4Bm5O78=' 'sha256-Uxi5+kUTsJTiHFUviJGIvwpseYcskJtg+PvvGZhFCGQ=' 'sha256-ygfoRwmEf2x/PW3IQZkL5gwBjZdK20oSwaCBIBOik+g='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>うるう年チェッカー — 2028年はうるう年？ルールと一覧</title>
+<meta name="description" content="ある年がうるう年かどうかを即座に判定し、4/100/400で割り切れるかというルールを確認、任意の範囲のうるう年一覧を表示し、次のうるう年も見つけられます。無料・すべてブラウザ内で計算。">
+<meta name="keywords" content="leap year checker, is 2028 a leap year, leap years list, when is the next leap year, leap year rules, 윤년 계산기">
+<link rel="canonical" href="https://tool-hub.me/leap-year-checker/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/leap-year-checker/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/leap-year-checker/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/leap-year-checker/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/leap-year-checker/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/leap-year-checker/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/leap-year-checker/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/leap-year-checker/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/leap-year-checker/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/leap-year-checker/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/leap-year-checker/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/leap-year-checker/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/leap-year-checker/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/leap-year-checker/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/leap-year-checker/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/leap-year-checker/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="うるう年チェッカー — 2028年はうるう年？ルールと一覧">
+<meta property="og:description" content="ある年がうるう年かどうかを即座に判定し、4/100/400で割り切れるかというルールを確認、任意の範囲のうるう年一覧を表示し、次のうるう年も見つけられます。無料・すべてブラウザ内で計算。">
+<meta property="og:url" content="https://tool-hub.me/leap-year-checker/ja/">
+<meta property="og:image" content="https://tool-hub.me/leap-year-checker/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0369a1">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Leap Year Checker",
+  "description": "Instantly check if a year is a leap year, see the divide-by-4/100/400 rule, list leap years in any range, and find the next leap year. Free, in-browser.",
+  "url": "https://tool-hub.me/leap-year-checker/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Leap Year Checker", "item": "https://tool-hub.me/leap-year-checker/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What makes a year a leap year? The three-part rule explained",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A year is a leap year if it's divisible by 4 — except that years divisible by 100 are not leap years, unless they're also divisible by 400. So the check runs in three steps: divisible by 4? If not, it's not a leap year. If yes, is it divisible by 100? If not, it is a leap year. If yes, is it divisible by 400? If yes, it is a leap year after all; if not, it isn't. This extra correction exists because a calendar year of exactly 365.25 days would drift from the solar year, and the 100/400 exceptions trim that drift to about 26 seconds per year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 2028 a leap year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. 2028 divided by 4 is 507 with no remainder, and 2028 is not divisible by 100, so the century exception doesn't apply — 2028 is a leap year with 366 days and a February 29. The same logic makes 2024 and 2032 leap years too, since they're each 4 years apart and none of them lands on a century year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is 1900 not a leap year but 2000 is?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both years are divisible by 100, which normally rules out a leap year — but 2000 is also divisible by 400 (2000 ÷ 400 = 5 exactly), so the century exception is itself excepted and 2000 is a leap year. 1900 divided by 400 leaves a remainder (1900 ÷ 400 = 4.75), so it stays a common year with 365 days. The same pattern applies to 1800, 1900, 2100, 2200, and 2300, which are all divisible by 4 and by 100 but not by 400, so none of them is a leap year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often do leap years occur, and when is the next one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leap years occur about once every 4 years, but not exactly — the century rule removes 3 leap years every 400 years, so the true average is 97 leap years per 400 years rather than 100. This checker's \"Next & previous leap year\" panel reads your device's clock and always shows the correct next and previous leap year relative to today, so you don't need to count by hand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Fun facts about people born on February 29 (leaplings)",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "People born on February 29 are sometimes called \"leaplings\" or \"leap day babies,\" and the odds of any given birthday landing on that date are roughly 1 in 1,461. In years without a February 29, leaplings typically celebrate on February 28 or March 1, and which one is treated as the \"legal\" birthday for things like driving age can actually vary by country. Famous leaplings include figures from entertainment and sports, and some leapling communities hold real February 29 parties only once every four years."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Leap Year Checker</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0284c7" href="https://tool-hub.me/date-calculators/">Date &amp; Time</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Leap Year Checker</span></nav>
+  <section class="hero">
+    <h1>Leap Year Checker</h1>
+    <p class="lede" data-i18n="hero.lede">Enter a year to see instantly whether it's a leap year, with the divide-by-4/100/400 rule explained, plus leap years in any range and the next or previous leap year from today.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       i18n contract (docs/I18N.md): every user-visible string carries a data-i18n hook,
+         with the same key added to all 14 language blocks in js/locales.js. Dynamic JS
+         strings are looked up via window.I18N.t("key"); subscribe to the document
+         "i18n:change" event when a re-render on language switch is needed. -->
+  <section class="tool-card" id="tool" aria-label="Leap year checker" data-i18n-aria-label="tool.aria">
+    <style>
+      /* Tool-specific styles — scoped to #tool. The shared shell style.css is not modified. */
+      #tool .lyc-group { margin-top: 26px; }
+      #tool .lyc-group:first-child { margin-top: 0; }
+      #tool .lyc-h3 { font-size: 15px; font-weight: 700; margin: 0 0 12px; color: var(--ink); }
+      #tool .lyc-badge {
+        display: flex; align-items: center; gap: 10px; padding: 14px 16px;
+        border-radius: 10px; font-size: 18px; font-weight: 800; line-height: 1.35;
+      }
+      #tool .lyc-badge.yes {
+        background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+        color: var(--accent-strong);
+        border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line));
+      }
+      [data-theme="dark"] #tool .lyc-badge.yes,
+      [data-theme="auto"] #tool .lyc-badge.yes { color: var(--accent); }
+      #tool .lyc-badge.no { background: var(--bg); color: var(--muted); border: 1px solid var(--line); }
+      #tool .lyc-rules { margin-top: 14px; display: flex; flex-direction: column; gap: 6px; }
+      #tool .lyc-rule {
+        display: flex; align-items: center; gap: 10px; font-size: 14.5px;
+        padding: 8px 10px; border-radius: 8px; background: var(--bg);
+      }
+      #tool .lyc-rule.dim { opacity: 0.55; }
+      #tool .lyc-rule .ic {
+        flex: 0 0 20px; width: 20px; height: 20px; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 12px; font-weight: 800; color: #fff;
+      }
+      #tool .lyc-rule .ic.yes { background: var(--accent); }
+      #tool .lyc-rule .ic.no { background: var(--muted); }
+      #tool .lyc-rule .ic.na { background: var(--line); color: var(--muted); }
+      #tool .lyc-explain {
+        margin-top: 12px; font-size: 14px; color: var(--ink); line-height: 1.6;
+        padding: 12px 14px; border-radius: 8px;
+        background: color-mix(in srgb, var(--accent) 5%, var(--surface));
+        border: 1px solid var(--line);
+      }
+      #tool .lyc-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+      #tool .lyc-stat { padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+      #tool .lyc-stat .lbl { font-size: 12.5px; color: var(--muted); font-weight: 600; }
+      #tool .lyc-stat .val { font-size: 20px; font-weight: 800; color: var(--accent); margin-top: 2px; font-variant-numeric: tabular-nums; }
+      #tool .lyc-err { margin-top: 10px; font-size: 13.5px; color: var(--ink); font-weight: 600; }
+      #tool .lyc-range-row { display: flex; gap: 10px; flex-wrap: wrap; }
+      #tool .lyc-range-row .input-group { flex: 1 1 140px; min-width: 0; margin: 0; }
+      #tool .lyc-range-row .input-group label { margin-top: 0; }
+      #tool .lyc-range-summary { margin-top: 14px; font-size: 14.5px; font-weight: 700; color: var(--ink); }
+      #tool .lyc-chip-list {
+        display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;
+        max-height: 220px; overflow-y: auto; padding: 2px;
+      }
+      #tool .lyc-chip {
+        padding: 5px 10px; border-radius: 999px; background: var(--bg);
+        border: 1px solid var(--line); font-size: 13px; font-weight: 600;
+        color: var(--ink); font-variant-numeric: tabular-nums;
+      }
+      #tool .lyc-today-note { margin: 0 0 4px; font-size: 14.5px; color: var(--ink); font-weight: 600; }
+      #tool .lyc-nextprev { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+      #tool .lyc-np-card { padding: 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+      #tool .lyc-np-card .lbl { font-size: 12.5px; color: var(--muted); font-weight: 600; }
+      #tool .lyc-np-card .val {
+        font-size: 17px; font-weight: 800; color: var(--accent); margin-top: 4px;
+        font-variant-numeric: tabular-nums; overflow-wrap: anywhere;
+      }
+      @media (max-width: 420px) {
+        #tool .lyc-stats, #tool .lyc-nextprev { grid-template-columns: 1fr; }
+        #tool .lyc-range-row { flex-direction: column; align-items: stretch; }
+      }
+    </style>
+
+    <!-- 섹션 A: 연도 판정 -->
+    <div class="lyc-group">
+      <h2 class="lyc-h3" data-i18n="tool.check.heading">Check a year</h2>
+      <div class="input-group">
+        <label for="lyc-year" data-i18n="tool.year.label">Year to check</label>
+        <input id="lyc-year" type="number" inputmode="numeric" min="1" max="9999" step="1" placeholder="e.g. 2028" data-i18n-placeholder="tool.year.ph" autocomplete="off" autofocus>
+      </div>
+      <p id="lyc-year-err" class="lyc-err" role="alert" hidden></p>
+
+      <div id="lyc-result" aria-live="polite" hidden>
+        <div id="lyc-badge" class="lyc-badge"></div>
+        <div class="lyc-rules">
+          <div id="lyc-rule-div4" class="lyc-rule"><span class="ic"></span><span class="lb"></span></div>
+          <div id="lyc-rule-div100" class="lyc-rule"><span class="ic"></span><span class="lb"></span></div>
+          <div id="lyc-rule-div400" class="lyc-rule"><span class="ic"></span><span class="lb"></span></div>
+        </div>
+        <p id="lyc-explain" class="lyc-explain"></p>
+        <p id="lyc-nearest" class="lyc-today-note" style="margin-top:12px" hidden></p>
+        <div class="lyc-stats">
+          <div class="lyc-stat">
+            <div class="lbl" data-i18n="tool.feb.label">Days in February</div>
+            <div class="val" id="lyc-feb-val">—</div>
+          </div>
+          <div class="lyc-stat">
+            <div class="lbl" data-i18n="tool.days.label">Days in the year</div>
+            <div class="val" id="lyc-days-val">—</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 섹션 B: 범위 내 윤년 목록 -->
+    <div class="lyc-group">
+      <h2 class="lyc-h3" data-i18n="tool.range.heading">Leap years in a range</h2>
+      <div class="lyc-range-row">
+        <div class="input-group">
+          <label for="lyc-range-from" data-i18n="tool.range.from.label">From year</label>
+          <input id="lyc-range-from" type="number" inputmode="numeric" min="1" max="9999" step="1" autocomplete="off">
+        </div>
+        <div class="input-group">
+          <label for="lyc-range-to" data-i18n="tool.range.to.label">To year</label>
+          <input id="lyc-range-to" type="number" inputmode="numeric" min="1" max="9999" step="1" autocomplete="off">
+        </div>
+      </div>
+      <p id="lyc-range-err" class="lyc-err" role="alert" hidden></p>
+      <p id="lyc-range-summary" class="lyc-range-summary" aria-live="polite" hidden></p>
+      <div id="lyc-range-list" class="lyc-chip-list" aria-live="polite" hidden></div>
+    </div>
+
+    <!-- 섹션 C: 오늘 기준 다음/이전 윤년 -->
+    <div class="lyc-group">
+      <h2 class="lyc-h3" data-i18n="tool.next.heading">Next &amp; previous leap year</h2>
+      <p id="lyc-today-summary" class="lyc-today-note"></p>
+      <p id="lyc-thisyear" class="lyc-today-note"></p>
+      <div class="lyc-nextprev">
+        <div class="lyc-np-card">
+          <div class="lbl" data-i18n="tool.next.label">Next leap year</div>
+          <div class="val" id="lyc-next-val">—</div>
+        </div>
+        <div class="lyc-np-card">
+          <div class="lbl" data-i18n="tool.prev.label">Previous leap year</div>
+          <div class="val" id="lyc-prev-val">—</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why leap years exist</h2>
+    <p>A solar year — the time Earth actually takes to orbit the Sun — is about 365.2422 days, not a clean 365. Left uncorrected, a 365-day calendar would drift by roughly a day every four years, and after a few centuries the seasons would slide across the calendar entirely. Adding a 366th day (February 29) about once every four years brings the average calendar year to 365.25 days, much closer to the real figure. The Gregorian calendar, used almost everywhere today, then trims that "almost closer" with the 100/400 exception below, landing on an average of 365.2425 days per year — off from the true solar year by only about 26 seconds.</p>
+
+    <h2>The three-step rule this tool checks</h2>
+    <p>Every year is tested in the same order:</p>
+    <ol>
+      <li><strong>Divisible by 4?</strong> If not, it's a common year (365 days) — stop here.</li>
+      <li><strong>Divisible by 100?</strong> If not, it's a leap year (366 days) — stop here.</li>
+      <li><strong>Divisible by 400?</strong> If yes, it's a leap year after all. If no, it's a common year.</li>
+    </ol>
+    <p>In short: leap every 4 years, <em>except</em> century years, <em>except</em> when the century year is also divisible by 400. That double exception is what makes 1900 a common year but 2000 a leap year, even though both are divisible by 100.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — an ordinary leap year.</strong> 2028 &divide; 4 = 507 exactly, and 2028 is not divisible by 100, so the check stops at step 1: <strong>2028 is a leap year.</strong></p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — the century exception.</strong> 2100 &divide; 4 = 525 exactly, and 2100 &divide; 100 = 21 exactly, so step 2 triggers. 2100 &divide; 400 = 5.25, not a whole number, so step 3 fails too: <strong>2100 is not a leap year</strong>, unlike the years right around it (2096 and 2104 both are).</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — the exception to the exception.</strong> 2000 &divide; 4 = 500, and 2000 &divide; 100 = 20, so step 2 also triggers. But 2000 &divide; 400 = 5 exactly, so step 3 passes: <strong>2000 is a leap year</strong> after all.</p>
+    </div>
+
+    <h2>Leap years around the year 2000</h2>
+    <table>
+      <thead><tr><th>Year</th><th>÷4</th><th>÷100</th><th>÷400</th><th>Leap year?</th></tr></thead>
+      <tbody>
+        <tr><td>1896</td><td>Yes</td><td>No</td><td>—</td><td>Yes</td></tr>
+        <tr><td>1900</td><td>Yes</td><td>Yes</td><td>No</td><td><strong>No</strong></td></tr>
+        <tr><td>2000</td><td>Yes</td><td>Yes</td><td>Yes</td><td><strong>Yes</strong></td></tr>
+        <tr><td>2024</td><td>Yes</td><td>No</td><td>—</td><td>Yes</td></tr>
+        <tr><td>2028</td><td>Yes</td><td>No</td><td>—</td><td>Yes</td></tr>
+        <tr><td>2100</td><td>Yes</td><td>Yes</td><td>No</td><td><strong>No</strong></td></tr>
+      </tbody>
+    </table>
+
+    <h2>Using the range and next/previous tools</h2>
+    <p>The <em>Leap years in a range</em> section lists every leap year between two years you choose (up to a 500-year span, to keep the list readable) — handy for filling in a calendar, checking a birth-year cohort, or verifying a date library. The <em>Next &amp; previous leap year</em> panel doesn't need any input: it reads your device's current date and reports the closest leap years before and after today, recalculated every time you open the page.</p>
+
+    <h2>A note on dates before 1582</h2>
+    <p>The rule above describes the <strong>Gregorian calendar</strong>, adopted in most of Europe starting in 1582 and eventually worldwide. Before that, the <strong>Julian calendar</strong> was in use, which added a leap day every 4 years with no century exception at all — so under the Julian rule, both 1900 and 2100 would have been leap years. This tool always applies the modern Gregorian rule, which is the standard convention for calendar software and for questions like "is 2028 a leap year," but historians working with pre-1582 dates should keep the distinction in mind.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nist.gov/pml/time-and-frequency-division" target="_blank" rel="noopener">NIST Time and Frequency Division — official U.S. timekeeping, calendars and leap adjustments</a></li>
+      <li><a href="https://www.iso.org/iso-8601-date-and-time-format.html" target="_blank" rel="noopener">ISO 8601 — international standard for representing dates, including the proleptic Gregorian calendar</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" rel="noopener">MDN JavaScript Date reference — how software handles leap days and date arithmetic</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/military-time-conv/"><span class="related-ico" aria-hidden="true">🎖️</span><span class="related-name">Military Time Converter</span></a><a class="related-item" href="https://tool-hub.me/moon-phase-calc/"><span class="related-ico" aria-hidden="true">🌙</span><span class="related-name">Moon Phase Calculator</span></a><a class="related-item" href="https://tool-hub.me/pomodoro-timer/"><span class="related-ico" aria-hidden="true">🍅</span><span class="related-name">Pomodoro Timer</span></a><a class="related-item" href="https://tool-hub.me/stopwatch/"><span class="related-ico" aria-hidden="true">⏱️</span><span class="related-name">Online Stopwatch</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What makes a year a leap year? The three-part rule explained</summary>
+      <p data-i18n="faq.a1">A year is a leap year if it's divisible by 4 — except that years divisible by 100 are not leap years, unless they're also divisible by 400. So the check runs in three steps: divisible by 4? If not, it's not a leap year. If yes, is it divisible by 100? If not, it is a leap year. If yes, is it divisible by 400? If yes, it is a leap year after all; if not, it isn't. This extra correction exists because a calendar year of exactly 365.25 days would drift from the solar year, and the 100/400 exceptions trim that drift to about 26 seconds per year.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Is 2028 a leap year?</summary>
+      <p data-i18n="faq.a2">Yes. 2028 divided by 4 is 507 with no remainder, and 2028 is not divisible by 100, so the century exception doesn't apply — 2028 is a leap year with 366 days and a February 29. The same logic makes 2024 and 2032 leap years too, since they're each 4 years apart and none of them lands on a century year.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why is 1900 not a leap year but 2000 is?</summary>
+      <p data-i18n="faq.a3">Both years are divisible by 100, which normally rules out a leap year — but 2000 is also divisible by 400 (2000 ÷ 400 = 5 exactly), so the century exception is itself excepted and 2000 is a leap year. 1900 divided by 400 leaves a remainder (1900 ÷ 400 = 4.75), so it stays a common year with 365 days. The same pattern applies to 1800, 1900, 2100, 2200, and 2300, which are all divisible by 4 and by 100 but not by 400, so none of them is a leap year.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How often do leap years occur, and when is the next one?</summary>
+      <p data-i18n="faq.a4">Leap years occur about once every 4 years, but not exactly — the century rule removes 3 leap years every 400 years, so the true average is 97 leap years per 400 years rather than 100. This checker's "Next & previous leap year" panel reads your device's clock and always shows the correct next and previous leap year relative to today, so you don't need to count by hand.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Fun facts about people born on February 29 (leaplings)</summary>
+      <p data-i18n="faq.a5">People born on February 29 are sometimes called "leaplings" or "leap day babies," and the odds of any given birthday landing on that date are roughly 1 in 1,461. In years without a February 29, leaplings typically celebrate on February 28 or March 1, and which one is treated as the "legal" birthday for things like driving age can actually vary by country. Famous leaplings include figures from entertainment and sports, and some leapling communities hold real February 29 parties only once every four years.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

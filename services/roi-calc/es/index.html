@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-pHjzS1ETZ8cIJBQEinLQgIg8mMO+67ujY0NRQu+vA/c=' 'sha256-zC/pZnHcZ+ePpDjPyLt7jtvhaRw33eZEKtFC2RZuqG0=' 'sha256-lqs3GDW/k2XABvvysv7XhTcBrhZpuIIsw6vya8t4TS4='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de ROI — retorno de la inversión y ROI anualizado</title>
+<meta name="description" content="Calculadora de ROI gratuita: introduce la cantidad invertida y la cantidad recuperada para obtener el retorno de la inversión (ROI), el beneficio neto y el múltiplo de retorno, más el ROI anualizado si añades un periodo de tenencia. Sin registro, sin anuncios, calculado en tu navegador.">
+<meta name="keywords" content="roi calculator, return on investment calculator, ROI 계산기, 투자수익률 계산기, annualized roi calculator, net profit calculator, investment return calculator">
+<link rel="canonical" href="https://tool-hub.me/roi-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/roi-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/roi-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/roi-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/roi-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/roi-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/roi-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/roi-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/roi-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/roi-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/roi-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/roi-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/roi-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/roi-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/roi-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/roi-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de ROI — retorno de la inversión y ROI anualizado">
+<meta property="og:description" content="Calculadora de ROI gratuita: introduce la cantidad invertida y la cantidad recuperada para obtener el retorno de la inversión (ROI), el beneficio neto y el múltiplo de retorno, más el ROI anualizado si añades un periodo de tenencia. Sin registro, sin anuncios, calculado en tu navegador.">
+<meta property="og:url" content="https://tool-hub.me/roi-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/roi-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#059669">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "ROI Calculator",
+  "description": "Free ROI calculator: enter the amount you invested and the amount returned to get return on investment (ROI), net profit, and return multiple — plus annualized ROI when you add a holding period. No login, no ads, computed in your browser.",
+  "url": "https://tool-hub.me/roi-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-24",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ROI Calculator",
+      "item": "https://tool-hub.me/roi-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is ROI, and what is the exact formula with a worked example?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ROI (return on investment) is your profit expressed as a percentage of what you put in: ROI = (Amount returned − Amount invested) ÷ Amount invested × 100. Worked example: you invest 10,000 and get back 25,000. The net profit is 25,000 − 10,000 = 15,000; divide by the 10,000 you invested to get 1.5, then multiply by 100 for a 150% ROI. As a return on investment calculator this tool shows the same result three ways at once — a 150% ROI, a 15,000 net profit, and a 2.5× return multiple — so this roi calculator makes the number easy to read however you think about it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ROI vs annualized ROI — why isn't the same ROI over 1 year and 5 years equally good?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A plain ROI ignores time: turning 10,000 into 25,000 is a 150% ROI whether it took one year or five, but those are very different investments. Annualized ROI fixes this by spreading the growth evenly across the holding period, using the same math as CAGR: annualized ROI = (Amount returned ÷ Amount invested)^(1 ÷ years) − 1. That 150% total is a 150% annualized ROI over 1 year, but only about 20.11% per year over 5 years. That is why this annualized roi calculator asks for an optional holding period — so you can compare a quick flip and a long hold on the same yearly scale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The holding period is optional — how do years, dates, and leap years work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You get ROI, net profit, and the return multiple from just the amount invested and the amount returned — no period needed. Add a holding period only when you also want annualized ROI. Type the number of years directly (decimals allowed, so 3.5 works) or switch to the dates tab and enter a start and end date; in date mode this investment return calculator counts the exact days between them and divides by 365.25, the average length of a year including leap years, so a span that crosses February 29 is measured correctly instead of rounded to whole years. Any positive period — half a year or 7.3 years — is annualized just as precisely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can ROI be negative, and why does an amount returned of 0 show −100%?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If you get back less than you invested, ROI is negative — a real loss shown in red, with a net profit below zero. If the amount returned is exactly 0 you have lost everything, so ROI = (0 − Amount invested) ÷ Amount invested × 100 = −100%, the net profit equals your whole investment as a loss, and the return multiple is 0×. With a holding period the annualized ROI is −100% too, because 0 raised to any positive power stays 0. That is a correct answer, not an error, so this net profit calculator labels it clearly. An amount invested of 0 or a negative amount returned has no meaningful ROI, so the tool asks you to fix those inputs instead of returning a misleading number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the math currency-agnostic, is anything sent to a server, and is this investment advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ROI is a percentage, so the figure itself is the same in any currency; only the net profit and the year-by-year schedule carry a currency, and those are formatted with your locale's grouping, symbol and decimal places through Intl — nothing is hard-coded. Every calculation in this roi calculator runs entirely in your browser: no login, no account, and no prices fetched from any market feed — you type every value yourself, and your last entry is saved only in your browser's local storage. And this is an arithmetic calculation, not investment advice: it tells you the math of a return, not whether to buy, hold or sell."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>ROI Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">ROI Calculator</span></nav>
+  <section class="hero">
+    <h1>ROI Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter what you invested and what you got back to see your return on investment (ROI), net profit, and return multiple in seconds. Add a holding period — in years or dates — to also get annualized ROI. Works in any currency.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; }
+      #tool .chip { padding:7px 14px; font-size:14px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .chip.is-active { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool .mode-row { display:flex; gap:18px; flex-wrap:wrap; margin:6px 0 4px; }
+      #tool .mode-row label { display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14px; margin:0; cursor:pointer; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:12px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .pl-pos { color:#059669; } #tool .pl-neg { color:#dc2626; }
+      #tool details.adv { margin-top:14px; border:1px solid var(--line); border-radius:8px; padding:0 12px; }
+      #tool details.adv > summary { cursor:pointer; font-weight:600; padding:11px 0; font-size:15px; }
+      #tool details.adv[open] { padding-bottom:12px; }
+      #tool table.sched { width:100%; border-collapse:collapse; margin-top:4px; font-size:14px; }
+      #tool table.sched th, #tool table.sched td { text-align:right; padding:6px 8px; border-bottom:1px solid var(--line); }
+      #tool table.sched th:first-child, #tool table.sched td:first-child { text-align:left; }
+      #tool table.sched th { color:var(--muted); font-weight:600; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="cost-input" data-i18n="tool.cost.label">Amount invested</label>
+        <input type="text" id="cost-input" inputmode="decimal" autocomplete="off"
+               placeholder="e.g. 10,000" data-i18n-placeholder="tool.cost.ph">
+      </div>
+      <div>
+        <label for="ret-input" data-i18n="tool.ret.label">Amount returned</label>
+        <input type="text" id="ret-input" inputmode="decimal" autocomplete="off"
+               placeholder="e.g. 25,000" data-i18n-placeholder="tool.ret.ph">
+      </div>
+    </div>
+
+    <p id="period-label" style="font-weight:600;font-size:14px;margin:14px 0 0;" data-i18n="tool.period.label">Holding period (optional)</p>
+    <div class="mode-row" role="radiogroup" aria-labelledby="period-label">
+      <label><input type="radio" name="periodmode" value="years" checked><span data-i18n="tool.period.years">Years</span></label>
+      <label><input type="radio" name="periodmode" value="dates"><span data-i18n="tool.period.dates">Dates</span></label>
+    </div>
+
+    <div id="years-field">
+      <div class="field-row">
+        <div>
+          <label for="years-input" id="years-label" data-i18n="tool.years.label">Number of years</label>
+          <input type="number" id="years-input" inputmode="decimal" min="0" step="any" autocomplete="off"
+                 placeholder="e.g. 3" data-i18n-placeholder="tool.years.ph">
+        </div>
+        <div>
+          <label for="unit-select" data-i18n="tool.unit.label">Period unit</label>
+          <select id="unit-select">
+            <option value="years" data-i18n="tool.period.years">Years</option>
+            <option value="months" data-i18n="tool.unit.months">Months</option>
+          </select>
+        </div>
+      </div>
+      <div class="chips" id="year-chips" role="group" aria-label="Common periods in years" data-i18n-aria-label="tool.years.chipsAria">
+        <button type="button" class="chip" data-years="1">1</button>
+        <button type="button" class="chip" data-years="3">3</button>
+        <button type="button" class="chip" data-years="5">5</button>
+        <button type="button" class="chip" data-years="10">10</button>
+      </div>
+    </div>
+
+    <div id="dates-field" hidden>
+      <div class="field-row">
+        <div>
+          <label for="start-date" data-i18n="tool.startDate.label">Start date</label>
+          <input type="date" id="start-date" autocomplete="off">
+        </div>
+        <div>
+          <label for="end-date" data-i18n="tool.endDate.label">End date</label>
+          <input type="date" id="end-date" autocomplete="off">
+        </div>
+      </div>
+    </div>
+
+    <label for="currency-select" data-i18n="tool.currency.label">Currency</label>
+    <select id="currency-select" aria-label="Currency" data-i18n-aria-label="tool.currency.aria"></select>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <div class="result-cards">
+          <div class="rcard hero-card"><div class="rc-label" data-i18n="tool.result.roi">ROI (return on investment)</div><div class="rc-val" id="r-roi"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.profit">Net profit</div><div class="rc-val" id="r-profit"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.mult">Return multiple</div><div class="rc-val" id="r-mult"></div></div>
+          <div class="rcard" id="annual-card" hidden><div class="rc-label" data-i18n="tool.result.annual">Annualized ROI</div><div class="rc-val" id="r-annual"></div></div>
+        </div>
+        <p class="subtle" id="r-sub" style="margin:10px 0 0;"></p>
+        <p class="subtle" id="r-days" style="margin:4px 0 0;" hidden></p>
+        <p class="subtle" id="r-loss" style="margin:6px 0 0;font-weight:600;" hidden></p>
+        <p class="subtle" id="period-note" style="margin:6px 0 0;" hidden></p>
+
+        <details class="adv" id="sched-wrap" hidden>
+          <summary data-i18n="tool.sched.summary">Year-by-year growth schedule</summary>
+          <table class="sched">
+            <thead><tr><th data-i18n="tool.sched.year">Year</th><th data-i18n="tool.sched.value">Value</th></tr></thead>
+            <tbody id="sched-body"></tbody>
+          </table>
+          <p class="subtle" id="sched-trunc" style="margin:6px 0 0;" hidden></p>
+        </details>
+
+        <p class="subtle" id="r-clipped" style="margin:12px 0 0;color:#d97706;" data-i18n="tool.note.clipped" hidden>Some values were above the allowed range and were capped for this calculation.</p>
+        <p class="subtle" style="margin:12px 0 0;font-weight:600;" data-i18n="tool.note.disclaimer">This is an arithmetic calculation, not investment advice.</p>
+        <p class="subtle" style="margin:4px 0 0;" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>ROI, net profit, and return multiple — what each number tells you</h2>
+    <p>Return on investment collapses everything you put into a deal and everything you got out of it into a single ratio, so a $5 investment and a $5,000,000 investment can be compared on the same percentage scale. Net profit is the plain currency answer to "how much richer am I" — no ratio, just the money. Return multiple restates the same result as a multiplier of your original stake, which is often how investors and founders talk about a deal informally ("it returned 2.5x"). This calculator gives you all three from the same two inputs, then adds a fourth — annualized ROI — the moment you tell it how long the money was tied up.</p>
+
+    <h3>How to read the two required inputs</h3>
+    <ol>
+      <li><strong>Amount invested</strong> is everything the deal cost you, not just the sticker price — fold in commissions, closing costs, or fees you paid to get in, since they were still money you committed.</li>
+      <li><strong>Amount returned</strong> is everything you got back, net of any costs to get out — sale proceeds after selling fees, total revenue, or the current value if you're marking an open position to market.</li>
+      <li>Leave the holding period blank if you only need ROI, net profit, and the return multiple for a single completed transaction.</li>
+      <li>Fill in a holding period — as a number of years or as start/end dates — only when you want to compare this result against a different-length investment on a per-year basis.</li>
+      <li>Currency only changes how net profit and the year-by-year schedule are formatted; ROI itself is a dimensionless percentage.</li>
+    </ol>
+
+    <h3>The ROI formula</h3>
+    <div class="example">
+      <p><strong>ROI = (Amount returned − Amount invested) ÷ Amount invested × 100</strong></p>
+      <p>The numerator — amount returned minus amount invested — is your net profit in the same currency you entered. Dividing by the amount invested rescales that profit against your original stake, and multiplying by 100 turns the ratio into a percentage. Because it's a ratio of profit to cost, ROI carries no unit of time on its own — a 40% ROI could describe a trade that took three weeks or a project that took three years, which is exactly the gap annualized ROI closes.</p>
+    </div>
+
+    <h3>Worked example: a property flip, including costs</h3>
+    <div class="example">
+      <p>You buy a property for 200,000 and pay 8,000 in closing costs, so amount invested = 208,000. You sell it 2.5 years later for 260,000 after 6,000 in selling costs, so amount returned = 254,000. Net profit = 254,000 − 208,000 = 46,000. ROI = 46,000 ÷ 208,000 × 100 ≈ 22.12%, and the return multiple is 254,000 ÷ 208,000 ≈ 1.22×. Fed through the 2.5-year holding period, annualized ROI ≈ 8.32% per year — the number you'd actually compare against a savings rate or another investment's yearly pace.</p>
+    </div>
+
+    <h3>From ROI to annualized ROI</h3>
+    <div class="example">
+      <p><strong>Annualized ROI = (Amount returned ÷ Amount invested)^(1 ÷ years) − 1</strong></p>
+      <p>Amount returned ÷ amount invested is the same growth multiple shown in the results — 1.22× in the example above. Raising it to the power of 1 ÷ years spreads that multiple evenly across every year of the holding period instead of crediting it all to a single point in time; subtracting 1 and multiplying by 100 converts the result back into a percentage. In dates mode, "years" is the exact number of days between your two dates divided by 365.25, so a 2-year-and-7-month hold is annualized on its real length, not rounded to 2 or 3 years.</p>
+    </div>
+
+    <h3>How ROI's annualized figure differs from CAGR</h3>
+    <p>Annualized ROI and CAGR (compound annual growth rate) use the identical exponent formula — (end ÷ start)^(1/years) − 1 — so for the same two amounts and the same period, they will always agree to the last decimal. What differs is the entry point and the default output. A CAGR calculator is built around a beginning value and an ending value and always centers on the yearly rate, because it's typically used to track something you already held and watched over time — a stock position, a portfolio, a company's revenue. This ROI calculator starts from "amount invested" and "amount returned," language that fits a single completed transaction — a project, a flip, a one-off deal — where the period is optional because the first thing you usually want to know is simply "did this pay off, and by how much," not "at what yearly pace." Add the holding period here and you get the exact same annualized figure a CAGR calculator would give you; leave it out and you still get the plain ROI, net profit, and return multiple that a pure growth-rate tool doesn't surface by default.</p>
+
+    <h3>Same ROI, different annualized rate depending on holding period</h3>
+    <p>Because the exponent divides by the number of years, one fixed ROI maps to a very different annualized ROI depending on how long it took to earn. The table below holds a 200% ROI (the investment triples — return multiple 3×) constant and only changes the holding period:</p>
+    <table>
+      <thead><tr><th>Holding period</th><th>Total ROI</th><th>Return multiple</th><th>Annualized ROI</th></tr></thead>
+      <tbody>
+        <tr><td>1 year</td><td>200%</td><td>3.00×</td><td>200.00%</td></tr>
+        <tr><td>2 years</td><td>200%</td><td>3.00×</td><td>73.21%</td></tr>
+        <tr><td>3 years</td><td>200%</td><td>3.00×</td><td>44.22%</td></tr>
+        <tr><td>5 years</td><td>200%</td><td>3.00×</td><td>24.57%</td></tr>
+        <tr><td>10 years</td><td>200%</td><td>3.00×</td><td>11.61%</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--muted)">The 1-year row is the only case where plain ROI and annualized ROI match — beyond one year, annualized ROI is always lower than the total ROI it was derived from.</p>
+
+    <h3>Common mistakes and things people overlook</h3>
+    <ul>
+      <li><strong>Leaving out fees on either side.</strong> Commissions, closing costs, and taxes paid to enter or exit a deal are real cash outlays — fold them into amount invested or subtract them from amount returned so ROI reflects what you actually kept.</li>
+      <li><strong>Comparing raw ROI across different holding periods.</strong> A 60% ROI over six months and a 60% ROI over four years are not equally good — switch on the holding period and compare the annualized figures instead.</li>
+      <li><strong>Treating an amount returned of 0 as a bug.</strong> Losing the entire investment is a real, valid outcome and correctly shows −100% ROI — the calculator isn't wrong, the deal was.</li>
+      <li><strong>Feeding it a multi-cash-flow deal.</strong> This formula assumes one lump sum in and one lump sum out. If you added or withdrew money partway through — like periodic contributions to a portfolio — a two-point ROI or annualized ROI will misstate the real performance; that needs a money-weighted measure instead.</li>
+      <li><strong>Reading annualized ROI as a forecast.</strong> It summarizes a rate that already happened between two known points in the past — it doesn't promise the same pace will continue.</li>
+    </ul>
+
+    <h3>What this calculator doesn't cover</h3>
+    <p>ROI and annualized ROI here are computed exactly as entered — the tool doesn't automatically deduct taxes, inflation, or fees unless you've already folded them into amount invested or amount returned yourself, and it doesn't handle deals with more than one contribution or withdrawal date. It also doesn't account for risk: two deals can post the same ROI while one was a predictable, low-volatility arrangement and the other swung wildly before landing on the same number. Treat every result as an arithmetic summary of what already happened, not investment advice and not a projection of what will happen next.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.investor.gov/" target="_blank" rel="noopener">SEC Investor.gov — official U.S. investor education on returns, compounding and fees</a></li>
+      <li><a href="https://www.consumerfinance.gov/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — plain-language guidance on evaluating financial products</a></li>
+      <li><a href="https://www.irs.gov/taxtopics/tc409" target="_blank" rel="noopener">IRS Topic No. 409 — how capital gains and losses affect your net return</a></li>
+      <li><a href="https://www.khanacademy.org/economics-finance-domain" target="_blank" rel="noopener">Khan Academy Finance &amp; Capital Markets — free lessons on interest, growth rates and ROI math</a></li>
+    </ul>
+  </section>
+
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/rule-of-72-calc/"><span class="related-ico" aria-hidden="true">✌️</span><span class="related-name">Rule of 72 Calculator</span></a><a class="related-item" href="https://tool-hub.me/salary-calc/"><span class="related-ico" aria-hidden="true">💰</span><span class="related-name">Korean Salary Calculator</span></a><a class="related-item" href="https://tool-hub.me/salary-hike-calc/"><span class="related-ico" aria-hidden="true">📊</span><span class="related-name">Salary Hike Calculator</span></a><a class="related-item" href="https://tool-hub.me/sales-tax-calc/"><span class="related-ico" aria-hidden="true">🧾</span><span class="related-name">Sales Tax Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다.
+         ★ FAQ 작성 후 반드시: node factory/gen-faq-schema.js <slug> --apply
+           → FAQPage JSON-LD 를 주입해 검색결과 리치 스니펫(FAQ 펼침)을 받는다.
+           스키마는 여기 보이는 원문과 일치해야 하므로(Google 요건) 문구를 고치면 다시 돌린다. -->
+    <details><summary data-i18n="faq.q1">What is ROI, and what is the exact formula with a worked example?</summary><p data-i18n="faq.a1">ROI (return on investment) is your profit expressed as a percentage of what you put in: ROI = (Amount returned − Amount invested) ÷ Amount invested × 100. Worked example: you invest 10,000 and get back 25,000. The net profit is 25,000 − 10,000 = 15,000; divide by the 10,000 you invested to get 1.5, then multiply by 100 for a 150% ROI. As a return on investment calculator this tool shows the same result three ways at once — a 150% ROI, a 15,000 net profit, and a 2.5× return multiple — so this roi calculator makes the number easy to read however you think about it.</p></details>
+    <details><summary data-i18n="faq.q2">ROI vs annualized ROI — why isn't the same ROI over 1 year and 5 years equally good?</summary><p data-i18n="faq.a2">A plain ROI ignores time: turning 10,000 into 25,000 is a 150% ROI whether it took one year or five, but those are very different investments. Annualized ROI fixes this by spreading the growth evenly across the holding period, using the same math as CAGR: annualized ROI = (Amount returned ÷ Amount invested)^(1 ÷ years) − 1. That 150% total is a 150% annualized ROI over 1 year, but only about 20.11% per year over 5 years. That is why this annualized roi calculator asks for an optional holding period — so you can compare a quick flip and a long hold on the same yearly scale.</p></details>
+    <details><summary data-i18n="faq.q3">The holding period is optional — how do years, dates, and leap years work?</summary><p data-i18n="faq.a3">You get ROI, net profit, and the return multiple from just the amount invested and the amount returned — no period needed. Add a holding period only when you also want annualized ROI. Type the number of years directly (decimals allowed, so 3.5 works) or switch to the dates tab and enter a start and end date; in date mode this investment return calculator counts the exact days between them and divides by 365.25, the average length of a year including leap years, so a span that crosses February 29 is measured correctly instead of rounded to whole years. Any positive period — half a year or 7.3 years — is annualized just as precisely.</p></details>
+    <details><summary data-i18n="faq.q4">Can ROI be negative, and why does an amount returned of 0 show −100%?</summary><p data-i18n="faq.a4">Yes. If you get back less than you invested, ROI is negative — a real loss shown in red, with a net profit below zero. If the amount returned is exactly 0 you have lost everything, so ROI = (0 − Amount invested) ÷ Amount invested × 100 = −100%, the net profit equals your whole investment as a loss, and the return multiple is 0×. With a holding period the annualized ROI is −100% too, because 0 raised to any positive power stays 0. That is a correct answer, not an error, so this net profit calculator labels it clearly. An amount invested of 0 or a negative amount returned has no meaningful ROI, so the tool asks you to fix those inputs instead of returning a misleading number.</p></details>
+    <details><summary data-i18n="faq.q5">Is the math currency-agnostic, is anything sent to a server, and is this investment advice?</summary><p data-i18n="faq.a5">ROI is a percentage, so the figure itself is the same in any currency; only the net profit and the year-by-year schedule carry a currency, and those are formatted with your locale's grouping, symbol and decimal places through Intl — nothing is hard-coded. Every calculation in this roi calculator runs entirely in your browser: no login, no account, and no prices fetched from any market feed — you type every value yourself, and your last entry is saved only in your browser's local storage. And this is an arithmetic calculation, not investment advice: it tells you the math of a return, not whether to buy, hold or sell.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

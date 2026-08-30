@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-KH2WAxdRoaLCHS1CRzInkYma/FqN0CacUXVKMc3qiIc=' 'sha256-gWCnzzPWp2qiINjXUtOSOSfkoE7olgj4Cl+09E292Fc=' 'sha256-/bBOFPB501g0Thm2fLMwABKYVBwcjZJrd7reYqX3Bdg='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de combinaciones — nCr, nPr y permutaciones</title>
+<meta name="description" content="Calcula combinaciones (nCr) y permutaciones (nPr) para cualquier n y r. Verás la fórmula desarrollada con tus propios números, los dos resultados y la opción con repetición.">
+<meta name="keywords" content="combination calculator, permutation calculator, ncr calculator, npr calculator, nCr and nPr, combinations with repetition, lottery odds calculator">
+<link rel="canonical" href="https://tool-hub.me/permutation-combination-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/permutation-combination-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/permutation-combination-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/permutation-combination-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/permutation-combination-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/permutation-combination-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/permutation-combination-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/permutation-combination-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/permutation-combination-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/permutation-combination-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/permutation-combination-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/permutation-combination-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/permutation-combination-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/permutation-combination-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/permutation-combination-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/permutation-combination-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de combinaciones — nCr, nPr y permutaciones">
+<meta property="og:description" content="Calcula combinaciones (nCr) y permutaciones (nPr) para cualquier n y r. Verás la fórmula desarrollada con tus propios números, los dos resultados y la opción con repetición.">
+<meta property="og:url" content="https://tool-hub.me/permutation-combination-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/permutation-combination-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1e40af">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Permutation and Combination Calculator",
+  "description": "Calculate combinations (nCr) and permutations (nPr) for any n and r. See the formula written out with your own numbers, both results, and repetition options.",
+  "url": "https://tool-hub.me/permutation-combination-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combination or permutation — which one do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ask whether reordering the same items creates a different result. A 4-digit lock code is a permutation because 1234 and 4321 open different locks. Three pizza toppings are a combination because mushroom-pepper-onion is the same pizza in any order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the combination formula divide by r!?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Permutations count every ordering separately, so each group of r items is counted r! times — once for each way of shuffling it. Dividing by r! collapses those duplicates into a single group. That is why nCr is always nPr divided by r!, and why nCr is never larger than nPr."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does 'with repetition' change?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It lets the same item be picked again, which matches dice, PIN codes and passwords. Permutations with repetition become n^r — a 4-digit PIN from 10 digits is 10^4 = 10,000. Combinations with repetition use C(n+r-1, r), the right model for things like three scoops chosen from five ice cream flavours: C(7, 3) = 35."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the odds of winning a 6/49 lottery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Order does not matter on a lottery ticket, so it is C(49, 6) = 13,983,816 possible tickets. One ticket therefore has a 1 in 13,983,816 chance of matching all six numbers. Buying ten tickets makes it 10 in 13,983,816 — still about 1 in 1.4 million."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Combination Calculator",
+      "item": "https://tool-hub.me/permutation-combination-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Permutation and Combination Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0d9488" href="https://tool-hub.me/math-calculators/">Math &amp; Science</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Combination Calculator</span></nav>
+  <section class="hero">
+    <h1>Permutation and Combination Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Does order matter? Answer that and the rest is arithmetic — shown step by step.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .radio-row { display:flex; flex-direction:column; gap:8px; margin:6px 0 14px; }
+      #tool .radio-row label, #tool .check-row label { display:flex; align-items:center; gap:8px; font-weight:500; margin:0; cursor:pointer; }
+      #tool .check-row { margin:0 0 14px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; overflow-wrap:anywhere; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .formula { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:14px; margin:10px 0 0; overflow-wrap:anywhere; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:12px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="n" data-i18n="tool.n.label">Total items (n)</label>
+        <input type="number" id="n" inputmode="numeric" min="1" max="1000" step="1" autocomplete="off" placeholder="10">
+      </div>
+      <div>
+        <label for="r" data-i18n="tool.chosen.label">Items chosen (r)</label>
+        <input type="number" id="r" inputmode="numeric" min="0" max="1000" step="1" autocomplete="off" placeholder="3">
+      </div>
+    </div>
+
+    <label data-i18n="tool.mode.label">What are you counting?</label>
+    <div class="radio-row">
+      <label for="mode-comb"><input type="radio" id="mode-comb" name="pcmode" value="comb" checked><span data-i18n="tool.mode.comb">Combinations — order does not matter (nCr)</span></label>
+      <label for="mode-perm"><input type="radio" id="mode-perm" name="pcmode" value="perm"><span data-i18n="tool.mode.perm">Permutations — order matters (nPr)</span></label>
+    </div>
+
+    <div class="check-row">
+      <label for="rep"><input type="checkbox" id="rep"><span data-i18n="tool.rep.label">Allow repetition — the same item can be picked more than once</span></label>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.res.ways">Number of possible outcomes</div>
+          <div class="rc-val" id="r-main">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.res.comb">Combinations (order ignored)</div><div class="rc-val" id="r-comb">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.res.perm">Permutations (order counts)</div><div class="rc-val" id="r-perm">—</div></div>
+      </div>
+      <p class="formula" id="r-formula"></p>
+      <p class="formula" id="r-formula2"></p>
+      <p class="subtle" id="r-sci" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note">Exact integer arithmetic, no rounding, up to n = 1000. Counting outcomes is not the same as probability — divide one outcome by the total to get the odds.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>One question decides everything: does order matter?</h2>
+    <p>Every counting problem in this family splits on a single test. Take the answer you are counting, shuffle the items inside it, and ask whether you now have a different answer. If yes, you want permutations. If no, you want combinations. A gold-silver-bronze podium is a permutation, because first and second are not interchangeable. A three-person committee is a combination, because the committee of Alice, Ben and Chloe is the same committee no matter which name you write first.</p>
+    <p>That one question is also why the two numbers are never far apart in structure. Permutations count arrangements; combinations count groups. Every group of r items can be arranged r! ways, so nPr is always exactly r! times bigger than nCr.</p>
+
+    <h3>Worked example: a committee of 3 from 10 people</h3>
+    <p>Order does not matter, so this is C(10, 3) = 10! / (3! x 7!) = 120. You do not need to compute 10! — cancel first. The 7! at the bottom kills everything below 8 on top, leaving (10 x 9 x 8) / (3 x 2 x 1) = 720 / 6 = 120. There are 120 possible committees.</p>
+
+    <h3>Worked example: ranking 3 of the same 10 people</h3>
+    <p>Now you are naming a chair, a deputy and a secretary. Order matters, so this is P(10, 3) = 10! / 7! = 10 x 9 x 8 = 720. Exactly six times the committee count, because each committee of three can be assigned the three roles in 3! = 6 different ways. Seeing the same 720 and 120 side by side is the fastest way to feel what the division by r! is doing.</p>
+
+    <h3>Why the formula divides by r!</h3>
+    <p>Build a permutation directly: there are 10 choices for the first pick, 9 for the second, 8 for the third — that is the falling product 10 x 9 x 8. But the committee {Alice, Ben, Chloe} appeared in that list six times, once as ABC, once as ACB, once as BAC and so on. Dividing by 3! removes the duplicates in one move. The full formula nCr = n! / (r! (n - r)!) is the same idea written with factorials: n! arranges everybody, (n - r)! cancels the arrangements of the people you did not pick, and r! cancels the order among the ones you did.</p>
+
+    <h2>Lottery odds, worked properly</h2>
+    <p>A 6/49 draw asks you to pick six numbers from 49, and the balls are drawn without replacement while your ticket does not care about order. That is C(49, 6) = 13,983,816. One ticket has a 1 in 13,983,816 chance at the jackpot — roughly 0.0000072 percent. A UK-style 6/59 game is C(59, 6) = 45,057,474, more than three times worse. A US Powerball ticket is C(69, 5) = 11,238,513 white-ball combinations multiplied by 26 red balls, giving 292,201,338.</p>
+    <p>Two things fall straight out of those numbers. First, buying ten tickets multiplies your chance by ten, not by anything more dramatic: 10 in 13,983,816 is still about 1 in 1.4 million. Second, matching some of the numbers is far more likely than matching all of them, and those partial-prize odds are also combination arithmetic: the number of tickets matching exactly 3 of the 6 drawn numbers is C(6, 3) x C(43, 3) = 20 x 12,341 = 246,820.</p>
+
+    <h2>When repetition is allowed</h2>
+    <p>Tick the repetition box when an item can be selected again. This is the correct model for dice, PINs, passwords and number plates, where the pool is not depleted by picking from it.</p>
+    <p>Permutations with repetition are simply n^r: every one of the r positions has all n options available. A 4-digit PIN drawn from 10 digits is 10^4 = 10,000. An 8-character password from 62 case-sensitive alphanumerics is 62^8 = 218,340,105,584,896 — around 2.2 x 10^14, which is why length beats cleverness in password strength.</p>
+    <p>Combinations with repetition are the less familiar case: C(n + r - 1, r), sometimes called the stars-and-bars formula. Choosing three scoops from five ice-cream flavours, where two scoops of pistachio is allowed, gives C(7, 3) = 35 rather than the C(5, 3) = 10 you would get without repeats. The same formula counts how many ways a fixed budget can be split among categories, or how many outcomes exist when rolling several identical dice and only recording the multiset of faces.</p>
+
+    <h2>Limits and honest caveats</h2>
+    <p>This calculator uses exact big-integer arithmetic, so a result like C(1000, 500) is correct to its last digit rather than a floating-point approximation — but values beyond 30 digits are shown in scientific form with the exact digit count noted underneath, because a 300-digit number is not something anyone reads. The input ceiling is n = 1000 and r = 1000, which covers every classroom and lottery question and keeps the browser responsive.</p>
+    <p>Two limits are conceptual rather than technical. First, these formulas assume all n items are distinguishable. If your set contains duplicates — the letters in BANANA, for instance — you need the multiset permutation formula n! divided by the product of each repeat count's factorial, not nPr. Second, counting outcomes is not the same as computing probability. The count is the denominator; you still need to decide how many outcomes count as a success before you have odds. Combinatorics tells you how many ways the world can turn out, not how likely any of them is.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://dlmf.nist.gov/26" target="_blank" rel="noopener">NIST Digital Library of Mathematical Functions, Ch. 26 — reference definitions for permutations, combinations and binomial coefficients</a></li>
+      <li><a href="https://dlmf.nist.gov/5" target="_blank" rel="noopener">NIST DLMF, Ch. 5 — the gamma and factorial functions behind n! in the formulas</a></li>
+      <li><a href="https://www.khanacademy.org/math/statistics-probability" target="_blank" rel="noopener">Khan Academy Statistics &amp; Probability — free lessons on counting rules and turning counts into odds</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/sig-fig-calc/"><span class="related-ico" aria-hidden="true">🔬</span><span class="related-name">Sig Fig Calculator</span></a><a class="related-item" href="https://tool-hub.me/wavelength-calc/"><span class="related-ico" aria-hidden="true">🌈</span><span class="related-name">Wavelength Calculator</span></a><a class="related-item" href="https://tool-hub.me/z-score-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">Z-Score Calculator</span></a><a class="related-item" href="https://tool-hub.me/attendance-calc/"><span class="related-ico" aria-hidden="true">🎓</span><span class="related-name">Attendance Percentage Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Combination or permutation — which one do I need?</summary><p data-i18n="faq.a1">Ask whether reordering the same items creates a different result. A 4-digit lock code is a permutation because 1234 and 4321 open different locks. Three pizza toppings are a combination because mushroom-pepper-onion is the same pizza in any order.</p></details>
+    <details><summary data-i18n="faq.q2">Why does the combination formula divide by r!?</summary><p data-i18n="faq.a2">Permutations count every ordering separately, so each group of r items is counted r! times — once for each way of shuffling it. Dividing by r! collapses those duplicates into a single group. That is why nCr is always nPr divided by r!, and why nCr is never larger than nPr.</p></details>
+    <details><summary data-i18n="faq.q3">What does 'with repetition' change?</summary><p data-i18n="faq.a3">It lets the same item be picked again, which matches dice, PIN codes and passwords. Permutations with repetition become n^r — a 4-digit PIN from 10 digits is 10^4 = 10,000. Combinations with repetition use C(n+r-1, r), the right model for things like three scoops chosen from five ice cream flavours: C(7, 3) = 35.</p></details>
+    <details><summary data-i18n="faq.q4">What are the odds of winning a 6/49 lottery?</summary><p data-i18n="faq.a4">Order does not matter on a lottery ticket, so it is C(49, 6) = 13,983,816 possible tickets. One ticket therefore has a 1 in 13,983,816 chance of matching all six numbers. Buying ten tickets makes it 10 in 13,983,816 — still about 1 in 1.4 million.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

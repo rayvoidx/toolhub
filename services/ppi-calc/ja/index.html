@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-K3rXN/hqsKVWkqDy6pXPbf7taeFF/IDGVZesVmZlhWQ=' 'sha256-cDXQZBWp9LnvnsY5w9rbNS9cxHitnd9colU0dma3iMc=' 'sha256-tljD8Smz3V0Z6VlHSrSIswqezSKNdJlhaVw5o88V1N8='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PPI計算ツール — 画面の画素密度とドットピッチ</title>
+<meta name="description" content="解像度と画面の対角サイズから画面のPPIを計算します。画素密度、ドットピッチ（mm）、総画素数、アスペクト比、画素が見えなくなる距離まで一度に確認できます。">
+<meta name="keywords" content="ppi calculator, pixel density calculator, screen ppi, dpi of my screen, dot pitch calculator, monitor pixel density">
+<link rel="canonical" href="https://tool-hub.me/ppi-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/ppi-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/ppi-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/ppi-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/ppi-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/ppi-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/ppi-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/ppi-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/ppi-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/ppi-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/ppi-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/ppi-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/ppi-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/ppi-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/ppi-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/ppi-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PPI計算ツール — 画面の画素密度とドットピッチ">
+<meta property="og:description" content="解像度と画面の対角サイズから画面のPPIを計算します。画素密度、ドットピッチ（mm）、総画素数、アスペクト比、画素が見えなくなる距離まで一度に確認できます。">
+<meta property="og:url" content="https://tool-hub.me/ppi-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/ppi-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4338ca">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PPI Calculator",
+  "description": "Calculate screen PPI from resolution and diagonal size. Get pixel density, dot pitch in mm, megapixels, aspect ratio and the distance where pixels vanish.",
+  "url": "https://tool-hub.me/ppi-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "PPI Calculator",
+      "item": "https://tool-hub.me/ppi-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between PPI and DPI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PPI counts pixels per inch on a screen; DPI counts ink dots per inch a printer lays down. The two get used interchangeably, and even operating systems muddle them — Windows calls its scaling setting DPI while it really means PPI. For anything you look at on a display, PPI is the correct term."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does 'Retina' actually mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a marketing term for a display whose pixels your eye cannot resolve at the intended viewing distance, not a fixed PPI number. A phone held 10 to 12 inches away needs roughly 300 PPI; a laptop at 20 inches needs about 170; a TV across the room needs far less. That is why this tool reports a distance rather than a pass or fail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does higher PPI always look better?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only up to the point where your eye stops resolving the grid. Past that you pay in GPU load, battery, and operating-system scaling headaches, since text sized in pixels becomes tiny and needs 150% or 200% scaling to stay readable. A 27-inch 4K panel at 163 PPI is sharper than 1440p, but the gain from 4K to 5K at the same size is much harder to see."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many DPI do I need for printing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Photo printing usually targets 300 DPI, so a 6 x 4 inch print needs about 1800 x 1200 pixels. Large posters viewed from several feet away work fine at 150 DPI. The old rule that web images must be 72 DPI is a myth left over from 1980s Macs — on screen only the pixel dimensions matter, and the DPI tag in the file is ignored."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>PPI Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">PPI Calculator</span></nav>
+  <section class="hero">
+    <h1>PPI Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Type in resolution and screen size. Get pixel density, dot pitch and the viewing distance where individual pixels disappear.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 10px; }
+      #tool .chip { padding:7px 14px; font-size:14px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard.wide { grid-column:1 / -1; }
+      #tool .rcard.wide .rc-val { font-size:16px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:520px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="hres" data-i18n="tool.hres.label">Horizontal resolution (px)</label>
+        <input type="number" id="hres" inputmode="numeric" min="1" max="30000" step="1" autocomplete="off" placeholder="2560">
+      </div>
+      <div>
+        <label for="vres" data-i18n="tool.vres.label">Vertical resolution (px)</label>
+        <input type="number" id="vres" inputmode="numeric" min="1" max="30000" step="1" autocomplete="off" placeholder="1440">
+      </div>
+      <div>
+        <label for="diag" data-i18n="tool.diag.label">Diagonal size (inches)</label>
+        <div style="display:flex;gap:6px;">
+          <input type="number" id="diag" inputmode="decimal" min="0.5" max="120" step="any" autocomplete="off" placeholder="27" style="flex:1;min-width:0;">
+          <select id="diag-unit" style="flex:0 0 auto;">
+            <option value="in" data-i18n="tool.unit.in">inches</option>
+            <option value="cm" data-i18n="tool.unit.cm">cm</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <p class="subtle" data-i18n="tool.presets" style="font-weight:600;margin:14px 0 0;">Common screens</p>
+    <div class="chips" id="screen-chips" role="group">
+      <button type="button" class="chip" data-w="1920" data-h="1080" data-d="24">1080p 24"</button>
+      <button type="button" class="chip" data-w="2560" data-h="1440" data-d="27">1440p 27"</button>
+      <button type="button" class="chip" data-w="3840" data-h="2160" data-d="27">4K 27"</button>
+      <button type="button" class="chip" data-w="3840" data-h="2160" data-d="32">4K 32"</button>
+      <button type="button" class="chip" data-w="1920" data-h="1080" data-d="15.6">Laptop 15.6"</button>
+      <button type="button" class="chip" data-w="3840" data-h="2160" data-d="55">TV 55"</button>
+      <button type="button" class="chip" data-w="2556" data-h="1179" data-d="6.1">Phone 6.1"</button>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate PPI</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.ppi">Pixel density</div>
+          <div class="rc-val" id="r-ppi">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.pitch">Dot pitch</div><div class="rc-val" id="r-pitch">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.mp">Total pixels</div><div class="rc-val" id="r-mp">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.aspect">Aspect ratio</div><div class="rc-val" id="r-aspect">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.dist">Pixels vanish beyond</div><div class="rc-val" id="r-dist">—</div></div>
+        <div class="rcard wide"><div class="rc-label" data-i18n="tool.r.size">Screen size (W x H)</div><div class="rc-val" id="r-size">—</div></div>
+        <div class="rcard wide"><div class="rc-label" data-i18n="tool.r.density">Density class</div><div class="rc-val" id="r-class">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.privacy" style="margin-top:12px;">Everything is calculated in your browser. Nothing is uploaded.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How screen PPI is calculated</h2>
+    <p>PPI stands for pixels per inch: how many pixels a display packs into one linear inch. Manufacturers publish the resolution and the diagonal, never the density, so you work it out with Pythagoras. Take the diagonal pixel count, the square root of width squared plus height squared, then divide by the physical diagonal in inches. A 2560 x 1440 panel has a diagonal of 2937 pixels; across 27 inches that lands at 108.8 PPI.</p>
+    <p>Two numbers fall straight out of that. Dot pitch is 25.4 divided by PPI, giving the width of one pixel in millimetres — 0.2335 mm for the panel above, which is the figure spec sheets quote for older monitors. Total pixel count is width times height, 3.69 megapixels here, and that is what your graphics card has to redraw sixty or more times per second.</p>
+
+    <h3>Worked comparison: 27-inch 1440p versus 27-inch 4K</h3>
+    <p>This is the single most searched monitor decision, so run both. The 1440p panel gives 108.8 PPI and a dot pitch of 0.2335 mm. The 4K panel at the same size has a 4406-pixel diagonal, so 163.2 PPI and a 0.1557 mm pitch — exactly 50% more pixels per inch and 8.29 megapixels instead of 3.69, more than double the work per frame.</p>
+    <p>What that means in practice: at 100% scaling, 4K text on a 27-inch screen is around two-thirds the size of 1440p text, which most people find too small to read comfortably. You end up at 125% or 150% scaling, which recovers the readable size and spends the extra pixels on smoother letterforms rather than more desktop space. If you specifically want more room for windows, 1440p at 100% already gives it, and 4K only matches it if you can tolerate tiny text. If you want crisper text at the same layout, 4K plus 150% scaling is the answer.</p>
+
+    <h3>The viewing distance maths</h3>
+    <p>A normal eye resolves detail down to roughly one arcminute, a sixtieth of a degree. Convert that to a simple rule and the distance at which pixels blur together is about 3438 divided by PPI, in inches. The 27-inch 1440p monitor hits that at 31.6 inches, or 80 cm — further than most people sit, which is why you can still see pixel edges on it. The 4K version blurs out at 21.1 inches, comfortably inside normal desk distance, so the grid genuinely disappears.</p>
+    <p>The same rule explains why phones need such extreme numbers. A 6.1-inch handset at 2556 x 1179 runs 461 PPI and vanishes at 7.4 inches, because you hold it at arm's bend rather than desk distance. It also explains why a 55-inch 4K television at 80 PPI looks flawless: its threshold is 43 inches, and almost nobody sits closer than that to a TV. Density is meaningless without the distance it is judged from.</p>
+
+    <h2>Scaling on Windows and macOS</h2>
+    <p>Windows exposes this in Settings, Display, Scale — with 100%, 125%, 150% and 175% as the usual steps. It recommends a setting based on the panel, and the recommendation is normally right. Older applications that were never made scaling-aware can still come out blurry, which is the practical cost of a high-PPI monitor on Windows.</p>
+    <p>macOS takes a different route: it renders at double resolution and downsamples, which is why Apple ships panels near 220 PPI. A 13.3-inch 2560 x 1600 MacBook display is 227 PPI, almost exactly two times the 110 PPI of a classic desktop monitor, so everything lands on a clean pixel boundary. Plugging a 27-inch 1440p monitor into a Mac often disappoints for that reason — it is too dense for crisp 1x rendering and far too sparse for 2x.</p>
+
+    <h2>What density to buy for what</h2>
+    <p>Under 100 PPI, pixels are visible at a desk and text edges look ragged; a 24-inch 1080p panel at 91.8 PPI is the common example. Between 100 and 150 is standard territory — 1440p at 27 inches, 4K at 32 inches (137.7 PPI) — sharp enough for daily work with no scaling required. Above 150 you get crisp text without tricks, and past roughly 220 you are in retina-class territory where the grid is invisible at normal distance.</p>
+    <p>For office work and coding, 1440p at 27 inches remains the value sweet spot. For photo and print work, higher density genuinely helps because you judge fine detail. For gaming, remember that pixel count drives frame rate: 8.29 megapixels is a serious load, and a lower-density panel with a faster refresh rate is often the better trade.</p>
+
+    <h2>Limitations of a PPI number</h2>
+    <p>Density says nothing about panel quality. Contrast, colour accuracy, response time, coating and subpixel layout all affect perceived sharpness — a matte anti-glare finish visibly softens text, and non-standard subpixel arrangements can make text look fringed regardless of the PPI figure. Manufacturers also round diagonals, so a 27-inch monitor is often 27.0 or 26.9 inches of actual glass, which shifts the result by a fraction of a percent. Treat the number as a solid comparison tool between panels, not as a quality verdict on any one of them.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/resolution" target="_blank" rel="noopener">MDN Web Docs — the CSS resolution type, covering dpi, dpcm and dppx units</a></li>
+      <li><a href="https://www.w3.org/TR/css-values-4/" target="_blank" rel="noopener">W3C CSS Values and Units — defines the reference pixel and its relation to physical inches</a></li>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures — official definition of the inch and metric conversions</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/px-to-rem/"><span class="related-ico" aria-hidden="true">📐</span><span class="related-name">PX to REM Converter</span></a><a class="related-item" href="https://tool-hub.me/regex-tester/"><span class="related-ico" aria-hidden="true">🧪</span><span class="related-name">Regex Tester</span></a><a class="related-item" href="https://tool-hub.me/resistor-color-code/"><span class="related-ico" aria-hidden="true">🎛️</span><span class="related-name">Resistor Color Code Calculator</span></a><a class="related-item" href="https://tool-hub.me/robots-txt-generator/"><span class="related-ico" aria-hidden="true">🤖</span><span class="related-name">Robots.txt Generator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the difference between PPI and DPI?</summary><p data-i18n="faq.a1">PPI counts pixels per inch on a screen; DPI counts ink dots per inch a printer lays down. The two get used interchangeably, and even operating systems muddle them — Windows calls its scaling setting DPI while it really means PPI. For anything you look at on a display, PPI is the correct term.</p></details>
+    <details><summary data-i18n="faq.q2">What does 'Retina' actually mean?</summary><p data-i18n="faq.a2">It is a marketing term for a display whose pixels your eye cannot resolve at the intended viewing distance, not a fixed PPI number. A phone held 10 to 12 inches away needs roughly 300 PPI; a laptop at 20 inches needs about 170; a TV across the room needs far less. That is why this tool reports a distance rather than a pass or fail.</p></details>
+    <details><summary data-i18n="faq.q3">Does higher PPI always look better?</summary><p data-i18n="faq.a3">Only up to the point where your eye stops resolving the grid. Past that you pay in GPU load, battery, and operating-system scaling headaches, since text sized in pixels becomes tiny and needs 150% or 200% scaling to stay readable. A 27-inch 4K panel at 163 PPI is sharper than 1440p, but the gain from 4K to 5K at the same size is much harder to see.</p></details>
+    <details><summary data-i18n="faq.q4">How many DPI do I need for printing?</summary><p data-i18n="faq.a4">Photo printing usually targets 300 DPI, so a 6 x 4 inch print needs about 1800 x 1200 pixels. Large posters viewed from several feet away work fine at 150 DPI. The old rule that web images must be 72 DPI is a myth left over from 1980s Macs — on screen only the pixel dimensions matter, and the DPI tag in the file is ignored.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

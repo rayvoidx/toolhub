@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-3eDarPE9eBqJbRy772IoEP1STiUiDbxrsD28xol0NNI=' 'sha256-gDnGpo7/q3U+vmtDORCGkUFPTdl9tb5KDx4uyz+qsag=' 'sha256-JL8033zSlDK+veQZGFDx9Sb83yE3AnbQtto/Fo8UIsk='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>キャップレート計算ツール — 賃貸物件のNOIと利回り</title>
+<meta name="description" content="価格・賃料・運営費から賃貸物件の還元利回り（キャップレート）を計算。目標利回りからの上限購入価格や必要NOIも逆算し、経費率と表面利回りも表示します。">
+<meta name="keywords" content="cap rate calculator, capitalization rate, cap rate formula, rental property cap rate, NOI calculator, net operating income, gross rental yield">
+<link rel="canonical" href="https://tool-hub.me/cap-rate-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/cap-rate-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/cap-rate-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/cap-rate-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/cap-rate-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/cap-rate-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/cap-rate-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/cap-rate-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/cap-rate-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/cap-rate-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/cap-rate-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/cap-rate-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/cap-rate-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/cap-rate-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/cap-rate-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/cap-rate-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="キャップレート計算ツール — 賃貸物件のNOIと利回り">
+<meta property="og:description" content="価格・賃料・運営費から賃貸物件の還元利回り（キャップレート）を計算。目標利回りからの上限購入価格や必要NOIも逆算し、経費率と表面利回りも表示します。">
+<meta property="og:url" content="https://tool-hub.me/cap-rate-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/cap-rate-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0c4a6e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Cap Rate Calculator",
+  "description": "Calculate the cap rate on a rental property from price, rent and operating expenses, or solve for max purchase price and required NOI, with expense ratio.",
+  "url": "https://tool-hub.me/cap-rate-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Cap Rate Calculator",
+      "item": "https://tool-hub.me/cap-rate-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does cap rate ignore the mortgage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cap rate measures the property, not the deal financing it. NOI is calculated before any debt service, so two buyers with completely different loans get the same cap rate on the same building — which is exactly what makes it comparable. Once you add a mortgage you are measuring your leverage, and that number is cash-on-cash return."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is cap rate different from cash-on-cash return?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cap rate is NOI divided by price, unlevered. Cash-on-cash is annual pre-tax cash flow — NOI minus mortgage payments — divided by the cash you actually put in. A 6% cap property can return 9% cash-on-cash with cheap debt, or go negative once the mortgage rate climbs above the cap rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good cap rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no universal number: a cap rate is the market's price for that income stream and its risk. Prime metro apartments trade at 4-5%, ordinary suburban rentals often 5-7%, and tertiary markets or older assets at 8% or more. A high cap rate is compensation for risk, not free money, so compare only against recent sales in the same submarket."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I estimate operating expenses without the actuals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 50% rule is a screening shortcut: assume operating expenses, excluding the mortgage, run about half of gross rent. On 36,000 of rent that means 18,000 of expenses and 18,000 of NOI. It is deliberately conservative and often too harsh for new builds with low taxes, so use it to filter listings, then swap in the real tax bill, an insurance quote and twelve months of repair history before you make an offer."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Cap Rate Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Cap Rate Calculator</span></nav>
+  <section class="hero">
+    <h1>Cap Rate Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Cap rate is the unlevered yield of a property — price, rent and real operating costs, no mortgage involved.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rc-val.neg { color:#dc2626; }
+      #tool .badge { display:inline-block; margin-top:12px; padding:6px 10px; border-radius:999px; background:rgba(12,74,110,0.10); font-size:13px; font-weight:600; }
+      #tool .badge.miss { background:rgba(100,116,139,0.14); color:var(--muted); }
+      #tool .tier { margin-top:12px; padding:8px 10px; border-left:3px solid var(--accent); background:rgba(12,74,110,0.08); font-size:14px; }
+      #tool .warn { margin-top:10px; padding:8px 10px; border-left:3px solid #d97706; background:rgba(217,119,6,0.08); color:#b45309; font-size:14px; font-weight:600; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="mode" data-i18n="tool.mode.label">What do you want to work out?</label>
+    <select id="mode">
+      <option value="cap" data-i18n="tool.mode.cap">Cap rate from price and NOI</option>
+      <option value="price" data-i18n="tool.mode.price">Max purchase price from NOI and target cap rate</option>
+      <option value="noi" data-i18n="tool.mode.noi">NOI needed from price and target cap rate</option>
+    </select>
+
+    <div class="field-row">
+      <div id="price-wrap">
+        <label for="price" data-i18n="tool.price.label">Purchase price</label>
+        <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="400000">
+      </div>
+      <div id="rent-wrap">
+        <label for="rent" data-i18n="tool.rent.label">Annual gross rent</label>
+        <input type="number" id="rent" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="36000">
+        <select id="rentper" style="margin-top:6px;">
+          <option value="1" data-i18n="tool.rent.per.year">Per year</option>
+          <option value="12" data-i18n="tool.rent.per.month">Per month (x12)</option>
+        </select>
+      </div>
+      <div id="exp-wrap">
+        <label for="expenses" data-i18n="tool.exp.label">Annual operating expenses</label>
+        <input type="number" id="expenses" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12000">
+      </div>
+      <div id="target-wrap" hidden>
+        <label for="target" data-i18n="tool.target.label">Target cap rate %</label>
+        <input type="number" id="target" inputmode="decimal" min="0.1" max="30" step="any" autocomplete="off" placeholder="6">
+      </div>
+    </div>
+    <p class="subtle" data-i18n="tool.exp.note">Property tax, insurance, maintenance, management and vacancy — not the mortgage payment.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" id="r-hero-label" data-i18n="tool.r.cap">Cap rate</div>
+          <div class="rc-val" id="r-hero">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.cap">Cap rate</div><div class="rc-val" id="r-cap">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.noi">Net operating income</div><div class="rc-val" id="r-noi">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.ratio">Expense ratio</div><div class="rc-val" id="r-ratio">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.gross">Gross rental yield</div><div class="rc-val" id="r-gross">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.monthly">Monthly rent</div><div class="rc-val" id="r-monthly">—</div></div>
+      </div>
+      <p class="badge" id="onepct"></p>
+      <p class="tier" id="tier"></p>
+      <p class="warn" id="warn" hidden data-i18n="tool.warn.negnoi">Operating expenses exceed the rent: this property loses money before any mortgage. Check the expense figure, or the rent is too low for the costs.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.disclaimer" style="margin-top:12px;">An estimate from the numbers you enter. Cap rate ignores financing, capital expenditure and income tax — confirm the expenses against a real operating statement.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a cap rate actually tells you</h2>
+    <p>The capitalization rate is net operating income divided by price. NOI is the rent a property collects in a year minus everything it costs to run — property tax, insurance, repairs, management, and an allowance for vacancy — but before any mortgage payment. Divide that by what you pay for the building and you get the unlevered annual return, expressed as a percentage. It is the commercial real estate equivalent of a bond yield, and it is quoted the same way: a "6 cap" means the property throws off 6% of its price every year in operating income.</p>
+    <p>Because financing is deliberately excluded, the cap rate lets you line up a duplex bought with cash next to a fourplex bought with 80% leverage and see which building earns more per dollar of price. Two investors with wildly different loans see the same cap rate on the same asset. Mortgage terms are a fact about you; the cap rate is a fact about the property.</p>
+
+    <h3>Worked example: 400,000 purchase, 36,000 rent, 12,000 expenses</h3>
+    <p>Start with the default numbers. Annual gross rent is 36,000 (3,000 a month) and operating expenses run 12,000 a year. NOI is 36,000 − 12,000 = 24,000. The cap rate is 24,000 ÷ 400,000 = 0.06, or 6.00%. The expense ratio is 12,000 ÷ 36,000 = 33.33%, which is low but plausible for a newer single-family rental where the tenant pays utilities. Gross rental yield — rent over price, ignoring costs entirely — is 36,000 ÷ 400,000 = 9.00%. Notice the gap between 9% gross and 6% net: that three-point spread is exactly what the expense line does to a deal, and it is the reason listing agents love to quote gross yield.</p>
+
+    <h3>Same property, solving for price</h3>
+    <p>Now flip the calculation. You have decided you will not buy below a 7% cap in this submarket. Switch to "max purchase price", keep the 36,000 rent and 12,000 expenses, and set the target to 7. NOI is still 24,000, so the maximum price is 24,000 ÷ 0.07 = 342,857. Against a 400,000 asking price that is a 57,000 gap — your offer, in one line of arithmetic. Raise the target to 8% and the ceiling drops to 300,000; drop it to 5% and you could pay 480,000. Small changes in required yield move the price a long way, which is the whole story of the 2021 to 2024 valuation swing.</p>
+
+    <h3>Same property, solving for the income you need</h3>
+    <p>The third mode answers the seller's question. If the price is fixed at 400,000 and you need a 7% cap, the required NOI is 400,000 × 0.07 = 28,000. With expenses at 12,000, gross rent has to reach 40,000 a year, or 3,333 a month — an 11% rent increase over today's 3,000. That is the honest test of a value-add pitch: not "rents are below market" but "rents need to rise by this much, and here is why they will."</p>
+
+    <h2>Screening with the 50% rule and the 1% rule</h2>
+    <p>Most listings do not come with a trustworthy expense statement. The 50% rule assumes operating expenses eat roughly half of gross rent over a full ownership cycle, capital items included. On 36,000 of rent that means 18,000 of NOI and a 4.5% cap at 400,000 — considerably less attractive than the 6% the seller's numbers produced. Both figures are useful: the seller's 33% expense ratio is what the property does in a good year, and 50% is closer to a decade-long average once you fund a roof, a furnace and a turnover.</p>
+    <p>The 1% rule works from the other end. Monthly rent should be at least 1% of price: at 400,000 that means 4,000 a month, and this property collects 3,000, or 0.75%. It fails, which is normal for coastal and high-appreciation metros and is why the tool reports the actual percentage rather than a pass or fail alone. Use it to sort a list of twenty candidates in ten seconds, never to decide anything on its own.</p>
+
+    <h2>Cap rate compression, and why it cuts both ways</h2>
+    <p>Cap rates move inversely to price. When buyers accept lower yields — cheap debt, competitive bidding, expectations of rent growth — cap rates compress and values rise. Between 2015 and 2021 US multifamily cap rates fell by roughly 150 basis points; on a property with 24,000 of NOI, a fall from 6.5% to 5.0% lifts value from 369,000 to 480,000 without the rent moving at all. When rates on debt climb, the process reverses: buyers demand a spread over their borrowing cost, cap rates expand, and the same NOI supports a smaller price. Anyone underwriting an exit should assume they sell at a cap rate at least as high as the one they bought at, and should check what a one-point expansion does to the plan.</p>
+
+    <h2>Cap rate versus cash-on-cash, in numbers</h2>
+    <p>Take the 6% cap deal and finance it with 320,000 at 6.5% over 30 years — about 2,023 a month, or 24,271 a year. NOI of 24,000 minus debt service leaves roughly −271 of cash flow on 80,000 of equity: slightly negative cash-on-cash. Fund the same purchase at 5.0% and the payment falls to about 20,614, leaving 3,386 a year, or 4.2% cash-on-cash. Identical building, identical cap rate, completely different outcome for the investor. That divergence is the point of keeping the two metrics separate: cap rate prices the asset, cash-on-cash prices your deal.</p>
+
+    <h2>What this calculator does not include</h2>
+    <p>Four things sit outside NOI by convention and should be handled separately. Mortgage principal and interest are excluded on purpose. Capital expenditure — roofs, HVAC, repiping — is excluded from most quoted NOI figures, so budget a reserve of 5 to 10% of rent on top of your operating expenses when you own older stock. Depreciation and your personal income tax are excluded, and they can turn a modest cash return into a strong after-tax one. Finally, the number is only as good as the expense line: sellers routinely omit management fees because they self-manage, and omit vacancy because the unit happened to stay full. Add 8 to 10% of rent for management and 5 to 8% for vacancy even if the seller's statement shows zero, and see whether the deal still clears your target.</p>
+    <p>One last framing point: a cap rate is a market price, not a quality score. An 8.5% cap in a shrinking rust belt town and a 4.5% cap in a growing sun belt suburb can both be fairly priced, because the buyer of the first is being paid for risk and flat rents while the buyer of the second is accepting less income today in exchange for rent growth and liquidity. Compare cap rates only against recent sales of similar buildings in the same submarket, and treat any figure far above the local band as a question to investigate rather than a bargain to grab.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.irs.gov/publications/p527" target="_blank" rel="noopener">IRS Publication 527 — which rental income and operating expenses count for residential rental property</a></li>
+      <li><a href="https://www.federalreserve.gov/publications/financial-stability-report.htm" target="_blank" rel="noopener">Federal Reserve Financial Stability Report — commercial real estate valuations and capitalization rate trends</a></li>
+      <li><a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics CPI — official rent and shelter price data for revenue assumptions</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/car-affordability-calc/"><span class="related-ico" aria-hidden="true">🚗</span><span class="related-name">Car Affordability Calculator</span></a><a class="related-item" href="https://tool-hub.me/car-lease-calc/"><span class="related-ico" aria-hidden="true">🚙</span><span class="related-name">Car Lease Calculator</span></a><a class="related-item" href="https://tool-hub.me/car-payment-calc/"><span class="related-ico" aria-hidden="true">🚗</span><span class="related-name">Car Payment Calculator</span></a><a class="related-item" href="https://tool-hub.me/cd-calc/"><span class="related-ico" aria-hidden="true">📜</span><span class="related-name">CD Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why does cap rate ignore the mortgage?</summary><p data-i18n="faq.a1">Cap rate measures the property, not the deal financing it. NOI is calculated before any debt service, so two buyers with completely different loans get the same cap rate on the same building — which is exactly what makes it comparable. Once you add a mortgage you are measuring your leverage, and that number is cash-on-cash return.</p></details>
+    <details><summary data-i18n="faq.q2">How is cap rate different from cash-on-cash return?</summary><p data-i18n="faq.a2">Cap rate is NOI divided by price, unlevered. Cash-on-cash is annual pre-tax cash flow — NOI minus mortgage payments — divided by the cash you actually put in. A 6% cap property can return 9% cash-on-cash with cheap debt, or go negative once the mortgage rate climbs above the cap rate.</p></details>
+    <details><summary data-i18n="faq.q3">What is a good cap rate?</summary><p data-i18n="faq.a3">There is no universal number: a cap rate is the market's price for that income stream and its risk. Prime metro apartments trade at 4-5%, ordinary suburban rentals often 5-7%, and tertiary markets or older assets at 8% or more. A high cap rate is compensation for risk, not free money, so compare only against recent sales in the same submarket.</p></details>
+    <details><summary data-i18n="faq.q4">How do I estimate operating expenses without the actuals?</summary><p data-i18n="faq.a4">The 50% rule is a screening shortcut: assume operating expenses, excluding the mortgage, run about half of gross rent. On 36,000 of rent that means 18,000 of expenses and 18,000 of NOI. It is deliberately conservative and often too harsh for new builds with low taxes, so use it to filter listings, then swap in the real tax bill, an insurance quote and twelve months of repair history before you make an offer.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

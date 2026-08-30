@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-azihX//BJamaP3s9XsU/eNuR8rP851wkTs8rjz04ftg=' 'sha256-zqWBCJMVAEAlJ4ugvv/n481ueoGngTfzt7NUJvgWp/g=' 'sha256-lhkUwscVhQ0NSqjvPI/dVEhmvkfHXkiRyrC2QDiRTdo='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de margen — margen de beneficio y markup</title>
+<meta name="description" content="Calcula el margen bruto, el markup y el beneficio a partir del coste y el precio, o inviértelo para hallar el precio o el coste máximo de un margen objetivo.">
+<meta name="keywords" content="margin calculator, profit margin calculator, markup calculator, margin vs markup, gross margin calculator, selling price calculator">
+<link rel="canonical" href="https://tool-hub.me/margin-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/margin-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/margin-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/margin-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/margin-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/margin-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/margin-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/margin-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/margin-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/margin-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/margin-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/margin-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/margin-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/margin-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/margin-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/margin-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de margen — margen de beneficio y markup">
+<meta property="og:description" content="Calcula el margen bruto, el markup y el beneficio a partir del coste y el precio, o inviértelo para hallar el precio o el coste máximo de un margen objetivo.">
+<meta property="og:url" content="https://tool-hub.me/margin-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/margin-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#059669">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Margin Calculator",
+  "description": "Work out gross profit margin, markup and profit from cost and price — or reverse it to find the price or the maximum cost a target margin allows.",
+  "url": "https://tool-hub.me/margin-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Margin Calculator",
+      "item": "https://tool-hub.me/margin-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between margin and markup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Margin divides profit by the selling price; markup divides the same profit by the cost. Buy at 60 and sell at 100 and your profit is 40: that is a 40% margin but a 66.7% markup. Markup is always the bigger number, because the cost it divides by is smaller than the price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good profit margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends entirely on the industry. Grocery and fuel retail live on gross margins of 10-25% and net margins near 2%, general retail typically targets 40-50% gross, restaurants aim for 65-70% gross on food, and software sits at 75-85%. Compare yourself to your sector rather than to a universal number, then check the net margin that survives after overheads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this gross margin or net margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gross. It only subtracts the direct cost of the item from the price. Net margin also subtracts rent, salaries, marketing, card fees, returns and tax, so it is always lower — a business with a healthy 45% gross margin can easily end up with 5% net. Use gross margin to price individual products and net margin to judge the business."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is keystone pricing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Keystone pricing means doubling the wholesale cost: a 100% markup, which is exactly a 50% margin. It was the traditional retail default because the arithmetic is instant. Many retailers now stretch it to 2.2-2.5 times cost to absorb markdowns, returns and shrinkage while still landing near 50% realised margin."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Margin Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Margin Calculator</span></nav>
+  <section class="hero">
+    <h1>Margin Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Margin is profit over price. Markup is profit over cost. A 40% margin is a 66.7% markup — and confusing the two is how pricing goes wrong.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rc-val.neg { color:#dc2626; }
+      #tool .warn { margin-top:10px; padding:8px 10px; border-left:3px solid #d97706; background:rgba(217,119,6,0.08); color:#b45309; font-size:14px; font-weight:600; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="mode" data-i18n="tool.mode.label">What do you want to work out?</label>
+    <select id="mode">
+      <option value="margin" data-i18n="tool.mode.margin">Margin from cost and price</option>
+      <option value="price" data-i18n="tool.mode.price">Price from cost and target margin</option>
+      <option value="cost" data-i18n="tool.mode.cost">Max cost from price and target margin</option>
+    </select>
+
+    <div class="field-row">
+      <div id="cost-wrap">
+        <label for="cost" data-i18n="tool.cost.label">Cost per unit</label>
+        <input type="number" id="cost" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="60">
+      </div>
+      <div id="price-wrap">
+        <label for="price" data-i18n="tool.price.label">Selling price</label>
+        <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="100">
+      </div>
+      <div id="margin-wrap" hidden>
+        <label for="margin" data-i18n="tool.margin.label">Target gross margin %</label>
+        <input type="number" id="margin" inputmode="decimal" min="-99" max="99.9" step="any" autocomplete="off" placeholder="40">
+      </div>
+      <div id="qty-wrap">
+        <label for="qty" data-i18n="tool.qty.label">Units sold (optional)</label>
+        <input type="number" id="qty" inputmode="numeric" min="1" max="10000000" step="1" autocomplete="off" placeholder="1">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" id="r-hero-label" data-i18n="tool.r.margin">Gross margin</div>
+          <div class="rc-val" id="r-hero">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.margin">Gross margin</div><div class="rc-val" id="r-margin">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.markup">Markup</div><div class="rc-val" id="r-markup">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.profit">Profit per unit</div><div class="rc-val" id="r-profit">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.price">Selling price</div><div class="rc-val" id="r-price">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.cost">Cost</div><div class="rc-val" id="r-cost">—</div></div>
+        <div class="rcard" id="total-card" hidden><div class="rc-label" data-i18n="tool.r.totalprofit">Total profit</div><div class="rc-val" id="r-total">—</div></div>
+      </div>
+      <p class="warn" id="warn" hidden data-i18n="tool.warn.loss">Price is below cost — margin and profit are negative.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.gross" style="margin-top:12px;">Gross figures only: this is price minus cost of goods. Overheads, payment fees, shipping and tax are not included. Use the same currency in both fields.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>Margin and markup are two different fractions</h2>
+    <p>Both describe the same profit, but they divide it by different things. Gross margin is profit divided by the selling price. Markup is profit divided by the cost. Because the cost is always the smaller of the two denominators, markup is always the larger percentage — and the gap widens fast as prices rise. A 20% margin is a 25% markup, a 50% margin is a 100% markup, and a 75% margin is a 300% markup.</p>
+    <p>Which one you use depends on who you are talking to. Buyers, wholesalers and pricing sheets usually speak in markup, because they start from a cost and add to it. Accountants, investors and P&amp;L statements speak in margin, because they start from revenue and work down. The calculator above converts between them automatically, so you can quote a supplier in one language and report to your accountant in the other without redoing the arithmetic.</p>
+
+    <h3>Worked example 1: what am I actually making?</h3>
+    <p>You buy a product for 60 and sell it for 100. Profit is 40. Gross margin is 40 / 100 = 40%. Markup is 40 / 60 = 66.7%. Same 40 of profit, two very different-looking percentages. If a supplier tells you they gave you a 66.7% markup opportunity and your finance team asks about margin, both are describing this identical deal.</p>
+
+    <h3>Worked example 2: pricing to hit a target</h3>
+    <p>The same product costs 60 and your business needs a 40% gross margin. The correct formula is price = cost / (1 - margin), so 60 / 0.60 = 100. Switch the calculator to "Price from cost and target margin" and it does exactly this. The temptation is to multiply 60 by 1.40 instead, which gives 84 — and 84 is only a 28.6% margin. That single mistake wipes out more than a quarter of the intended profit on every unit sold.</p>
+
+    <h3>Worked example 3: working backwards from a price point</h3>
+    <p>Your product has to retail at 24.99 to sit under a psychological threshold, and your category needs a 55% gross margin. Maximum cost = price x (1 - margin) = 24.99 x 0.45 = 11.25. That is your ceiling for the landed cost of the item, including freight and duty. If the factory quotes 13.80, you either negotiate, redesign, accept a 44.8% margin, or walk away — but you know before you commit, not after the first shipment lands.</p>
+
+    <h2>Margin to markup conversion</h2>
+    <table>
+      <thead><tr><th>Gross margin</th><th>Markup</th><th>Price multiplier on cost</th></tr></thead>
+      <tbody>
+        <tr><td>10%</td><td>11.1%</td><td>1.11x</td></tr>
+        <tr><td>20%</td><td>25.0%</td><td>1.25x</td></tr>
+        <tr><td>25%</td><td>33.3%</td><td>1.33x</td></tr>
+        <tr><td>30%</td><td>42.9%</td><td>1.43x</td></tr>
+        <tr><td>40%</td><td>66.7%</td><td>1.67x</td></tr>
+        <tr><td>50%</td><td>100%</td><td>2.00x</td></tr>
+        <tr><td>60%</td><td>150%</td><td>2.50x</td></tr>
+        <tr><td>75%</td><td>300%</td><td>4.00x</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The most expensive mistake in small-business pricing</h2>
+    <p>A café owner decides every drink needs a 40% margin. Ingredients for a latte cost 1.20, so she prices it at 1.20 x 1.4 = 1.68. She has actually set a 28.6% margin, because multiplying by 1.4 applies the percentage to cost, not to price. Across 200 drinks a day the shortfall is roughly 46 per day, about 16,800 a year, on a single product line. The correct price was 1.20 / 0.6 = 2.00.</p>
+    <p>The rule that prevents this: if the percentage is stated against the selling price, divide. If it is stated against cost, multiply. Any sentence containing the phrase "gross margin" means divide.</p>
+
+    <h2>What gross margin does not tell you</h2>
+    <p>This is a gross figure. It subtracts only the direct cost of the goods, so it ignores rent, wages, marketing, software, card processing fees of 2 to 3%, marketplace commissions of 8 to 15%, freight, returns and shrinkage. Net margin — what actually reaches the bottom line — is usually far lower. Grocery chains run 25% gross and 2% net. A healthy online retailer might hold 45% gross and keep 8% net.</p>
+    <p>Two more limits worth knowing. First, blended margin across a catalogue is not the average of item margins; it is weighted by units sold, so a high-volume, low-margin item drags the blend down much harder than the arithmetic mean suggests. Second, discounting attacks margin non-linearly: a 20% discount on a 40% margin item leaves 25% margin, meaning you need roughly 60% more unit sales to make the same gross profit. Run the numbers before the promotion, not after.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed" target="_blank" rel="noopener">IRS Small Business and Self-Employed Tax Center — how cost of goods sold and gross profit are reported</a></li>
+      <li><a href="https://www.bls.gov/ppi/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics, Producer Price Indexes — wholesale cost trends that move your margins</a></li>
+      <li><a href="https://www.khanacademy.org/math/arithmetic/arith-review-percent" target="_blank" rel="noopener">Khan Academy, Percentages — the base-of-the-percentage rule behind margin vs markup</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/markup-calc/"><span class="related-ico" aria-hidden="true">🏷️</span><span class="related-name">Markup Calculator</span></a><a class="related-item" href="https://tool-hub.me/mileage-reimbursement-calc/"><span class="related-ico" aria-hidden="true">🧭</span><span class="related-name">Mileage Reimbursement Calculator</span></a><a class="related-item" href="https://tool-hub.me/mortgage-calc/"><span class="related-ico" aria-hidden="true">🏠</span><span class="related-name">Mortgage Calculator</span></a><a class="related-item" href="https://tool-hub.me/net-worth-calc/"><span class="related-ico" aria-hidden="true">💎</span><span class="related-name">Net Worth Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the difference between margin and markup?</summary><p data-i18n="faq.a1">Margin divides profit by the selling price; markup divides the same profit by the cost. Buy at 60 and sell at 100 and your profit is 40: that is a 40% margin but a 66.7% markup. Markup is always the bigger number, because the cost it divides by is smaller than the price.</p></details>
+    <details><summary data-i18n="faq.q2">What is a good profit margin?</summary><p data-i18n="faq.a2">It depends entirely on the industry. Grocery and fuel retail live on gross margins of 10-25% and net margins near 2%, general retail typically targets 40-50% gross, restaurants aim for 65-70% gross on food, and software sits at 75-85%. Compare yourself to your sector rather than to a universal number, then check the net margin that survives after overheads.</p></details>
+    <details><summary data-i18n="faq.q3">Is this gross margin or net margin?</summary><p data-i18n="faq.a3">Gross. It only subtracts the direct cost of the item from the price. Net margin also subtracts rent, salaries, marketing, card fees, returns and tax, so it is always lower — a business with a healthy 45% gross margin can easily end up with 5% net. Use gross margin to price individual products and net margin to judge the business.</p></details>
+    <details><summary data-i18n="faq.q4">What is keystone pricing?</summary><p data-i18n="faq.a4">Keystone pricing means doubling the wholesale cost: a 100% markup, which is exactly a 50% margin. It was the traditional retail default because the arithmetic is instant. Many retailers now stretch it to 2.2-2.5 times cost to absorb markdowns, returns and shrinkage while still landing near 50% realised margin.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

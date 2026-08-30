@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-H2Fym9XrMf1/irmdZzovMSTK1Ji+n9PDCQeCsiQGNwQ=' 'sha256-LIqYDWZq+v/uFHMKyGXJR1nRxO48GqmB688ozaEmfX8=' 'sha256-yyuEUe1Z70oghK/ttvCqNLtcDycbbrAu/3/3mguDcZU='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSSグラデーションジェネレーター — 即座に作成＆コピー</title>
+<meta name="description" content="ビジュアルなカラーストップエディタで線形・放射状・円錐形のCSSグラデーションをデザイン。ライブプレビューを見ながら、完成したCSSを即座にコピーできます — 無料・広告なし、すべてブラウザ内で処理。">
+<meta name="keywords" content="css gradient generator, gradient generator, linear gradient css, gradient background css, radial gradient, conic gradient css, css gradient maker, 그라데이션 생성기, CSS 그라데이션">
+<link rel="canonical" href="https://tool-hub.me/gradient-generator/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/gradient-generator/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/gradient-generator/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/gradient-generator/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/gradient-generator/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/gradient-generator/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/gradient-generator/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/gradient-generator/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/gradient-generator/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/gradient-generator/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/gradient-generator/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/gradient-generator/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/gradient-generator/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/gradient-generator/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/gradient-generator/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/gradient-generator/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CSSグラデーションジェネレーター — 即座に作成＆コピー">
+<meta property="og:description" content="ビジュアルなカラーストップエディタで線形・放射状・円錐形のCSSグラデーションをデザイン。ライブプレビューを見ながら、完成したCSSを即座にコピーできます — 無料・広告なし、すべてブラウザ内で処理。">
+<meta property="og:url" content="https://tool-hub.me/gradient-generator/ja/">
+<meta property="og:image" content="https://tool-hub.me/gradient-generator/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#a21caf">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CSS Gradient Generator",
+  "description": "Design linear, radial and conic CSS gradients with a visual color-stop editor. See a live preview and copy the CSS instantly — free, no ads, in your browser.",
+  "url": "https://tool-hub.me/gradient-generator/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "CSS Gradient Generator", "item": "https://tool-hub.me/gradient-generator/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I create a CSS gradient with this generator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose linear, radial or conic at the top, then add or edit color stops below — each stop has a color swatch and a position slider from 0% to 100%. Drag the angle slider (for linear and conic) or pick a shape (for radial), and the preview plus the generated CSS update instantly. For example, a two-stop 90deg linear gradient from purple (#a21caf) at 0% to orange (#fb923c) at 100% produces background-image: linear-gradient(90deg, #a21caf 0%, #fb923c 100%); — press Copy CSS to grab that line plus a matching background-color fallback."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between linear, radial and conic gradients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A linear-gradient() paints straight color bands along a single angle you choose, like 90deg for left-to-right or 135deg for a diagonal. A radial-gradient() spreads color outward from a center point in a circle or ellipse, which suits spotlight or vignette effects. A conic-gradient() sweeps color around a center point like a color wheel or pie chart, starting from the angle you set. All three accept the same list of color stops — only the direction the colors travel differs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many color stops can a gradient have, and what happens at the edges?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool supports 2 to 8 color stops, enough for the vast majority of real gradients while keeping the editor simple — CSS itself allows more, but extra stops rarely add visual value and make the control list unwieldy. Each stop's position can be set anywhere from 0% to 100%, and stops don't have to be added in order — the generated CSS always lists them by position so the gradient renders correctly. If two stops share the same position, you get a hard color edge instead of a smooth blend, which is a common trick for stripes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the generated CSS include a background-color as well as background-image?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "background-image: linear-gradient(...) (or radial-/conic-gradient()) is what actually paints the gradient, but it does nothing if a browser can't parse it or while a heavy page is still loading. Setting background-color to your first color stop gives a sensible flat-color fallback that shows immediately and matches the gradient's overall tone, so the layout never looks broken or transparent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my gradient design sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every color, position, angle and preview in this CSS gradient generator is computed and rendered locally in your browser with plain JavaScript and CSS — nothing is uploaded, logged or shared. Your last design is saved only in your own browser's local storage so the tool reopens where you left off, and no account or sign-up is required."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>CSS Gradient Generator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">CSS Gradient Generator</span></nav>
+  <section class="hero">
+    <h1>CSS Gradient Generator</h1>
+    <p class="lede" data-i18n="hero.lede">Pick a gradient type, drag the color stops, and copy the finished CSS — the preview updates instantly as you design.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="CSS gradient generator" data-i18n-aria-label="tool.aria">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool .gg-field { margin: 14px 0; }
+      #tool .gg-field label { display: flex; align-items: center; justify-content: space-between; }
+      #tool .gg-val { font-weight: 700; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13.5px; }
+      #tool .gg-type-group { display: flex; gap: 8px; }
+      #tool .gg-type-btn {
+        flex: 1 1 0; padding: 10px 8px; border: 1px solid var(--line); border-radius: 10px;
+        background: var(--bg); color: var(--ink); font-family: inherit; font-weight: 700; font-size: 14px; cursor: pointer;
+      }
+      #tool .gg-type-btn[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+      #tool input[type="range"] { width: 100%; accent-color: var(--accent); cursor: pointer; }
+      #tool .gg-preview {
+        margin: 18px 0; height: 150px; border-radius: 12px; border: 1px solid var(--line);
+      }
+      #tool .gg-stops { display: flex; flex-direction: column; gap: 10px; margin: 6px 0 14px; }
+      #tool .gg-stop {
+        display: flex; align-items: center; gap: 10px;
+        background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+      }
+      #tool .gg-stop-color {
+        flex: 0 0 auto; width: 40px; height: 40px; padding: 2px; border: 1px solid var(--line);
+        border-radius: 8px; background: var(--bg); cursor: pointer;
+      }
+      #tool .gg-stop-pos { flex: 1 1 auto; }
+      #tool .gg-stop-posval {
+        flex: 0 0 44px; text-align: right; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12.5px; color: var(--muted);
+      }
+      #tool .gg-stop-remove {
+        flex: 0 0 auto; width: 32px; height: 32px; border: 1px solid var(--line); border-radius: 8px;
+        background: var(--bg); color: var(--ink); cursor: pointer; font-size: 15px; line-height: 1;
+      }
+      #tool .gg-stop-remove:hover:not(:disabled) { border-color: #b91c1c; color: #b91c1c; }
+      #tool .gg-stop-remove:disabled { opacity: 0.4; cursor: not-allowed; }
+      #tool .gg-add { width: 100%; }
+      #tool .gg-max-hint { margin: 6px 0 0; font-size: 12.5px; color: var(--muted); text-align: center; }
+      #tool .gg-output-wrap { margin-top: 20px; }
+      #tool #gg-css {
+        width: 100%; box-sizing: border-box; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13.5px; line-height: 1.5; padding: 12px; border: 1px solid var(--line); border-radius: 10px;
+        background: var(--bg); color: var(--ink); resize: vertical;
+      }
+      #tool .gg-actions { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+      #tool .gg-actions .btn { flex: 1 1 auto; margin-top: 0; }
+      #tool .gg-presets { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+      #tool .gg-preset-btn {
+        width: 56px; height: 40px; border-radius: 8px; border: 1px solid var(--line); cursor: pointer; padding: 0;
+      }
+      #tool .gg-preset-btn:hover, #tool .gg-preset-btn:focus-visible { border-color: var(--accent); }
+      #tool .gg-toast { margin: 12px 0 0; font-size: 13.5px; font-weight: 600; min-height: 1.2em; }
+      #tool .gg-toast.is-ok { color: var(--accent-strong); }
+      [data-theme="dark"] #tool .gg-toast.is-ok { color: var(--accent); }
+      #tool .gg-toast.is-error { color: #b91c1c; }
+      @media (max-width: 420px) {
+        #tool .gg-type-group { flex-direction: column; }
+        #tool .gg-actions { flex-direction: column; }
+      }
+    </style>
+
+    <div class="gg-field">
+      <label data-i18n="tool.type.label">Gradient type</label>
+      <div class="gg-type-group" id="gg-type" role="group" aria-label="Gradient type" data-i18n-aria-label="tool.type.label">
+        <button type="button" class="gg-type-btn" data-type="linear" aria-pressed="true" data-i18n="tool.type.linear">Linear</button>
+        <button type="button" class="gg-type-btn" data-type="radial" aria-pressed="false" data-i18n="tool.type.radial">Radial</button>
+        <button type="button" class="gg-type-btn" data-type="conic" aria-pressed="false" data-i18n="tool.type.conic">Conic</button>
+      </div>
+    </div>
+
+    <div class="gg-field" id="gg-angle-field">
+      <label for="gg-angle"><span data-i18n="tool.angle.label">Angle</span><span class="gg-val" id="gg-angle-val">90°</span></label>
+      <input type="range" id="gg-angle" min="0" max="360" step="1" value="90">
+    </div>
+
+    <div class="gg-field" id="gg-shape-field" hidden>
+      <label for="gg-shape" data-i18n="tool.shape.label">Shape</label>
+      <select id="gg-shape">
+        <option value="circle" data-i18n="tool.shape.circle">Circle</option>
+        <option value="ellipse" data-i18n="tool.shape.ellipse">Ellipse</option>
+      </select>
+    </div>
+
+    <div class="gg-preview" id="gg-preview" role="img" aria-label="Live gradient preview" data-i18n-aria-label="tool.preview.aria"></div>
+
+    <div class="gg-field">
+      <label data-i18n="tool.stops.label">Color stops</label>
+    </div>
+    <div class="gg-stops" id="gg-stops"></div>
+    <button type="button" class="btn gg-add" id="gg-add" data-i18n="tool.add">+ Add color stop</button>
+    <p class="gg-max-hint" id="gg-max-hint" hidden data-i18n="tool.stops.maxHint">Maximum of 8 color stops</p>
+
+    <div class="gg-output-wrap">
+      <label for="gg-css" data-i18n="tool.css.label">Generated CSS</label>
+      <textarea id="gg-css" rows="4" readonly spellcheck="false"></textarea>
+    </div>
+
+    <div class="gg-actions">
+      <button type="button" class="btn" id="gg-copy" data-i18n="tool.copy">Copy CSS</button>
+      <button type="button" class="btn" id="gg-random" data-i18n="tool.random">🎲 Random gradient</button>
+    </div>
+
+    <div class="gg-field" style="margin-bottom:6px;">
+      <label data-i18n="tool.presets.label">Presets</label>
+    </div>
+    <div class="gg-presets" id="gg-presets"></div>
+
+    <p class="gg-toast" id="gg-toast" role="status" aria-live="polite"></p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;background:color-mix(in srgb,var(--accent) 8%,var(--surface));padding:.1em .35em;border-radius:4px}
+    </style>
+
+    <h2>What a CSS gradient actually is</h2>
+    <p>A CSS gradient is not an image file — it's a function the browser evaluates on the fly to paint a smooth (or hard-edged) transition between two or more colors, assigned through <code>background-image</code>. Because it's computed, not downloaded, it scales to any element size with zero extra network requests, stays crisp on any screen density, and can be edited by changing a few numbers instead of re-exporting a PNG. This generator builds the three gradient functions CSS supports — <code>linear-gradient()</code>, <code>radial-gradient()</code> and <code>conic-gradient()</code> — from a visual list of color stops so you never have to memorize the syntax.</p>
+
+    <h3>linear-gradient() — bands along an angle</h3>
+    <p><code>linear-gradient(90deg, #a21caf 0%, #fb923c 100%)</code> draws a straight line at 90 degrees and paints every point along it according to how far it sits between the color stops. The angle follows compass-style CSS convention: <code>0deg</code> points up, <code>90deg</code> points right, <code>180deg</code> points down and <code>270deg</code> points left — increasing clockwise. Percent positions describe where along that line each color reaches "full strength"; between two stops the browser interpolates smoothly.</p>
+
+    <h3>radial-gradient() — color spreading from a point</h3>
+    <p><code>radial-gradient(circle, #a21caf 0%, #fb923c 100%)</code> spreads color outward from a center point instead of along a line. Choosing <code>circle</code> forces a perfectly round gradient regardless of the element's aspect ratio; <code>ellipse</code> (the CSS default) stretches the gradient to match the element's width and height, which is usually what you want for wide banners or hero sections. Radial gradients are the standard choice for spotlight, glow and vignette effects.</p>
+
+    <h3>conic-gradient() — color sweeping around a point</h3>
+    <p><code>conic-gradient(from 0deg, #a21caf 0%, #fb923c 100%)</code> behaves like a clock hand sweeping around a center point, painting color based on the angle rather than the distance. This is the only one of the three that can produce a genuine color wheel or pie-chart look, and it's also the easiest way to build a checkerboard or pinwheel pattern by repeating hard color stops around the circle.</p>
+
+    <h3>Color stops and positions</h3>
+    <p>Every gradient type takes the same ingredient: an ordered list of colors, each optionally pinned to a position from 0% to 100%. If you don't specify a position, CSS spaces the colors evenly; this tool always writes explicit percentages so the result looks identical everywhere it's pasted. Two things are worth remembering: stops render in the order the browser lists them (this tool sorts by position automatically, regardless of the order you added them in), and giving two stops the same position creates an instant, hard-edged color change instead of a soft blend — the standard technique for CSS-only stripes.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — a soft two-color banner.</strong> Purple (#a21caf) at 0% fading to orange (#fb923c) at 100%, 90deg linear, gives <code>background-image: linear-gradient(90deg, #a21caf 0%, #fb923c 100%);</code> — a clean left-to-right wash, good for hero banners and call-to-action buttons.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — a three-stop sunset.</strong> Adding a middle stop, say #f97316 at 55%, between the same purple and orange gives the transition a warmer midpoint instead of a flat linear blend — small position tweaks like this are how most "designer" gradients get their character.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — hard stripes with conic-gradient().</strong> Repeating two colors at the same position pairs — e.g. white 0%–25%, purple 25%–50%, white 50%–75%, purple 75%–100% — around a conic gradient produces four crisp pie slices instead of a smooth fade, because each pair shares a position.</p>
+    </div>
+
+    <h3>Fallbacks and browser support</h3>
+    <p>All three gradient functions have been supported in every major browser (Chrome, Firefox, Safari, Edge) since 2021 or earlier, so compatibility is rarely a real concern today — the one exception is that very old Safari versions need a <code>-webkit-</code> prefix, which most build tools add automatically via autoprefixer. Because <code>background-image</code> silently renders nothing if it can't be parsed, this generator always writes a plain <code>background-color</code> line using your first stop's color right above it, so the element still shows a sensible flat color the instant it appears — before the gradient (or any other background image) finishes loading.</p>
+
+    <table>
+      <thead><tr><th>Function</th><th>Direction model</th><th>Best for</th></tr></thead>
+      <tbody>
+        <tr><td>linear-gradient()</td><td>Single angle, straight bands</td><td>Banners, buttons, backgrounds</td></tr>
+        <tr><td>radial-gradient()</td><td>Outward from a center point</td><td>Spotlights, glows, vignettes</td></tr>
+        <tr><td>conic-gradient()</td><td>Rotating around a center point</td><td>Color wheels, pie charts, pinwheels</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Forgetting the fallback color.</strong> If a stylesheet fails to load or a very old browser can't parse the gradient syntax, an element with only <code>background-image</code> set can end up transparent. Always keep the paired <code>background-color</code> line this tool generates.</li>
+      <li><strong>Assuming radial gradients are always circles.</strong> The CSS default shape is <code>ellipse</code>, which stretches to the element's box — pick <code>circle</code> explicitly whenever you need a perfectly round gradient on a non-square element.</li>
+      <li><strong>Confusing gradient angle with rotation.</strong> <code>90deg</code> in <code>linear-gradient()</code> means "toward the right," not "rotated 90° from some default" — it follows the same clockwise-from-north convention as a compass bearing, not standard math angles.</li>
+      <li><strong>Overloading a gradient with too many stops.</strong> Beyond four or five colors, most gradients start to look muddy rather than more sophisticated; fewer, well-placed stops usually read as more polished design.</li>
+    </ul>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient" target="_blank" rel="noopener">MDN Web Docs — CSS gradient data type, syntax and browser support</a></li>
+      <li><a href="https://www.w3.org/TR/css-images-3/" target="_blank" rel="noopener">W3C CSS Images Module Level 3 — the specification defining linear and radial gradients</a></li>
+      <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum" target="_blank" rel="noopener">W3C WAI — minimum contrast guidance for text placed over gradient backgrounds</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/hash-gen/"><span class="related-ico" aria-hidden="true">#️⃣</span><span class="related-name">Hash Generator</span></a><a class="related-item" href="https://tool-hub.me/html-entity-conv/"><span class="related-ico" aria-hidden="true">🔣</span><span class="related-name">HTML Entity Encoder / Decoder</span></a><a class="related-item" href="https://tool-hub.me/http-status-lookup/"><span class="related-ico" aria-hidden="true">🚦</span><span class="related-name">HTTP Status Code Lookup</span></a><a class="related-item" href="https://tool-hub.me/json-diff/"><span class="related-ico" aria-hidden="true">🔍</span><span class="related-name">JSON Diff</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I create a CSS gradient with this generator?</summary>
+      <p data-i18n="faq.a1">Choose linear, radial or conic at the top, then add or edit color stops below — each stop has a color swatch and a position slider from 0% to 100%. Drag the angle slider (for linear and conic) or pick a shape (for radial), and the preview plus the generated CSS update instantly. For example, a two-stop 90deg linear gradient from purple (#a21caf) at 0% to orange (#fb923c) at 100% produces background-image: linear-gradient(90deg, #a21caf 0%, #fb923c 100%); — press Copy CSS to grab that line plus a matching background-color fallback.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What's the difference between linear, radial and conic gradients?</summary>
+      <p data-i18n="faq.a2">A linear-gradient() paints straight color bands along a single angle you choose, like 90deg for left-to-right or 135deg for a diagonal. A radial-gradient() spreads color outward from a center point in a circle or ellipse, which suits spotlight or vignette effects. A conic-gradient() sweeps color around a center point like a color wheel or pie chart, starting from the angle you set. All three accept the same list of color stops — only the direction the colors travel differs.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How many color stops can a gradient have, and what happens at the edges?</summary>
+      <p data-i18n="faq.a3">This tool supports 2 to 8 color stops, enough for the vast majority of real gradients while keeping the editor simple — CSS itself allows more, but extra stops rarely add visual value and make the control list unwieldy. Each stop's position can be set anywhere from 0% to 100%, and stops don't have to be added in order — the generated CSS always lists them by position so the gradient renders correctly. If two stops share the same position, you get a hard color edge instead of a smooth blend, which is a common trick for stripes.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Why does the generated CSS include a background-color as well as background-image?</summary>
+      <p data-i18n="faq.a4">background-image: linear-gradient(...) (or radial-/conic-gradient()) is what actually paints the gradient, but it does nothing if a browser can't parse it or while a heavy page is still loading. Setting background-color to your first color stop gives a sensible flat-color fallback that shows immediately and matches the gradient's overall tone, so the layout never looks broken or transparent.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my gradient design sent to a server?</summary>
+      <p data-i18n="faq.a5">No. Every color, position, angle and preview in this CSS gradient generator is computed and rendered locally in your browser with plain JavaScript and CSS — nothing is uploaded, logged or shared. Your last design is saved only in your own browser's local storage so the tool reopens where you left off, and no account or sign-up is required.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

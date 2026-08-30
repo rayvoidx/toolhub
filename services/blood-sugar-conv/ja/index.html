@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-sTWqq5D0y7fPe/iEDe26Dw07Fh2lD01R7Pgx+6ewh04=' 'sha256-jAtSxlS8mEzQZ6NvYkOZk59fwjI/1Fcq9h4wjkTyUOI=' 'sha256-QWmUoQwkt137X7zVsFarEQDuQx5thi/LQNgQhTYTqik='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>血糖値コンバーター — mg/dL と mmol/L を瞬時に変換</title>
+<meta name="description" content="血糖値を mg/dL と mmol/L の間で双方向に瞬時に変換。空腹時・食後の基準範囲付き。無料・プライバシー保護・ブラウザ内で完結。">
+<meta name="keywords" content="blood sugar converter, mg/dl to mmol/l, mmol to mg/dl, blood glucose conversion, 126 mg/dl in mmol, 혈당 단위 변환">
+<link rel="canonical" href="https://tool-hub.me/blood-sugar-conv/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/blood-sugar-conv/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/blood-sugar-conv/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/blood-sugar-conv/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/blood-sugar-conv/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/blood-sugar-conv/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/blood-sugar-conv/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/blood-sugar-conv/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/blood-sugar-conv/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/blood-sugar-conv/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/blood-sugar-conv/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/blood-sugar-conv/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/blood-sugar-conv/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/blood-sugar-conv/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/blood-sugar-conv/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/blood-sugar-conv/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="血糖値コンバーター — mg/dL と mmol/L を瞬時に変換">
+<meta property="og:description" content="血糖値を mg/dL と mmol/L の間で双方向に瞬時に変換。空腹時・食後の基準範囲付き。無料・プライバシー保護・ブラウザ内で完結。">
+<meta property="og:url" content="https://tool-hub.me/blood-sugar-conv/ja/">
+<meta property="og:image" content="https://tool-hub.me/blood-sugar-conv/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b91c1c">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Blood Sugar Converter",
+  "description": "Convert blood sugar between mg/dL and mmol/L instantly, either direction, with fasting and post-meal reference ranges. Free, private, browser-only.",
+  "url": "https://tool-hub.me/blood-sugar-conv/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Blood Sugar Converter", "item": "https://tool-hub.me/blood-sugar-conv/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the formula to convert blood sugar from mg/dL to mmol/L?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the mg/dL reading by 18.016 to get mmol/L, or multiply mmol/L by 18.016 to get mg/dL. The number 18.016 comes from the molar mass of glucose (about 180.16 g/mol) divided by 10, since 1 mmol/L means 1 millimole of glucose per liter of blood. For example, 100 mg/dL ÷ 18.016 ≈ 5.6 mmol/L, and 5.6 mmol/L × 18.016 ≈ 100.9 mg/dL. This converter does that division for you instantly in both directions as you type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a normal fasting blood sugar level?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most healthy adults with no food for at least 8 hours, a fasting blood sugar under 100 mg/dL (5.6 mmol/L) is generally considered normal. A reading of 100-125 mg/dL (5.6-6.9 mmol/L) falls in the prediabetes range, often called impaired fasting glucose, and 126 mg/dL (7.0 mmol/L) or higher on more than one occasion is in the range associated with diabetes. These figures follow commonly cited American Diabetes Association criteria; your own target range may differ if you have a diagnosed condition, so always follow your care team's guidance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as a normal blood sugar level 2 hours after eating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two hours after starting a meal, or during a 75g oral glucose tolerance test, a reading under 140 mg/dL (7.8 mmol/L) is generally considered normal. 140-199 mg/dL (7.8-11.0 mmol/L) falls in the prediabetes range, often called impaired glucose tolerance, and 200 mg/dL (11.1 mmol/L) or higher is in the range associated with diabetes. Post-meal numbers are naturally higher than fasting numbers, which is why this converter lets you pick the context before checking a reading against the reference table."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some countries use mg/dL and others use mmol/L?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's mostly historical convention rather than anything about the blood itself. The United States, Japan and a few other countries report glucose as a mass concentration, milligrams of glucose per deciliter of blood (mg/dL). Most of Europe, Canada, Australia and much of the rest of the world report it as a molar concentration, millimoles of glucose per liter of blood (mmol/L), the SI-standard unit. Neither unit is more accurate than the other — they describe the same measurement two different ways, which is exactly what this converter bridges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can this blood sugar converter replace a glucose meter or medical advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This tool only converts and classifies numbers you already have from a glucose meter, lab test or continuous glucose monitor — it cannot measure your blood sugar itself. The reference ranges shown are educational, general-population figures, not a diagnosis, and they don't account for medication, illness, pregnancy or other individual factors. Always rely on an actual meter or lab test for real readings, and talk to your doctor or care team about the target range and next steps that are right for you."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Blood Sugar Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#e11d48" href="https://tool-hub.me/health-calculators/">Health</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Blood Sugar Converter</span></nav>
+  <section class="hero">
+    <h1>Blood Sugar Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type mg/dL or mmol/L in either box — the other value and your reference range appear instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Blood sugar converter" data-i18n-aria-label="tool.aria">
+    <style>
+      /* 도구 전용 스킨 — TOOL 영역 한정 (공통 style.css 는 건드리지 않음) */
+      #tool .bg-context { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+      #tool .bg-ctx-btn { -webkit-appearance: none; appearance: none; flex: 1 1 160px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); font-family: inherit; font-size: 13.5px; font-weight: 700; cursor: pointer; text-align: center; }
+      #tool .bg-ctx-btn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+      #tool .bg-row { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; }
+      #tool .bg-row .input-group { flex: 1 1 150px; min-width: 0; }
+      #tool .bg-clear-btn { flex: 0 0 auto; width: 44px; height: 44px; margin-bottom: 1px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--muted); font-size: 15px; font-family: inherit; cursor: pointer; }
+      #tool .bg-clear-btn:hover { border-color: var(--accent); color: var(--accent-strong); }
+      #tool .bg-eq { margin: 0; font-size: clamp(18px, 5vw, 23px); font-weight: 800; color: var(--accent-strong); word-break: break-word; cursor: copy; }
+      [data-theme="dark"] #tool .bg-eq { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .bg-eq { color: var(--accent); } }
+      #tool .bg-badge { display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 999px; }
+      #tool .bg-badge.cat-low { background: color-mix(in srgb, #3b82f6 15%, var(--surface)); color: #1d4ed8; }
+      #tool .bg-badge.cat-normal { background: color-mix(in srgb, #10b981 15%, var(--surface)); color: #047857; }
+      #tool .bg-badge.cat-prediabetes { background: color-mix(in srgb, #f59e0b 18%, var(--surface)); color: #b45309; }
+      #tool .bg-badge.cat-diabetes { background: color-mix(in srgb, #ef4444 15%, var(--surface)); color: #b91c1c; }
+      [data-theme="dark"] #tool .bg-badge.cat-low { color: #93c5fd; }
+      [data-theme="dark"] #tool .bg-badge.cat-normal { color: #6ee7b7; }
+      [data-theme="dark"] #tool .bg-badge.cat-prediabetes { color: #fcd34d; }
+      [data-theme="dark"] #tool .bg-badge.cat-diabetes { color: #fca5a5; }
+      @media (prefers-color-scheme: dark) {
+        [data-theme="auto"] #tool .bg-badge.cat-low { color: #93c5fd; }
+        [data-theme="auto"] #tool .bg-badge.cat-normal { color: #6ee7b7; }
+        [data-theme="auto"] #tool .bg-badge.cat-prediabetes { color: #fcd34d; }
+        [data-theme="auto"] #tool .bg-badge.cat-diabetes { color: #fca5a5; }
+      }
+      #tool .bg-verdict-text { margin: 10px 0 0; font-size: 14.5px; line-height: 1.55; color: var(--ink); }
+      #tool .bg-warn { margin: 10px 0 0; font-size: 13.5px; font-weight: 600; line-height: 1.5; color: #b45309; }
+      #tool .bg-error { color: var(--accent-strong); font-weight: 600; }
+      #tool .bg-tablewrap { margin-top: 26px; }
+      #tool .bg-tablewrap h2 { font-size: 15px; margin: 0 0 10px; letter-spacing: -0.01em; }
+      #tool .bg-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+      #tool .bg-table th, #tool .bg-table td { text-align: start; padding: 9px 8px; border-bottom: 1px solid var(--line); font-size: 13px; line-height: 1.4; }
+      #tool .bg-table thead th { font-size: 10.5px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; }
+      #tool .bg-table td.bg-val { text-align: end; font-weight: 700; }
+      #tool .bg-table tbody tr.bg-active { background: color-mix(in srgb, var(--accent) 9%, transparent); }
+      #tool .bg-note { margin: 14px 0 0; font-size: 12.5px; line-height: 1.55; color: var(--muted); }
+      @media (max-width: 420px) {
+        #tool .bg-row { flex-direction: column; align-items: stretch; }
+        #tool .bg-clear-btn { align-self: center; width: 100%; }
+        #tool .bg-table th, #tool .bg-table td { padding: 8px 5px; font-size: 12px; }
+      }
+    </style>
+
+    <div class="bg-context" role="group" aria-label="Reading context" data-i18n-aria-label="tool.context.group">
+      <button type="button" class="bg-ctx-btn" data-ctx="fasting" aria-pressed="true" data-i18n="tool.context.fasting">Fasting (8+ hours without food)</button>
+      <button type="button" class="bg-ctx-btn" data-ctx="postmeal" aria-pressed="false" data-i18n="tool.context.postmeal">2 hours after eating</button>
+    </div>
+
+    <div class="bg-row">
+      <div class="input-group">
+        <label for="bg-mgdl" data-i18n="tool.mgdl.label">Blood sugar (mg/dL)</label>
+        <input id="bg-mgdl" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 100" data-i18n-placeholder="tool.mgdl.ph" autocomplete="off" autofocus>
+      </div>
+      <button type="button" class="bg-clear-btn" id="bg-clear" aria-label="Clear" data-i18n-aria-label="tool.clear" title="Clear" data-i18n-title="tool.clear">✕</button>
+      <div class="input-group">
+        <label for="bg-mmol" data-i18n="tool.mmol.label">Blood sugar (mmol/L)</label>
+        <input id="bg-mmol" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 5.6" data-i18n-placeholder="tool.mmol.ph" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="result-empty" data-i18n="tool.placeholder">Enter a value in either box to convert</p>
+      <div id="result-verdict" hidden>
+        <p class="bg-eq"><span class="result-value" id="bg-eq-text">—</span></p>
+        <span class="bg-badge" id="bg-badge">Normal</span>
+        <p class="bg-verdict-text" id="bg-verdict-text"></p>
+        <p class="bg-warn" id="bg-warn" hidden></p>
+      </div>
+    </div>
+
+    <div class="bg-tablewrap">
+      <h2 data-i18n="tool.table.heading">Reference ranges (educational)</h2>
+      <table class="bg-table" id="bg-ref-table">
+        <thead>
+          <tr>
+            <th data-i18n="tool.table.col.category">Category</th>
+            <th data-i18n="tool.table.col.fasting">Fasting</th>
+            <th data-i18n="tool.table.col.postmeal">2 hours after eating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-cat="low"><td data-i18n="tool.badge.low">Low (hypoglycemia range)</td><td data-i18n="tool.range.low">&lt; 70 mg/dL (&lt; 3.9 mmol/L)</td><td data-i18n="tool.range.low">&lt; 70 mg/dL (&lt; 3.9 mmol/L)</td></tr>
+          <tr data-cat="normal"><td data-i18n="tool.badge.normal">Normal</td><td data-i18n="tool.range.normal.fasting">70 – 99 mg/dL (3.9 – 5.5 mmol/L)</td><td data-i18n="tool.range.normal.postmeal">&lt; 140 mg/dL (&lt; 7.8 mmol/L)</td></tr>
+          <tr data-cat="prediabetes"><td data-i18n="tool.badge.prediabetes">Prediabetes range</td><td data-i18n="tool.range.prediabetes.fasting">100 – 125 mg/dL (5.6 – 6.9 mmol/L)</td><td data-i18n="tool.range.prediabetes.postmeal">140 – 199 mg/dL (7.8 – 11.0 mmol/L)</td></tr>
+          <tr data-cat="diabetes"><td data-i18n="tool.badge.diabetes">Diabetes range</td><td data-i18n="tool.range.diabetes.fasting">&ge; 126 mg/dL (&ge; 7.0 mmol/L)</td><td data-i18n="tool.range.diabetes.postmeal">&ge; 200 mg/dL (&ge; 11.1 mmol/L)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="bg-tablewrap">
+      <h2 data-i18n="tool.common.heading">Common values at a glance</h2>
+      <table class="bg-table" id="bg-common-table">
+        <thead>
+          <tr>
+            <th data-i18n="tool.common.col.mgdl">mg/dL</th>
+            <th class="bg-val" data-i18n="tool.common.col.mmol">mmol/L</th>
+          </tr>
+        </thead>
+        <tbody id="bg-common-tbody"></tbody>
+      </table>
+    </div>
+
+    <p class="bg-note" data-i18n="tool.disclaimer">Educational information only — not medical advice or a diagnosis. Always follow guidance from your doctor or care team for managing your blood sugar.</p>
+    <p class="bg-note" data-i18n="tool.privacyNote">All calculations run in your browser — nothing you enter is sent to a server.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why blood sugar has two different units</h2>
+    <p>A single blood glucose reading gets written two completely different ways depending on where you are in the world. The United States, Japan, and a handful of other countries report it as a mass concentration — milligrams of glucose per deciliter of blood, or mg/dL. Most of Europe, Canada, Australia, and much of the rest of the world use a molar concentration — millimoles of glucose per liter of blood, or mmol/L, the SI-standard unit used across most of clinical chemistry. Neither number is more "correct"; they are two ways of describing the same amount of sugar dissolved in the same volume of blood. The friction shows up the moment a glucose meter bought in one country reports in a unit a doctor, family member, or research paper from another country doesn't use — which is exactly what this converter is for.</p>
+
+    <h2>The conversion formula</h2>
+    <div class="example">
+      <strong>mg/dL → mmol/L:</strong> divide by 18.016<br>
+      <strong>mmol/L → mg/dL:</strong> multiply by 18.016
+      <p style="margin-top:8px">18.016 comes from the molar mass of glucose, about 180.16 grams per mole, divided by 10 to reconcile the deciliter and liter volumes and the milli- and unit-level concentrations in the two unit systems. It is a fixed physical constant for glucose specifically — it is not the same conversion factor used for other blood analytes such as cholesterol or creatinine, each of which has its own molar mass.</p>
+    </div>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <strong>Example 1 — a textbook fasting number.</strong> 100 mg/dL ÷ 18.016 = <strong>5.55 mmol/L</strong>, commonly rounded to 5.6 mmol/L — right at the edge most guidelines use as the upper limit of a normal fasting reading.
+    </div>
+    <div class="example">
+      <strong>Example 2 — the diabetes fasting threshold.</strong> 126 mg/dL ÷ 18.016 = <strong>6.99 mmol/L</strong>, rounded to 7.0 mmol/L, the figure most commonly cited as the fasting cut-off associated with diabetes.
+    </div>
+    <div class="example">
+      <strong>Example 3 — going the other direction.</strong> A lab report shows 7.8 mmol/L. 7.8 × 18.016 = <strong>140.5 mg/dL</strong> — just over the post-meal threshold many guidelines use to flag a reading as outside the normal range.
+    </div>
+
+    <h2>Reading the reference ranges correctly</h2>
+    <p>Blood sugar guidelines always specify <em>when</em> the sample was taken, because a normal number two hours after a meal is a high number on an empty stomach. This converter asks for that context up front so the category shown actually matches how the value was measured:</p>
+    <table>
+      <tr><th>Category</th><th>Fasting (8+ hrs)</th><th>2 hours after eating</th></tr>
+      <tr><td>Low</td><td colspan="2">Under 70 mg/dL (3.9 mmol/L) — can occur at any time</td></tr>
+      <tr><td>Normal</td><td>70–99 mg/dL (3.9–5.5 mmol/L)</td><td>Under 140 mg/dL (7.8 mmol/L)</td></tr>
+      <tr><td>Prediabetes</td><td>100–125 mg/dL (5.6–6.9 mmol/L)</td><td>140–199 mg/dL (7.8–11.0 mmol/L)</td></tr>
+      <tr><td>Diabetes range</td><td>126+ mg/dL (7.0+ mmol/L)</td><td>200+ mg/dL (11.1+ mmol/L)</td></tr>
+    </table>
+    <p>These figures follow the commonly cited American Diabetes Association thresholds and are close to the World Health Organization's criteria as well, though small differences exist between guideline bodies and countries. A single reading in the prediabetes or diabetes range is a prompt to talk to a doctor, not a diagnosis by itself — clinical diagnosis normally involves repeat testing, an HbA1c blood test, or a formal oral glucose tolerance test.</p>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Comparing a fasting number to a post-meal threshold, or vice versa.</strong> The exact same 130 mg/dL reading is in the diabetes range fasting but perfectly normal two hours after a meal — always match the number to the right column.</li>
+      <li><strong>Treating one high reading as a diagnosis.</strong> Guidelines require an elevated result confirmed on a separate day, or a supporting HbA1c or oral glucose tolerance test, before diabetes is diagnosed.</li>
+      <li><strong>Mixing up the rounding.</strong> 5.5 mmol/L and 5.6 mmol/L both trace back to roughly 99–101 mg/dL because of rounding — treat values within a point or two of a threshold as "near the line" rather than a hard pass/fail.</li>
+      <li><strong>Ignoring low readings.</strong> Blood sugar under 70 mg/dL (3.9 mmol/L) is flagged as low regardless of fasting or post-meal context, since hypoglycemia can occur at any time, especially for people on insulin or other glucose-lowering medication.</li>
+    </ul>
+
+    <h3>What this converter does not do</h3>
+    <p>This tool performs unit arithmetic and shows where a number sits against commonly published reference ranges — nothing more. It cannot measure your blood sugar, does not know your medication, medical history, or how the sample was collected, and it is not a substitute for an actual glucose meter, a lab test, or advice from your doctor or diabetes care team. If you manage a diagnosed condition, always follow the target range and testing schedule your care team has given you rather than the general population figures shown here.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://diabetes.org/about-diabetes/diagnosis" target="_blank" rel="noopener">American Diabetes Association — diagnostic thresholds for fasting, post-meal and A1C glucose levels</a></li>
+      <li><a href="https://www.cdc.gov/diabetes/" target="_blank" rel="noopener">CDC Diabetes — reference ranges, prediabetes criteria and testing guidance</a></li>
+      <li><a href="https://www.who.int/health-topics/diabetes" target="_blank" rel="noopener">World Health Organization — international diabetes definitions and mmol/L reporting standards</a></li>
+      <li><a href="https://www.niddk.nih.gov/health-information/diabetes" target="_blank" rel="noopener">NIH NIDDK — low blood glucose (hypoglycemia) and blood sugar monitoring basics</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/bmi-calc/"><span class="related-ico" aria-hidden="true">⚖️</span><span class="related-name">BMI Calculator</span></a><a class="related-item" href="https://tool-hub.me/bmr-calc/"><span class="related-ico" aria-hidden="true">🔥</span><span class="related-name">BMR Calculator</span></a><a class="related-item" href="https://tool-hub.me/body-fat-calc/"><span class="related-ico" aria-hidden="true">📊</span><span class="related-name">Body Fat Calculator</span></a><a class="related-item" href="https://tool-hub.me/bsa-calc/"><span class="related-ico" aria-hidden="true">🧍</span><span class="related-name">BSA Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is the formula to convert blood sugar from mg/dL to mmol/L?</summary>
+      <p data-i18n="faq.a1">Divide the mg/dL reading by 18.016 to get mmol/L, or multiply mmol/L by 18.016 to get mg/dL. The number 18.016 comes from the molar mass of glucose (about 180.16 g/mol) divided by 10, since 1 mmol/L means 1 millimole of glucose per liter of blood. For example, 100 mg/dL ÷ 18.016 ≈ 5.6 mmol/L, and 5.6 mmol/L × 18.016 ≈ 100.9 mg/dL. This converter does that division for you instantly in both directions as you type.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What is a normal fasting blood sugar level?</summary>
+      <p data-i18n="faq.a2">For most healthy adults with no food for at least 8 hours, a fasting blood sugar under 100 mg/dL (5.6 mmol/L) is generally considered normal. A reading of 100-125 mg/dL (5.6-6.9 mmol/L) falls in the prediabetes range, often called impaired fasting glucose, and 126 mg/dL (7.0 mmol/L) or higher on more than one occasion is in the range associated with diabetes. These figures follow commonly cited American Diabetes Association criteria; your own target range may differ if you have a diagnosed condition, so always follow your care team's guidance.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What counts as a normal blood sugar level 2 hours after eating?</summary>
+      <p data-i18n="faq.a3">Two hours after starting a meal, or during a 75g oral glucose tolerance test, a reading under 140 mg/dL (7.8 mmol/L) is generally considered normal. 140-199 mg/dL (7.8-11.0 mmol/L) falls in the prediabetes range, often called impaired glucose tolerance, and 200 mg/dL (11.1 mmol/L) or higher is in the range associated with diabetes. Post-meal numbers are naturally higher than fasting numbers, which is why this converter lets you pick the context before checking a reading against the reference table.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Why do some countries use mg/dL and others use mmol/L?</summary>
+      <p data-i18n="faq.a4">It's mostly historical convention rather than anything about the blood itself. The United States, Japan and a few other countries report glucose as a mass concentration, milligrams of glucose per deciliter of blood (mg/dL). Most of Europe, Canada, Australia and much of the rest of the world report it as a molar concentration, millimoles of glucose per liter of blood (mmol/L), the SI-standard unit. Neither unit is more accurate than the other — they describe the same measurement two different ways, which is exactly what this converter bridges.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Can this blood sugar converter replace a glucose meter or medical advice?</summary>
+      <p data-i18n="faq.a5">No. This tool only converts and classifies numbers you already have from a glucose meter, lab test or continuous glucose monitor — it cannot measure your blood sugar itself. The reference ranges shown are educational, general-population figures, not a diagnosis, and they don't account for medication, illness, pregnancy or other individual factors. Always rely on an actual meter or lab test for real readings, and talk to your doctor or care team about the target range and next steps that are right for you.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

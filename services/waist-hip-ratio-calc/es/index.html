@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-191gCBBm+VAoWXTuIoXRbXZ3wJUnZopNdPrhd1WPiZQ=' 'sha256-9zEewmI+g0O8Srbz/jwYcxl4D02LLHKGV5Fw0J05KQQ=' 'sha256-e/rUKgrZsso3z3ggxUh4Ia40ES4o2pF7iFE92DyVL6g='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de índice cintura-cadera (ICC / WHR)</title>
+<meta name="description" content="Calcula tu índice cintura-cadera, consulta la franja de riesgo de la OMS según tu sexo y comprueba qué indica la cintura por sí sola sobre la grasa visceral.">
+<meta name="keywords" content="waist to hip ratio, whr calculator, waist hip ratio calculator, body shape health risk, waist to hip ratio chart, visceral fat measurement">
+<link rel="canonical" href="https://tool-hub.me/waist-hip-ratio-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/waist-hip-ratio-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/waist-hip-ratio-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/waist-hip-ratio-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/waist-hip-ratio-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/waist-hip-ratio-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/waist-hip-ratio-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/waist-hip-ratio-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/waist-hip-ratio-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/waist-hip-ratio-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/waist-hip-ratio-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/waist-hip-ratio-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/waist-hip-ratio-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/waist-hip-ratio-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/waist-hip-ratio-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/waist-hip-ratio-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de índice cintura-cadera (ICC / WHR)">
+<meta property="og:description" content="Calcula tu índice cintura-cadera, consulta la franja de riesgo de la OMS según tu sexo y comprueba qué indica la cintura por sí sola sobre la grasa visceral.">
+<meta property="og:url" content="https://tool-hub.me/waist-hip-ratio-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/waist-hip-ratio-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#9f1239">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Waist to Hip Ratio Calculator",
+  "description": "Calculate your waist to hip ratio, see the WHO risk band for your sex, and check what your waist measurement alone says about visceral fat and body shape.",
+  "url": "https://tool-hub.me/waist-hip-ratio-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why use waist-to-hip ratio instead of BMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMI only compares weight with height, so a lean muscular build and a heavy-around-the-middle build can score the same. Waist-to-hip ratio measures where the fat sits: an apple shape stores it around the organs as visceral fat, a pear shape stores it on hips and thighs. Visceral fat is the type consistently linked with type 2 diabetes and heart disease, which is why WHR often separates risk better than BMI at identical weight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I measure my waist and hips correctly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stand upright with feet together and breathe out normally — do not suck in. Run the tape around the narrowest part of the torso, roughly at navel level, keeping it level all the way round and snug without denting the skin. For hips, measure the widest part of the buttocks. Take each reading twice and average them; a 2 cm slip shifts the ratio by about 0.02."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I actually change my waist-to-hip ratio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but only through overall fat loss — crunches cannot spot-reduce the waist. A modest calorie deficit, more daily walking, resistance training and better sleep all pull down visceral fat first, which is why the tape often moves before the scale does. Most people who lose 5 to 10 percent of body weight see a measurable ratio change within a few months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do the 0.85 and 0.90 cutoffs come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They come from the WHO's 2008 expert consultation on waist circumference and waist-hip ratio, which pooled cohort data linking abdominal fat to heart disease and diabetes. WHO marks substantially increased risk at 0.90 for men and 0.85 for women. The moderate tier shown here (0.90 to 0.99 for men, 0.80 to 0.84 for women) follows the clinical band tables built on those numbers. The cutoffs are population averages from mostly European and North American cohorts, so lower thresholds are often applied for South Asian groups."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Waist to Hip Ratio Calculator",
+      "item": "https://tool-hub.me/waist-hip-ratio-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Waist to Hip Ratio Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#e11d48" href="https://tool-hub.me/health-calculators/">Health</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Waist to Hip Ratio Calculator</span></nav>
+  <section class="hero">
+    <h1>Waist to Hip Ratio Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Where you carry fat matters more than what the scale says. Two tape measurements, one number.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .sex-row { display:flex; gap:18px; flex-wrap:wrap; margin:4px 0 12px; }
+      #tool .sex-row label { display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14px; margin:0; cursor:pointer; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:30px; }
+      #tool .badge { display:inline-block; padding:2px 10px; border-radius:999px; font-size:15px; background:#e5e7eb; color:#374151; }
+      #tool .badge.low { background:#dcfce7; color:#166534; }
+      #tool .badge.mod { background:#fef3c7; color:#92400e; }
+      #tool .badge.high { background:#fee2e2; color:#991b1b; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .warn { color:#b45309; font-weight:600; font-size:13px; margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <p id="sex-label" style="font-weight:600;font-size:14px;margin:0 0 2px;" data-i18n="tool.sex.label">Sex</p>
+    <div class="sex-row" role="radiogroup" aria-labelledby="sex-label">
+      <label><input type="radio" name="sex" value="female" checked><span data-i18n="tool.sex.female">Female</span></label>
+      <label><input type="radio" name="sex" value="male"><span data-i18n="tool.sex.male">Male</span></label>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="waist" data-i18n="tool.waist.label">Waist circumference</label>
+        <input type="number" id="waist" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="85">
+      </div>
+      <div>
+        <label for="hip" data-i18n="tool.hip.label">Hip circumference</label>
+        <input type="number" id="hip" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="100">
+      </div>
+    </div>
+
+    <label for="unit" data-i18n="tool.unit.label">Units</label>
+    <select id="unit">
+      <option value="cm" data-i18n="tool.unit.cm">Centimetres</option>
+      <option value="in" data-i18n="tool.unit.in">Inches</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate ratio</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.whr">Waist-to-hip ratio</div>
+          <div class="rc-val" id="r-whr">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.risk">WHO risk band</div><div class="rc-val"><span class="badge" id="r-risk">—</span></div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.waist">Waist alone</div><div class="rc-val"><span class="badge" id="r-waist">—</span></div></div>
+      </div>
+      <p class="warn" id="warn" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.measure" style="margin-top:12px;">Measure the waist at navel level after a relaxed exhale and the hips at the widest point of the buttocks, tape snug and level, no bulky clothing in between.</p>
+    <p class="subtle" data-i18n="tool.note.limits" style="margin-top:6px;">A screening guide, not a diagnosis. As a second check, keep your waist under half your height, and take any high band to a clinician.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What the waist-to-hip ratio actually measures</h2>
+    <p>Your waist-to-hip ratio (WHR) is one division: waist circumference divided by hip circumference. Because both numbers are lengths, the units cancel — 34 inches over 40 inches gives the same 0.85 as 86 cm over 101 cm. What survives the division is the shape of your torso, and shape is the part of body composition that scales and BMI charts throw away.</p>
+    <p>That matters because fat is not one tissue. Fat stored under the skin of the hips and thighs is metabolically quiet. Fat stored inside the abdomen, wrapped around the liver, pancreas and intestines, is metabolically loud: it drains straight into the portal vein, raises circulating free fatty acids and inflammatory signals, and tracks closely with insulin resistance. A rising waist with stable hips is the outward sign of that visceral compartment filling up, which is why WHO and NICE both kept waist-based measures after BMI became standard rather than replacing them.</p>
+
+    <h3>Worked example: 85 cm waist, 100 cm hips</h3>
+    <p>Take a 42-year-old woman measuring 85 cm at the waist and 100 cm at the hips. The ratio is 85 / 100 = 0.85. For women the bands used here are below 0.80 low, 0.80 to 0.84 moderate, and 0.85 or above high — so she lands exactly on the high-risk line, not comfortably below it. Two centimetres off the waist takes her to 83 / 100 = 0.83 and back into the moderate band, which tells you how tight these thresholds are and why sloppy measuring can flip your result.</p>
+    <p>Her waist alone tells a similar story: 85 cm is past the 80 cm "increased risk" mark for women but under the 88 cm "substantially increased" mark. And if she is 165 cm tall, her waist-to-height ratio is 85 / 165 = 0.52, just over the simple rule that your waist should be less than half your height. Three different measures, one consistent message — the abdomen is where her attention belongs.</p>
+    <p>Now give the identical tape readings to a man. At 0.85 he sits in the low band, because male thresholds are 0.90 and 1.00. That is not a bookkeeping quirk: men deposit fat abdominally at lower total body fat percentages, and women carry more gluteofemoral fat by default, so the same ratio represents different amounts of visceral tissue in each. Always read your ratio against the right column.</p>
+
+    <h3>Getting a measurement that repeats</h3>
+    <p>Stand up straight with your feet together and your arms relaxed at your sides. Breathe out normally and measure at the end of that exhale — no sucking in, no holding a big breath. Put the tape around the narrowest part of the torso, which for most people is roughly at navel level or just above it, and check in a mirror that the tape is horizontal all the way round; a tape that dips at the back inflates the reading by a centimetre or more. Pull it snug so it stays put without compressing the skin. Measure over bare skin or a thin layer, never over a jumper or waistband.</p>
+    <p>For the hips, find the widest point across the buttocks, usually about 20 cm below the natural waist, and keep the tape level again. Take each measurement twice, and if the two differ by more than a centimetre take a third and average. Measure at the same time of day when you re-check — waist readings drift by one to two centimetres across a day with meals and fluid.</p>
+
+    <h2>Risk bands used by this calculator</h2>
+    <table>
+      <thead><tr><th>Band</th><th>Women</th><th>Men</th></tr></thead>
+      <tbody>
+        <tr><td>Low risk</td><td>below 0.80</td><td>below 0.90</td></tr>
+        <tr><td>Moderate risk</td><td>0.80 to 0.84</td><td>0.90 to 0.99</td></tr>
+        <tr><td>High risk</td><td>0.85 and above</td><td>1.00 and above</td></tr>
+        <tr><td>Waist alone — increased</td><td>80 cm / 31.5 in</td><td>94 cm / 37 in</td></tr>
+        <tr><td>Waist alone — substantially increased</td><td>88 cm / 34.6 in</td><td>102 cm / 40 in</td></tr>
+      </tbody>
+    </table>
+
+    <h2>WHR, BMI and waist-to-height compared</h2>
+    <p>BMI answers "how heavy are you for your height" and nothing else. It misclassifies muscular people as overweight and misses normal-weight central obesity entirely, the group sometimes labelled TOFI — thin outside, fat inside. WHR answers "where is it", and in large cohort studies it predicted heart attack risk more sharply than BMI at the same body weight. Waist-to-height ratio answers "how much is in front" with a single memorable rule: keep your waist under half your height. It needs only one circumference, so it is harder to get wrong, and it works for both sexes without separate tables.</p>
+    <p>The practical move is to use two of the three. Track waist-to-height month to month because it is the least fiddly, and check WHR when you want the shape picture, especially if your hips are unusually broad or narrow for your frame — a naturally slim-hipped person can post a worrying ratio without much visceral fat, and a very broad-hipped person can hide a growing waist behind a flattering denominator.</p>
+
+    <h2>What this number cannot tell you</h2>
+    <p>A ratio is a screening prompt, not a diagnosis. It says nothing about blood pressure, lipids, fasting glucose, family history or fitness, all of which change your actual risk far more than any single measurement. Pregnancy, ascites, recent abdominal surgery and some medications make the reading meaningless. Athletes with heavy trunk musculature can score high without excess fat, and older adults lose hip muscle in a way that raises the ratio without the waist changing at all.</p>
+    <p>Use it as a trigger. A moderate or high band is a reasonable reason to book a blood pressure and HbA1c check, add a couple of walks a day and re-measure in eight weeks. A low band is not a licence to skip those checks if other risk factors are present. The tape is cheap, the trend is what counts, and the number is only worth what you do with it.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.who.int/health-topics/obesity" target="_blank" rel="noopener">World Health Organization — obesity topic hub, source of the waist circumference and waist-hip ratio cut-offs</a></li>
+      <li><a href="https://www.cdc.gov/obesity/" target="_blank" rel="noopener">CDC — adult obesity guidance and body measurement methods</a></li>
+      <li><a href="https://www.heart.org/en/healthy-living/healthy-eating/losing-weight" target="_blank" rel="noopener">American Heart Association — body fat distribution and cardiovascular risk</a></li>
+      <li><a href="https://www.nhlbi.nih.gov/health/overweight-and-obesity" target="_blank" rel="noopener">NIH NHLBI — overweight and obesity, abdominal fat and metabolic risk factors</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/water-intake-calc/"><span class="related-ico" aria-hidden="true">💧</span><span class="related-name">Water Intake Calculator</span></a><a class="related-item" href="https://tool-hub.me/wilks-calc/"><span class="related-ico" aria-hidden="true">🏋️</span><span class="related-name">Wilks Calculator</span></a><a class="related-item" href="https://tool-hub.me/a1c-calc/"><span class="related-ico" aria-hidden="true">🩸</span><span class="related-name">A1C Calculator</span></a><a class="related-item" href="https://tool-hub.me/army-body-fat-calc/"><span class="related-ico" aria-hidden="true">🎖️</span><span class="related-name">Army Body Fat Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why use waist-to-hip ratio instead of BMI?</summary><p data-i18n="faq.a1">BMI only compares weight with height, so a lean muscular build and a heavy-around-the-middle build can score the same. Waist-to-hip ratio measures where the fat sits: an apple shape stores it around the organs as visceral fat, a pear shape stores it on hips and thighs. Visceral fat is the type consistently linked with type 2 diabetes and heart disease, which is why WHR often separates risk better than BMI at identical weight.</p></details>
+    <details><summary data-i18n="faq.q2">How do I measure my waist and hips correctly?</summary><p data-i18n="faq.a2">Stand upright with feet together and breathe out normally — do not suck in. Run the tape around the narrowest part of the torso, roughly at navel level, keeping it level all the way round and snug without denting the skin. For hips, measure the widest part of the buttocks. Take each reading twice and average them; a 2 cm slip shifts the ratio by about 0.02.</p></details>
+    <details><summary data-i18n="faq.q3">Can I actually change my waist-to-hip ratio?</summary><p data-i18n="faq.a3">Yes, but only through overall fat loss — crunches cannot spot-reduce the waist. A modest calorie deficit, more daily walking, resistance training and better sleep all pull down visceral fat first, which is why the tape often moves before the scale does. Most people who lose 5 to 10 percent of body weight see a measurable ratio change within a few months.</p></details>
+    <details><summary data-i18n="faq.q4">Where do the 0.85 and 0.90 cutoffs come from?</summary><p data-i18n="faq.a4">They come from the WHO's 2008 expert consultation on waist circumference and waist-hip ratio, which pooled cohort data linking abdominal fat to heart disease and diabetes. WHO marks substantially increased risk at 0.90 for men and 0.85 for women. The moderate tier shown here (0.90 to 0.99 for men, 0.80 to 0.84 for women) follows the clinical band tables built on those numbers. The cutoffs are population averages from mostly European and North American cohorts, so lower thresholds are often applied for South Asian groups.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

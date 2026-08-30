@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-Kln5agMUVMLl7klqDIfXrqGSTx0asi0oRNR+tBUSDTU=' 'sha256-FvxvuCbGfhiWwUmTQH0amurm2U4jnnZ4ECaJZAlo7ts=' 'sha256-stA+uFsmKXZ+qfgH7/KEMEzcB5lw+x4uKshS73DqvTA='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de amanecer y atardecer — horas y duración</title>
+<meta name="description" content="Calcula la hora del amanecer y del atardecer para cualquier latitud, longitud y fecha. Incluye duración del día, mediodía solar, crepúsculo civil y el cambio de mañana.">
+<meta name="keywords" content="sunrise sunset calculator, sunrise time, sunset time today, day length calculator, solar noon, civil twilight times, golden hour calculator">
+<link rel="canonical" href="https://tool-hub.me/sunrise-sunset-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/sunrise-sunset-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/sunrise-sunset-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/sunrise-sunset-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/sunrise-sunset-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/sunrise-sunset-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/sunrise-sunset-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/sunrise-sunset-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/sunrise-sunset-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/sunrise-sunset-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/sunrise-sunset-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/sunrise-sunset-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/sunrise-sunset-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/sunrise-sunset-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/sunrise-sunset-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/sunrise-sunset-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de amanecer y atardecer — horas y duración">
+<meta property="og:description" content="Calcula la hora del amanecer y del atardecer para cualquier latitud, longitud y fecha. Incluye duración del día, mediodía solar, crepúsculo civil y el cambio de mañana.">
+<meta property="og:url" content="https://tool-hub.me/sunrise-sunset-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/sunrise-sunset-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ea580c">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Sunrise Sunset Calculator",
+  "description": "Find sunrise and sunset times for any latitude, longitude and date. See day length, solar noon, civil dawn and dusk, and how many minutes tomorrow gains.",
+  "url": "https://tool-hub.me/sunrise-sunset-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sunrise Sunset Calculator",
+      "item": "https://tool-hub.me/sunrise-sunset-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do these times differ from my weather app by a few minutes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard sunrise formulas put the sun's upper edge 0.833 degrees below the horizon, a figure that bundles average atmospheric refraction with the sun's apparent radius. Your weather app may assume a different refraction value, use your city centre instead of your exact coordinates, or account for elevation. A spread of two to four minutes between reputable sources is normal, and a hill or building on your horizon can move the visible sunrise much more than that."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between civil, nautical and astronomical twilight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Civil twilight lasts until the sun is 6 degrees below the horizon — you can still read outdoors and the brightest planets appear. Nautical twilight ends at 12 degrees, the point where the sea horizon becomes too faint for sextant sights. Astronomical twilight ends at 18 degrees, when the sky is dark enough for deep-sky observation. This calculator shows the civil pair, the one that matters for driving lights, photography and prayer times."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does day length change fastest around the equinox?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The sun's declination sweeps through the celestial equator fastest in March and September, so its rising point slides furthest along the horizon each day. New York gains roughly 2 to 3 minutes of daylight per day in late March but only seconds per day in the week around the June solstice. The higher the latitude, the bigger the equinox swing: London gains close to 4 minutes a day in March."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is golden hour and blue hour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Golden hour is roughly the first hour after sunrise and the last hour before sunset, while the sun sits below about 6 degrees of elevation and the light stays warm and low. Blue hour is the civil twilight window shown here — between sunset and civil dusk, and between civil dawn and sunrise. Near the equator both can be under 25 minutes; above 55 degrees latitude in summer they stretch for hours."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Sunrise Sunset Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0284c7" href="https://tool-hub.me/date-calculators/">Date &amp; Time</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Sunrise Sunset Calculator</span></nav>
+  <section class="hero">
+    <h1>Sunrise Sunset Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">NOAA solar geometry for any point on Earth — sunrise, sunset, twilight and day length, worked out in your browser.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .geo-row { margin-top:10px; }
+      #tool #geo-btn { background:transparent; color:var(--accent); border:1px solid var(--line); border-radius:8px; padding:8px 12px; font:inherit; cursor:pointer; }
+      #tool #geo-btn:hover { border-color:var(--accent); }
+      #tool #geo-btn:disabled { opacity:.5; cursor:progress; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .note-line { margin-top:12px; font-size:14px; font-weight:600; color:var(--accent); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="lat" data-i18n="tool.lat.label">Latitude (-90 to 90)</label>
+        <input type="number" id="lat" inputmode="decimal" min="-90" max="90" step="any" autocomplete="off" placeholder="40.71">
+      </div>
+      <div>
+        <label for="lng" data-i18n="tool.lng.label">Longitude (-180 to 180)</label>
+        <input type="number" id="lng" inputmode="decimal" min="-180" max="180" step="any" autocomplete="off" placeholder="-74.01">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="date" data-i18n="tool.date.label">Date</label>
+        <input type="date" id="date" autocomplete="off">
+      </div>
+      <div>
+        <label for="tz" data-i18n="tool.tz.label">UTC offset (hours)</label>
+        <input type="number" id="tz" inputmode="decimal" min="-14" max="14" step="0.25" autocomplete="off" placeholder="-4">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="elev" data-i18n="tool.elev.label">Elevation (m, optional)</label>
+        <input type="number" id="elev" inputmode="decimal" min="0" max="9000" step="any" autocomplete="off" placeholder="0">
+      </div>
+      <div>
+        <label for="tw" data-i18n="tool.tw.label">Twilight</label>
+        <select id="tw">
+          <option value="96" selected data-i18n="tool.tw.civil">Civil (-6°)</option>
+          <option value="102" data-i18n="tool.tw.naut">Nautical (-12°)</option>
+          <option value="108" data-i18n="tool.tw.astro">Astronomical (-18°)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="geo-row">
+      <button type="button" id="geo-btn" data-i18n="tool.geo">Use my location</button>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.sunrise">Sunrise</div>
+          <div class="rc-val" id="r-sunrise">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.sunset">Sunset</div><div class="rc-val" id="r-sunset">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.length">Day length</div><div class="rc-val" id="r-length">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.noon">Solar noon</div><div class="rc-val" id="r-noon">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.dawn">Dawn</div><div class="rc-val" id="r-dawn">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.dusk">Dusk</div><div class="rc-val" id="r-dusk">—</div></div>
+      </div>
+      <p class="note-line" id="delta" hidden></p>
+      <p class="note-line" id="polar" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.acc" style="margin-top:12px;">NOAA algorithm, sea-level flat horizon, 0.833 degrees for refraction and the sun's radius. Elevation, hills and buildings shift the real moment by a few minutes.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How a sunrise time is actually calculated</h2>
+    <p>Sunrise is not the moment the centre of the sun crosses the horizon. The standard definition used by the US National Oceanic and Atmospheric Administration is the moment the sun's <em>upper edge</em> appears, with the atmosphere bending the light around the curve of the Earth. Both effects are folded into a single number: the geometric zenith angle of 90.833 degrees, made up of 90 degrees for the horizon, about 0.267 degrees for the sun's apparent radius, and about 0.567 degrees for average refraction. Every mainstream sunrise table, including this one, starts from that convention.</p>
+    <p>From there the arithmetic is short. The tool converts your date into a day of the year and builds a fractional year angle, then evaluates two Fourier series that astronomers fitted to the sun's motion: the equation of time, which measures how far the real sun runs ahead of or behind clock noon, and the solar declination, which is how far north or south of the celestial equator the sun sits that day. With declination and your latitude, the hour angle for the 90.833 degree zenith falls out of one cosine formula, and that angle converts straight into minutes either side of solar noon.</p>
+
+    <h3>Worked example: New York City, 20 March 2026</h3>
+    <p>Enter latitude 40.71, longitude -74.01, and a UTC offset of -4 for Eastern Daylight Time. Day 79 of the year gives a declination close to zero, as you would expect at the March equinox, and an equation of time of roughly -7 minutes, meaning the real sun crosses the meridian about seven minutes after clock noon before the longitude correction. Solar noon lands at 13:04 EDT, because New York sits about 4 degrees west of the centre of its time zone and daylight saving pushes everything an hour later. Sunrise comes out at 07:01, sunset at 19:07, and day length at 12 hours 6 minutes. Civil dawn starts 06:34 and civil dusk ends 19:35, so there is roughly 27 minutes of usable light before the sun itself appears.</p>
+    <p>The equinox is not exactly a 12-hour day, which surprises people. Because sunrise is measured on the sun's upper edge and refraction lifts the image above its true position, day length exceeds 12 hours by six to eight minutes at mid-latitudes on the equinox. The date when day and night are truly equal, called the equilux, falls a few days earlier in spring and a few days later in autumn.</p>
+
+    <h3>The twilight ladder</h3>
+    <p>Once the sun is below the horizon, three thresholds matter. Civil twilight runs to 6 degrees below and is what this calculator reports as civil dawn and civil dusk; outdoor tasks are still possible and most jurisdictions tie headlight and navigation-light rules to it. Nautical twilight ends at 12 degrees, historically the last moment a navigator could take a star sight against a visible sea horizon. Astronomical twilight ends at 18 degrees, after which the sky contributes no measurable glow and faint galaxies come within reach. Above roughly 60 degrees of latitude in June, the sun never gets 6 degrees down at all, which is why the tool prints a continuous-twilight note instead of blank fields.</p>
+
+    <h3>Who uses these numbers</h3>
+    <p>Photographers plan around golden hour, the stretch while the sun is below about 6 degrees of elevation, and blue hour, which is the civil twilight window shown here. Runners and cyclists use civil dawn and dusk to decide when lights become a legal requirement. Muslim prayer times derive Fajr and Isha from twilight angles that vary by convention, typically 18 or 15 degrees, so the civil pair here acts as a sanity check rather than a substitute for a fiqh-specific table. Gardeners track day length because many plants flower on a photoperiod trigger rather than a temperature one, and solar owners compare day length against panel output to spot shading problems.</p>
+
+    <h2>Limits worth knowing</h2>
+    <p>Three things this calculator deliberately does not model. Elevation: standing 300 metres above the surrounding terrain gains you roughly 3 to 4 minutes of daylight at each end, and this tool assumes sea level. Horizon obstruction: a ridge 5 degrees high to the east delays visible sunrise by 20 minutes or more at mid-latitudes, far more than any algorithmic refinement. Local refraction: the 0.567 degree average can vary by a tenth of a degree in extreme temperature inversions, which is why polar sunrise tables carry explicit warnings.</p>
+    <p>The UTC offset field is a plain number rather than a time zone name, so daylight saving is on you. If your result is exactly one hour off, that is almost always the cause: New York is -5 in winter and -4 in summer, London is 0 and +1, Sydney is +10 and +11. The tool prefills the offset your browser is currently using, which is correct for today but not for a date on the other side of a clock change.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://gml.noaa.gov/grad/solcalc/" target="_blank" rel="noopener">NOAA Global Monitoring Laboratory Solar Calculator — the reference sunrise, sunset and solar noon algorithm used here</a></li>
+      <li><a href="https://aa.usno.navy.mil/" target="_blank" rel="noopener">US Naval Observatory Astronomical Applications — official rise, set and twilight tables and definitions</a></li>
+      <li><a href="https://www.nist.gov/pml/time-and-frequency-division" target="_blank" rel="noopener">NIST Time and Frequency Division — civil time, UTC offsets and daylight saving basics</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/time-zone-conv/"><span class="related-ico" aria-hidden="true">🕐</span><span class="related-name">Time Zone Converter</span></a><a class="related-item" href="https://tool-hub.me/timesheet-calc/"><span class="related-ico" aria-hidden="true">🗂️</span><span class="related-name">Time Card Calculator</span></a><a class="related-item" href="https://tool-hub.me/week-number-check/"><span class="related-ico" aria-hidden="true">📆</span><span class="related-name">Week Number Today</span></a><a class="related-item" href="https://tool-hub.me/workday-calc/"><span class="related-ico" aria-hidden="true">💼</span><span class="related-name">Business Days Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why do these times differ from my weather app by a few minutes?</summary><p data-i18n="faq.a1">Standard sunrise formulas put the sun's upper edge 0.833 degrees below the horizon, a figure that bundles average atmospheric refraction with the sun's apparent radius. Your weather app may assume a different refraction value, use your city centre instead of your exact coordinates, or account for elevation. A spread of two to four minutes between reputable sources is normal, and a hill or building on your horizon can move the visible sunrise much more than that.</p></details>
+    <details><summary data-i18n="faq.q2">What is the difference between civil, nautical and astronomical twilight?</summary><p data-i18n="faq.a2">Civil twilight lasts until the sun is 6 degrees below the horizon — you can still read outdoors and the brightest planets appear. Nautical twilight ends at 12 degrees, the point where the sea horizon becomes too faint for sextant sights. Astronomical twilight ends at 18 degrees, when the sky is dark enough for deep-sky observation. This calculator shows the civil pair, the one that matters for driving lights, photography and prayer times.</p></details>
+    <details><summary data-i18n="faq.q3">Why does day length change fastest around the equinox?</summary><p data-i18n="faq.a3">The sun's declination sweeps through the celestial equator fastest in March and September, so its rising point slides furthest along the horizon each day. New York gains roughly 2 to 3 minutes of daylight per day in late March but only seconds per day in the week around the June solstice. The higher the latitude, the bigger the equinox swing: London gains close to 4 minutes a day in March.</p></details>
+    <details><summary data-i18n="faq.q4">When is golden hour and blue hour?</summary><p data-i18n="faq.a4">Golden hour is roughly the first hour after sunrise and the last hour before sunset, while the sun sits below about 6 degrees of elevation and the light stays warm and low. Blue hour is the civil twilight window shown here — between sunset and civil dusk, and between civil dawn and sunrise. Near the equator both can be under 25 minutes; above 55 degrees latitude in summer they stretch for hours.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

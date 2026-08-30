@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-B04A++Ur91jjklOBznP8PfDQHu3ALlsYOKV9uz2IsNE=' 'sha256-C0yv5RJG0gTyli9IGdKYh1uoAGzlrL8aASiu3iKDt2I=' 'sha256-OAlyxD7PCL5Gn6IfWd9+XxDQuUzDAKLFVo+ZQqM9haA='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de montantes — cuántos studs para un muro</title>
+<meta name="description" content="Calcula los montantes de un muro: introduce la longitud, la separación a 16 o 24 pulgadas entre ejes, esquinas y huecos, y obtén studs, soleras y el total de 2x4 con merma.">
+<meta name="keywords" content="stud calculator, how many studs do i need, wall framing calculator, 16 on center stud spacing, stud spacing calculator, wall stud count">
+<link rel="canonical" href="https://tool-hub.me/stud-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/stud-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/stud-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/stud-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/stud-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/stud-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/stud-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/stud-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/stud-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/stud-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/stud-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/stud-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/stud-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/stud-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/stud-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/stud-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de montantes — cuántos studs para un muro">
+<meta property="og:description" content="Calcula los montantes de un muro: introduce la longitud, la separación a 16 o 24 pulgadas entre ejes, esquinas y huecos, y obtén studs, soleras y el total de 2x4 con merma.">
+<meta property="og:url" content="https://tool-hub.me/stud-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/stud-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#713f12">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Stud Calculator",
+  "description": "Work out how many studs a wall needs: enter wall length, 16 or 24 inch on-centre spacing, corners and openings for a full 2x4 count with plates and waste.",
+  "url": "https://tool-hub.me/stud-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Stud Calculator",
+      "item": "https://tool-hub.me/stud-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I frame at 16 or 24 inch on centre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "16 in on centre is the default for load-bearing walls and anywhere 1/2 in drywall meets a ceiling load. 24 in on centre — advanced framing — is allowed for many single-storey and non-bearing walls and saves roughly a third of the studs, but it needs 5/8 in drywall or thicker sheathing to stop visible waviness. Check your span tables and local code before dropping to 24 in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the calculator add one extra stud?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spacing gives you the number of gaps, not the number of studs. A 24 ft wall at 16 in on centre has 18 gaps, so it needs 19 studs to close both ends of every gap — the same fencepost logic as posts and rails. Miss that stud and the last sheet of drywall lands with nothing to nail to."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Three-stud corner or California corner?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool budgets 3 studs per corner, which is the traditional detail and matches most plans. A California corner (also called a two-stud or insulated corner) uses two studs plus drywall clips, leaving room for insulation where the old detail packs solid wood. Both give you a nailing surface for the intersecting wall — the California version just performs better thermally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this include headers over doors and windows?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The 4 studs per door and 6 per window cover the king studs, jack (trimmer) studs and the cripples above and below the opening, but the header itself is sized separately from the span and the load above it. A 3 ft door in a non-bearing wall might use a flat 2x4; a 6 ft window in a bearing wall could need a doubled 2x10 with plywood packing. Get the header from your plans or a span table."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Stud Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Stud Calculator</span></nav>
+  <section class="hero">
+    <h1>Stud Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Wall length, spacing, corners and openings in — a full 2x4 count out, waste included.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .field-row.three { grid-template-columns:repeat(3,1fr); }
+      #tool .u { color:var(--muted); font-weight:400; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      #tool .field-row[hidden] { display:none; }
+      @media(max-width:480px){ #tool .field-row, #tool .field-row.three { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Measurement units</label>
+        <select id="unit">
+          <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+          <option value="m" data-i18n="tool.unit.m">Metres</option>
+        </select>
+      </div>
+      <div>
+        <label for="length"><span data-i18n="tool.length.label">Wall length</span> <span class="u" id="u-len">ft</span></label>
+        <input type="number" id="length" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="24">
+      </div>
+    </div>
+
+    <label for="spacing" data-i18n="tool.spacing.label">Stud spacing</label>
+    <select id="spacing">
+      <option value="16" selected data-i18n="tool.spacing.16">16 in on centre — standard</option>
+      <option value="24" data-i18n="tool.spacing.24">24 in on centre — advanced framing</option>
+      <option value="19.2" data-i18n="tool.spacing.19">19.2 in on centre — engineered layout</option>
+      <option value="12" data-i18n="tool.spacing.12">12 in on centre — heavy load</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="plate-len" data-i18n="tool.plate.label">Plate board length</label>
+        <select id="plate-len">
+          <option value="8" selected>8 ft</option>
+          <option value="10">10 ft</option>
+          <option value="12">12 ft</option>
+          <option value="14">14 ft</option>
+          <option value="16">16 ft</option>
+        </select>
+      </div>
+      <div>
+        <label for="waste" data-i18n="tool.waste.label">Waste allowance %</label>
+        <input type="number" id="waste" inputmode="decimal" min="0" max="50" step="1" autocomplete="off" placeholder="10">
+      </div>
+    </div>
+
+    <div class="field-row three">
+      <div>
+        <label for="corners" data-i18n="tool.corners.label">Corners and wall intersections</label>
+        <input type="number" id="corners" inputmode="numeric" min="0" step="1" autocomplete="off" placeholder="2">
+      </div>
+      <div>
+        <label for="doors" data-i18n="tool.doors.label">Door openings</label>
+        <input type="number" id="doors" inputmode="numeric" min="0" step="1" autocomplete="off" placeholder="1">
+      </div>
+      <div>
+        <label for="windows" data-i18n="tool.windows.label">Window openings</label>
+        <input type="number" id="windows" inputmode="numeric" min="0" step="1" autocomplete="off" placeholder="1">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate studs</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.studs">Studs to buy (waste included)</div>
+          <div class="rc-val" id="r-studs">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.base">Field studs at spacing</div><div class="rc-val" id="r-base">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.extra">Extra studs — corners and openings</div><div class="rc-val" id="r-extra">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.plate">Plate lumber (3 runs)</div><div class="rc-val" id="r-plate">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.sticks">Plate boards</div><div class="rc-val" id="r-sticks">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.total">Total 2x4s to buy</div><div class="rc-val" id="r-total">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.rule" style="margin-top:12px;">Rule of thumb: 3 studs per corner, 4 per door, 6 per window, plus 10% waste. Stamped plans and local code always win over an estimate.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How a stud count is actually built</h2>
+    <p>A framed wall is four counts stacked on top of each other, and each one is simple on its own. First come the field studs: the wall length in inches divided by the on-centre spacing, rounded up, plus one. Second come the corner and intersection studs, because where two walls meet you need extra material to catch drywall on the inside face. Third come the studs that frame each opening — king studs, jack studs and the short cripples above and below. Fourth is the plate lumber, which is a completely separate pile of wood from the studs even though it is cut from the same 2x4 stock.</p>
+    <p>The plus-one is the part people get wrong most often. Spacing tells you how many <em>bays</em> the wall has, not how many studs. Twelve bays need thirteen studs, the same way twelve fence sections need thirteen posts. Skip it and the last sheet of drywall arrives with nothing behind its edge.</p>
+
+    <h3>Worked example: a 24 ft wall with one door and one window</h3>
+    <p>Take a 24-foot interior wall framed at 16 in on centre, with two corners where it meets other walls, one door and one window. In inches the wall is 24 x 12 = 288. Divide by 16 and you get 18 bays exactly, so field studs are 18 + 1 = <strong>19</strong>.</p>
+    <p>Now the extras. Two corners at 3 studs each is 6. One door at 4 studs — two kings, two jacks — is 4. One window at 6 studs — two kings, two jacks, plus cripples above and below the rough opening — is 6. That is <strong>16 extra studs</strong>, bringing the raw total to 35.</p>
+    <p>Add the waste factor. Framing lumber arrives crowned, split, twisted or with a knot exactly where you need to nail, and you will crosscut a few studs into cripples anyway. Ten percent on 35 is 38.5, so you buy <strong>39 studs</strong>. On a small job round up again to a bundle you can carry home in one trip; the leftovers become blocking.</p>
+    <p>Plates are separate. A standard wall has one bottom plate and a doubled top plate, so three runs the full length of the wall: 3 x 24 = <strong>72 linear feet</strong>. Buy that in 8-foot sticks and you need 72 / 8 = <strong>9 boards</strong>. Total 2x4 purchase for this wall: 39 + 9 = <strong>48 pieces</strong>, before blocking, backing and the header.</p>
+
+    <h3>The 15-1/4 trick that keeps sheets landing on studs</h3>
+    <p>Here is the layout detail that separates framers from first-timers. Sheet goods — drywall, OSB, plywood — come 48 inches wide and must break on the <em>centre</em> of a stud, so the first stud's centre needs to sit at 16 inches, 32 inches, 48 inches and so on from the end of the wall. But you measure from the outside face of the end stud, and the end stud is 1-1/2 inches thick.</p>
+    <p>So you pull your tape and mark the first stud at <strong>15-1/4 inches</strong>, then hook that mark and go 16 inches from there for every stud after. That quarter-inch offset — half of 1-1/2 inches, minus the 1/2-inch you also lose at the end stud — puts the centre of the third stud at exactly 48 inches, right where the first sheet's edge lands. Most tapes have the 16-inch marks printed in red and a diamond every 19.2 inches for 24 in on-centre engineered layouts. If you find yourself trimming every sheet, this is almost always what went wrong.</p>
+
+    <h3>Opening anatomy — where 4 and 6 come from</h3>
+    <p>A door opening needs two king studs running full height on either side, and two jack (trimmer) studs nailed to them that carry the header. That is 4. A window needs the same four, plus cripple studs filling the space above the header and below the sill, plus the sill itself — 6 is the working average for a typical 3 to 4 foot window at 16 in on centre. Wider openings need more cripples, so a 6-foot slider or a patio door should be counted as two openings rather than one.</p>
+    <p>What the tool deliberately leaves out is the header. Header sizing is a structural decision driven by the span, the load above and your climate's snow load — a 3-foot door in a partition wall might take a flat 2x4, while the same width in a bearing wall under a roof truss wants a doubled 2x8 or 2x10 with a 1/2-inch plywood spacer to make it 3-1/2 inches thick. Take that number from your plans or an IRC span table, never from a rule of thumb.</p>
+
+    <h2>Limitations worth knowing before you buy lumber</h2>
+    <p>This calculator estimates a single straight wall run. Real framing has details it does not price: blocking at 4 feet for fire-blocking or backing behind cabinets and grab bars, extra studs where an electrical panel or a shower valve lands, T-intersection backing, ladder blocking, and the studs consumed by any wall that meets this one halfway along. Add a couple of studs per detail and you will not be short.</p>
+    <p>Stud length is also not part of the count. Eight-foot walls use 92-5/8 inch precut studs so that with a 1-1/2 inch bottom plate and 3 inches of doubled top plate the rough wall is 97-1/8 inches — the right height for 8-foot drywall plus a floor gap. Nine-foot walls use 104-5/8 inch precuts. Buying full 8-foot studs and cutting them yourself wastes a lot of time and a fair amount of wood.</p>
+    <p>Finally, remember that everything here is a rule of thumb. Stud spacing, corner details, opening framing and header sizing all appear in your approved drawings and in local code, and where they differ from this estimate the drawings win. Use the number to load the truck, not to sign off the structure.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.energy.gov/energysaver/insulation" target="_blank" rel="noopener">U.S. Department of Energy — wall insulation and advanced (24 in on-centre) framing guidance</a></li>
+      <li><a href="https://www.gov.uk/government/collections/approved-documents" target="_blank" rel="noopener">GOV.UK Approved Documents — UK building regulations covering structure and timber walls</a></li>
+      <li><a href="https://www.nist.gov/el" target="_blank" rel="noopener">NIST Materials and Structural Systems — research behind light-frame construction standards</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/tank-volume-calc/"><span class="related-ico" aria-hidden="true">🛢️</span><span class="related-name">Tank Volume Calculator</span></a><a class="related-item" href="https://tool-hub.me/tile-calc/"><span class="related-ico" aria-hidden="true">🔲</span><span class="related-name">Tile Calculator</span></a><a class="related-item" href="https://tool-hub.me/tire-size-calc/"><span class="related-ico" aria-hidden="true">🛞</span><span class="related-name">Tire Size Calculator</span></a><a class="related-item" href="https://tool-hub.me/topsoil-calc/"><span class="related-ico" aria-hidden="true">🌱</span><span class="related-name">Topsoil Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Should I frame at 16 or 24 inch on centre?</summary><p data-i18n="faq.a1">16 in on centre is the default for load-bearing walls and anywhere 1/2 in drywall meets a ceiling load. 24 in on centre — advanced framing — is allowed for many single-storey and non-bearing walls and saves roughly a third of the studs, but it needs 5/8 in drywall or thicker sheathing to stop visible waviness. Check your span tables and local code before dropping to 24 in.</p></details>
+    <details><summary data-i18n="faq.q2">Why does the calculator add one extra stud?</summary><p data-i18n="faq.a2">Spacing gives you the number of gaps, not the number of studs. A 24 ft wall at 16 in on centre has 18 gaps, so it needs 19 studs to close both ends of every gap — the same fencepost logic as posts and rails. Miss that stud and the last sheet of drywall lands with nothing to nail to.</p></details>
+    <details><summary data-i18n="faq.q3">Three-stud corner or California corner?</summary><p data-i18n="faq.a3">This tool budgets 3 studs per corner, which is the traditional detail and matches most plans. A California corner (also called a two-stud or insulated corner) uses two studs plus drywall clips, leaving room for insulation where the old detail packs solid wood. Both give you a nailing surface for the intersecting wall — the California version just performs better thermally.</p></details>
+    <details><summary data-i18n="faq.q4">Does this include headers over doors and windows?</summary><p data-i18n="faq.a4">No. The 4 studs per door and 6 per window cover the king studs, jack (trimmer) studs and the cripples above and below the opening, but the header itself is sized separately from the span and the load above it. A 3 ft door in a non-bearing wall might use a flat 2x4; a 6 ft window in a bearing wall could need a doubled 2x10 with plywood packing. Get the header from your plans or a span table.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

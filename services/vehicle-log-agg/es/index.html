@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-H4IaEB13vu0J2KrKEgDpxBTZMTM+pMgc95T3luHNgxs=' 'sha256-FP/XkzrUtnLD7Kg2t7ElFzkoqM8JFpK1aWYg5XbwLRA=' 'sha256-XvZMpi3680OvVAD3GO0ZOf+RsHa5+z4OmlnhbXSZtkg='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agregador de libros de registro de vehículos de empresa (Corea)</title>
+<meta name="description" content="Agregador gratuito y 100% en el navegador para libros de registro de vehículos de empresa coreanos (업무용승용차 운행기록부). Pega o arrastra un CSV con los trayectos de todos los vehículos para calcular el porcentaje de uso empresarial, el gasto deducible, la comparación con el umbral de 15 millones de KRW sin registro y el límite de amortización de 8 millones de KRW. Tus datos nunca salen del navegador.">
+<meta name="keywords" content="company vehicle log calculator korea, business use ratio calculator, 업무용승용차 운행기록부, 업무사용비율 계산, 차량 비용처리 1500만원, 업무용승용차 손금불산입">
+<link rel="canonical" href="https://tool-hub.me/vehicle-log-agg/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/vehicle-log-agg/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/vehicle-log-agg/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/vehicle-log-agg/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/vehicle-log-agg/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/vehicle-log-agg/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/vehicle-log-agg/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/vehicle-log-agg/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/vehicle-log-agg/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/vehicle-log-agg/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/vehicle-log-agg/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/vehicle-log-agg/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/vehicle-log-agg/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/vehicle-log-agg/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/vehicle-log-agg/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/vehicle-log-agg/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agregador de libros de registro de vehículos de empresa (Corea)">
+<meta property="og:description" content="Agregador gratuito y 100% en el navegador para libros de registro de vehículos de empresa coreanos (업무용승용차 운행기록부). Pega o arrastra un CSV con los trayectos de todos los vehículos para calcular el porcentaje de uso empresarial, el gasto deducible, la comparación con el umbral de 15 millones de KRW sin registro y el límite de amortización de 8 millones de KRW. Tus datos nunca salen del navegador.">
+<meta property="og:url" content="https://tool-hub.me/vehicle-log-agg/es/">
+<meta property="og:image" content="https://tool-hub.me/vehicle-log-agg/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#475569">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Company Vehicle Log Aggregator (Korea)",
+  "description": "Free browser-only aggregator for Korean company vehicle logs (업무용승용차 운행기록부). Paste or drop a CSV of trips across every vehicle to compute business-use ratio, deductible expense, the 15M KRW no-log threshold comparison, and the 8M KRW depreciation cap. Your data never leaves the browser.",
+  "url": "https://tool-hub.me/vehicle-log-agg/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I really have to keep a vehicle log (업무용승용차 운행기록부)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if it pays off. If a car's total related expenses for the year are 15,000,000 KRW or less, you may skip the log and the full amount is still deductible (차량 비용처리 1500만원 기준). Above that, no log means your deduction is capped at 15,000,000 KRW no matter how much you actually drove for work — so this tool always shows you both numbers side by side, and the gap is what writing the log is worth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the business-use ratio calculated, and does commuting count?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "업무사용비율 계산 = business driving distance ÷ total driving distance, per vehicle, over the whole fiscal year. Commuting counts as business use, so this tool adds commuting and general business kilometres together for the numerator. Rows whose purpose value we cannot recognise are never quietly filed as personal — they are held aside until you classify them, because guessing here would silently shrink your ratio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 8,000,000 KRW depreciation cap, and what happens to the excess?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depreciation × business-use ratio is deductible only up to 8,000,000 KRW per vehicle per year. The excess is disallowed this year (업무용승용차 손금불산입) and carries over to later years. If your fiscal year is shorter than 12 months, both this cap and the 15,000,000 KRW threshold are pro-rated by months ÷ 12 (Corporate Tax Act §50-2) — set the month count and the tool re-prorates both. For leases and rentals, enter the depreciation-equivalent portion (rental fee × 70%; for a lease, the fee minus insurance, auto tax and maintenance) and put those other components in their own fields."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "We never bought business-only auto insurance. Does the ratio still help?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — and that is why this tool asks. Without 업무전용자동차보험, every related expense for that vehicle is disallowed in full, regardless of how good your ratio looks. The 50% transitional relief that applied in 2024–2025 has ended, so from fiscal 2026 corporations and double-entry sole proprietors are treated the same (it already applied to taxpayers subject to 성실신고확인 from 2024). Untick the insurance box for a car and the tool overwrites its deductible with ₩0 and tells you why, instead of showing you a comfortable number that the filing will not accept."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is this different from a US IRS mileage calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Completely different maths, which is why this is a company vehicle log calculator korea and says so in the name. The US lets you take a flat standard mileage rate per mile, or actual expenses × business percentage (IRS Pub. 463). Korea has no flat rate: you take actual related expenses × business-use ratio, then run them through the 15,000,000 KRW no-log threshold and the 8,000,000 KRW depreciation cap. Bolting both regimes into one screen would break the tool for both audiences, so a US edition is a separate service."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Company Vehicle Log Aggregator (Korea)",
+      "item": "https://tool-hub.me/vehicle-log-agg/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Company Vehicle Log Aggregator (Korea)</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0891b2" href="https://tool-hub.me/business-tools/">Business</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Company Vehicle Log Aggregator (Korea)</span></nav>
+  <section class="hero">
+    <h1>Company Vehicle Log Aggregator (Korea)</h1>
+    <p class="lede" data-i18n="hero.lede">Turn thousands of trip rows across every company car into a business-use ratio and a deductible amount — entirely in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool label { margin-top: 18px; }
+      #tool .vla-scope {
+        margin: 0 0 18px; padding: 10px 14px; border-inline-start: 3px solid var(--accent);
+        border-radius: 0 8px 8px 0; background: var(--bg);
+        font-size: 13px; line-height: 1.6; color: var(--muted);
+      }
+      #tool .vla-drop {
+        border: 2px dashed var(--line); border-radius: 12px; padding: 12px;
+        transition: border-color .15s ease, background .15s ease;
+      }
+      #tool .vla-drop.is-over { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
+      #tool .vla-drop textarea {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px; line-height: 1.5; resize: vertical; min-height: 118px;
+      }
+      #tool .vla-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px; }
+      #tool .vla-mini {
+        padding: 7px 12px; font-size: 13px; font-weight: 700; font-family: inherit;
+        border: 1px solid var(--line); border-radius: 8px; background: var(--surface);
+        color: var(--ink); cursor: pointer;
+      }
+      #tool .vla-mini:hover { border-color: var(--accent); color: var(--accent); }
+      #tool .vla-hint { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+      #tool .vla-note { margin: 10px 0 0; font-size: 13px; color: var(--muted); line-height: 1.6; }
+      #tool .vla-warn { color: var(--accent-strong); font-weight: 700; }
+      [data-theme="dark"] #tool .vla-warn { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .vla-warn { color: var(--accent); } }
+      #tool .vla-opts { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 6px; }
+      #tool .vla-opt { flex: 1 1 190px; }
+      #tool .vla-h { font-size: 15px; margin: 30px 0 4px; letter-spacing: -0.01em; }
+      #tool .vla-progress { margin-top: 14px; }
+      #tool .vla-pbar { height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; }
+      #tool .vla-pbar > span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .12s linear; }
+      #tool .vla-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(196px, 1fr)); gap: 0 14px; }
+      #tool .vla-grid label { margin-top: 12px; }
+      #tool .vla-tablewrap { overflow-x: auto; margin-top: 12px; -webkit-overflow-scrolling: touch; }
+      #tool table { border-collapse: collapse; width: 100%; font-size: 13px; }
+      #tool th, #tool td { border: 1px solid var(--line); padding: 7px 9px; text-align: start; white-space: nowrap; }
+      #tool th { background: var(--bg); font-weight: 700; font-size: 12px; color: var(--muted); }
+      #tool td.num, #tool th.num { text-align: end; font-variant-numeric: tabular-nums; }
+      #tool tr.is-total td { font-weight: 800; background: var(--bg); }
+      #tool td.is-soft { color: var(--muted); font-weight: 400; white-space: normal; min-width: 130px; }
+      #tool .vla-veh { border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; margin-top: 10px; background: var(--bg); }
+      #tool .vla-veh > summary { font-weight: 700; font-size: 14px; cursor: pointer; }
+      #tool .vla-veh .vla-vsum { font-weight: 400; color: var(--muted); font-size: 12.5px; }
+      #tool .vla-check { display: flex; align-items: center; gap: 9px; cursor: pointer; margin-top: 16px; font-weight: 600; font-size: 14px; }
+      #tool .vla-check input { width: auto; flex: 0 0 auto; }
+      #tool .vla-gate {
+        margin: 0 0 14px; padding: 10px 14px; border-radius: 8px; font-size: 13.5px; line-height: 1.6;
+        border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--line));
+        background: color-mix(in srgb, var(--accent) 12%, var(--surface)); font-weight: 700;
+      }
+      #tool .vla-cmp { margin-top: 18px; }
+      #tool .vla-cmprow { display: flex; align-items: center; gap: 10px; margin-top: 8px; font-size: 13px; }
+      #tool .vla-cmplab { flex: 0 0 96px; color: var(--muted); font-weight: 700; }
+      #tool .vla-cmptrack { flex: 1 1 auto; height: 16px; border-radius: 4px; background: var(--line); overflow: hidden; }
+      #tool .vla-cmptrack > span { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+      #tool .vla-cmptrack.is-dim > span { background: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+      #tool .vla-cmpval { flex: 0 0 auto; font-weight: 800; font-variant-numeric: tabular-nums; }
+      #tool .vla-headline { margin: 0 0 6px; font-size: 13px; font-weight: 700; color: var(--muted); }
+      #tool .vla-big { font-size: clamp(26px, 6vw, 34px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.2; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .vla-big { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .vla-big { color: var(--accent); } }
+      #tool .vla-excl { margin-top: 18px; }
+      #tool .vla-excl > summary { font-weight: 700; font-size: 13.5px; cursor: pointer; color: var(--muted); }
+      #tool .vla-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 18px; }
+      #tool .vla-actions .btn { margin-top: 0; padding: 10px 18px; font-size: 14px; }
+      #tool .vla-status { font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .vla-status { color: var(--accent); }
+    </style>
+
+    <p class="vla-scope" data-i18n="tool.scope">Covers passenger cars under the Korean business-use rules (업무용승용차). Light cars, 9-seaters and up, and vehicles used in a transport business are out of scope. This is a closing worksheet — your tax agent signs off on the filing.</p>
+
+    <label for="vla-paste" data-i18n="tool.src.label">1. Vehicle log — paste from Excel, or drop a CSV file</label>
+    <div class="vla-drop" id="vla-drop">
+      <textarea id="vla-paste" rows="6" spellcheck="false" autocomplete="off"
+        placeholder="차량번호,운행일자,사용자,주행전계기판,주행후계기판,사용목적&#10;12가3456,2026-01-05,김철수,10000,10120,일반업무"
+        data-i18n-placeholder="tool.src.ph"></textarea>
+      <div class="vla-bar">
+        <button type="button" class="vla-mini" id="vla-pick" data-i18n="tool.src.file">Choose CSV file</button>
+        <button type="button" class="vla-mini" id="vla-sample" data-i18n="tool.src.sample">Load sample data</button>
+        <button type="button" class="vla-mini" id="vla-clear" data-i18n="tool.src.clear">Clear</button>
+        <span class="vla-hint" data-i18n="tool.src.drop">…or drop a .csv / .tsv file into this box</span>
+        <input type="file" id="vla-file" accept=".csv,.tsv,.txt,text/csv,text/tab-separated-values" hidden>
+      </div>
+    </div>
+    <p class="vla-note" id="vla-srcnote" role="status" data-i18n="tool.src.empty">Nothing loaded yet. Paste your log above, or load the sample data to see how it works. Nothing is uploaded — every row is parsed inside this browser tab.</p>
+
+    <div class="vla-opts" id="vla-opts" hidden>
+      <div class="vla-opt">
+        <label for="vla-enc" data-i18n="tool.enc.label">File encoding</label>
+        <select id="vla-enc">
+          <option value="auto" data-i18n="tool.enc.auto">Auto-detect</option>
+          <option value="utf-8">UTF-8</option>
+          <option value="euc-kr">EUC-KR (CP949)</option>
+        </select>
+      </div>
+      <div class="vla-opt">
+        <label for="vla-delim" data-i18n="tool.delim.label">Delimiter</label>
+        <select id="vla-delim">
+          <option value="auto" data-i18n="tool.delim.auto">Auto-detect</option>
+          <option value="," data-i18n="tool.delim.comma">Comma ( , )</option>
+          <option value="tab" data-i18n="tool.delim.tab">Tab</option>
+          <option value=";" data-i18n="tool.delim.semi">Semicolon ( ; )</option>
+        </select>
+      </div>
+    </div>
+    <p class="vla-note vla-warn" id="vla-encwarn" hidden data-i18n="tool.enc.warn">Korean text looks garbled (�)? Switch the encoding to EUC-KR — Excel for Korean Windows saves CSV in CP949.</p>
+
+    <div class="vla-progress" id="vla-progress" hidden>
+      <div class="vla-pbar"><span id="vla-pfill"></span></div>
+      <div class="vla-bar">
+        <span class="vla-hint" id="vla-ptext" role="status"></span>
+        <button type="button" class="vla-mini" id="vla-cancel" data-i18n="tool.cancel">Cancel</button>
+      </div>
+    </div>
+
+    <div id="vla-setup" hidden>
+      <h3 class="vla-h" data-i18n="tool.map.title">2. Which column is which?</h3>
+      <p class="vla-hint" data-i18n="tool.map.hint">Guessed from your header row. Map either both odometer columns or a single distance column — whichever your log has.</p>
+      <label class="vla-check" for="vla-header">
+        <input type="checkbox" id="vla-header" checked>
+        <span data-i18n="tool.map.header">First row is a header</span>
+      </label>
+      <div class="vla-grid" id="vla-mapgrid"></div>
+      <div class="vla-tablewrap"><table id="vla-preview"></table></div>
+      <p class="vla-hint" data-i18n="tool.preview.note">First 5 rows, exactly as parsed.</p>
+
+      <h3 class="vla-h" data-i18n="tool.purpose.title">3. What does each purpose value mean?</h3>
+      <p class="vla-hint" data-i18n="tool.purpose.hint">Commuting counts as business use. Values we could not recognise are left as “Needs a choice” — we never assume personal use for you.</p>
+      <div class="vla-grid" id="vla-purposegrid"></div>
+      <p class="vla-note vla-warn" id="vla-purposewarn" hidden></p>
+
+      <h3 class="vla-h" data-i18n="tool.costs.title">4. Annual cost per vehicle</h3>
+      <p class="vla-hint" data-i18n="tool.costs.note">Optional. Leave every field blank to get the business-use ratio only — we will not pass a blank off as ₩0.</p>
+      <div id="vla-vehicles"></div>
+
+      <label for="vla-months" data-i18n="tool.months.label">Fiscal year length (months)</label>
+      <input type="number" id="vla-months" min="1" max="12" step="1" value="12" inputmode="numeric" autocomplete="off">
+      <p class="vla-hint" data-i18n="tool.months.note">Both the 15,000,000 KRW no-log allowance and the 8,000,000 KRW depreciation cap are pro-rated by months ÷ 12 when the fiscal year is shorter than a year (Corporate Tax Act §50-2).</p>
+      <p class="vla-note vla-warn" id="vla-monthserr" hidden data-i18n="tool.months.bad">Enter a whole number of months between 1 and 12.</p>
+
+      <label for="vla-entity" data-i18n="tool.entity.label">Taxpayer type</label>
+      <select id="vla-entity">
+        <option value="general" data-i18n="tool.entity.general">General corporation / sole proprietor (15M / 8M KRW)</option>
+        <option value="special" data-i18n="tool.entity.special">Specified small corporation, e.g. property rental (5M / 4M KRW)</option>
+      </select>
+      <p class="vla-hint" data-i18n="tool.entity.note">A specified small corporation (부동산임대업 주업 등 특정법인) gets a 5,000,000 KRW no-log allowance and a 4,000,000 KRW depreciation cap instead of the usual 15/8 million (Corporate Tax Act Enforcement Decree §50-2).</p>
+    </div>
+
+    <div class="result" id="vla-result" hidden></div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/wbs-progress-rollup/"><span class="related-ico" aria-hidden="true">📋</span><span class="related-name">WBS Weighted Progress &amp; EVM Rollup</span></a><a class="related-item" href="https://tool-hub.me/workback-schedule/"><span class="related-ico" aria-hidden="true">🗓️</span><span class="related-name">Workback Schedule Builder</span></a><a class="related-item" href="https://tool-hub.me/average-calc/"><span class="related-ico" aria-hidden="true">📊</span><span class="related-name">Average Calculator</span></a><a class="related-item" href="https://tool-hub.me/calculator/"><span class="related-ico" aria-hidden="true">🧮</span><span class="related-name">Scientific Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">Do I really have to keep a vehicle log (업무용승용차 운행기록부)?</summary>
+      <p data-i18n="faq.a1">Only if it pays off. If a car's total related expenses for the year are 15,000,000 KRW or less, you may skip the log and the full amount is still deductible (차량 비용처리 1500만원 기준). Above that, no log means your deduction is capped at 15,000,000 KRW no matter how much you actually drove for work — so this tool always shows you both numbers side by side, and the gap is what writing the log is worth.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How is the business-use ratio calculated, and does commuting count?</summary>
+      <p data-i18n="faq.a2">업무사용비율 계산 = business driving distance ÷ total driving distance, per vehicle, over the whole fiscal year. Commuting counts as business use, so this tool adds commuting and general business kilometres together for the numerator. Rows whose purpose value we cannot recognise are never quietly filed as personal — they are held aside until you classify them, because guessing here would silently shrink your ratio.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What is the 8,000,000 KRW depreciation cap, and what happens to the excess?</summary>
+      <p data-i18n="faq.a3">Depreciation × business-use ratio is deductible only up to 8,000,000 KRW per vehicle per year. The excess is disallowed this year (업무용승용차 손금불산입) and carries over to later years. If your fiscal year is shorter than 12 months, both this cap and the 15,000,000 KRW threshold are pro-rated by months ÷ 12 (Corporate Tax Act §50-2) — set the month count and the tool re-prorates both. For leases and rentals, enter the depreciation-equivalent portion (rental fee × 70%; for a lease, the fee minus insurance, auto tax and maintenance) and put those other components in their own fields.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">We never bought business-only auto insurance. Does the ratio still help?</summary>
+      <p data-i18n="faq.a4">No — and that is why this tool asks. Without 업무전용자동차보험, every related expense for that vehicle is disallowed in full, regardless of how good your ratio looks. The 50% transitional relief that applied in 2024–2025 has ended, so from fiscal 2026 corporations and double-entry sole proprietors are treated the same (it already applied to taxpayers subject to 성실신고확인 from 2024). Untick the insurance box for a car and the tool overwrites its deductible with ₩0 and tells you why, instead of showing you a comfortable number that the filing will not accept.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">How is this different from a US IRS mileage calculator?</summary>
+      <p data-i18n="faq.a5">Completely different maths, which is why this is a company vehicle log calculator korea and says so in the name. The US lets you take a flat standard mileage rate per mile, or actual expenses × business percentage (IRS Pub. 463). Korea has no flat rate: you take actual related expenses × business-use ratio, then run them through the 15,000,000 KRW no-log threshold and the 8,000,000 KRW depreciation cap. Bolting both regimes into one screen would break the tool for both audiences, so a US edition is a separate service.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.irs.gov/" target="_blank" rel="noopener">IRS — standard mileage rate and adequate vehicle mileage records</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

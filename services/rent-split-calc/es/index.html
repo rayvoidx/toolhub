@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-3XAabXxGcQRz5RFjnPV0pjDcoSg4C65uD1gC+rlr8pM=' 'sha256-ewWg97mPekH8Z7+a08EY30hvQNLBc3PtluoPsIeBt/A=' 'sha256-GKP2nOdv7bC6/kLs6v+8Jxb7whY9gKwn65MTmJR/yLk='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de reparto de alquiler por habitación</title>
+<meta name="description" content="Reparte el alquiler entre compañeros de piso a partes iguales, por tamaño de habitación en pies cuadrados o por ingresos. Incluye el reparto híbrido 70/30 más habitual.">
+<meta name="keywords" content="rent split calculator, split rent by room size, splitting rent unevenly, roommate rent calculator, how to divide rent fairly, rent by square footage">
+<link rel="canonical" href="https://tool-hub.me/rent-split-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/rent-split-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/rent-split-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/rent-split-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/rent-split-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/rent-split-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/rent-split-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/rent-split-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/rent-split-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/rent-split-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/rent-split-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/rent-split-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/rent-split-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/rent-split-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/rent-split-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/rent-split-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de reparto de alquiler por habitación">
+<meta property="og:description" content="Reparte el alquiler entre compañeros de piso a partes iguales, por tamaño de habitación en pies cuadrados o por ingresos. Incluye el reparto híbrido 70/30 más habitual.">
+<meta property="og:url" content="https://tool-hub.me/rent-split-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/rent-split-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0284c7">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Rent Split Calculator",
+  "description": "Split rent between roommates evenly, by room size in square feet, or by income. Handles uneven bedrooms and the 70/30 hybrid split most house shares use.",
+  "url": "https://tool-hub.me/rent-split-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Rent Split Calculator",
+      "item": "https://tool-hub.me/rent-split-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the fairest way to split rent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no universal answer, only a deal everyone accepts. Equal is simplest and works when bedrooms are similar; by room size is fairer when one bedroom is twice the other; by income helps when earnings are far apart. The most popular compromise is the hybrid: 70% of the rent by room size and 30% split equally, because shared space is shared equally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much more should the master bedroom pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A private bathroom, a walk-in closet or a balcony is usually worth a 10% to 20% premium over an equal share, on top of any square-footage difference. On $3,000 split three ways, a 15% premium takes the master from $1,000 to $1,150 and drops the other two to $925 each. Decide the premium before you view the flat, not after someone has claimed the room."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should rent be split by income?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It divides opinion. Supporters argue that rent should be an equal burden, so the person earning twice as much pays twice as much for the same roof. Critics answer that rent buys a room, not a service priced by wealth, and that income changes mid-lease while the rooms do not. If you use it, revisit the numbers every six months and agree in advance what happens when someone gets a raise or loses a job."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do we split utilities the same way?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually not. Electricity, water, internet and council tax are driven by how many people use them rather than by floor area, so most households split them equally even when rent is split by room size. The exceptions are metered extras such as parking spaces or a private aircon unit, which should sit with the person using them."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Rent Split Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Rent Split Calculator</span></nav>
+  <section class="hero">
+    <h1>Rent Split Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Uneven bedrooms, uneven incomes — settle who pays what before anyone signs the lease.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .rowhead { font-weight:600; margin:16px 0 4px; }
+      #tool .colhead { display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:13px; color:var(--muted); margin-bottom:4px; }
+      #tool .srow { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:8px; }
+      #tool .srow input { margin:0; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .listtitle { font-weight:600; margin:16px 0 6px; }
+      #tool .plist { border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+      #tool .prow { display:grid; grid-template-columns:1fr auto auto; gap:10px; align-items:baseline; padding:9px 12px; border-top:1px solid var(--line); }
+      #tool .prow:first-child { border-top:0; }
+      #tool .prow .p-amt { font-weight:700; }
+      #tool .prow .p-pct { font-size:13px; color:var(--muted); min-width:52px; text-align:right; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="rent" data-i18n="tool.rent.label">Total monthly rent</label>
+    <input type="number" id="rent" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="3000">
+
+    <div class="field-row">
+      <div>
+        <label for="method" data-i18n="tool.method.label">Split method</label>
+        <select id="method">
+          <option value="equal" data-i18n="tool.method.equal">Equal — same amount each</option>
+          <option value="size" selected data-i18n="tool.method.size">By room size — square feet</option>
+          <option value="income" data-i18n="tool.method.income">By income — share of take-home pay</option>
+        </select>
+      </div>
+      <div>
+        <label for="mode" data-i18n="tool.mode.label">Proportional mode</label>
+        <select id="mode">
+          <option value="basic" data-i18n="tool.mode.basic">Basic — full rent split proportionally</option>
+          <option value="hybrid" data-i18n="tool.mode.hybrid">Hybrid — 70% proportional, 30% equal</option>
+          <option value="hybrid80" data-i18n="tool.mode.hybrid80">Hybrid — 80% proportional, 20% equal</option>
+          <option value="hybrid50" data-i18n="tool.mode.hybrid50">Hybrid — 50% proportional, 50% equal</option>
+        </select>
+      </div>
+    </div>
+
+    <p class="rowhead" data-i18n="tool.people.label">Roommates</p>
+    <div class="colhead"><span data-i18n="tool.h.name">Name (optional)</span><span id="h-value">Room size (sq ft)</span></div>
+    <div class="srow">
+      <input type="text" id="n1" maxlength="24" autocomplete="off" placeholder="Alex" data-i18n-aria-label="tool.a.name" aria-label="Roommate name">
+      <input type="number" id="v1" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="150" data-i18n-aria-label="tool.a.value" aria-label="Room size or income for this roommate">
+    </div>
+    <div class="srow">
+      <input type="text" id="n2" maxlength="24" autocomplete="off" placeholder="Jordan" data-i18n-aria-label="tool.a.name" aria-label="Roommate name">
+      <input type="number" id="v2" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="120" data-i18n-aria-label="tool.a.value" aria-label="Room size or income for this roommate">
+    </div>
+    <div class="srow">
+      <input type="text" id="n3" maxlength="24" autocomplete="off" placeholder="Sam" data-i18n-aria-label="tool.a.name" aria-label="Roommate name">
+      <input type="number" id="v3" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="100" data-i18n-aria-label="tool.a.value" aria-label="Room size or income for this roommate">
+    </div>
+    <div class="srow">
+      <input type="text" id="n4" maxlength="24" autocomplete="off" data-i18n-aria-label="tool.a.name" aria-label="Roommate name">
+      <input type="number" id="v4" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.a.value" aria-label="Room size or income for this roommate">
+    </div>
+    <div class="srow">
+      <input type="text" id="n5" maxlength="24" autocomplete="off" data-i18n-aria-label="tool.a.name" aria-label="Roommate name">
+      <input type="number" id="v5" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.a.value" aria-label="Room size or income for this roommate">
+    </div>
+    <div class="srow">
+      <input type="text" id="n6" maxlength="24" autocomplete="off" data-i18n-aria-label="tool.a.name" aria-label="Roommate name">
+      <input type="number" id="v6" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.a.value" aria-label="Room size or income for this roommate">
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Split the rent</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" id="r-hero-label">Monthly share range</div>
+          <div class="rc-val" id="r-hero">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.people">People</div><div class="rc-val" id="r-people">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.total">Total allocated</div><div class="rc-val" id="r-total">—</div></div>
+      </div>
+      <p class="listtitle" data-i18n="tool.r.breakdown">Who pays what</p>
+      <div class="plist" id="r-list"></div>
+      <p class="subtle" id="r-note" style="margin-top:10px;"></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.lease" style="margin-top:12px;">Whatever you agree, a joint tenancy makes every signer liable for the full rent if someone stops paying. Put the split in writing.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>Three ways to split rent, run on the same flat</h2>
+    <p>Take a three-bedroom place at $3,000 a month. The bedrooms measure 150, 120 and 100 square feet. The three tenants take home $4,500, $3,800 and $2,700 a month. Nothing about that flat is unusual, and yet the three standard methods produce three very different rent cheques. Here is what each one actually pays.</p>
+
+    <table>
+      <thead><tr><th>Method</th><th>150 sq ft</th><th>120 sq ft</th><th>100 sq ft</th></tr></thead>
+      <tbody>
+        <tr><td>Equal split</td><td>
+
+  ,000.00</td><td>
+
+  ,000.00</td><td>
+
+  ,000.00</td></tr>
+        <tr><td>By room size</td><td>
+
+  ,216.22</td><td>$972.97</td><td>$810.81</td></tr>
+        <tr><td>70/30 hybrid</td><td>
+
+  ,151.35</td><td>$981.08</td><td>$867.57</td></tr>
+        <tr><td>By income</td><td>
+
+  ,227.27</td><td>
+
+  ,036.37</td><td>$736.36</td></tr>
+      </tbody>
+    </table>
+
+    <h3>How each number is produced</h3>
+    <p>The equal split is $3,000 ÷ 3. The room-size split multiplies the rent by each room's share of the 370 square feet of private space: 150 ÷ 370 × $3,000 = 
+
+  ,216.22, and so on down. The income split does the same with each person's share of the 
+
+  1,000 total take-home: 4,500 ÷ 11,000 × $3,000 = 
+
+  ,227.27. The hybrid takes 70% of the rent ($2,100) through the room-size formula and splits the remaining 30% ($900) equally at $300 each — so the big room pays 0.7 × 
+
+  ,216.22 + $300 = 
+
+  ,151.35.</p>
+    <p>Notice the spread. Pure square footage puts $405 a month between the largest and smallest room; the hybrid narrows that to $284; income puts $491 between the top and bottom earner and completely reverses who pays most if the person in the smallest room happens to earn the most.</p>
+
+    <h3>Why the hybrid exists</h3>
+    <p>Square-foot splitting has one obvious flaw: you do not rent a bedroom, you rent a share of a home. The kitchen, bathroom, hallway and living room in that flat might be 500 square feet, and all three tenants use them identically. Charging for them in proportion to bedroom size overcharges whoever has the big room for space they do not exclusively use. The 70/30 hybrid is the rough correction most house shares land on: private space is priced by size, common space is priced per head. If your flat has an unusually large shared area, shift the ratio toward 60/40; if it is mostly bedrooms with a galley kitchen, 80/20 is closer.</p>
+
+    <h3>Premiums the calculator cannot measure</h3>
+    <p>Square feet miss a lot. An en-suite bathroom, a walk-in closet, a balcony, a bay window, being at the quiet end of the hall away from the street — each is worth something, and none of it shows up in a floor measurement. The working convention is a 10% to 20% premium over the equal share for a master with a private bathroom. On our $3,000 flat, a 15% premium takes that room from 
+
+  ,000 to 
+
+  ,150 and drops the other two to $925 each. Conversely, discount a room with no window, no closet, or the one that shares a wall with the boiler.</p>
+    <p>The practical route is to run this calculator for a baseline, then negotiate the extras as flat dollar adjustments everyone can see. Two people arguing over $40 a month with the maths on the table is a five-minute conversation; the same two people arguing about fairness in the abstract is a year of resentment.</p>
+
+    <h2>Aim for agreement, not optimality</h2>
+    <p>There is no formula that produces the objectively correct rent split, because the inputs — how much a balcony is worth, whether income should matter, how much noise from the street costs — are preferences, not facts. The number that works is the one everyone signs up to before moving in, when nobody has unpacked and walking away is still cheap. Revisiting a split six months later, after someone has already painted their room, is a far harder conversation.</p>
+    <p>Write it down. A short note in a shared document listing who pays what, when it is due, who holds the tenancy deposit and what happens if someone moves out early is worth more than any calculator. It is also the only record you will have if the arrangement goes wrong.</p>
+
+    <h3>The lease does not care how you split it</h3>
+    <p>This is the part people miss. Most shared tenancies in the US and UK are joint and several: every tenant who signs is liable for the entire rent, not just their agreed share. If your flatmate stops paying their $810.81, the landlord can pursue you for all $3,000 and it is your credit history and your deposit at risk. Your internal split is a private agreement between tenants; it has no standing with the landlord unless each person holds a separate contract for their own room, which is what a licence or a room-by-room tenancy provides. If liability worries you more than fairness, that is the arrangement to ask for.</p>
+
+    <h3>Limitations</h3>
+    <p>This tool splits the rent figure you enter, nothing else. Deposits are usually split the same way as rent, but bills, council tax, broadband and furniture usually are not — they follow head count, not floor area. Couples sharing one room are a separate case: most households treat a couple as one room paying a room-and-a-half share rather than two full shares, precisely because they consume common space more than one person but less than two. And any income-based split needs a review date built in, because incomes move and rooms do not.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.gov.uk/private-renting" target="_blank" rel="noopener">GOV.UK — private renting rules, joint tenancies and each tenant's liability for the whole rent</a></li>
+      <li><a href="https://www.consumerfinance.gov/consumer-tools/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — budgeting tools and guidance on housing costs relative to income</a></li>
+      <li><a href="https://www.hud.gov/topics/rental_assistance" target="_blank" rel="noopener">U.S. Department of Housing and Urban Development — rental assistance and affordability standards</a></li>
+      <li><a href="https://www.bls.gov/cex/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics — Consumer Expenditure Survey data on typical household housing spending</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/retirement-calc/"><span class="related-ico" aria-hidden="true">🌴</span><span class="related-name">Retirement Calculator</span></a><a class="related-item" href="https://tool-hub.me/roi-calc/"><span class="related-ico" aria-hidden="true">📊</span><span class="related-name">ROI Calculator</span></a><a class="related-item" href="https://tool-hub.me/rule-of-72-calc/"><span class="related-ico" aria-hidden="true">✌️</span><span class="related-name">Rule of 72 Calculator</span></a><a class="related-item" href="https://tool-hub.me/salary-calc/"><span class="related-ico" aria-hidden="true">💰</span><span class="related-name">Korean Salary Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the fairest way to split rent?</summary><p data-i18n="faq.a1">There is no universal answer, only a deal everyone accepts. Equal is simplest and works when bedrooms are similar; by room size is fairer when one bedroom is twice the other; by income helps when earnings are far apart. The most popular compromise is the hybrid: 70% of the rent by room size and 30% split equally, because shared space is shared equally.</p></details>
+    <details><summary data-i18n="faq.q2">How much more should the master bedroom pay?</summary><p data-i18n="faq.a2">A private bathroom, a walk-in closet or a balcony is usually worth a 10% to 20% premium over an equal share, on top of any square-footage difference. On $3,000 split three ways, a 15% premium takes the master from $1,000 to $1,150 and drops the other two to $925 each. Decide the premium before you view the flat, not after someone has claimed the room.</p></details>
+    <details><summary data-i18n="faq.q3">Should rent be split by income?</summary><p data-i18n="faq.a3">It divides opinion. Supporters argue that rent should be an equal burden, so the person earning twice as much pays twice as much for the same roof. Critics answer that rent buys a room, not a service priced by wealth, and that income changes mid-lease while the rooms do not. If you use it, revisit the numbers every six months and agree in advance what happens when someone gets a raise or loses a job.</p></details>
+    <details><summary data-i18n="faq.q4">Do we split utilities the same way?</summary><p data-i18n="faq.a4">Usually not. Electricity, water, internet and council tax are driven by how many people use them rather than by floor area, so most households split them equally even when rent is split by room size. The exceptions are metered extras such as parking spaces or a private aircon unit, which should sit with the person using them.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

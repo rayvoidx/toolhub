@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-qqPpIn1I3NjOk7OLxP3zBCtKKRItj2cfCbIhJtfZKC8=' 'sha256-LFpWsML1z8hz0AesXDIamMHpV6U+MWpKWYsima8tRak=' 'sha256-rUISEApwsVq5HGal5D5nCTRdSYDEf/bwisG6QH8w8Dw='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>土（表土）計算ツール — 必要な土の量を計算</title>
+<meta name="description" content="花壇や芝生に必要な表土の量を立方ヤード・立方フィート・40ポンド袋・トンで計算します。長方形・円形・面積直接入力と深さの選択に対応。">
+<meta name="keywords" content="topsoil calculator, how much topsoil do i need, cubic yards of topsoil, soil calculator, topsoil per square foot, garden soil calculator">
+<link rel="canonical" href="https://tool-hub.me/topsoil-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/topsoil-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/topsoil-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/topsoil-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/topsoil-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/topsoil-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/topsoil-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/topsoil-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/topsoil-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/topsoil-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/topsoil-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/topsoil-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/topsoil-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/topsoil-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/topsoil-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/topsoil-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="土（表土）計算ツール — 必要な土の量を計算">
+<meta property="og:description" content="花壇や芝生に必要な表土の量を立方ヤード・立方フィート・40ポンド袋・トンで計算します。長方形・円形・面積直接入力と深さの選択に対応。">
+<meta property="og:url" content="https://tool-hub.me/topsoil-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/topsoil-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#451a03">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Topsoil Calculator",
+  "description": "Work out how much topsoil you need in cubic yards, cubic feet, 40 lb bags and tons. Enter a rectangle, a circle or square footage, then pick a depth.",
+  "url": "https://tool-hub.me/topsoil-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Topsoil Calculator",
+      "item": "https://tool-hub.me/topsoil-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I order topsoil by the cubic yard or by the ton?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Order by volume whenever you can, because volume is what fills the bed. A cubic yard of screened topsoil weighs roughly 1.35 tons dry, but the same yard can weigh 1.0 ton bone-dry and sandy or 1.7 tons soaked with rain. If your supplier only sells by weight, ask what they use per yard that week and buy about 10 percent extra."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How deep should topsoil go when topdressing an existing lawn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only a quarter to half an inch per pass, never the two to six inches used for new beds. Grass smothers if the crowns are buried, so spread thin, rake it into the canopy and repeat next season if you need more. Use the custom depth field and enter 0.25 or 0.5 for a topdressing job."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much topsoil do I need for a new lawn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Four to six inches of good soil over the subgrade is the usual target for seed or sod, with six inches preferred if the ground underneath is compacted builder's fill. At four inches deep, 1,000 sq ft needs about 12.3 cubic yards. Grade and lightly firm the soil before seeding so it does not settle into hollows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between topsoil, fill dirt and garden soil blends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Screened topsoil is native soil run through a screen to remove rocks and roots, and it is the default for beds and lawns. Fill dirt is subsoil sold for raising grade or backfilling holes and grows very little. Garden or raised-bed blends mix topsoil with compost and sand, cost more, and settle more in the first season, so add about 10 percent."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Topsoil Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Topsoil Calculator</span></nav>
+  <section class="hero">
+    <h1>Topsoil Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Depth drives the load, not area. Four inches over a small bed is already a bulk delivery.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .u { color:var(--muted); font-weight:400; font-size:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Measurement units</label>
+        <select id="unit">
+          <option value="ft" data-i18n="tool.unit.ft">Feet and inches (US)</option>
+          <option value="m" data-i18n="tool.unit.m">Metres and centimetres</option>
+        </select>
+      </div>
+      <div>
+        <label for="mode" data-i18n="tool.mode.label">Area shape</label>
+        <select id="mode">
+          <option value="rect" data-i18n="tool.mode.rect">Rectangle — length x width</option>
+          <option value="circle" data-i18n="tool.mode.circle">Circle — diameter</option>
+          <option value="direct" data-i18n="tool.mode.direct">I already know the area</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row" id="f-rect">
+      <div>
+        <label for="len"><span data-i18n="tool.len.label">Length</span> <span class="u" id="u-len">ft</span></label>
+        <input type="number" id="len" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="25">
+      </div>
+      <div>
+        <label for="wid"><span data-i18n="tool.wid.label">Width</span> <span class="u" id="u-wid">ft</span></label>
+        <input type="number" id="wid" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="10">
+      </div>
+    </div>
+
+    <div id="f-circle" hidden>
+      <label for="dia"><span data-i18n="tool.dia.label">Diameter</span> <span class="u" id="u-dia">ft</span></label>
+      <input type="number" id="dia" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12">
+    </div>
+
+    <div id="f-direct" hidden>
+      <label for="area"><span data-i18n="tool.area.label">Area</span> <span class="u" id="u-area">sq ft</span></label>
+      <input type="number" id="area" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="250">
+    </div>
+
+    <label for="depth" data-i18n="tool.depth.label">Depth of topsoil</label>
+    <select id="depth">
+      <option value="0.5" data-i18n="tool.depth.d05">0.5 in / 1 cm — topdressing a lawn</option>
+      <option value="2" data-i18n="tool.depth.d2">2 in / 5 cm — topdressing a bed</option>
+      <option value="4" selected data-i18n="tool.depth.d4">4 in / 10 cm — new planting bed</option>
+      <option value="6" data-i18n="tool.depth.d6">6 in / 15 cm — raised bed or new lawn</option>
+      <option value="12" data-i18n="tool.depth.d12">12 in / 30 cm — filling a raised bed frame</option>
+      <option value="custom" data-i18n="tool.depth.custom">Custom depth</option>
+    </select>
+
+    <div id="f-custom" hidden>
+      <label for="dcustom"><span data-i18n="tool.depth.customlabel">Custom depth</span> <span class="u" id="u-depth">in</span></label>
+      <input type="number" id="dcustom" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="3">
+    </div>
+
+    <label for="bag" data-i18n="tool.bag.label">Bag size (bagged topsoil)</label>
+    <select id="bag">
+      <option value="0.75" selected>0.75 cu ft (40 lb)</option>
+      <option value="1">1 cu ft</option>
+      <option value="1.5">1.5 cu ft</option>
+      <option value="2">2 cu ft</option>
+      <option value="1.41259">40 L</option>
+      <option value="1.76573">50 L</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate topsoil</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.yards">Topsoil needed</div>
+          <div class="rc-val" id="r-yards">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.cuft">Cubic feet</div><div class="rc-val" id="r-cuft">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.bags">40 lb bags (0.75 cu ft each)</div><div class="rc-val" id="r-bags">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.tons">Approximate weight</div><div class="rc-val" id="r-tons">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Area covered</div><div class="rc-val" id="r-area">—</div></div>
+      </div>
+      <p class="subtle" id="r-metric" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.moisture" style="margin-top:12px;">Weight assumes screened dry loam at about 1.35 tons per cubic yard. Wet or clay-heavy soil runs 1.0 to 1.7 — order by volume, not by weight.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How much topsoil do I need?</h2>
+    <p>Every topsoil order comes down to one line of arithmetic: area multiplied by depth, divided by 27 to turn cubic feet into cubic yards. The area is the easy part. The depth is where people underestimate, because a number that sounds small in inches becomes a truck-sized number once it is spread over a garden. Two inches over 500 square feet is more than three cubic yards — around a ton and a half of material to move by wheelbarrow.</p>
+
+    <h3>Worked example: a 25 ft x 10 ft planting bed</h3>
+    <p>Say you are building a new bed along a fence, 25 feet long and 10 feet wide, and you want the standard 4 inches of good soil for annuals and perennials. Area is 25 x 10 = 250 square feet. Four inches is 0.333 feet, so the volume is 250 x 0.333 = 83.3 cubic feet. Divide by 27 and you get 3.1 cubic yards. At the usual bulk density for screened dry loam, roughly 1.35 tons per cubic yard, that is about 4.2 tons of soil.</p>
+    <p>Now the same bed at 6 inches for a raised frame: 250 x 0.5 = 125 cubic feet, or 4.6 cubic yards. Adding two inches of depth added half again as much soil. That is the single most useful thing to internalise before you call a supplier — depth, not area, is what moves the price.</p>
+
+    <h3>The bag maths nobody enjoys</h3>
+    <p>Bagged topsoil in the US is typically sold as a 40 lb bag holding about 0.75 cubic feet. The 250 square foot bed above needs 83.3 cubic feet, which is 112 bags. At three to five dollars a bag that is four to five hundred dollars, plus a car boot filled six times over. The same 3.1 yards delivered in bulk usually costs 20 to 50 dollars per yard plus a flat delivery fee, so somewhere between 150 and 250 dollars in one drop.</p>
+    <p>The practical crossover is about one cubic yard, roughly 36 bags. Below that, bags win on convenience and you avoid a pile on the driveway. Above it, bulk wins on both cost and your back. One caveat on the numbers: bagged product is drier, screened finer and often blended with organic matter, so 112 bags do not weigh the 4.2 tons the bulk figure quotes. The volume matches; the weight does not.</p>
+
+    <h2>Depth by job</h2>
+    <table>
+      <thead><tr><th>Job</th><th>Depth</th><th>Per 100 sq ft</th></tr></thead>
+      <tbody>
+        <tr><td>Topdressing an established lawn</td><td>0.25 to 0.5 in</td><td>0.08 to 0.15 cu yd</td></tr>
+        <tr><td>Refreshing an existing bed</td><td>2 in</td><td>0.6 cu yd</td></tr>
+        <tr><td>New planting bed</td><td>4 in</td><td>1.2 cu yd</td></tr>
+        <tr><td>New lawn from seed or sod</td><td>4 to 6 in</td><td>1.2 to 1.9 cu yd</td></tr>
+        <tr><td>Filling a raised bed frame</td><td>10 to 12 in</td><td>3.1 to 3.7 cu yd</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Do not bury a living lawn</h3>
+    <p>The most common expensive mistake is treating an existing lawn like a new bed. Grass crowns sit at the soil surface and suffocate under anything thicker than about half an inch. Topdress at a quarter to half an inch, drag it into the canopy with the back of a rake so the blades still show, and repeat next season if the surface is still uneven. If you genuinely need four inches on a lawn area, you are not topdressing, you are rebuilding — strip or till the old turf first and reseed.</p>
+
+    <h2>Buying checklist</h2>
+    <p>Ask whether the soil is screened, and to what size; half-inch screening is normal for beds. Ask what it was before it was topsoil, because stripped construction site soil can carry compaction, weed seed and the occasional lump of concrete. Ask for a recent test or at least the pH range if you are planting acid-lovers. Look at a sample wet: good topsoil crumbles, poor topsoil ribbons like clay. And ask about organic matter, since a soil with 3 to 5 percent will behave far better than a mineral fill that happens to be dark.</p>
+
+    <h2>Limitations of any calculator</h2>
+    <p>These numbers describe a level surface and a uniform depth. Real ground is neither. Add roughly 10 percent for settling, uneven subgrade and the soil that stays stuck in the barrow, and 15 percent for compost-rich blends, which shrink noticeably in the first season as the organic fraction breaks down. Weight is the softest figure here: moisture content swings bulk topsoil between about 1.0 and 1.7 tons per cubic yard, which is why suppliers who sell by the ton should always be asked what conversion they are using that week. If you have a choice, buy by volume and let the moisture be their problem.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils" target="_blank" rel="noopener">USDA Natural Resources Conservation Service — soil properties, texture and organic matter guidance</a></li>
+      <li><a href="https://www.epa.gov/soakuptherain/soil-health" target="_blank" rel="noopener">US EPA — soil health, compaction and amending soil for landscapes</a></li>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures — how bulk material is legally sold by volume or weight</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/tv-size-calc/"><span class="related-ico" aria-hidden="true">📺</span><span class="related-name">TV Size Calculator</span></a><a class="related-item" href="https://tool-hub.me/typing-test/"><span class="related-ico" aria-hidden="true">⌨️</span><span class="related-name">Typing Speed Test</span></a><a class="related-item" href="https://tool-hub.me/wallpaper-calc/"><span class="related-ico" aria-hidden="true">🖼️</span><span class="related-name">Wallpaper Calculator</span></a><a class="related-item" href="https://tool-hub.me/water-heater-size-calc/"><span class="related-ico" aria-hidden="true">🚿</span><span class="related-name">Water Heater Size Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Should I order topsoil by the cubic yard or by the ton?</summary><p data-i18n="faq.a1">Order by volume whenever you can, because volume is what fills the bed. A cubic yard of screened topsoil weighs roughly 1.35 tons dry, but the same yard can weigh 1.0 ton bone-dry and sandy or 1.7 tons soaked with rain. If your supplier only sells by weight, ask what they use per yard that week and buy about 10 percent extra.</p></details>
+    <details><summary data-i18n="faq.q2">How deep should topsoil go when topdressing an existing lawn?</summary><p data-i18n="faq.a2">Only a quarter to half an inch per pass, never the two to six inches used for new beds. Grass smothers if the crowns are buried, so spread thin, rake it into the canopy and repeat next season if you need more. Use the custom depth field and enter 0.25 or 0.5 for a topdressing job.</p></details>
+    <details><summary data-i18n="faq.q3">How much topsoil do I need for a new lawn?</summary><p data-i18n="faq.a3">Four to six inches of good soil over the subgrade is the usual target for seed or sod, with six inches preferred if the ground underneath is compacted builder's fill. At four inches deep, 1,000 sq ft needs about 12.3 cubic yards. Grade and lightly firm the soil before seeding so it does not settle into hollows.</p></details>
+    <details><summary data-i18n="faq.q4">What is the difference between topsoil, fill dirt and garden soil blends?</summary><p data-i18n="faq.a4">Screened topsoil is native soil run through a screen to remove rocks and roots, and it is the default for beds and lawns. Fill dirt is subsoil sold for raising grade or backfilling holes and grows very little. Garden or raised-bed blends mix topsoil with compost and sand, cost more, and settle more in the first season, so add about 10 percent.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

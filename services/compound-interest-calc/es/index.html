@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-uX0oo00QvmQ4zzZeitlqRI48ZovAa/YwHiLtG8h5YB8=' 'sha256-DE6kDFQ2dd09d27Mcs5GSBt3nJK0+fZIDk5EyQiUORo=' 'sha256-6f9honshxXEsWNt1APnr+SRihWysn4RcqB5yOQH4//c='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de interés compuesto — Ve tu crecimiento año a año</title>
+<meta name="description" content="Introduce el capital, la tasa, los años y la frecuencia de capitalización, más un aporte mensual opcional, para ver tu saldo final, aportes e interés — gratis, en tu navegador.">
+<meta name="keywords" content="compound interest calculator, compound interest formula, daily compound interest, monthly compound interest, investment calculator, 복리 계산기, compound interest calculator with monthly contributions">
+<link rel="canonical" href="https://tool-hub.me/compound-interest-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/compound-interest-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/compound-interest-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/compound-interest-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/compound-interest-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/compound-interest-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/compound-interest-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/compound-interest-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/compound-interest-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/compound-interest-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/compound-interest-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/compound-interest-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/compound-interest-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/compound-interest-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/compound-interest-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/compound-interest-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de interés compuesto — Ve tu crecimiento año a año">
+<meta property="og:description" content="Introduce el capital, la tasa, los años y la frecuencia de capitalización, más un aporte mensual opcional, para ver tu saldo final, aportes e interés — gratis, en tu navegador.">
+<meta property="og:url" content="https://tool-hub.me/compound-interest-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/compound-interest-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#047857">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Compound Interest Calculator",
+  "description": "Enter principal, rate, years, compounding frequency and an optional monthly deposit to see final balance, contributions and interest — free, in your browser.",
+  "url": "https://tool-hub.me/compound-interest-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-22",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Compound Interest Calculator",
+      "item": "https://tool-hub.me/compound-interest-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is compound interest, and how is it different from simple interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simple interest only ever applies to your original principal, so it grows in a straight line. Compound interest is calculated on the principal plus all interest already earned, so each period's interest itself starts earning interest — the balance grows faster the longer you leave it. Over short periods the difference is small, but over 10, 20 or 30 years compounding can add up to far more than simple interest on the same principal and rate. That snowball effect is exactly what this compound interest calculator shows in the year-by-year growth table below."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the compound interest formula, with a worked example?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The formula is A = P(1 + r/n)^(nt), where P is the principal, r is the annual interest rate as a decimal, n is the number of compounding periods per year, and t is the number of years; total interest is A minus P. Worked example: a $10,000 principal at a 6% annual rate compounded monthly (n = 12) for 10 years (t = 10) gives A = 10,000 × (1 + 0.06/12)^(12×10) ≈ $18,193.97, so total interest earned is about $8,193.97. Enter your own numbers above to run the same formula on your principal, rate, term and compounding frequency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does compounding frequency — daily, monthly, quarterly or annually — change my return?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The more often interest compounds, the higher the effective annual return for the same nominal rate, because interest starts earning interest sooner. At a 6% nominal annual rate, for example, the effective annual yield is about 6.00% compounded annually, 6.14% compounded quarterly, 6.17% compounded monthly, and 6.18% compounded daily. The difference between monthly and daily compounding is usually small in dollar terms, but it grows with a larger principal and a longer time horizon. This daily compound interest calculator and monthly compound interest calculator behavior are both handled by the same compounding frequency selector above."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are optional monthly contributions handled, and when do they start earning interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you add a monthly contribution, it's added to your balance at the end of each month, so it starts earning interest from the following month onward — the same \"ordinary annuity\" convention used by most bank and retirement calculators. For example, a $10,000 principal at 6% compounded monthly, plus $100 added every month, grows to about $34,581.90 after 10 years: $22,000 of that is your own contributions and about $12,581.90 is interest. Your real account may credit contributions slightly differently, so treat this as a close estimate rather than an exact bank statement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my financial data sent to a server, and is this investment advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every number you enter and every result this compound interest calculator shows is computed entirely in your browser — nothing is uploaded, logged or stored on a server, and there's no sign-up required. And this is an educational arithmetic tool, not financial, investment or tax advice: it shows you the math of compounding at the rate you choose, not a prediction of what any real investment will actually earn."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Compound Interest Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Compound Interest Calculator</span></nav>
+  <section class="hero">
+    <h1>Compound Interest Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">How much will your money grow? Enter your principal, rate, years and compounding frequency to see your final balance instantly — daily, monthly, quarterly or annual compounding, with an optional monthly contribution.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; }
+      #tool .chip { padding:7px 14px; font-size:14px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .chip.is-active { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool .hint { margin:6px 0 0; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:12px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; color:var(--accent-strong); }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool details.adv { margin-top:14px; border:1px solid var(--line); border-radius:8px; padding:0 12px; }
+      #tool details.adv > summary { cursor:pointer; font-weight:600; padding:11px 0; font-size:15px; }
+      #tool details.adv[open] { padding-bottom:12px; }
+      #tool table.sched { width:100%; border-collapse:collapse; margin-top:4px; font-size:13.5px; }
+      #tool table.sched th, #tool table.sched td { text-align:right; padding:6px 8px; border-bottom:1px solid var(--line); }
+      #tool table.sched th:first-child, #tool table.sched td:first-child { text-align:left; }
+      #tool table.sched th { color:var(--muted); font-weight:600; }
+      #tool .sched-wrap { overflow-x:auto; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="principal-input" data-i18n="tool.principal.label">Initial principal</label>
+        <input type="text" id="principal-input" inputmode="decimal" autocomplete="off"
+               placeholder="e.g. 10,000" data-i18n-placeholder="tool.principal.ph">
+      </div>
+      <div>
+        <label for="rate-input" data-i18n="tool.rate.label">Annual interest rate (%)</label>
+        <input type="number" id="rate-input" inputmode="decimal" min="0" step="any" autocomplete="off"
+               placeholder="e.g. 6" data-i18n-placeholder="tool.rate.ph">
+      </div>
+    </div>
+
+    <label for="years-input" data-i18n="tool.years.label">Number of years</label>
+    <input type="number" id="years-input" inputmode="decimal" min="0" step="any" autocomplete="off"
+           placeholder="e.g. 10" data-i18n-placeholder="tool.years.ph">
+    <div class="chips" id="year-chips" role="group" aria-label="Common time periods in years" data-i18n-aria-label="tool.years.chipsAria">
+      <button type="button" class="chip" data-years="5">5</button>
+      <button type="button" class="chip" data-years="10">10</button>
+      <button type="button" class="chip" data-years="20">20</button>
+      <button type="button" class="chip" data-years="30">30</button>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="freq-select" data-i18n="tool.freq.label">Compounding frequency</label>
+        <select id="freq-select">
+          <option value="365" data-i18n="tool.freq.daily">Daily</option>
+          <option value="52" data-i18n="tool.freq.weekly">Weekly</option>
+          <option value="12" selected data-i18n="tool.freq.monthly">Monthly</option>
+          <option value="4" data-i18n="tool.freq.quarterly">Quarterly</option>
+          <option value="2" data-i18n="tool.freq.semiannually">Semi-annually</option>
+          <option value="1" data-i18n="tool.freq.annually">Annually</option>
+        </select>
+      </div>
+      <div>
+        <label for="contribution-input" data-i18n="tool.contribution.label">Monthly contribution (optional)</label>
+        <input type="text" id="contribution-input" inputmode="decimal" autocomplete="off"
+               placeholder="e.g. 100" data-i18n-placeholder="tool.contribution.ph">
+      </div>
+    </div>
+    <p class="hint" data-i18n="tool.contribution.hint">Added at the end of each month. Leave blank for none.</p>
+
+    <label for="currency-select" data-i18n="tool.currency.label">Currency</label>
+    <select id="currency-select" aria-label="Currency" data-i18n-aria-label="tool.currency.aria"></select>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <div class="result-cards">
+          <div class="rcard hero-card"><div class="rc-label" data-i18n="tool.result.balance">Final balance</div><div class="rc-val" id="r-balance"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.contributions">Total contributions</div><div class="rc-val" id="r-contrib"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.interest">Total interest earned</div><div class="rc-val" id="r-interest"></div></div>
+        </div>
+        <p class="subtle" id="r-sub" style="margin:10px 0 0;"></p>
+        <p class="subtle" id="r-contribnote" style="margin:4px 0 0;" hidden></p>
+
+        <details class="adv" id="sched-wrap">
+          <summary data-i18n="tool.sched.summary">Year-by-year growth schedule</summary>
+          <div class="sched-wrap">
+            <table class="sched">
+              <thead><tr>
+                <th data-i18n="tool.sched.year">Year</th>
+                <th data-i18n="tool.sched.contrib">Contributions</th>
+                <th data-i18n="tool.sched.interest">Interest</th>
+                <th data-i18n="tool.sched.balance">Balance</th>
+              </tr></thead>
+              <tbody id="sched-body"></tbody>
+            </table>
+          </div>
+          <p class="subtle" id="sched-trunc" style="margin:6px 0 0;" hidden></p>
+        </details>
+
+        <p class="subtle" id="r-clipped" style="margin:12px 0 0;color:#d97706;" data-i18n="tool.note.clipped" hidden>Some values were above the allowed range and were capped for this calculation.</p>
+        <p class="subtle" style="margin:12px 0 0;font-weight:600;" data-i18n="tool.note.disclaimer">This is an educational estimate, not financial, investment or tax advice.</p>
+        <p class="subtle" style="margin:4px 0 0;" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive content (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What This Calculator Is Actually Telling You</h2>
+    <p>People reach for a compound interest calculator to compare savings products with different compounding schedules, sanity-check a "your money doubles every X years" claim, or see how much a modest recurring deposit changes the outcome over a decade or three. It's arithmetic, not a forecast — the rate you enter stays fixed for the whole term, while a real account's rate, fees and taxes will move around. Use the result to understand the shape of compounding, then judge for yourself what rate is realistic ahead.</p>
+
+    <h3>Reading the Five Inputs</h3>
+    <ol>
+      <li><strong>Initial principal</strong> — the lump sum you start with. Set it to 0 to see what a recurring contribution builds alone.</li>
+      <li><strong>Annual interest rate</strong> — the nominal annual rate as a percentage (enter 6 for 6%, not 0.06), before any compounding adjustment.</li>
+      <li><strong>Number of years</strong> — how long the money stays untouched. The 5/10/20/30 chips cover the horizons compared most often.</li>
+      <li><strong>Compounding frequency</strong> — daily (365/yr), monthly (12/yr), quarterly (4/yr) or annually (1/yr): how often interest is folded back into the balance.</li>
+      <li><strong>Monthly contribution</strong> — an optional fixed amount added at the end of every month. Leave blank for a single lump sum.</li>
+    </ol>
+
+    <h2>The Formula Behind the Balance</h2>
+    <div class="example">
+      <p style="margin:0">The lump-sum portion uses <strong>A = P(1 + r/n)<sup>nt</sup></strong>: P is the principal, r the annual rate as a decimal, n the compounding periods per year, and t the number of years. Each contribution is added at the end of its own month, so it only compounds for whatever time is left in the term — a deposit in the final month barely earns anything, while one in month one compounds for nearly the whole span. "Total interest earned" is the final balance minus the principal minus every contribution.</p>
+    </div>
+
+    <h2>Three Worked Examples</h2>
+    <div class="example">
+      <p style="margin:0 0 4px"><strong>1. Lump sum only.</strong> $5,000 at a 4.5% annual rate, compounded quarterly, for 15 years, no further deposits.</p>
+      <p style="margin:0">A = 5,000 × (1 + 0.045/4)<sup>4×15</sup> ≈ <strong>$9,783.23</strong>. Interest ≈ $4,783.23 — the balance nearly doubled with no additional deposits, purely from compounding a moderate rate over 15 years.</p>
+    </div>
+    <div class="example">
+      <p style="margin:0 0 4px"><strong>2. Adding a monthly contribution.</strong> Same $5,000 start at 4.5%, now compounded monthly, plus $150 deposited every month for 15 years (180 deposits).</p>
+      <p style="margin:0">Contributions alone total $27,000. The ending balance comes to about <strong>$48,269.98</strong> — roughly $16,269.98 of that is interest. Over 15 years, your own deposits are still doing most of the work.</p>
+    </div>
+    <div class="example">
+      <p style="margin:0 0 4px"><strong>3. Same plan, twice the time.</strong> Identical $5,000 start, 4.5% monthly compounding and $150/month, run for 30 years (360 deposits) instead of 15.</p>
+      <p style="margin:0">Contributions total $54,000, yet the balance reaches about <strong>$133,146.41</strong> — interest earned (≈$74,146.41) now outweighs every dollar you contributed. Doubling the time horizon more than doubled the balance, because compounding has decades to work on the earliest deposits.</p>
+    </div>
+
+    <h2>Compounding Frequency, Side by Side</h2>
+    <p>A "5% APR" account isn't the same everywhere — compounding frequency changes the effective yield. Holding the nominal rate at 5% on a $10,000 lump sum, no further deposits:</p>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>Compounding</th><th>Effective annual yield</th><th>$10,000 after 20 years</th></tr></thead>
+      <tbody>
+        <tr><td>Annually (n=1)</td><td>5.000%</td><td>$26,532.98</td></tr>
+        <tr><td>Quarterly (n=4)</td><td>5.095%</td><td>$27,014.85</td></tr>
+        <tr><td>Monthly (n=12)</td><td>5.116%</td><td>$27,126.40</td></tr>
+        <tr><td>Daily (n=365)</td><td>5.127%</td><td>$27,180.96</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Annual to daily compounding is worth about $648 here — noticeable, but far smaller than the effect of the rate itself or a few extra years. Don't let frequency distract from the two levers that actually move the outcome: rate and time.</p>
+
+    <h2>The Rule of 72, and Why Compounding Beats Simple Interest</h2>
+    <p>The Rule of 72 is a shortcut for "how long until this doubles?" — divide 72 by the annual rate. It approximates the exact doubling time, ln(2)/ln(1+r), and is most accurate between 6% and 10%:</p>
+    <table>
+      <thead><tr><th>Annual rate</th><th>Rule of 72 estimate</th><th>Actual years to double</th></tr></thead>
+      <tbody>
+        <tr><td>4%</td><td>18.0 years</td><td>17.67 years</td></tr>
+        <tr><td>6%</td><td>12.0 years</td><td>11.90 years</td></tr>
+        <tr><td>8%</td><td>9.0 years</td><td>9.01 years</td></tr>
+        <tr><td>9%</td><td>8.0 years</td><td>8.04 years</td></tr>
+        <tr><td>12%</td><td>6.0 years</td><td>6.12 years</td></tr>
+      </tbody>
+    </table>
+    <p>It's a handy gut check, but it only approximates annual compounding on a lump sum — use the full calculator above once contributions or a different frequency are involved. Compounding pulls ahead of simple interest because each period's interest becomes part of the next period's principal; simple interest keeps paying the same dollar amount on the original sum forever, so the gap widens every year, not just at the end.</p>
+
+    <h2>Common Mistakes and Practical Tips</h2>
+    <ul>
+      <li><strong>Entering the rate as a decimal.</strong> Type 6 for 6%, not 0.06 — the field expects a percentage.</li>
+      <li><strong>Confusing nominal rate with effective yield.</strong> A 6% rate compounded monthly actually yields about 6.17% annually.</li>
+      <li><strong>Underestimating contributions.</strong> As examples 2 and 3 show, a modest recurring deposit often adds more than interest does over shorter horizons.</li>
+      <li><strong>Missing the timing convention.</strong> Deposits are added at the end of each month (an "ordinary annuity"), matching most bank accounts; start-of-month deposits end up slightly higher.</li>
+      <li><strong>Treating a past average rate as guaranteed.</strong> A rate from the last 10 years isn't promised for the next 10 — try a few rates to see how sensitive your result is.</li>
+    </ul>
+
+    <h2>What This Tool Doesn't Do</h2>
+    <p>This calculator ignores taxes, account fees, inflation and any rate that changes over time — all of which affect what you actually take home. It also assumes contributions land with perfect regularity, which real saving rarely does. Treat every figure here as a clean, fee-free illustration of the math of compounding, not a projection of what any specific account, fund or investment will return. This is an educational tool, not financial, investment or tax advice.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" target="_blank" rel="noopener">U.S. SEC Investor.gov — official compound interest calculator and explanation</a></li>
+      <li><a href="https://www.consumerfinance.gov/consumer-tools/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — consumer guides on savings accounts and APY</a></li>
+      <li><a href="https://www.federalreserve.gov/releases/h15/" target="_blank" rel="noopener">U.S. Federal Reserve — selected interest rate statistics</a></li>
+      <li><a href="https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial" target="_blank" rel="noopener">Khan Academy — interest and compounding fundamentals</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/credit-card-interest-calc/"><span class="related-ico" aria-hidden="true">💳</span><span class="related-name">Credit Card Interest Calculator</span></a><a class="related-item" href="https://tool-hub.me/crypto-average-calc/"><span class="related-ico" aria-hidden="true">🪙</span><span class="related-name">Crypto Average Calculator</span></a><a class="related-item" href="https://tool-hub.me/dca-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">DCA Investment Calculator</span></a><a class="related-item" href="https://tool-hub.me/debt-payoff-calc/"><span class="related-ico" aria-hidden="true">💳</span><span class="related-name">Debt Payoff Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details><summary data-i18n="faq.q1">What is compound interest, and how is it different from simple interest?</summary><p data-i18n="faq.a1">Simple interest only ever applies to your original principal, so it grows in a straight line. Compound interest is calculated on the principal plus all interest already earned, so each period's interest itself starts earning interest — the balance grows faster the longer you leave it. Over short periods the difference is small, but over 10, 20 or 30 years compounding can add up to far more than simple interest on the same principal and rate. That snowball effect is exactly what this compound interest calculator shows in the year-by-year growth table below.</p></details>
+    <details><summary data-i18n="faq.q2">What is the compound interest formula, with a worked example?</summary><p data-i18n="faq.a2">The formula is A = P(1 + r/n)^(nt), where P is the principal, r is the annual interest rate as a decimal, n is the number of compounding periods per year, and t is the number of years; total interest is A minus P. Worked example: a $10,000 principal at a 6% annual rate compounded monthly (n = 12) for 10 years (t = 10) gives A = 10,000 × (1 + 0.06/12)^(12×10) ≈ $18,193.97, so total interest earned is about $8,193.97. Enter your own numbers above to run the same formula on your principal, rate, term and compounding frequency.</p></details>
+    <details><summary data-i18n="faq.q3">How does compounding frequency — daily, monthly, quarterly or annually — change my return?</summary><p data-i18n="faq.a3">The more often interest compounds, the higher the effective annual return for the same nominal rate, because interest starts earning interest sooner. At a 6% nominal annual rate, for example, the effective annual yield is about 6.00% compounded annually, 6.14% compounded quarterly, 6.17% compounded monthly, and 6.18% compounded daily. The difference between monthly and daily compounding is usually small in dollar terms, but it grows with a larger principal and a longer time horizon. This daily compound interest calculator and monthly compound interest calculator behavior are both handled by the same compounding frequency selector above.</p></details>
+    <details><summary data-i18n="faq.q4">How are optional monthly contributions handled, and when do they start earning interest?</summary><p data-i18n="faq.a4">If you add a monthly contribution, it's added to your balance at the end of each month, so it starts earning interest from the following month onward — the same "ordinary annuity" convention used by most bank and retirement calculators. For example, a $10,000 principal at 6% compounded monthly, plus $100 added every month, grows to about $34,581.90 after 10 years: $22,000 of that is your own contributions and about $12,581.90 is interest. Your real account may credit contributions slightly differently, so treat this as a close estimate rather than an exact bank statement.</p></details>
+    <details><summary data-i18n="faq.q5">Is my financial data sent to a server, and is this investment advice?</summary><p data-i18n="faq.a5">No. Every number you enter and every result this compound interest calculator shows is computed entirely in your browser — nothing is uploaded, logged or stored on a server, and there's no sign-up required. And this is an educational arithmetic tool, not financial, investment or tax advice: it shows you the math of compounding at the rate you choose, not a prediction of what any real investment will actually earn.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

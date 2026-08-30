@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-OFz0tVhhcR7V17OvBYsle7bHIyi2LKk0lBifLRmhqsM=' 'sha256-ouRKIjX4LGLaOktpcYAxF5Tvl8fsfyzoa97HeBy6SZY=' 'sha256-IZrF7kbwd/FpBaihzxJWcV7REksb3lw9MTF2D7iql6Y='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英国印紙税（SDLT）計算ツール — 2025/26年度</title>
+<meta name="description" content="イングランドと北アイルランドの物件価格にかかる英国印紙税（SDLT）を税率帯ごとに計算します。初回購入者の軽減措置と追加物件への5%上乗せにも対応。">
+<meta name="keywords" content="stamp duty calculator, stamp duty, sdlt calculator, stamp duty first time buyer, second home stamp duty, uk stamp duty rates">
+<link rel="canonical" href="https://tool-hub.me/stamp-duty-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/stamp-duty-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/stamp-duty-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/stamp-duty-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/stamp-duty-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/stamp-duty-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/stamp-duty-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/stamp-duty-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/stamp-duty-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/stamp-duty-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/stamp-duty-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/stamp-duty-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/stamp-duty-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/stamp-duty-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/stamp-duty-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/stamp-duty-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="英国印紙税（SDLT）計算ツール — 2025/26年度">
+<meta property="og:description" content="イングランドと北アイルランドの物件価格にかかる英国印紙税（SDLT）を税率帯ごとに計算します。初回購入者の軽減措置と追加物件への5%上乗せにも対応。">
+<meta property="og:url" content="https://tool-hub.me/stamp-duty-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/stamp-duty-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1e3a8a">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Stamp Duty Calculator",
+  "description": "Work out UK stamp duty on any property price in England and Northern Ireland, band by band. Includes first-time buyer relief and the 5% second-home surcharge.",
+  "url": "https://tool-hub.me/stamp-duty-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Stamp Duty Calculator",
+      "item": "https://tool-hub.me/stamp-duty-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When is stamp duty due?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The SDLT return and payment are due within 14 days of completion, not on exchange. In practice your conveyancer files the return and pays HMRC out of the completion funds, so you send them the money before or on completion day. Miss the deadline and HMRC charges interest plus a penalty, so the cash has to be saved up separately — it cannot normally be added to the mortgage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who counts as a first-time buyer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You must never have owned a freehold or leasehold interest in a residential property anywhere in the world, including inherited shares and property owned jointly. Every buyer named on the purchase has to qualify — one partner who has owned before removes the relief for both. The relief also only applies up to £500,000 and the home must be your main residence."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do Scotland and Wales use the same rates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Scotland charges Land and Buildings Transaction Tax (LBTT) and Wales charges Land Transaction Tax (LTT), each with its own bands, thresholds and surcharges. Scotland has a first-time buyer relief; Wales does not, but its starting threshold is higher. This calculator covers England and Northern Ireland only."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is stamp duty tax deductible?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not against income. Landlords cannot deduct SDLT from rental profits because it is a capital cost, not a running expense. It does count towards your acquisition cost for capital gains tax, so it reduces the taxable gain when you sell a rental or second home. A main residence is normally covered by private residence relief anyway."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Stamp Duty Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Stamp Duty Calculator</span></nav>
+  <section class="hero">
+    <h1>Stamp Duty Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Current SDLT bands for England and Northern Ireland, shown band by band so you can see where every pound of the bill comes from.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool table.bands { width:100%; border-collapse:collapse; margin-top:14px; font-size:14px; }
+      #tool table.bands th, #tool table.bands td { text-align:left; padding:8px; border-bottom:1px solid var(--line); }
+      #tool table.bands th { color:var(--muted); font-weight:600; }
+      #tool table.bands td.num { text-align:right; white-space:nowrap; }
+      #tool table.bands tr.total td { font-weight:700; border-bottom:none; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:480px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="price" data-i18n="tool.price.label">Property price (£)</label>
+        <input type="number" id="price" inputmode="numeric" min="1" max="50000000" step="1000" autocomplete="off" placeholder="350000">
+      </div>
+      <div>
+        <label for="buyer" data-i18n="tool.buyer.label">Buyer type</label>
+        <select id="buyer">
+          <option value="mover" data-i18n="tool.buyer.mover">Home mover — replacing main residence</option>
+          <option value="ftb" data-i18n="tool.buyer.ftb">First-time buyer</option>
+          <option value="additional" data-i18n="tool.buyer.additional">Additional property or second home</option>
+        </select>
+      </div>
+    </div>
+
+    <p style="margin:10px 0 0;"><label for="nonres" style="display:flex;align-items:center;gap:8px;font-weight:500;"><input type="checkbox" id="nonres" style="width:auto;margin:0;"><span data-i18n="tool.nonres.label">Non-UK resident buyer (+2% surcharge)</span></label></p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate stamp duty</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.duty">Stamp duty due</div>
+          <div class="rc-val" id="r-duty">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.rate">Effective rate</div><div class="rc-val" id="r-rate">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.withduty">Price + duty</div><div class="rc-val" id="r-total">—</div></div>
+      </div>
+      <table class="bands">
+        <thead><tr>
+          <th data-i18n="tool.th.band">Price band</th>
+          <th data-i18n="tool.th.rate">Rate</th>
+          <th data-i18n="tool.th.taxable">Amount in band</th>
+          <th data-i18n="tool.th.tax">Duty</th>
+        </tr></thead>
+        <tbody id="band-body"></tbody>
+      </table>
+      <p class="subtle" id="ftb-note" hidden data-i18n="tool.note.ftb500">First-time buyer relief is not available above £500,000, so standard rates have been applied.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.region" style="margin-top:12px;">England and Northern Ireland only — Scotland (LBTT) and Wales (LTT) use different systems and thresholds.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How stamp duty is actually worked out</h2>
+    <p>Stamp Duty Land Tax is a slice tax, not a cliff tax. Since 2014 you pay each rate only on the part of the price that falls inside its band, exactly like income tax. Buying at £250,001 does not suddenly cost thousands more than buying at £250,000 — it costs five pence more. The table this calculator prints is the same shape HMRC uses, so you can check any conveyancer's figure line by line.</p>
+    <p>The bands for England and Northern Ireland from 1 April 2025 are: nothing up to £125,000, 2% from £125,000 to £250,000, 5% from £250,000 to £925,000, 10% from £925,000 to £1.5 million, and 12% on anything above that.</p>
+
+    <h3>Worked example: a £350,000 home mover</h3>
+    <p>The first £125,000 is free. The next £125,000 (from £125,000 to £250,000) is taxed at 2%, which is £2,500. The remaining £100,000 sits in the 5% band and adds £5,000. Total stamp duty is £7,500, an effective rate of 2.14% on the whole purchase. That £7,500 is cash you need on completion day — lenders will not normally add it to the mortgage, so it belongs in your deposit spreadsheet next to legal fees and searches.</p>
+
+    <h3>The same house, a first-time buyer</h3>
+    <p>First-time buyer relief lifts the nil-rate threshold to £300,000 and charges 5% between £300,000 and £500,000. On the same £350,000 purchase, the first £300,000 is free and only £50,000 is taxed at 5%: £2,500. The relief is worth exactly £5,000 here and drops the effective rate to 0.71%.</p>
+    <p>The relief has a hard ceiling. At £500,001 it vanishes entirely rather than tapering, so a first-time buyer pays £15,000 on a £500,000 flat and £10,000 more than that — the full standard bill of £25,000 minus nothing — on a £600,000 one. Around that line, negotiating the price down to £500,000 can be worth more than any fixture-and-fittings haggle.</p>
+
+    <h3>Second homes and buy-to-let</h3>
+    <p>Buying an additional residential property adds a 5% surcharge on the entire price, on top of the standard bands, whenever the price is £40,000 or more. On our £350,000 example that is 5% of £350,000, or £17,500, taking the total to £25,000 — over three times the home mover's bill. The surcharge also catches people who have not sold their previous home yet. If you replace your main residence within 36 months of the sale, you can claim the surcharge back from HMRC, but you have to pay it first.</p>
+
+    <h2>Rates change often — check the date</h2>
+    <p>SDLT thresholds have moved five times in six years. The pandemic holiday took the nil-rate band to £500,000 in July 2020, it stepped down to £250,000 in 2021, the 2022 mini-budget lifted it to £250,000 permanently with £425,000 for first-time buyers, and on 1 April 2025 those temporary levels expired back to £125,000 and £300,000. The second-home surcharge rose from 3% to 5% on 31 October 2024. Any calculator you find in a search result may be frozen at an older set of numbers, so check which date it claims to use before you budget from it.</p>
+
+    <h2>What this calculator does not cover</h2>
+    <p>Several situations need a specialist rather than a band table. New leasehold purchases can attract an extra charge on the net present value of the rent, which is separate from the price-based figure here. Companies buying residential property over £500,000 usually face the flat 17% rate. Non-UK residents pay a further 2% surcharge on top of everything else. Mixed-use and multiple-dwelling purchases use commercial rates, and shared ownership buyers choose between paying on the initial share or on the market value up front.</p>
+    <p>Use this figure to budget and to sanity-check the completion statement your solicitor sends. The legal filing itself is theirs to do: the SDLT return and payment are due within 14 days of completion, and HMRC charges interest and penalties from day 15.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.gov.uk/stamp-duty-land-tax" target="_blank" rel="noopener">GOV.UK — official Stamp Duty Land Tax rates, bands and thresholds</a></li>
+      <li><a href="https://www.gov.uk/stamp-duty-land-tax/residential-property-rates" target="_blank" rel="noopener">GOV.UK — residential rates, first-time buyer relief and the additional property surcharge</a></li>
+      <li><a href="https://revenue.scot/" target="_blank" rel="noopener">Revenue Scotland — Land and Buildings Transaction Tax, the Scottish equivalent</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/stock-average-calc/"><span class="related-ico" aria-hidden="true">📉</span><span class="related-name">Stock Average Calculator</span></a><a class="related-item" href="https://tool-hub.me/stock-profit-calc/"><span class="related-ico" aria-hidden="true">💹</span><span class="related-name">Stock Profit Calculator</span></a><a class="related-item" href="https://tool-hub.me/tax-calc/"><span class="related-ico" aria-hidden="true">🧾</span><span class="related-name">VAT Calculator (Korea 10%)</span></a><a class="related-item" href="https://tool-hub.me/tip-calc/"><span class="related-ico" aria-hidden="true">🪙</span><span class="related-name">Tip Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">When is stamp duty due?</summary><p data-i18n="faq.a1">The SDLT return and payment are due within 14 days of completion, not on exchange. In practice your conveyancer files the return and pays HMRC out of the completion funds, so you send them the money before or on completion day. Miss the deadline and HMRC charges interest plus a penalty, so the cash has to be saved up separately — it cannot normally be added to the mortgage.</p></details>
+    <details><summary data-i18n="faq.q2">Who counts as a first-time buyer?</summary><p data-i18n="faq.a2">You must never have owned a freehold or leasehold interest in a residential property anywhere in the world, including inherited shares and property owned jointly. Every buyer named on the purchase has to qualify — one partner who has owned before removes the relief for both. The relief also only applies up to £500,000 and the home must be your main residence.</p></details>
+    <details><summary data-i18n="faq.q3">Do Scotland and Wales use the same rates?</summary><p data-i18n="faq.a3">No. Scotland charges Land and Buildings Transaction Tax (LBTT) and Wales charges Land Transaction Tax (LTT), each with its own bands, thresholds and surcharges. Scotland has a first-time buyer relief; Wales does not, but its starting threshold is higher. This calculator covers England and Northern Ireland only.</p></details>
+    <details><summary data-i18n="faq.q4">Is stamp duty tax deductible?</summary><p data-i18n="faq.a4">Not against income. Landlords cannot deduct SDLT from rental profits because it is a capital cost, not a running expense. It does count towards your acquisition cost for capital gains tax, so it reduces the taxable gain when you sell a rental or second home. A main residence is normally covered by private residence relief anyway.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

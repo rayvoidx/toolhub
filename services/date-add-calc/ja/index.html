@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-FmmvAtQBQ68k+ma7JmWda1oQz8zcZTHXrBJ9G+ipwGw=' 'sha256-vX+6KopgWdHHwdQExFDjqu0o2TJCeWhsBFMJyWvUJTc=' 'sha256-RRiJ8FocwgD/OgM9BqA/qvdVO4+SBJba3KFOIe+4SmM='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日付計算機 — 日付に日数を加算・減算</title>
+<meta name="description" content="任意の日付に日数・週数・月数・年数を加算または減算し、結果の日付と曜日を瞬時に表示します。土日を除く営業日モードも搭載。無料、ブラウザ内で完結。">
+<meta name="keywords" content="date calculator, days from today, add days to date, 30 days from today, what date is 90 days from now, 날짜 계산기">
+<link rel="canonical" href="https://tool-hub.me/date-add-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/date-add-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/date-add-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/date-add-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/date-add-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/date-add-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/date-add-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/date-add-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/date-add-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/date-add-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/date-add-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/date-add-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/date-add-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/date-add-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/date-add-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/date-add-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="日付計算機 — 日付に日数を加算・減算">
+<meta property="og:description" content="任意の日付に日数・週数・月数・年数を加算または減算し、結果の日付と曜日を瞬時に表示します。土日を除く営業日モードも搭載。無料、ブラウザ内で完結。">
+<meta property="og:url" content="https://tool-hub.me/date-add-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/date-add-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Date Calculator (Add Days)",
+  "description": "Add or subtract days, weeks, months, or years from any date and get the result date with weekday. Business-days mode skips weekends. Free, runs in your browser.",
+  "url": "https://tool-hub.me/date-add-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Date Calculator (Add Days)", "item": "https://tool-hub.me/date-add-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What date is 30 days from today?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Set Start date to today (the default), Amount to 30, Unit to Days, and Direction to Add — the resulting date and weekday appear instantly above. The same method works for any number, such as 60, 90, or 180 days from today. As a worked example, 10 days from March 25 lands on April 4, since March has 31 days: 6 days finish out March and the remaining 4 days carry into April."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does adding 1 month to January 31 give February 28?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because February never has 31 days, the calculator adjusts to the last valid day of the target month — February 28 in a common year, or February 29 in a leap year such as 2028. The adjustment is based on the original start date, not chained: adding 2 months to January 31 gives March 31 directly, which can differ from adding 1 month twice in a row (January 31 → February 28 → March 28). This is standard calendar-month arithmetic, not a bug."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does 'business days only' account for public holidays?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. With that option on, the calculator counts only Monday through Friday and skips every Saturday and Sunday — a pure weekday count. It doesn't know about public holidays in any specific country, since holiday calendars differ widely by region and change every year. The option is only available when the unit is set to Days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I subtract days, weeks, months, or years instead of adding them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Switch Direction to Subtract and the calculator counts backward from the start date instead of forward — useful for questions like 'what date was 90 days ago' or 'what date was 6 months before this deadline.' The business-days-only option also works in reverse, skipping weekends as it counts back."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my date data sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This date calculator runs entirely in your browser — the start date, amount, and every calculation stay on your device and are never uploaded or stored on a server. Your last inputs are saved only in your browser's local storage, so the tool remembers them the next time you open it."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Date Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0284c7" href="https://tool-hub.me/date-calculators/">Date &amp; Time</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Date Calculator</span></nav>
+  <section class="hero">
+    <h1>Date Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Pick a start date, add or subtract days, weeks, months, or years, and see the resulting date and weekday instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       i18n contract (docs/I18N.md): every user-visible string carries a data-i18n hook,
+         with the same key added to all 14 language blocks in js/locales.js. Dynamic JS
+         strings are looked up via window.I18N.t("key"); subscribe to the document
+         "i18n:change" event when a re-render on language switch is needed. -->
+  <section class="tool-card" id="tool" aria-label="Date calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      /* Tool-specific styles — scoped to #tool. The shared shell style.css is not modified. */
+      #tool .dac-starter { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; }
+      #tool .dac-starter .input-group { flex: 1 1 200px; min-width: 0; margin: 0; }
+      #tool .dac-starter .input-group label { margin-top: 0; }
+      #tool input[type="date"] {
+        width: 100%; padding: 12px 14px; font-size: 16px; font-family: inherit;
+        border: 1px solid var(--line); border-radius: 10px;
+        background: var(--bg); color: var(--ink); min-height: 48px;
+      }
+      #tool input[type="date"]:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: transparent; }
+      #tool .dac-today {
+        flex: 0 0 auto; height: 48px; padding: 0 16px; border: 1px solid var(--line);
+        border-radius: 10px; background: var(--surface); color: var(--ink);
+        font-weight: 600; font-size: 14px; font-family: inherit; cursor: pointer;
+      }
+      #tool .dac-today:hover { border-color: var(--accent); color: var(--accent); }
+      #tool .dac-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+      #tool .dac-field { flex: 1 1 140px; min-width: 0; }
+      #tool .dac-field label { margin-top: 0; }
+      #tool .dac-dirgroup { display: flex; gap: 8px; flex: 1 1 180px; }
+      #tool .dac-dirbtn {
+        flex: 1; height: 48px; border: 1px solid var(--line); border-radius: 10px;
+        background: var(--surface); color: var(--ink); font-weight: 700; font-size: 14px;
+        font-family: inherit; cursor: pointer;
+      }
+      #tool .dac-dirbtn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+      #tool .dac-check {
+        display: flex; align-items: center; gap: 10px; margin: 16px 0 0;
+        font-weight: 500; font-size: 15px; cursor: pointer;
+      }
+      #tool .dac-check input { width: 18px; height: 18px; flex: 0 0 auto; accent-color: var(--accent); }
+      #tool .dac-check[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; }
+      #tool .dac-hint { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
+      #tool .dac-quick { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+      #tool .dac-quickbtn {
+        padding: 7px 14px; font-size: 13px; font-weight: 600; font-family: inherit;
+        border: 1px solid var(--line); border-radius: 999px; background: none;
+        color: var(--muted); cursor: pointer;
+      }
+      #tool .dac-quickbtn:hover { border-color: var(--accent); color: var(--accent); }
+      #tool .dac-quicklabel { flex-basis: 100%; font-size: 13px; font-weight: 700; color: var(--muted); margin: 0 0 2px; }
+      #tool .dac-summary {
+        margin: 0; font-size: clamp(17px, 4.4vw, 21px); font-weight: 700;
+        line-height: 1.45; letter-spacing: -0.01em;
+      }
+      #tool .dac-summary strong, #tool .dac-summary b { color: var(--accent-strong); }
+      [data-theme="dark"] #tool .dac-summary, [data-theme="auto"] #tool .dac-summary { color: var(--ink); }
+      #tool .dac-note { margin: 10px 0 0; font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+      #tool .dac-msg { margin: 0; color: var(--muted); }
+      #tool .dac-copyrow { margin-top: 16px; }
+      #tool .dac-copyrow .btn { margin-top: 0; padding: 9px 16px; font-size: 14px; }
+      @media (max-width: 420px) {
+        #tool .dac-starter, #tool .dac-row { flex-direction: column; align-items: stretch; }
+        #tool .dac-today { width: 100%; }
+      }
+    </style>
+
+    <div class="dac-starter">
+      <div class="input-group">
+        <label for="dac-start" data-i18n="tool.start.label">Start date</label>
+        <input type="date" id="dac-start" min="1900-01-01" max="2999-12-31" autocomplete="off">
+      </div>
+      <button type="button" class="dac-today" id="dac-today" data-i18n="tool.start.today">Today</button>
+    </div>
+
+    <div class="dac-row">
+      <div class="dac-dirgroup" role="group" aria-label="Direction" data-i18n-aria-label="tool.dir.label">
+        <button type="button" class="dac-dirbtn" id="dac-dir-add" aria-pressed="true" data-i18n="tool.dir.add">Add (+)</button>
+        <button type="button" class="dac-dirbtn" id="dac-dir-sub" aria-pressed="false" data-i18n="tool.dir.subtract">Subtract (−)</button>
+      </div>
+      <div class="dac-field">
+        <label for="dac-n" data-i18n="tool.n.label">Amount</label>
+        <input id="dac-n" type="number" inputmode="numeric" min="0" max="36500" step="1" value="30" placeholder="e.g. 30" data-i18n-placeholder="tool.n.ph" autocomplete="off">
+      </div>
+      <div class="dac-field">
+        <label for="dac-unit" data-i18n="tool.unit.label">Unit</label>
+        <select id="dac-unit">
+          <option value="days" selected data-i18n="tool.unit.days">Days</option>
+          <option value="weeks" data-i18n="tool.unit.weeks">Weeks</option>
+          <option value="months" data-i18n="tool.unit.months">Months</option>
+          <option value="years" data-i18n="tool.unit.years">Years</option>
+        </select>
+      </div>
+    </div>
+
+    <label class="dac-check" id="dac-business-wrap" aria-disabled="false">
+      <input type="checkbox" id="dac-business">
+      <span data-i18n="tool.business.label">Count business days only (skip weekends)</span>
+    </label>
+    <p class="dac-hint" data-i18n="tool.business.note">Only applies when the unit is Days. Skips Saturdays and Sundays — public holidays aren't included.</p>
+
+    <div class="dac-quick" id="dac-quick">
+      <p class="dac-quicklabel" data-i18n="tool.quick.label">Quick picks</p>
+      <button type="button" class="dac-quickbtn" data-n="7" data-unit="days" data-i18n="tool.quick.7d">+7 days</button>
+      <button type="button" class="dac-quickbtn" data-n="30" data-unit="days" data-i18n="tool.quick.30d">+30 days</button>
+      <button type="button" class="dac-quickbtn" data-n="90" data-unit="days" data-i18n="tool.quick.90d">+90 days</button>
+      <button type="button" class="dac-quickbtn" data-n="1" data-unit="years" data-i18n="tool.quick.1y">+1 year</button>
+    </div>
+
+    <div class="result" id="dac-result" aria-live="polite" aria-label="Result" data-i18n-aria-label="tool.result.label">
+      <p class="dac-msg">Select a start date.</p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>A date calculator for "what date is X from today" questions</h2>
+    <p>Deadlines, contract terms, shipping windows, and reminders are almost always phrased in relative time — "in 30 days," "6 months from the signing date," "90 business days after delivery." Doing that arithmetic by hand means tracking how many days are left in the current month, whether a leap year is involved, and which weekday you land on. This calculator does it instantly: pick a start date (it defaults to today), choose how much to add or subtract and in what unit, and the resulting date appears with its weekday.</p>
+
+    <h2>How the calculation works</h2>
+    <p>Each unit is handled with real calendar math, not a fixed day-count approximation:</p>
+    <ul>
+      <li><strong>Days</strong> — moves the calendar date forward or backward by exactly that many days.</li>
+      <li><strong>Weeks</strong> — multiplies by 7 and adds/subtracts that many days.</li>
+      <li><strong>Months</strong> — moves to the same day number in the target month, clamping to the last day of the month when the original day doesn't exist there (see the FAQ for the January 31 example).</li>
+      <li><strong>Years</strong> — same as months, using 12&times; the number of years, so February 29 on a leap-year start date clamps to February 28 in a non-leap target year.</li>
+    </ul>
+    <p>Turning on <em>Count business days only</em> changes the Days unit to count Monday-through-Friday weekdays only, skipping every Saturday and Sunday as it steps toward the target count. It does not know about public holidays — see the FAQ below for why that's a deliberate scope limit, not an oversight.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — a simple day count.</strong> Start date March 25, Amount 10, Unit Days, Direction Add. March has 31 days, so 6 days complete March (26&ndash;31) and the remaining 4 days land in April: the result is <strong>April 4</strong>.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — month-end clamping.</strong> Start date January 31, Amount 1, Unit Months, Direction Add. February has no 31st day, so the calculator lands on the last valid day: <strong>February 28</strong> in a common year, or February 29 in a leap year.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — business days only.</strong> Start date a Friday, Amount 1, Unit Days, business-days-only turned on. Saturday and Sunday don't count as business days, so the 1 business day lands on the following <strong>Monday</strong> — not Saturday.</p>
+    </div>
+
+    <h2>Days, weeks, months, or years — which unit should I pick?</h2>
+    <table>
+      <thead><tr><th>Use case</th><th>Suggested unit</th></tr></thead>
+      <tbody>
+        <tr><td>"30/60/90 days from today"</td><td>Days</td></tr>
+        <tr><td>Shipping or return windows quoted in business days</td><td>Days + business-days-only</td></tr>
+        <tr><td>Sprint or billing cycles quoted in weeks</td><td>Weeks</td></tr>
+        <tr><td>Contract terms, notice periods, "6 months from signing"</td><td>Months</td></tr>
+        <tr><td>Warranty periods, anniversaries, age-related dates</td><td>Years</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Common mistakes to avoid</h2>
+    <ul>
+      <li><strong>Assuming "1 month" always means "30 days."</strong> It doesn't — months range from 28 to 31 days, so month-based and day-based arithmetic can land on different dates for the same nominal period.</li>
+      <li><strong>Forgetting that "business days" and "calendar days" diverge quickly.</strong> 10 business days is roughly 14 calendar days once two weekends are factored in, not 10.</li>
+      <li><strong>Chaining month additions instead of adding once.</strong> Adding 1 month twice in a row can land on a different date than adding 2 months directly, because each step clamps independently — see the FAQ for a worked example.</li>
+    </ul>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nist.gov/pml/time-and-frequency-division" target="_blank" rel="noopener">NIST Time and Frequency Division — official U.S. civil timekeeping, leap seconds and calendar time standards</a></li>
+      <li><a href="https://www.iso.org/iso-8601-date-and-time-format.html" target="_blank" rel="noopener">ISO 8601 — the international standard for writing dates, durations and time intervals</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" rel="noopener">MDN Web Docs: JavaScript Date — how date arithmetic and month overflow behave in browsers</a></li>
+      <li><a href="https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/" target="_blank" rel="noopener">U.S. OPM Federal Holidays — the official holiday list used for business-day counting</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/date-diff-calc/"><span class="related-ico" aria-hidden="true">🗓️</span><span class="related-name">Date Difference Calculator</span></a><a class="related-item" href="https://tool-hub.me/dday-calc/"><span class="related-ico" aria-hidden="true">📅</span><span class="related-name">D-Day Counter</span></a><a class="related-item" href="https://tool-hub.me/hours-calc/"><span class="related-ico" aria-hidden="true">🕗</span><span class="related-name">Hours Calculator</span></a><a class="related-item" href="https://tool-hub.me/leap-year-checker/"><span class="related-ico" aria-hidden="true">📅</span><span class="related-name">Leap Year Checker</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What date is 30 days from today?</summary>
+      <p data-i18n="faq.a1">Set Start date to today (the default), Amount to 30, Unit to Days, and Direction to Add — the resulting date and weekday appear instantly above. The same method works for any number, such as 60, 90, or 180 days from today. As a worked example, 10 days from March 25 lands on April 4, since March has 31 days: 6 days finish out March and the remaining 4 days carry into April.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Why does adding 1 month to January 31 give February 28?</summary>
+      <p data-i18n="faq.a2">Because February never has 31 days, the calculator adjusts to the last valid day of the target month — February 28 in a common year, or February 29 in a leap year such as 2028. The adjustment is based on the original start date, not chained: adding 2 months to January 31 gives March 31 directly, which can differ from adding 1 month twice in a row (January 31 → February 28 → March 28). This is standard calendar-month arithmetic, not a bug.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Does 'business days only' account for public holidays?</summary>
+      <p data-i18n="faq.a3">No. With that option on, the calculator counts only Monday through Friday and skips every Saturday and Sunday — a pure weekday count. It doesn't know about public holidays in any specific country, since holiday calendars differ widely by region and change every year. The option is only available when the unit is set to Days.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Can I subtract days, weeks, months, or years instead of adding them?</summary>
+      <p data-i18n="faq.a4">Yes. Switch Direction to Subtract and the calculator counts backward from the start date instead of forward — useful for questions like 'what date was 90 days ago' or 'what date was 6 months before this deadline.' The business-days-only option also works in reverse, skipping weekends as it counts back.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my date data sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This date calculator runs entirely in your browser — the start date, amount, and every calculation stay on your device and are never uploaded or stored on a server. Your last inputs are saved only in your browser's local storage, so the tool remembers them the next time you open it.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

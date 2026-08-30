@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-abCVTEU9c2LdJXESy9K/7jXr3ttkHWG3lXhbV6kQ60s=' 'sha256-j2zsy8mz1kb3czQmzVDVz+cul+SsDhTaA0x7dEfI10k=' 'sha256-yqoy7fkNax3q9S7BxpGfD9yjHJwbkn34G9ZPZK/uPhw='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ダイスローラー</title>
+<meta name="description" content="無料のオンラインダイスローラー。d4・d6・d8・d10・d12・d20・d100 を振り、2d6+3 のようなダイス記法を使え、一度に最大100個まで振れて、ロール履歴も残せます。ブラウザの暗号乱数で公平に — 広告なし、登録なし、サーバーへ何も送信しません。">
+<meta name="keywords" content="dice roller, 주사위 굴리기, d20 dice roller, virtual dice roller, roll a dice online, 온라인 주사위, dnd dice">
+<link rel="canonical" href="https://tool-hub.me/dice-roller/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/dice-roller/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/dice-roller/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/dice-roller/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/dice-roller/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/dice-roller/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/dice-roller/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/dice-roller/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/dice-roller/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/dice-roller/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/dice-roller/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/dice-roller/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/dice-roller/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/dice-roller/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/dice-roller/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/dice-roller/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ダイスローラー">
+<meta property="og:description" content="無料のオンラインダイスローラー。d4・d6・d8・d10・d12・d20・d100 を振り、2d6+3 のようなダイス記法を使え、一度に最大100個まで振れて、ロール履歴も残せます。ブラウザの暗号乱数で公平に — 広告なし、登録なし、サーバーへ何も送信しません。">
+<meta property="og:url" content="https://tool-hub.me/dice-roller/ja/">
+<meta property="og:image" content="https://tool-hub.me/dice-roller/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#dc2626">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Dice Roller",
+  "description": "Free online dice roller. Roll d4, d6, d8, d10, d12, d20, and d100, use dice notation like 2d6+3, roll up to 100 dice at once, and keep a roll history. Fair rolls via your browser's crypto RNG — no ads, no sign-up, nothing sent to a server.",
+  "url": "https://tool-hub.me/dice-roller/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Dice Roller",
+      "item": "https://tool-hub.me/dice-roller/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are these dice fair and truly random?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This dice roller uses your browser's cryptographic generator, crypto.getRandomValues, with rejection sampling — it throws away the small leftover range instead of using a plain modulo, so there is no modulo bias and every face is equally likely. If a browser has no crypto generator, it falls back to Math.random and shows a note, so a roll is never blocked."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which dice can I roll?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All the standard polyhedral dice: d4, d6, d8, d10, d12, d20 and d100. Need something unusual? Type any custom number of sides from 2 to 1000, so this virtual dice roller works as a d3, d16, d30 or any die your game asks for."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use dice notation like 2d6+3?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dice notation is written as count-d-sides with an optional modifier: 2d6+3 means \"roll two six-sided dice and add 3\", d20 means \"roll one d20\", and 4d8-2 means \"roll four d8 and subtract 2\". Type it in the notation box and press Roll — the notation overrides the buttons for that roll and the total already includes the modifier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is anything sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. When you roll a dice online here, every roll happens locally in your browser — no accounts, no ads and nothing is uploaded. You can even install it as an app and keep rolling offline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I roll many dice at once for D&D or board games?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Set the number of dice up to 100 and add a single modifier to the total — handy for a fistful of DnD dice, a d20 attack with a bonus, or a board-game handful. Each die is shown separately and your last 20 rolls are kept in the roll history so you can check a previous result."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Dice Roller</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#c026d3" href="https://tool-hub.me/random-generators/">Random</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Dice Roller</span></nav>
+  <section class="hero">
+    <h1>Dice Roller</h1>
+    <p class="lede" data-i18n="hero.lede">Pick a die and roll — or type dice notation like 2d6+3. Fair results, right in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Dice roller" data-i18n-aria-label="tool.aria">
+
+    <label id="lbl-die" data-i18n="tool.dieType">Die type</label>
+    <div id="die-buttons" role="group" aria-labelledby="lbl-die" style="display:flex;flex-wrap:wrap;gap:8px;">
+      <button type="button" class="die-btn" data-sides="4" aria-pressed="false" style="flex:1;min-width:56px;padding:11px 0;font-weight:700;font-size:15px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);cursor:pointer;">d4</button>
+      <button type="button" class="die-btn" data-sides="6" aria-pressed="true" style="flex:1;min-width:56px;padding:11px 0;font-weight:700;font-size:15px;font-family:inherit;border:1px solid var(--accent);border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;">d6</button>
+      <button type="button" class="die-btn" data-sides="8" aria-pressed="false" style="flex:1;min-width:56px;padding:11px 0;font-weight:700;font-size:15px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);cursor:pointer;">d8</button>
+      <button type="button" class="die-btn" data-sides="10" aria-pressed="false" style="flex:1;min-width:56px;padding:11px 0;font-weight:700;font-size:15px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);cursor:pointer;">d10</button>
+      <button type="button" class="die-btn" data-sides="12" aria-pressed="false" style="flex:1;min-width:56px;padding:11px 0;font-weight:700;font-size:15px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);cursor:pointer;">d12</button>
+      <button type="button" class="die-btn" data-sides="20" aria-pressed="false" style="flex:1;min-width:56px;padding:11px 0;font-weight:700;font-size:15px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);cursor:pointer;">d20</button>
+      <button type="button" class="die-btn" data-sides="100" aria-pressed="false" style="flex:1;min-width:56px;padding:11px 0;font-weight:700;font-size:15px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);cursor:pointer;">d100</button>
+    </div>
+
+    <label for="in-sides" data-i18n="tool.customSides">Custom sides (2–1000)</label>
+    <input type="number" id="in-sides" min="2" max="1000" step="1" inputmode="numeric" autocomplete="off" placeholder="e.g. 30" data-i18n-placeholder="tool.customPh">
+
+    <div style="display:flex;gap:12px;">
+      <div style="flex:1;min-width:0;">
+        <label for="in-qty" data-i18n="tool.quantity">Number of dice (1–100)</label>
+        <input type="number" id="in-qty" min="1" max="100" step="1" value="1" inputmode="numeric" autocomplete="off">
+      </div>
+      <div style="flex:1;min-width:0;">
+        <label for="in-mod" data-i18n="tool.modifier">Modifier (+/−)</label>
+        <input type="number" id="in-mod" step="1" value="0" inputmode="numeric" autocomplete="off">
+      </div>
+    </div>
+
+    <label for="in-notation" data-i18n="tool.notation">Dice notation (optional)</label>
+    <input type="text" id="in-notation" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. 2d6+3" data-i18n-placeholder="tool.notationPh">
+    <p id="notation-err" role="alert" hidden style="color:var(--accent);font-size:14px;margin:6px 0 0;"></p>
+
+    <button class="btn" id="roll-btn" type="button" data-i18n="tool.roll" style="width:100%;">Roll</button>
+
+    <div class="result" id="roll-result" hidden aria-live="polite">
+      <div id="roll-label" style="color:var(--muted);font-size:14px;margin-bottom:12px;font-variant-numeric:tabular-nums;"></div>
+      <div id="roll-dice" style="display:flex;flex-wrap:wrap;gap:8px;"></div>
+      <div style="margin-top:16px;"><span data-i18n="tool.total">Total</span> <strong id="roll-total">0</strong><span id="roll-breakdown" style="color:var(--muted);font-size:14px;margin-inline-start:8px;font-variant-numeric:tabular-nums;"></span></div>
+    </div>
+
+    <p class="result" id="roll-msg" hidden aria-live="polite" style="font-size:14px;"></p>
+
+    <div id="history-block" style="margin-top:28px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+        <strong data-i18n="tool.historyTitle" style="font-size:15px;">Roll history</strong>
+        <button type="button" id="clear-history" data-i18n="tool.clearHistory" style="background:none;border:1px solid var(--line);border-radius:8px;color:var(--muted);font-family:inherit;font-size:13px;padding:6px 12px;cursor:pointer;">Clear history</button>
+      </div>
+      <p id="history-empty" data-i18n="tool.historyEmpty" style="color:var(--muted);font-size:14px;margin:12px 0 0;">No rolls yet — your last 20 rolls will show up here.</p>
+      <ol id="history-list" style="list-style:none;padding:0;margin:10px 0 0;"></ol>
+    </div>
+
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Dice notation, probability, and why a fair RNG matters</h2>
+    <p>Tabletop games settle disputes with dice because a die is cheap, physical, and (mostly) impartial — but a physical die can be shaved, warped, or dropped on a slope, and rolling eight six-sided dice for a fireball by hand is slow. A dice roller solves the mechanical half of that problem: it produces the same range of outcomes as the physical object, at any quantity, with a random source that doesn't degrade the way a worn plastic die does. That matters for anything scored by chance — a Dungeons &amp; Dragons attack roll, a Yahtzee turn, a board game that moves a token, or a classroom probability demonstration.</p>
+    <p>The shorthand that makes this practical is dice notation. It was popularized by tabletop RPGs in the 1970s as a compact way to write "roll some dice and add a number" inside a rulebook, and it has since become the default way games, apps, and even spreadsheet formulas describe a roll.</p>
+
+    <h3>Reading and entering dice notation</h3>
+    <ol>
+      <li>Notation is written as <strong>count</strong> "d" <strong>sides</strong>, optionally followed by <strong>+</strong> or <strong>−</strong> and a flat modifier — no spaces, no other symbols.</li>
+      <li>The count can be left out when it is 1: <code>d20</code> means the same thing as <code>1d20</code>.</li>
+      <li>The modifier is added once to the total after every die has been summed, never to each individual die.</li>
+      <li>Type it into the notation field and press Roll; the notation box overrides whatever die buttons and quantity are selected, so you don't need to also set them.</li>
+    </ol>
+
+    <h3>Why the total isn't flat like a single die</h3>
+    <p>A single die is uniform: every one of its faces has exactly the same chance, 1 in the number of sides. Add a second die and that stops being true, because the total is a sum, and sums have more ways to hit the middle than the edges. Roll one d6 and a 1 is as likely as a 6. Roll two d6 and a 7 is six times more likely than a 2, because only one combination (1+1) makes 2, while six combinations (1+6, 2+5, 3+4, 4+3, 5+2, 6+1) make 7. The more dice you pool, the more the total clusters around its average and the rarer the extreme rolls become — the same shape that shows up whenever independent random amounts are added together.</p>
+    <div class="example">
+      <strong>Two general formulas for N dice with S sides and modifier M</strong><br>
+      Minimum total = N × 1 + M · Maximum total = N × S + M · Average total = N × (S + 1) / 2 + M
+    </div>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <strong>Damage roll — 2d6+3</strong><br>
+      Two six-sided dice, add 3. Range: 2×1+3 = 5 to 2×6+3 = 15. Average: 2 × 3.5 + 3 = 10. A result of 4 and 6 on the dice gives 4+6+3 = 13 total.
+    </div>
+    <div class="example">
+      <strong>Attack roll vs. armor class — d20+5 against AC 16</strong><br>
+      You hit if the total meets or beats 16, so the raw d20 must show at least 16 − 5 = 11. Eleven faces out of twenty (11 through 20) succeed, so the hit chance is 11/20 = 55%.
+    </div>
+    <div class="example">
+      <strong>Area damage — 8d6 (a classic fireball)</strong><br>
+      Eight six-sided dice, no modifier. Range: 8 to 48. Average: 8 × 3.5 = 28 — useful for judging whether a spell is "about average" before you even see the individual dice.
+    </div>
+
+    <h3>Sum probabilities for 2d6</h3>
+    <table>
+      <tr><th>Total</th><th>Ways to roll it</th><th>Probability</th></tr>
+      <tr><td>2 or 12</td><td>1 / 36</td><td>2.8%</td></tr>
+      <tr><td>3 or 11</td><td>2 / 36</td><td>5.6%</td></tr>
+      <tr><td>4 or 10</td><td>3 / 36</td><td>8.3%</td></tr>
+      <tr><td>5 or 9</td><td>4 / 36</td><td>11.1%</td></tr>
+      <tr><td>6 or 8</td><td>5 / 36</td><td>13.9%</td></tr>
+      <tr><td>7</td><td>6 / 36</td><td>16.7%</td></tr>
+    </table>
+    <p>By contrast, a d20 has no "middle bump" at all — every face from 1 to 20 sits at a flat 5%, which is exactly why d20 systems use a single die for pass/fail checks (any target number is easy to reason about) and reserve multi-die pools like 2d6 or 8d6 for damage and other quantities that should cluster near an average.</p>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Applying the modifier per die instead of once.</strong> 2d6+3 is (die + die) + 3, not (die+3) + (die+3).</li>
+      <li><strong>Expecting a multi-die total to behave like a single die.</strong> After a string of low 2d6 rolls, a very high roll is not "due" — each roll is independent of the last (the gambler's fallacy).</li>
+      <li><strong>Typos in notation</strong> such as a stray space, a missing "d", or a percent sign — the field validates the pattern and flags anything it can't parse instead of guessing.</li>
+      <li><strong>Assuming a screen RNG needs auditing like a physical die.</strong> This roller draws from the browser's <code>crypto.getRandomValues</code> and discards out-of-range draws (rejection sampling) rather than using modulo, which is what a plain <code>Math.random() % sides</code> approach would do and which subtly favors low faces on many side counts.</li>
+    </ul>
+
+    <h3>What this tool doesn't do</h3>
+    <p>It rolls and sums independent dice — it does not implement house rules that change the math, such as dropping the lowest die, exploding dice that reroll on a max face, or rolling twice and keeping the higher result (advantage). Any of those can still be done manually: roll the pool once for a normal result, or roll it twice and compare the totals yourself for an advantage-style check. And while a cryptographic RNG is more than fair enough for games, quizzes, and giveaways, it is not a substitute for a hardware random source in contexts that need certified, audited randomness, such as lotteries or gambling regulation.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues" target="_blank" rel="noopener">MDN Web Docs — how the browser's cryptographic random value generator works</a></li>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc4086" target="_blank" rel="noopener">RFC 4086 — randomness requirements, including why modulo bias distorts ranges</a></li>
+      <li><a href="https://csrc.nist.gov/projects/random-bit-generation" target="_blank" rel="noopener">NIST Random Bit Generation project — standards for testing and certifying randomness</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/name-picker/"><span class="related-ico" aria-hidden="true">🎡</span><span class="related-name">Random Name Picker</span></a><a class="related-item" href="https://tool-hub.me/random-number-gen/"><span class="related-ico" aria-hidden="true">🎰</span><span class="related-name">Random Number Generator</span></a><a class="related-item" href="https://tool-hub.me/random-team-gen/"><span class="related-ico" aria-hidden="true">👥</span><span class="related-name">Random Team Generator</span></a><a class="related-item" href="https://tool-hub.me/secret-santa-generator/"><span class="related-ico" aria-hidden="true">🎁</span><span class="related-name">Secret Santa Generator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">Are these dice fair and truly random?</summary>
+      <p data-i18n="faq.a1">Yes. This dice roller uses your browser's cryptographic generator, crypto.getRandomValues, with rejection sampling — it throws away the small leftover range instead of using a plain modulo, so there is no modulo bias and every face is equally likely. If a browser has no crypto generator, it falls back to Math.random and shows a note, so a roll is never blocked.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Which dice can I roll?</summary>
+      <p data-i18n="faq.a2">All the standard polyhedral dice: d4, d6, d8, d10, d12, d20 and d100. Need something unusual? Type any custom number of sides from 2 to 1000, so this virtual dice roller works as a d3, d16, d30 or any die your game asks for.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How do I use dice notation like 2d6+3?</summary>
+      <p data-i18n="faq.a3">Dice notation is written as count-d-sides with an optional modifier: 2d6+3 means "roll two six-sided dice and add 3", d20 means "roll one d20", and 4d8-2 means "roll four d8 and subtract 2". Type it in the notation box and press Roll — the notation overrides the buttons for that roll and the total already includes the modifier.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Is anything sent to a server?</summary>
+      <p data-i18n="faq.a4">No. When you roll a dice online here, every roll happens locally in your browser — no accounts, no ads and nothing is uploaded. You can even install it as an app and keep rolling offline.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Can I roll many dice at once for D&D or board games?</summary>
+      <p data-i18n="faq.a5">Yes. Set the number of dice up to 100 and add a single modifier to the total — handy for a fistful of DnD dice, a d20 attack with a bonus, or a board-game handful. Each die is shown separately and your last 20 rolls are kept in the roll history so you can check a previous result.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-0EoQO/3BIBXrfTi+2D6p42E0E03DA4WkmhkQ0/pl3T8=' 'sha256-g8ZG8MmRGDNVh0F6u9E1xyCvJ2KHT0FzO4V9dmDHRBg=' 'sha256-TlT9kXGNajczqgdjmi3jdJ3xcL2jqbJwbmVPKbb8GkM='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>フローリング計算ツール — 必要な箱数を算出</title>
+<meta name="description" content="部屋のサイズと1箱あたりの施工面積から、必要なラミネートフローリングの箱数、ロス込み面積、下地材ロール、見切り材、概算費用を計算します。塩ビ床材にも対応。">
+<meta name="keywords" content="laminate flooring calculator, how much laminate do i need, flooring boxes calculator, vinyl plank calculator, laminate box coverage, flooring waste calculator">
+<link rel="canonical" href="https://tool-hub.me/laminate-flooring-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/laminate-flooring-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/laminate-flooring-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/laminate-flooring-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/laminate-flooring-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/laminate-flooring-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/laminate-flooring-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/laminate-flooring-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/laminate-flooring-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/laminate-flooring-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/laminate-flooring-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/laminate-flooring-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/laminate-flooring-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/laminate-flooring-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/laminate-flooring-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/laminate-flooring-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="フローリング計算ツール — 必要な箱数を算出">
+<meta property="og:description" content="部屋のサイズと1箱あたりの施工面積から、必要なラミネートフローリングの箱数、ロス込み面積、下地材ロール、見切り材、概算費用を計算します。塩ビ床材にも対応。">
+<meta property="og:url" content="https://tool-hub.me/laminate-flooring-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/laminate-flooring-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#92400e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Laminate Flooring Calculator",
+  "description": "Work out how much laminate flooring you need: room area, waste allowance, boxes to buy, underlayment rolls, transition strips and total cost. Vinyl plank too.",
+  "url": "https://tool-hub.me/laminate-flooring-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Laminate Flooring Calculator",
+      "item": "https://tool-hub.me/laminate-flooring-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does the calculator round up to whole boxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Flooring is sold by the box and stores rarely split one. Dye lots also shift between production runs, so a box bought six months later can be a visibly different shade. Rounding up and keeping the leftovers means a damaged plank can be swapped from the same lot instead of relaying the floor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which direction should the planks run?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The usual rule is to lay planks parallel to the longest wall, or in line with the light from the main window, which hides the seams. In narrow hallways always run them along the length. Leave a 1/4 inch (6 mm) expansion gap at every wall and fixed object, hidden afterwards by baseboard or quarter round."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this work for vinyl plank flooring too?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Laminate and click-lock LVP or SPC are both sold in boxes with the coverage printed on the label, so the math is identical — enter the sq ft per box of whichever product you are pricing. Laminate boxes usually cover 18 to 24 sq ft; vinyl plank boxes run about 20 to 30."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to acclimate the flooring before installing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most manufacturers ask for 48 hours with the unopened boxes lying flat in the room where they will be installed, at normal living temperature and humidity. Skipping it is the most common cause of gaps and buckling months later. Check the warranty sheet — a few rigid-core vinyl products need no acclimation at all."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Laminate Flooring Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Laminate Flooring Calculator</span></nav>
+  <section class="hero">
+    <h1>Laminate Flooring Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter the room size and the coverage printed on the box label — get the exact number of boxes to buy.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .hint { font-size:12px; color:var(--muted); margin:4px 0 10px; }
+      #tool .check-row { display:flex; align-items:center; gap:8px; margin:12px 0; }
+      #tool .check-row input { width:auto; margin:0; }
+      #tool .check-row label { margin:0; font-weight:500; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="unit" data-i18n="tool.unit.label">Measurement unit</label>
+    <select id="unit">
+      <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+      <option value="m" data-i18n="tool.unit.m">Meters</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="len" data-i18n="tool.len.label">Room length</label>
+        <input type="number" id="len" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="16">
+      </div>
+      <div>
+        <label for="wid" data-i18n="tool.wid.label">Room width</label>
+        <input type="number" id="wid" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="13">
+      </div>
+    </div>
+
+    <label for="boxcov" data-i18n="tool.box.label">Coverage per box (sq ft)</label>
+    <input type="number" id="boxcov" inputmode="decimal" min="5" max="60" step="any" autocomplete="off" placeholder="20">
+    <p class="hint" data-i18n="tool.box.hint">Printed on the box label — most laminate boxes cover 18 to 24 sq ft.</p>
+
+    <label for="waste" data-i18n="tool.waste.label">Waste allowance</label>
+    <select id="waste">
+      <option value="5" data-i18n="tool.waste.5">5% — square room, straight lay</option>
+      <option value="10" selected data-i18n="tool.waste.10">10% — standard rooms (recommended)</option>
+      <option value="15" data-i18n="tool.waste.15">15% — diagonal, herringbone or many cuts</option>
+      <option value="20" data-i18n="tool.waste.20">20% — herringbone or long planks in a small room</option>
+    </select>
+
+    <label for="roll" data-i18n="tool.roll.label">Coverage per underlayment roll (sq ft)</label>
+    <input type="number" id="roll" inputmode="decimal" min="10" max="1000" step="any" autocomplete="off" placeholder="100">
+
+    <div class="check-row">
+      <input type="checkbox" id="pad">
+      <label for="pad" data-i18n="tool.pad.label">Boxes already have attached underlayment pad</label>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="doors" data-i18n="tool.doors.label">Doorways to other rooms</label>
+        <input type="number" id="doors" inputmode="numeric" min="0" step="1" autocomplete="off" placeholder="2">
+      </div>
+      <div>
+        <label for="price" data-i18n="tool.price.label">Price per box (optional)</label>
+        <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="45">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.boxes">Boxes to buy</div>
+          <div class="rc-val" id="r-boxes">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Floor area</div><div class="rc-val" id="r-area">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.total">Total with waste</div><div class="rc-val" id="r-total">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.rolls">Underlayment rolls</div><div class="rc-val" id="r-rolls">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.strips">Transition strips</div><div class="rc-val" id="r-strips">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.cost">Estimated cost</div><div class="rc-val" id="r-cost">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Estimate for one rectangular room. For an L-shaped space, calculate each rectangle and add the boxes together.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How much laminate flooring do I need?</h2>
+    <p>Three numbers decide everything: the floor area, the waste allowance for cuts, and the square footage one box covers. Area times waste gives the material you actually have to own; dividing by the box coverage and rounding up gives the number of boxes the store will ring up. Every other line on your receipt — underlayment, transition strips, quarter round — follows from the same measurements.</p>
+    <p>Measure at the widest points of the room, wall to wall, and ignore the baseboard. Do not subtract kitchen islands, closets under 10 sq ft, or the footprint of a fridge: planks still run underneath or behind them, and the offcuts you would have saved are the ones you would have wasted anyway.</p>
+
+    <h3>Worked example: a 16 ft by 13 ft living room</h3>
+    <p>The floor area is 16 x 13 = 208 sq ft. It is a plain rectangle with a straight lay, so 10% waste is the sensible default: 208 x 1.10 = 228.8 sq ft of material. A typical laminate box covers 20 sq ft, so 228.8 / 20 = 11.44 boxes, which rounds up to <strong>12 boxes</strong>. At $45 a box that is $540 in flooring.</p>
+    <p>The rest of the list: underlayment comes in 100 sq ft rolls, so 208 / 100 rounds up to 3 rolls — unless the planks already have foam bonded to the back. Two doorways means two transition strips (T-moulding between rooms of equal height, a reducer where laminate meets tile or vinyl). Twelve boxes cover 240 sq ft, so after roughly 20 sq ft disappears into cuts you finish with about one spare box in the garage. That is the outcome you want.</p>
+
+    <h3>Choosing the waste percentage</h3>
+    <table>
+      <thead><tr><th>Layout</th><th>Waste</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Square room, straight lay, no obstacles</td><td>5%</td><td>Offcuts from one row start the next</td></tr>
+        <tr><td>Standard rectangular room, a doorway or two</td><td>10%</td><td>The safe default for most jobs</td></tr>
+        <tr><td>Diagonal or herringbone, many alcoves</td><td>15%</td><td>Every row ends in an angled cut that cannot be reused</td></tr>
+        <tr><td>Long planks (over 48 in) in a small room</td><td>15%</td><td>Short leftover pieces fail the stagger rule</td></tr>
+      </tbody>
+    </table>
+    <p>Two extra reasons to lean high rather than low: planks with a strong pattern get rejected on the floor for repeating too close together, and boards damaged in transit are common enough that most installers expect one or two per job. Waste is not sloppiness, it is the price of a floor that looks right.</p>
+
+    <h2>Why the leftover box is cheap insurance</h2>
+    <p>Laminate and vinyl are manufactured in dye lots. Two boxes of the same SKU made months apart can differ enough in tone that a single replacement plank stands out under window light. Stores also discontinue ranges constantly — the product you buy today may simply not exist when a dropped pan gouges a board in year three.</p>
+    <p>A spare box costs roughly $40 and stores flat under a bed. The alternative, once your range is gone, is re-laying the whole room. This is why the calculator rounds up to whole boxes and never suggests buying a partial one: the rounding is the insurance policy.</p>
+
+    <h2>Underlayment or attached pad?</h2>
+    <p>Underlayment does three jobs: it cushions the click-lock joints, it deadens footfall noise, and on concrete it blocks moisture. Standard foam rolls cover 100 sq ft; combination rolls with a vapour barrier are usually the same size and cost a few dollars more.</p>
+    <p>Many mid and upper range products ship with pad already bonded to the plank. Tick the attached-pad box and the calculator drops the rolls, because a second layer under a pre-padded plank makes the floor spongy and voids most warranties. One important exception: over a concrete slab, below grade or on the ground floor, you still need a 6 mil polyethylene vapour barrier taped at the seams even with attached pad. Check the installation sheet — it will say so explicitly.</p>
+
+    <h2>Limits of this estimate</h2>
+    <p>The calculator assumes one rectangle. For an L-shaped room, split it into two rectangles, run each one, and add the boxes; do not add the areas first, because rounding each section up is what protects you. Coverage per box varies by product from about 12 sq ft for wide-plank premium ranges to 30 sq ft for economy vinyl, so always read the actual label rather than trusting a default. Transition strips are sold in 36 in lengths, which covers a standard 32 in doorway with a trim; wider openings need two. Finally, none of this covers stairs, which are priced by tread and riser, or the subfloor levelling compound you may discover you need once the old carpet comes up.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.epa.gov/formaldehyde" target="_blank" rel="noopener">US EPA — formaldehyde emission standards for composite wood products such as laminate flooring</a></li>
+      <li><a href="https://www.epa.gov/indoor-air-quality-iaq" target="_blank" rel="noopener">US EPA Indoor Air Quality — moisture control and flooring materials in the home</a></li>
+      <li><a href="https://www.energy.gov/energysaver/moisture-control" target="_blank" rel="noopener">US Department of Energy — moisture and vapour barriers over concrete slabs and crawlspaces</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/metronome/"><span class="related-ico" aria-hidden="true">🎵</span><span class="related-name">Online Metronome</span></a><a class="related-item" href="https://tool-hub.me/mpg-calc/"><span class="related-ico" aria-hidden="true">⛽</span><span class="related-name">MPG Calculator</span></a><a class="related-item" href="https://tool-hub.me/mulch-calc/"><span class="related-ico" aria-hidden="true">🌳</span><span class="related-name">Mulch Calculator</span></a><a class="related-item" href="https://tool-hub.me/online-notepad/"><span class="related-ico" aria-hidden="true">🗒️</span><span class="related-name">Online Notepad</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why does the calculator round up to whole boxes?</summary><p data-i18n="faq.a1">Flooring is sold by the box and stores rarely split one. Dye lots also shift between production runs, so a box bought six months later can be a visibly different shade. Rounding up and keeping the leftovers means a damaged plank can be swapped from the same lot instead of relaying the floor.</p></details>
+    <details><summary data-i18n="faq.q2">Which direction should the planks run?</summary><p data-i18n="faq.a2">The usual rule is to lay planks parallel to the longest wall, or in line with the light from the main window, which hides the seams. In narrow hallways always run them along the length. Leave a 1/4 inch (6 mm) expansion gap at every wall and fixed object, hidden afterwards by baseboard or quarter round.</p></details>
+    <details><summary data-i18n="faq.q3">Does this work for vinyl plank flooring too?</summary><p data-i18n="faq.a3">Yes. Laminate and click-lock LVP or SPC are both sold in boxes with the coverage printed on the label, so the math is identical — enter the sq ft per box of whichever product you are pricing. Laminate boxes usually cover 18 to 24 sq ft; vinyl plank boxes run about 20 to 30.</p></details>
+    <details><summary data-i18n="faq.q4">Do I need to acclimate the flooring before installing?</summary><p data-i18n="faq.a4">Most manufacturers ask for 48 hours with the unopened boxes lying flat in the room where they will be installed, at normal living temperature and humidity. Skipping it is the most common cause of gaps and buckling months later. Check the warranty sheet — a few rigid-core vinyl products need no acclimation at all.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

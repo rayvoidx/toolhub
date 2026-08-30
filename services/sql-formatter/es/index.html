@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-33OkRjTvlYJ0jS+mbcYTfSPNKEgCtXhJ4RdHVt2gNoE=' 'sha256-y+TtFCv0KIYdlcwU0GbfdBVsEGCOGZUKsy0NPFpavoI=' 'sha256-35dC4BUo3Z/IVJqWGQFeqdskcrnsheHKATyiT4VomsA='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formateador de SQL — Embellece, indenta y minifica SQL online</title>
+<meta name="description" content="Pega una consulta SQL para formatearla con sangría basada en palabras clave, elige palabras clave en MAYÚSCULAS/minúsculas, o minifícala. Gratis, sin anuncios, se ejecuta en tu navegador.">
+<meta name="keywords" content="sql formatter, format sql online, sql beautifier, pretty print sql, sql query formatter, sql 포맷터">
+<link rel="canonical" href="https://tool-hub.me/sql-formatter/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/sql-formatter/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/sql-formatter/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/sql-formatter/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/sql-formatter/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/sql-formatter/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/sql-formatter/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/sql-formatter/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/sql-formatter/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/sql-formatter/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/sql-formatter/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/sql-formatter/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/sql-formatter/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/sql-formatter/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/sql-formatter/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/sql-formatter/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Formateador de SQL — Embellece, indenta y minifica SQL online">
+<meta property="og:description" content="Pega una consulta SQL para formatearla con sangría basada en palabras clave, elige palabras clave en MAYÚSCULAS/minúsculas, o minifícala. Gratis, sin anuncios, se ejecuta en tu navegador.">
+<meta property="og:url" content="https://tool-hub.me/sql-formatter/es/">
+<meta property="og:image" content="https://tool-hub.me/sql-formatter/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "SQL Formatter",
+  "description": "Paste a SQL query to format it with keyword-based indentation, choose UPPERCASE/lowercase keywords, or minify it. Free, no ads, runs in your browser.",
+  "url": "https://tool-hub.me/sql-formatter/",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "SQL Formatter", "item": "https://tool-hub.me/sql-formatter/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does this SQL formatter decide where to break lines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The formatter tokenizes your query and breaks a new line before major clause keywords — SELECT, FROM, WHERE, JOIN (and its INNER/LEFT/RIGHT/FULL/CROSS variants), GROUP BY, HAVING, ORDER BY, LIMIT, UNION and similar — and indents each one consistently. Inside SELECT, GROUP BY, ORDER BY and VALUES lists, every top-level comma starts a new indented line so long column lists are easy to scan, while AND/OR inside WHERE, ON and HAVING each get their own indented line too. Parentheses that open a subquery (SELECT or WITH) are expanded and indented one level deeper, but a plain function call or grouping like COUNT(*) or IN (1, 2, 3) is kept inline so short expressions don't get needlessly split apart."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the formatter understand string literals, comments, and quoted identifiers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A dedicated tokenizer walks the query character by character and recognizes single-quoted strings ('it''s a test', with the doubled '' escape), double-quoted and backtick-quoted identifiers (\"Order Date\", `user table`), square-bracket identifiers ([Order Date]), and both -- line comments and /* block */ comments. Anything inside a string, a quoted identifier, or a comment is copied through exactly as typed — it is never reformatted, case-changed, or treated as a keyword — so a column literally named \"select\" or a comment containing the word FROM won't confuse the output."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the keyword case option (UPPERCASE / lowercase / Unchanged) actually change?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It only rewrites the casing of recognized SQL reserved words — SELECT, FROM, WHERE, JOIN, AND, ORDER BY, and the like. Table names, column names, aliases, string contents, and quoted identifiers are always left exactly as you typed them, because changing their case could change what they mean in a case-sensitive database. Pick UPPERCASE for the classic textbook style, lowercase for a more compact look, or Unchanged to only reindent the query and leave every word's original casing untouched."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Minify mode for, and is it safe to use on a real query?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minify strips every comment and collapses the query onto a single line with only the whitespace SQL actually requires between tokens, which is handy for pasting a query into application code, a log line, or a URL parameter without wasting characters. It runs through the same string/identifier/comment-aware tokenizer as formatting, so quoted text and escaped quotes inside strings are preserved byte-for-byte — only the surrounding whitespace and comments are removed, never the query's logic or literal values."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my SQL query uploaded anywhere, and does this tool support every database dialect?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — every keystroke is tokenized and reformatted entirely inside your browser with plain JavaScript; nothing is sent to a server, logged, or stored anywhere except optionally your own browser's local storage so your last query is there when you come back. This is honestly a formatter, not a full SQL parser or validator for every dialect: it recognizes common MySQL, PostgreSQL, SQL Server and SQLite syntax (including their different identifier-quoting styles) well enough to indent it cleanly, but it doesn't check whether your query is semantically valid or catch every dialect-specific keyword."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>SQL Formatter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">SQL Formatter</span></nav>
+  <section class="hero">
+    <h1>SQL Formatter</h1>
+    <p class="lede" data-i18n="hero.lede">Paste any SQL query to instantly format it with keyword-based line breaks and indentation, choose UPPERCASE, lowercase or unchanged keyword casing, or switch to Minify for a compact single line. Nothing leaves your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <style>
+      #tool textarea{width:100%;border:1px solid var(--line);border-radius:.6rem;background:var(--bg);color:var(--ink);padding:.7rem .8rem;box-sizing:border-box;}
+      #tool textarea:focus{outline:2px solid var(--accent);outline-offset:1px;}
+      #tool .grp-btn{padding:.5rem .7rem;font-size:.85rem;font-weight:500;font-family:inherit;border:0;background:transparent;color:var(--muted);cursor:pointer;white-space:nowrap;}
+      #tool .grp-btn+.grp-btn{border-inline-start:1px solid var(--line);}
+      #tool .grp-wrap{display:inline-flex;border:1px solid var(--line);border-radius:.6rem;overflow:hidden;background:var(--bg);}
+      @media (max-width:420px){
+        #tool textarea{font-size:16px;}
+        #tool .row-wrap{gap:.6rem !important;}
+      }
+    </style>
+
+    <label for="sf-input" data-i18n="tool.inputLabel">SQL input</label>
+    <textarea id="sf-input" rows="10" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+      placeholder="SELECT id, name, email FROM users WHERE active = 1 ORDER BY name;" data-i18n-placeholder="tool.inputPlaceholder"
+      style="resize:vertical;line-height:1.5;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9rem;"></textarea>
+
+    <div class="row-wrap" style="display:flex;align-items:center;gap:.9rem;margin-top:.85rem;flex-wrap:wrap;">
+      <div id="sf-mode" class="grp-wrap" role="group" aria-label="Output style" data-i18n-aria-label="tool.modeLabel">
+        <button type="button" id="sf-format" class="grp-btn" data-mode="format" aria-pressed="true" data-i18n="tool.format" style="background:var(--accent);color:#fff;font-weight:700;">Format</button>
+        <button type="button" id="sf-minify" class="grp-btn" data-mode="minify" aria-pressed="false" data-i18n="tool.minify">Minify</button>
+      </div>
+
+      <div id="sf-indent-row" style="display:flex;align-items:center;gap:.5rem;">
+        <span data-i18n="tool.indentLabel" style="font-size:.85rem;color:var(--muted);">Indent</span>
+        <div id="sf-indent" class="grp-wrap" role="group" aria-label="Indent" data-i18n-aria-label="tool.indentLabel">
+          <button type="button" class="grp-btn" data-indent="2" aria-pressed="true" data-i18n="tool.indent2" style="background:var(--accent);color:#fff;font-weight:700;">2 spaces</button>
+          <button type="button" class="grp-btn" data-indent="4" aria-pressed="false" data-i18n="tool.indent4">4 spaces</button>
+          <button type="button" class="grp-btn" data-indent="tab" aria-pressed="false" data-i18n="tool.indentTab">Tab</button>
+          <button type="button" class="grp-btn" data-indent="custom" aria-pressed="false" data-i18n="tool.indentCustom">Custom</button>
+        </div>
+        <input type="number" id="sf-indent-custom" min="1" max="8" step="1" value="3" hidden
+          aria-label="Custom indent width in spaces" data-i18n-aria-label="tool.indentCustomLabel"
+          style="width:4.2rem;padding:.4rem .5rem;font-size:.85rem;border:1px solid var(--line);border-radius:.6rem;background:var(--bg);color:var(--ink);">
+      </div>
+
+      <button type="button" id="sf-clear" data-i18n="tool.clear"
+        style="padding:.5rem .85rem;font-size:.85rem;font-weight:600;font-family:inherit;border:1px solid var(--line);border-radius:.6rem;background:var(--bg);color:var(--muted);cursor:pointer;">Clear</button>
+    </div>
+
+    <div class="row-wrap" style="display:flex;align-items:center;gap:.6rem;margin-top:.7rem;flex-wrap:wrap;">
+      <span data-i18n="tool.caseLabel" style="font-size:.85rem;color:var(--muted);">Keyword case</span>
+      <div id="sf-case" class="grp-wrap" role="group" aria-label="Keyword case" data-i18n-aria-label="tool.caseLabel">
+        <button type="button" class="grp-btn" data-case="upper" aria-pressed="true" data-i18n="tool.caseUpper" style="background:var(--accent);color:#fff;font-weight:700;">UPPERCASE</button>
+        <button type="button" class="grp-btn" data-case="lower" aria-pressed="false" data-i18n="tool.caseLower">lowercase</button>
+        <button type="button" class="grp-btn" data-case="unchanged" aria-pressed="false" data-i18n="tool.caseUnchanged">Unchanged</button>
+      </div>
+    </div>
+
+    <details id="sf-advanced" style="margin-top:.75rem;">
+      <summary data-i18n="tool.advanced" style="cursor:pointer;font-size:.85rem;color:var(--muted);">More options</summary>
+      <div style="display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap;margin-top:.6rem;">
+        <label style="display:flex;align-items:center;gap:.45rem;margin:0;font-weight:400;cursor:pointer;">
+          <input type="checkbox" id="sf-remember" checked style="width:auto;margin:0;">
+          <span data-i18n="tool.remember">Save my SQL in this browser</span>
+        </label>
+        <label style="display:flex;align-items:center;gap:.45rem;margin:0;font-weight:400;cursor:pointer;">
+          <input type="checkbox" id="sf-keep-comments" style="width:auto;margin:0;">
+          <span data-i18n="tool.keepComments">Keep comments when minifying</span>
+        </label>
+      </div>
+    </details>
+
+    <div class="result" id="sf-result" aria-live="polite" style="margin-top:1.1rem;">
+      <div style="display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;">
+        <span id="sf-badge" style="display:inline-block;font-weight:700;font-size:.82rem;letter-spacing:.02em;padding:.22rem .6rem;border-radius:.5rem;background:var(--bg);border:1px solid var(--line);color:var(--muted);">—</span>
+        <span id="sf-stats" style="font-size:.85rem;color:var(--muted);"></span>
+      </div>
+      <p id="sf-message" style="margin:.6rem 0 0;line-height:1.55;overflow-wrap:anywhere;" data-i18n="tool.emptyHint">Paste a SQL query above to format or minify it.</p>
+      <p id="sf-warning" hidden style="margin:.6rem 0 0;line-height:1.5;font-size:.85rem;color:#b45309;"></p>
+    </div>
+
+    <label for="sf-output" data-i18n="tool.outputLabel" style="margin-top:1.3rem;">Formatted SQL</label>
+    <textarea id="sf-output" rows="10" dir="ltr" readonly autocomplete="off" spellcheck="false"
+      placeholder="Formatted SQL appears here." data-i18n-placeholder="tool.outputPlaceholder"
+      style="resize:vertical;line-height:1.5;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9rem;"></textarea>
+
+    <div style="display:flex;align-items:center;gap:.6rem;margin-top:.8rem;flex-wrap:wrap;">
+      <button type="button" class="btn" id="sf-copy" data-i18n="tool.copy" style="width:auto;">Copy</button>
+      <button type="button" class="btn" id="sf-download" data-i18n="tool.download" style="width:auto;background:var(--bg);color:var(--ink);border:1px solid var(--line);">Download .sql</button>
+      <span id="sf-feedback" aria-live="polite" hidden style="font-weight:600;font-size:.9rem;"></span>
+    </div>
+    <p style="margin:.9rem 0 0;font-size:12.5px;color:var(--muted);">
+      <span data-i18n="tool.note.scope">This is a formatter for readability, not a SQL validator or parser for every database dialect.</span>
+      <span data-i18n="tool.note.privacy">Every query is formatted entirely in your browser — nothing is uploaded to a server.</span>
+    </p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+      .guide-content code,.guide-content pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}
+      .guide-content pre{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto}
+    </style>
+
+    <h2>Why a one-line query is hard to read — and how formatting fixes it</h2>
+    <p>SQL written on a single line, or copy-pasted out of a log file, an ORM query builder, or a minified export, is technically correct but slow to read: the eye has to hunt for FROM, WHERE and JOIN buried in the middle of a run-on sentence. A formatter's job is to restore the visual structure that SQL's grammar implies — one clause per line, columns and conditions lined up under a consistent indent — without changing what the query does. Paste a query above and it is tokenized, reflowed around its keywords, and re-rendered with your chosen indent width and keyword casing.</p>
+
+    <h2>How the line-breaking rules work</h2>
+    <p>The formatter walks the query token by token and applies a small set of consistent rules:</p>
+    <ul>
+      <li><strong>Clause keywords</strong> — SELECT, FROM, WHERE, JOIN (and INNER/LEFT/RIGHT/FULL/CROSS JOIN), GROUP BY, HAVING, ORDER BY, LIMIT, UNION and similar — always start a new line at the query's base indent.</li>
+      <li><strong>Column and value lists</strong> — every top-level comma inside a SELECT list, GROUP BY list, ORDER BY list, an UPDATE's SET list, or a VALUES list starts a new indented line, so a ten-column SELECT is as easy to scan as a two-column one.</li>
+      <li><strong>Conditions</strong> — AND and OR inside WHERE, ON and HAVING each get their own indented line, except the AND that belongs to a BETWEEN ... AND ... range, which is correctly kept on the same line as its BETWEEN.</li>
+      <li><strong>Subqueries</strong> — a parenthesis that opens with SELECT or WITH is expanded onto its own indented block, so a subquery in a FROM, an IN (...), or a SELECT list reads like a small, separately formatted query.</li>
+      <li><strong>Function calls and grouping</strong> — a plain parenthesis such as COUNT(*), IN (1, 2, 3), or OVER (PARTITION BY ... ORDER BY ...) is kept inline instead of being split apart, because these are short expressions rather than clauses.</li>
+    </ul>
+
+    <div class="example">
+      <p><strong>Example — a join with a filter and an aggregate.</strong> Paste this single line:</p>
+      <pre>SELECT u.id, u.name, COUNT(o.id) AS order_count FROM users u LEFT JOIN orders o ON o.user_id = u.id WHERE u.created_at BETWEEN '2024-01-01' AND '2024-12-31' GROUP BY u.id, u.name HAVING COUNT(o.id) > 5 ORDER BY order_count DESC;</pre>
+      <p>and Format (2-space indent, UPPERCASE keywords) turns it into:</p>
+      <pre>SELECT u.id,
+  u.name,
+  COUNT(o.id) AS order_count
+FROM users u
+LEFT JOIN orders o
+  ON o.user_id = u.id
+WHERE u.created_at BETWEEN '2024-01-01' AND '2024-12-31'
+GROUP BY u.id,
+  u.name
+HAVING COUNT(o.id) > 5
+ORDER BY order_count DESC;</pre>
+    </div>
+
+    <h2>Keyword case: UPPERCASE, lowercase, or Unchanged</h2>
+    <p>Reserved words are the only thing the case option touches. UPPERCASE gives the classic textbook look many style guides recommend (SELECT ... FROM ... WHERE ...); lowercase reads a little more compact and matches how many query builders emit SQL; Unchanged reindents the query without touching a single letter's case, useful when a linter or teammate cares about a specific style already in the file. Table names, column names, aliases, and anything inside quotes are always left exactly as typed, because in a case-sensitive database (PostgreSQL's quoted identifiers, for example) changing that casing could silently point at a different column.</p>
+
+    <h2>Minify: the opposite of formatting</h2>
+    <p>Minify mode strips comments and collapses the query to a single line with only the whitespace SQL actually needs between tokens — handy for embedding a query string in application code, a curl command, or a URL parameter where extra newlines and indentation just waste space. Because it runs through the same tokenizer as formatting, quoted strings, doubled '' escapes, and quoted identifiers pass through byte-for-byte; only the surrounding formatting is removed, never the query's literal values.</p>
+
+    <h2>What the tokenizer protects — and its honest limits</h2>
+    <p>Before any line-breaking happens, the input is split into strings ('...', with the standard '' escape for an embedded quote), quoted identifiers ("..."/`...`/[...]), line comments (--) and block comments (/* ... */), numbers, operators, and words. Only words that match a list of common SQL reserved keywords are ever recased or used to decide where a line breaks — everything inside a string, comment, or quoted identifier is copied through untouched, so a comment that happens to contain the word SELECT, or a column literally named "order", won't be misread as a keyword.</p>
+    <p>That said, this tool is a formatter for readability, not a full parser or validator: it doesn't check whether a query is syntactically valid, doesn't know every keyword or function of every dialect (MySQL, PostgreSQL, SQL Server, SQLite, BigQuery and others all differ slightly), and complex nested expressions can occasionally format less elegantly than a hand-tuned style. If something looks off, the Unchanged case option plus a quick scroll through the output usually makes the cause obvious — and nothing about your query ever leaves your browser to be checked anyway.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.iso.org/" target="_blank" rel="noopener">ISO — publisher of the ISO/IEC 9075 SQL standard that defines the language's reserved keywords and syntax</a></li>
+      <li><a href="https://www.nist.gov/" target="_blank" rel="noopener">NIST — historical SQL conformance testing and standards reference for database interoperability</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank" rel="noopener">MDN Web Docs — how browser local storage keeps your formatting options on your device only</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/subnet-calc/"><span class="related-ico" aria-hidden="true">🌐</span><span class="related-name">IP Subnet Calculator</span></a><a class="related-item" href="https://tool-hub.me/unix-timestamp-conv/"><span class="related-ico" aria-hidden="true">🕐</span><span class="related-name">Unix Timestamp Converter</span></a><a class="related-item" href="https://tool-hub.me/url-encoder/"><span class="related-ico" aria-hidden="true">🔗</span><span class="related-name">URL Encoder / Decoder</span></a><a class="related-item" href="https://tool-hub.me/url-parser/"><span class="related-ico" aria-hidden="true">🔗</span><span class="related-name">URL Parser</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How does this SQL formatter decide where to break lines?</summary>
+      <p data-i18n="faq.a1">The formatter tokenizes your query and breaks a new line before major clause keywords — SELECT, FROM, WHERE, JOIN (and its INNER/LEFT/RIGHT/FULL/CROSS variants), GROUP BY, HAVING, ORDER BY, LIMIT, UNION and similar — and indents each one consistently. Inside SELECT, GROUP BY, ORDER BY and VALUES lists, every top-level comma starts a new indented line so long column lists are easy to scan, while AND/OR inside WHERE, ON and HAVING each get their own indented line too. Parentheses that open a subquery (SELECT or WITH) are expanded and indented one level deeper, but a plain function call or grouping like COUNT(*) or IN (1, 2, 3) is kept inline so short expressions don't get needlessly split apart.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Does the formatter understand string literals, comments, and quoted identifiers?</summary>
+      <p data-i18n="faq.a2">Yes. A dedicated tokenizer walks the query character by character and recognizes single-quoted strings ('it''s a test', with the doubled '' escape), double-quoted and backtick-quoted identifiers ("Order Date", `user table`), square-bracket identifiers ([Order Date]), and both -- line comments and /* block */ comments. Anything inside a string, a quoted identifier, or a comment is copied through exactly as typed — it is never reformatted, case-changed, or treated as a keyword — so a column literally named "select" or a comment containing the word FROM won't confuse the output.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What does the keyword case option (UPPERCASE / lowercase / Unchanged) actually change?</summary>
+      <p data-i18n="faq.a3">It only rewrites the casing of recognized SQL reserved words — SELECT, FROM, WHERE, JOIN, AND, ORDER BY, and the like. Table names, column names, aliases, string contents, and quoted identifiers are always left exactly as you typed them, because changing their case could change what they mean in a case-sensitive database. Pick UPPERCASE for the classic textbook style, lowercase for a more compact look, or Unchanged to only reindent the query and leave every word's original casing untouched.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What is Minify mode for, and is it safe to use on a real query?</summary>
+      <p data-i18n="faq.a4">Minify strips every comment and collapses the query onto a single line with only the whitespace SQL actually requires between tokens, which is handy for pasting a query into application code, a log line, or a URL parameter without wasting characters. It runs through the same string/identifier/comment-aware tokenizer as formatting, so quoted text and escaped quotes inside strings are preserved byte-for-byte — only the surrounding whitespace and comments are removed, never the query's logic or literal values.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my SQL query uploaded anywhere, and does this tool support every database dialect?</summary>
+      <p data-i18n="faq.a5">No — every keystroke is tokenized and reformatted entirely inside your browser with plain JavaScript; nothing is sent to a server, logged, or stored anywhere except optionally your own browser's local storage so your last query is there when you come back. This is honestly a formatter, not a full SQL parser or validator for every dialect: it recognizes common MySQL, PostgreSQL, SQL Server and SQLite syntax (including their different identifier-quoting styles) well enough to indent it cleanly, but it doesn't check whether your query is semantically valid or catch every dialect-specific keyword.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

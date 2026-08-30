@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-ZRikRQ1/MVCie7ywF23XUV9ZllwYeebjNyneA33+SbQ=' 'sha256-wynPPS87IB1j/akBtoHcBdLgECbuiyzQt+sfkW4OxrQ=' 'sha256-LitnaAZdgzuaWdoGWLo6F2GTcc7U4w3wd8EqGkaP2r8='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>家賃いくらまで払える？ — 家賃負担額シミュレーター</title>
+<meta name="description" content="税引前の年収・月収と毎月の返済額から、無理なく払える家賃を計算します。30%ルール、堅実な25%基準、家主が使う年収40倍の審査ラインを同時に表示。">
+<meta name="keywords" content="how much rent can i afford, rent affordability calculator, rent budget calculator, 30 percent rule, 40x rent rule, rent to income ratio">
+<link rel="canonical" href="https://tool-hub.me/rent-affordability-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/rent-affordability-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/rent-affordability-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/rent-affordability-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/rent-affordability-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/rent-affordability-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/rent-affordability-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/rent-affordability-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/rent-affordability-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/rent-affordability-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/rent-affordability-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/rent-affordability-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/rent-affordability-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/rent-affordability-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/rent-affordability-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/rent-affordability-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="家賃いくらまで払える？ — 家賃負担額シミュレーター">
+<meta property="og:description" content="税引前の年収・月収と毎月の返済額から、無理なく払える家賃を計算します。30%ルール、堅実な25%基準、家主が使う年収40倍の審査ラインを同時に表示。">
+<meta property="og:url" content="https://tool-hub.me/rent-affordability-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/rent-affordability-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0284c7">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Rent Affordability Calculator",
+  "description": "Work out how much rent you can afford from gross income and monthly debt payments. Compares the 30% rule, a conservative 25% budget and the 40x landlord test.",
+  "url": "https://tool-hub.me/rent-affordability-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Rent Affordability Calculator",
+      "item": "https://tool-hub.me/rent-affordability-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the 30% rule still realistic in expensive cities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often not. In New York, San Francisco, London and Boston the median renter pays well past 30% of gross income, and landlords in those markets usually want an annual income of 40 times the monthly rent — the same 30% threshold rewritten as a screening test. If you cannot meet it, the standard routes are a guarantor, a roommate, or several months of rent paid up front."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use gross or net income?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This calculator uses gross, pre-tax income because that is what landlords and tenant screening companies verify. Your own budget should also be checked against take-home pay, which is typically 20-30% lower after tax, pension and health deductions. A rent that is 30% of gross can easily be 40% of what actually reaches your account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do utilities and renter's insurance count toward the 30%?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The classic rule covers rent alone, but the version worth using covers total housing cost. Add electricity, gas, water, internet, renter's insurance and any parking or amenity fee — in the US that bundle commonly runs 150 to 300 a month. If your lease is all-inclusive you can spend near the top of the range; if you pay everything separately, aim a few points lower."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do landlords verify income?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Expect to show the last two or three pay stubs, an offer letter or employment contract, and often bank statements or a tax return if you are self-employed. Many US landlords run a screening service that pulls credit history and income data together. Freelancers are usually judged on annual income after expenses, so a strong year still needs paperwork behind it."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Rent Affordability Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Rent Affordability Calculator</span></nav>
+  <section class="hero">
+    <h1>Rent Affordability Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">The 30% rule, the 40x landlord test, and what your debt payments actually leave.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="income" data-i18n="tool.income.label">Gross income (before tax)</label>
+        <input type="text" id="income" inputmode="decimal" autocomplete="off" placeholder="65000">
+      </div>
+      <div>
+        <label for="period" data-i18n="tool.period.label">Income period</label>
+        <select id="period">
+          <option value="year" data-i18n="tool.period.year">Per year</option>
+          <option value="month" data-i18n="tool.period.month">Per month</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="debts" data-i18n="tool.debts.label">Monthly debt payments (car, loans, cards)</label>
+        <input type="text" id="debts" inputmode="decimal" autocomplete="off" placeholder="400">
+      </div>
+      <div>
+        <label for="people" data-i18n="tool.people.label">People splitting the rent</label>
+        <input type="number" id="people" inputmode="numeric" min="1" max="12" step="1" value="1" autocomplete="off" placeholder="1">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="utils" data-i18n="tool.utils.label">Monthly utilities estimate (optional)</label>
+        <input type="text" id="utils" inputmode="decimal" autocomplete="off" placeholder="150">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate rent budget</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.rent">Recommended max rent</div>
+          <div class="rc-val" id="r-rent">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.cons">Conservative — 25% of gross</div><div class="rc-val" id="r-cons">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.ceiling">Landlord ceiling — 40x rule</div><div class="rc-val" id="r-ceiling">—</div></div>
+        <div class="rcard" id="card-rentnet" hidden><div class="rc-label" data-i18n="tool.r.rentnet">Rent after utilities — recommended</div><div class="rc-val" id="r-rentnet">—</div></div>
+        <div class="rcard" id="card-consnet" hidden><div class="rc-label" data-i18n="tool.r.consnet">Rent after utilities — conservative</div><div class="rc-val" id="r-consnet">—</div></div>
+        <div class="rcard" id="card-split" hidden><div class="rc-label" data-i18n="tool.r.split">Whole place if shared</div><div class="rc-val" id="r-split">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.left">Left after rent and debts</div><div class="rc-val" id="r-left">—</div></div>
+      </div>
+      <p class="err" id="warn-utils" hidden data-i18n="tool.warn.utils">Your utilities estimate meets or exceeds the budget.</p>
+      <p class="subtle" id="note-utils" hidden data-i18n="tool.note.utils">The budget does not change — utilities come out of it.</p>
+      <p class="subtle" id="note-debtcut" hidden data-i18n="tool.note.debtcut">Your debt payments pulled the ceiling below 30%.</p>
+      <p class="subtle" id="note-same" hidden data-i18n="tool.note.same">With no other debts the 30% rule and the 40x rule land on the same number.</p>
+      <p class="subtle" id="note-split" hidden data-i18n="tool.note.split">The shared figure assumes everyone pays an equal share.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.gross">Uses gross, pre-tax income — the figure landlords verify. Take-home pay is usually 20-30% lower.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>Where the 30% rule comes from</h2>
+    <p>The 30% guideline is not a law of finance, it is housing policy that escaped into everyday advice. US federal rules set a tenant's contribution at 25% of income in 1969 and lifted it to 30% in 1981, and the number stuck. Census statistics still call a household "cost burdened" above 30% and "severely cost burdened" above 50%. It survives because it is a reasonable default: it leaves room for retirement saving, transport, food and debt at a typical income. What it does not know is your city, your commute, your student loan or your credit history.</p>
+    <p>This calculator runs three versions of the question at once. The headline figure is 30% of gross monthly income, capped so that rent plus your existing debt payments stay under 40% of gross — the same combined-obligation logic a mortgage underwriter uses. The conservative figure is 25%, which is what you want if your income is variable or you are saving for a deposit. The third is the landlord's own test.</p>
+
+    <h3>Worked example: 65,000 a year, no debts</h3>
+    <p>Gross monthly income is 65,000 / 12 = 5,417. The 30% rule gives 1,625 a month. The conservative 25% version gives 1,354. The landlord's 40x test says you qualify for 65,000 / 40 = 1,625 — the identical number, because twelve fortieths is exactly 30%. That coincidence is worth remembering: when a New York listing says "40x the rent", it is quoting the 30% rule back at you as an admissions requirement.</p>
+
+    <h3>Worked example: the same income with 700 of debt</h3>
+    <p>Now add a 400 car payment, a 200 student loan and 100 in card minimums. Rent plus debt should stay under 40% of 5,417, which is 2,167. Subtract the 700 and only 1,467 is left for rent, so the recommendation drops from 1,625 to 1,467 — roughly 27% of gross. The 40x ceiling still reads 1,625 because landlords screen on income, not on what you owe elsewhere. That gap is exactly the trap: you can be approved for an apartment that your own balance sheet cannot carry.</p>
+
+    <h3>Worked example: New York at 40x</h3>
+    <p>A one-bedroom listed at 3,200 a month requires 3,200 x 40 = 128,000 in annual income. Two roommates earning 65,000 each clear it on combined income of 130,000, which is why sharing is the default strategy in that market. If you fall short alone, a guarantor is usually asked to show 80x the monthly rent — 256,000 for that same apartment — or you offer several months up front. Note also that some markets have changed who pays the broker: New York's FARE Act moved landlord-hired broker fees off tenants in 2025, which cut move-in cash by thousands but did nothing to the income test.</p>
+
+    <h2>Roommate maths</h2>
+    <p>When more than one person is on the lease, the tool shows both numbers: your own affordable share, and the whole-place rent if everyone contributes an equal amount and earns roughly what you do. If your roommate earns far less, that second figure is fiction — run the calculator on the lower income and multiply from there, because the weakest income sets the ceiling in practice. Also check whether the lease is joint and several, which is the norm: if your roommate stops paying, you owe the whole rent, not half of it.</p>
+
+    <h2>What this cannot tell you</h2>
+    <p>It cannot see local prices. In parts of the US Midwest, 25% of gross buys a comfortable two-bedroom; in coastal cities 30% may not buy a studio, and the honest answer becomes a longer commute, a roommate, or a smaller place. It cannot see your credit score either, and a thin file or a past eviction can outweigh a strong income at screening time.</p>
+    <p>Finally, budget for the cost of moving in, not just the monthly figure. First month, last month, a security deposit equal to one month, plus insurance and utility set-up typically means three to four times the monthly rent in cash on day one. Renters who plan only the recurring number are the ones who end up putting the deposit on a credit card, which pushes next year's debt payments up and shrinks the very budget this calculator just worked out.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.huduser.gov/portal/datasets/fmr.html" target="_blank" rel="noopener">HUD User — Fair Market Rents and the 30%-of-income affordability standard</a></li>
+      <li><a href="https://www.census.gov/topics/housing.html" target="_blank" rel="noopener">US Census Bureau Housing — cost-burdened renter statistics (30% and 50% thresholds)</a></li>
+      <li><a href="https://www.consumerfinance.gov/consumer-tools/renting/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — renting, deposits and tenant screening basics</a></li>
+      <li><a href="https://www.gov.uk/housing-and-local-services" target="_blank" rel="noopener">GOV.UK Housing — UK renting rules, deposits and tenancy guidance</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/rent-split-calc/"><span class="related-ico" aria-hidden="true">🚪</span><span class="related-name">Rent Split Calculator</span></a><a class="related-item" href="https://tool-hub.me/retirement-calc/"><span class="related-ico" aria-hidden="true">🌴</span><span class="related-name">Retirement Calculator</span></a><a class="related-item" href="https://tool-hub.me/roi-calc/"><span class="related-ico" aria-hidden="true">📊</span><span class="related-name">ROI Calculator</span></a><a class="related-item" href="https://tool-hub.me/rule-of-72-calc/"><span class="related-ico" aria-hidden="true">✌️</span><span class="related-name">Rule of 72 Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Is the 30% rule still realistic in expensive cities?</summary><p data-i18n="faq.a1">Often not. In New York, San Francisco, London and Boston the median renter pays well past 30% of gross income, and landlords in those markets usually want an annual income of 40 times the monthly rent — the same 30% threshold rewritten as a screening test. If you cannot meet it, the standard routes are a guarantor, a roommate, or several months of rent paid up front.</p></details>
+    <details><summary data-i18n="faq.q2">Should I use gross or net income?</summary><p data-i18n="faq.a2">This calculator uses gross, pre-tax income because that is what landlords and tenant screening companies verify. Your own budget should also be checked against take-home pay, which is typically 20-30% lower after tax, pension and health deductions. A rent that is 30% of gross can easily be 40% of what actually reaches your account.</p></details>
+    <details><summary data-i18n="faq.q3">Do utilities and renter's insurance count toward the 30%?</summary><p data-i18n="faq.a3">The classic rule covers rent alone, but the version worth using covers total housing cost. Add electricity, gas, water, internet, renter's insurance and any parking or amenity fee — in the US that bundle commonly runs 150 to 300 a month. If your lease is all-inclusive you can spend near the top of the range; if you pay everything separately, aim a few points lower.</p></details>
+    <details><summary data-i18n="faq.q4">How do landlords verify income?</summary><p data-i18n="faq.a4">Expect to show the last two or three pay stubs, an offer letter or employment contract, and often bank statements or a tax return if you are self-employed. Many US landlords run a screening service that pulls credit history and income data together. Freelancers are usually judged on annual income after expenses, so a strong year still needs paperwork behind it.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

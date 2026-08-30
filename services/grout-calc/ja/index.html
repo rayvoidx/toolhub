@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-qUD2/ryiafGBq1WtVKTRJ+MdxqPh7DGnX9sIPWEPA3o=' 'sha256-er0xvNEmenXw3wipq0Qs8TPrVmTQZBGh+BB+sRABPgY=' 'sha256-ktZfEooTj98lz6JlGvpAppE9mgY3Q0BzvWkhiBlQP1U='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>目地材計算ツール — タイル目地の必要量</title>
+<meta name="description" content="施工面積・タイルサイズ・厚み・目地幅を入力するだけで、必要な目地材の重量、袋数、1袋あたりの施工面積がわかります。10%のロス込み。">
+<meta name="keywords" content="grout calculator, how much grout do i need, grout coverage, tile grout calculator, grout coverage calculator, sanded vs unsanded grout">
+<link rel="canonical" href="https://tool-hub.me/grout-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/grout-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/grout-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/grout-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/grout-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/grout-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/grout-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/grout-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/grout-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/grout-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/grout-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/grout-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/grout-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/grout-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/grout-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/grout-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="目地材計算ツール — タイル目地の必要量">
+<meta property="og:description" content="施工面積・タイルサイズ・厚み・目地幅を入力するだけで、必要な目地材の重量、袋数、1袋あたりの施工面積がわかります。10%のロス込み。">
+<meta property="og:url" content="https://tool-hub.me/grout-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/grout-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#57534e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Grout Calculator",
+  "description": "Work out how much grout you need for any tile job. Enter your area, tile size, thickness and joint width to get pounds of grout, bag counts and coverage.",
+  "url": "https://tool-hub.me/grout-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Grout Calculator",
+      "item": "https://tool-hub.me/grout-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Sanded or unsanded grout — which do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Joint width decides it. Use sanded grout for joints 1/8 in (3 mm) and wider, because the sand stops it shrinking and cracking; use unsanded for anything narrower, since sand will not pack into a hairline joint. Sanded grout can scratch polished marble, glass and some metal tiles, so test a spare piece first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do small tiles need so much more grout?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Grout fills the perimeter of every tile, so what matters is perimeter divided by area. A 3 × 6 in subway tile has six times the perimeter-to-area ratio of a 24 × 24 in slab, so 80 sq ft of subway with 1/8 in joints in 1/4 in tile takes about 13.8 lb of grout, while the same area of 24 × 24 takes about 2.3 lb. Same room, same joint, six times the grout."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does epoxy grout cover the same area?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Epoxy grout ships as pre-measured kits of resin, hardener and filler rather than dry powder, and it is denser than cement grout, so the same joint volume weighs more. Use this tool as a sanity check on volume, then buy from the manufacturer's kit chart and add roughly 15% — epoxy sets fast and is unforgiving of a short batch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I keep leftover grout?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unopened bags keep about a year in a dry place, off a concrete floor. Once a bag is open, moisture in the air starts curing the cement, so squeeze the air out, tape it shut and double-bag it — grout that has gone lumpy will never mix smooth again. Mixed grout cannot be saved at all, so only mix what you can use in about 30 minutes."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Grout Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Grout Calculator</span></nav>
+  <section class="hero">
+    <h1>Grout Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Tile size and joint width decide everything — small tiles can swallow six times the grout.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="area" data-i18n="tool.area.label">Tile area</label>
+        <input type="number" id="area" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="80">
+      </div>
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Area unit</label>
+        <select id="unit">
+          <option value="ft" data-i18n="tool.unit.ft">Square feet (ft²)</option>
+          <option value="m" data-i18n="tool.unit.m">Square meters (m²)</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="tsize" data-i18n="tool.size.label">Tile size</label>
+    <select id="tsize">
+      <option value="12x12" data-i18n="tool.size.o1">12 × 12 in (300 × 300 mm)</option>
+      <option value="12x24" data-i18n="tool.size.o2">12 × 24 in (300 × 600 mm)</option>
+      <option value="18x18" data-i18n="tool.size.o3">18 × 18 in (450 × 450 mm)</option>
+      <option value="24x24" data-i18n="tool.size.o4">24 × 24 in (600 × 600 mm)</option>
+      <option value="3x6" data-i18n="tool.size.o5">3 × 6 in subway (75 × 150 mm)</option>
+      <option value="custom" data-i18n="tool.size.o6">Custom size</option>
+    </select>
+
+    <div class="field-row" id="custom-row" hidden>
+      <div>
+        <label for="cw" data-i18n="tool.cw.label">Tile width (in)</label>
+        <input type="number" id="cw" inputmode="decimal" min="0.5" max="120" step="any" autocomplete="off" placeholder="4">
+      </div>
+      <div>
+        <label for="cl" data-i18n="tool.cl.label">Tile length (in)</label>
+        <input type="number" id="cl" inputmode="decimal" min="0.5" max="120" step="any" autocomplete="off" placeholder="16">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="thick" data-i18n="tool.thick.label">Tile thickness</label>
+        <select id="thick">
+          <option value="0.25" data-i18n="tool.thick.q">1/4 in (6 mm)</option>
+          <option value="0.375" selected data-i18n="tool.thick.e">3/8 in (10 mm)</option>
+          <option value="0.5" data-i18n="tool.thick.h">1/2 in (12 mm)</option>
+          <option value="0.75" data-i18n="tool.thick.t">3/4 in (18 mm)</option>
+        </select>
+      </div>
+      <div>
+        <label for="joint" data-i18n="tool.joint.label">Grout joint width</label>
+        <select id="joint">
+          <option value="0.0625" data-i18n="tool.joint.j1">1/16 in (1.5 mm)</option>
+          <option value="0.125" selected data-i18n="tool.joint.j2">1/8 in (3 mm)</option>
+          <option value="0.1875" data-i18n="tool.joint.j3">3/16 in (5 mm)</option>
+          <option value="0.25" data-i18n="tool.joint.j4">1/4 in (6 mm)</option>
+          <option value="0.375" data-i18n="tool.joint.j5">3/8 in (10 mm)</option>
+          <option value="0.5" data-i18n="tool.joint.j6">1/2 in (12 mm)</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate grout</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.total">Grout needed</div>
+          <div class="rc-val" id="r-total">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.bags10">10 lb bags</div><div class="rc-val" id="r-b10">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.bags25">25 lb bags</div><div class="rc-val" id="r-b25">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.cover">One 10 lb bag covers</div><div class="rc-val" id="r-cover">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.type">Grout type</div><div class="rc-val" id="r-type">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Includes a 10% waste allowance. Joint depth is assumed to equal tile thickness — always cross-check the coverage chart printed on your grout bag.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How much grout do I actually need?</h2>
+    <p>Almost everyone buys grout the same way: walk into the store, look at the bag, guess. The guess is usually wrong in one of two expensive directions. Buy too little and you stop mid-wall, mix a second batch hours later and end up with a visible colour break where the two batches meet. Buy too much and the surplus sits in the garage absorbing damp until it is landfill. The quantity is not a mystery, though — it comes from four numbers you already know: the area, the tile size, the tile thickness and the joint width.</p>
+    <p>The counter-intuitive part is that area matters least. Two bathrooms of identical size can need six times different amounts of grout purely because of the tile format. Grout does not fill the floor, it fills the outline around every tile, so the driver is the perimeter of each piece divided by its face area. Cut a tile in half and you double that ratio.</p>
+
+    <h3>Worked example: 80 sq ft of 3 × 6 subway tile</h3>
+    <p>A standard subway backsplash, 1/4 in thick, laid with 1/8 in joints. The perimeter-to-area ratio is (3 + 6) ÷ (3 × 6) = 0.5 per inch. Multiply by the joint width and the joint depth: 0.5 × 0.125 × 0.25 = 0.0156 cubic inches of grout per square inch of wall. Add 10% for mixing loss and joints you pack twice, and it becomes 0.0172. Convert to feet — multiply by 144 square inches per square foot, divide by 1728 cubic inches per cubic foot, which is simply dividing by 12 — and you get 0.00143 cubic feet per square foot. Dry cement grout weighs roughly 120 lb per cubic foot, so that is 0.172 lb per square foot, or <strong>13.8 lb for the 80 sq ft wall</strong>. Buy two 10 lb bags or one 25 lb bag. One 10 lb bag covers about 58 sq ft of this tile.</p>
+
+    <h3>The same 80 sq ft in 24 × 24 porcelain</h3>
+    <p>Keep everything else identical — 1/8 in joints, 1/4 in thick — and swap to 24 × 24 slabs. The ratio collapses to (24 + 24) ÷ (24 × 24) = 0.083 per inch, exactly one sixth of the subway figure. The whole job now needs about <strong>2.3 lb</strong> of grout, and a single 10 lb bag would cover roughly 349 sq ft. Same room, same joint width, one sixth of the material. That is the single most useful thing to understand about grout: mosaic and subway jobs are grout-heavy, large-format jobs are grout-light, and any coverage figure quoted without a tile size is meaningless.</p>
+
+    <h3>A typical floor</h3>
+    <p>200 sq ft of 12 × 12 ceramic, 3/8 in thick, 1/8 in joints works out at 0.086 lb per square foot, so about 17.2 lb — two 10 lb bags, or one 25 lb bag with a useful margin for a repair down the line. Notice that thickness pulls in the opposite direction to tile size: a thicker tile means a deeper joint to fill, so the same floor in 1/4 in tile would need only about 11.5 lb.</p>
+
+    <h2>The formula, stated plainly</h2>
+    <p>Grout per square foot (lb) = [(W + L) ÷ (W × L)] × joint width × joint depth × 1.1 ÷ 12 × 120, with W, L, width and depth all in inches. The bracketed term is the perimeter-to-area ratio, the 1.1 is a 10% waste allowance, dividing by 12 converts cubic inches per square inch into cubic feet per square foot, and 120 is the bulk density of dry cementitious grout in pounds per cubic foot. Manufacturers' printed coverage charts are the same calculation with their own density and waste assumptions, which is why two brands can quote coverage figures 20% apart for identical tile.</p>
+
+    <h2>Buying, mixing and sealing</h2>
+    <h3>Mix in batches you can finish</h3>
+    <p>Cementitious grout has a working life of roughly 30 minutes once water goes in. Mix about a third of a 25 lb bag at a time, let it slake for five to ten minutes, then remix — and do not add more water after slaking, because that thins the mix and produces patchy, chalky colour. Measure water with a jug rather than eyeballing it: water content is the number one cause of colour variation between batches, far more than pigment differences. If a wall will take more than one batch, work to a natural break such as an inside corner rather than stopping mid-field.</p>
+    <h3>Sealing timeline</h3>
+    <p>Sponge off haze while the grout is firm but green, then leave it alone. Light foot traffic after 24 hours, no water for 72. Cement grout should be sealed once fully cured, typically after 48 to 72 hours, and re-sealed roughly annually in showers. Epoxy grout does not need sealing at all, which is a large part of why professionals accept its short pot life and higher price in wet areas.</p>
+
+    <h2>What this estimate cannot see</h2>
+    <p>It assumes the joint is filled to the full tile thickness. In practice thinset often squeezes partway up the joint, so real consumption on a floor can land 10 to 20% below the calculation — that is deliberate headroom, not an error. It also assumes rectified square edges; cushioned or hand-made tiles have wider effective joints and eat more. It does not deduct outlets, borders or trim pieces, and it treats one bag as one lot, so on a large job order all your grout in a single purchase with matching lot numbers. When in doubt, round up to the next bag: colour matching a shortfall weeks later is far harder than storing a spare.</p>
+  </section>
+
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.osha.gov/silica-crystalline" target="_blank" rel="noopener">OSHA — respirable crystalline silica hazards when mixing or cutting sanded grout and tile</a></li>
+      <li><a href="https://www.epa.gov/mold" target="_blank" rel="noopener">US EPA — moisture and mold control guidance for tiled bathrooms and wet areas</a></li>
+      <li><a href="https://www.nist.gov/el" target="_blank" rel="noopener">NIST Engineering Laboratory — research and measurement standards for cementitious building materials</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/heat-index-calc/"><span class="related-ico" aria-hidden="true">🥵</span><span class="related-name">Heat Index Calculator</span></a><a class="related-item" href="https://tool-hub.me/insulation-calc/"><span class="related-ico" aria-hidden="true">🧤</span><span class="related-name">Insulation Calculator</span></a><a class="related-item" href="https://tool-hub.me/laminate-flooring-calc/"><span class="related-ico" aria-hidden="true">🪵</span><span class="related-name">Laminate Flooring Calculator</span></a><a class="related-item" href="https://tool-hub.me/metronome/"><span class="related-ico" aria-hidden="true">🎵</span><span class="related-name">Online Metronome</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Sanded or unsanded grout — which do I need?</summary><p data-i18n="faq.a1">Joint width decides it. Use sanded grout for joints 1/8 in (3 mm) and wider, because the sand stops it shrinking and cracking; use unsanded for anything narrower, since sand will not pack into a hairline joint. Sanded grout can scratch polished marble, glass and some metal tiles, so test a spare piece first.</p></details>
+    <details><summary data-i18n="faq.q2">Why do small tiles need so much more grout?</summary><p data-i18n="faq.a2">Grout fills the perimeter of every tile, so what matters is perimeter divided by area. A 3 × 6 in subway tile has six times the perimeter-to-area ratio of a 24 × 24 in slab, so 80 sq ft of subway with 1/8 in joints in 1/4 in tile takes about 13.8 lb of grout, while the same area of 24 × 24 takes about 2.3 lb. Same room, same joint, six times the grout.</p></details>
+    <details><summary data-i18n="faq.q3">Does epoxy grout cover the same area?</summary><p data-i18n="faq.a3">No. Epoxy grout ships as pre-measured kits of resin, hardener and filler rather than dry powder, and it is denser than cement grout, so the same joint volume weighs more. Use this tool as a sanity check on volume, then buy from the manufacturer's kit chart and add roughly 15% — epoxy sets fast and is unforgiving of a short batch.</p></details>
+    <details><summary data-i18n="faq.q4">Can I keep leftover grout?</summary><p data-i18n="faq.a4">Unopened bags keep about a year in a dry place, off a concrete floor. Once a bag is open, moisture in the air starts curing the cement, so squeeze the air out, tape it shut and double-bag it — grout that has gone lumpy will never mix smooth again. Mixed grout cannot be saved at all, so only mix what you can use in about 30 minutes.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

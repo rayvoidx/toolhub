@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-urgeUcMHANGt+h/n4GbWJkzqEdAqeAzmp1Xmv3nWUO4=' 'sha256-C4qH+C0TNVIB2qHFjRP0FmxXoSYWAXtQP7bLqCGBE4w=' 'sha256-JnuqdZpGmjtRLgN5/QREuqJChGaJqHAEzX1UXJFfcZ8='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>車の予算計算ツール — 年収でいくらの車が買えるか</title>
+<meta name="description" content="年収から購入できる車の価格を計算します。20/4/10ルール、年収の35%ルール、月収10%の支払い上限ルールを頭金と金利を入れて並べて比較できます。">
+<meta name="keywords" content="how much car can i afford, car affordability calculator, car budget calculator, 20 4 10 rule, car payment budget, affordable car price by salary">
+<link rel="canonical" href="https://tool-hub.me/car-affordability-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/car-affordability-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/car-affordability-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/car-affordability-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/car-affordability-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/car-affordability-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/car-affordability-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/car-affordability-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/car-affordability-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/car-affordability-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/car-affordability-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/car-affordability-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/car-affordability-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/car-affordability-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/car-affordability-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/car-affordability-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="車の予算計算ツール — 年収でいくらの車が買えるか">
+<meta property="og:description" content="年収から購入できる車の価格を計算します。20/4/10ルール、年収の35%ルール、月収10%の支払い上限ルールを頭金と金利を入れて並べて比較できます。">
+<meta property="og:url" content="https://tool-hub.me/car-affordability-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/car-affordability-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1e40af">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Car Affordability Calculator",
+  "description": "See how much car you can afford on your income. Compare the 20/4/10 rule, a 35%-of-salary budget and a 10% payment cap, with your down payment and APR.",
+  "url": "https://tool-hub.me/car-affordability-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Car Affordability Calculator",
+      "item": "https://tool-hub.me/car-affordability-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why the 20/4/10 rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It fixes the three things that sink car buyers: too little down, too long a loan, too much of your income. Putting 20% down keeps you ahead of depreciation, which is steepest in year one, and a four-year term means you own equity from early on. Capping all car costs at 10% of gross income leaves room for insurance and repairs, which lenders never ask about."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "New or used at the same budget?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A three-year-old car has already taken the biggest depreciation hit — typically 40-50% of its original price — so the same money buys more car and loses less value while you own it. The trade-off is a shorter warranty and slightly higher APR, since used-car loan rates usually run 1-2 points above new. If the used premium pushes your payment past the rule, buy older rather than borrowing longer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a car really cost beyond the payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Insurance, fuel, maintenance, tyres, tax and registration commonly add 40-60% on top of the loan payment. A 400 monthly payment realistically means 560-640 leaving your account every month. That is exactly why the 20/4/10 rule caps total car spending at 10% of gross income rather than capping the payment alone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I already have a car loan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter it in the existing payments field and the tool subtracts it from your monthly budget before sizing the new loan. If that leaves nothing, the honest answer is that you cannot add a second car at this income without breaking the rule. Paying off or selling the first car is what unlocks the budget."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Car Affordability Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Car Affordability Calculator</span></nav>
+  <section class="hero">
+    <h1>Car Affordability Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Three lender-free rules, one honest number — decided before you walk onto the lot.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .cmp { width:100%; border-collapse:collapse; margin-top:16px; font-size:14px; }
+      #tool .cmp th, #tool .cmp td { border-bottom:1px solid var(--line); padding:7px 6px; text-align:right; }
+      #tool .cmp th:first-child, #tool .cmp td:first-child { text-align:left; }
+      #tool .cmp caption { text-align:left; font-size:13px; color:var(--muted); padding-bottom:6px; }
+      #tool .cmp tr.sel td { font-weight:700; }
+      #tool .warn { color:#b45309; font-size:13px; margin-top:10px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="income" data-i18n="tool.income.label">Annual gross income</label>
+    <input type="number" id="income" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="70000">
+
+    <label for="rule" data-i18n="tool.rule.label">Affordability rule</label>
+    <select id="rule">
+      <option value="r20410" data-i18n="tool.rule.r20410">20/4/10 — conservative (20% down, 4-year loan, 10% of income)</option>
+      <option value="rgross" data-i18n="tool.rule.rgross">35% of annual income — aggressive but common</option>
+      <option value="rpay" data-i18n="tool.rule.rpay">10% of monthly income — payment cap, 5-year loan</option>
+    </select>
+
+    <label for="term" data-i18n="tool.term.label">Loan term</label>
+    <select id="term">
+      <option value="" data-i18n="tool.term.auto">Rule default (4 or 5 years)</option>
+      <option value="24"></option>
+      <option value="36"></option>
+      <option value="48"></option>
+      <option value="60"></option>
+      <option value="72"></option>
+      <option value="84"></option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="down" data-i18n="tool.down.label">Down payment available</label>
+        <input type="number" id="down" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="5000">
+      </div>
+      <div>
+        <label for="rate" data-i18n="tool.rate.label">Loan APR (%)</label>
+        <input type="number" id="rate" inputmode="decimal" min="0" max="40" step="any" autocomplete="off" placeholder="7">
+      </div>
+    </div>
+
+    <label for="debts" data-i18n="tool.debts.label">Existing monthly car payments</label>
+    <input type="number" id="debts" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0">
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate budget</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.price">Car budget</div>
+          <div class="rc-val" id="r-price">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.payment">Monthly payment</div><div class="rc-val" id="r-payment">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.loan">Loan amount</div><div class="rc-val" id="r-loan">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.term">Loan term</div><div class="rc-val" id="r-term">—</div></div>
+      </div>
+      <p class="warn" id="warn-down" hidden></p>
+      <table class="cmp">
+        <caption data-i18n="tool.cmp.title">All three rules compared</caption>
+        <thead>
+          <tr>
+            <th data-i18n="tool.cmp.rule">Rule</th>
+            <th data-i18n="tool.cmp.price">Car price</th>
+            <th data-i18n="tool.cmp.payment">Payment</th>
+          </tr>
+        </thead>
+        <tbody id="cmp-body"></tbody>
+      </table>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.tco" style="margin-top:12px;">This is the purchase budget only. Insurance, fuel, maintenance, tax and registration usually add 40-60% on top of the payment.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How much car can you actually afford?</h2>
+    <p>Ask a dealer and the answer is a monthly payment you can be talked into. Ask a lender and the answer is the largest loan your credit file will support. Neither party is asked to care about your insurance premium, your commute, or the transmission that fails in year five. That is why buyers use a rule of their own, decided at the kitchen table rather than in the finance office, and why this calculator shows three of them side by side instead of one.</p>
+
+    <h3>The three rules, and what each one assumes</h3>
+    <p>The <strong>20/4/10 rule</strong> is the conservative standard: put 20% down, finance for no more than four years, and keep total car costs — payment, insurance, fuel, maintenance — under 10% of gross income. The <strong>35% rule</strong> is a blunter shortcut used widely in the US: your car budget is 35% of annual gross income, full stop. The <strong>10% payment cap</strong> keeps the income limit but stretches the loan to five years, which buys more car for the same monthly outlay and slows down how quickly you build equity.</p>
+
+    <h3>Worked example: 70,000 income, 5,000 down, 7% APR</h3>
+    <p>Monthly gross is 5,833. Ten percent of that is a 583 monthly car budget. Financed at 7% over 48 months, 583 a month supports a loan of about 24,360, so with the 5,000 down the 20/4/10 budget lands at roughly <strong>29,360</strong>. The 35% rule ignores the loan entirely: 0.35 x 70,000 = <strong>24,500</strong>, which with 5,000 down means borrowing 19,500 and paying about 386 a month over five years. The 10% cap over 60 months supports a 29,459 loan, for a <strong>34,459</strong> car at the same 583 payment.</p>
+    <table>
+      <thead><tr><th>Rule</th><th>Car price</th><th>Payment</th><th>Term</th><th>Interest paid</th></tr></thead>
+      <tbody>
+        <tr><td>20/4/10</td><td>29,360</td><td>583</td><td>48 months</td><td>3,640</td></tr>
+        <tr><td>35% of income</td><td>24,500</td><td>386</td><td>60 months</td><td>3,668</td></tr>
+        <tr><td>10% payment cap</td><td>34,459</td><td>583</td><td>60 months</td><td>5,541</td></tr>
+      </tbody>
+    </table>
+    <p>Same income, same deposit, a 10,000 spread in what you are "allowed" to spend. The calculator also flags that 20/4/10 wants 5,872 down on a 29,360 car — slightly more than the 5,000 in this example — because the deposit requirement scales with the price the rule just produced.</p>
+
+    <h2>The cost iceberg under the payment</h2>
+    <p>The payment is the part above the waterline. In the US, average annual insurance runs well over 2,000 for a financed car carrying full coverage, fuel adds 1,500-2,500 depending on mileage, and maintenance plus tyres averages 900-1,200 once a car is out of warranty. Registration, inspection and property tax vary by state but rarely round to zero. Together these commonly add 40-60% on top of the loan payment: budget 583 for the loan and the real monthly drain is closer to 850.</p>
+    <p>That single fact is the whole argument for 20/4/10. Its 10% limit is deliberately applied to <em>all</em> car costs, not just the payment, which is why the price it produces looks stingy next to what a lender will approve. If your insurance is cheap and you drive 5,000 miles a year, you have room to lean toward the 35% figure. If you are 24 with a sports coupe quote, you do not.</p>
+
+    <h3>Buy in the right order: price, then financing, then trade-in</h3>
+    <p>Dealers make margin on all three, and mixing them lets a concession in one reappear in another. Settle the out-the-door price of the car first, in writing. Only then discuss financing, ideally against a pre-approval you already hold from a credit union or bank — a dealer can beat it, and letting them try is free. Bring up the trade-in last, once the other two numbers are locked, so its value cannot be quietly used to absorb a price you thought you had negotiated down.</p>
+
+    <h3>The 84-month trap</h3>
+    <p>Long loans have gone mainstream: 72- and 84-month terms are routine, and they always look affordable because the monthly figure is what gets quoted. Take the same 583 payment at 7% over 84 months and it supports a 43,650 car — 14,000 more than the four-year rule allows. The cost is 10,350 in interest instead of 3,640, and roughly four years spent owing more than the car is worth. Insurers total a car at market value, not loan balance, so an accident in year three of an 84-month loan leaves you paying for a vehicle you no longer have unless you bought gap coverage.</p>
+
+    <h2>Limitations of any affordability rule</h2>
+    <p>These rules use gross income because it is the number everyone knows, but you spend net. In a high-tax jurisdiction the same 10% of gross can be 14% of take-home, which is why the conservative rule earns its keep. They also assume car costs sit alongside a normal housing burden; if rent already eats 45% of your income, cut the result rather than trusting it. And they say nothing about whether the specific car is reliable — a 30,000 budget spent on a model with a known transmission fault is worse than 20,000 spent well. Use the number as a ceiling, not a target, and check the actual insurance quote for the exact car before you sign anything.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.consumerfinance.gov/consumer-tools/auto-loans/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — auto loan basics, terms and shopping for financing</a></li>
+      <li><a href="https://www.federalreserve.gov/releases/g19/current/" target="_blank" rel="noopener">Federal Reserve G.19 Consumer Credit — average new and used auto loan rates and terms</a></li>
+      <li><a href="https://www.bls.gov/cex/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics Consumer Expenditure Survey — what households actually spend on transportation</a></li>
+      <li><a href="https://www.energy.gov/energysaver/saving-money-gas" target="_blank" rel="noopener">U.S. Department of Energy — fuel costs and ways to reduce them</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/car-lease-calc/"><span class="related-ico" aria-hidden="true">🚙</span><span class="related-name">Car Lease Calculator</span></a><a class="related-item" href="https://tool-hub.me/car-payment-calc/"><span class="related-ico" aria-hidden="true">🚗</span><span class="related-name">Car Payment Calculator</span></a><a class="related-item" href="https://tool-hub.me/cd-calc/"><span class="related-ico" aria-hidden="true">📜</span><span class="related-name">CD Calculator</span></a><a class="related-item" href="https://tool-hub.me/coast-fire-calc/"><span class="related-ico" aria-hidden="true">🏖️</span><span class="related-name">Coast FIRE Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why the 20/4/10 rule?</summary><p data-i18n="faq.a1">It fixes the three things that sink car buyers: too little down, too long a loan, too much of your income. Putting 20% down keeps you ahead of depreciation, which is steepest in year one, and a four-year term means you own equity from early on. Capping all car costs at 10% of gross income leaves room for insurance and repairs, which lenders never ask about.</p></details>
+    <details><summary data-i18n="faq.q2">New or used at the same budget?</summary><p data-i18n="faq.a2">A three-year-old car has already taken the biggest depreciation hit — typically 40-50% of its original price — so the same money buys more car and loses less value while you own it. The trade-off is a shorter warranty and slightly higher APR, since used-car loan rates usually run 1-2 points above new. If the used premium pushes your payment past the rule, buy older rather than borrowing longer.</p></details>
+    <details><summary data-i18n="faq.q3">What does a car really cost beyond the payment?</summary><p data-i18n="faq.a3">Insurance, fuel, maintenance, tyres, tax and registration commonly add 40-60% on top of the loan payment. A 400 monthly payment realistically means 560-640 leaving your account every month. That is exactly why the 20/4/10 rule caps total car spending at 10% of gross income rather than capping the payment alone.</p></details>
+    <details><summary data-i18n="faq.q4">What if I already have a car loan?</summary><p data-i18n="faq.a4">Enter it in the existing payments field and the tool subtracts it from your monthly budget before sizing the new loan. If that leaves nothing, the honest answer is that you cannot add a second car at this income without breaking the rule. Paying off or selling the first car is what unlocks the budget.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

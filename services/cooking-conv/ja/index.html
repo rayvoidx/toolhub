@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-NIxJ16YnJvXJIkyCLjnygQQt34mTGwNF7yYrHMb/0Mw=' 'sha256-TIdKBtWqd8v6Lrdis2hniWy4crHFC3V79+KQzaS7GYc=' 'sha256-c/V4FRDm/YyTj3w9E7k/zMeF1A7e1sode8QUwz3mHhE='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カップ→グラム変換 — 料理の計量計算ツール</title>
+<meta name="description" content="カップ・大さじ・小さじを、小麦粉・砂糖・バター・米など材料別にグラム、オンス、ミリリットルへ変換します。小麦粉1カップと砂糖1カップは重さが違います。">
+<meta name="keywords" content="cups to grams, cooking measurement converter, tablespoon to grams, flour cups to grams, baking conversion, ml to grams">
+<link rel="canonical" href="https://tool-hub.me/cooking-conv/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/cooking-conv/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/cooking-conv/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/cooking-conv/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/cooking-conv/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/cooking-conv/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/cooking-conv/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/cooking-conv/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/cooking-conv/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/cooking-conv/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/cooking-conv/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/cooking-conv/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/cooking-conv/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/cooking-conv/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/cooking-conv/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/cooking-conv/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="カップ→グラム変換 — 料理の計量計算ツール">
+<meta property="og:description" content="カップ・大さじ・小さじを、小麦粉・砂糖・バター・米など材料別にグラム、オンス、ミリリットルへ変換します。小麦粉1カップと砂糖1カップは重さが違います。">
+<meta property="og:url" content="https://tool-hub.me/cooking-conv/ja/">
+<meta property="og:image" content="https://tool-hub.me/cooking-conv/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d97706">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Cups to Grams Converter",
+  "description": "Convert cups, tablespoons and teaspoons into grams, ounces and millilitres for flour, sugar, butter, rice and more. Ingredient-aware, because a cup of flour is not a cup of sugar.",
+  "url": "https://tool-hub.me/cooking-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-26",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Cups to Grams Converter",
+      "item": "https://tool-hub.me/cooking-conv/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is one cup of flour not the same weight as one cup of sugar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A cup measures volume, not weight, and ingredients have different densities. A cup of all-purpose flour is about 125 g, while a cup of granulated sugar is about 200 g. Converting without naming the ingredient is guesswork, which is why this tool asks which one you are measuring."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a US cup the same as a metric cup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A US cup is 236.6 ml, a metric cup (Australia, New Zealand) is 250 ml, and a UK recipe usually gives weights instead. This converter defaults to the US cup, so a metric-cup recipe will read about 6 percent light unless you pick the metric option."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does scooping technique change the result?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For flour, a lot. Scooping straight from the bag compacts it and can add 20 to 30 g per cup versus spooning it in and levelling off. If a recipe gives grams, use the scale — it removes the entire problem."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Cups to Grams Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Cups to Grams Converter</span></nav>
+  <section class="hero">
+    <h1>Cups to Grams Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Volume to weight, per ingredient — the only way cup measurements convert honestly.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="amount" data-i18n="tool.amount.label">Amount</label>
+        <input type="text" id="amount" inputmode="decimal" autocomplete="off" placeholder="1 1/2">
+      </div>
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Unit</label>
+        <select id="unit">
+          <option value="236.588">cup (US)</option>
+          <option value="14.787">tablespoon</option>
+          <option value="4.929">teaspoon</option>
+          <option value="29.574">fluid ounce (US)</option>
+          <option value="250">cup (metric)</option>
+          <option value="1">millilitre</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="ingredient" data-i18n="tool.ing.label">Ingredient</label>
+    <select id="ingredient">
+      <option value="0.529" data-i18n="tool.ing.flour">All-purpose flour</option>
+      <option value="0.845" data-i18n="tool.ing.sugar">Granulated sugar</option>
+      <option value="0.930" data-i18n="tool.ing.brown">Brown sugar (packed)</option>
+      <option value="0.959" data-i18n="tool.ing.butter">Butter</option>
+      <option value="1.000" data-i18n="tool.ing.water">Water / milk</option>
+      <option value="0.804" data-i18n="tool.ing.rice">Rice (uncooked)</option>
+      <option value="0.380" data-i18n="tool.ing.oats">Rolled oats</option>
+      <option value="0.359" data-i18n="tool.ing.cocoa">Cocoa powder</option>
+      <option value="1.420" data-i18n="tool.ing.honey">Honey</option>
+      <option value="1.217" data-i18n="tool.ing.salt">Table salt</option>
+      <option value="custom" data-i18n="tool.ing.custom">Other (enter density)</option>
+    </select>
+
+    <div id="density-row" hidden>
+      <label for="density" data-i18n="tool.density.label">Density (g per ml)</label>
+      <input type="text" id="density" inputmode="decimal" autocomplete="off" placeholder="0.6">
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Convert</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.grams">Grams</div>
+          <div class="rc-val" id="r-g">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.oz">Ounces</div><div class="rc-val" id="r-oz">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.ml">Millilitres</div><div class="rc-val" id="r-ml">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.tbsp">Tablespoons</div><div class="rc-val" id="r-tbsp">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.density" style="margin-top:12px;">Weights use standard ingredient densities; spoon-and-level your cup for the closest match.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>Why cup measurements need the ingredient named</h2>
+    <p>A cup is a unit of volume — the space something occupies. Grams measure mass. The bridge between them is density, and density changes completely from one ingredient to the next. A US cup holds 236.6 ml of anything, but filling it with flour gives roughly 125 g while the same cup of granulated sugar gives about 200 g. That is a 60 percent difference from one identical scoop, which is why a converter that ignores the ingredient will quietly ruin a recipe.</p>
+    <p>Baking is where this matters most. Bread and cake formulas depend on ratios of flour to liquid to fat; being 25 g out on flour changes hydration enough to shift crumb and rise. Cooking is more forgiving — a little extra rice or oil rarely breaks a dish — but the arithmetic is the same either way.</p>
+
+    <h3>Worked example 1: a cake recipe in cups</h3>
+    <p>The recipe asks for 2 cups all-purpose flour, 1 cup granulated sugar, and 1/2 cup butter. Converted: flour 2 x 125 = 250 g, sugar 1 x 200 = 200 g, butter 0.5 x 227 = 113 g. Sugar and butter sit close together in weight per cup while flour is far lighter — the light, airy one is exactly the ingredient most likely to be mis-measured by scooping.</p>
+
+    <h3>Worked example 2: spoons for small quantities</h3>
+    <p>One tablespoon is 14.79 ml. For honey, at roughly 1.42 g per ml, that is about 21 g — noticeably heavier than a tablespoon of water at 14.8 g. Sticky, dense ingredients like honey, molasses and syrup are where volume-to-weight surprises people most, and also where a scale beats a spoon you then have to scrape clean.</p>
+
+    <h3>Worked example 3: US cup versus metric cup</h3>
+    <p>An Australian recipe calling for 1 metric cup of rice means 250 ml, which at 0.80 g/ml is about 201 g. Reading it as a US cup gives 236.6 ml, or 190 g — about 5 percent short. One cup of rice will not ruin dinner, but across a five-ingredient bake the errors accumulate in the same direction and the dough tells on you.</p>
+
+    <h2>Reference: one US cup, by ingredient</h2>
+    <table>
+      <thead><tr><th>Ingredient</th><th>Grams per cup</th><th>Grams per tablespoon</th></tr></thead>
+      <tbody>
+        <tr><td>All-purpose flour</td><td>125</td><td>7.8</td></tr>
+        <tr><td>Granulated sugar</td><td>200</td><td>12.5</td></tr>
+        <tr><td>Brown sugar, packed</td><td>220</td><td>13.8</td></tr>
+        <tr><td>Butter</td><td>227</td><td>14.2</td></tr>
+        <tr><td>Water or milk</td><td>237</td><td>14.8</td></tr>
+        <tr><td>Rice, uncooked</td><td>190</td><td>11.9</td></tr>
+        <tr><td>Rolled oats</td><td>90</td><td>5.6</td></tr>
+        <tr><td>Cocoa powder</td><td>85</td><td>5.3</td></tr>
+        <tr><td>Honey</td><td>336</td><td>21.0</td></tr>
+        <tr><td>Table salt</td><td>288</td><td>18.0</td></tr>
+      </tbody>
+    </table>
+
+    <h2>How to measure so the numbers hold</h2>
+    <p>For flour and other powders, spoon the ingredient into the cup and level the top with a straight edge. Dipping the cup into the bag compacts the flour and can add 20 to 30 g per cup — the single largest source of error in home baking. Brown sugar is the exception: recipes assume it is packed down firmly, which is why its density is so much higher than granulated sugar.</p>
+    <p>Butter is easier than it looks. A standard US stick is 113 g, or half a cup, and the wrapper is usually marked in tablespoons. Liquids should be read at eye level in a clear jug rather than a dry-measure cup, since the meniscus makes a surprising difference at small volumes.</p>
+    <p>None of this is needed if you own a kitchen scale. Weighing is faster, uses fewer dishes, and removes packing technique from the equation entirely. Use this converter to translate a cup-based recipe into grams once, write the grams in the margin, and you never have to think about it again.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">USDA FoodData Central — official food composition data including gram weights for common household measures</a></li>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures — legal definitions of the US cup, fluid ounce and metric equivalents</a></li>
+      <li><a href="https://www.fda.gov/food/food-labeling-nutrition" target="_blank" rel="noopener">FDA Food Labeling &amp; Nutrition — reference amounts and serving-size measures used on US labels</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/decking-calc/"><span class="related-ico" aria-hidden="true">🏗️</span><span class="related-name">Decking Calculator</span></a><a class="related-item" href="https://tool-hub.me/dog-age-calc/"><span class="related-ico" aria-hidden="true">🐕</span><span class="related-name">Dog Age Calculator</span></a><a class="related-item" href="https://tool-hub.me/drywall-calc/"><span class="related-ico" aria-hidden="true">🛠️</span><span class="related-name">Drywall Calculator</span></a><a class="related-item" href="https://tool-hub.me/ev-charging-calc/"><span class="related-ico" aria-hidden="true">🔋</span><span class="related-name">EV Charging Time Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why is one cup of flour not the same weight as one cup of sugar?</summary><p data-i18n="faq.a1">A cup measures volume, not weight, and ingredients have different densities. A cup of all-purpose flour is about 125 g, while a cup of granulated sugar is about 200 g. Converting without naming the ingredient is guesswork, which is why this tool asks which one you are measuring.</p></details>
+    <details><summary data-i18n="faq.q2">Is a US cup the same as a metric cup?</summary><p data-i18n="faq.a2">No. A US cup is 236.6 ml, a metric cup (Australia, New Zealand) is 250 ml, and a UK recipe usually gives weights instead. This converter defaults to the US cup, so a metric-cup recipe will read about 6 percent light unless you pick the metric option.</p></details>
+    <details><summary data-i18n="faq.q3">How much does scooping technique change the result?</summary><p data-i18n="faq.a3">For flour, a lot. Scooping straight from the bag compacts it and can add 20 to 30 g per cup versus spooning it in and levelling off. If a recipe gives grams, use the scale — it removes the entire problem.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-O2dk3l/yV39SQnoNGqWrsefNd66q0g1HuAhufWvkEbg=' 'sha256-liblZkNj39HrBsad0WlnMn7q2kRQzEbQWqRVkpZz9kY=' 'sha256-A63GTxLJ394K+x+Yh6wiR0hi/dMXWNtQ8FQI3Rb5z10='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>植え付け間隔計算ツール — 必要な苗の数</title>
+<meta name="description" content="花壇の長さ・幅と株間を入力すると必要な苗数がわかります。正方形配置と三角（千鳥）配置を比べ、面積あたりの株数も確認できます。">
+<meta name="keywords" content="plant spacing calculator, how many plants do i need, plants per square foot, garden spacing calculator, triangular plant spacing, square foot gardening spacing">
+<link rel="canonical" href="https://tool-hub.me/plant-spacing-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/plant-spacing-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/plant-spacing-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/plant-spacing-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/plant-spacing-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/plant-spacing-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/plant-spacing-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/plant-spacing-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/plant-spacing-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/plant-spacing-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/plant-spacing-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/plant-spacing-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/plant-spacing-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/plant-spacing-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/plant-spacing-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/plant-spacing-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="植え付け間隔計算ツール — 必要な苗の数">
+<meta property="og:description" content="花壇の長さ・幅と株間を入力すると必要な苗数がわかります。正方形配置と三角（千鳥）配置を比べ、面積あたりの株数も確認できます。">
+<meta property="og:url" content="https://tool-hub.me/plant-spacing-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/plant-spacing-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Plant Spacing Calculator",
+  "description": "Work out how many plants fill a bed from its length, width and spacing. Compare square grid with triangular offset planting and see plants per square foot.",
+  "url": "https://tool-hub.me/plant-spacing-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Plant Spacing Calculator",
+      "item": "https://tool-hub.me/plant-spacing-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Square grid or triangular spacing — which fits more plants?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Triangular (offset) spacing packs about 15% more plants into the same area because staggered rows sit only 0.866 of the spacing apart. On a large bed that gain shows up in full; on a narrow bed it only helps if the tighter row spacing lets one extra row fit. Triangular planting also closes the canopy faster, which shades out weeds sooner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use the spacing printed on the seed packet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — that figure is the room a mature plant needs, not the space a seedling occupies. Newly planted beds always look too empty at the recommended spacing. If the packet gives a range, use the smaller number for cut-and-come-again harvests and the larger one if you want full-size heads or fruit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What spacing do I use when I mix different plants?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Space each neighbouring pair by the larger of the two requirements, since the bigger plant sets the distance. A tomato at 24 in next to basil at 12 in gets 24 in between them. For a mixed bed, run this calculator once per plant on the section of the bed each one occupies rather than treating the whole bed as one crop."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does this relate to square foot gardening?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Square foot gardening rounds spacing into 1, 4, 9 or 16 plants per square foot, which corresponds to 12, 6, 4 and 3 inch spacing. This calculator does the same arithmetic without rounding to whole squares, so it also handles 8, 10 or 18 inch spacing and beds whose sides are not whole feet."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Plant Spacing Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Plant Spacing Calculator</span></nav>
+  <section class="hero">
+    <h1>Plant Spacing Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Give the bed size and the spacing on the label — get the plant count before you buy.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .unit-tag { font-size:12px; color:var(--muted); font-weight:600; margin-left:6px; }
+      #tool .check-row { display:flex; align-items:center; gap:8px; margin:12px 0 4px; }
+      #tool .check-row input { width:auto; margin:0; }
+      #tool .check-row label { margin:0; font-weight:500; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:30px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="unit" data-i18n="tool.unit.label">Units</label>
+    <select id="unit">
+      <option value="ft" data-i18n="tool.unit.ft">Feet and inches</option>
+      <option value="m" data-i18n="tool.unit.m">Metres and centimetres</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="len"><span data-i18n="tool.len.label">Bed length</span><span class="unit-tag" id="len-unit" data-i18n="tool.abbr.ft">ft</span></label>
+        <input type="number" id="len" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="10">
+      </div>
+      <div>
+        <label for="wid"><span data-i18n="tool.wid.label">Bed width</span><span class="unit-tag" id="wid-unit" data-i18n="tool.abbr.ft">ft</span></label>
+        <input type="number" id="wid" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="4">
+      </div>
+    </div>
+
+    <label for="spacing"><span data-i18n="tool.spacing.label">Plant spacing</span><span class="unit-tag" id="sp-unit" data-i18n="tool.abbr.in">in</span></label>
+    <input type="number" id="spacing" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12">
+
+    <label for="rowsp"><span data-i18n="tool.rowsp.label">Row spacing (optional — defaults to plant spacing)</span><span class="unit-tag" id="rs-unit" data-i18n="tool.abbr.in">in</span></label>
+    <input type="number" id="rowsp" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="18">
+
+    <label for="price" data-i18n="tool.price.label">Price per plant (optional)</label>
+    <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="2.50">
+
+    <label for="pattern" data-i18n="tool.pattern.label">Planting pattern</label>
+    <select id="pattern">
+      <option value="square" data-i18n="tool.pattern.square">Square grid — straight rows and columns</option>
+      <option value="tri" data-i18n="tool.pattern.tri">Triangular / offset — staggered rows</option>
+    </select>
+
+    <div class="check-row">
+      <input type="checkbox" id="edge" checked>
+      <label for="edge" data-i18n="tool.edge.label">Leave a half-spacing gap at the bed edges</label>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.plants">Plants needed</div>
+          <div class="rc-val" id="r-plants">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.layout">Layout</div><div class="rc-val" id="r-layout">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.density">Planting density</div><div class="rc-val" id="r-density">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.spacing">Spacing used</div><div class="rc-val" id="r-spacing">—</div></div>
+        <div class="rcard" id="cost-card" hidden><div class="rc-label" data-i18n="tool.r.cost">Estimated cost</div><div class="rc-val" id="r-cost">—</div></div>
+      </div>
+      <p class="subtle" id="note-tri" hidden></p>
+      <p class="subtle" id="note-tight" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.tip" style="margin-top:12px;">Seed packets and nursery tags quote the spacing a mature plant needs, not the space a seedling looks like it wants.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How many plants actually fit in a raised bed</h2>
+    <p>Nurseries sell plants by the tray, not by the bed. The gap between "I have a 10 by 4 foot bed" and "I need this many six-packs of lettuce" is one piece of arithmetic, and getting it wrong costs money in both directions: buy too few and you make a second trip, buy too many and you crowd the bed into a mildew farm. This calculator turns bed size plus the spacing printed on the tag into a plant count, a row-by-row layout you can mark out with string, and a density figure you can sanity-check against experience.</p>
+
+    <h3>Worked example: a 10 ft × 4 ft bed at 12 in spacing</h3>
+    <p>Convert everything to inches first: the bed is 120 in long and 48 in wide. With the edge-gap option on, the tool reserves half a spacing (6 in) at each end, so the usable run is 120 − 12 = 108 in. Dividing by 12 gives 9 gaps, and 9 gaps means 10 plants across. The same logic across the width gives (48 − 12) ÷ 12 = 3 gaps, so 4 rows. Ten columns × four rows = <strong>40 plants</strong>, or exactly 1.0 per square foot.</p>
+    <p>Turn the edge gap off and the plants sit right on the bed edges instead: 120 ÷ 12 = 10 gaps = 11 columns, and 48 ÷ 12 = 4 gaps = 5 rows, for 55 plants. That is a 38% jump from one checkbox, which is why the setting matters more than most gardeners expect. Keep the gap on for anything leafy that flops over the frame, turn it off when the bed is bordered by a path you can harvest from.</p>
+
+    <h3>The same bed, triangular spacing</h3>
+    <p>In a triangular (offset) layout each row is shifted half a space sideways, so rows can sit closer without any two neighbours ending up nearer than the spacing you asked for. The row gap becomes spacing × 0.866 — the height of an equilateral triangle with sides of 12 in, which is 10.39 in. On this bed, (48 − 12) ÷ 10.39 gives 3 gaps, so still 4 rows: the width is too narrow for the tighter rows to buy an extra one. The offset rows also lose one plant each (9 instead of 10), so the total lands at 2 × 10 + 2 × 9 = <strong>38 plants</strong> — slightly fewer than the square grid.</p>
+    <p>Widen the bed to 10 ft × 10 ft and the picture flips. The square grid gives 10 × 10 = 100 plants; the triangular layout fits 11 rows (108 ÷ 10.39 = 10.4 gaps) alternating 10 and 9 plants, for 105. On a field-sized planting the gain converges on the theoretical 15.5% (1 ÷ 0.866), because edge effects stop mattering. The rule of thumb: triangular spacing pays off on wide beds and open ground, and is roughly neutral on a narrow bed. It still closes the canopy faster, which suppresses weeds and keeps soil moisture in.</p>
+
+    <h2>Square foot gardening in one table</h2>
+    <p>Mel Bartholomew's method is the same maths rounded to whole squares. Each square foot holds a whole number of plants, which maps directly onto spacing:</p>
+    <table>
+      <thead><tr><th>Spacing</th><th>Per square foot</th><th>Typical crops</th></tr></thead>
+      <tbody>
+        <tr><td>12 in / 30 cm</td><td>1</td><td>Tomato, pepper, broccoli, cabbage</td></tr>
+        <tr><td>6 in / 15 cm</td><td>4</td><td>Lettuce, chard, garlic, strawberry</td></tr>
+        <tr><td>4 in / 10 cm</td><td>9</td><td>Bush beans, spinach, beetroot</td></tr>
+        <tr><td>3 in / 7.5 cm</td><td>16</td><td>Carrot, radish, spring onion</td></tr>
+      </tbody>
+    </table>
+    <p>The calculator does not round to whole squares, so it also handles the awkward numbers the method skips — 8 in for kale, 10 in for bush courgette, 18 in for a determinate tomato — and beds that are 3 ft 6 in wide rather than a tidy 4 ft.</p>
+
+    <h2>Spacing versus thinning</h2>
+    <p>Direct-sown seed is a different job from transplants. You sow thickly, then thin to the final spacing once the seedlings have their first true leaves. So use the final spacing here to get your plant count, then buy seed by the packet rather than by the plant: a carrot packet holds hundreds of seeds and you will thin most of them out. For transplants — module-raised brassicas, bought six-packs, plug plants — the number this tool gives is exactly what you buy, plus perhaps 10% for losses to slugs and transplant shock.</p>
+
+    <h3>What this calculator does not know</h3>
+    <p>It assumes a rectangle, flat ground and one crop. It does not account for a trellis line down the middle, the shaded strip along a north fence, paths you need for access, or plants that need staking room. It also treats spacing as a hard minimum, when in reality vigorous soil and generous watering let you push closer while poor dry soil demands more. Treat the result as the planting plan you mark out with string, then adjust by eye for the bed you actually have.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nal.usda.gov/" target="_blank" rel="noopener">USDA National Agricultural Library — vegetable growing guides, plant spacing and home garden references</a></li>
+      <li><a href="https://planthardiness.ars.usda.gov/" target="_blank" rel="noopener">USDA Plant Hardiness Zone Map — which crops and planting dates suit your area</a></li>
+      <li><a href="https://www.ars.usda.gov/" target="_blank" rel="noopener">USDA Agricultural Research Service — research on planting density, row layout and crop yield</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/pool-volume-calc/"><span class="related-ico" aria-hidden="true">🏊</span><span class="related-name">Pool Volume Calculator</span></a><a class="related-item" href="https://tool-hub.me/propane-calc/"><span class="related-ico" aria-hidden="true">🔥</span><span class="related-name">Propane Tank Calculator</span></a><a class="related-item" href="https://tool-hub.me/ramp-calc/"><span class="related-ico" aria-hidden="true">♿</span><span class="related-name">Wheelchair Ramp Calculator</span></a><a class="related-item" href="https://tool-hub.me/rebar-calc/"><span class="related-ico" aria-hidden="true">🔩</span><span class="related-name">Rebar Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Square grid or triangular spacing — which fits more plants?</summary><p data-i18n="faq.a1">Triangular (offset) spacing packs about 15% more plants into the same area because staggered rows sit only 0.866 of the spacing apart. On a large bed that gain shows up in full; on a narrow bed it only helps if the tighter row spacing lets one extra row fit. Triangular planting also closes the canopy faster, which shades out weeds sooner.</p></details>
+    <details><summary data-i18n="faq.q2">Should I use the spacing printed on the seed packet?</summary><p data-i18n="faq.a2">Yes — that figure is the room a mature plant needs, not the space a seedling occupies. Newly planted beds always look too empty at the recommended spacing. If the packet gives a range, use the smaller number for cut-and-come-again harvests and the larger one if you want full-size heads or fruit.</p></details>
+    <details><summary data-i18n="faq.q3">What spacing do I use when I mix different plants?</summary><p data-i18n="faq.a3">Space each neighbouring pair by the larger of the two requirements, since the bigger plant sets the distance. A tomato at 24 in next to basil at 12 in gets 24 in between them. For a mixed bed, run this calculator once per plant on the section of the bed each one occupies rather than treating the whole bed as one crop.</p></details>
+    <details><summary data-i18n="faq.q4">How does this relate to square foot gardening?</summary><p data-i18n="faq.a4">Square foot gardening rounds spacing into 1, 4, 9 or 16 plants per square foot, which corresponds to 12, 6, 4 and 3 inch spacing. This calculator does the same arithmetic without rounding to whole squares, so it also handles 8, 10 or 18 inch spacing and beds whose sides are not whole feet.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-V+P/mwTV3wBsaA1dRRDeKdFGTuUZN17wmhpV9xg/p3M=' 'sha256-wd+TXD3MzZLVSwMW6njczRsVkLuXRt0wGXG6wXKILjM=' 'sha256-MP4Tc+fQYwawjRDrMdNkT9nI9ADHPqK3RRs+lb1ivps='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de hipoteca — Cuota, intereses y tabla de amortización</title>
+<meta name="description" content="Introduce el importe del préstamo (o el precio de la vivienda y la entrada), el tipo de interés y el plazo para obtener la cuota mensual, el interés total, el total pagado y una tabla de amortización completa. Gratis, calculado en tu navegador.">
+<meta name="keywords" content="mortgage calculator, mortgage payment calculator, home loan calculator, amortization calculator, house payment calculator, 모기지 계산기, 주택담보대출 계산기">
+<link rel="canonical" href="https://tool-hub.me/mortgage-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/mortgage-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/mortgage-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/mortgage-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/mortgage-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/mortgage-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/mortgage-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/mortgage-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/mortgage-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/mortgage-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/mortgage-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/mortgage-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/mortgage-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/mortgage-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/mortgage-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/mortgage-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de hipoteca — Cuota, intereses y tabla de amortización">
+<meta property="og:description" content="Introduce el importe del préstamo (o el precio de la vivienda y la entrada), el tipo de interés y el plazo para obtener la cuota mensual, el interés total, el total pagado y una tabla de amortización completa. Gratis, calculado en tu navegador.">
+<meta property="og:url" content="https://tool-hub.me/mortgage-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/mortgage-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Mortgage Calculator",
+  "description": "Enter the loan amount (or home price and down payment), interest rate, and term to get the monthly payment, total interest, total paid, and a full amortization schedule. Free, computed in your browser.",
+  "url": "https://tool-hub.me/mortgage-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-22",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Mortgage Calculator — Payment, Interest & Payoff Schedule",
+      "item": "https://tool-hub.me/mortgage-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is my monthly mortgage payment calculated? Formula and example",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The standard formula is M = P × [r(1+r)^n] / [(1+r)^n − 1], where P is the loan amount, r is the monthly interest rate (annual rate ÷ 12), and n is the number of monthly payments (years × 12). For example, a $300,000 loan at a 6.5% annual rate for 30 years gives a monthly rate of about 0.542% and 360 payments, which works out to a monthly principal-and-interest payment of roughly $1,896 and total interest of about $382,700 over the full term. This mortgage calculator runs that formula instantly as you type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I enter the loan amount directly, or the home price and down payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use whichever you know. If you've already decided how much you're borrowing, enter the loan amount directly. If you're comparing a home price against different down payments, switch to \"Home price & down payment\" — the calculator subtracts your down payment from the price to get the loan amount automatically, and shows what percentage of the price your down payment covers. Putting down at least 20% often avoids private mortgage insurance (PMI) on conventional loans, but minimum requirements vary by lender and loan type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do extra monthly payments really save on interest and payoff time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every extra dollar you send goes straight to principal instead of interest, so it compounds: paying down the balance faster means less interest accrues on it every month afterward. Even a modest recurring extra payment can shave several years off a 30-year loan and save a meaningful five- or six-figure amount in interest, depending on your balance, rate, and how early you start. Enter an amount in \"Extra monthly payment\" and this mortgage calculator shows your exact interest saved and new payoff time side by side with the original schedule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator include property taxes, home insurance, or PMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — the monthly payment shown is principal and interest (P&I) only, which is what the standard mortgage formula computes. Real-world monthly housing costs (sometimes called PITI) also include property taxes, homeowners insurance, and often mortgage insurance (PMI) if your down payment is under 20%, plus any HOA dues. These vary widely by location and lender, so check your loan estimate or ask your lender for the full picture before budgeting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my loan information sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This mortgage calculator runs entirely in your browser — the loan amount, home price, interest rate, and every other figure you enter never leave your device and nothing is uploaded or stored on a server. There's no sign-up and no tracking of your numbers, so you can compare loan scenarios with complete privacy."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 2026-08-02 모바일 360px 오버플로 수리 (qa-deep) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Mortgage Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Mortgage Calculator</span></nav>
+  <section class="hero">
+    <h1>Mortgage Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter your loan amount — or a home price and down payment — plus the interest rate and term to see your monthly payment, total interest, total cost, and a full year-by-year amortization schedule.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Mortgage calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .fieldlabel { font-weight:600; font-size:14px; margin:14px 0 0; }
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+      #tool .chip { padding:7px 14px; font-size:14px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .chip.is-active { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool .seg { display:inline-flex; border:1px solid var(--line); border-radius:8px; overflow:hidden; margin-top:8px; }
+      #tool .seg-btn { margin:0; padding:8px 16px; font-weight:600; font-size:14px; cursor:pointer; color:var(--muted); position:relative; }
+      #tool .seg-btn.is-active { background:var(--accent); color:#fff; }
+      #tool .seg-btn input { position:absolute; opacity:0; width:0; height:0; pointer-events:none; }
+      #tool .hint { font-size:13px; color:var(--muted); margin:4px 0 0; }
+      #tool .row2 { display:flex; gap:12px; flex-wrap:wrap; }
+      #tool .row2 > div { flex:1 1 140px; }
+      #tool select#currency-select { width:100%; padding:12px 14px; font-size:16px; font-family:inherit;
+        border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--ink); }
+      #tool details#more-details { margin-top:18px; }
+      #tool details#more-details summary { font-weight:600; font-size:14px; color:var(--muted); cursor:pointer; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; overflow-wrap:anywhere; }
+      #tool .extra-block { margin-top:18px; padding-top:14px; border-top:1px dashed var(--line); }
+      #tool .extra-block .rc-val { color:#059669; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin:10px 0 0; }
+      #tool .disclaimer { font-size:12px; color:var(--muted); margin:12px 0 0; padding-top:10px; border-top:1px solid var(--line); }
+      #tool details#sched-details { margin-top:18px; padding-top:14px; border-top:1px solid var(--line); }
+      #tool details#sched-details summary { font-weight:700; cursor:pointer; }
+      #tool .sched-toggle { display:flex; align-items:center; gap:8px; margin:12px 0 8px; font-size:14px; font-weight:600; cursor:pointer; }
+      #tool .sched-toggle input { width:auto; flex:0 0 auto; }
+      #tool .sched-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+      #tool table.sched { width:100%; border-collapse:collapse; font-size:13.5px; }
+      #tool table.sched th, #tool table.sched td { padding:6px 10px; text-align:right; border-bottom:1px solid var(--line); white-space:nowrap; font-variant-numeric:tabular-nums; }
+      #tool table.sched th:first-child, #tool table.sched td:first-child { text-align:left; }
+      #tool table.sched thead th { color:var(--muted); font-weight:600; font-size:12px; }
+      @media (max-width:420px) {
+        #tool table.sched { font-size:12px; }
+        #tool table.sched th, #tool table.sched td { padding:5px 7px; }
+      }
+    </style>
+
+    <p class="fieldlabel" id="mode-legend" data-i18n="tool.mode.legend">How do you want to enter the loan?</p>
+    <div class="seg" id="mode-seg" role="radiogroup" aria-labelledby="mode-legend">
+      <label class="seg-btn is-active"><input type="radio" name="loanmode" value="loan" checked><span data-i18n="tool.mode.loan">Loan amount</span></label>
+      <label class="seg-btn"><input type="radio" name="loanmode" value="price"><span data-i18n="tool.mode.price">Home price & down payment</span></label>
+    </div>
+
+    <div id="loan-field">
+      <label for="loan-input" data-i18n="tool.loan.label">Loan amount</label>
+      <input type="text" id="loan-input" inputmode="numeric" autocomplete="off"
+             placeholder="e.g. 300,000" data-i18n-placeholder="tool.loan.ph">
+    </div>
+
+    <div id="price-field" hidden>
+      <label for="price-input" data-i18n="tool.price.label">Home price</label>
+      <input type="text" id="price-input" inputmode="numeric" autocomplete="off"
+             placeholder="e.g. 380,000" data-i18n-placeholder="tool.price.ph">
+      <label for="down-input" data-i18n="tool.down.label">Down payment</label>
+      <input type="text" id="down-input" inputmode="numeric" autocomplete="off"
+             placeholder="e.g. 76,000" data-i18n-placeholder="tool.down.ph">
+      <div class="chips" id="down-chips" role="group" aria-label="Down payment percentage presets" data-i18n-aria-label="tool.down.chipsAria">
+        <button type="button" class="chip" data-downpct="3.5">3.5%</button>
+        <button type="button" class="chip" data-downpct="5">5%</button>
+        <button type="button" class="chip" data-downpct="10">10%</button>
+        <button type="button" class="chip" data-downpct="15">15%</button>
+        <button type="button" class="chip" data-downpct="20">20%</button>
+        <button type="button" class="chip" data-downpct="25">25%</button>
+      </div>
+      <p class="hint" id="down-hint"></p>
+    </div>
+
+    <div class="row2">
+      <div>
+        <label for="rate-input" data-i18n="tool.rate.label">Annual interest rate (%)</label>
+        <input type="number" id="rate-input" inputmode="decimal" min="0" max="30" step="0.01"
+               placeholder="e.g. 6.5" data-i18n-placeholder="tool.rate.ph">
+      </div>
+      <div>
+        <label for="term-input" data-i18n="tool.term.label">Loan term (years)</label>
+        <input type="number" id="term-input" inputmode="numeric" min="1" max="50" step="1"
+               placeholder="e.g. 30" data-i18n-placeholder="tool.term.ph">
+      </div>
+    </div>
+    <div class="chips" id="term-chips" role="group" aria-label="Loan term presets" data-i18n-aria-label="tool.term.chipsAria">
+      <button type="button" class="chip" data-term="10">10</button>
+      <button type="button" class="chip" data-term="15">15</button>
+      <button type="button" class="chip" data-term="20">20</button>
+      <button type="button" class="chip" data-term="25">25</button>
+      <button type="button" class="chip" data-term="30">30</button>
+      <button type="button" class="chip" data-term="40">40</button>
+    </div>
+
+    <label for="currency-select" data-i18n="tool.currency.label">Currency</label>
+    <select id="currency-select"></select>
+
+    <details id="more-details">
+      <summary data-i18n="tool.more.summary">More options</summary>
+      <label for="extra-input" style="margin-top:12px;" data-i18n="tool.extra.label">Extra monthly payment (optional)</label>
+      <input type="text" id="extra-input" inputmode="numeric" autocomplete="off"
+             placeholder="e.g. 200" data-i18n-placeholder="tool.extra.ph">
+      <p class="hint" data-i18n="tool.extra.hint">Added to principal every month — pay off sooner and save on interest.</p>
+      <div class="row2" style="margin-top:12px;">
+        <div>
+          <label for="tax-input" data-i18n="tool.tax.label">Property tax (per year, optional)</label>
+          <input type="text" id="tax-input" inputmode="numeric" autocomplete="off" placeholder="e.g. 3,600">
+        </div>
+        <div>
+          <label for="ins-input" data-i18n="tool.ins.label">Home insurance + HOA (per year, optional)</label>
+          <input type="text" id="ins-input" inputmode="numeric" autocomplete="off" placeholder="e.g. 1,800">
+        </div>
+      </div>
+    </details>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <div class="result-cards">
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.monthly">Monthly payment (P&I)</div><div class="rc-val" id="r-monthly"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.loanAmount">Loan amount</div><div class="rc-val" id="r-loan"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.totalInterest">Total interest</div><div class="rc-val" id="r-interest"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.totalPaid">Total paid (principal + interest)</div><div class="rc-val" id="r-total"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.payoffTime">Payoff time</div><div class="rc-val" id="r-payoff"></div></div>
+          <div class="rcard" id="piti-card" hidden><div class="rc-label" data-i18n="tool.result.piti">Total monthly payment (with taxes &amp; insurance)</div><div class="rc-val" id="r-piti"></div></div>
+        </div>
+        <p class="subtle" id="r-sub"></p>
+        <p class="subtle" id="r-clipped" data-i18n="tool.note.clipped" hidden>Some values were above the allowed range and were capped for this calculation.</p>
+
+        <div class="extra-block" id="extra-result" hidden>
+          <p class="fieldlabel" style="margin-top:0;" data-i18n="tool.extra.heading">With your extra payment</p>
+          <div class="result-cards">
+            <div class="rcard"><div class="rc-label" data-i18n="tool.extra.interestSaved">Interest saved</div><div class="rc-val" id="r-saved"></div></div>
+            <div class="rcard"><div class="rc-label" data-i18n="tool.extra.timeSaved">Time saved</div><div class="rc-val" id="r-timesaved"></div></div>
+            <div class="rcard"><div class="rc-label" data-i18n="tool.extra.newPayoff">New payoff time</div><div class="rc-val" id="r-newpayoff"></div></div>
+          </div>
+        </div>
+
+        <p class="subtle" data-i18n="tool.note.pi">Shows principal and interest (P&I) only — it doesn't include property tax, homeowners insurance, PMI, or HOA dues, which vary by lender and location.</p>
+        <p class="subtle" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+        <p class="disclaimer" data-i18n="tool.disclaimer">This is an educational estimate, not financial, tax, or lending advice; confirm exact terms with your lender.</p>
+
+        <details id="sched-details">
+          <summary data-i18n="tool.sched.summary">Full amortization schedule</summary>
+          <label class="sched-toggle" for="sched-monthly-toggle">
+            <input type="checkbox" id="sched-monthly-toggle">
+            <span data-i18n="tool.sched.monthlyToggle">Show monthly breakdown instead of yearly</span>
+          </label>
+          <div class="sched-wrap">
+            <table class="sched">
+              <thead>
+                <tr>
+                  <th id="sched-col-period" data-i18n="tool.sched.col.year">Year</th>
+                  <th data-i18n="tool.sched.col.principal">Principal</th>
+                  <th data-i18n="tool.sched.col.interest">Interest</th>
+                  <th data-i18n="tool.sched.col.balance">Remaining balance</th>
+                </tr>
+              </thead>
+              <tbody id="sched-body"></tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>A closer look at your mortgage</h2>
+    <p>A mortgage differs from a general loan in one key way: it's secured by the home, and lenders size it around loan-to-value (LTV) — how much you're borrowing against what the home is worth. This calculator covers what's identical across every fixed-rate mortgage: the principal-and-interest (P&I) payment, how it splits between interest and principal over time, and how a down payment or extra monthly payment changes the outcome. It's most useful while shopping for a home, comparing a 15-, 20-, or 30-year term, or deciding whether extra payments toward principal are worth it.</p>
+
+    <h3>Reading the inputs correctly</h3>
+    <ol>
+      <li>Pick "Loan amount" if you know the exact borrowed amount, or "Home price & down payment" to compare different down payment levels.</li>
+      <li>In price mode, type the down payment or use the 5% / 10% / 20% chips — the loan amount and percentage are computed automatically.</li>
+      <li>Enter the annual rate as quoted (e.g. 6.5), not the monthly rate — the calculator divides by 12 internally.</li>
+      <li>Set the term, or use the 15 / 20 / 30 chips for common fixed terms.</li>
+      <li>Optionally add an extra monthly payment under "More options" to see interest saved and the new payoff time.</li>
+    </ol>
+
+    <h3>The formula behind the monthly payment</h3>
+    <div class="example">
+      <p><strong>M = P × [r(1+r)ⁿ] / [(1+r)ⁿ − 1]</strong></p>
+      <p>P is the loan amount, r is the monthly rate (annual rate ÷ 12), n is the number of payments (years × 12). The payment is fixed, but its split shifts over time: each month, interest is charged on the remaining balance, and the rest reduces principal. Because the balance starts largest, early payments are mostly interest; as the balance shrinks, later payments are mostly principal — even though the payment itself never changes.</p>
+    </div>
+
+    <h3>Worked example: home price and down payment</h3>
+    <div class="example">
+      <p>A $450,000 home with 10% down ($45,000) leaves a $405,000 loan at 6.75% for 30 years. Monthly rate 0.5625%, n = 360, giving a P&I payment of about <strong>$2,626.82</strong>. Over 30 years that's roughly $945,656 total, of which about <strong>$540,656</strong> is interest — more than the home price. Raising the down payment to 20% ($90,000) instead shrinks the loan to $360,000 and the payment to about $2,335, showing how much leverage the down payment has over both figures.</p>
+    </div>
+
+    <h3>Worked example: choosing a term</h3>
+    <div class="example">
+      <p>On a $300,000 loan at 6.5%, 15 years costs about $2,613/month with about $170,398 total interest. Thirty years drops the payment to about $1,896/month but more than doubles total interest to about $382,633. Neither is "correct" — 15 years builds equity faster and costs less overall; 30 years frees up monthly cash flow. The table below lines up all three.</p>
+    </div>
+
+    <h3>Worked example: paying extra toward principal</h3>
+    <div class="example">
+      <p>Take that same $300,000 loan at 6.5% (base payment $1,896.20) and add $250 extra every month. The loan pays off in 262 months (21 years 10 months) instead of 360 — 98 months sooner — and total interest drops from about $382,633 to about $262,297, saving roughly <strong>$120,337</strong>. Extra payments save more the earlier they start, since they cut the balance while interest is still accruing on the largest amounts.</p>
+    </div>
+
+    <h3>Down payment, LTV, and PMI at a glance</h3>
+    <p>For that same $450,000 home, here's how down payment size changes LTV and whether private mortgage insurance (PMI) typically applies on a conventional loan:</p>
+    <table>
+      <thead><tr><th>Down payment</th><th>Amount</th><th>Loan amount</th><th>LTV</th><th>PMI usually required?</th></tr></thead>
+      <tbody>
+        <tr><td>5%</td><td>$22,500</td><td>$427,500</td><td>95%</td><td>Yes</td></tr>
+        <tr><td>10%</td><td>$45,000</td><td>$405,000</td><td>90%</td><td>Yes</td></tr>
+        <tr><td>20%</td><td>$90,000</td><td>$360,000</td><td>80%</td><td>Usually not</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--muted)">PMI rules vary by lender and program (FHA/VA have their own structures) — treat 80% LTV as a rule of thumb, not a guarantee.</p>
+
+    <h3>Term comparison at a glance</h3>
+    <table>
+      <thead><tr><th>Term</th><th>Monthly P&I</th><th>Total interest</th><th>Total paid</th></tr></thead>
+      <tbody>
+        <tr><td>15 years</td><td>$2,613.32</td><td>$170,398</td><td>$470,398</td></tr>
+        <tr><td>20 years</td><td>$2,236.72</td><td>$236,813</td><td>$536,813</td></tr>
+        <tr><td>30 years</td><td>$1,896.20</td><td>$382,633</td><td>$682,633</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--muted)">Figures assume a $300,000 loan at a fixed 6.5% rate with no extra payments.</p>
+
+    <h3>Common mistakes and things people overlook</h3>
+    <ul>
+      <li><strong>Confusing P&I with the full housing payment.</strong> The result here is principal and interest only. Real monthly cost (PITI) also includes property taxes, homeowners insurance, PMI, and HOA dues, which can add several hundred dollars a month.</li>
+      <li><strong>Judging a loan by payment alone.</strong> A lower payment from a longer term can still mean far more total interest, as the term table shows.</li>
+      <li><strong>Assuming extra payments apply automatically.</strong> With a real servicer, confirm extra payments are marked principal-only — otherwise they may just be credited as a future payment instead of reducing interest.</li>
+      <li><strong>Assuming PMI lasts forever.</strong> On conventional loans it can usually be removed near 78–80% LTV; the amortization schedule helps estimate that timing.</li>
+      <li><strong>Ignoring points and closing costs.</strong> A lower rate bought with discount points has an upfront cost this calculator doesn't include — compare it against the monthly savings separately.</li>
+    </ul>
+
+    <h3>What this calculator doesn't cover</h3>
+    <p>This tool assumes a fixed rate for the full term; it doesn't model adjustable-rate mortgages, rate resets, refinancing, points, or closing costs, and it doesn't estimate property taxes, insurance, PMI dollars, or HOA dues — all local and lender-specific. Treat the output as an educational estimate of the loan math, not a substitute for a lender's official loan estimate.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.consumerfinance.gov/owning-a-home/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — official guide to mortgage shopping, loan estimates and closing costs</a></li>
+      <li><a href="https://www.federalreserve.gov/consumerscommunities/mortgage-resources.htm" target="_blank" rel="noopener">Federal Reserve — consumer mortgage resources on rates, ARMs and refinancing</a></li>
+      <li><a href="https://www.irs.gov/credits-deductions" target="_blank" rel="noopener">IRS — credits and deductions, including home mortgage interest rules</a></li>
+      <li><a href="https://www.gov.uk/government/organisations/hm-land-registry" target="_blank" rel="noopener">HM Land Registry — UK property price and ownership data for setting a realistic loan amount</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/net-worth-calc/"><span class="related-ico" aria-hidden="true">💎</span><span class="related-name">Net Worth Calculator</span></a><a class="related-item" href="https://tool-hub.me/npv-irr-calc/"><span class="related-ico" aria-hidden="true">📉</span><span class="related-name">NPV Calculator</span></a><a class="related-item" href="https://tool-hub.me/overtime-pay-calc/"><span class="related-ico" aria-hidden="true">⏰</span><span class="related-name">Overtime Pay Calculator</span></a><a class="related-item" href="https://tool-hub.me/paycheck-calc/"><span class="related-ico" aria-hidden="true">💵</span><span class="related-name">Paycheck Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How is my monthly mortgage payment calculated? Formula and example</summary>
+      <p data-i18n="faq.a1">The standard formula is M = P × [r(1+r)^n] / [(1+r)^n − 1], where P is the loan amount, r is the monthly interest rate (annual rate ÷ 12), and n is the number of monthly payments (years × 12). For example, a $300,000 loan at a 6.5% annual rate for 30 years gives a monthly rate of about 0.542% and 360 payments, which works out to a monthly principal-and-interest payment of roughly $1,896 and total interest of about $382,700 over the full term. This mortgage calculator runs that formula instantly as you type.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Should I enter the loan amount directly, or the home price and down payment?</summary>
+      <p data-i18n="faq.a2">Use whichever you know. If you've already decided how much you're borrowing, enter the loan amount directly. If you're comparing a home price against different down payments, switch to "Home price & down payment" — the calculator subtracts your down payment from the price to get the loan amount automatically, and shows what percentage of the price your down payment covers. Putting down at least 20% often avoids private mortgage insurance (PMI) on conventional loans, but minimum requirements vary by lender and loan type.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How much do extra monthly payments really save on interest and payoff time?</summary>
+      <p data-i18n="faq.a3">Every extra dollar you send goes straight to principal instead of interest, so it compounds: paying down the balance faster means less interest accrues on it every month afterward. Even a modest recurring extra payment can shave several years off a 30-year loan and save a meaningful five- or six-figure amount in interest, depending on your balance, rate, and how early you start. Enter an amount in "Extra monthly payment" and this mortgage calculator shows your exact interest saved and new payoff time side by side with the original schedule.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Does this calculator include property taxes, home insurance, or PMI?</summary>
+      <p data-i18n="faq.a4">No — the monthly payment shown is principal and interest (P&I) only, which is what the standard mortgage formula computes. Real-world monthly housing costs (sometimes called PITI) also include property taxes, homeowners insurance, and often mortgage insurance (PMI) if your down payment is under 20%, plus any HOA dues. These vary widely by location and lender, so check your loan estimate or ask your lender for the full picture before budgeting.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my loan information sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This mortgage calculator runs entirely in your browser — the loan amount, home price, interest rate, and every other figure you enter never leave your device and nothing is uploaded or stored on a server. There's no sign-up and no tracking of your numbers, so you can compare loan scenarios with complete privacy.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-Af1jiF4OkIzXDCPyul7gFK28J8RFkxa+JUdsSGrchEw=' 'sha256-DBnGBmCXsuyMlR6Tg9Cn7+12uD46OgJn9sVh3U1fPDg=' 'sha256-ilXs2xxy2A8lnXoIMQ+AtkH7VkLhl1MjIX/YQMzRxxI='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自動車ローン計算ツール — 月々の支払額と総利息</title>
+<meta name="description" content="車両価格、頭金、下取り、消費税、諸費用、金利、期間から月々の支払額を計算し、総利息と実際の借入額まで表示します。">
+<meta name="keywords" content="car payment calculator, auto loan calculator, car finance calculator, monthly car payment, trade in calculator">
+<link rel="canonical" href="https://tool-hub.me/car-payment-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/car-payment-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/car-payment-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/car-payment-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/car-payment-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/car-payment-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/car-payment-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/car-payment-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/car-payment-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/car-payment-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/car-payment-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/car-payment-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/car-payment-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/car-payment-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/car-payment-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/car-payment-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="自動車ローン計算ツール — 月々の支払額と総利息">
+<meta property="og:description" content="車両価格、頭金、下取り、消費税、諸費用、金利、期間から月々の支払額を計算し、総利息と実際の借入額まで表示します。">
+<meta property="og:url" content="https://tool-hub.me/car-payment-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/car-payment-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Car Payment Calculator",
+  "description": "Work out the monthly payment on a car loan from price, down payment, trade-in, sales tax, fees, rate and term — with the total interest and the true amount financed.",
+  "url": "https://tool-hub.me/car-payment-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-29",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Car Payment Calculator",
+      "item": "https://tool-hub.me/car-payment-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is a car payment calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the standard amortising loan formula: payment = P x r / (1 - (1 + r)^-n), where P is the amount financed, r is the monthly rate (APR divided by 12) and n the number of months. Financing 25,000 at 7 percent over 60 months gives 495.03 a month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does my trade-in reduce the sales tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most US states, yes: tax is charged on the price minus the trade-in allowance, which is why trading in can beat selling privately once tax is counted. A handful of states tax the full price regardless. This calculator applies tax after the trade-in, the more common rule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I owe more than the trade-in is worth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That negative equity gets added to the new loan. Entering an amount owed above the trade-in value rolls the difference into the financed amount, which is exactly what a dealer does — and it is why a longer term can leave you underwater again on the next car."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Car Payment Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Car Payment Calculator</span></nav>
+  <section class="hero">
+    <h1>Car Payment Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Sticker price to real monthly payment, including the tax and fees dealers roll in.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="price" data-i18n="tool.price.label">Vehicle price</label>
+    <input type="text" id="price" inputmode="decimal" autocomplete="off" placeholder="32000">
+
+    <div class="field-row">
+      <div>
+        <label for="down" data-i18n="tool.down.label">Down payment</label>
+        <input type="text" id="down" inputmode="decimal" autocomplete="off" placeholder="4000">
+      </div>
+      <div>
+        <label for="trade" data-i18n="tool.trade.label">Trade-in value</label>
+        <input type="text" id="trade" inputmode="decimal" autocomplete="off" placeholder="6000">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="owed" data-i18n="tool.owed.label">Owed on trade-in</label>
+        <input type="text" id="owed" inputmode="decimal" autocomplete="off" placeholder="0">
+      </div>
+      <div>
+        <label for="tax" data-i18n="tool.tax.label">Sales tax %</label>
+        <input type="number" id="tax" inputmode="decimal" min="0" max="20" step="any" autocomplete="off" placeholder="7">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="fees" data-i18n="tool.fees.label">Fees (title, doc, registration)</label>
+        <input type="text" id="fees" inputmode="decimal" autocomplete="off" placeholder="600">
+      </div>
+      <div>
+        <label for="rate" data-i18n="tool.rate.label">Interest rate % (APR)</label>
+        <input type="number" id="rate" inputmode="decimal" min="0" max="40" step="any" autocomplete="off" placeholder="7">
+      </div>
+    </div>
+
+    <label for="term" data-i18n="tool.term.label">Term (months)</label>
+    <input type="number" id="term" inputmode="numeric" min="1" max="120" step="1" autocomplete="off" placeholder="60">
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate payment</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.payment">Monthly payment</div>
+          <div class="rc-val" id="r-payment">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.financed">Amount financed</div><div class="rc-val" id="r-financed">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.interest">Total interest</div><div class="rc-val" id="r-interest">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.cost">Total of payments</div><div class="rc-val" id="r-cost">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.est" style="margin-top:12px;">An estimate. Dealers structure tax and fees differently by state.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>Why the sticker price is never the loan amount</h2>
+    <p>The number you finance is rarely the number on the windscreen. Sales tax, title, registration and dealer documentation fees push it up; your down payment and trade-in equity pull it down. Get any of those wrong and the monthly figure you budgeted for and the one on the contract will not match — usually by more than people expect.</p>
+
+    <h3>Worked example: a typical deal</h3>
+    <p>A 32,000 car, 4,000 down, a trade-in worth 6,000 with nothing owed on it, 7 percent sales tax and 600 in fees, financed at 7 percent APR over 60 months. Tax applies to 32,000 - 6,000 = 26,000, so 1,820. Amount financed = 32,000 + 1,820 + 600 - 4,000 - 6,000 = 24,420. At 7 percent over 60 months that is 483.53 a month, 29,011.80 in total, and 4,591.80 of interest.</p>
+
+    <h3>Worked example: rolling in negative equity</h3>
+    <p>Same deal, but the trade-in is worth 6,000 and you still owe 9,000 on it. Equity is now minus 3,000, so the financed amount climbs to 27,420 and the payment to 542.87. You are paying interest on a car you no longer own, which is the mechanism behind long chains of upside-down trades.</p>
+
+    <h2>How term length changes the picture</h2>
+    <table>
+      <thead><tr><th>Term</th><th>Payment on 24,420 at 7%</th><th>Total interest</th></tr></thead>
+      <tbody>
+        <tr><td>36 months</td><td>754.03</td><td>2,725</td></tr>
+        <tr><td>48 months</td><td>584.66</td><td>3,644</td></tr>
+        <tr><td>60 months</td><td>483.53</td><td>4,592</td></tr>
+        <tr><td>72 months</td><td>416.42</td><td>5,562</td></tr>
+        <tr><td>84 months</td><td>368.66</td><td>6,558</td></tr>
+      </tbody>
+    </table>
+
+    <h2>What to watch in the finance office</h2>
+    <p>Negotiate the price of the car, not the monthly payment. A dealer can hit almost any monthly target by stretching the term, and the table above shows what that costs: 84 months instead of 60 saves 115 a month and adds nearly 2,000 in interest, while leaving you owing more than the car is worth for most of the loan.</p>
+    <p>Check whether the APR quoted includes the finance charges, and whether extras — gap insurance, service plans, paint protection — have been folded into the amount financed. Those add to the principal and therefore accrue interest for the whole term. And confirm how your state treats trade-ins for tax: a few charge tax on the full price, which changes the arithmetic here by several hundred.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.consumerfinance.gov/consumer-tools/auto-loans/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — auto loan basics, APR and dealer financing</a></li>
+      <li><a href="https://www.federalreserve.gov/releases/g19/current/" target="_blank" rel="noopener">Federal Reserve G.19 Consumer Credit — average new-car loan rates and terms</a></li>
+      <li><a href="https://www.ftc.gov/business-guidance/advertising-marketing/autos" target="_blank" rel="noopener">Federal Trade Commission — rules on auto advertising and financing disclosures</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/cd-calc/"><span class="related-ico" aria-hidden="true">📜</span><span class="related-name">CD Calculator</span></a><a class="related-item" href="https://tool-hub.me/coast-fire-calc/"><span class="related-ico" aria-hidden="true">🏖️</span><span class="related-name">Coast FIRE Calculator</span></a><a class="related-item" href="https://tool-hub.me/commission-calc/"><span class="related-ico" aria-hidden="true">🤝</span><span class="related-name">Commission Calculator</span></a><a class="related-item" href="https://tool-hub.me/compound-interest-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">Compound Interest Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How is a car payment calculated?</summary><p data-i18n="faq.a1">It is the standard amortising loan formula: payment = P x r / (1 - (1 + r)^-n), where P is the amount financed, r is the monthly rate (APR divided by 12) and n the number of months. Financing 25,000 at 7 percent over 60 months gives 495.03 a month.</p></details>
+    <details><summary data-i18n="faq.q2">Does my trade-in reduce the sales tax?</summary><p data-i18n="faq.a2">In most US states, yes: tax is charged on the price minus the trade-in allowance, which is why trading in can beat selling privately once tax is counted. A handful of states tax the full price regardless. This calculator applies tax after the trade-in, the more common rule.</p></details>
+    <details><summary data-i18n="faq.q3">What happens if I owe more than the trade-in is worth?</summary><p data-i18n="faq.a3">That negative equity gets added to the new loan. Entering an amount owed above the trade-in value rolls the difference into the financed amount, which is exactly what a dealer does — and it is why a longer term can leave you underwater again on the next car.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

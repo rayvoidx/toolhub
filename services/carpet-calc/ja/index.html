@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-bTAqNOI2dqA+0jY9+Apvy3iokxHAj9k4pQPnZ06x81A=' 'sha256-9/mS3OyLXBcd8uZ6MaGp4zl1Xwfc3s+ZyfehfHFx7rE=' 'sha256-RpLO13Asxf/aE5Fjo+DpUFQq9BJ1qfMyVsxNTgv5THo='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カーペット計算ツール — 必要な面積と費用</title>
+<meta name="description" content="部屋の寸法から必要なカーペットを平方フィート・平方ヤードで計算。ロール幅による継ぎ目、ロス率、下敷き（パッド）、平方フィート／平方ヤード単価の費用まで一度に。">
+<meta name="keywords" content="carpet calculator, how much carpet do i need, carpet cost calculator, carpet square yards, carpet square footage calculator, carpet padding calculator">
+<link rel="canonical" href="https://tool-hub.me/carpet-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/carpet-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/carpet-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/carpet-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/carpet-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/carpet-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/carpet-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/carpet-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/carpet-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/carpet-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/carpet-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/carpet-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/carpet-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/carpet-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/carpet-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/carpet-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="カーペット計算ツール — 必要な面積と費用">
+<meta property="og:description" content="部屋の寸法から必要なカーペットを平方フィート・平方ヤードで計算。ロール幅による継ぎ目、ロス率、下敷き（パッド）、平方フィート／平方ヤード単価の費用まで一度に。">
+<meta property="og:url" content="https://tool-hub.me/carpet-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/carpet-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c2d12">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Carpet Calculator",
+  "description": "Find how much carpet you need in square feet and square yards, with roll width and seam layout, a waste allowance, padding and cost per sq ft or sq yd.",
+  "url": "https://tool-hub.me/carpet-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Carpet Calculator",
+      "item": "https://tool-hub.me/carpet-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is carpet sold by the square yard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Carpet looms were built in yard-based widths long before metric or decimal pricing, and the trade never changed the habit. One square yard is nine square feet, so a quote of $27 per square yard is $3 per square foot. Always convert before comparing two quotes — the same carpet looks three times cheaper priced by the foot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where should the seams go?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Keep seams out of doorways, out of the main traffic lane and away from pivot points such as the foot of a stair. Where you can, run them perpendicular to the main window so daylight does not rake along the joint and light it up. A seam under a sofa or bed is a seam nobody ever sees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the padding underneath really matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "More than the carpet does, for how the floor feels and how long it lasts. Padding takes the compression that would otherwise break down the carpet backing, so a cheap pad shortens the life of an expensive carpet. Most residential warranties want at least 6 lb density and no more than 7/16 in thickness — 8 lb is the comfortable sweet spot for cut pile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much extra should I add for a patterned carpet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every strip has to start at the same point in the pattern, so each one is cut to the next full repeat rather than to the exact length. A 18 in repeat on a 15 ft strip can waste over a foot per strip, which is why patterned jobs use 15% or more instead of 10%. Ask the retailer for the repeat length before you order."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Carpet Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Carpet Calculator</span></nav>
+  <section class="hero">
+    <h1>Carpet Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Carpet is cut from a roll, not to your room. The roll width decides your seams and most of your waste.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:480px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="unit" data-i18n="tool.unit.label">Measurement units</label>
+    <select id="unit">
+      <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+      <option value="m" data-i18n="tool.unit.m">Metres</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="len" data-i18n="tool.len.label">Room length</label>
+        <input type="number" id="len" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="15">
+      </div>
+      <div>
+        <label for="wid" data-i18n="tool.wid.label">Room width</label>
+        <input type="number" id="wid" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="roll" data-i18n="tool.roll.label">Carpet roll width</label>
+        <select id="roll">
+          <option value="12" selected data-i18n="tool.roll.12">12 ft / 3.66 m — standard</option>
+          <option value="13.5" data-i18n="tool.roll.135">13.5 ft / 4.11 m</option>
+          <option value="13.1234" data-i18n="tool.roll.4m">4 m / 13.1 ft — European standard</option>
+          <option value="15" data-i18n="tool.roll.15">15 ft / 4.57 m</option>
+        </select>
+      </div>
+      <div>
+        <label for="waste" data-i18n="tool.waste.label">Waste allowance</label>
+        <select id="waste">
+          <option value="10" selected data-i18n="tool.waste.10">10% — plain carpet, simple room</option>
+          <option value="15" data-i18n="tool.waste.15">15% — pattern repeat or awkward shape</option>
+          <option value="20" data-i18n="tool.waste.20">20% — large pattern repeat, stairs or long hallway</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="price" data-i18n="tool.price.label">Carpet price (optional)</label>
+        <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="3.50">
+      </div>
+      <div>
+        <label for="priceunit" data-i18n="tool.priceunit.label">Price is per</label>
+        <select id="priceunit">
+          <option value="sqft" selected data-i18n="tool.priceunit.sqft">Square foot</option>
+          <option value="sqyd" data-i18n="tool.priceunit.sqyd">Square yard</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate carpet</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.buy">Carpet to order</div>
+          <div class="rc-val" id="r-buy">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.sqyd">In square yards</div><div class="rc-val" id="r-sqyd">—</div></div>
+        <div class="rcard" id="c-sqm" hidden><div class="rc-label" data-i18n="tool.r.sqm">In square metres</div><div class="rc-val" id="r-sqm">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Room area</div><div class="rc-val" id="r-area">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.padding">Padding to order</div><div class="rc-val" id="r-padding">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.seams">Strips and seams</div><div class="rc-val" id="r-seams">—</div></div>
+        <div class="rcard" id="c-cost" hidden><div class="rc-label" data-i18n="tool.r.cost">Estimated carpet cost</div><div class="rc-val" id="r-cost">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.method" style="margin-top:12px;">The room is laid out in strips the width of the roll, both ways round, and the cheaper cut is used before your waste allowance is added. Padding is bought to the room area.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How much carpet do I need?</h2>
+    <p>Start with the room area — length times width — but do not stop there, because carpet is not sold by the area you need. It comes off a roll in a fixed width, almost always 12 ft in the United States, sometimes 13.5 ft or 15 ft, and 4 m in much of Europe. The installer unrolls it, cuts strips that run the length of the room, and joins them. Whatever falls outside those strips is off-cut you still pay for. That is why two rooms with identical square footage can need very different amounts of carpet.</p>
+    <p>This calculator lays your room out in strips both ways round — running the length and running the width — keeps the cheaper cut, then adds the waste allowance for trimming, door recesses and pattern matching. The result is the number to give a retailer, not the bare floor area.</p>
+
+    <h3>Worked example: a 15 ft x 12 ft living room</h3>
+    <p>The floor area is 15 x 12 = <strong>180 sq ft</strong>, which is 180 ÷ 9 = <strong>20 sq yd</strong>. On a 12 ft roll, one strip 12 ft wide and 15 ft long covers the whole room: no seam, no strip waste. Add the standard 10% allowance and you order <strong>198 sq ft, or 22 sq yd</strong>. This is the happy case, and it is exactly why 12 ft rolls exist — American rooms were designed around them.</p>
+    <p>Now widen the room to 14 ft. The area is 15 x 14 = 210 sq ft, but a 12 ft roll cannot cover 14 ft in one pass. You need two strips: 2 x 12 ft x 15 ft = 360 sq ft of carpet for a 210 sq ft room, before waste. Turn the layout 90 degrees and it is two strips of 12 ft x 14 ft = 336 sq ft — slightly better, which is the cut this tool would pick. Either way you are buying roughly 60% more carpet than floor. A 15 ft roll covers the same room in one pass: run it across the 15 ft direction and a single 14 ft length of roll does the whole floor — 15 x 14 = 210 sq ft, seam free, zero strip waste, and about a third less carpet than the 12 ft roll. Always ask what roll widths the pattern you like is made in.</p>
+
+    <h3>The square yard quote trap</h3>
+    <p>Carpet retailers quote in both square feet and square yards, and the two differ by a factor of nine. A showroom price of $27 per square yard is $3.00 per square foot. An online listing at $4.50 per square foot is $40.50 per square yard. Shops know that the per-square-foot number looks smaller and often lead with it, then quote the installation per square yard. Before you compare anything, put both quotes in the same unit — this calculator gives you the quantity in both, and the price selector multiplies by whichever basis you were quoted.</p>
+    <p>The other half of a real quote is what is included. Ask specifically whether the number covers padding, tack strip, subfloor prep, furniture moving, removal and disposal of the old carpet, stair charges (usually priced per stair, not per yard) and metal transition strips at doorways. A $2,000 carpet job with $900 of extras is not cheaper than a $2,600 all-in job.</p>
+
+    <h3>Choosing padding — the part people skip</h3>
+    <p>Padding is measured by density in pounds per cubic foot, not by how soft it feels in the shop. Density is what resists compression, and compression is what destroys carpet backing. The industry rule of thumb for residential cut pile is <strong>8 lb density at 7/16 in thickness</strong>; most carpet warranties set a floor of 6 lb and a ceiling of 7/16 in, and a pad thicker than that lets the carpet flex enough to break the backing at seams and traffic lanes. Berber and other low-profile loop carpets want firmer, thinner pad — 8 lb at 3/8 in — because a soft pad under a stiff loop backing cracks it.</p>
+    <p>Padding is bought to the room area, not the strip area, which is why the padding figure here is lower than the carpet figure. It is also the cheapest upgrade in the whole job: moving from a builder-grade 6 lb pad to an 8 lb rebond typically adds well under a dollar per square foot and adds years to the carpet's life. Basements are the exception where you should spend on the pad rather than the carpet: use a moisture-barrier or synthetic fibre pad rather than rebond foam.</p>
+
+    <h3>Installation day checklist</h3>
+    <p>Measure the room at its widest points, including any doorway recesses and the depth of closets, because carpet runs through both. Empty the room, or agree in writing what the crew will move and what they will not — pianos, aquariums and anything electronic are usually excluded. Confirm the seam plan before the knife comes out: you want seams out of doorways, out of the main walking path and perpendicular to the main window rather than running toward it. Check the pile direction is consistent across every strip; carpet has a nap, and a strip laid backwards shows as a different shade forever. Keep an off-cut of at least a square yard for future patch repairs, and let the room air for a day or two, as new carpet does off-gas.</p>
+
+    <h2>Limits of this estimate</h2>
+    <p>The tool models one plain rectangular room. L-shaped rooms should be split into rectangles and run separately, then add a strip's worth of allowance for the joining piece. Stairs are priced and measured differently — budget roughly 1.5 sq yd per straight step including the riser, and considerably more for winders or a landing. Hallways longer than a roll are almost always the worst case for waste, and a 15 ft roll or a seam plan that runs down the length rather than across it can halve that cost. Finally, the waste allowance is exactly that: an allowance. If you are working with a large pattern repeat, an irregular room, or a fitter who has not seen the space yet, take a professional measure before you order, because carpet is cut to order and you cannot return an off-cut.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures — official US unit definitions for area measures such as square feet and square yards</a></li>
+      <li><a href="https://www.epa.gov/indoor-air-quality-iaq" target="_blank" rel="noopener">US EPA Indoor Air Quality — guidance on emissions from new carpet, adhesives and padding</a></li>
+      <li><a href="https://www.cpsc.gov/" target="_blank" rel="noopener">US Consumer Product Safety Commission — carpet flammability standards and home flooring safety</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/click-speed-test/"><span class="related-ico" aria-hidden="true">🖱️</span><span class="related-name">Click Speed Test (CPS)</span></a><a class="related-item" href="https://tool-hub.me/coffee-ratio-calc/"><span class="related-ico" aria-hidden="true">☕</span><span class="related-name">Coffee to Water Ratio Calculator</span></a><a class="related-item" href="https://tool-hub.me/commute-cost-calc/"><span class="related-ico" aria-hidden="true">🚉</span><span class="related-name">Commute Cost Calculator</span></a><a class="related-item" href="https://tool-hub.me/concrete-calc/"><span class="related-ico" aria-hidden="true">🧱</span><span class="related-name">Concrete Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why is carpet sold by the square yard?</summary><p data-i18n="faq.a1">Carpet looms were built in yard-based widths long before metric or decimal pricing, and the trade never changed the habit. One square yard is nine square feet, so a quote of $27 per square yard is $3 per square foot. Always convert before comparing two quotes — the same carpet looks three times cheaper priced by the foot.</p></details>
+    <details><summary data-i18n="faq.q2">Where should the seams go?</summary><p data-i18n="faq.a2">Keep seams out of doorways, out of the main traffic lane and away from pivot points such as the foot of a stair. Where you can, run them perpendicular to the main window so daylight does not rake along the joint and light it up. A seam under a sofa or bed is a seam nobody ever sees.</p></details>
+    <details><summary data-i18n="faq.q3">Does the padding underneath really matter?</summary><p data-i18n="faq.a3">More than the carpet does, for how the floor feels and how long it lasts. Padding takes the compression that would otherwise break down the carpet backing, so a cheap pad shortens the life of an expensive carpet. Most residential warranties want at least 6 lb density and no more than 7/16 in thickness — 8 lb is the comfortable sweet spot for cut pile.</p></details>
+    <details><summary data-i18n="faq.q4">How much extra should I add for a patterned carpet?</summary><p data-i18n="faq.a4">Every strip has to start at the same point in the pattern, so each one is cut to the next full repeat rather than to the exact length. A 18 in repeat on a 15 ft strip can waste over a foot per strip, which is why patterned jobs use 15% or more instead of 10%. Ask the retailer for the repeat length before you order.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

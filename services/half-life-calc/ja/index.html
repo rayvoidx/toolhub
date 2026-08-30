@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-1iBLOTM38le6VDvbJd66JB26cr+hzircSuXk/xHBQOc=' 'sha256-IExRFGpbUg1ebT9QaSObRPyIySJKamNvIXpiOw3ZLb4=' 'sha256-Q/kyCVPBAuUSDkct2jUXRtgVzBzOiWDyPJ28MmoEcaY='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>半減期計算ツール — 残量・経過時間・半減期</title>
+<meta name="description" content="半減期の公式 N = N0 × 0.5^(t/T) で放射性崩壊や薬物の消失を計算します。残っている量、経過した時間、半減期そのものの3方向を求められます。">
+<meta name="keywords" content="half life calculator, half life formula, radioactive decay calculator, drug half life, exponential decay calculator, carbon 14 dating">
+<link rel="canonical" href="https://tool-hub.me/half-life-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/half-life-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/half-life-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/half-life-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/half-life-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/half-life-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/half-life-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/half-life-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/half-life-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/half-life-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/half-life-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/half-life-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/half-life-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/half-life-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/half-life-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/half-life-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="半減期計算ツール — 残量・経過時間・半減期">
+<meta property="og:description" content="半減期の公式 N = N0 × 0.5^(t/T) で放射性崩壊や薬物の消失を計算します。残っている量、経過した時間、半減期そのものの3方向を求められます。">
+<meta property="og:url" content="https://tool-hub.me/half-life-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/half-life-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4d7c0f">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Half-Life Calculator",
+  "description": "Solve radioactive decay and drug clearance with the half-life formula N = N0 x 0.5^(t/T). Find the amount remaining, the time elapsed, or the half-life itself.",
+  "url": "https://tool-hub.me/half-life-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Half-Life Calculator",
+      "item": "https://tool-hub.me/half-life-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many half-lives until a drug is out of my system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About five. Each half-life halves what is left: 50%, 25%, 12.5%, 6.25%, then 3.125% — so after five half-lives roughly 97% of the dose is gone. Clinicians use four to five half-lives as the practical clearance rule and seven when a drug must be essentially undetectable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a half-life ever change?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a radioactive isotope, no. The half-life is set by nuclear physics and is unaffected by temperature, pressure or chemical form. Drug half-lives are different: liver and kidney function, age, genetics, pregnancy and interacting medicines can easily double or halve the published figure, so treat a drug result as a range rather than a fixed number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does carbon dating stop working past about 50,000 years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Carbon-14 has a half-life of 5,730 years, so 50,000 years is roughly 8.7 half-lives and leaves under 0.3% of the original C-14. That signal is too close to laboratory background and modern-carbon contamination to measure reliably. Older material is dated with slower clocks such as potassium-40 (1.25 billion years) or uranium-238."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between biological and radioactive half-life?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Radioactive half-life is the time for half the atoms in a sample to decay. Biological half-life is the time your body needs to clear half of a substance by metabolism and excretion. For a radioactive tracer both processes run at once, and the effective half-life follows 1/Te = 1/Tr + 1/Tb, which is always shorter than either one alone."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Half-Life Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0d9488" href="https://tool-hub.me/math-calculators/">Math &amp; Science</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Half-Life Calculator</span></nav>
+  <section class="hero">
+    <h1>Half-Life Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">One formula covers caffeine, carbon-14 and medication clearance. Tell it what you know and it solves for the rest.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="mode" data-i18n="tool.mode.label">What do you want to find?</label>
+    <select id="mode">
+      <option value="remaining" data-i18n="tool.mode.remaining">Amount remaining</option>
+      <option value="time" data-i18n="tool.mode.time">Time elapsed</option>
+      <option value="halflife" data-i18n="tool.mode.halflife">Half-life</option>
+    </select>
+
+    <div class="field-row">
+      <div id="f-initial">
+        <label for="initial" data-i18n="tool.initial.label">Starting amount (N₀)</label>
+        <input type="number" id="initial" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="200">
+      </div>
+      <div id="f-remaining">
+        <label for="remaining" data-i18n="tool.remaining.label">Amount remaining (N)</label>
+        <input type="number" id="remaining" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="25">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div id="f-halflife">
+        <label for="halflife" data-i18n="tool.halflife.label">Half-life</label>
+        <input type="number" id="halflife" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="6">
+      </div>
+      <div id="f-unit">
+        <label for="unit" data-i18n="tool.unit.label">Time unit</label>
+        <select id="unit">
+          <option value="sec" data-i18n="tool.unit.sec">Seconds</option>
+          <option value="min" data-i18n="tool.unit.min">Minutes</option>
+          <option value="hours" selected data-i18n="tool.unit.hours">Hours</option>
+          <option value="days" data-i18n="tool.unit.days">Days</option>
+          <option value="weeks" data-i18n="tool.unit.weeks">Weeks</option>
+          <option value="years" data-i18n="tool.unit.years">Years</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="f-elapsed">
+      <label for="elapsed" data-i18n="tool.elapsed.label">Time elapsed</label>
+      <input type="number" id="elapsed" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="24">
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" id="r-hero-label">Amount remaining</div>
+          <div class="rc-val" id="r-hero">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.percent">Percent remaining</div><div class="rc-val" id="r-percent">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.hl">Half-lives elapsed</div><div class="rc-val" id="r-hl">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Assumes first-order (exponential) decay, where a fixed fraction disappears per unit time. Use the same time unit for the half-life and the elapsed time.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>The one formula behind every half-life question</h2>
+    <p>Half-life is the time it takes for half of something to disappear. The something can be radioactive atoms, caffeine in your bloodstream, a dose of ibuprofen, or the concentration of a pollutant in a lake. As long as a fixed <em>fraction</em> vanishes per unit of time — what chemists call first-order decay — one equation covers all of them: N = N₀ x 0.5^(t/T), where N₀ is what you started with, T is the half-life, t is how long you have waited, and N is what is left.</p>
+    <p>Rearranged, the same relationship answers the two reverse questions. Time elapsed is t = T x log₂(N₀/N), and the half-life itself is T = t / log₂(N₀/N). The calculator above simply switches between the three forms, which is why it asks what you want to find before it asks for numbers.</p>
+
+    <h3>Worked example: 200 mg of caffeine, 24 hours later</h3>
+    <p>A large coffee delivers roughly 200 mg of caffeine, and caffeine's half-life in a healthy adult averages about 6 hours. Twenty-four hours is 24 / 6 = 4 half-lives. Halving four times gives 200 → 100 → 50 → 25 → 12.5 mg, so 12.5 mg is still circulating a full day later — 6.25% of the original dose. That residue is small, but it is why a 4 p.m. coffee can still shave measurable minutes off deep sleep, and it stacks with whatever you drink the next morning.</p>
+    <p>Run the same numbers backwards to see the other two modes. Enter 200 as the starting amount, 25 as the remaining amount and 6 hours as the half-life: the tool returns 18 hours, because 200 → 25 is exactly 3 half-lives. Swap the inputs — 200 down to 25 in 18 hours — and it returns a 6-hour half-life. Any two of the three unknowns pin down the third.</p>
+
+    <h3>Why "five half-lives" is the number to remember</h3>
+    <p>Decay never mathematically reaches zero, so pharmacology uses a practical threshold instead. After each half-life you have 50%, 25%, 12.5%, 6.25%, then 3.125% remaining. Five half-lives clear about 97% of a dose, which is close enough that most drugs stop producing measurable effects, and it is the standard rule for how long a steady-state drug level takes to build up when you start a new prescription as well as how long it takes to wash out when you stop. Seven half-lives take you past 99%, the figure used when a drug must be essentially undetectable before surgery or a switch to an interacting medicine.</p>
+    <p>The same rule maps onto radiation safety. Iodine-131, used to treat thyroid conditions, has an 8-day half-life, so a patient's activity is down by about 97% after 40 days. Technetium-99m, the workhorse of nuclear imaging, has a 6-hour half-life, which is exactly why it can be injected in the morning and be almost gone by bedtime.</p>
+
+    <h2>Where else this shows up</h2>
+    <table>
+      <thead><tr><th>Substance</th><th>Half-life</th><th>Typical question</th></tr></thead>
+      <tbody>
+        <tr><td>Caffeine</td><td>~6 hours</td><td>Can I sleep tonight?</td></tr>
+        <tr><td>Ibuprofen</td><td>~2 hours</td><td>When can I redose?</td></tr>
+        <tr><td>Nicotine</td><td>~2 hours</td><td>Withdrawal timing</td></tr>
+        <tr><td>Carbon-14</td><td>5,730 years</td><td>Archaeological dating</td></tr>
+        <tr><td>Iodine-131</td><td>8.02 days</td><td>Post-treatment isolation</td></tr>
+        <tr><td>Uranium-238</td><td>4.5 billion years</td><td>Age of rocks</td></tr>
+      </tbody>
+    </table>
+    <p>Outside chemistry, the same maths describes capacitor discharge, the cooling of a hot object toward room temperature, and the depreciation of an asset losing a fixed percentage of value each year. If a process removes a constant proportion rather than a constant quantity, it has a half-life.</p>
+
+    <h3>The limits worth knowing</h3>
+    <p>First, this model only fits first-order processes. Alcohol is the famous exception: the liver clears it at a roughly constant <em>rate</em> — around one standard drink per hour, regardless of how much you drank — which is zero-order kinetics and does not have a half-life at all. High doses of aspirin and phenytoin behave the same way once the clearing enzymes saturate. Feeding those into a half-life calculator gives an answer that is confidently wrong.</p>
+    <p>Second, published drug half-lives are population averages. Liver and kidney function, age, genetics, pregnancy, smoking and interacting medicines routinely move a drug's half-life by a factor of two in either direction, so treat the output as a ballpark and never as dosing advice — that conversation belongs with a pharmacist or doctor. Radioactive half-lives, by contrast, are fixed constants of nature, unmoved by heat, pressure or chemistry, which is precisely what makes them usable as clocks.</p>
+    <p>Third, keep your units consistent. The calculator uses one time unit for both the half-life and the elapsed time, because mixing hours and days is by far the most common way to get a plausible-looking but meaningless answer.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nist.gov/pml" target="_blank" rel="noopener">NIST Physical Measurement Laboratory &mdash; atomic and nuclear reference data behind isotope half-lives</a></li>
+      <li><a href="https://www.epa.gov/radiation" target="_blank" rel="noopener">US EPA Radiation Protection &mdash; radioactive decay, isotopes and exposure basics</a></li>
+      <li><a href="https://www.ncbi.nlm.nih.gov/books/" target="_blank" rel="noopener">NIH StatPearls (NCBI Bookshelf) &mdash; clinical pharmacokinetics and drug elimination half-life</a></li>
+      <li><a href="https://www.khanacademy.org/math/algebra2" target="_blank" rel="noopener">Khan Academy &mdash; logarithms and exponential decay used in the half-life formula</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/kinetic-energy-calc/"><span class="related-ico" aria-hidden="true">⚡</span><span class="related-name">Kinetic Energy Calculator</span></a><a class="related-item" href="https://tool-hub.me/marks-percentage-calc/"><span class="related-ico" aria-hidden="true">📝</span><span class="related-name">Marks Percentage Calculator</span></a><a class="related-item" href="https://tool-hub.me/matrix-calc/"><span class="related-ico" aria-hidden="true">🔢</span><span class="related-name">Matrix Calculator</span></a><a class="related-item" href="https://tool-hub.me/molar-mass-calc/"><span class="related-ico" aria-hidden="true">⚗️</span><span class="related-name">Molar Mass Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How many half-lives until a drug is out of my system?</summary><p data-i18n="faq.a1">About five. Each half-life halves what is left: 50%, 25%, 12.5%, 6.25%, then 3.125% — so after five half-lives roughly 97% of the dose is gone. Clinicians use four to five half-lives as the practical clearance rule and seven when a drug must be essentially undetectable.</p></details>
+    <details><summary data-i18n="faq.q2">Does a half-life ever change?</summary><p data-i18n="faq.a2">For a radioactive isotope, no. The half-life is set by nuclear physics and is unaffected by temperature, pressure or chemical form. Drug half-lives are different: liver and kidney function, age, genetics, pregnancy and interacting medicines can easily double or halve the published figure, so treat a drug result as a range rather than a fixed number.</p></details>
+    <details><summary data-i18n="faq.q3">Why does carbon dating stop working past about 50,000 years?</summary><p data-i18n="faq.a3">Carbon-14 has a half-life of 5,730 years, so 50,000 years is roughly 8.7 half-lives and leaves under 0.3% of the original C-14. That signal is too close to laboratory background and modern-carbon contamination to measure reliably. Older material is dated with slower clocks such as potassium-40 (1.25 billion years) or uranium-238.</p></details>
+    <details><summary data-i18n="faq.q4">What is the difference between biological and radioactive half-life?</summary><p data-i18n="faq.a4">Radioactive half-life is the time for half the atoms in a sample to decay. Biological half-life is the time your body needs to clear half of a substance by metabolism and excretion. For a radioactive tracer both processes run at once, and the effective half-life follows 1/Te = 1/Tr + 1/Tb, which is always shorter than either one alone.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

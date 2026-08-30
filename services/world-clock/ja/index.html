@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-Isf9/kKJeKIjL2gKMTim38Vke9CCn5gto2OxnubM4Ic=' 'sha256-M1zvVP5XmjwEbMZ+B+kLfyCQJ04Ib3NCbz8CJOpESaM=' 'sha256-/YSXKvvMb4ZFhqwjXjyqdO/UruhRy8x6G9W4pEc6lrU='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界時計 — 世界の都市の現在時刻とあなたとの時差</title>
+<meta name="description" content="無料のオンライン世界時計。ニューヨーク、ロンドン、東京など数十都市の現在時刻を一画面でリアルタイム表示。あなたの時間との時差、昨日／今日／明日ラベル、昼夜アイコン、サマータイム自動対応つき。インストール不要、登録不要。">
+<meta name="keywords" content="world clock, world time, time in different cities, time zone difference, 세계 시계, 세계 시간, 도시별 현재 시각">
+<link rel="canonical" href="https://tool-hub.me/world-clock/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/world-clock/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/world-clock/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/world-clock/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/world-clock/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/world-clock/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/world-clock/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/world-clock/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/world-clock/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/world-clock/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/world-clock/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/world-clock/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/world-clock/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/world-clock/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/world-clock/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/world-clock/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="世界時計 — 世界の都市の現在時刻とあなたとの時差">
+<meta property="og:description" content="無料のオンライン世界時計。ニューヨーク、ロンドン、東京など数十都市の現在時刻を一画面でリアルタイム表示。あなたの時間との時差、昨日／今日／明日ラベル、昼夜アイコン、サマータイム自動対応つき。インストール不要、登録不要。">
+<meta property="og:url" content="https://tool-hub.me/world-clock/ja/">
+<meta property="og:image" content="https://tool-hub.me/world-clock/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4338ca">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "World Clock",
+  "description": "Free online world clock. See the live current time in New York, London, Tokyo and dozens of cities at once, with the offset from your own time, Yesterday/Today/Tomorrow labels, day/night icons and automatic daylight saving. No install, no sign-up.",
+  "url": "https://tool-hub.me/world-clock/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "World Clock",
+      "item": "https://tool-hub.me/world-clock/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is daylight saving time (DST) handled automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This world clock never stores fixed offsets. It reads the live time for each city from your browser's built-in IANA time zone database, which already knows every country's daylight saving rules and the exact dates they switch. So when a city springs forward or falls back, its clock here updates on its own — you never have to adjust anything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are 30- and 45-minute offsets like India +5:30 or Nepal +5:45 calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The offset badge is worked out in minutes, not whole hours, by comparing each city's wall-clock time with yours. That means half-hour and quarter-hour zones such as India (+5:30), Nepal (+5:45), Iran (+3:30) and parts of Australia (+9:30) are shown exactly, instead of being rounded to the nearest hour like some clocks do."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my list of cities saved?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, inside your own browser. The cities you add and your 12- or 24-hour choice are stored locally with localStorage on your device, so they are still there on your next visit. Nothing is uploaded to a server and no account is needed. In private browsing the list simply resets when you close the tab."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the time shown?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every clock is calculated from your device's own clock and then shifted into each city's time zone, so the world clock is exactly as accurate as your computer or phone. If a city looks off by a few minutes, check that your device is set to update its clock automatically over the network."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use the Yesterday / Today / Tomorrow labels to schedule meetings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The label under each city tells you whether that city is on a different calendar day from you right now — handy when you book a call across time zones. If a teammate's city shows Tomorrow, a 9 a.m. slot for you may already be their next evening, so you can pick a time that is daytime for everyone using the sun and moon icons."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>World Clock</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0284c7" href="https://tool-hub.me/date-calculators/">Date &amp; Time</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">World Clock</span></nav>
+  <section class="hero">
+    <h1>World Clock</h1>
+    <p class="lede" data-i18n="hero.lede">Add a city and it starts ticking. We handle the time difference for you.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <div id="wc-home" style="text-align:center;padding:2px 0 16px;border-bottom:1px solid var(--line);margin-bottom:16px;">
+      <div style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);" data-i18n="tool.yourTime">Your time</div>
+      <div id="wc-home-time" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;font-size:clamp(40px,12vw,60px);font-weight:700;line-height:1.15;margin:4px 0;">--:--:--</div>
+      <div id="wc-home-date" style="color:var(--muted);font-size:15px;"></div>
+      <div id="wc-home-zone" style="color:var(--muted);font-size:12.5px;margin-top:2px;"></div>
+    </div>
+
+    <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;">
+      <div style="flex:1;min-width:220px;position:relative;">
+        <label for="wc-search" data-i18n="tool.addCity">Add a city</label>
+        <input type="text" id="wc-search" autocomplete="off" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="wc-suggest" placeholder="Search for a city (e.g. Tokyo, London)" data-i18n-placeholder="tool.searchPlaceholder">
+        <ul id="wc-suggest" role="listbox" hidden style="list-style:none;margin:4px 0 0;padding:4px;position:absolute;z-index:20;left:0;right:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.14);max-height:264px;overflow:auto;"></ul>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="font-size:13px;font-weight:600;color:var(--muted);" data-i18n="tool.format">Time format</span>
+        <div role="group" style="display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;">
+          <button class="btn wc-fmt" id="wc-fmt-12" type="button" data-fmt="12" data-i18n="tool.h12" style="margin:0;border-radius:0;padding:9px 14px;font-size:14px;">12-hour</button>
+          <button class="btn wc-fmt" id="wc-fmt-24" type="button" data-fmt="24" data-i18n="tool.h24" style="margin:0;border-radius:0;padding:9px 14px;font-size:14px;">24-hour</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="result" id="wc-notice" hidden aria-live="polite" style="font-size:14px;"></div>
+
+    <div id="wc-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:12px;margin-top:18px;"></div>
+    <p class="placeholder-note" id="wc-empty" data-i18n="tool.empty" hidden>Search for a city above to add your first clock.</p>
+
+    <div id="wc-toast" role="status" aria-live="polite" hidden style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;box-shadow:0 6px 20px rgba(0,0,0,.28);z-index:50;max-width:90vw;text-align:center;"></div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>One glance across every time zone</h2>
+    <p>Coordinating anything across borders — a video call, a product launch, a market open, a flight — means answering "what time is it there, right now?" without doing hour arithmetic in your head. This world clock shows your own time alongside any cities you add, each with a live clock, an offset from you, and a Yesterday / Today / Tomorrow label so you can see at a glance whether a city has already crossed into the next calendar day.</p>
+
+    <h3>How to use it</h3>
+    <ol>
+      <li>Type a city into <strong>Add a city</strong> and pick it from the suggestions.</li>
+      <li>Choose <strong>12-hour</strong> or <strong>24-hour</strong> display.</li>
+      <li>Your cities and format choice are saved locally, so the same board is waiting on your next visit. Nothing is uploaded and no account is needed.</li>
+    </ol>
+
+    <h3>How the times are worked out</h3>
+    <p>Every clock is derived from your own device's clock, then shifted into each city's zone using your browser's built-in IANA time-zone database. That database already encodes each country's daylight-saving rules and the exact dates they switch, so the tool never stores fixed offsets — when a city springs forward or falls back, its clock updates on its own. Offsets are computed in minutes, not whole hours, so half- and quarter-hour zones display exactly.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example"><strong>1. Finding a call slot.</strong> It is 9:00 AM in New York (summer, EDT). London is +5 hours, so 2:00 PM there; Tokyo is +13 hours, so 10:00 PM the same day. The slot suits London but is late night in Tokyo — and if you slip to a 1:00 PM New York call, Tokyo tips past midnight into <strong>Tomorrow</strong>, which the day label flags immediately.</div>
+    <div class="example"><strong>2. A half-hour zone.</strong> When it is 12:00 noon in London, India is +5:30, so Mumbai reads <strong>5:30 PM</strong> — not 5:00. Nepal is +5:45 (5:45 PM) and Iran +3:30. These quarter- and half-hour offsets are shown precisely instead of being rounded to the nearest hour.</div>
+    <div class="example"><strong>3. The daylight-saving trap.</strong> New York and London are usually 5 hours apart, but their clocks change on different dates in spring and autumn. For a week or two the gap narrows to 4 hours. Because this clock reads the live rule set, it shows the correct 4- or 5-hour gap automatically — no manual adjustment.</div>
+
+    <h3>Standard-time UTC offsets for common cities</h3>
+    <p>Offsets shift by an hour wherever daylight saving applies, so the live clock is always the source of truth; this table is a standard-time reference.</p>
+    <table>
+      <thead><tr><th>City</th><th>Standard offset (UTC)</th><th>Observes DST?</th></tr></thead>
+      <tbody>
+        <tr><td>Los Angeles</td><td>−8:00</td><td>Yes</td></tr>
+        <tr><td>New York</td><td>−5:00</td><td>Yes</td></tr>
+        <tr><td>London</td><td>+0:00</td><td>Yes</td></tr>
+        <tr><td>Paris / Berlin</td><td>+1:00</td><td>Yes</td></tr>
+        <tr><td>Mumbai</td><td>+5:30</td><td>No</td></tr>
+        <tr><td>Kathmandu</td><td>+5:45</td><td>No</td></tr>
+        <tr><td>Singapore</td><td>+8:00</td><td>No</td></tr>
+        <tr><td>Tokyo / Seoul</td><td>+9:00</td><td>No</td></tr>
+        <tr><td>Sydney</td><td>+10:00</td><td>Yes</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Assuming a fixed offset.</strong> "New York is always 5 hours behind London" breaks twice a year — the offset is not constant, which is why hard-coding it causes missed meetings.</li>
+      <li><strong>Forgetting the date can differ.</strong> A 9:00 AM slot for you may already be the next evening for a teammate; the Yesterday / Today / Tomorrow label exists to catch exactly this.</li>
+      <li><strong>Rounding half-hour zones.</strong> India, Nepal, Iran and parts of Australia are not on whole-hour offsets; treating them as such leaves you 30–45 minutes off.</li>
+      <li><strong>Expecting DST everywhere.</strong> The northern and southern hemispheres switch in opposite seasons, and much of Asia, including Japan, Korea and India, does not change at all.</li>
+    </ul>
+
+    <h3>How accurate is it?</h3>
+    <p>Each clock is exactly as accurate as your own device, because it starts from your system time and only shifts the zone. If a city looks a few minutes off, check that your computer or phone is set to sync its clock automatically over the network — this is a time-zone converter, not an independent atomic time source.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nist.gov/pml/time-and-frequency-division" target="_blank" rel="noopener">NIST Time and Frequency Division — official U.S. time standards and clock synchronization</a></li>
+      <li><a href="https://www.iso.org/iso-8601-date-and-time-format.html" target="_blank" rel="noopener">ISO 8601 — international standard for writing dates, times and UTC offsets</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat" target="_blank" rel="noopener">MDN Intl.DateTimeFormat — how browsers format times for IANA time zones</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/zodiac-sign-calc/"><span class="related-ico" aria-hidden="true">♈</span><span class="related-name">Zodiac Sign Calculator</span></a><a class="related-item" href="https://tool-hub.me/age-calc/"><span class="related-ico" aria-hidden="true">🎂</span><span class="related-name">Age Calculator</span></a><a class="related-item" href="https://tool-hub.me/age-gap-calc/"><span class="related-ico" aria-hidden="true">💞</span><span class="related-name">Age Gap Calculator</span></a><a class="related-item" href="https://tool-hub.me/alarm-clock/"><span class="related-ico" aria-hidden="true">⏰</span><span class="related-name">Online Alarm Clock</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details><summary data-i18n="faq.q1">Is daylight saving time (DST) handled automatically?</summary><p data-i18n="faq.a1">Yes. This world clock never stores fixed offsets. It reads the live time for each city from your browser's built-in IANA time zone database, which already knows every country's daylight saving rules and the exact dates they switch. So when a city springs forward or falls back, its clock here updates on its own — you never have to adjust anything.</p></details>
+    <details><summary data-i18n="faq.q2">How are 30- and 45-minute offsets like India +5:30 or Nepal +5:45 calculated?</summary><p data-i18n="faq.a2">The offset badge is worked out in minutes, not whole hours, by comparing each city's wall-clock time with yours. That means half-hour and quarter-hour zones such as India (+5:30), Nepal (+5:45), Iran (+3:30) and parts of Australia (+9:30) are shown exactly, instead of being rounded to the nearest hour like some clocks do.</p></details>
+    <details><summary data-i18n="faq.q3">Is my list of cities saved?</summary><p data-i18n="faq.a3">Yes, inside your own browser. The cities you add and your 12- or 24-hour choice are stored locally with localStorage on your device, so they are still there on your next visit. Nothing is uploaded to a server and no account is needed. In private browsing the list simply resets when you close the tab.</p></details>
+    <details><summary data-i18n="faq.q4">How accurate is the time shown?</summary><p data-i18n="faq.a4">Every clock is calculated from your device's own clock and then shifted into each city's time zone, so the world clock is exactly as accurate as your computer or phone. If a city looks off by a few minutes, check that your device is set to update its clock automatically over the network.</p></details>
+    <details><summary data-i18n="faq.q5">How do I use the Yesterday / Today / Tomorrow labels to schedule meetings?</summary><p data-i18n="faq.a5">The label under each city tells you whether that city is on a different calendar day from you right now — handy when you book a call across time zones. If a teammate's city shows Tomorrow, a 9 a.m. slot for you may already be their next evening, so you can pick a time that is daytime for everyone using the sun and moon icons.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

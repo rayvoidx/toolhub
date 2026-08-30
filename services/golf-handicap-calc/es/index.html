@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-M9KDMm9vLMW04ZrjA1eaTHJBSbogYA3YZW24pZF5FjI=' 'sha256-DgB/cMd8hSjyzct236ozpjncy6ojzACAOpFhvkS7mqY=' 'sha256-ncWpwf2TsxrON2nEZTrZWP9iZJBYz4Srdck8SnD1kCk='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de hándicap de golf — índice WHS</title>
+<meta name="description" content="Calcula tu índice de hándicap de golf con hasta ocho vueltas según la fórmula del Sistema Mundial de Hándicap: diferenciales, diferencial más bajo y ajuste por pocas vueltas.">
+<meta name="keywords" content="golf handicap calculator, handicap index, how to calculate golf handicap, whs handicap, course handicap conversion, score differential">
+<link rel="canonical" href="https://tool-hub.me/golf-handicap-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/golf-handicap-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/golf-handicap-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/golf-handicap-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/golf-handicap-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/golf-handicap-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/golf-handicap-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/golf-handicap-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/golf-handicap-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/golf-handicap-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/golf-handicap-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/golf-handicap-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/golf-handicap-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/golf-handicap-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/golf-handicap-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/golf-handicap-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de hándicap de golf — índice WHS">
+<meta property="og:description" content="Calcula tu índice de hándicap de golf con hasta ocho vueltas según la fórmula del Sistema Mundial de Hándicap: diferenciales, diferencial más bajo y ajuste por pocas vueltas.">
+<meta property="og:url" content="https://tool-hub.me/golf-handicap-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/golf-handicap-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#166534">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Golf Handicap Calculator",
+  "description": "Work out your golf handicap index from up to eight rounds with the World Handicap System formula: score differentials, lowest differential and the adjustment.",
+  "url": "https://tool-hub.me/golf-handicap-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Golf Handicap Calculator",
+      "item": "https://tool-hub.me/golf-handicap-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between a handicap index and a course handicap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your Handicap Index is portable: one number that travels with you to any course. A Course Handicap converts it for the tees you are actually playing — Course Handicap = Index x (Slope / 113) + (Course Rating - Par), rounded to the nearest whole number. A 13.9 index on a 130-slope course rated 72.0 at par 71 plays off 17 strokes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the formula divide by 113?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "113 is the slope rating of a course of standard difficulty, the neutral baseline the USGA chose when the Slope system was built. Multiplying by 113 and dividing by the course slope rescales your round onto that standard course. That is what makes a differential from a brutal 148-slope layout comparable with one from a gentle 105-slope track."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the full best-8-of-20 method work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Once your record holds 20 acceptable scores, the World Handicap System averages the lowest 8 differentials of those 20 and rounds to one decimal. Each new score pushes the oldest one out, so the index refreshes the day after you post. With fewer than 20 scores a reduced table is used instead, which is exactly what this calculator applies for one to eight rounds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the net double bogey cap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Before a score becomes an adjusted gross score, every hole is capped at net double bogey: par plus two, plus any handicap strokes you receive on that hole. A blow-up 9 on a par 4 where you get one stroke counts as 7. Apply the cap hole by hole first, then enter the adjusted total here."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Golf Handicap Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Golf Handicap Calculator</span></nav>
+  <section class="hero">
+    <h1>Golf Handicap Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter your recent rounds. The calculator runs the WHS differential formula and the low-score adjustment for you.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .srow { display:grid; grid-template-columns:62px 1fr 1fr 1fr; gap:8px; align-items:center; margin-bottom:8px; }
+      #tool .srow input { margin:0; }
+      #tool .srow.head { font-size:12px; color:var(--muted); margin-bottom:4px; line-height:1.25; }
+      #tool .rlabel { font-size:13px; color:var(--muted); }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .difftitle { font-size:13px; color:var(--muted); margin:14px 0 6px; }
+      #tool ul.difflist { list-style:none; padding:0; margin:0; }
+      #tool ul.difflist li { font-size:14px; padding:4px 0; border-bottom:1px solid var(--line); }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:480px){ #tool .srow { grid-template-columns:44px 1fr 1fr 1fr; gap:6px; } #tool .srow.head { font-size:11px; } }
+    </style>
+
+    <p class="subtle" data-i18n="tool.hint" style="margin:0 0 10px;">Enter up to eight recent rounds. One round is enough for a rough estimate.</p>
+
+    <div class="srow head">
+      <div></div>
+      <div data-i18n="tool.h.score">Adjusted gross score</div>
+      <div data-i18n="tool.h.rating">Course rating</div>
+      <div data-i18n="tool.h.slope">Slope rating</div>
+    </div>
+
+    <div class="srow">
+      <div class="rlabel"><span data-i18n="tool.h.round">Round</span> 1</div>
+      <input type="number" id="s1" inputmode="decimal" min="40" max="200" step="1" autocomplete="off" placeholder="88" data-i18n-aria-label="tool.h.score" aria-label="Adjusted gross score">
+      <input type="number" id="cr1" inputmode="decimal" min="60" max="80" step="0.1" autocomplete="off" placeholder="72.0" data-i18n-aria-label="tool.h.rating" aria-label="Course rating">
+      <input type="number" id="sl1" inputmode="decimal" min="55" max="155" step="1" autocomplete="off" placeholder="130" data-i18n-aria-label="tool.h.slope" aria-label="Slope rating">
+    </div>
+    <div class="srow">
+      <div class="rlabel"><span data-i18n="tool.h.round">Round</span> 2</div>
+      <input type="number" id="s2" inputmode="decimal" min="40" max="200" step="1" autocomplete="off" placeholder="91" data-i18n-aria-label="tool.h.score" aria-label="Adjusted gross score">
+      <input type="number" id="cr2" inputmode="decimal" min="60" max="80" step="0.1" autocomplete="off" placeholder="71.4" data-i18n-aria-label="tool.h.rating" aria-label="Course rating">
+      <input type="number" id="sl2" inputmode="decimal" min="55" max="155" step="1" autocomplete="off" placeholder="124" data-i18n-aria-label="tool.h.slope" aria-label="Slope rating">
+    </div>
+    <div class="srow">
+      <div class="rlabel"><span data-i18n="tool.h.round">Round</span> 3</div>
+      <input type="number" id="s3" inputmode="decimal" min="40" max="200" step="1" autocomplete="off" placeholder="86" data-i18n-aria-label="tool.h.score" aria-label="Adjusted gross score">
+      <input type="number" id="cr3" inputmode="decimal" min="60" max="80" step="0.1" autocomplete="off" placeholder="70.2" data-i18n-aria-label="tool.h.rating" aria-label="Course rating">
+      <input type="number" id="sl3" inputmode="decimal" min="55" max="155" step="1" autocomplete="off" placeholder="118" data-i18n-aria-label="tool.h.slope" aria-label="Slope rating">
+    </div>
+    <div class="srow">
+      <div class="rlabel"><span data-i18n="tool.h.round">Round</span> 4</div>
+      <input type="number" id="s4" inputmode="decimal" min="40" max="200" step="1" autocomplete="off" placeholder="94" data-i18n-aria-label="tool.h.score" aria-label="Adjusted gross score">
+      <input type="number" id="cr4" inputmode="decimal" min="60" max="80" step="0.1" autocomplete="off" placeholder="73.1" data-i18n-aria-label="tool.h.rating" aria-label="Course rating">
+      <input type="number" id="sl4" inputmode="decimal" min="55" max="155" step="1" autocomplete="off" placeholder="137" data-i18n-aria-label="tool.h.slope" aria-label="Slope rating">
+    </div>
+    <div class="srow">
+      <div class="rlabel"><span data-i18n="tool.h.round">Round</span> 5</div>
+      <input type="number" id="s5" inputmode="decimal" min="40" max="200" step="1" autocomplete="off" placeholder="89" data-i18n-aria-label="tool.h.score" aria-label="Adjusted gross score">
+      <input type="number" id="cr5" inputmode="decimal" min="60" max="80" step="0.1" autocomplete="off" placeholder="72.6" data-i18n-aria-label="tool.h.rating" aria-label="Course rating">
+      <input type="number" id="sl5" inputmode="decimal" min="55" max="155" step="1" autocomplete="off" placeholder="129" data-i18n-aria-label="tool.h.slope" aria-label="Slope rating">
+    </div>
+    <div class="srow">
+      <div class="rlabel"><span data-i18n="tool.h.round">Round</span> 6</div>
+      <input type="number" id="s6" inputmode="decimal" min="40" max="200" step="1" autocomplete="off" data-i18n-aria-label="tool.h.score" aria-label="Adjusted gross score">
+      <input type="number" id="cr6" inputmode="decimal" min="60" max="80" step="0.1" autocomplete="off" data-i18n-aria-label="tool.h.rating" aria-label="Course rating">
+      <input type="number" id="sl6" inputmode="decimal" min="55" max="155" step="1" autocomplete="off" data-i18n-aria-label="tool.h.slope" aria-label="Slope rating">
+    </div>
+    <div class="srow">
+      <div class="rlabel"><span data-i18n="tool.h.round">Round</span> 7</div>
+      <input type="number" id="s7" inputmode="decimal" min="40" max="200" step="1" autocomplete="off" data-i18n-aria-label="tool.h.score" aria-label="Adjusted gross score">
+      <input type="number" id="cr7" inputmode="decimal" min="60" max="80" step="0.1" autocomplete="off" data-i18n-aria-label="tool.h.rating" aria-label="Course rating">
+      <input type="number" id="sl7" inputmode="decimal" min="55" max="155" step="1" autocomplete="off" data-i18n-aria-label="tool.h.slope" aria-label="Slope rating">
+    </div>
+    <div class="srow">
+      <div class="rlabel"><span data-i18n="tool.h.round">Round</span> 8</div>
+      <input type="number" id="s8" inputmode="decimal" min="40" max="200" step="1" autocomplete="off" data-i18n-aria-label="tool.h.score" aria-label="Adjusted gross score">
+      <input type="number" id="cr8" inputmode="decimal" min="60" max="80" step="0.1" autocomplete="off" data-i18n-aria-label="tool.h.rating" aria-label="Course rating">
+      <input type="number" id="sl8" inputmode="decimal" min="55" max="155" step="1" autocomplete="off" data-i18n-aria-label="tool.h.slope" aria-label="Slope rating">
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate handicap index</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.index">Handicap index</div>
+          <div class="rc-val" id="r-index">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.used">Rounds used</div><div class="rc-val" id="r-used">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.low">Lowest differential</div><div class="rc-val" id="r-low">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.adj">Small-sample adjustment</div><div class="rc-val" id="r-adj">—</div></div>
+      </div>
+      <p class="difftitle" data-i18n="tool.r.diffs">Score differentials</p>
+      <ul class="difflist" id="r-difflist"></ul>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.unofficial" style="margin-top:12px;">Unofficial estimate. Only your club or an authorised provider such as GHIN can issue an official Handicap Index — post your scores there.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How a golf handicap index is actually calculated</h2>
+    <p>Since 2020 the World Handicap System has replaced the old national schemes used in the United States, Great Britain and Ireland, Australia and most of the golfing world. One method now applies everywhere, and it is simpler than the folklore suggests: every round you post is converted into a score differential, and your Handicap Index is built from the best of those differentials. This calculator runs that arithmetic for one to eight rounds, which is where most golfers start.</p>
+
+    <h3>Step 1 — turn each round into a score differential</h3>
+    <p>The differential formula is: <strong>(Adjusted Gross Score − Course Rating) × 113 ÷ Slope Rating</strong>, rounded to one decimal place. Course Rating is what a scratch golfer is expected to shoot from those tees; Slope Rating measures how much harder the course plays for a bogey golfer than for a scratch golfer. Both numbers are printed on the scorecard and on the tee signage — use the values for the exact tees you played, not the championship tees.</p>
+    <p>Say you shot an adjusted 88 from tees rated 72.0 with a slope of 130. The differential is (88 − 72.0) × 113 ÷ 130 = 16 × 113 ÷ 130 = 13.9. Shooting the same 88 from an easier set of tees rated 70.2 with a slope of 118 gives (88 − 70.2) × 113 ÷ 118 = 17.0 — a worse differential, because the course gave you less to fight against. That is the entire point of the system: the differential measures the round, not the scorecard.</p>
+
+    <h3>Step 2 — the short-record table</h3>
+    <p>With a full record of 20 scores, the World Handicap System averages your best 8 differentials. With fewer scores it uses a reduced table so a beginner is not stuck without a number. Three scores use the lowest differential minus 2.0; four use the lowest minus 1.0; five use the lowest as it stands; six use the average of the lowest two minus 1.0; seven or eight use the average of the lowest two; and so on up to the full best-8-of-20. This tool covers the one-to-eight band, applying the minus-2.0 adjustment for one or two rounds as well, which is what most club systems do internally while you are still building a record.</p>
+
+    <h3>Worked example: three rounds</h3>
+    <p>Round one: 88 from 72.0 / 130, differential 13.9. Round two: 92 from 71.4 / 124, differential 18.8. Round three: 85 from 70.2 / 118, differential 14.2. The lowest is 13.9, and with three scores you subtract 2.0, giving a Handicap Index of <strong>11.9</strong>. Notice that the 85 — the best raw score of the three — is not the round that sets your index. The 88 on a slope-130 course was the better performance.</p>
+
+    <h3>Worked example: index to course handicap</h3>
+    <p>An index is portable; a Course Handicap is the number of strokes you actually receive today. The conversion is <strong>Index × (Slope ÷ 113) + (Course Rating − Par)</strong>, rounded to the nearest whole number. Take the 11.9 index above to a course whose white tees are rated 73.1 with a slope of 138 and a par of 72: 11.9 × 138 ÷ 113 = 14.5, plus (73.1 − 72) = 1.1, giving 15.6, which rounds to <strong>16 strokes</strong>. The same index at a gentle municipal track rated 69.4, slope 112, par 71 yields 11.9 × 112 ÷ 113 = 11.8, plus (69.4 − 71) = −1.6, so <strong>10 strokes</strong>. Six strokes of difference from one number — this is why you never quote a Course Handicap as your handicap.</p>
+
+    <h3>Adjusted gross score, not raw score</h3>
+    <p>The score you enter is the adjusted gross score, capped hole by hole at net double bogey: par + 2 + any handicap strokes you receive on that hole. On a par 4 where you receive one stroke, the maximum you can post is 7, no matter what actually happened after the tee shot went out of bounds. The cap keeps one disastrous hole from inflating your index, and it is applied before anything else in this calculation. In the United States a score is acceptable if it is played under the Rules of Golf over at least 9 holes with a fellow player; in GB&amp;I, general-play rounds must be registered before you tee off.</p>
+
+    <h2>Integrity, and what this tool does not do</h2>
+    <p>An index only means something if the scores behind it are honest and complete. Posting your good rounds and quietly forgetting the bad ones — sandbagging in reverse — corrupts the number that every match, medal and society day depends on. Post every acceptable round, on the day you play it.</p>
+    <p>This calculator is deliberately narrow. It does not apply the Playing Conditions Calculation that adjusts differentials on unusually hard or easy days, nor the soft cap and hard cap that slow a rising index, nor the Low Handicap Index anchor from your last 12 months. It does not combine 9-hole scores, and it will not compute net double bogey for you. Those steps live in your club's software. Use the number here to know roughly where you stand — then post your scores through your club or an authorised provider such as GHIN, and let the official system issue the index you play off.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.usga.org/handicapping.html" target="_blank" rel="noopener">USGA Handicapping — governing body for the World Handicap System in the United States, score differentials and Course Handicap conversion</a></li>
+      <li><a href="https://www.randa.org/" target="_blank" rel="noopener">The R&amp;A — co-author of the Rules of Golf and the World Handicap System outside the US and Mexico</a></li>
+      <li><a href="https://www.usga.org/" target="_blank" rel="noopener">USGA — acceptable scores, net double bogey and adjusted gross score</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/gpa-calc/"><span class="related-ico" aria-hidden="true">🎓</span><span class="related-name">GPA Calculator</span></a><a class="related-item" href="https://tool-hub.me/grade-calc/"><span class="related-ico" aria-hidden="true">🎓</span><span class="related-name">Grade Calculator</span></a><a class="related-item" href="https://tool-hub.me/grass-seed-calc/"><span class="related-ico" aria-hidden="true">🌾</span><span class="related-name">Grass Seed Calculator</span></a><a class="related-item" href="https://tool-hub.me/gravel-calc/"><span class="related-ico" aria-hidden="true">🪨</span><span class="related-name">Gravel Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the difference between a handicap index and a course handicap?</summary><p data-i18n="faq.a1">Your Handicap Index is portable: one number that travels with you to any course. A Course Handicap converts it for the tees you are actually playing — Course Handicap = Index x (Slope / 113) + (Course Rating - Par), rounded to the nearest whole number. A 13.9 index on a 130-slope course rated 72.0 at par 71 plays off 17 strokes.</p></details>
+    <details><summary data-i18n="faq.q2">Why does the formula divide by 113?</summary><p data-i18n="faq.a2">113 is the slope rating of a course of standard difficulty, the neutral baseline the USGA chose when the Slope system was built. Multiplying by 113 and dividing by the course slope rescales your round onto that standard course. That is what makes a differential from a brutal 148-slope layout comparable with one from a gentle 105-slope track.</p></details>
+    <details><summary data-i18n="faq.q3">How does the full best-8-of-20 method work?</summary><p data-i18n="faq.a3">Once your record holds 20 acceptable scores, the World Handicap System averages the lowest 8 differentials of those 20 and rounds to one decimal. Each new score pushes the oldest one out, so the index refreshes the day after you post. With fewer than 20 scores a reduced table is used instead, which is exactly what this calculator applies for one to eight rounds.</p></details>
+    <details><summary data-i18n="faq.q4">What is the net double bogey cap?</summary><p data-i18n="faq.a4">Before a score becomes an adjusted gross score, every hole is capped at net double bogey: par plus two, plus any handicap strokes you receive on that hole. A blow-up 9 on a par 4 where you get one stroke counts as 7. Apply the cap hole by hole first, then enter the adjusted total here.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

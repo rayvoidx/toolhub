@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-RQQTNesC8uR+4oys0dTEmIdSYSkkWNvjf+gc+PUawYs=' 'sha256-nHj1RpodZQ4qFb7Jxv+qvOqE6Qd2TVySLqS1RXWnhN0=' 'sha256-r78bnXlRVqootR52mIcsDL/1tVadHLAP81j3QzkRP0Q='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>レンガ計算ツール — 必要なレンガの枚数</title>
+<meta name="description" content="壁の長さと高さ、レンガの寸法、目地厚を入力すると、必要なレンガ枚数、単位面積あたりの枚数、モルタルの袋数を計算します。">
+<meta name="keywords" content="brick calculator, how many bricks do i need, bricks per square foot, brick wall calculator, brick estimator, mortar bags calculator">
+<link rel="canonical" href="https://tool-hub.me/brick-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/brick-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/brick-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/brick-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/brick-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/brick-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/brick-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/brick-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/brick-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/brick-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/brick-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/brick-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/brick-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/brick-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/brick-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/brick-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="レンガ計算ツール — 必要なレンガの枚数">
+<meta property="og:description" content="壁の長さと高さ、レンガの寸法、目地厚を入力すると、必要なレンガ枚数、単位面積あたりの枚数、モルタルの袋数を計算します。">
+<meta property="og:url" content="https://tool-hub.me/brick-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/brick-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#9a3412">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Brick Calculator",
+  "description": "Find out how many bricks you need for a wall. Enter length, height, brick size and mortar joint to get brick count, bricks per square foot and mortar bags.",
+  "url": "https://tool-hub.me/brick-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brick Calculator",
+      "item": "https://tool-hub.me/brick-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this a single or double wythe brick count?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a single-layer count — one wythe, the way brick veneer and garden walls are usually built. If you are laying a double-wythe structural wall or a cavity wall with two brick skins, double the number. Header courses that tie two wythes together add roughly another 3 to 5 per cent on top."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many bricks are in a square foot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a US modular brick with a 3/8 in joint the face becomes 8 in by 2.625 in, which is 21 square inches; 144 divided by 21 is 6.86 bricks per square foot. UK standard brick with a 10 mm joint gives a 225 by 75 mm face, or 59.3 bricks per square metre — the trade rounds it to 60. The 4.5 per square foot figure you may have seen belongs to 4 x 8 in pavers, not wall brick."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which mortar type should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Type N is the usual choice for above-grade brick veneer and garden walls: it is softer than the brick, so cracks land in the joint where they can be repointed. Type S is for structural and below-grade work such as retaining walls and foundations. Type M is stronger still but rarely needed outside heavy load-bearing or paving work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many spare bricks should I buy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add 5 per cent on a plain rectangular wall and 10 per cent once you have corners, arches or a lot of cut bricks. Buy the spares in the same order so the colour blend matches — brick is fired in batches and a later pallet can be visibly different. Keeping twenty or thirty leftovers for future repairs is cheaper than chasing a discontinued colour years later."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Brick Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Brick Calculator</span></nav>
+  <section class="hero">
+    <h1>Brick Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Wall size in, brick count out — with the mortar joint and waste allowance most estimates forget.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="unit" data-i18n="tool.unit.label">Measurement unit</label>
+    <select id="unit">
+      <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+      <option value="m" data-i18n="tool.unit.m">Metres</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="wall-l" data-i18n="tool.wall.length">Wall length</label>
+        <input type="number" id="wall-l" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="20">
+      </div>
+      <div>
+        <label for="wall-h" data-i18n="tool.wall.height">Wall height</label>
+        <input type="number" id="wall-h" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="8">
+      </div>
+    </div>
+
+    <label for="brick" data-i18n="tool.brick.label">Brick size</label>
+    <select id="brick">
+      <option value="modular" data-i18n="tool.brick.modular">US modular — 7 5/8 x 2 1/4 in</option>
+      <option value="queen" data-i18n="tool.brick.queen">US queen — 7 5/8 x 2 3/4 in</option>
+      <option value="uk" data-i18n="tool.brick.uk">UK standard — 215 x 65 mm</option>
+      <option value="custom" data-i18n="tool.brick.custom">Custom size (inches)</option>
+    </select>
+
+    <div class="field-row" id="custom-row" hidden>
+      <div>
+        <label for="brick-l" data-i18n="tool.brick.cl">Brick length (in)</label>
+        <input type="number" id="brick-l" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="7.625">
+      </div>
+      <div>
+        <label for="brick-h" data-i18n="tool.brick.ch">Brick height (in)</label>
+        <input type="number" id="brick-h" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="2.25">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="joint" data-i18n="tool.joint.label">Mortar joint</label>
+        <select id="joint">
+          <option value="0.375" data-i18n="tool.joint.38">3/8 in — US standard</option>
+          <option value="0.25" data-i18n="tool.joint.14">1/4 in — thin joint</option>
+          <option value="0.5" data-i18n="tool.joint.12">1/2 in</option>
+          <option value="0.3937008" data-i18n="tool.joint.10">10 mm — UK standard</option>
+        </select>
+      </div>
+      <div>
+        <label for="waste" data-i18n="tool.waste.label">Waste allowance</label>
+        <select id="waste">
+          <option value="0" data-i18n="tool.waste.0">0% — exact count, no spares</option>
+          <option value="5" data-i18n="tool.waste.5">5% — plain rectangular wall</option>
+          <option value="10" selected data-i18n="tool.waste.10">10% — cuts, corners, breakage</option>
+          <option value="15" data-i18n="tool.waste.15">15% — arches, patterns, heavy cutting</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="openings" data-i18n="tool.openings.label">Openings, doors and windows (ft² / m², optional)</label>
+    <input type="number" id="openings" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="21">
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate bricks</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.bricks">Bricks needed</div>
+          <div class="rc-val" id="r-bricks">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.mortar">Mortar bags (60 lb)</div><div class="rc-val" id="r-mortar">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Net wall area</div><div class="rc-val" id="r-area">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.density">Brick coverage</div><div class="rc-val" id="r-density">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.face">Brick + joint face</div><div class="rc-val" id="r-face">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.single">This counts a single-layer wall (one wythe). Double it for a two-leaf structural wall or a cavity wall with two brick skins.</p>
+    <p class="subtle" data-i18n="tool.note.mortar">Mortar uses the trade rule of one 60 lb bag per 40 bricks. Site mixes, joint size and brick suction all shift the real figure.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How a brick count is actually worked out</h2>
+    <p>Every brick estimate is the same three-step sum: measure the wall face, work out how much wall one brick covers once its mortar joint is included, then divide and add a waste allowance. The part people skip is the joint. A brick does not cover its own size — it covers its size plus half a joint on each side, which is why the number you get from a supplier's chart never matches the raw brick dimensions.</p>
+    <p>For a US modular brick the actual face is 7 5/8 in long by 2 1/4 in high. Add a standard 3/8 in joint to each dimension and the brick effectively occupies 8 in by 2.625 in, or 21 square inches. A square foot is 144 square inches, so 144 divided by 21 gives 6.86 bricks per square foot. That single number does most of the work in this calculator.</p>
+
+    <h3>Worked example: a 20 ft by 8 ft veneer wall</h3>
+    <p>Take the front of a garage: 20 ft long, 8 ft high, with one 7 ft by 3 ft window opening. The gross face is 20 x 8 = 160 sq ft. The window removes 21 sq ft, leaving 139 sq ft of brickwork. At 6.86 bricks per square foot that is 953 bricks before any allowance. Add 10 per cent for cuts, corner returns and breakage and you order 1,049 bricks. Mortar at the trade rule of one 60 lb bag per 40 bricks comes to 27 bags.</p>
+    <p>Note what the opening did: 21 sq ft is 13 per cent of the wall, and dropping it cut about 145 bricks from the order. On a house elevation with three or four windows and a door, ignoring openings can overstate the job by a fifth. Measure each opening, add the areas together, and enter the total.</p>
+
+    <h3>What the joint size does to the total</h3>
+    <p>Change nothing but the joint and the numbers move noticeably. With a 1/2 in joint the same modular brick occupies 8.125 in by 2.75 in, which is 22.34 square inches, or 6.45 bricks per square foot. The same 139 sq ft wall now needs 897 bricks before waste and 987 after — about 62 fewer than the 3/8 in version. Thicker joints mean fewer bricks and more mortar; thinner joints mean the opposite. If your bricklayer has a habit, ask before you order.</p>
+    <p>UK sizing works the same way in metric. A 215 x 65 mm brick with a 10 mm bed and perp joint occupies 225 x 75 mm, which is 0.016875 square metres. One square metre divided by that is 59.3 bricks, and the trade rounds to 60 per square metre for single-skin work. Multiply by two for the classic cavity wall with brick on both leaves.</p>
+
+    <h2>Estimating mortar realistically</h2>
+    <p>The one-bag-per-40-bricks rule is a planning figure, not a specification. Real consumption depends on joint thickness, whether the bricks are frogged or cored, how absorbent they are on a hot day, and how much falls off the board. If you are mixing from sand and cement rather than buying pre-blended bags, a common starting point is roughly 1 cubic yard of mortar per 1,000 modular bricks with 3/8 in joints, mixed at about 1 part cement, 1 part lime and 6 parts sand for a Type N blend.</p>
+    <p>Buy mortar in the same trip as the brick, but buy it last. Bagged mortar has a shelf life and hates damp storage, so it is better to be slightly short and top up than to have half a pallet harden in a shed over the winter.</p>
+
+    <h2>Pallets, delivery and site logistics</h2>
+    <p>Brick usually arrives banded on pallets of roughly 500, though counts run from about 450 to 530 depending on the manufacturer and brick size. Our 1,049-brick order is therefore three pallets — about 2.1 pallets of actual brick, but you cannot buy fractions, and the leftovers are your repair stock. A full pallet weighs around 1.5 tons, so check that the delivery lorry can reach where you want it and that the ground will take the weight. Placing pallets within a wheelbarrow run of the wall saves hours of double handling.</p>
+    <p>Order the whole job at once. Brick colour comes from clay chemistry and kiln position, and two batches of the same product code can be visibly different. Suppliers blend across pallets from a single production run for exactly this reason, which is impossible to replicate months later.</p>
+
+    <h2>Limitations of this estimate</h2>
+    <p>This calculator counts a single-layer wall in a running or stack bond of uniform bricks. It does not account for header courses tying two wythes together, soldier courses over openings, arches, decorative patterns such as herringbone, or corner overlaps on a wall that turns. Each of those consumes extra brick, which is what the waste allowance is loosely covering. For a complex elevation, run the calculator per wall face, add the results, then have the mason sanity-check the total before you place the order.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.gov.uk/government/collections/approved-documents" target="_blank" rel="noopener">UK Government Approved Documents — building regulations covering masonry walls and structure</a></li>
+      <li><a href="https://www.nist.gov/el" target="_blank" rel="noopener">NIST Engineering Laboratory — measurement standards and research on building materials</a></li>
+      <li><a href="https://www.iso.org" target="_blank" rel="noopener">ISO/TC 179 Masonry — international standards for brick units, mortar and dimensions</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/btu-calc/"><span class="related-ico" aria-hidden="true">❄️</span><span class="related-name">BTU Calculator</span></a><a class="related-item" href="https://tool-hub.me/carpet-calc/"><span class="related-ico" aria-hidden="true">🟫</span><span class="related-name">Carpet Calculator</span></a><a class="related-item" href="https://tool-hub.me/click-speed-test/"><span class="related-ico" aria-hidden="true">🖱️</span><span class="related-name">Click Speed Test (CPS)</span></a><a class="related-item" href="https://tool-hub.me/coffee-ratio-calc/"><span class="related-ico" aria-hidden="true">☕</span><span class="related-name">Coffee to Water Ratio Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Is this a single or double wythe brick count?</summary><p data-i18n="faq.a1">It is a single-layer count — one wythe, the way brick veneer and garden walls are usually built. If you are laying a double-wythe structural wall or a cavity wall with two brick skins, double the number. Header courses that tie two wythes together add roughly another 3 to 5 per cent on top.</p></details>
+    <details><summary data-i18n="faq.q2">How many bricks are in a square foot?</summary><p data-i18n="faq.a2">For a US modular brick with a 3/8 in joint the face becomes 8 in by 2.625 in, which is 21 square inches; 144 divided by 21 is 6.86 bricks per square foot. UK standard brick with a 10 mm joint gives a 225 by 75 mm face, or 59.3 bricks per square metre — the trade rounds it to 60. The 4.5 per square foot figure you may have seen belongs to 4 x 8 in pavers, not wall brick.</p></details>
+    <details><summary data-i18n="faq.q3">Which mortar type should I use?</summary><p data-i18n="faq.a3">Type N is the usual choice for above-grade brick veneer and garden walls: it is softer than the brick, so cracks land in the joint where they can be repointed. Type S is for structural and below-grade work such as retaining walls and foundations. Type M is stronger still but rarely needed outside heavy load-bearing or paving work.</p></details>
+    <details><summary data-i18n="faq.q4">How many spare bricks should I buy?</summary><p data-i18n="faq.a4">Add 5 per cent on a plain rectangular wall and 10 per cent once you have corners, arches or a lot of cut bricks. Buy the spares in the same order so the colour blend matches — brick is fired in batches and a later pallet can be visibly different. Keeping twenty or thirty leftovers for future repairs is cheaper than chasing a discontinued colour years later.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

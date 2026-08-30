@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-dlYSjQ7tiwn6vuLqHA3rEUaA7XYpQnShwiZwL6btPyE=' 'sha256-q6GB0m96aPD3mUJK0Jhq6FqYBjM01efv+iQ/tvibGxQ=' 'sha256-AUuq8+2ngnGzAuQROEQh/W6xfQuNn85yfG3QUlN2AIo='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de Palabras Aleatorias — Sustantivos, Verbos y Adjetivos al Instante</title>
+<meta name="description" content="Genera palabras aleatorias en inglés por categoría, letra inicial y longitud. Generador de palabras gratuito para Pictionary, lluvia de ideas y juegos — se calcula localmente, sin anuncios.">
+<meta name="keywords" content="random word generator, random noun generator, random verb generator, random adjective generator, random words, word generator, pictionary word generator, 랜덤 단어 생성기">
+<link rel="canonical" href="https://tool-hub.me/random-word-gen/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/random-word-gen/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/random-word-gen/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/random-word-gen/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/random-word-gen/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/random-word-gen/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/random-word-gen/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/random-word-gen/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/random-word-gen/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/random-word-gen/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/random-word-gen/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/random-word-gen/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/random-word-gen/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/random-word-gen/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/random-word-gen/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/random-word-gen/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Generador de Palabras Aleatorias — Sustantivos, Verbos y Adjetivos al Instante">
+<meta property="og:description" content="Genera palabras aleatorias en inglés por categoría, letra inicial y longitud. Generador de palabras gratuito para Pictionary, lluvia de ideas y juegos — se calcula localmente, sin anuncios.">
+<meta property="og:url" content="https://tool-hub.me/random-word-gen/es/">
+<meta property="og:image" content="https://tool-hub.me/random-word-gen/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#047857">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Random Word Generator",
+  "description": "Generate random English words by category, starting letter, and length. Free word generator for Pictionary, brainstorming, and games — computed locally, no ads.",
+  "url": "https://tool-hub.me/random-word-gen/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Random Word Generator", "item": "https://tool-hub.me/random-word-gen/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What can I use a random word generator for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A random word generator is handy any time you need an unbiased prompt instead of picking from memory. Popular uses include Pictionary or charades (pick a noun to draw or act out), creative writing warm-ups, icebreaker games, building a memorable but unpredictable passphrase, and vocabulary or spelling practice for language learners. Teachers also use it to spot-check vocabulary or generate quick writing prompts, and developers use it to create placeholder names for test data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do the category, starting letter, and length filters work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose Noun, Verb, Adjective, or Any to restrict the word bank to that part of speech — useful when a game like Pictionary calls specifically for objects (nouns) or actions (verbs). The starting letter filter narrows results to words beginning with one letter, handy for alphabet games or a themed round. Minimum and maximum length filter by number of letters, so you can request short 3-4 letter words for beginners or longer words for a harder challenge. All three filters combine, and the tool tells you how many words matched before picking your set."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the words really random, or could the same word repeat in one list?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each word is drawn using your browser's cryptographically secure random number generator (crypto.getRandomValues), with rejection sampling so every eligible word has an equal chance of appearing — not the weaker, slightly biased pattern you get from Math.random() with a simple modulo. Within a single generated list, words are sampled without replacement, so you won't see the same word twice unless the filtered word bank is smaller than the count you asked for."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why did my search return no words or fewer words than I asked for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This happens when your filters are narrower than the available word bank — for example asking for adjectives that start with \"x\" and are at least 10 letters long. The tool never fails silently: it tells you plainly when no words match so you can loosen a filter, and if fewer matching words exist than the count you requested, it returns every matching word and shows you the true total instead of padding the list with repeats."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my activity or word list saved or sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every word is picked entirely inside your browser from a built-in list — no filter, count, or generated word is ever sent to a server. Your last-used filters are saved only in your browser's local storage purely so the tool remembers your preferences next time, and you can clear that at any time by clearing your browser data. There's no sign-up and nothing to track."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Random Word Generator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#7c3aed" href="https://tool-hub.me/text-tools/">Text</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Random Word Generator</span></nav>
+  <section class="hero">
+    <h1>Random Word Generator</h1>
+    <p class="lede" data-i18n="hero.lede">Need a random word? Pick a category — noun, verb, or adjective — add optional filters, and generate an instant list for Pictionary, writing prompts, or any word game.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       i18n contract (docs/I18N.md): every user-visible string carries a data-i18n hook,
+         with the same key added to all 14 language blocks in js/locales.js. Dynamic JS
+         strings are looked up via window.I18N.t("key"); subscribe to the document
+         "i18n:change" event when a re-render on language switch is needed. -->
+  <section class="tool-card" id="tool" aria-label="Random word generator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .rwg-row { display:flex; flex-wrap:wrap; gap:12px; }
+      #tool .rwg-field { display:flex; flex-direction:column; gap:6px; }
+      #tool .rwg-category { flex:1 1 220px; }
+      #tool .rwg-count { flex:0 1 150px; }
+      #tool #rwg-count-hint { font-size:13px; color:var(--muted); margin:6px 0 0; }
+      #tool #rwg-more { margin:14px 0 4px; }
+      #tool #rwg-more summary { font-weight:600; font-size:14px; color:var(--muted); cursor:pointer; }
+      #tool .rwg-len-row { display:flex; gap:12px; margin-top:12px; }
+      #tool .rwg-len-row .rwg-field { flex:1 1 0; }
+      #tool #rwg-letter { max-width:100px; text-transform:lowercase; }
+      #tool #rwg-generate { margin-top:16px; width:100%; }
+      #tool #rwg-error { margin:0; font-weight:600; color:#dc2626; }
+      #tool #rwg-meta { margin:0 0 12px; font-size:13.5px; color:var(--muted); }
+      #tool #rwg-words { display:flex; flex-wrap:wrap; gap:8px; }
+      #tool .rwg-chip {
+        flex:0 0 auto; padding:9px 15px; border:1px solid var(--line); border-radius:999px;
+        background:var(--surface); color:var(--ink); font-weight:700; font-size:15px;
+        cursor:copy; font-family:inherit;
+      }
+      #tool .rwg-chip:hover { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool #rwg-copy-hint { margin:14px 0 0; font-size:12.5px; color:var(--muted); text-align:center; }
+      #tool #rwg-copy { margin-top:10px; width:100%; }
+      @media (max-width:420px) {
+        #tool .rwg-row { flex-direction:column; }
+        #tool .rwg-count { flex:1 1 auto; }
+      }
+    </style>
+
+    <div class="rwg-row">
+      <div class="rwg-field rwg-category">
+        <label for="rwg-category" data-i18n="tool.category.label">Word type</label>
+        <select id="rwg-category" autocomplete="off">
+          <option value="any" data-i18n="tool.category.any">Any</option>
+          <option value="noun" data-i18n="tool.category.noun">Noun</option>
+          <option value="verb" data-i18n="tool.category.verb">Verb</option>
+          <option value="adjective" data-i18n="tool.category.adjective">Adjective</option>
+        </select>
+      </div>
+      <div class="rwg-field rwg-count">
+        <label for="rwg-count" data-i18n="tool.count.label">How many?</label>
+        <input id="rwg-count" type="number" inputmode="numeric" min="1" max="500" step="1" value="10" autocomplete="off">
+      </div>
+    </div>
+    <p id="rwg-count-hint" role="status" hidden></p>
+
+    <details id="rwg-more">
+      <summary data-i18n="tool.details.summary">More filters (starting letter, length)</summary>
+      <div class="rwg-field" style="margin-top:12px;">
+        <label for="rwg-letter" data-i18n="tool.letter.label">Starting letter (optional)</label>
+        <input id="rwg-letter" type="text" maxlength="1" placeholder="e.g. b" data-i18n-placeholder="tool.letter.ph" aria-label="Starting letter" data-i18n-aria-label="tool.letter.label" autocomplete="off">
+      </div>
+      <div class="rwg-len-row">
+        <div class="rwg-field">
+          <label for="rwg-min" data-i18n="tool.min.label">Min length</label>
+          <input id="rwg-min" type="number" inputmode="numeric" min="1" max="20" step="1" placeholder="—" autocomplete="off">
+        </div>
+        <div class="rwg-field">
+          <label for="rwg-max" data-i18n="tool.max.label">Max length</label>
+          <input id="rwg-max" type="number" inputmode="numeric" min="1" max="20" step="1" placeholder="—" autocomplete="off">
+        </div>
+      </div>
+    </details>
+
+    <button type="button" class="btn" id="rwg-generate" data-i18n="tool.generate">🎲 Generate words</button>
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="rwg-error" role="alert" hidden></p>
+      <p id="rwg-meta" hidden></p>
+      <div id="rwg-words" hidden></div>
+      <p id="rwg-copy-hint" hidden data-i18n="tool.copyHint">Tap a word to copy it, or copy the whole list</p>
+      <button type="button" class="btn" id="rwg-copy" hidden data-i18n="tool.copyAll">Copy all</button>
+      <p style="margin:14px 0 0;font-size:13px;color:var(--muted);" data-i18n="tool.note.privacy">Every word is generated locally in your browser — nothing is uploaded or saved on a server.</p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English in-depth guide (unique, no data-i18n). -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>A quick way to pick a word without bias</h2>
+    <p>Whenever a game, a writing exercise, or a naming brainstorm needs a word "out of nowhere," the human brain is a bad random number generator — it reaches for whatever it saw most recently. This tool solves that by drawing from a baked-in bank of about 1,240 common English words, split into nouns, verbs, and adjectives, and picking your set with a cryptographically secure random draw rather than a repeatable pattern.</p>
+
+    <h2>How the filters narrow the word bank</h2>
+    <p>Three filters combine to shape your results:</p>
+    <ul>
+      <li><strong>Word type</strong> — restrict the draw to nouns (things, people, places), verbs (actions), or adjectives (descriptions), or leave it on "Any" to mix all three.</li>
+      <li><strong>Starting letter</strong> — narrow the pool to words beginning with one letter, useful for alphabet-themed rounds or a themed brainstorm.</li>
+      <li><strong>Length range</strong> — set a minimum and/or maximum letter count, handy for beginner word games that need short words or spelling drills that need longer ones.</li>
+    </ul>
+    <p>The tool always reports how many words matched your filters before it draws from them, and every word in a single list is unique — sampled without replacement, so a short list never repeats itself.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — Pictionary night.</strong> Set Word type to "Noun," leave the letter and length blank, and generate 15 words. Each word is a concrete, drawable object — perfect for a drawing-and-guessing game where verbs or abstract adjectives would be too hard to sketch.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — an alphabet warm-up for kids.</strong> Pick "Any," set the starting letter to "b," and generate 8 words. You'll get a short, playful mix like "banana," "big," and "build" — great for practicing a specific letter sound.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — a memorable passphrase.</strong> Generate 4-5 words with Word type "Any" and no other filters, then string them together (capitalize a letter or add a number) for a passphrase that's long and random enough to be strong, yet made of real words you can actually remember.</p>
+    </div>
+
+    <h2>Ideas for what to do with your list</h2>
+    <table>
+      <tr><th>Setting</th><th>Suggested filters</th></tr>
+      <tr><td>Pictionary / charades</td><td>Noun (or Verb for an acting round)</td></tr>
+      <tr><td>Creative writing prompt</td><td>Any, 3-5 words as a story seed</td></tr>
+      <tr><td>Vocabulary practice</td><td>Adjective, set a length range to match skill level</td></tr>
+      <tr><td>Naming brainstorm</td><td>Noun or Adjective, short length for punchy names</td></tr>
+      <tr><td>Icebreaker game</td><td>Any, one word per participant</td></tr>
+    </table>
+
+    <h2>Why crypto-based randomness matters here</h2>
+    <p>Many quick "random pick" scripts use <code>Math.random()</code> combined with a modulo operation, which is fast but can very slightly favor some positions over others, especially near the edges of a list. This generator instead uses the Web Crypto API's <code>crypto.getRandomValues()</code> together with rejection sampling — drawing 32-bit values and discarding the small sliver that would introduce bias — so every matching word has a genuinely equal chance of being chosen, the same technique used for generating passwords and cryptographic keys.</p>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues" target="_blank" rel="noopener">MDN Web Docs — Crypto.getRandomValues(), the browser API used to pick each word</a></li>
+      <li><a href="https://www.w3.org/TR/WebCryptoAPI/" target="_blank" rel="noopener">W3C Web Cryptography API — the specification defining cryptographically strong random values</a></li>
+      <li><a href="https://csrc.nist.gov/projects/random-bit-generation" target="_blank" rel="noopener">NIST Random Bit Generation project — standards for unbiased random number generation</a></li>
+      <li><a href="https://www.nist.gov/itl/applied-cybersecurity/tig/back-basics-multi-factor-authentication" target="_blank" rel="noopener">NIST — guidance on passphrases and authentication, relevant to random-word passphrases</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/readability-checker/"><span class="related-ico" aria-hidden="true">📖</span><span class="related-name">Readability Checker</span></a><a class="related-item" href="https://tool-hub.me/remove-duplicate-lines/"><span class="related-ico" aria-hidden="true">🧹</span><span class="related-name">Remove Duplicate Lines</span></a><a class="related-item" href="https://tool-hub.me/remove-line-breaks/"><span class="related-ico" aria-hidden="true">↩️</span><span class="related-name">Remove Line Breaks</span></a><a class="related-item" href="https://tool-hub.me/reverse-text/"><span class="related-ico" aria-hidden="true">🔁</span><span class="related-name">Reverse Text Generator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         Each summary/p carries data-i18n="faq.qN|faq.aN", filled for every language in locales.js. -->
+    <details>
+      <summary data-i18n="faq.q1">What can I use a random word generator for?</summary>
+      <p data-i18n="faq.a1">A random word generator is handy any time you need an unbiased prompt instead of picking from memory. Popular uses include Pictionary or charades (pick a noun to draw or act out), creative writing warm-ups, icebreaker games, building a memorable but unpredictable passphrase, and vocabulary or spelling practice for language learners. Teachers also use it to spot-check vocabulary or generate quick writing prompts, and developers use it to create placeholder names for test data.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How do the category, starting letter, and length filters work?</summary>
+      <p data-i18n="faq.a2">Choose Noun, Verb, Adjective, or Any to restrict the word bank to that part of speech — useful when a game like Pictionary calls specifically for objects (nouns) or actions (verbs). The starting letter filter narrows results to words beginning with one letter, handy for alphabet games or a themed round. Minimum and maximum length filter by number of letters, so you can request short 3-4 letter words for beginners or longer words for a harder challenge. All three filters combine, and the tool tells you how many words matched before picking your set.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Are the words really random, or could the same word repeat in one list?</summary>
+      <p data-i18n="faq.a3">Each word is drawn using your browser's cryptographically secure random number generator (crypto.getRandomValues), with rejection sampling so every eligible word has an equal chance of appearing — not the weaker, slightly biased pattern you get from Math.random() with a simple modulo. Within a single generated list, words are sampled without replacement, so you won't see the same word twice unless the filtered word bank is smaller than the count you asked for.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Why did my search return no words or fewer words than I asked for?</summary>
+      <p data-i18n="faq.a4">This happens when your filters are narrower than the available word bank — for example asking for adjectives that start with "x" and are at least 10 letters long. The tool never fails silently: it tells you plainly when no words match so you can loosen a filter, and if fewer matching words exist than the count you requested, it returns every matching word and shows you the true total instead of padding the list with repeats.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my activity or word list saved or sent anywhere?</summary>
+      <p data-i18n="faq.a5">No. Every word is picked entirely inside your browser from a built-in list — no filter, count, or generated word is ever sent to a server. Your last-used filters are saved only in your browser's local storage purely so the tool remembers your preferences next time, and you can clear that at any time by clearing your browser data. There's no sign-up and nothing to track.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-ojxxEJwegHa1jZYBmsRCBZRBpMPKDYxQdYJAyKTINMw=' 'sha256-XsPGYImAlXO8m0YhGPpZf02ocZqZkr5SQoTbUyGnyFQ=' 'sha256-Cpniu3TUyjKwmD+Hb5Za9suyTPnJ6FPSLJgfGppeCl0='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>タイムゾーン変換</title>
+<meta name="description" content="無料のオンライン・タイムゾーン変換ツール。時刻を1つ入力するだけで、ニューヨーク・ロンドン・東京などの現地時刻を即表示。UTC時差、+1日／-1日バッジ、サマータイム自動対応つき。インストール不要、登録不要、広告なし。">
+<meta name="keywords" content="time zone converter, world time, time zone difference, daylight saving time calculator, 시간대 변환기, 세계 시간 변환, 한국 미국 시차">
+<link rel="canonical" href="https://tool-hub.me/time-zone-conv/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/time-zone-conv/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/time-zone-conv/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/time-zone-conv/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/time-zone-conv/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/time-zone-conv/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/time-zone-conv/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/time-zone-conv/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/time-zone-conv/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/time-zone-conv/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/time-zone-conv/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/time-zone-conv/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/time-zone-conv/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/time-zone-conv/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/time-zone-conv/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/time-zone-conv/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="タイムゾーン変換">
+<meta property="og:description" content="無料のオンライン・タイムゾーン変換ツール。時刻を1つ入力するだけで、ニューヨーク・ロンドン・東京などの現地時刻を即表示。UTC時差、+1日／-1日バッジ、サマータイム自動対応つき。インストール不要、登録不要、広告なし。">
+<meta property="og:url" content="https://tool-hub.me/time-zone-conv/ja/">
+<meta property="og:image" content="https://tool-hub.me/time-zone-conv/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0891b2">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Time Zone Converter",
+  "description": "Free online time zone converter. Enter one time and instantly see it in New York, London, Tokyo and more, with UTC offsets, +1 day / -1 day badges and automatic daylight saving. No install, no sign-up, ad-free.",
+  "url": "https://tool-hub.me/time-zone-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Time Zone Converter",
+      "item": "https://tool-hub.me/time-zone-conv/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the converter handle daylight saving time (DST) automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This time zone converter never stores fixed offsets. It reads each city's UTC offset for the exact instant you enter from your browser's built-in IANA time zone database, which already knows every country's daylight saving rules and the exact dates they switch. So if the moment you pick falls after a city has sprung forward, the result reflects that automatically — a \"DST\" badge appears on cities that are on daylight saving time, and no offset is ever hardcoded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many hours ahead or behind is one city from another?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Read the UTC offset badge on each card. A city showing UTC+9:00 and another showing UTC-4:00 are 13 hours apart (9 plus 4). Because the offsets are worked out in minutes for the exact instant you chose, half-hour and quarter-hour zones such as India (UTC+5:30) and Nepal (UTC+5:45) are shown exactly, and the +1 day / -1 day badge tells you when the difference pushes a city onto the next or previous calendar day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does the time zone data come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "From the IANA time zone database that is built into your own browser and operating system — the same database phones and computers use worldwide. Nothing you enter is sent to a server: the entire conversion runs on your device, so your base time and city list stay private. Your chosen cities are saved locally with localStorage on this device, and in private browsing they simply reset when you close the tab."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I read the +1 day / -1 day badge when scheduling a meeting across time zones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The badge tells you whether a city lands on a different calendar day from your base time. Say you set 4:00 PM in Los Angeles for a call: Tokyo may show the next morning with a +1 day badge, while it is still the same day for London. Checking these badges before you send an invite is the easiest way to avoid booking someone for 9 a.m. when it is really 2 a.m. the following night for them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What time does the New York Stock Exchange open in my time zone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The NYSE opens at 9:30 AM Eastern Time and closes at 4:00 PM Eastern. To see that in your own time, set the base time zone to New York, enter 9:30 AM, then add your own city as a card — the converter shows the exact local time and whether it falls on the same day. Because it follows daylight saving automatically, the answer stays correct whether New York is on EST in winter or EDT in summer."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 2026-08-02 모바일 360px 오버플로 수리 (qa-deep) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Time Zone Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0284c7" href="https://tool-hub.me/date-calculators/">Date &amp; Time</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Time Zone Converter</span></nav>
+  <section class="hero">
+    <h1>Time Zone Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Pick a time and a few cities. We handle the offsets and daylight saving for you.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <div style="display:flex;gap:14px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:220px;">
+        <label for="tzc-datetime" data-i18n="tool.baseTime">Base time</label>
+        <div style="display:flex;gap:8px;align-items:stretch;">
+          <input type="datetime-local" id="tzc-datetime" style="flex:1;margin:0;">
+          <button class="btn" id="tzc-now" type="button" data-i18n="tool.now" style="margin:0;white-space:nowrap;padding:9px 16px;">Now</button>
+        </div>
+      </div>
+      <div style="flex:1;min-width:220px;">
+        <label for="tzc-basezone" data-i18n="tool.baseZone">Base time zone</label>
+        <select id="tzc-basezone" style="margin:0;"></select>
+      </div>
+    </div>
+
+    <div class="result" id="tzc-notice" hidden aria-live="polite" style="font-size:14px;"></div>
+
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:4px;">
+      <div style="flex:2;min-width:220px;">
+        <label for="tzc-addcity" data-i18n="tool.addCity">Add a city</label>
+        <select id="tzc-addcity" style="margin:0;"></select>
+      </div>
+      <div style="flex:1;min-width:160px;">
+        <label for="tzc-clock" data-i18n="tool.clock">Clock format</label>
+        <select id="tzc-clock" style="margin:0;">
+          <option value="auto" data-i18n="tool.clockAuto">Auto (your language)</option>
+          <option value="24" data-i18n="tool.clock24">24-hour (13:00)</option>
+          <option value="12" data-i18n="tool.clock12">12-hour (1:00 PM)</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="tzc-grid" aria-live="polite" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:18px;"></div>
+    <p class="placeholder-note" id="tzc-empty" data-i18n="tool.empty" hidden>Add a city above to convert your base time.</p>
+
+    <div id="tzc-toast" role="status" aria-live="polite" hidden style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;box-shadow:0 6px 20px rgba(0,0,0,.28);z-index:50;max-width:90vw;text-align:center;"></div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why converting time zones is trickier than adding hours</h2>
+    <p>A time zone is not a fixed number. It is a rule: an offset from Coordinated Universal Time (UTC) that can change twice a year when a region starts or ends daylight saving time, and that different countries switch on different dates. Converting a moment from one place to another means looking up each region's offset <em>for that specific instant</em>, not applying a memorized number. That is exactly what trips people up when they schedule a call and land a colleague at 2 a.m. This converter reads offsets from the IANA time zone database built into your browser, so the daylight-saving rules are always current.</p>
+
+    <h2>How to use it</h2>
+    <ol>
+      <li>Set the <strong>base time</strong> — the date and time you already know — and the <strong>base time zone</strong> it belongs to. Press <em>Now</em> to start from the current moment.</li>
+      <li>Add one or more cities. Each card shows that city's local time for your base instant, its UTC offset badge, and a <em>+1 day</em> or <em>-1 day</em> badge when the result falls on a different calendar date.</li>
+      <li>A <em>DST</em> badge appears on any city that is currently observing daylight saving time for the instant you picked.</li>
+    </ol>
+
+    <h2>The offset arithmetic</h2>
+    <p>Every conversion routes through UTC. The base time is turned into a UTC instant, then each city's offset for that instant is applied. Two cities that show UTC+9:00 and UTC-4:00 are 13 hours apart, because 9 &minus; (&minus;4) = 13. Because offsets are computed in minutes, half-hour and quarter-hour zones such as India (UTC+5:30) and Nepal (UTC+5:45) come out exactly rather than being rounded to the nearest hour.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — a 13-hour gap.</strong> You set 9:00 AM in Tokyo (UTC+9). That is 00:00 UTC. New York in summer is on EDT (UTC&minus;4), so it reads 8:00 PM — and because that is the evening <em>before</em>, the New York card shows a <em>-1 day</em> badge.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — a half-hour zone.</strong> Base time 6:00 PM in London during winter (GMT, UTC+0) converts to 11:30 PM the same day in Kolkata (UTC+5:30). Add 30 minutes to a whole-hour assumption and you would have been wrong by exactly that half hour.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — scheduling across three cities.</strong> A 10:00 AM call in New York in January (EST, UTC&minus;5) is 3:00 PM in London (UTC+0, same day) and 2:00 AM the next day in Sydney (AEDT, UTC+11, <em>+1 day</em> badge). The badges make it obvious that Sydney is the one to reconsider.</p>
+    </div>
+
+    <h2>Standard offsets and daylight saving for common cities</h2>
+    <table>
+      <thead><tr><th>City</th><th>Standard offset</th><th>Daylight saving</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>London</td><td>UTC+0</td><td>Yes (&rarr; UTC+1)</td><td>Northern-hemisphere summer</td></tr>
+        <tr><td>New York</td><td>UTC&minus;5</td><td>Yes (&rarr; UTC&minus;4)</td><td>Switches on different dates than Europe</td></tr>
+        <tr><td>Tokyo</td><td>UTC+9</td><td>No</td><td>Fixed all year</td></tr>
+        <tr><td>Kolkata</td><td>UTC+5:30</td><td>No</td><td>Half-hour offset</td></tr>
+        <tr><td>Kathmandu</td><td>UTC+5:45</td><td>No</td><td>Quarter-hour offset</td></tr>
+        <tr><td>Sydney</td><td>UTC+10</td><td>Yes (&rarr; UTC+11)</td><td>Summer falls in Dec&ndash;Feb</td></tr>
+        <tr><td>Dubai</td><td>UTC+4</td><td>No</td><td>Fixed all year</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Common mistakes and limits</h2>
+    <ul>
+      <li>Do not memorize a fixed gap between two cities — it changes for several weeks each spring and autumn while one region has switched to daylight saving and the other has not.</li>
+      <li>Southern-hemisphere summer runs roughly December to February, so Sydney and London can be on daylight saving at opposite ends of the year.</li>
+      <li>Some regions never use daylight saving at all (Japan, most of India, the Gulf), so their offset is the same every day.</li>
+      <li>The tool converts a single instant. It does not know a person's working hours or public holidays, so a "reasonable" local time is still your judgment call.</li>
+    </ul>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.iana.org/time-zones" target="_blank" rel="noopener">IANA Time Zone Database — the authoritative registry of zone names, UTC offsets and daylight saving rules</a></li>
+      <li><a href="https://www.nist.gov/pml/time-and-frequency-division" target="_blank" rel="noopener">NIST Time and Frequency Division — official U.S. time standards and time zone information</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat" target="_blank" rel="noopener">MDN Intl.DateTimeFormat — how browsers format dates and times for a given time zone</a></li>
+      <li><a href="https://www.gov.uk/when-do-the-clocks-change" target="_blank" rel="noopener">GOV.UK: When do the clocks change — official UK British Summer Time dates</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/timesheet-calc/"><span class="related-ico" aria-hidden="true">🗂️</span><span class="related-name">Time Card Calculator</span></a><a class="related-item" href="https://tool-hub.me/week-number-check/"><span class="related-ico" aria-hidden="true">📆</span><span class="related-name">Week Number Today</span></a><a class="related-item" href="https://tool-hub.me/workday-calc/"><span class="related-ico" aria-hidden="true">💼</span><span class="related-name">Business Days Calculator</span></a><a class="related-item" href="https://tool-hub.me/world-clock/"><span class="related-ico" aria-hidden="true">🌍</span><span class="related-name">World Clock</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details><summary data-i18n="faq.q1">Does the converter handle daylight saving time (DST) automatically?</summary><p data-i18n="faq.a1">Yes. This time zone converter never stores fixed offsets. It reads each city's UTC offset for the exact instant you enter from your browser's built-in IANA time zone database, which already knows every country's daylight saving rules and the exact dates they switch. So if the moment you pick falls after a city has sprung forward, the result reflects that automatically — a "DST" badge appears on cities that are on daylight saving time, and no offset is ever hardcoded.</p></details>
+    <details><summary data-i18n="faq.q2">How many hours ahead or behind is one city from another?</summary><p data-i18n="faq.a2">Read the UTC offset badge on each card. A city showing UTC+9:00 and another showing UTC-4:00 are 13 hours apart (9 plus 4). Because the offsets are worked out in minutes for the exact instant you chose, half-hour and quarter-hour zones such as India (UTC+5:30) and Nepal (UTC+5:45) are shown exactly, and the +1 day / -1 day badge tells you when the difference pushes a city onto the next or previous calendar day.</p></details>
+    <details><summary data-i18n="faq.q3">Where does the time zone data come from?</summary><p data-i18n="faq.a3">From the IANA time zone database that is built into your own browser and operating system — the same database phones and computers use worldwide. Nothing you enter is sent to a server: the entire conversion runs on your device, so your base time and city list stay private. Your chosen cities are saved locally with localStorage on this device, and in private browsing they simply reset when you close the tab.</p></details>
+    <details><summary data-i18n="faq.q4">How do I read the +1 day / -1 day badge when scheduling a meeting across time zones?</summary><p data-i18n="faq.a4">The badge tells you whether a city lands on a different calendar day from your base time. Say you set 4:00 PM in Los Angeles for a call: Tokyo may show the next morning with a +1 day badge, while it is still the same day for London. Checking these badges before you send an invite is the easiest way to avoid booking someone for 9 a.m. when it is really 2 a.m. the following night for them.</p></details>
+    <details><summary data-i18n="faq.q5">What time does the New York Stock Exchange open in my time zone?</summary><p data-i18n="faq.a5">The NYSE opens at 9:30 AM Eastern Time and closes at 4:00 PM Eastern. To see that in your own time, set the base time zone to New York, enter 9:30 AM, then add your own city as a card — the converter shows the exact local time and whether it falls on the same day. Because it follows daylight saving automatically, the answer stays correct whether New York is on EST in winter or EDT in summer.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-+uWR8HkNoOBLMIjBS9BAsB2JvSToi6C0cDvXieruCA4=' 'sha256-/TBEh84d6m1z5G2rwiYqdDot0FJvJDGyIqpC25oFyGk=' 'sha256-FO/xakML3NfGEiTRTwlXo+mdkY+7l/moXj2lu5qIqug='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de escaleras — huella, contrahuella y zanca</title>
+<meta name="description" content="Calcula la contrahuella y la huella de tu escalera al instante: número de escalones, altura exacta, desarrollo total y longitud de la zanca, con verificación de código IRC.">
+<meta name="keywords" content="stair calculator, stair rise and run, stair stringer calculator, building stairs, riser height calculator, stair tread depth">
+<link rel="canonical" href="https://tool-hub.me/stair-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/stair-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/stair-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/stair-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/stair-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/stair-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/stair-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/stair-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/stair-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/stair-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/stair-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/stair-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/stair-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/stair-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/stair-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/stair-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de escaleras — huella, contrahuella y zanca">
+<meta property="og:description" content="Calcula la contrahuella y la huella de tu escalera al instante: número de escalones, altura exacta, desarrollo total y longitud de la zanca, con verificación de código IRC.">
+<meta property="og:url" content="https://tool-hub.me/stair-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/stair-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#713f12">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Stair Calculator",
+  "description": "Work out stair rise and run in seconds: riser count and exact riser height, treads, total run and stringer length, plus IRC code and comfort checks.",
+  "url": "https://tool-hub.me/stair-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Stair Calculator",
+      "item": "https://tool-hub.me/stair-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the legal stair rise and run limits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under the 2021 International Residential Code the maximum riser height is 7.75 in (197 mm) and the minimum tread depth is 10 in (254 mm). Commercial stairs under the IBC are stricter at 7 in max riser and 11 in min tread. Many US states and UK Building Regulations Part K set their own numbers, so always confirm with your local building department before cutting stringers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 2R + T comfort rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the riser height by two and add the tread depth: the sum should land between 24 and 25 in (610 to 635 mm). It comes from the average human stride and keeps the stair from feeling either cramped or stretched. A 7.2 in riser with a 10.5 in tread gives 24.9 in, which is comfortable; a 7.75 in riser with a 9 in tread gives 24.5 in but still fails the tread minimum."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do all the risers have to be exactly equal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and this is the rule inspectors check most. The IRC allows no more than 3/8 in (9.5 mm) variation between the tallest and shortest riser in a flight. People climb stairs on autopilot, so a single odd riser is a genuine trip hazard. Remember to deduct one tread thickness from the bottom riser cut so the finished heights come out identical."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much headroom does a staircase need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The IRC requires at least 6 ft 8 in (2032 mm) measured vertically from the sloped line joining the tread nosings to the ceiling or stairwell opening above. Check it at the top of the flight where the opening ends, because that is where headroom runs out first. If it is tight, lengthening the stairwell opening is usually easier than changing the riser count."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Stair Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Stair Calculator</span></nav>
+  <section class="hero">
+    <h1>Stair Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter your floor-to-floor height. Get equal risers, total run and a stringer length that passes code.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .badges { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+      #tool .badge { display:inline-block; border-radius:999px; padding:3px 12px; font-weight:700; font-size:13px; color:#fff; }
+      #tool .badge.pass { background:#16a34a; }
+      #tool .badge.warn { background:#d97706; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="unit" data-i18n="tool.unit.label">Units</label>
+    <select id="unit">
+      <option value="in" data-i18n="tool.unit.in">Inches</option>
+      <option value="cm" data-i18n="tool.unit.cm">Centimetres</option>
+      <option value="mm" data-i18n="tool.unit.mm">Millimetres</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="rise" data-i18n="tool.rise.label">Total rise (finished floor to finished floor)</label>
+        <input type="number" id="rise" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="108">
+      </div>
+      <div>
+        <label for="tread" data-i18n="tool.tread.label">Tread depth (the flat part you step on)</label>
+        <input type="number" id="tread" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="10.5">
+      </div>
+    </div>
+
+    <label for="target" data-i18n="tool.target.label">Target riser height</label>
+    <select id="target">
+      <option value="7" data-i18n="tool.target.7">7 in / 17.8 cm — comfortable</option>
+      <option value="7.5" data-i18n="tool.target.75">7.5 in / 19.1 cm — standard</option>
+      <option value="7.75" data-i18n="tool.target.775">7.75 in / 19.7 cm — IRC maximum</option>
+      <option value="custom" data-i18n="tool.target.custom">Custom — enter your own</option>
+    </select>
+
+    <div id="custom-wrap" hidden>
+      <label for="custom-riser" data-i18n="tool.customriser.label">Custom target riser height</label>
+      <input type="number" id="custom-riser" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="7.25">
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate stairs</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.risers">Risers</div>
+          <div class="rc-val" id="r-risers">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.treads">Treads</div><div class="rc-val" id="r-treads">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.run">Total run</div><div class="rc-val" id="r-run">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.stringer">Stringer length</div><div class="rc-val" id="r-stringer">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.comfort">2R + T</div><div class="rc-val" id="r-comfort">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.angle">Stair angle</div><div class="rc-val" id="r-angle">—</div></div>
+      </div>
+      <div class="badges">
+        <span class="badge pass" id="b-riser">—</span>
+        <span class="badge pass" id="b-tread">—</span>
+        <span class="badge pass" id="b-comfort">—</span>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.code" style="margin-top:12px;">Figures follow 2021 IRC residential limits: 7.75 in max riser, 10 in min tread, 6 ft 8 in headroom. Commercial and local codes differ — confirm with your building department before you cut.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How a stair calculation actually works</h2>
+    <p>Every staircase starts from one measurement: the total rise, taken from the finished floor at the bottom to the finished floor at the top. Not the subfloor — if you are laying 3/4 in hardwood upstairs and tile downstairs, those thicknesses belong in the number. Get the total rise wrong and every riser in the flight is wrong with it.</p>
+    <p>From there the arithmetic is short. Divide the total rise by a target riser height and round to the nearest whole number: that is your riser count. Divide the total rise back by that count and you get the exact riser height, identical for every step. Treads are always one fewer than risers, because the top floor itself acts as the last tread. Multiply the tread count by your tread depth for the total run, then use Pythagoras on rise and run for the stringer length.</p>
+
+    <h3>Worked example: a 108 in total rise</h3>
+    <p>A typical American two-storey has about 108 in from finished floor to finished floor — 8 ft of ceiling plus joists and flooring. Aim for a comfortable 7 in riser: 108 / 7 = 15.43, which rounds to 15 risers. Divide back: 108 / 15 = 7.2 in per riser, exactly, fifteen times.</p>
+    <p>That gives 14 treads. At a common 10.5 in tread depth the total run is 14 x 10.5 = 147 in, or 12 ft 3 in of floor space you need to have available. The stringer runs the hypotenuse: the square root of 108² + 147² is about 182.4 in, so a 16 ft board covers it with room for the cuts. Check the code numbers: 7.2 in riser is under the 7.75 in IRC maximum, the 10.5 in tread clears the 10 in minimum, and 2R + T = 14.4 + 10.5 = 24.9 in, inside the 24 to 25 in comfort window. This flight passes on all three counts.</p>
+
+    <h3>What happens if you force 16 risers</h3>
+    <p>Switching the target to a shorter riser gives 108 / 6.75 = 16 risers at 6.75 in each, with 15 treads and a 157.5 in run. Every step is gentler, but you have just added 10.5 in of floor length and 2R + T drops to 24 in — right at the edge of comfortable. Shallower risers are not automatically better; they push the stair longer and can make people clip the nosing on the way down. The trade-off between run length and riser height is the whole design decision.</p>
+
+    <h2>Comfort, and why 2R + T matters more than either number alone</h2>
+    <p>A riser can be legal and a tread can be legal and the stair can still feel wrong. The classic formula — twice the riser plus the tread landing between 24 and 25 in — captures the relationship between the two. It comes from the observation that a human stride shortens roughly 2 in for every 1 in of climb. Stairs that fall below 24 in feel steep and choppy; above 25 in they feel stretched, and people find themselves half-stepping. If your calculated result sits outside the range, adjust the tread depth first, since it is usually easier to change than the riser count.</p>
+
+    <h3>Stringer layout tips</h3>
+    <p>Mark stringers with a framing square and a pair of stair gauges clamped at your rise and run figures. Step the square down the board, tracing each triangle, and cut with a circular saw stopping short of the inside corner, then finish with a handsaw so you do not overcut and weaken the stringer.</p>
+    <p>The one cut that trips everyone up is the bottom. If your treads are 1 in thick, the bottom riser will finish 1 in taller than the rest unless you drop the stringer by exactly one tread thickness. Cutting that off the bottom plumb cut is the standard fix, and it is what keeps all fifteen risers within the 3/8 in variance an inspector will measure. Check the top attachment too: whether the stringer hangs off the header or sits on it changes the top riser by the depth of the framing.</p>
+    <p>Finally, plan the space around the stair, not just the stair. You need at least 6 ft 8 in of headroom under the opening above, at least 36 in of stair width for most residential flights, and landings at least as deep as the stair is wide wherever a door swings or the flight turns.</p>
+
+    <h2>Common measurements at a glance</h2>
+    <table>
+      <thead><tr><th>Total rise</th><th>Risers</th><th>Riser height</th><th>Run at 10.5 in tread</th><th>Stringer</th></tr></thead>
+      <tbody>
+        <tr><td>96 in</td><td>14</td><td>6.86 in</td><td>136.5 in</td><td>166.9 in</td></tr>
+        <tr><td>104 in</td><td>15</td><td>6.93 in</td><td>147 in</td><td>180.1 in</td></tr>
+        <tr><td>108 in</td><td>15</td><td>7.2 in</td><td>147 in</td><td>182.4 in</td></tr>
+        <tr><td>112 in</td><td>16</td><td>7 in</td><td>157.5 in</td><td>193.3 in</td></tr>
+        <tr><td>120 in</td><td>17</td><td>7.06 in</td><td>168 in</td><td>206.4 in</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Code disclaimer</h2>
+    <p>The limits used here are the 2021 International Residential Code values for private dwellings: 7.75 in maximum riser, 10 in minimum tread, 6 ft 8 in minimum headroom and 3/8 in maximum variation between risers. Commercial stairs under the IBC are tighter, and UK Building Regulations Part K uses its own private-stair envelope with a maximum pitch of 42 degrees. Local amendments override all of it. Treat these results as a fast design check and a materials estimate — then confirm the numbers with your building department, and pull a permit, before anything gets cut.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.gov.uk/government/collections/approved-documents" target="_blank" rel="noopener">UK Government Approved Documents — Building Regulations guidance including Part K on stairs, ramps and guarding</a></li>
+      <li><a href="https://www.osha.gov/stairways-ladders" target="_blank" rel="noopener">OSHA Stairways and Ladders — workplace requirements for stair rise, tread and railings</a></li>
+      <li><a href="https://www.access-board.gov/ada/" target="_blank" rel="noopener">U.S. Access Board ADA Standards — accessible stair treads, risers, nosings and handrails</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/stud-calc/"><span class="related-ico" aria-hidden="true">🪚</span><span class="related-name">Stud Calculator</span></a><a class="related-item" href="https://tool-hub.me/tank-volume-calc/"><span class="related-ico" aria-hidden="true">🛢️</span><span class="related-name">Tank Volume Calculator</span></a><a class="related-item" href="https://tool-hub.me/tile-calc/"><span class="related-ico" aria-hidden="true">🔲</span><span class="related-name">Tile Calculator</span></a><a class="related-item" href="https://tool-hub.me/tire-size-calc/"><span class="related-ico" aria-hidden="true">🛞</span><span class="related-name">Tire Size Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What are the legal stair rise and run limits?</summary><p data-i18n="faq.a1">Under the 2021 International Residential Code the maximum riser height is 7.75 in (197 mm) and the minimum tread depth is 10 in (254 mm). Commercial stairs under the IBC are stricter at 7 in max riser and 11 in min tread. Many US states and UK Building Regulations Part K set their own numbers, so always confirm with your local building department before cutting stringers.</p></details>
+    <details><summary data-i18n="faq.q2">What is the 2R + T comfort rule?</summary><p data-i18n="faq.a2">Multiply the riser height by two and add the tread depth: the sum should land between 24 and 25 in (610 to 635 mm). It comes from the average human stride and keeps the stair from feeling either cramped or stretched. A 7.2 in riser with a 10.5 in tread gives 24.9 in, which is comfortable; a 7.75 in riser with a 9 in tread gives 24.5 in but still fails the tread minimum.</p></details>
+    <details><summary data-i18n="faq.q3">Do all the risers have to be exactly equal?</summary><p data-i18n="faq.a3">Yes, and this is the rule inspectors check most. The IRC allows no more than 3/8 in (9.5 mm) variation between the tallest and shortest riser in a flight. People climb stairs on autopilot, so a single odd riser is a genuine trip hazard. Remember to deduct one tread thickness from the bottom riser cut so the finished heights come out identical.</p></details>
+    <details><summary data-i18n="faq.q4">How much headroom does a staircase need?</summary><p data-i18n="faq.a4">The IRC requires at least 6 ft 8 in (2032 mm) measured vertically from the sloped line joining the tread nosings to the ceiling or stairwell opening above. Check it at the top of the flight where the opening ends, because that is where headroom runs out first. If it is tight, lengthening the stairwell opening is usually easier than changing the riser count.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

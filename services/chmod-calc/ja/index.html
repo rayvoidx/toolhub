@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-wsmzvnSmwA6LvzzmGbqPTnNSLCSyCEEO/lTl7KhOgTU=' 'sha256-ryvmlbJ1N9ZpPvoZqDR8EV7EkcyADsIsiNGhdl53SfA=' 'sha256-t5ZH1O/LxPZiL2wuWl1HQvtGKdEpVN7eGzgPt2H6VHg='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chmod計算機 — パーミッションを8進数・シンボルに変換</title>
+<meta name="description" content="チェックボックス、8進数（755）、シンボル表記（rwxr-xr-x）の間でファイルパーミッションを即座に変換。setuid/setgid/スティッキービットにも対応。無料、ブラウザ内で完結。">
+<meta name="keywords" content="chmod calculator, chmod 755, file permissions calculator, chmod generator, rwx to octal, 파일 권한 계산기">
+<link rel="canonical" href="https://tool-hub.me/chmod-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/chmod-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/chmod-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/chmod-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/chmod-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/chmod-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/chmod-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/chmod-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/chmod-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/chmod-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/chmod-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/chmod-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/chmod-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/chmod-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/chmod-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/chmod-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chmod計算機 — パーミッションを8進数・シンボルに変換">
+<meta property="og:description" content="チェックボックス、8進数（755）、シンボル表記（rwxr-xr-x）の間でファイルパーミッションを即座に変換。setuid/setgid/スティッキービットにも対応。無料、ブラウザ内で完結。">
+<meta property="og:url" content="https://tool-hub.me/chmod-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/chmod-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0369a1">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Chmod Calculator",
+  "description": "Convert file permissions between checkboxes, octal (755) and symbolic (rwxr-xr-x) notation instantly, with setuid/setgid/sticky bits. Free, browser-only.",
+  "url": "https://tool-hub.me/chmod-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Chmod Calculator", "item": "https://tool-hub.me/chmod-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does chmod 755 mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "chmod 755 sets read, write and execute (7 = rwx) for the file's owner, and read plus execute (5 = r-x) for the group and everyone else. In symbolic notation that's rwxr-xr-x. It's the standard permission for scripts, compiled programs and directories you want anyone to be able to run or open, while only the owner can edit or delete the contents."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between chmod 644 and chmod 755?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "chmod 644 (rw-r--r--) gives the owner read and write access but no execute bit for anyone, which is correct for regular files like text documents, images or config files that are never run directly. chmod 755 (rwxr-xr-x) adds the execute bit for everyone, which is required for shell scripts, compiled binaries and directories — without execute permission a directory can't even be entered (cd'd into) or listed properly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is chmod 777 considered dangerous?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "chmod 777 (rwxrwxrwx) gives every user on the system — owner, group and everyone else — full read, write and execute access. On a shared server or anything internet-facing this means any other account, process or attacker with file access could modify, replace or execute the file, which is a common root cause of web shell uploads and privilege escalation. It's almost always the wrong fix for a \"permission denied\" error; a narrower mode like 755 or 644, or a group/owner change, is usually the real solution."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are setuid, setgid, and the sticky bit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "These are special permission bits shown as a fourth leading octal digit (e.g. 4755) or as an s/t in the symbolic string. Setuid (4, shown as s in the owner's execute slot) makes a program run with the file owner's privileges instead of the user who launched it — classic examples are /usr/bin/passwd. Setgid (2, s in the group slot) does the same for the group, and on a directory makes new files inherit that directory's group. The sticky bit (1, t in the others' execute slot) on a shared directory like /tmp stops users from deleting or renaming files they don't own, even if the directory itself is writable by everyone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my file name or permission data sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This chmod calculator runs entirely in your browser — the permissions you toggle, the octal or symbolic values you type, and any filename you enter for the command preview never leave your device. Nothing is uploaded, logged or stored on a server, and your last permission setting is only kept in your own browser's local storage so it's there next time you open the page."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Chmod Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Chmod Calculator</span></nav>
+  <section class="hero">
+    <h1>Chmod Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Toggle read, write and execute for owner, group and others — the octal code, symbolic notation and chmod command update instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Chmod calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .perm-table{width:100%;border-collapse:collapse;margin:6px 0 4px;}
+      #tool .perm-table th,#tool .perm-table td{text-align:center;padding:8px 4px;border-bottom:1px solid var(--line);}
+      #tool .perm-table th{font-size:12.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;}
+      #tool .perm-table th:first-child,#tool .perm-table td:first-child{text-align:left;font-weight:600;font-size:14px;color:var(--ink);}
+      #tool .perm-table input[type="checkbox"]{width:22px;height:22px;accent-color:var(--accent);cursor:pointer;}
+      #tool .codes-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
+      #tool .codes-row .field{flex:1 1 140px;min-width:0;}
+      #tool .codes-row label{margin:0 0 6px;}
+      #tool .codes-row input{font-variant-numeric:tabular-nums;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:17px;letter-spacing:.02em;}
+      #tool .field-err{display:block;margin-top:5px;font-size:12.5px;color:#dc2626;}
+      #tool .special-grid{display:flex;flex-direction:column;gap:10px;margin-top:12px;}
+      #tool .special-grid label{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14.5px;margin:0;cursor:pointer;}
+      #tool .special-grid input{width:auto;flex:0 0 auto;}
+      #tool .target-row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-top:16px;}
+      #tool .target-row .field{flex:1 1 160px;min-width:0;}
+      #tool .target-row .field label{margin-bottom:6px;}
+      #tool .recur-field{display:flex;align-items:center;gap:8px;padding-bottom:12px;white-space:nowrap;}
+      #tool .recur-field input{width:auto;flex:0 0 auto;}
+      #tool .recur-field label{margin:0;font-weight:600;font-size:14px;cursor:pointer;}
+      #tool #symbolic-command,#tool #command-preview{display:block;margin:0;padding:14px 16px;border-radius:10px;background:var(--bg);border:1px solid var(--line);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:15.5px;color:var(--accent-strong);cursor:pointer;overflow-wrap:anywhere;word-break:break-word;}
+      #tool #symbolic-command-copy-hint,#tool #command-copy-hint{margin:6px 0 0;font-size:12.5px;color:var(--muted);text-align:center;}
+      #tool #perm-warning{margin:12px 0 0;padding:10px 14px;border-radius:10px;background:color-mix(in srgb,#dc2626 12%,var(--surface));border:1px solid color-mix(in srgb,#dc2626 35%,var(--line));color:#dc2626;font-size:13.5px;font-weight:600;}
+      #tool #perm-presets{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:10px;}
+      #tool .perm-preset{text-align:left;display:flex;flex-direction:column;gap:2px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;font-family:inherit;color:var(--ink);}
+      #tool .perm-preset:hover{border-color:var(--accent);}
+      #tool .perm-preset[aria-pressed="true"]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--surface));}
+      #tool .perm-preset .pp-code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:800;font-size:15px;color:var(--accent-strong);}
+      #tool .perm-preset .pp-desc{font-size:12px;color:var(--muted);line-height:1.4;}
+      @media (max-width:420px){
+        #tool .perm-table th,#tool .perm-table td{padding:7px 2px;font-size:12.5px;}
+        #tool .codes-row .field{flex-basis:100%;}
+      }
+    </style>
+
+    <label data-i18n="tool.grid.heading">Permissions</label>
+    <table class="perm-table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" data-i18n="tool.grid.read">Read</th>
+          <th scope="col" data-i18n="tool.grid.write">Write</th>
+          <th scope="col" data-i18n="tool.grid.execute">Execute</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" data-i18n="tool.grid.owner">Owner</th>
+          <td><input type="checkbox" id="perm-owner-r" aria-label="Owner read"></td>
+          <td><input type="checkbox" id="perm-owner-w" aria-label="Owner write"></td>
+          <td><input type="checkbox" id="perm-owner-x" aria-label="Owner execute"></td>
+        </tr>
+        <tr>
+          <th scope="row" data-i18n="tool.grid.group">Group</th>
+          <td><input type="checkbox" id="perm-group-r" aria-label="Group read"></td>
+          <td><input type="checkbox" id="perm-group-w" aria-label="Group write"></td>
+          <td><input type="checkbox" id="perm-group-x" aria-label="Group execute"></td>
+        </tr>
+        <tr>
+          <th scope="row" data-i18n="tool.grid.other">Others</th>
+          <td><input type="checkbox" id="perm-other-r" aria-label="Others read"></td>
+          <td><input type="checkbox" id="perm-other-w" aria-label="Others write"></td>
+          <td><input type="checkbox" id="perm-other-x" aria-label="Others execute"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="codes-row">
+      <div class="field">
+        <label for="octal-input" data-i18n="tool.octal.label">Octal</label>
+        <input id="octal-input" type="text" inputmode="numeric" maxlength="4" placeholder="e.g. 755" data-i18n-placeholder="tool.octal.ph" autocomplete="off">
+        <span class="field-err" id="octal-error" role="alert" hidden></span>
+      </div>
+      <div class="field">
+        <label for="symbolic-input" data-i18n="tool.symbolic.label">Symbolic notation</label>
+        <input id="symbolic-input" type="text" maxlength="10" placeholder="e.g. rwxr-xr-x" data-i18n-placeholder="tool.symbolic.ph" autocomplete="off" spellcheck="false">
+        <span class="field-err" id="symbolic-error" role="alert" hidden></span>
+      </div>
+    </div>
+
+    <details id="tool-special" style="margin-top:18px;">
+      <summary data-i18n="tool.special.summary" style="font-weight:600;font-size:14px;color:var(--muted);cursor:pointer;">Special permissions (setuid, setgid, sticky bit)</summary>
+      <div class="special-grid">
+        <label><input type="checkbox" id="setuid"><span data-i18n="tool.special.setuid">Setuid — run as the file owner</span></label>
+        <label><input type="checkbox" id="setgid"><span data-i18n="tool.special.setgid">Setgid — run as the group / directories inherit the group</span></label>
+        <label><input type="checkbox" id="sticky"><span data-i18n="tool.special.sticky">Sticky bit — only the owner can delete files in a shared folder</span></label>
+      </div>
+    </details>
+
+    <div class="target-row">
+      <div class="field">
+        <label for="target-name" data-i18n="tool.target.label">File or folder name (optional)</label>
+        <input id="target-name" type="text" placeholder="e.g. script.sh" data-i18n-placeholder="tool.target.ph" autocomplete="off">
+      </div>
+      <div class="recur-field">
+        <input type="checkbox" id="recursive">
+        <label for="recursive" data-i18n="tool.recursive.label">Apply recursively (-R)</label>
+      </div>
+    </div>
+
+    <div class="result" id="result" aria-live="polite" style="margin-top:18px;">
+      <label for="command-preview" data-i18n="tool.command.label" style="margin:0 0 6px;">Command</label>
+      <code id="command-preview" tabindex="0"></code>
+      <p id="command-copy-hint" data-i18n="tool.command.copyHint">Tap to copy</p>
+      <label for="symbolic-command" data-i18n="tool.command.symLabel" style="margin:14px 0 6px;">Symbolic command</label>
+      <code id="symbolic-command" tabindex="0"></code>
+      <p id="symbolic-command-copy-hint" data-i18n="tool.command.copyHint">Tap to copy</p>
+      <p id="perm-warning" role="status" data-i18n="tool.warn.777" hidden>chmod 777 gives everyone full read, write and execute access — avoid this on shared or production systems.</p>
+    </div>
+
+    <label style="margin-top:22px;" data-i18n="tool.presets.heading">Common permissions</label>
+    <div id="perm-presets" role="group" aria-label="Common permission presets" data-i18n-aria-label="tool.presets.heading">
+      <button type="button" class="perm-preset" data-octal="755" aria-pressed="false"><span class="pp-code">755 · rwxr-xr-x</span><span class="pp-desc" data-i18n="tool.preset.755">Scripts, programs and folders — owner has full control, everyone else can read and run it.</span></button>
+      <button type="button" class="perm-preset" data-octal="644" aria-pressed="false"><span class="pp-code">644 · rw-r--r--</span><span class="pp-desc" data-i18n="tool.preset.644">Regular files — owner can edit, everyone else can only read.</span></button>
+      <button type="button" class="perm-preset" data-octal="700" aria-pressed="false"><span class="pp-code">700 · rwx------</span><span class="pp-desc" data-i18n="tool.preset.700">Private folder or script — only the owner can access it at all.</span></button>
+      <button type="button" class="perm-preset" data-octal="600" aria-pressed="false"><span class="pp-code">600 · rw-------</span><span class="pp-desc" data-i18n="tool.preset.600">Private file — only the owner can read or write it, e.g. SSH keys and secrets.</span></button>
+      <button type="button" class="perm-preset" data-octal="750" aria-pressed="false"><span class="pp-code">750 · rwxr-x---</span><span class="pp-desc" data-i18n="tool.preset.750">Group-readable folder — owner has full control, the group can read and enter, others have none.</span></button>
+      <button type="button" class="perm-preset" data-octal="664" aria-pressed="false"><span class="pp-code">664 · rw-rw-r--</span><span class="pp-desc" data-i18n="tool.preset.664">Group-writable file — owner and group can edit, everyone else can only read.</span></button>
+      <button type="button" class="perm-preset" data-octal="775" aria-pressed="false"><span class="pp-code">775 · rwxrwxr-x</span><span class="pp-desc" data-i18n="tool.preset.775">Group-writable folder or executable — owner and group have full control, others can read and enter.</span></button>
+      <button type="button" class="perm-preset" data-octal="777" aria-pressed="false"><span class="pp-code">777 · rwxrwxrwx</span><span class="pp-desc" data-i18n="tool.preset.777">Everyone can read, write and execute — dangerous on shared or public systems, avoid using this.</span></button>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:color-mix(in srgb,var(--accent) 8%,var(--surface));padding:1px 5px;border-radius:4px;font-size:.92em}
+    </style>
+
+    <h2>Reading and building Unix file permissions</h2>
+    <p>Every file and directory on Linux, macOS and other Unix-like systems carries three permission classes — <strong>owner</strong>, <strong>group</strong> and <strong>others</strong> — and three permission types per class — <strong>read</strong>, <strong>write</strong> and <strong>execute</strong>. That's nine yes/no switches, which is exactly what the checkbox grid above represents. This chmod calculator keeps the checkboxes, the three-digit octal code (like <code>755</code>) and the nine-character symbolic string (like <code>rwxr-xr-x</code>) permanently in sync, so you can edit whichever format you're most comfortable with and read off the rest.</p>
+
+    <h2>How the octal number is built</h2>
+    <p>Each permission type has a fixed value: read = 4, write = 2, execute = 1. Add up the values that are switched on for a class to get that class's digit, then read owner-group-other left to right:</p>
+    <ul>
+      <li><code>rwx</code> = 4 + 2 + 1 = <strong>7</strong> (full access)</li>
+      <li><code>rw-</code> = 4 + 2 = <strong>6</strong> (read and write, no execute)</li>
+      <li><code>r-x</code> = 4 + 1 = <strong>5</strong> (read and execute, no write)</li>
+      <li><code>r--</code> = 4 = <strong>4</strong> (read only)</li>
+      <li><code>---</code> = 0 = <strong>0</strong> (no access)</li>
+    </ul>
+    <div class="example">
+      <p><strong>Example — chmod 754.</strong> Owner = 7 (rwx, full control), group = 5 (r-x, read and run), others = 4 (r--, read only). Symbolic form: <code>rwxr-xr--</code>. This is a good fit for a script the whole team can run and inspect, but only you can edit.</p>
+    </div>
+
+    <h2>Special permission bits: setuid, setgid, sticky</h2>
+    <p>A fourth, leading octal digit controls three special bits, each worth 4, 2 or 1 and summed the same way as the main three digits:</p>
+    <ul>
+      <li><strong>Setuid (4)</strong> — an executable runs with the <em>file owner's</em> privileges rather than the invoking user's. Shown as a lowercase <code>s</code> in the owner's execute slot (or uppercase <code>S</code> if the owner's execute bit itself is off). <code>/usr/bin/passwd</code> is the textbook example — it needs root privileges to edit <code>/etc/shadow</code> no matter who runs it.</li>
+      <li><strong>Setgid (2)</strong> — the same idea for the group; on a directory it also makes every new file created inside automatically belong to that directory's group instead of the creator's default group. Shown as <code>s</code>/<code>S</code> in the group's execute slot.</li>
+      <li><strong>Sticky bit (1)</strong> — on a shared, world-writable directory (classically <code>/tmp</code>), it stops anyone but a file's owner (or root) from deleting or renaming it, even though the directory allows writes from everyone. Shown as <code>t</code>/<code>T</code> in the others' execute slot.</li>
+    </ul>
+    <div class="example">
+      <p><strong>Example — chmod 4755.</strong> Leading digit 4 = setuid, body 755 = rwxr-xr-x. Symbolic form: <code>rwsr-xr-x</code> — note the lowercase <code>s</code> replacing the owner's <code>x</code>.</p>
+    </div>
+
+    <h2>Common permission recipes</h2>
+    <table>
+      <thead><tr><th>Octal</th><th>Symbolic</th><th>Typical use</th></tr></thead>
+      <tbody>
+        <tr><td>755</td><td>rwxr-xr-x</td><td>Scripts, binaries, directories anyone can use</td></tr>
+        <tr><td>644</td><td>rw-r--r--</td><td>Regular files: documents, configs, images</td></tr>
+        <tr><td>700</td><td>rwx------</td><td>Private directory or script, owner only</td></tr>
+        <tr><td>600</td><td>rw-------</td><td>Private file — SSH private keys, secrets</td></tr>
+        <tr><td>750</td><td>rwxr-x---</td><td>Group-readable directory, no outside access</td></tr>
+        <tr><td>777</td><td>rwxrwxrwx</td><td>Full access for everyone — avoid, see below</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Why chmod 777 is almost always the wrong answer</h2>
+    <p>When a "permission denied" error shows up, running <code>chmod 777</code> makes the error disappear because it grants read, write and execute to owner, group and every other account on the system. That's also exactly the problem: on a shared host or a public web server, any other user, process or compromised script can now overwrite, replace or execute that file. Investigate the actual mismatch instead — a wrong owner (<code>chown</code>), a wrong group, or simply needing 755/644 rather than 777 — and use this calculator to work out the minimum permission that actually fixes it.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/chmod.html" target="_blank" rel="noopener">POSIX.1-2017 (The Open Group) — the standard definition of chmod symbolic and octal modes</a></li>
+      <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/File-permissions.html" target="_blank" rel="noopener">GNU Coreutils Manual — file permission bits, setuid, setgid and the sticky bit</a></li>
+      <li><a href="https://csrc.nist.gov/publications/detail/sp/800-123/final" target="_blank" rel="noopener">NIST SP 800-123 — server security guidance on least-privilege file permissions</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/color-contrast-checker/"><span class="related-ico" aria-hidden="true">♿</span><span class="related-name">Color Contrast Checker</span></a><a class="related-item" href="https://tool-hub.me/color-conv/"><span class="related-ico" aria-hidden="true">◐</span><span class="related-name">HEX to RGB Converter</span></a><a class="related-item" href="https://tool-hub.me/color-picker/"><span class="related-ico" aria-hidden="true">🎨</span><span class="related-name">Color Picker &amp; Converter</span></a><a class="related-item" href="https://tool-hub.me/cron-parser/"><span class="related-ico" aria-hidden="true">⏲️</span><span class="related-name">Cron Expression Parser</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What does chmod 755 mean?</summary>
+      <p data-i18n="faq.a1">chmod 755 sets read, write and execute (7 = rwx) for the file's owner, and read plus execute (5 = r-x) for the group and everyone else. In symbolic notation that's rwxr-xr-x. It's the standard permission for scripts, compiled programs and directories you want anyone to be able to run or open, while only the owner can edit or delete the contents.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What's the difference between chmod 644 and chmod 755?</summary>
+      <p data-i18n="faq.a2">chmod 644 (rw-r--r--) gives the owner read and write access but no execute bit for anyone, which is correct for regular files like text documents, images or config files that are never run directly. chmod 755 (rwxr-xr-x) adds the execute bit for everyone, which is required for shell scripts, compiled binaries and directories — without execute permission a directory can't even be entered (cd'd into) or listed properly.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why is chmod 777 considered dangerous?</summary>
+      <p data-i18n="faq.a3">chmod 777 (rwxrwxrwx) gives every user on the system — owner, group and everyone else — full read, write and execute access. On a shared server or anything internet-facing this means any other account, process or attacker with file access could modify, replace or execute the file, which is a common root cause of web shell uploads and privilege escalation. It's almost always the wrong fix for a "permission denied" error; a narrower mode like 755 or 644, or a group/owner change, is usually the real solution.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What are setuid, setgid, and the sticky bit?</summary>
+      <p data-i18n="faq.a4">These are special permission bits shown as a fourth leading octal digit (e.g. 4755) or as an s/t in the symbolic string. Setuid (4, shown as s in the owner's execute slot) makes a program run with the file owner's privileges instead of the user who launched it — classic examples are /usr/bin/passwd. Setgid (2, s in the group slot) does the same for the group, and on a directory makes new files inherit that directory's group. The sticky bit (1, t in the others' execute slot) on a shared directory like /tmp stops users from deleting or renaming files they don't own, even if the directory itself is writable by everyone.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my file name or permission data sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This chmod calculator runs entirely in your browser — the permissions you toggle, the octal or symbolic values you type, and any filename you enter for the command preview never leave your device. Nothing is uploaded, logged or stored on a server, and your last permission setting is only kept in your own browser's local storage so it's there next time you open the page.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

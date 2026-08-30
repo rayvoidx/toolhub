@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-xpjoKf6uxargLvRGDzMmECfk1Ft9sZ6X/bnhKWxmp7M=' 'sha256-y+DE+V8rtMWrm62iUtHM4w0rqNi96ynBhsPbB5OKCX0=' 'sha256-MgZBU8Na7gi95+NgvIzLlCXi5nuN0VrZYjEUA8QN2m0='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>積立定期(RD)計算ツール — 満期金額と利息</title>
+<meta name="description" content="毎月積み立てる定期預金(RD)の満期金額を四半期複利で計算します。毎月の積立額・年利・期間を入れるだけで、受取利息と実質利回りまで確認できます。">
+<meta name="keywords" content="rd calculator, recurring deposit calculator, rd maturity calculator, rd interest, recurring deposit maturity value, rd interest rate calculator">
+<link rel="canonical" href="https://tool-hub.me/rd-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/rd-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/rd-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/rd-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/rd-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/rd-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/rd-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/rd-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/rd-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/rd-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/rd-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/rd-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/rd-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/rd-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/rd-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/rd-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="積立定期(RD)計算ツール — 満期金額と利息">
+<meta property="og:description" content="毎月積み立てる定期預金(RD)の満期金額を四半期複利で計算します。毎月の積立額・年利・期間を入れるだけで、受取利息と実質利回りまで確認できます。">
+<meta property="og:url" content="https://tool-hub.me/rd-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/rd-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "RD Calculator",
+  "description": "Work out the maturity value of a recurring deposit with quarterly compounding. Enter your monthly deposit, annual rate and tenure to see the interest earned.",
+  "url": "https://tool-hub.me/rd-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "RD or FD — which one pays more?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For the same posted rate and the same total money, a fixed deposit pays more, because the whole lumpsum earns for the full term while each RD instalment earns only for the months left after it lands. Your first instalment compounds for the entire tenure, your last for barely a month. An RD wins on cash flow and discipline, not on yield: you save out of monthly income instead of needing the lumpsum on day one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "RD or SIP in a mutual fund?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An RD gives you a contracted rate and your capital back, guaranteed by the bank and covered by deposit insurance up to the statutory limit. A SIP is market-linked, so it can beat an RD over long horizons and can also be down when you need the money. The usual split is RD for goals inside three years or money you cannot afford to lose, SIP for horizons of five years and beyond."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I close my RD early?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most banks apply the rate that was in force for the period you actually completed, then cut it by a penalty of roughly 0.5% to 1%. Break a 36-month RD at 14 months and you earn the 12-month card rate minus the penalty, not the 36-month rate you signed up for. Many banks also pay nothing at all if you close inside a minimum period, commonly three months, and some allow a loan against the RD instead so you keep the contracted rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is RD interest taxable, and when is TDS deducted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RD interest is fully taxable as income from other sources at your slab rate, whether the bank deducts tax or not. Banks deduct 10% TDS once interest across your deposits at that bank crosses the annual threshold in a financial year, and 20% if you have not given a PAN. If your total income falls below the taxable limit you can submit Form 15G, or Form 15H if you are a senior citizen, to stop the deduction at source."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RD Calculator",
+      "item": "https://tool-hub.me/rd-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>RD Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">RD Calculator</span></nav>
+  <section class="hero">
+    <h1>RD Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Every monthly instalment compounds for a different length of time. This adds them up one by one.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard .rc-sub { font-size:13px; color:var(--muted); margin-top:2px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="deposit" data-i18n="tool.deposit.label">Monthly deposit</label>
+        <input type="number" id="deposit" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="5000">
+      </div>
+      <div>
+        <label for="rate" data-i18n="tool.rate.label">Annual interest rate (%)</label>
+        <input type="number" id="rate" inputmode="decimal" min="0" max="20" step="any" autocomplete="off" placeholder="6.5">
+      </div>
+    </div>
+
+    <label for="tenure" data-i18n="tool.tenure.label">Tenure</label>
+    <select id="tenure">
+      <option value="12" data-i18n="tool.tenure.m12">12 months (1 year)</option>
+      <option value="24" data-i18n="tool.tenure.m24">24 months (2 years)</option>
+      <option value="36" selected data-i18n="tool.tenure.m36">36 months (3 years)</option>
+      <option value="60" data-i18n="tool.tenure.m60">60 months (5 years)</option>
+      <option value="custom" data-i18n="tool.tenure.custom">Custom tenure</option>
+    </select>
+
+    <div id="custom-row" hidden>
+      <label for="months" data-i18n="tool.months.label">Tenure in months</label>
+      <input type="number" id="months" inputmode="numeric" min="6" max="120" step="1" autocomplete="off" placeholder="36">
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate maturity</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.maturity">Maturity value</div>
+          <div class="rc-val" id="r-maturity">—</div>
+          <div class="rc-sub" id="r-lakh"></div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.deposited">Total deposited</div><div class="rc-val" id="r-deposited">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.interest">Interest earned</div><div class="rc-val" id="r-interest">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.yield">Effective annual yield</div><div class="rc-val" id="r-yield">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.calc" style="margin-top:12px;">Quarterly compounding, the standard used by Indian banks. Your bank may round each quarter differently, so the final figure can differ by a small amount.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How a recurring deposit actually compounds</h2>
+    <p>A recurring deposit is not one investment. It is a stack of small fixed deposits, one per month, each with a shorter life than the one before it. That is the single fact most RD explanations skip, and it is the reason a shortcut like "monthly deposit x months x rate" is always wrong. Indian banks compound RD balances quarterly, so each instalment grows at the quarterly rate for however many quarters remain until maturity.</p>
+    <p>The rate per quarter is the annual rate divided by four. An instalment that sits in the account for <em>m</em> more months therefore multiplies by (1 + r/400) raised to the power m/3, because m months is m/3 quarters. This calculator runs that expression once per instalment and adds the results, which is exactly what the bank's own system does.</p>
+
+    <h3>Worked example: 5,000 a month, 6.5%, 36 months</h3>
+    <p>Quarterly rate = 6.5 / 4 = 1.625%. The first instalment stays for all 36 months, which is 12 quarters, so it grows to 5,000 x 1.01625<sup>12</sup> = 6,067.04. The second instalment stays 35 months (11.667 quarters) and grows to 6,034.21. Keep walking down the list and the final instalment, in the account for a single month, grows to just 5,000 x 1.01625<sup>1/3</sup> = 5,026.94.</p>
+    <p>Add all 36 of those and the maturity value is 199,121.86, or roughly 1.99 lakh. You deposited 180,000, so the interest is 19,121.86. Average money-weighted holding time is (36 + 1) / 2 = 18.5 months, which is 1.54 years, and dividing the return by that period gives an effective annual yield of about 6.89% — higher than the posted 6.5% because quarterly compounding turns a 6.5% nominal rate into a 6.66% effective one.</p>
+
+    <h3>Why an FD of the same total pays more</h3>
+    <p>Put the same 180,000 in a one-shot fixed deposit at 6.5% for three years and it grows to 218,413 — about 19,300 more than the RD. Nothing is unfair here. The FD had all the money working from day one, while the RD's later instalments barely had time to earn anything. If you already hold the lumpsum, an FD is strictly better. If you do not, the RD is the only one of the two you can actually open, and comparing them on headline yield misses the point.</p>
+
+    <h2>RD versus SIP, honestly</h2>
+    <table>
+      <thead><tr><th>Feature</th><th>Recurring deposit</th><th>SIP in equity funds</th></tr></thead>
+      <tbody>
+        <tr><td>Return</td><td>Contracted, known on day one</td><td>Market-linked, unknown</td></tr>
+        <tr><td>Capital risk</td><td>None up to deposit insurance limit</td><td>Real; can be negative for years</td></tr>
+        <tr><td>Typical 3-year outcome</td><td>6% to 7.5% before tax</td><td>Anywhere from -15% to +20% annualised</td></tr>
+        <tr><td>Tax</td><td>Interest taxed at your slab every year</td><td>Capital gains, taxed on redemption</td></tr>
+        <tr><td>Exit</td><td>Any time, with a 0.5% to 1% rate penalty</td><td>Any time at prevailing NAV, exit load may apply</td></tr>
+        <tr><td>Best for</td><td>Goals inside 3 years, emergency buffer</td><td>Goals 5 years and beyond</td></tr>
+      </tbody>
+    </table>
+    <p>The honest summary is that a SIP has beaten RDs over most rolling ten-year windows and has also lost money over plenty of two-year ones. Neither instrument is a better version of the other. A house deposit due in 26 months belongs in an RD; a retirement corpus 18 years out does not.</p>
+
+    <h2>Laddering: the trick that fixes reinvestment risk</h2>
+    <p>A single 60-month RD locks one rate for five years and dumps the entire maturity amount into whatever rates exist on one particular day. Laddering splits the same monthly saving across several shorter RDs opened months apart — say four RDs of 12 months each, started one quarter apart. Something matures every three months, so you always have cash coming due, and each maturity is reinvested at the then-current rate. When rates are falling you have already locked part of your money; when they are rising you get to re-price a chunk of it every quarter.</p>
+    <p>The cost of laddering is a slightly lower blended rate, because short-tenure cards usually pay less than the 3-to-5-year bucket. Run both versions through this calculator before deciding: at typical Indian rate curves the difference over three years is small enough that most savers judge the extra flexibility worth it.</p>
+
+    <h2>What this calculator cannot know</h2>
+    <p>Three things move the real number. First, banks round differently — some to the nearest rupee each quarter, some to the nearest paisa, which shifts the maturity value by a few units either way. Second, the posted rate applies only to the tenure you commit to; senior citizens usually get 0.25% to 0.75% more, and small finance banks often post 1% to 2% above the large public sector banks for the same tenure. Third, the figures here are pre-tax. Interest is added to your income and taxed at your slab, so a 6.89% effective yield is closer to 4.8% after a 30% marginal rate. Compare tax-adjusted returns whenever you weigh an RD against anything else.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.rbi.org.in/" target="_blank" rel="noopener">Reserve Bank of India — deposit rate rules and interest calculation norms for banks</a></li>
+      <li><a href="https://www.incometax.gov.in/" target="_blank" rel="noopener">Income Tax Department, India — taxation of deposit interest, TDS thresholds and Forms 15G/15H</a></li>
+      <li><a href="https://www.sebi.gov.in/" target="_blank" rel="noopener">SEBI — investor information on mutual funds and SIPs for comparison with recurring deposits</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/refinance-calc/"><span class="related-ico" aria-hidden="true">🔄</span><span class="related-name">Refinance Calculator</span></a><a class="related-item" href="https://tool-hub.me/rent-affordability-calc/"><span class="related-ico" aria-hidden="true">🏠</span><span class="related-name">Rent Affordability Calculator</span></a><a class="related-item" href="https://tool-hub.me/rent-split-calc/"><span class="related-ico" aria-hidden="true">🚪</span><span class="related-name">Rent Split Calculator</span></a><a class="related-item" href="https://tool-hub.me/retirement-calc/"><span class="related-ico" aria-hidden="true">🌴</span><span class="related-name">Retirement Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">RD or FD — which one pays more?</summary><p data-i18n="faq.a1">For the same posted rate and the same total money, a fixed deposit pays more, because the whole lumpsum earns for the full term while each RD instalment earns only for the months left after it lands. Your first instalment compounds for the entire tenure, your last for barely a month. An RD wins on cash flow and discipline, not on yield: you save out of monthly income instead of needing the lumpsum on day one.</p></details>
+    <details><summary data-i18n="faq.q2">RD or SIP in a mutual fund?</summary><p data-i18n="faq.a2">An RD gives you a contracted rate and your capital back, guaranteed by the bank and covered by deposit insurance up to the statutory limit. A SIP is market-linked, so it can beat an RD over long horizons and can also be down when you need the money. The usual split is RD for goals inside three years or money you cannot afford to lose, SIP for horizons of five years and beyond.</p></details>
+    <details><summary data-i18n="faq.q3">What happens if I close my RD early?</summary><p data-i18n="faq.a3">Most banks apply the rate that was in force for the period you actually completed, then cut it by a penalty of roughly 0.5% to 1%. Break a 36-month RD at 14 months and you earn the 12-month card rate minus the penalty, not the 36-month rate you signed up for. Many banks also pay nothing at all if you close inside a minimum period, commonly three months, and some allow a loan against the RD instead so you keep the contracted rate.</p></details>
+    <details><summary data-i18n="faq.q4">Is RD interest taxable, and when is TDS deducted?</summary><p data-i18n="faq.a4">RD interest is fully taxable as income from other sources at your slab rate, whether the bank deducts tax or not. Banks deduct 10% TDS once interest across your deposits at that bank crosses the annual threshold in a financial year, and 20% if you have not given a PAN. If your total income falls below the taxable limit you can submit Form 15G, or Form 15H if you are a senior citizen, to stop the deduction at source.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

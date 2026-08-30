@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-VnBX0XGyStxkaO0kCGX+tG77pI8p2HU2Jftzm0kuPCA=' 'sha256-Hzjjw5lZbcD4rX9H4msBzPyRCS3YoPuJhrH4fX/WnpU=' 'sha256-5Vv8gnnqZZmo58tSTjX50zAbPHx0fZxduPpqBOO708E='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>オンラインメトロノーム — 無料タップテンポ＆正確なビート</title>
+<meta name="description" content="30〜300 BPMのスライダー、タップテンポ、拍子（2/4・3/4・4/4・6/8）、正確なWeb Audioスケジューリングを備えた無料オンラインメトロノーム。登録不要・広告なし、すべてブラウザ内で完結します。">
+<meta name="keywords" content="metronome online, free metronome, metronome 120 bpm, tap tempo, online metronome with sound, 메트로놈, 온라인 메트로놈">
+<link rel="canonical" href="https://tool-hub.me/metronome/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/metronome/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/metronome/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/metronome/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/metronome/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/metronome/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/metronome/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/metronome/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/metronome/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/metronome/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/metronome/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/metronome/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/metronome/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/metronome/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/metronome/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/metronome/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="オンラインメトロノーム — 無料タップテンポ＆正確なビート">
+<meta property="og:description" content="30〜300 BPMのスライダー、タップテンポ、拍子（2/4・3/4・4/4・6/8）、正確なWeb Audioスケジューリングを備えた無料オンラインメトロノーム。登録不要・広告なし、すべてブラウザ内で完結します。">
+<meta property="og:url" content="https://tool-hub.me/metronome/ja/">
+<meta property="og:image" content="https://tool-hub.me/metronome/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#a21caf">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Online Metronome",
+  "description": "Free online metronome — 30–300 BPM slider, tap tempo, time signatures (2/4, 3/4, 4/4, 6/8), precise Web Audio timing. No sign-up, no ads, runs in your browser.",
+  "url": "https://tool-hub.me/metronome/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-24",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Online Metronome",
+      "item": "https://tool-hub.me/metronome/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What BPM should I practice with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the piece and your skill level, but a good rule is to start slow and build up. Learning a new passage often starts around Andante (76–108 BPM) or slower, then increases in small steps of 2–5 BPM once you can play it cleanly. Tap any row in the tempo markings table below to jump the metronome straight to that range, from a relaxed Largo (40–60) up to a fast Presto (168–200)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does tap tempo work, and how many taps do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Click or tap the \"Tap Tempo\" button in time with the beat you want. After two taps it calculates a BPM from the gap between them, and it keeps refining the average as you keep tapping — four to eight taps in a row give the most accurate result. If you pause for more than 2 seconds, the next tap starts a fresh count instead of averaging in an old, unrelated gap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does 6/8 time click six beats instead of two big beats?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "6/8 is a compound time signature: each measure has two main pulses, and each pulse divides into three eighth notes, for six eighth notes total. This metronome clicks every eighth note — six clicks per measure — and accents the 1st and 4th click so you can still feel the two main beats underneath. That matches how most musicians use a click track when practicing compound meters like 6/8, 9/8 or 12/8."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this metronome keep perfectly steady time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Instead of firing a sound directly from a JavaScript timer, which drifts because the browser can delay ticks under load, this metronome uses the Web Audio API's own clock with a lookahead scheduler that queues every beat about 100 milliseconds before it needs to play. That keeps timing accurate even while the page is busy updating the visual beat indicator. If you switch to another tab, playback stops automatically instead of drifting silently in the background."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my tempo saved anywhere, and does it work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your BPM and time signature are saved only in your browser's localStorage, so they're there the next time you visit — nothing is sent to a server, and there's no sign-up. The metronome is also an installable app that caches its files for offline use, so once you've loaded it, it keeps working without an internet connection. Clearing your browser data or switching devices simply resets it to the default 120 BPM in 4/4."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Online Metronome</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Online Metronome</span></nav>
+  <section class="hero">
+    <h1>Online Metronome</h1>
+    <p class="lede" data-i18n="hero.lede">Set a tempo or tap it in, pick a time signature, and press Start — a precise, no-frills metronome that keeps steady time in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       i18n contract (docs/I18N.md): add a data-i18n hook to every user-facing string and
+       add the same key to "all" language blocks (14) in js/locales.js. Look up dynamic JS
+       strings via window.I18N.t("key"); subscribe to the document "i18n:change" event when
+       a value needs to be re-rendered on language switch. -->
+  <section class="tool-card" id="tool" aria-label="Online metronome" data-i18n-aria-label="tool.aria" aria-live="polite">
+    <style>
+      #tool .metro-bpm-block { text-align:center; margin-bottom:14px; }
+      #tool .metro-bpm-display { display:flex; align-items:center; justify-content:center; gap:14px; }
+      #tool .metro-step { flex:0 0 46px; height:46px; border:1px solid var(--line); border-radius:12px; background:var(--bg); color:var(--ink); font-size:24px; font-weight:700; cursor:pointer; line-height:1; }
+      #tool .metro-step:hover { border-color:var(--accent); }
+      #tool .metro-bpm-num { display:flex; align-items:baseline; gap:6px; min-width:150px; justify-content:center; }
+      #tool .metro-bpm-num input {
+        width:120px; border:none; background:transparent; font-size:56px; font-weight:800;
+        text-align:center; color:var(--ink); font-variant-numeric:tabular-nums; padding:0;
+      }
+      #tool .metro-bpm-num input::-webkit-outer-spin-button,
+      #tool .metro-bpm-num input::-webkit-inner-spin-button { -webkit-appearance:none; margin:0; }
+      #tool .metro-bpm-num input { -moz-appearance:textfield; }
+      #tool .metro-bpm-num span { font-size:15px; font-weight:700; color:var(--muted); }
+      #tool #bpm-slider { width:100%; margin-top:6px; accent-color:var(--accent); }
+      #tool .metro-tempo-name { margin:8px 0 0; font-size:14px; font-weight:700; color:var(--accent-strong); min-height:20px; }
+      #tool .metro-hint { margin:6px 0 0; font-size:13px; color:var(--muted); text-align:center; min-height:0; }
+      #tool .metro-actions { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:20px 0 18px; }
+      #tool .metro-play { min-width:150px; font-size:17px; margin-top:0; }
+      #tool .metro-play.is-playing { background:var(--accent-strong); }
+      #tool .metro-tap {
+        padding:12px 20px; font-size:16px; font-weight:700; border:1px solid var(--line);
+        border-radius:10px; background:var(--surface); color:var(--ink); cursor:pointer;
+        transition:border-color .1s, transform .1s;
+      }
+      #tool .metro-tap:hover { border-color:var(--accent); }
+      #tool .metro-tap.tapped { border-color:var(--accent); transform:scale(0.96); }
+      #tool .metro-beats { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:18px 0 8px; }
+      #tool .metro-dot { width:22px; height:22px; border-radius:50%; background:var(--line); transition:background .05s linear, transform .05s linear; flex:0 0 auto; }
+      #tool .metro-dot.accent { width:26px; height:26px; border:2px solid var(--accent); box-sizing:border-box; background:var(--surface); }
+      #tool .metro-dot.on { background:var(--accent); transform:scale(1.15); }
+      #tool .metro-status { text-align:center; font-size:13.5px; color:var(--muted); min-height:18px; margin:0 0 4px; }
+      #tool .tempo-table-wrap { margin-top:22px; border-top:1px solid var(--line); padding-top:14px; }
+      #tool .tempo-table-wrap summary { font-weight:600; font-size:14px; color:var(--muted); cursor:pointer; }
+      #tool .tempo-table-scroll { overflow-x:auto; margin-top:10px; }
+      #tool table.tempo-table { width:100%; border-collapse:collapse; font-size:14px; min-width:280px; }
+      #tool table.tempo-table th, #tool table.tempo-table td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); }
+      #tool table.tempo-table tr.tempo-row { cursor:pointer; }
+      #tool table.tempo-table tr.tempo-row:hover td { background:color-mix(in srgb, var(--accent) 8%, transparent); }
+      @media (max-width:420px) {
+        #tool .metro-bpm-num input { font-size:42px; width:96px; }
+        #tool .metro-step { flex:0 0 40px; height:40px; font-size:20px; }
+        #tool .metro-beats { gap:7px; }
+        #tool .metro-dot { width:18px; height:18px; }
+        #tool .metro-dot.accent { width:22px; height:22px; }
+      }
+    </style>
+
+    <div class="metro-bpm-block">
+      <div class="metro-bpm-display">
+        <button type="button" id="bpm-minus" class="metro-step" aria-label="Decrease tempo by 1 BPM" data-i18n-aria-label="tool.bpm.dec">−</button>
+        <div class="metro-bpm-num">
+          <input id="bpm" type="number" inputmode="numeric" min="30" max="300" step="1" value="120" aria-label="Tempo in beats per minute" data-i18n-aria-label="tool.bpm.inputAria" autocomplete="off">
+          <span data-i18n="tool.bpm.unit">BPM</span>
+        </div>
+        <button type="button" id="bpm-plus" class="metro-step" aria-label="Increase tempo by 1 BPM" data-i18n-aria-label="tool.bpm.inc">+</button>
+      </div>
+      <input type="range" id="bpm-slider" min="30" max="300" step="1" value="120" aria-label="Tempo slider" data-i18n-aria-label="tool.bpm.slider">
+      <p id="tempo-name" class="metro-tempo-name">Moderato</p>
+      <p id="bpm-hint" class="metro-hint" hidden></p>
+    </div>
+
+    <div class="metro-actions">
+      <button type="button" id="play-btn" class="btn metro-play" data-i18n="tool.play.start" aria-pressed="false">▶ Start</button>
+      <button type="button" id="tap-btn" class="metro-tap" data-i18n="tool.tap">Tap Tempo</button>
+    </div>
+
+    <div class="input-group">
+      <label for="timesig" data-i18n="tool.timesig.label">Time signature</label>
+      <select id="timesig" autocomplete="off">
+        <option value="4/4">4/4</option>
+        <option value="3/4">3/4</option>
+        <option value="2/4">2/4</option>
+        <option value="1/4">1/4</option>
+        <option value="5/4">5/4</option>
+        <option value="6/4">6/4</option>
+        <option value="7/4">7/4</option>
+        <option value="2/2">2/2</option>
+        <option value="3/8">3/8</option>
+        <option value="5/8">5/8</option>
+        <option value="6/8">6/8</option>
+        <option value="7/8">7/8</option>
+        <option value="9/8">9/8</option>
+        <option value="12/8">12/8</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="volume" data-i18n="tool.volume.label">Click volume</label>
+      <div style="display:flex;align-items:center;gap:10px">
+        <input type="range" id="volume" min="0" max="100" step="1" value="100" style="flex:1;accent-color:var(--accent)" autocomplete="off">
+        <span id="volume-val" style="min-width:48px;text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);font-size:14px">100%</span>
+      </div>
+    </div>
+
+    <div id="beat-dots" class="metro-beats" role="img" aria-label="Beat indicator" data-i18n-aria-label="tool.beats.aria"></div>
+    <p id="metro-status" class="metro-status" role="status">Stopped</p>
+
+    <details class="tempo-table-wrap">
+      <summary data-i18n="tool.table.summary">Common tempo markings</summary>
+      <div class="tempo-table-scroll">
+        <table class="tempo-table">
+          <thead>
+            <tr>
+              <th data-i18n="tool.table.name">Marking</th>
+              <th data-i18n="tool.table.range">Typical BPM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tempo-row" data-bpm="50"><td data-i18n="tool.table.largo">Largo</td><td>40–60</td></tr>
+            <tr class="tempo-row" data-bpm="70"><td data-i18n="tool.table.adagio">Adagio</td><td>66–76</td></tr>
+            <tr class="tempo-row" data-bpm="92"><td data-i18n="tool.table.andante">Andante</td><td>76–108</td></tr>
+            <tr class="tempo-row" data-bpm="114"><td data-i18n="tool.table.moderato">Moderato</td><td>108–120</td></tr>
+            <tr class="tempo-row" data-bpm="138"><td data-i18n="tool.table.allegro">Allegro</td><td>120–156</td></tr>
+            <tr class="tempo-row" data-bpm="166"><td data-i18n="tool.table.vivace">Vivace</td><td>156–176</td></tr>
+            <tr class="tempo-row" data-bpm="184"><td data-i18n="tool.table.presto">Presto</td><td>168–200</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What a metronome does and when to use one</h2>
+    <p>A metronome plays a steady, evenly spaced click so you can practice, record, or perform at a fixed tempo. Tempo is measured in beats per minute (BPM): at 60 BPM you hear exactly one click every second, and at 120 BPM you hear two clicks every second. Playing against a reliable pulse is the fastest way to break the small, unconscious habit of rushing the easy bars and dragging through the hard ones. The click never gets tired, nervous, or excited, so it quietly exposes the exact spots where your timing slips.</p>
+    <p>Beyond solo practice, a click track keeps a group locked together, lets a home recording line up cleanly across several takes, and gives a dancer or a video editor a countable grid to work against.</p>
+
+    <h2>How to set it</h2>
+    <ol>
+      <li><strong>Set the tempo.</strong> Type a BPM value, use the minus and plus buttons for single-step changes, or drag the slider for a quick sweep.</li>
+      <li><strong>Or tap it in.</strong> If you know how a piece should feel but not its number, tap the Tap Tempo button in time with the beat; after a few taps it averages your spacing into a BPM.</li>
+      <li><strong>Choose a time signature.</strong> This sets how many clicks make one measure and which beat is accented, so you can hear where each bar begins.</li>
+      <li><strong>Press Start</strong> and play along, watching the highlighted beat to stay oriented.</li>
+    </ol>
+
+    <h2>The math behind the click</h2>
+    <p>Every tempo maps directly to a length of time. One beat lasts 60,000 divided by the BPM, in milliseconds, because there are 60,000 milliseconds in a minute. Multiply that by the number of beats in a bar to get the length of one full measure.</p>
+    <div class="example">
+      <p><strong>Example 1 — reading a tempo as real time.</strong> At 120 BPM in 4/4, each beat lasts 60,000 ÷ 120 = 500 ms. A full four-beat measure is 4 × 500 = 2,000 ms, exactly 2 seconds, so a 30-bar section at this tempo runs for 60 seconds.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — building up a fast passage.</strong> A run is marked 132 BPM but you can only play it cleanly at 96 BPM. Raise the tempo by 4 BPM after each accurate repetition: 96 → 100 → 104 → … → 132. That is (132 − 96) ÷ 4 = 9 steps, ten tempi in all, and your fingers learn the shape without ever rehearsing the mistakes.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — reading a tap.</strong> If you tap along to a song and the average gap between taps is 0.75 seconds, the tempo is 60 ÷ 0.75 = 80 BPM. Halve the gap to 0.375 s and you are tapping double-time at 160 BPM.</p>
+    </div>
+
+    <h2>Tempo-to-time reference</h2>
+    <table>
+      <thead><tr><th>Tempo (BPM)</th><th>Milliseconds per beat</th><th>One 4/4 measure</th></tr></thead>
+      <tbody>
+        <tr><td>60</td><td>1,000 ms</td><td>4.00 s</td></tr>
+        <tr><td>80</td><td>750 ms</td><td>3.00 s</td></tr>
+        <tr><td>90</td><td>667 ms</td><td>2.67 s</td></tr>
+        <tr><td>100</td><td>600 ms</td><td>2.40 s</td></tr>
+        <tr><td>120</td><td>500 ms</td><td>2.00 s</td></tr>
+        <tr><td>140</td><td>429 ms</td><td>1.71 s</td></tr>
+        <tr><td>160</td><td>375 ms</td><td>1.50 s</td></tr>
+        <tr><td>180</td><td>333 ms</td><td>1.33 s</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Common mistakes and practice tips</h2>
+    <ul>
+      <li><strong>Practicing too fast, too soon.</strong> If you can only hit a passage one time in five, slow down until it is clean every time, then climb by small steps.</li>
+      <li><strong>Not subdividing.</strong> At slow tempi, feel the beat divided into eighths or sixteenths (or read a compound signature like 6/8) so the gaps between clicks do not swallow your timing.</li>
+      <li><strong>Chasing the click.</strong> Aim to land exactly on the click, not just after it. If you always feel a hair late, you are reacting to the sound instead of anticipating the pulse.</li>
+      <li><strong>Only ever using 4/4.</strong> Practicing in 3/4 or 6/8 trains you to feel the downbeat in music that is not in common time.</li>
+    </ul>
+
+    <h2>Limits</h2>
+    <p>A metronome measures and enforces steady time; it does not judge whether steady time is musically right. Expressive playing often bends tempo on purpose — a held phrase, a pushed lead-in — and those choices live outside the grid. Use the click to build a dependable internal clock, then decide consciously when to leave it.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nist.gov/pml/time-and-frequency-division" target="_blank" rel="noopener">NIST Time and Frequency Division — how accurate time and frequency standards are defined and distributed</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API" target="_blank" rel="noopener">MDN Web Audio API — the browser audio scheduling this metronome uses for precise click timing</a></li>
+      <li><a href="https://www.khanacademy.org/humanities/music" target="_blank" rel="noopener">Khan Academy Music — free lessons on beat, meter and time signatures</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/mpg-calc/"><span class="related-ico" aria-hidden="true">⛽</span><span class="related-name">MPG Calculator</span></a><a class="related-item" href="https://tool-hub.me/mulch-calc/"><span class="related-ico" aria-hidden="true">🌳</span><span class="related-name">Mulch Calculator</span></a><a class="related-item" href="https://tool-hub.me/online-notepad/"><span class="related-ico" aria-hidden="true">🗒️</span><span class="related-name">Online Notepad</span></a><a class="related-item" href="https://tool-hub.me/paint-calc/"><span class="related-ico" aria-hidden="true">🎨</span><span class="related-name">Paint Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         Add data-i18n="faq.qN|faq.aN" to each summary/p and fill every language in locales.js. -->
+    <details>
+      <summary data-i18n="faq.q1">What BPM should I practice with?</summary>
+      <p data-i18n="faq.a1">It depends on the piece and your skill level, but a good rule is to start slow and build up. Learning a new passage often starts around Andante (76–108 BPM) or slower, then increases in small steps of 2–5 BPM once you can play it cleanly. Tap any row in the tempo markings table below to jump the metronome straight to that range, from a relaxed Largo (40–60) up to a fast Presto (168–200).</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How does tap tempo work, and how many taps do I need?</summary>
+      <p data-i18n="faq.a2">Click or tap the "Tap Tempo" button in time with the beat you want. After two taps it calculates a BPM from the gap between them, and it keeps refining the average as you keep tapping — four to eight taps in a row give the most accurate result. If you pause for more than 2 seconds, the next tap starts a fresh count instead of averaging in an old, unrelated gap.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why does 6/8 time click six beats instead of two big beats?</summary>
+      <p data-i18n="faq.a3">6/8 is a compound time signature: each measure has two main pulses, and each pulse divides into three eighth notes, for six eighth notes total. This metronome clicks every eighth note — six clicks per measure — and accents the 1st and 4th click so you can still feel the two main beats underneath. That matches how most musicians use a click track when practicing compound meters like 6/8, 9/8 or 12/8.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Does this metronome keep perfectly steady time?</summary>
+      <p data-i18n="faq.a4">Yes. Instead of firing a sound directly from a JavaScript timer, which drifts because the browser can delay ticks under load, this metronome uses the Web Audio API's own clock with a lookahead scheduler that queues every beat about 100 milliseconds before it needs to play. That keeps timing accurate even while the page is busy updating the visual beat indicator. If you switch to another tab, playback stops automatically instead of drifting silently in the background.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my tempo saved anywhere, and does it work offline?</summary>
+      <p data-i18n="faq.a5">Your BPM and time signature are saved only in your browser's localStorage, so they're there the next time you visit — nothing is sent to a server, and there's no sign-up. The metronome is also an installable app that caches its files for offline use, so once you've loaded it, it keeps working without an internet connection. Clearing your browser data or switching devices simply resets it to the default 120 BPM in 4/4.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

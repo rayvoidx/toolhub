@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-4Am1WtCNGAmlm7Mg4blZHJRtb7/6fmVXVz1C+ibXxZg=' 'sha256-pRhyFM4CDUrC5gDEZaGvYJH8bv6MQoSUMOYZPzXcP+s=' 'sha256-BFNi7ADyaAijNMeSlAbe6zaysZu6CWptw90Z60K84DA='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>パーティーのお酒量計算ツール — 必要本数がわかる</title>
+<meta name="description" content="パーティーに必要なビール・ワイン・スピリッツの量を計算します。人数・時間・酒類の比率を入れると、氷やミキサーまで含む買い物リストが出ます。">
+<meta name="keywords" content="party drink calculator, how much alcohol for a party, wedding alcohol calculator, drinks per person, party beer wine liquor amounts, alcohol shopping list">
+<link rel="canonical" href="https://tool-hub.me/party-drink-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/party-drink-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/party-drink-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/party-drink-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/party-drink-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/party-drink-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/party-drink-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/party-drink-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/party-drink-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/party-drink-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/party-drink-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/party-drink-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/party-drink-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/party-drink-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/party-drink-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/party-drink-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="パーティーのお酒量計算ツール — 必要本数がわかる">
+<meta property="og:description" content="パーティーに必要なビール・ワイン・スピリッツの量を計算します。人数・時間・酒類の比率を入れると、氷やミキサーまで含む買い物リストが出ます。">
+<meta property="og:url" content="https://tool-hub.me/party-drink-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/party-drink-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#9333ea">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Party Drink Calculator",
+  "description": "Work out how much beer, wine and liquor to buy for a party. Enter guests, hours and your drink mix for a full shopping list with ice and mixers.",
+  "url": "https://tool-hub.me/party-drink-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Party Drink Calculator",
+      "item": "https://tool-hub.me/party-drink-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I avoid overbuying without running out?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Buy about 15% more than the calculator shows, and buy the extra in whatever your shop takes back unopened — most US and UK retailers refund sealed cases of beer, wine and spirits, but never chilled or opened stock. Keep the buffer in the categories that store well: canned beer and spirits keep for months, so an untouched case is never wasted. If your shop has no returns policy, add the buffer to wine and spirits only, since a leftover bottle beats a dry bar at 11pm."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What changes for a wedding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weddings run heavier in the first ninety minutes because everyone arrives thirsty and the cocktail hour is when the bar is busiest. Use the standard or heavy setting, then add toast bubbly as a separate line: one 750 ml bottle of sparkling wine covers six to eight toast pours, so 120 guests need roughly 16 bottles on top of the main mix. Sit-down dinners skew towards wine — try a 30/50/20 beer/wine/spirits mix instead of the default."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does having a bartender change how much I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, by a lot. Self-serve guests pour heavy and top up half-full glasses, which pushes real consumption roughly 20% above the calculated total — bump the crowd setting one level up if there is no one behind the bar. A hired bartender pours measured 1.5 oz shots and 5 oz wine glasses, which is what the bottle yields here assume. Pre-batching a signature cocktail also tightens control, because you buy for one recipe instead of stocking a full back bar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should I worry about liability?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enough to plan for it. In most US states and across the UK, a host who keeps serving a visibly intoxicated guest can be held responsible for what happens afterwards, and that exposure does not disappear because the party is at home. Close the bar an hour before the end, switch to coffee, water and dessert, and have ride shares or designated drivers arranged in advance. Nobody remembers the last drink they were not served; everyone remembers the accident."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Party Drink Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Party Drink Calculator</span></nav>
+  <section class="hero">
+    <h1>Party Drink Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Two drinks in the first hour, one every hour after — scaled to your guest list.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+      #tool .mix-row { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:4px; }
+      #tool .mix-row label { font-size:13px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .list-head { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:16px; }
+      #tool .list-head h3 { font-size:15px; margin:0; }
+      #tool .copy-btn { padding:6px 11px; font-size:12px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .copy-btn:hover { border-color:var(--accent); }
+      #tool pre.list { margin:8px 0 0; padding:12px; border:1px solid var(--line); border-radius:8px;
+        background:var(--bg); font-size:13px; line-height:1.6; white-space:pre-wrap; word-break:break-word; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:520px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="guests" data-i18n="tool.guests.label">Total guests</label>
+        <input type="number" id="guests" inputmode="numeric" min="1" max="5000" step="1" autocomplete="off" placeholder="50">
+      </div>
+      <div>
+        <label for="drinkers" data-i18n="tool.drinkers.label">Guests who drink (%)</label>
+        <input type="number" id="drinkers" inputmode="numeric" min="1" max="100" step="1" autocomplete="off" placeholder="80">
+      </div>
+      <div>
+        <label for="hours" data-i18n="tool.hours.label">Party length (hours)</label>
+        <input type="number" id="hours" inputmode="decimal" min="0.5" max="24" step="any" autocomplete="off" placeholder="4">
+      </div>
+    </div>
+
+    <label for="crowd" data-i18n="tool.crowd.label">How this crowd drinks</label>
+    <select id="crowd">
+      <option value="light" data-i18n="tool.crowd.light">Light — brunch, family mix, early finish</option>
+      <option value="standard" selected data-i18n="tool.crowd.standard">Standard — typical wedding or house party</option>
+      <option value="heavy" data-i18n="tool.crowd.heavy">Heavy — open bar, late night, big drinkers</option>
+    </select>
+
+    <label data-i18n="tool.mix.label">Drink mix (must total 100%)</label>
+    <div class="mix-row">
+      <div>
+        <label for="mix-beer" data-i18n="tool.mix.beer">Beer</label>
+        <select id="mix-beer"><option value="0">0%</option><option value="5">5%</option><option value="10">10%</option><option value="15">15%</option><option value="20">20%</option><option value="25">25%</option><option value="30">30%</option><option value="35">35%</option><option value="40">40%</option><option value="45">45%</option><option value="50" selected>50%</option><option value="55">55%</option><option value="60">60%</option><option value="65">65%</option><option value="70">70%</option><option value="75">75%</option><option value="80">80%</option><option value="85">85%</option><option value="90">90%</option><option value="95">95%</option><option value="100">100%</option></select>
+      </div>
+      <div>
+        <label for="mix-wine" data-i18n="tool.mix.wine">Wine</label>
+        <select id="mix-wine"><option value="0">0%</option><option value="5">5%</option><option value="10">10%</option><option value="15">15%</option><option value="20">20%</option><option value="25">25%</option><option value="30" selected>30%</option><option value="35">35%</option><option value="40">40%</option><option value="45">45%</option><option value="50">50%</option><option value="55">55%</option><option value="60">60%</option><option value="65">65%</option><option value="70">70%</option><option value="75">75%</option><option value="80">80%</option><option value="85">85%</option><option value="90">90%</option><option value="95">95%</option><option value="100">100%</option></select>
+      </div>
+      <div>
+        <label for="mix-spirits" data-i18n="tool.mix.spirits">Spirits</label>
+        <select id="mix-spirits"><option value="0">0%</option><option value="5">5%</option><option value="10">10%</option><option value="15">15%</option><option value="20" selected>20%</option><option value="25">25%</option><option value="30">30%</option><option value="35">35%</option><option value="40">40%</option><option value="45">45%</option><option value="50">50%</option><option value="55">55%</option><option value="60">60%</option><option value="65">65%</option><option value="70">70%</option><option value="75">75%</option><option value="80">80%</option><option value="85">85%</option><option value="90">90%</option><option value="95">95%</option><option value="100">100%</option></select>
+      </div>
+    </div>
+
+    <label for="pour" data-i18n="tool.pour.label">Wine glass size</label>
+    <select id="pour">
+      <option value="150" selected data-i18n="tool.pour.150">5 oz / 150 ml — standard pour</option>
+      <option value="175" data-i18n="tool.pour.175">6 oz / 175 ml — UK large glass</option>
+      <option value="250" data-i18n="tool.pour.250">8 oz / 250 ml — big pub pour</option>
+    </select>
+
+    <label for="shot" data-i18n="tool.shot.label">Spirit measure</label>
+    <select id="shot">
+      <option value="44" selected data-i18n="tool.shot.44">1.5 oz / 44 ml — US standard shot</option>
+      <option value="25" data-i18n="tool.shot.25">25 ml — UK single measure</option>
+      <option value="35" data-i18n="tool.shot.35">35 ml — Irish single measure</option>
+      <option value="50" data-i18n="tool.shot.50">50 ml — double measure</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.total">Total drinks</div>
+          <div class="rc-val" id="r-total">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.beer">Beer (12 oz cans/bottles)</div><div class="rc-val" id="r-beer">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.wine">Wine (750 ml bottles)</div><div class="rc-val" id="r-wine">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.spirits">Spirits (750 ml bottles)</div><div class="rc-val" id="r-spirits">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.mixers">Mixers (litres)</div><div class="rc-val" id="r-mixers">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.ice">Ice (lb)</div><div class="rc-val" id="r-ice">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.soda">Soft drinks (cans)</div><div class="rc-val" id="r-soda">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.water">Water (bottles)</div><div class="rc-val" id="r-water">—</div></div>
+      </div>
+      <div class="list-head">
+        <h3 data-i18n="tool.list.title">Shopping list</h3>
+        <button type="button" class="copy-btn" id="copy-btn" data-i18n="tool.copy">Copy list</button>
+      </div>
+      <pre class="list" id="list"></pre>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.safety" style="margin-top:12px;">Planning estimates, not a serving guide. Put out food and water, watch the pace late in the night, and sort rides home before the first drink is poured.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>The rule every caterer starts from</h2>
+    <p>Ask a banquet manager how much alcohol a party needs and you will get the same sentence every time: two drinks in the first hour, one drink every hour after that. It works because it describes how people actually behave. Guests arrive thirsty, the first round goes down fast while everyone is finding their group, and then consumption settles into a slower rhythm once the food comes out and conversations start. A four-hour party is therefore five drinks per drinking guest, not four and not eight.</p>
+    <p>One drink means one standard serve: a 12 oz beer, a 5 oz glass of wine, or a 1.5 oz shot of spirits. Those three contain roughly the same amount of alcohol, which is why the mix percentages can be swapped around freely without changing the total. What changes is the packaging you have to buy.</p>
+
+    <h3>Worked example: 50 guests, 4 hours, standard crowd</h3>
+    <p>Say 80% of your 50 guests drink alcohol. That is 40 drinkers. Four hours means 2 + 3 = 5 drinks each, so 40 x 5 = 200 drinks in total. With the default 50/30/20 mix that splits into 100 beers, 60 glasses of wine and 40 shots of spirits.</p>
+    <p>Now convert to what you actually put in the trolley. Beer is one-to-one, so 100 cans — a little over four 24-packs, so buy five. A 750 ml bottle of wine holds five 5 oz glasses, so 60 glasses is 12 bottles. A 750 ml bottle of spirits gives 17 shots at 1.5 oz each, so 40 shots is 3 bottles. Cocktails need mixers at roughly a litre per three drinks, which is 14 litres of tonic, soda, cola and juice combined. Ice runs at 1.5 lb per guest for chilling and serving together, so 75 lb — most people badly underbuy this one. The ten non-drinkers want about two soft drinks each, so 20 cans, and water works out at one bottle per guest per two hours, or 100 bottles for a four-hour event.</p>
+
+    <h3>Adjusting for the crowd in front of you</h3>
+    <p>The light setting cuts the total by 25% and suits daytime events, a family-heavy guest list, or anything ending before dark. The heavy setting adds 25% and is the honest choice for an open bar, a late finish, or a group that treats a wedding as a reunion. If you are torn between two settings, remember that the cost of guessing high is a few returnable cases, while the cost of guessing low is someone driving to a shop at 10pm.</p>
+
+    <h3>The 15% buffer and the returns strategy</h3>
+    <p>Buy about 15% more than the numbers above, but buy the buffer deliberately. Large US chains such as Total Wine and BevMo, and most UK supermarkets running "sale or return" on party orders, will refund sealed, room-temperature stock. They will not take back anything chilled, and they will not take back opened bottles. So put the buffer in sealed cases of canned beer and unopened spirits, keep those boxes out of the ice tubs until you need them, and hold onto the receipt. If your shop has no returns policy at all, shift the buffer into spirits and wine, which keep indefinitely, and leave beer at the calculated number.</p>
+
+    <h3>Simplify with one signature cocktail</h3>
+    <p>Stocking a full back bar for a house party is how budgets get destroyed. Pick one spirit-based cocktail, batch it in advance, and you replace six half-used bottles with one clear shopping line. A batched punch also paces the room: guests serve themselves a measured ladle rather than free-pouring, so your consumption stays close to the calculated total. If you skip the bartender entirely, expect real consumption to land about 20% above the estimate, because self-served drinks are simply bigger drinks.</p>
+
+    <h3>What this calculator does not know</h3>
+    <p>It cannot see the weather, and a hot outdoor afternoon pushes beer and water demand up sharply while barely touching spirits. It does not model regional habits: a wedding in Wisconsin and one in Surrey have different baselines. It assumes standard serve sizes, so if your wine glasses are the large 250 ml pub pours, cut the bottle yield from five glasses to three. And it treats every guest as an average, which no guest is. Use the numbers as a shopping plan, then apply what you know about the twelve people who will actually be standing near the bar.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.niaaa.nih.gov/alcohols-effects-health/what-standard-drink" target="_blank" rel="noopener">NIAAA (NIH) — definition of a US standard drink for beer, wine and spirits</a></li>
+      <li><a href="https://www.cdc.gov/alcohol/" target="_blank" rel="noopener">CDC — alcohol use guidance, including moderate-drinking limits</a></li>
+      <li><a href="https://www.gov.uk/government/collections/alcohol-guidelines" target="_blank" rel="noopener">UK Government — Chief Medical Officers' low-risk drinking guidelines and UK units</a></li>
+      <li><a href="https://www.foodsafety.gov/keep-food-safe/food-safety-by-events-and-seasons" target="_blank" rel="noopener">FoodSafety.gov — safe serving and chilling for large gatherings</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/paver-calc/"><span class="related-ico" aria-hidden="true">🧱</span><span class="related-name">Paver Calculator</span></a><a class="related-item" href="https://tool-hub.me/plant-spacing-calc/"><span class="related-ico" aria-hidden="true">🌷</span><span class="related-name">Plant Spacing Calculator</span></a><a class="related-item" href="https://tool-hub.me/pool-volume-calc/"><span class="related-ico" aria-hidden="true">🏊</span><span class="related-name">Pool Volume Calculator</span></a><a class="related-item" href="https://tool-hub.me/propane-calc/"><span class="related-ico" aria-hidden="true">🔥</span><span class="related-name">Propane Tank Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How do I avoid overbuying without running out?</summary><p data-i18n="faq.a1">Buy about 15% more than the calculator shows, and buy the extra in whatever your shop takes back unopened — most US and UK retailers refund sealed cases of beer, wine and spirits, but never chilled or opened stock. Keep the buffer in the categories that store well: canned beer and spirits keep for months, so an untouched case is never wasted. If your shop has no returns policy, add the buffer to wine and spirits only, since a leftover bottle beats a dry bar at 11pm.</p></details>
+    <details><summary data-i18n="faq.q2">What changes for a wedding?</summary><p data-i18n="faq.a2">Weddings run heavier in the first ninety minutes because everyone arrives thirsty and the cocktail hour is when the bar is busiest. Use the standard or heavy setting, then add toast bubbly as a separate line: one 750 ml bottle of sparkling wine covers six to eight toast pours, so 120 guests need roughly 16 bottles on top of the main mix. Sit-down dinners skew towards wine — try a 30/50/20 beer/wine/spirits mix instead of the default.</p></details>
+    <details><summary data-i18n="faq.q3">Does having a bartender change how much I need?</summary><p data-i18n="faq.a3">Yes, by a lot. Self-serve guests pour heavy and top up half-full glasses, which pushes real consumption roughly 20% above the calculated total — bump the crowd setting one level up if there is no one behind the bar. A hired bartender pours measured 1.5 oz shots and 5 oz wine glasses, which is what the bottle yields here assume. Pre-batching a signature cocktail also tightens control, because you buy for one recipe instead of stocking a full back bar.</p></details>
+    <details><summary data-i18n="faq.q4">How much should I worry about liability?</summary><p data-i18n="faq.a4">Enough to plan for it. In most US states and across the UK, a host who keeps serving a visibly intoxicated guest can be held responsible for what happens afterwards, and that exposure does not disappear because the party is at home. Close the bar an hour before the end, switch to coffee, water and dessert, and have ride shares or designated drivers arranged in advance. Nobody remembers the last drink they were not served; everyone remembers the accident.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-zAB88XVue3dMcil66OutUP6IVqpgUmiDG9haUIBvVaI=' 'sha256-rocdY98QhlKAUcxw4U4tVIPS5bsD3SldxfRhzXD7saA=' 'sha256-K5k3DFi/hKEz110YYqWq+bcAPZMppyF+KxqELyR2YG8='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de UUID</title>
+<meta name="description" content="Generador de UUID en línea y gratuito. Crea UUID v4 criptográficamente aleatorios y UUID v7 ordenados por tiempo en lote, cópialos al instante y elige formato en mayúsculas, sin guiones o entre llaves. 100% local: nada sale de tu navegador.">
+<meta name="keywords" content="uuid generator, UUID 생성기, guid generator, uuid v4 generator, uuid v7 generator, random uuid, 고유 식별자 생성">
+<link rel="canonical" href="https://tool-hub.me/uuid-gen/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/uuid-gen/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/uuid-gen/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/uuid-gen/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/uuid-gen/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/uuid-gen/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/uuid-gen/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/uuid-gen/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/uuid-gen/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/uuid-gen/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/uuid-gen/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/uuid-gen/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/uuid-gen/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/uuid-gen/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/uuid-gen/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/uuid-gen/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Generador de UUID">
+<meta property="og:description" content="Generador de UUID en línea y gratuito. Crea UUID v4 criptográficamente aleatorios y UUID v7 ordenados por tiempo en lote, cópialos al instante y elige formato en mayúsculas, sin guiones o entre llaves. 100% local: nada sale de tu navegador.">
+<meta property="og:url" content="https://tool-hub.me/uuid-gen/es/">
+<meta property="og:image" content="https://tool-hub.me/uuid-gen/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0891b2">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "UUID Generator",
+  "description": "Free online UUID generator. Create cryptographically random UUID v4 and time-ordered UUID v7 in bulk, copy them instantly, and pick uppercase, hyphenless, or braces formats. 100% local — nothing leaves your browser.",
+  "url": "https://tool-hub.me/uuid-gen/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "UUID Generator",
+      "item": "https://tool-hub.me/uuid-gen/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a UUID, and is a GUID the same thing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A UUID (Universally Unique Identifier) is a 128-bit value defined by RFC 4122 (updated by RFC 9562), written as 32 hexadecimal digits in five hyphen-separated groups like 550e8400-e29b-41d4-a716-446655440000. GUID (Globally Unique Identifier) is Microsoft's name for exactly the same thing, so this UUID generator doubles as a GUID generator. Because a random UUID draws from 2^122 possibilities, anyone can create one independently on any machine — no central registry — and still trust it will not collide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "UUID v4 vs UUID v7 — which one should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A UUID v4 generator produces 122 bits of pure randomness — perfect as a general random UUID whenever you just need uniqueness. A UUID v7 generator produces time-ordered values: the first 48 bits are a Unix millisecond timestamp, so v7 UUIDs sort chronologically. That makes v7 ideal for database primary keys and B-tree indexes, where sequential inserts stay compact and fast instead of scattering across the index the way random v4 keys do. Choose v4 for opacity and no time leakage; choose v7 when insert locality and sortability matter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are these UUIDs really unique and random?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every random value comes from crypto.getRandomValues (using crypto.randomUUID where the browser offers it) — the cryptographically secure generator built into your browser, never the predictable Math.random. With 122 random bits, the odds of two v4 UUIDs colliding are astronomically small: you would have to generate billions per second for roughly a century before a collision became likely. If a browser is too old to provide a secure generator, this tool disables itself instead of silently falling back to something insecure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the generated UUIDs sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This uuid generator runs 100% in your browser — every UUID v4, UUID v7 and nil value is created locally in JavaScript, and nothing is ever uploaded, logged, or shared. That makes it safe for API keys, database rows, secrets, and test fixtures. The values are one-shot: reload the page and they are gone, because nothing is stored."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I generate UUIDs in bulk and copy them all at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Set the count to any number from 1 to 500 and click Generate to create a whole batch. Each row has its own copy button, or use \"Copy all\" to put the entire list on your clipboard as newline-separated lines — perfect for seeding a database, filling a test dataset, or pasting into a spreadsheet. The format toggles (Uppercase, Hyphens, and Wrap in braces) reformat the current batch instantly without regenerating, so you can match whatever your database or code expects."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>UUID Generator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">UUID Generator</span></nav>
+  <section class="hero">
+    <h1>UUID Generator</h1>
+    <p class="lede" data-i18n="hero.lede">Click generate for a fresh RFC 4122 UUID. Bulk-create up to 500 at once and copy them all.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool .uuid-warn {
+        margin: 0 0 18px; padding: 12px 14px; border-radius: 10px; font-size: 14px; font-weight: 600;
+        color: #b45309; background: color-mix(in srgb, #f59e0b 12%, var(--surface));
+        border: 1px solid color-mix(in srgb, #f59e0b 40%, var(--line));
+      }
+      #tool .uuid-controls { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; }
+      #tool .uuid-field { flex: 1 1 200px; min-width: 160px; }
+      #tool .uuid-field-sm { flex: 0 1 150px; }
+      #tool .uuid-field label { margin-top: 0; }
+      #tool .uuid-controls .btn { margin-top: 0; height: 48px; flex: 0 0 auto; }
+      #tool .uuid-count-note { margin: 8px 0 0; font-size: 13px; font-weight: 600; color: #b45309; }
+      #tool .uuid-formats {
+        margin: 18px 0 0; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px;
+        display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center;
+      }
+      #tool .uuid-formats legend { padding: 0 6px; font-size: 13px; font-weight: 700; color: var(--muted); }
+      #tool .uuid-check {
+        display: inline-flex; align-items: center; gap: 8px; margin: 0; font-weight: 500; font-size: 14px; cursor: pointer;
+      }
+      #tool .uuid-check input { width: auto; margin: 0; }
+      #tool .result { margin-top: 20px; }
+      #tool .uuid-result-head {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        flex-wrap: wrap; margin-bottom: 10px;
+      }
+      #tool .uuid-status { font-weight: 700; font-size: 14px; color: var(--muted); }
+      #tool .uuid-copyall {
+        font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer;
+        padding: 7px 14px; border-radius: 8px; border: 1px solid var(--accent);
+        background: transparent; color: var(--accent-strong);
+      }
+      #tool .uuid-copyall:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+      [data-theme="dark"] #tool .uuid-copyall { color: var(--accent); }
+      #tool .uuid-list {
+        list-style: none; margin: 0; padding: 0; max-height: 60vh; overflow: auto;
+        display: flex; flex-direction: column; gap: 6px;
+      }
+      #tool .uuid-item {
+        display: flex; align-items: center; justify-content: space-between; gap: 10px;
+        background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px 8px 12px;
+      }
+      #tool .uuid-value {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 15px; line-height: 1.5; color: var(--ink); word-break: break-all; min-width: 0;
+      }
+      #tool .uuid-copy {
+        flex: 0 0 auto; font-family: inherit; font-size: 12.5px; font-weight: 700; cursor: pointer;
+        padding: 5px 12px; border-radius: 7px; border: 1px solid var(--line);
+        background: var(--surface); color: var(--ink);
+      }
+      #tool .uuid-copy:hover { border-color: var(--accent); color: var(--accent-strong); }
+      #tool .uuid-copy.is-copied { border-color: var(--accent); color: var(--accent-strong); font-weight: 800; }
+      [data-theme="dark"] #tool .uuid-copy.is-copied { color: var(--accent); }
+      #tool .uuid-toast {
+        margin: 12px 0 0; font-size: 13.5px; font-weight: 600; min-height: 1.2em;
+      }
+      #tool .uuid-toast.is-ok { color: var(--accent-strong); }
+      [data-theme="dark"] #tool .uuid-toast.is-ok { color: var(--accent); }
+      #tool .uuid-toast.is-error { color: #b91c1c; }
+    </style>
+
+    <div class="uuid-warn" id="uuid-warn" role="alert" hidden data-i18n="tool.warnCrypto">Your browser does not support secure random generation, so this tool is disabled to avoid producing insecure IDs. Please update to a modern browser.</div>
+
+    <div class="uuid-controls">
+      <div class="uuid-field">
+        <label for="uuid-version" data-i18n="tool.versionLabel">UUID version</label>
+        <select id="uuid-version">
+          <option value="v4" data-i18n="tool.v4">v4 — random</option>
+          <option value="v7" data-i18n="tool.v7">v7 — time-ordered</option>
+          <option value="nil" data-i18n="tool.nil">Nil (all zeros)</option>
+        </select>
+      </div>
+      <div class="uuid-field uuid-field-sm">
+        <label for="uuid-count" data-i18n="tool.countLabel">How many</label>
+        <input type="number" id="uuid-count" min="1" max="500" step="1" value="1" inputmode="numeric" autocomplete="off">
+      </div>
+      <button type="button" class="btn" id="uuid-generate" data-i18n="tool.generate">Generate</button>
+    </div>
+    <p class="uuid-count-note" id="uuid-count-note" role="status" hidden></p>
+
+    <fieldset class="uuid-formats">
+      <legend data-i18n="tool.formatLegend">Format</legend>
+      <label class="uuid-check"><input type="checkbox" id="uuid-upper"><span data-i18n="tool.upper">Uppercase</span></label>
+      <label class="uuid-check"><input type="checkbox" id="uuid-hyphens" checked><span data-i18n="tool.hyphens">Hyphens</span></label>
+      <label class="uuid-check"><input type="checkbox" id="uuid-braces"><span data-i18n="tool.braces">Wrap in braces { }</span></label>
+    </fieldset>
+
+    <div class="result" id="uuid-result">
+      <div class="uuid-result-head">
+        <span class="uuid-status" id="uuid-status" aria-live="polite" data-i18n="tool.emptyHint">Choose a version and click Generate to create UUIDs.</span>
+        <button type="button" class="uuid-copyall" id="uuid-copyall" hidden data-i18n="tool.copyAll">Copy all</button>
+      </div>
+      <ol class="uuid-list" id="uuid-list"></ol>
+    </div>
+    <p class="uuid-toast" id="uuid-toast" role="alert" aria-live="assertive"></p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What a UUID actually is, and where you use one</h2>
+    <p>A UUID (Universally Unique Identifier) is a 128-bit value written as 32 hexadecimal digits in the pattern 8-4-4-4-12, for example <code>f47ac10b-58cc-4372-a567-0e02b2c3d479</code>. Its whole purpose is to let independent machines mint identifiers that will not collide without ever coordinating through a central authority. That property is why UUIDs show up as database primary keys, idempotency keys on payment APIs, correlation IDs threaded through microservice logs, message IDs on a queue, filenames for uploaded assets, and session identifiers. Microsoft calls the same 128-bit structure a GUID, so anything produced here works wherever a GUID is expected.</p>
+
+    <h3>Using the generator</h3>
+    <ol>
+      <li>Pick a <strong>version</strong> — v4 (random), v7 (time-ordered), or Nil (all zeros).</li>
+      <li>Set <strong>How many</strong> (1–500) to create a single value or a whole batch at once.</li>
+      <li>Toggle <strong>Uppercase</strong>, <strong>Hyphens</strong>, and <strong>Wrap in braces</strong> to match the exact format your database, language, or config file expects — the toggles reformat the current batch instantly without drawing new random values.</li>
+      <li>Copy one row at a time, or use <strong>Copy all</strong> to grab the whole batch as newline-separated lines.</li>
+    </ol>
+
+    <h3>Anatomy: version and variant bits</h3>
+    <p>Not every one of the 128 bits is random. Four bits encode the <em>version</em> (the first digit of the third group — a <code>4</code> for v4, a <code>7</code> for v7) and two bits encode the <em>variant</em> (which forces the first digit of the fourth group to be 8, 9, a, or b). That leaves 122 free bits in a v4 UUID. Those fixed bits are why a valid v4 always looks like <code>xxxxxxxx-xxxx-4xxx-{8,9,a,b}xxx-xxxxxxxxxxxx</code>, and why you can glance at a string and tell which version produced it.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example"><strong>1. Reading a v4.</strong> In <code>9b2e4f6a-1c3d-4e5f-a7b8-c9d0e1f2a3b4</code>, the <code>4</code> opening the third group marks it version 4, and the <code>a</code> opening the fourth group is the variant marker. Everything else is randomness from your browser's cryptographic generator — 122 bits, about 5.3&times;10<sup>36</sup> possibilities.</div>
+    <div class="example"><strong>2. Decoding the time inside a v7.</strong> A v7 UUID begins with a 48-bit Unix millisecond timestamp. If a value starts <code>01890a5d-ac96-7...</code>, those first 12 hex digits (<code>01890a5dac96</code>) equal 1,686,835,215,000 ms — about 2023-06-15 in UTC. That embedded time is exactly why v7 values sort in creation order.</div>
+    <div class="example"><strong>3. Collision math.</strong> To reach a 50% chance of any collision among random v4 UUIDs you would need roughly 2.7&times;10<sup>18</sup> of them (the birthday bound on 122 bits). Generating a billion every second, that is on the order of a century — which is why "just use a v4" is a safe answer for uniqueness at any normal scale.</div>
+
+    <h3>Choosing a version</h3>
+    <table>
+      <thead><tr><th>Version</th><th>Random bits</th><th>Sortable?</th><th>Best for</th></tr></thead>
+      <tbody>
+        <tr><td>v4 — random</td><td>122</td><td>No</td><td>General IDs, anything where opacity matters</td></tr>
+        <tr><td>v7 — time-ordered</td><td>74</td><td>Yes (by time)</td><td>Database keys, B-tree indexes, event streams</td></tr>
+        <tr><td>Nil</td><td>0</td><td>—</td><td>A placeholder / "no ID yet" sentinel</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes and practical tips</h3>
+    <ul>
+      <li><strong>Using random v4 as a clustered primary key.</strong> Random keys scatter inserts across a B-tree index and fragment it. v7's leading timestamp keeps inserts sequential and pages compact — prefer it for that job.</li>
+      <li><strong>Treating a UUID as a secret.</strong> A v4 has strong entropy, but a v7 exposes its creation time, and any UUID printed in a URL or log is visible. Use a dedicated token for authentication, not an identifier.</li>
+      <li><strong>Case and brace mismatches.</strong> UUIDs are case-insensitive by spec, but the string comparisons in your code are not. Some systems (older Windows/COM, SQL Server) expect braces <code>{...}</code>; most databases and JSON do not. Match the exact format with the toggles rather than hand-editing.</li>
+      <li><strong>Relying on Math.random.</strong> This tool never does — every value comes from the browser's cryptographically secure generator, so a batch is safe for real keys, not just throwaway demos.</li>
+    </ul>
+
+    <h3>Limits</h3>
+    <p>A UUID guarantees uniqueness, not meaning — it carries no information about the row it labels beyond, for v7, a timestamp. It is also far longer than a 32- or 64-bit integer, so it costs more storage and index space; that trade is usually worth it for the freedom to generate keys anywhere without coordination.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc9562.html" target="_blank" rel="noopener">RFC 9562 (IETF) — the current UUID specification, including versions 4 and 7</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID" target="_blank" rel="noopener">MDN Web Docs — crypto.randomUUID(), the browser API for secure v4 generation</a></li>
+      <li><a href="https://www.iso.org/standard/62795.html" target="_blank" rel="noopener">ISO/IEC 9834-8 — the international standard aligned with UUID structure and variants</a></li>
+      <li><a href="https://csrc.nist.gov/projects/random-bit-generation" target="_blank" rel="noopener">NIST Random Bit Generation project — guidance on cryptographically secure randomness</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/xml-formatter/"><span class="related-ico" aria-hidden="true">📰</span><span class="related-name">XML Formatter</span></a><a class="related-item" href="https://tool-hub.me/ascii-table/"><span class="related-ico" aria-hidden="true">🔤</span><span class="related-name">ASCII Table</span></a><a class="related-item" href="https://tool-hub.me/aspect-ratio-calc/"><span class="related-ico" aria-hidden="true">▭</span><span class="related-name">Aspect Ratio Calculator</span></a><a class="related-item" href="https://tool-hub.me/base64-conv/"><span class="related-ico" aria-hidden="true">🔡</span><span class="related-name">Base64 Encoder / Decoder</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is a UUID, and is a GUID the same thing?</summary>
+      <p data-i18n="faq.a1">A UUID (Universally Unique Identifier) is a 128-bit value defined by RFC 4122 (updated by RFC 9562), written as 32 hexadecimal digits in five hyphen-separated groups like 550e8400-e29b-41d4-a716-446655440000. GUID (Globally Unique Identifier) is Microsoft's name for exactly the same thing, so this UUID generator doubles as a GUID generator. Because a random UUID draws from 2^122 possibilities, anyone can create one independently on any machine — no central registry — and still trust it will not collide.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">UUID v4 vs UUID v7 — which one should I use?</summary>
+      <p data-i18n="faq.a2">A UUID v4 generator produces 122 bits of pure randomness — perfect as a general random UUID whenever you just need uniqueness. A UUID v7 generator produces time-ordered values: the first 48 bits are a Unix millisecond timestamp, so v7 UUIDs sort chronologically. That makes v7 ideal for database primary keys and B-tree indexes, where sequential inserts stay compact and fast instead of scattering across the index the way random v4 keys do. Choose v4 for opacity and no time leakage; choose v7 when insert locality and sortability matter.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Are these UUIDs really unique and random?</summary>
+      <p data-i18n="faq.a3">Yes. Every random value comes from crypto.getRandomValues (using crypto.randomUUID where the browser offers it) — the cryptographically secure generator built into your browser, never the predictable Math.random. With 122 random bits, the odds of two v4 UUIDs colliding are astronomically small: you would have to generate billions per second for roughly a century before a collision became likely. If a browser is too old to provide a secure generator, this tool disables itself instead of silently falling back to something insecure.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Are the generated UUIDs sent anywhere?</summary>
+      <p data-i18n="faq.a4">No. This uuid generator runs 100% in your browser — every UUID v4, UUID v7 and nil value is created locally in JavaScript, and nothing is ever uploaded, logged, or shared. That makes it safe for API keys, database rows, secrets, and test fixtures. The values are one-shot: reload the page and they are gone, because nothing is stored.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">How do I generate UUIDs in bulk and copy them all at once?</summary>
+      <p data-i18n="faq.a5">Set the count to any number from 1 to 500 and click Generate to create a whole batch. Each row has its own copy button, or use "Copy all" to put the entire list on your clipboard as newline-separated lines — perfect for seeding a database, filling a test dataset, or pasting into a spreadsheet. The format toggles (Uppercase, Hyphens, and Wrap in braces) reformat the current batch instantly without regenerating, so you can match whatever your database or code expects.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-tOOaSIwzz3ix3QP6biJvmlivKni1PENtpBxhQPjlb9I=' 'sha256-A8XhJggSgNiYjZbNslkExdRTwd+V+2mSWOauOMN/oDg=' 'sha256-WmjTKj7YvWCiaawgKX57SV4mwUsDbYR+hb5BbTcSPMI='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de azulejos — cuántas baldosas necesito</title>
+<meta name="description" content="Calcula cuántas baldosas necesitas para un suelo o una pared. Introduce las medidas, el formato de la pieza y el margen de recorte y obtén piezas, cajas y superficie.">
+<meta name="keywords" content="tile calculator, how many tiles do i need, tile flooring calculator, tile estimator, tiles per square foot, floor tile calculator">
+<link rel="canonical" href="https://tool-hub.me/tile-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/tile-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/tile-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/tile-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/tile-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/tile-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/tile-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/tile-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/tile-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/tile-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/tile-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/tile-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/tile-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/tile-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/tile-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/tile-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de azulejos — cuántas baldosas necesito">
+<meta property="og:description" content="Calcula cuántas baldosas necesitas para un suelo o una pared. Introduce las medidas, el formato de la pieza y el margen de recorte y obtén piezas, cajas y superficie.">
+<meta property="og:url" content="https://tool-hub.me/tile-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/tile-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0891b2">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Tile Calculator",
+  "description": "Find out how many tiles you need for a floor or wall. Enter the room size, tile size and a waste allowance to get the tile count, boxes to buy and total area.",
+  "url": "https://tool-hub.me/tile-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tile Calculator",
+      "item": "https://tool-hub.me/tile-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why should I order more tiles than the area needs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cuts are the main reason: every tile trimmed at a wall, doorway or corner leaves an offcut you usually cannot reuse. On top of that a few tiles arrive cracked or snap while you score them, and keeping four or five spares after the job means a chipped tile years later can be swapped without a visible patch. Ten percent covers a straight lay in a square room; fifteen is safer for diagonal or patterned work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do grout lines change how many tiles I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Barely, at normal joint widths. A 12-inch tile with a 1/8-inch joint effectively occupies 12.125 inches, which trims the tile count by about two percent — well inside the waste allowance you are already adding. Only very wide joints or large-format tiles make the arithmetic worth doing, and ignoring grout always errs towards ordering slightly more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many 12x12 tiles do I need per square foot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Exactly one, because a 12 by 12 inch tile is one square foot. A 100 sq ft floor therefore needs 100 tiles plus waste, or 110 at the standard 10 percent allowance. Other common sizes: 12 x 24 is half a tile per square foot, 24 x 24 is a quarter, 18 x 18 is about 0.44, and 3 x 6 subway tile is eight per square foot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I buy full boxes or loose tiles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most tile is sold by the box, and the box count is what actually sets your spend — which is why this calculator rounds up to whole boxes once you enter tiles per box. Buy the full quantity in a single order so the dye lot matches, and check the return window before you open every carton: many retailers take unopened boxes back but not partial ones."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Tile Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Tile Calculator</span></nav>
+  <section class="hero">
+    <h1>Tile Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Room size, tile size, waste allowance — the three numbers that decide what leaves the store with you.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Measurement unit</label>
+        <select id="unit">
+          <option value="ft" data-i18n="tool.unit.ft">Feet — tile size in inches</option>
+          <option value="m" data-i18n="tool.unit.m">Metres — tile size in centimetres</option>
+        </select>
+      </div>
+      <div>
+        <label for="mode" data-i18n="tool.mode.label">Area input</label>
+        <select id="mode">
+          <option value="room" data-i18n="tool.mode.room">Room length × width</option>
+          <option value="area" data-i18n="tool.mode.area">I already know the area</option>
+        </select>
+      </div>
+    </div>
+    <p class="subtle" id="unit-hint">Room measurements in feet, tile sizes in inches.</p>
+
+    <div id="room-fields">
+      <div class="field-row">
+        <div>
+          <label for="len" data-i18n="tool.len.label">Room length</label>
+          <input type="number" id="len" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="10">
+        </div>
+        <div>
+          <label for="wid" data-i18n="tool.wid.label">Room width</label>
+          <input type="number" id="wid" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="8">
+        </div>
+      </div>
+    </div>
+
+    <div id="area-fields" hidden>
+      <label for="area" data-i18n="tool.area.label">Floor or wall area</label>
+      <input type="number" id="area" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="80">
+    </div>
+
+    <label for="tilesize" data-i18n="tool.tile.label">Tile size</label>
+    <select id="tilesize">
+      <option value="12x12" data-i18n="tool.tile.t1212">12 × 12 in / 30 × 30 cm — standard floor tile</option>
+      <option value="12x24" data-i18n="tool.tile.t1224">12 × 24 in / 30 × 60 cm — rectangular</option>
+      <option value="18x18" data-i18n="tool.tile.t1818">18 × 18 in / 45 × 45 cm</option>
+      <option value="24x24" data-i18n="tool.tile.t2424">24 × 24 in / 60 × 60 cm — large format</option>
+      <option value="6x24" data-i18n="tool.tile.t624">6 × 24 in / 15 × 60 cm — wood-look plank</option>
+      <option value="3x6" data-i18n="tool.tile.t36">3 × 6 in / 7.5 × 15 cm — subway tile</option>
+      <option value="custom" data-i18n="tool.tile.custom">Custom size</option>
+    </select>
+
+    <div id="custom-fields" hidden>
+      <div class="field-row">
+        <div>
+          <label for="tilew" data-i18n="tool.tilew.label">Custom tile width</label>
+          <input type="number" id="tilew" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="8">
+        </div>
+        <div>
+          <label for="tileh" data-i18n="tool.tileh.label">Custom tile height</label>
+          <input type="number" id="tileh" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="8">
+        </div>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="waste" data-i18n="tool.waste.label">Waste allowance</label>
+        <select id="waste">
+          <option value="5" data-i18n="tool.waste.w5">5% — straight lay, square room</option>
+          <option value="10" selected data-i18n="tool.waste.w10">10% — recommended default</option>
+          <option value="15" data-i18n="tool.waste.w15">15% — diagonal, herringbone or patterned</option>
+        </select>
+      </div>
+      <div>
+        <label for="perbox" data-i18n="tool.perbox.label">Tiles per box (optional)</label>
+        <input type="number" id="perbox" inputmode="numeric" min="1" step="1" autocomplete="off" placeholder="8">
+      </div>
+      <div>
+        <label for="price" data-i18n="tool.price.label">Price per box (optional)</label>
+        <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="45">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.tiles">Tiles to buy (waste included)</div>
+          <div class="rc-val" id="r-tiles">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.boxes">Boxes to buy</div><div class="rc-val" id="r-boxes">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Area covered (waste included)</div><div class="rc-val" id="r-area">—</div></div>
+        <div class="rcard" id="r-cost-card" hidden><div class="rc-label" data-i18n="tool.r.cost">Estimated cost</div><div class="rc-val" id="r-cost">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.lot" style="margin-top:12px;">Order every box in one go. Dye lots shift between batches, so a late top-up rarely matches the first delivery.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How a tile count is actually worked out</h2>
+    <p>Every tile estimate is the same three-step calculation. Work out the area you are covering, add a waste allowance for cuts and breakage, then divide by the face area of one tile and round up. The rounding matters more than people expect: you cannot buy 0.4 of a tile, and the offcut left over from trimming a tile at the wall almost never fits the next gap, so partial tiles do not carry forward the way the arithmetic implies.</p>
+    <p>The one thing that trips up most DIY estimates is mixing units. Tile is sold in inches or centimetres while rooms are measured in feet or metres, so a 12 by 12 inch tile is not 12 square feet, it is one. This calculator converts the tile face into the same unit as your room before dividing — inches to square feet by dividing by 144, centimetres to square metres by dividing by 10,000.</p>
+
+    <h3>Worked example: a 10 x 8 ft bathroom floor in subway tile</h3>
+    <p>The floor is 10 ft by 8 ft, which is 80 sq ft. Add the standard 10 percent allowance and you are buying for 88 sq ft. A 3 by 6 inch subway tile has a face of 18 square inches, or 0.125 sq ft, so 88 divided by 0.125 gives 704 tiles. If the box holds 80 tiles, that is 8.8 boxes, which rounds to 9 boxes and 720 tiles — 16 spares to put in the loft for future repairs. Small-format tile always produces big counts, which is why the box figure is the number that really tells you what the job costs.</p>
+
+    <h3>Worked example: the same room in 12 x 24 large format, laid diagonally</h3>
+    <p>Diagonal layouts push the allowance to 15 percent, so 80 sq ft becomes 92 sq ft. A 12 by 24 inch tile covers 288 square inches, exactly 2 sq ft, so you need 46 tiles. At 8 tiles per box that is 5.75 boxes, rounded up to 6 boxes, or 48 tiles. Compare that with the subway option: same floor, same room, 704 tiles versus 46. Format choice changes the labour more than the material cost, since every tile is a separate placement, spacer set and grout line.</p>
+
+    <h3>Worked example in metric: a 4.2 x 3.6 m kitchen</h3>
+    <p>That floor is 15.12 m². With a 10 percent allowance you are covering 16.63 m². A 60 by 60 cm tile has a face of 0.36 m², so 16.63 divided by 0.36 is 46.2, rounded up to 47 tiles. Boxes of four give 11.75, so you buy 12 boxes — 48 tiles. Notice how the box rounding quietly adds material twice; ordering slightly more than the raw tile count is normal, not an error in the estimate.</p>
+
+    <h2>Choosing the waste allowance</h2>
+    <table>
+      <thead><tr><th>Layout or situation</th><th>Allowance</th></tr></thead>
+      <tbody>
+        <tr><td>Straight lay, square room, few obstacles</td><td>5-10%</td></tr>
+        <tr><td>Standard install, most bathrooms and kitchens</td><td>10%</td></tr>
+        <tr><td>Diagonal (45 degree) lay</td><td>15%</td></tr>
+        <tr><td>Herringbone, chevron or basketweave</td><td>15-20%</td></tr>
+        <tr><td>Large format over 24 in, or rectified tile</td><td>15%</td></tr>
+        <tr><td>Rooms with niches, curves, alcoves or many doorways</td><td>15%</td></tr>
+        <tr><td>First-time DIY installer</td><td>add 5% to whatever the table says</td></tr>
+      </tbody>
+    </table>
+    <p>The allowance is not padding for its own sake. Every cut at a perimeter turns one tile into one usable piece plus scrap, and rooms that are out of square produce a tapering cut row where each tile is a slightly different width — no two offcuts interchange. Patterned tiles with a directional design lose more again, because you cannot rotate a piece to make it fit.</p>
+
+    <h2>Dye lots: the reason to order everything at once</h2>
+    <p>Ceramic and porcelain tiles are fired in batches, and the glaze colour drifts measurably between batches. Manufacturers print a shade or calibre code on the carton for exactly this reason. Two boxes from different lots can look identical in the shop and obviously different under bathroom lighting once they are on the wall. Order the full quantity in a single purchase, check that every carton carries the same lot code before you start, and keep the spares from that same lot. A repair tile bought three years later will match nothing.</p>
+
+    <h2>What this estimate does not cover</h2>
+    <p>The calculation assumes a rectangular field with a simple layout. It does not subtract fixed obstructions such as a kitchen island, a bath tub footprint or cabinet runs — if those are large, measure the covered area separately and use the direct-area mode. It also ignores grout joint width, which slightly reduces the true count and therefore keeps the estimate on the safe side, and it does not price trim pieces, bullnose edging, thresholds, adhesive or grout, all of which are sold by different units. For walls, remember that the visible field usually stops behind fittings, so measure to the actual tile line rather than to the ceiling.</p>
+    <p>Finally, treat the box figure as the real answer. Retailers rarely split cartons, so the number of boxes is what you pay for, and the leftover tiles inside that last box are the cheapest insurance in the whole project.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.iso.org/" target="_blank" rel="noopener">ISO — international standards for ceramic tile classification, dimensions and shade/calibre marking</a></li>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures — official unit definitions used for inch/foot and cm/metre area conversions</a></li>
+      <li><a href="https://www.epa.gov/indoor-air-quality-iaq" target="_blank" rel="noopener">US EPA Indoor Air Quality — guidance on adhesives, grouts and VOC emissions during tiling work</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/tire-size-calc/"><span class="related-ico" aria-hidden="true">🛞</span><span class="related-name">Tire Size Calculator</span></a><a class="related-item" href="https://tool-hub.me/topsoil-calc/"><span class="related-ico" aria-hidden="true">🌱</span><span class="related-name">Topsoil Calculator</span></a><a class="related-item" href="https://tool-hub.me/tv-size-calc/"><span class="related-ico" aria-hidden="true">📺</span><span class="related-name">TV Size Calculator</span></a><a class="related-item" href="https://tool-hub.me/typing-test/"><span class="related-ico" aria-hidden="true">⌨️</span><span class="related-name">Typing Speed Test</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why should I order more tiles than the area needs?</summary><p data-i18n="faq.a1">Cuts are the main reason: every tile trimmed at a wall, doorway or corner leaves an offcut you usually cannot reuse. On top of that a few tiles arrive cracked or snap while you score them, and keeping four or five spares after the job means a chipped tile years later can be swapped without a visible patch. Ten percent covers a straight lay in a square room; fifteen is safer for diagonal or patterned work.</p></details>
+    <details><summary data-i18n="faq.q2">Do grout lines change how many tiles I need?</summary><p data-i18n="faq.a2">Barely, at normal joint widths. A 12-inch tile with a 1/8-inch joint effectively occupies 12.125 inches, which trims the tile count by about two percent — well inside the waste allowance you are already adding. Only very wide joints or large-format tiles make the arithmetic worth doing, and ignoring grout always errs towards ordering slightly more.</p></details>
+    <details><summary data-i18n="faq.q3">How many 12x12 tiles do I need per square foot?</summary><p data-i18n="faq.a3">Exactly one, because a 12 by 12 inch tile is one square foot. A 100 sq ft floor therefore needs 100 tiles plus waste, or 110 at the standard 10 percent allowance. Other common sizes: 12 x 24 is half a tile per square foot, 24 x 24 is a quarter, 18 x 18 is about 0.44, and 3 x 6 subway tile is eight per square foot.</p></details>
+    <details><summary data-i18n="faq.q4">Should I buy full boxes or loose tiles?</summary><p data-i18n="faq.a4">Most tile is sold by the box, and the box count is what actually sets your spend — which is why this calculator rounds up to whole boxes once you enter tiles per box. Buy the full quantity in a single order so the dye lot matches, and check the return window before you open every carton: many retailers take unopened boxes back but not partial ones.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

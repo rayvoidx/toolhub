@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-4oeHYe+Cb31tY7Tpkll/jhg7Y2f2Wf+NKjuGtJVyMkY=' 'sha256-yxAKwm68CChF1hR0nAiaHUu7g8x8GhJX6iuFe1fEkGU=' 'sha256-ab80Eu6Lw9vOPXCe6pIcXFyd+z9s7ydQMmDpO2i1qno='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de cronograma inverso</title>
+<meta name="description" content="Fija una fecha límite, pega tu lista de tareas desde Excel y obtén la fecha de inicio y fin más tardía posible para cada tarea, contada hacia atrás en días hábiles, excluyendo los fines de semana y los días festivos de tu país. Te dice al instante si empezar hoy ya es demasiado tarde. Gratis, sin anuncios y sin cuenta: tu cronograma nunca sale del navegador.">
+<meta name="keywords" content="workback schedule, reverse schedule calculator, backwards schedule from deadline, 역산 스케줄, 영업일 역산 계산기">
+<link rel="canonical" href="https://tool-hub.me/workback-schedule/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/workback-schedule/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/workback-schedule/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/workback-schedule/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/workback-schedule/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/workback-schedule/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/workback-schedule/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/workback-schedule/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/workback-schedule/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/workback-schedule/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/workback-schedule/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/workback-schedule/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/workback-schedule/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/workback-schedule/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/workback-schedule/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/workback-schedule/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Generador de cronograma inverso">
+<meta property="og:description" content="Fija una fecha límite, pega tu lista de tareas desde Excel y obtén la fecha de inicio y fin más tardía posible para cada tarea, contada hacia atrás en días hábiles, excluyendo los fines de semana y los días festivos de tu país. Te dice al instante si empezar hoy ya es demasiado tarde. Gratis, sin anuncios y sin cuenta: tu cronograma nunca sale del navegador.">
+<meta property="og:url" content="https://tool-hub.me/workback-schedule/es/">
+<meta property="og:image" content="https://tool-hub.me/workback-schedule/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7e22ce">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Workback Schedule Builder",
+  "description": "Set a fixed deadline, paste your task list from Excel, and get the latest possible start and finish date for every task — counted backwards in business days with weekends and your country's public holidays excluded. Tells you immediately whether starting today is already too late. Free, ad-free, no account: your schedule never leaves the browser.",
+  "url": "https://tool-hub.me/workback-schedule/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "More options",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Country (public holidays) Australia (national) Brazil (national) Canada (federal) France (national) Germany (nationwide) India (national) Japan (national) Mexico (national) Russia (national) South Korea (statutory) Spain (national) United Kingdom (England & Wales) United States (federal) Weekends only Weekend days Sat–Sun Fri–Sat Start counting from The day the team could realistically pick this up. Defaults to today — that is what \"already late\" is measured against. Custom holidays Add a company or local holiday that isn't in the preset. Weekends and duplicates are ignored. Add"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a workback schedule, and how is it different from a normal schedule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A normal schedule starts today and asks \"when will we finish?\". A workback schedule — also called a reverse or backwards schedule — starts from a deadline that cannot move and counts backwards to answer the question you actually have: \"what is the latest we can start?\". That is the everyday situation when a launch, bid submission, event or audit date is already fixed. Unlike a template you fill in by hand, this reverse schedule calculator counts the whole chain backwards in business days, so weekends and public holidays can't quietly eat your buffer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Business days or calendar days — what do I put in the duration column?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Business days: working days only. Enter 3 for a task that needs three working days, and the tool spreads it across the calendar for you, skipping weekends and your country's public holidays. A 3-day task finishing on a Monday therefore starts on the previous Thursday, not on the Saturday. Durations are inclusive, so 1 business day means the task starts and finishes on the same day. Fractions such as 0.5 are rounded up to a whole day and listed separately so you can see exactly what was changed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which public holidays are included, and can I add our own days off?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "13 country presets are built in: the United States, United Kingdom, Canada, Australia, Germany, France, Spain, Brazil, Mexico, India, Russia, Japan and South Korea. The preset is picked from your browser region and you can change it at any time; if you pick \"Weekends only\", no holiday table is applied. Regional and state holidays, company shutdowns and one-off government holidays are deliberately not in the table — open \"More options\" and add them under Custom holidays, and the backwards schedule from deadline will skip them exactly like a public holiday. Korean Seollal and Chuseok follow the lunar calendar, so they come from a fixed table covering 2025–2027 that is refreshed once a year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The start date came out in the past — what do I cut?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That verdict is the point of the tool: it is telling you, before you commit, that the plan does not fit the deadline. The schedule is still calculated in full so you can see how far off you are. From there you have four levers: cut scope by dropping or merging rows; parallelize by taking work out of the chain and running it alongside (this tool assumes one serial chain, so parallel work should not be its own row); compress individual durations by adding people or shortening reviews; or negotiate the deadline. The \"already N business days late\" number is what to bring to that conversation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my schedule sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The parsing, the holiday tables and the backwards calculation all run in your browser, and your task list is never stored — reload the page and it is gone. Don't take our word for it: open your browser's developer tools, go to the Network tab, then paste your tasks and build the schedule. You will see the page's own files load once and then nothing at all — no request carries your data. You can even switch off your network connection and the tool keeps working. Only your country, weekend and column-mapping preferences are kept, in your browser's local storage."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Workback Schedule Builder",
+      "item": "https://tool-hub.me/workback-schedule/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Workback Schedule Builder</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0891b2" href="https://tool-hub.me/business-tools/">Business</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Workback Schedule Builder</span></nav>
+  <section class="hero">
+    <h1>Workback Schedule Builder</h1>
+    <p class="lede" data-i18n="hero.lede">Set the deadline, paste the tasks. We count backwards in business days and tell you if you are already late.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Workback schedule builder" data-i18n-aria-label="tool.aria">
+
+    <!-- Deadline — prefilled with today+30 so the only thing left to do is paste -->
+    <label for="in-deadline" data-i18n="tool.deadline">Deadline — the date that cannot move</label>
+    <input type="date" id="in-deadline" min="1970-01-01" max="2199-12-31"
+      style="width:100%;padding:12px 14px;font-size:16px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);">
+
+    <label for="in-tasks" data-i18n="tool.tasksLabel">Task list</label>
+    <p style="color:var(--muted);font-size:13.5px;margin:-2px 0 8px;" data-i18n="tool.tasksHint">One task per line: name, business days, owner (optional). Paste straight from Excel, or drop a CSV below.</p>
+    <textarea id="in-tasks" rows="7" spellcheck="false" autocomplete="off"
+      placeholder="Creative review&#9;3&#9;Dana&#10;Print production&#9;5&#9;Vendor&#10;Store setup&#9;2&#9;Ops"
+      data-i18n-placeholder="tool.tasksPlaceholder"></textarea>
+
+    <!-- CSV drop / file picker — File API, nothing is uploaded -->
+    <div id="drop-zone"
+      style="margin-top:10px;border:1.5px dashed var(--line);border-radius:10px;padding:14px;text-align:center;color:var(--muted);font-size:13.5px;">
+      <span data-i18n="tool.dropHint">Drop a CSV or TSV file here</span>
+      <button type="button" id="file-btn" data-i18n="tool.chooseFile"
+        style="margin-inline-start:8px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;">Choose file</button>
+      <input type="file" id="in-file" accept=".csv,.tsv,.txt,text/csv,text/tab-separated-values,text/plain" style="display:none;">
+    </div>
+
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px;">
+      <button type="button" id="sample-btn" data-i18n="tool.sampleBtn"
+        style="padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;">Fill 3 example rows</button>
+      <span id="enc-badge" hidden data-i18n="tool.encBadge"
+        style="padding:5px 10px;border-radius:999px;background:color-mix(in srgb, var(--accent) 12%, var(--surface));color:var(--accent-strong);font-size:12.5px;font-weight:600;">Read as Korean (EUC-KR)</span>
+      <span id="rows-badge" hidden
+        style="padding:5px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--muted);font-size:12.5px;font-weight:600;"></span>
+    </div>
+
+    <p style="color:var(--muted);font-size:13px;line-height:1.55;margin:12px 0 0;" data-i18n="tool.chainNote">Rows are treated as one serial chain: each task starts after the row above it finishes, and the last row lands on the deadline. Parallel tracks and dependency columns are not handled.</p>
+
+    <!-- Preview + column mapping (shown once something is parsed) -->
+    <div id="preview-wrap" hidden style="margin-top:18px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;">
+      <p style="font-weight:600;font-size:14px;margin:0 0 8px;" data-i18n="tool.previewTitle">First rows and column mapping</p>
+      <div id="preview-table" style="overflow-x:auto;"></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:130px;">
+          <label for="map-task" data-i18n="tool.colTask">Task name column</label>
+          <select id="map-task"></select>
+        </div>
+        <div style="flex:1;min-width:130px;">
+          <label for="map-days" data-i18n="tool.colDays">Business days column</label>
+          <select id="map-days"></select>
+        </div>
+        <div style="flex:1;min-width:130px;">
+          <label for="map-owner" data-i18n="tool.colOwner">Owner column</label>
+          <select id="map-owner"></select>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn" id="run-btn" type="button" data-i18n="tool.buildBtn" style="width:100%;">Build workback schedule</button>
+
+    <div class="result" id="result" aria-live="polite" style="margin-top:22px;"></div>
+
+    <div id="export-wrap" hidden style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;">
+      <button type="button" id="csv-btn" data-i18n="tool.btn.csv"
+        style="padding:9px 15px;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;">Download CSV</button>
+      <button type="button" id="copy-btn" data-i18n="tool.btn.copy"
+        style="padding:9px 15px;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;">Copy as TSV</button>
+      <button type="button" id="gantt-btn" data-i18n="tool.btn.gantt"
+        style="padding:9px 15px;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;">Gantt-compatible CSV</button>
+    </div>
+    <p id="export-msg" role="status" aria-live="polite" style="color:var(--muted);font-size:13px;margin:8px 0 0;"></p>
+
+    <!-- Progressive disclosure: the common case never opens this -->
+    <details id="adv-wrap" style="margin-top:18px;border:1px solid var(--line);border-radius:10px;padding:10px 14px;">
+      <summary style="font-weight:600;cursor:pointer;" data-i18n="tool.advanced">More options</summary>
+
+      <label for="in-preset" data-i18n="tool.holidayPreset">Country (public holidays)</label>
+      <select id="in-preset">
+        <option value="au">Australia (national)</option>
+        <option value="br">Brazil (national)</option>
+        <option value="ca">Canada (federal)</option>
+        <option value="fr">France (national)</option>
+        <option value="de">Germany (nationwide)</option>
+        <option value="in">India (national)</option>
+        <option value="jp">Japan (national)</option>
+        <option value="mx">Mexico (national)</option>
+        <option value="ru">Russia (national)</option>
+        <option value="kr">South Korea (statutory)</option>
+        <option value="es">Spain (national)</option>
+        <option value="uk">United Kingdom (England &amp; Wales)</option>
+        <option value="us">United States (federal)</option>
+        <option value="none">Weekends only</option>
+      </select>
+      <p id="country-note" hidden style="color:var(--muted);font-size:13px;line-height:1.5;margin:8px 0 0;"></p>
+
+      <label for="in-weekend" data-i18n="tool.weekendDef">Weekend days</label>
+      <select id="in-weekend">
+        <option value="satsun" data-i18n="tool.opt.satSun">Sat–Sun</option>
+        <option value="frisat" data-i18n="tool.opt.friSat">Fri–Sat</option>
+      </select>
+
+      <label for="in-baseline" data-i18n="tool.baseline">Start counting from</label>
+      <input type="date" id="in-baseline" min="1970-01-01" max="2199-12-31"
+        style="width:100%;padding:12px 14px;font-size:16px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);">
+      <p style="color:var(--muted);font-size:13px;line-height:1.5;margin:8px 0 0;" data-i18n="tool.baselineHint">The day the team could realistically pick this up. Defaults to today — that is what "already late" is measured against.</p>
+
+      <p style="font-weight:600;font-size:14px;margin:18px 0 0;" data-i18n="tool.customLabel">Custom holidays</p>
+      <p style="color:var(--muted);font-size:14px;margin:6px 0 8px;" data-i18n="tool.customHint">Add a company or local holiday that isn't in the preset. Weekends and duplicates are ignored.</p>
+      <div style="display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;">
+        <div style="flex:1;min-width:150px;">
+          <input type="date" id="in-custom" aria-label="Custom holidays" data-i18n-aria-label="tool.customLabel"
+            style="width:100%;padding:12px 14px;font-size:16px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);">
+        </div>
+        <button class="btn" id="custom-add-btn" type="button" data-i18n="tool.addBtn" style="margin-top:0;">Add</button>
+      </div>
+      <div id="custom-msg" role="alert" aria-live="polite" style="color:var(--muted);font-size:13px;margin-top:8px;"></div>
+      <div id="custom-list" style="margin-top:12px;"></div>
+    </details>
+
+    <p id="store-note" hidden style="color:var(--muted);font-size:12.5px;margin-top:12px;text-align:center;"></p>
+    <p style="color:var(--muted);font-size:12.5px;margin-top:14px;text-align:center;" data-i18n="tool.disclaimer">Public holidays only — regional holidays, company shutdowns and paid leave aren't included. Your task list is parsed and scheduled inside your browser and is never uploaded.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/average-calc/"><span class="related-ico" aria-hidden="true">📊</span><span class="related-name">Average Calculator</span></a><a class="related-item" href="https://tool-hub.me/calculator/"><span class="related-ico" aria-hidden="true">🧮</span><span class="related-name">Scientific Calculator</span></a><a class="related-item" href="https://tool-hub.me/circle-calc/"><span class="related-ico" aria-hidden="true">⭕</span><span class="related-name">Circle Calculator</span></a><a class="related-item" href="https://tool-hub.me/fraction-calc/"><span class="related-ico" aria-hidden="true">½</span><span class="related-name">Fraction Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is a workback schedule, and how is it different from a normal schedule?</summary>
+      <p data-i18n="faq.a1">A normal schedule starts today and asks "when will we finish?". A workback schedule — also called a reverse or backwards schedule — starts from a deadline that cannot move and counts backwards to answer the question you actually have: "what is the latest we can start?". That is the everyday situation when a launch, bid submission, event or audit date is already fixed. Unlike a template you fill in by hand, this reverse schedule calculator counts the whole chain backwards in business days, so weekends and public holidays can't quietly eat your buffer.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Business days or calendar days — what do I put in the duration column?</summary>
+      <p data-i18n="faq.a2">Business days: working days only. Enter 3 for a task that needs three working days, and the tool spreads it across the calendar for you, skipping weekends and your country's public holidays. A 3-day task finishing on a Monday therefore starts on the previous Thursday, not on the Saturday. Durations are inclusive, so 1 business day means the task starts and finishes on the same day. Fractions such as 0.5 are rounded up to a whole day and listed separately so you can see exactly what was changed.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Which public holidays are included, and can I add our own days off?</summary>
+      <p data-i18n="faq.a3">13 country presets are built in: the United States, United Kingdom, Canada, Australia, Germany, France, Spain, Brazil, Mexico, India, Russia, Japan and South Korea. The preset is picked from your browser region and you can change it at any time; if you pick "Weekends only", no holiday table is applied. Regional and state holidays, company shutdowns and one-off government holidays are deliberately not in the table — open "More options" and add them under Custom holidays, and the backwards schedule from deadline will skip them exactly like a public holiday. Korean Seollal and Chuseok follow the lunar calendar, so they come from a fixed table covering 2025–2027 that is refreshed once a year.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">The start date came out in the past — what do I cut?</summary>
+      <p data-i18n="faq.a4">That verdict is the point of the tool: it is telling you, before you commit, that the plan does not fit the deadline. The schedule is still calculated in full so you can see how far off you are. From there you have four levers: cut scope by dropping or merging rows; parallelize by taking work out of the chain and running it alongside (this tool assumes one serial chain, so parallel work should not be its own row); compress individual durations by adding people or shortening reviews; or negotiate the deadline. The "already N business days late" number is what to bring to that conversation.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my schedule sent to a server?</summary>
+      <p data-i18n="faq.a5">No. The parsing, the holiday tables and the backwards calculation all run in your browser, and your task list is never stored — reload the page and it is gone. Don't take our word for it: open your browser's developer tools, go to the Network tab, then paste your tasks and build the schedule. You will see the page's own files load once and then nothing at all — no request carries your data. You can even switch off your network connection and the tool keeps working. Only your country, weekend and column-mapping preferences are kept, in your browser's local storage.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.pmi.org/" target="_blank" rel="noopener">PMI — backward scheduling and milestone planning (PMBOK)</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

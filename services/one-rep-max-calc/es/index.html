@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-tnbLIlCeaUWeLpUWL9+hKV70jv6qeiCZjbyvlkukK3Q=' 'sha256-QpviL5sOBWLfWjvNqkVjz46/mhH2H8oEbFs5YVHNwvI=' 'sha256-MECvmM76DzIsCdj0hcVSyToVZe+rqRTAF/UIRl3cisE='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de 1RM — repetición máxima desde cualquier serie</title>
+<meta name="description" content="Introduce el peso levantado y las repeticiones logradas: obtén tu 1RM estimado con cinco fórmulas y una tabla de porcentajes para programar tus series de entrenamiento.">
+<meta name="keywords" content="one rep max calculator, 1rm calculator, max lift calculator, epley formula, brzycki formula, strength percentage chart">
+<link rel="canonical" href="https://tool-hub.me/one-rep-max-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/one-rep-max-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/one-rep-max-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/one-rep-max-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/one-rep-max-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/one-rep-max-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/one-rep-max-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/one-rep-max-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/one-rep-max-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/one-rep-max-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/one-rep-max-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/one-rep-max-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/one-rep-max-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/one-rep-max-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/one-rep-max-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/one-rep-max-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de 1RM — repetición máxima desde cualquier serie">
+<meta property="og:description" content="Introduce el peso levantado y las repeticiones logradas: obtén tu 1RM estimado con cinco fórmulas y una tabla de porcentajes para programar tus series de entrenamiento.">
+<meta property="og:url" content="https://tool-hub.me/one-rep-max-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/one-rep-max-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b91c1c">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "One Rep Max Calculator",
+  "description": "Enter the weight you lifted and how many reps you got — see your estimated one rep max from five formulas, plus a percentage table for programming your training sets.",
+  "url": "https://tool-hub.me/one-rep-max-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-26",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "One Rep Max Calculator",
+      "item": "https://tool-hub.me/one-rep-max-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is a one rep max estimate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Within about 5 percent for sets of 1 to 5 reps, and it drifts further out as reps climb, because endurance starts to matter more than raw strength. A set of 3 gives a much better estimate than a set of 12, which is why this calculator caps input at 12 reps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which formula should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Epley and Brzycki are the two most common and agree closely under 6 reps. Brzycki reads slightly lower at high reps, Epley slightly higher. Showing five formulas at once gives you a range rather than false precision — pick the middle and train from it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to actually test a true one rep max?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most lifters do not. A calculated 1RM from a heavy set of 3 to 5 is accurate enough to programme percentages, and it avoids the fatigue and injury risk of a true max attempt. Competitive lifters test occasionally, and usually only close to a meet."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>One Rep Max Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#e11d48" href="https://tool-hub.me/health-calculators/">Health</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">One Rep Max Calculator</span></nav>
+  <section class="hero">
+    <h1>One Rep Max Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Any hard set becomes a 1RM estimate — and the working weights that follow from it.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool table.pct { width:100%; border-collapse:collapse; margin-top:14px; font-size:14px; }
+      #tool table.pct th, #tool table.pct td { text-align:right; padding:6px 8px; border-bottom:1px solid var(--line); }
+      #tool table.pct th:first-child, #tool table.pct td:first-child { text-align:left; }
+      #tool table.pct th { color:var(--muted); font-weight:600; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="weight" data-i18n="tool.weight.label">Weight lifted</label>
+        <input type="text" id="weight" inputmode="decimal" autocomplete="off" placeholder="100">
+      </div>
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Unit</label>
+        <select id="unit"><option value="kg">kg</option><option value="lb">lb</option></select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="reps" data-i18n="tool.reps.label">Reps completed</label>
+        <input type="number" id="reps" inputmode="numeric" min="1" max="12" step="1" autocomplete="off" placeholder="5">
+      </div>
+      <div>
+        <label for="formula" data-i18n="tool.formula.label">Formula</label>
+        <select id="formula">
+          <option value="epley">Epley</option>
+          <option value="brzycki">Brzycki</option>
+          <option value="lombardi">Lombardi</option>
+          <option value="oconner">O'Conner</option>
+          <option value="wathan">Wathan</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="rounding" data-i18n="tool.round.label">Round weights to</label>
+        <select id="rounding">
+          <option value="0" data-i18n="tool.round.off">Off (exact)</option>
+          <option value="1">1</option>
+          <option value="2.5">2.5</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate 1RM</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.max">Estimated 1RM</div>
+          <div class="rc-val" id="r-max">—</div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.spread">Formula range</div>
+          <div class="rc-val" id="r-spread">—</div>
+        </div>
+      </div>
+      <table class="pct">
+        <thead><tr>
+          <th data-i18n="tool.table.pct">% of 1RM</th>
+          <th data-i18n="tool.table.weight">Weight</th>
+          <th data-i18n="tool.table.reps">Typical reps</th>
+        </tr></thead>
+        <tbody id="pct-body"></tbody>
+      </table>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.safety" style="margin-top:12px;">Estimates only. Warm up properly, use a spotter for maximal attempts, and stop if form breaks down.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a one rep max estimate is really doing</h2>
+    <p>A one rep max is the heaviest weight you can move for a single clean repetition. Testing it directly is stressful, fatiguing and — with a bar on your back — occasionally dangerous. So the standard approach is to take a set you already did, note the weight and the reps, and work backwards through a relationship between load and repetitions that has been measured across thousands of lifters.</p>
+    <p>Every formula here does the same thing: it assumes the number of reps you can perform at a given percentage of your max is reasonably consistent between people. That assumption holds well for low reps and gets shakier as the set gets longer, because a 15-rep set is testing muscular endurance as much as strength.</p>
+
+    <h3>Worked example 1: a heavy triple</h3>
+    <p>You squat 140 kg for 3 reps. Epley gives 140 x (1 + 3/30) = 154 kg. Brzycki gives 140 x 36 / (37 - 3) = 148.2 kg. The five formulas land between roughly 148 and 155 kg — a 7 kg spread on a 150 kg lift, under 5 percent. That spread is the honest precision of the method, and it is why the tool prints a range next to the single number.</p>
+
+    <h3>Worked example 2: the same lift for ten reps</h3>
+    <p>Now you bench 80 kg for 10. Epley: 80 x (1 + 10/30) = 106.7 kg. Brzycki: 80 x 36 / 27 = 106.7 kg. They agree here, but Lombardi returns about 100.7 kg and Wathan about 110 kg. The spread has widened to nearly 10 percent because ten reps depends heavily on conditioning and pacing. Use high-rep estimates to track progress over time, not to choose an opener at a meet.</p>
+
+    <h3>Worked example 3: turning the estimate into training weights</h3>
+    <p>With a 150 kg estimated max, a 5x5 at 80 percent is 120 kg, a heavy single at 95 percent is 142.5 kg, and a back-off set at 65 percent is 97.5 kg. The percentage table does this arithmetic for you. If the prescribed weight feels far heavier or lighter than the rep target suggests, your estimate has drifted — recalculate from a recent hard set rather than an old one.</p>
+
+    <h2>Percent of max and what it usually buys you</h2>
+    <table>
+      <thead><tr><th>% of 1RM</th><th>Reps most lifters manage</th><th>What it is used for</th></tr></thead>
+      <tbody>
+        <tr><td>100</td><td>1</td><td>Testing, competition attempts</td></tr>
+        <tr><td>95</td><td>2</td><td>Peaking singles and doubles</td></tr>
+        <tr><td>90</td><td>4</td><td>Heavy strength work</td></tr>
+        <tr><td>85</td><td>6</td><td>Main strength sets</td></tr>
+        <tr><td>80</td><td>8</td><td>Volume with good bar speed</td></tr>
+        <tr><td>75</td><td>10</td><td>Hypertrophy and technique</td></tr>
+        <tr><td>70</td><td>12</td><td>Back-off sets, accumulation</td></tr>
+        <tr><td>65</td><td>15</td><td>Conditioning, deloads</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Where these estimates go wrong</h2>
+    <p>Lift selection matters. Deadlifts and squats tend to follow the formulas closely; bench press estimates run a little high for many lifters; olympic lifts do not fit the model at all, because a snatch is limited by technique and speed rather than by how long you can grind. Isolation movements are also unreliable — nobody performs a true one rep max on a lateral raise.</p>
+    <p>Training age matters too. Beginners often out-perform their estimates because their limiting factor is skill rather than force production, while very experienced lifters with high rep endurance can estimate higher than they actually lift on the day. Fatigue, sleep and how far the set was from failure all move the number: a set of 5 with three reps left in the tank is a different data point from a set of 5 that nearly stopped you.</p>
+    <p>The practical approach is to recalculate every few weeks from your best recent set, treat the result as a planning tool rather than a personal record, and let the bar have the final word. If 85 percent feels like a limit single, the estimate is too high — trust what the weight tells you.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.acsm.org/education-resources/trending-topics-resources" target="_blank" rel="noopener">American College of Sports Medicine — resistance training guidelines and load prescription</a></li>
+      <li><a href="https://health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines" target="_blank" rel="noopener">Physical Activity Guidelines for Americans — recommended muscle-strengthening activity</a></li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed (NIH) — research on 1RM prediction equations and their accuracy</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/ovulation-calc/"><span class="related-ico" aria-hidden="true">♀</span><span class="related-name">Ovulation Calculator</span></a><a class="related-item" href="https://tool-hub.me/pace-calc/"><span class="related-ico" aria-hidden="true">👟</span><span class="related-name">Running Pace Calculator</span></a><a class="related-item" href="https://tool-hub.me/period-calc/"><span class="related-ico" aria-hidden="true">🩸</span><span class="related-name">Period Calculator</span></a><a class="related-item" href="https://tool-hub.me/pregnancy-due-date-calc/"><span class="related-ico" aria-hidden="true">🤰</span><span class="related-name">Pregnancy Due Date Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How accurate is a one rep max estimate?</summary><p data-i18n="faq.a1">Within about 5 percent for sets of 1 to 5 reps, and it drifts further out as reps climb, because endurance starts to matter more than raw strength. A set of 3 gives a much better estimate than a set of 12, which is why this calculator caps input at 12 reps.</p></details>
+    <details><summary data-i18n="faq.q2">Which formula should I use?</summary><p data-i18n="faq.a2">Epley and Brzycki are the two most common and agree closely under 6 reps. Brzycki reads slightly lower at high reps, Epley slightly higher. Showing five formulas at once gives you a range rather than false precision — pick the middle and train from it.</p></details>
+    <details><summary data-i18n="faq.q3">Do I need to actually test a true one rep max?</summary><p data-i18n="faq.a3">Most lifters do not. A calculated 1RM from a heavy set of 3 to 5 is accurate enough to programme percentages, and it avoids the fatigue and injury risk of a true max attempt. Competitive lifters test occasionally, and usually only close to a meet.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

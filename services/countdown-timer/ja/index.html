@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-KVpHebp/TKMbaOimWpQEiTjKF9k4s9hkUrTAL4EMJQY=' 'sha256-Gk/0uMzCuvTkoVxOywxWMRE3hF4MVwGtzSaSWjBj1tg=' 'sha256-Am7jphtWwKLO809uICgmHMQ/QfZqgMn1g//VsB5LGp4='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カウントダウンタイマー</title>
+<meta name="description" content="サウンドアラーム付きの無料オンラインカウントダウンタイマー。時・分・秒を設定するか、1/3/5/10/30分プリセットをタップ。バックグラウンドタブでも正確、タブタイトルに残り時間を表示。インストール・登録不要。">
+<meta name="keywords" content="countdown timer, online timer, 5 minute timer, timer with alarm, 카운트다운 타이머, 온라인 타이머, 요리 타이머">
+<link rel="canonical" href="https://tool-hub.me/countdown-timer/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/countdown-timer/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/countdown-timer/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/countdown-timer/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/countdown-timer/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/countdown-timer/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/countdown-timer/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/countdown-timer/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/countdown-timer/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/countdown-timer/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/countdown-timer/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/countdown-timer/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/countdown-timer/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/countdown-timer/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/countdown-timer/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/countdown-timer/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="カウントダウンタイマー">
+<meta property="og:description" content="サウンドアラーム付きの無料オンラインカウントダウンタイマー。時・分・秒を設定するか、1/3/5/10/30分プリセットをタップ。バックグラウンドタブでも正確、タブタイトルに残り時間を表示。インストール・登録不要。">
+<meta property="og:url" content="https://tool-hub.me/countdown-timer/ja/">
+<meta property="og:image" content="https://tool-hub.me/countdown-timer/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f97316">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Countdown Timer",
+  "description": "Free online countdown timer with sound alarm. Set hours, minutes, seconds or tap a 1/3/5/10/30 minute preset. Accurate in background tabs, time left shown in the tab title. No install, no sign-up.",
+  "url": "https://tool-hub.me/countdown-timer/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Countdown Timer",
+      "item": "https://tool-hub.me/countdown-timer/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the timer accurate when the tab is in the background or minimized?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Instead of counting ticks, this countdown timer stores the exact end time when you press start and recomputes the time left from the clock on every update. Even if the browser throttles background tabs, the correct time shows the moment you return — and if the end time has already passed, the alarm rings immediately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I can't hear the alarm — why, and how do I fix it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Browsers only allow sound after you interact with the page, so this online timer arms the sound the moment you press Start. If you still hear nothing, check the system volume, the tab's mute setting and the silent switch on phones. If your browser doesn't support Web Audio, a notice appears and the alert stays visual only."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use the 1/3/5/10/30 minute presets for cooking, studying or workouts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One tap sets a common time: 3 minutes for instant noodles or tea as a cooking timer, a 5 minute timer for breaks and stretching, 10 minutes for a short study sprint, 30 minutes for a focus session or workout. After a preset just press Start — your last setting is restored on your next visit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between a stopwatch and a countdown timer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A stopwatch counts up from zero to measure how long something takes. A countdown timer does the opposite: you set a duration, it counts down to zero and then rings. Use a stopwatch to record times, and a timer with alarm to be reminded. Try the online stopwatch →"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it keep working if the internet disconnects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Once the page is loaded, everything runs inside your browser and nothing is sent to a server. A running online timer keeps counting down and rings even while offline, and you can install it as a PWA for offline use."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Countdown Timer</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0284c7" href="https://tool-hub.me/date-calculators/">Date &amp; Time</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Countdown Timer</span></nav>
+  <section class="hero">
+    <h1>Online Countdown Timer</h1>
+    <p class="lede" data-i18n="hero.lede">Set your time and press start. It rings the moment time is up — even in a background tab.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Countdown timer tool" data-i18n-aria-label="tool.aria">
+    <div id="timer-display" role="timer" aria-live="off" aria-label="Time remaining" data-i18n-aria-label="tool.remaining"
+         style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;font-size:clamp(52px,15vw,88px);font-weight:700;line-height:1.1;text-align:center;letter-spacing:0.02em;margin:6px 0 14px;">05:00</div>
+
+    <div aria-hidden="true" style="height:8px;border-radius:999px;background:var(--line);overflow:hidden;margin:0 auto 22px;max-width:520px;">
+      <div id="timer-progress" style="height:100%;width:100%;background:var(--accent);border-radius:999px;transition:width .3s linear;"></div>
+    </div>
+
+    <div class="result" id="timer-banner" hidden role="alert">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+        <strong data-i18n="tool.done">Time's up!</strong>
+        <button class="btn" id="stop-sound-btn" type="button" data-i18n="tool.stopSound" style="margin-top:0;">Stop alarm</button>
+      </div>
+    </div>
+
+    <div class="result" id="timer-msg" hidden aria-live="polite" style="font-size:15px;"></div>
+
+    <div id="timer-fields" style="display:flex;gap:10px;max-width:520px;margin:0 auto;">
+      <div style="flex:1;min-width:0;">
+        <label for="in-hours" data-i18n="tool.hours">Hours</label>
+        <input type="number" id="in-hours" min="0" max="23" step="1" value="0" inputmode="numeric" autocomplete="off" style="text-align:center;font-size:20px;font-variant-numeric:tabular-nums;">
+      </div>
+      <div style="flex:1;min-width:0;">
+        <label for="in-minutes" data-i18n="tool.minutes">Minutes</label>
+        <input type="number" id="in-minutes" min="0" max="59" step="1" value="5" inputmode="numeric" autocomplete="off" style="text-align:center;font-size:20px;font-variant-numeric:tabular-nums;">
+      </div>
+      <div style="flex:1;min-width:0;">
+        <label for="in-seconds" data-i18n="tool.seconds">Seconds</label>
+        <input type="number" id="in-seconds" min="0" max="59" step="1" value="0" inputmode="numeric" autocomplete="off" style="text-align:center;font-size:20px;font-variant-numeric:tabular-nums;">
+      </div>
+    </div>
+
+    <div id="timer-presets" style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px;">
+      <button class="btn" type="button" data-preset-min="1" data-i18n="tool.preset1" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">1 min</button>
+      <button class="btn" type="button" data-preset-min="3" data-i18n="tool.preset3" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">3 min</button>
+      <button class="btn" type="button" data-preset-min="5" data-i18n="tool.preset5" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">5 min</button>
+      <button class="btn" type="button" data-preset-min="10" data-i18n="tool.preset10" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">10 min</button>
+      <button class="btn" type="button" data-preset-min="15" data-i18n="tool.preset15" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">15 min</button>
+      <button class="btn" type="button" data-preset-min="30" data-i18n="tool.preset30" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">30 min</button>
+      <button class="btn" type="button" data-preset-min="60" data-i18n="tool.preset60" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">1 hour</button>
+    </div>
+
+    <div id="timer-controls" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:6px;">
+      <button class="btn" id="start-btn" type="button" data-i18n="tool.start" style="min-width:130px;">Start</button>
+      <button class="btn" id="pause-btn" type="button" data-i18n="tool.pause" style="min-width:130px;background:var(--muted);display:none;">Pause</button>
+      <button class="btn" id="reset-btn" type="button" data-i18n="tool.reset" style="background:var(--muted);">Reset</button>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why a countdown beats watching the clock</h2>
+    <p>A clock says what time it is; it says nothing about how much of a fixed window is left. Cooking, workouts, study blocks and speaking slots share the same shape: a task with a hard duration where overrunning has a real cost — burnt food, a missed rep count, a talk that runs long. A countdown turns "keep an eye on the time" into "work until it rings," which is why it lives in kitchens, gyms, exam halls and behind podiums.</p>
+    <p>This page is a single-purpose countdown: one duration, one run, one alarm — not a multi-timer or an interval looper (see limitations below).</p>
+
+    <h2>Setting a duration</h2>
+    <ol>
+      <li>Type hours (0–23), minutes (0–59), seconds (0–59), or tap a preset (1/3/5/10/30 min).</li>
+      <li>Press Start. Fields lock while running so a stray keystroke can't change a duration already counting down.</li>
+      <li>Pause freezes the remaining time; Resume continues from exactly there.</li>
+      <li>Reset clears the run and returns to your last confirmed duration.</li>
+      <li>Your last-used h/m/s is remembered for next time — but a run in progress is not. Closing or reloading the tab mid-run drops back to idle.</li>
+    </ol>
+
+    <h2>How it stays correct in the background</h2>
+    <p>A naive timer decrements a counter once a second with <code>setInterval</code>. That drifts, because browsers throttle timers in background or minimized tabs to save power — a "one second" tick can quietly become two or three seconds once a tab loses focus. Over a 25-minute run that adds up to real error.</p>
+    <p>This timer never trusts the tick count. Start computes one fixed value: <strong>end time = now + duration</strong>. Every tick just asks the clock "what time is it now?" and subtracts: <strong>remaining = end time − now</strong>. A throttled tab that fires once every few seconds still lands on the right answer the moment it fires, and a tab that slept past the end time sees a negative remainder on its next tick and rings immediately instead of catching up. Pause/Resume works the same way: pausing banks the remaining milliseconds, resuming recomputes a fresh end time from them.</p>
+
+    <h3>Worked example 1 — the reverse-timer trick for a talk</h3>
+    <div class="example">
+      You have a 12-minute speaking slot and want a silent cue exactly 2 minutes before you must stop, without mentally tracking elapsed time.<br>
+      Set the countdown for <strong>12 − 2 = 10 minutes</strong>, not 12, and start it with your slot. When it rings, exactly 2 minutes remain — wrap up and stop. One subtraction, done before you start talking, replaces mental math while you're talking.
+    </div>
+
+    <h3>Worked example 2 — a Pomodoro study block</h3>
+    <div class="example">
+      Classic pacing: 25 min focused work, 5 min break, repeated, with a longer break after four rounds.<br>
+      4 × 25 = 100 minutes of work, plus 3 short breaks between rounds = 3 × 5 = 15 minutes, plus one 20-minute long break after round four.<br>
+      Total for one full set: 100 + 15 + 20 = <strong>135 minutes (2 h 15 min)</strong>, of which 100 minutes is focused work. Set 25:00 for each work block and 5:00 (20:00 on the fourth) for each break.
+    </div>
+
+    <h3>Worked example 3 — boiling an egg, adjusted for altitude</h3>
+    <div class="example">
+      At sea level (water boiling at 100 °C), a large fridge-cold egg takes about 6:30 for soft, 8:00 for jammy, 11:00 for hard-boiled, timed from a rolling boil.<br>
+      Water boils cooler as elevation rises (roughly 1 °C per ~300 m), so eggs cook slower. Around 1,500 m, add about 1 minute to each: 7:30 / 9:00 / 12:00. Drop the egg in as you start the countdown so both begin together.
+    </div>
+
+    <h2>Reference durations</h2>
+    <table>
+      <tr><th>Duration</th><th>Common use</th><th>Why this length</th></tr>
+      <tr><td>1 min</td><td>Rest between exercise sets</td><td>Recovers breath without losing heart-rate elevation</td></tr>
+      <tr><td>3 min</td><td>Steeping tea, instant noodles</td><td>Matches most packaging instructions</td></tr>
+      <tr><td>5 min</td><td>Micro-break, stretch, Pomodoro short break</td><td>Resets focus without losing momentum</td></tr>
+      <tr><td>10 min</td><td>Reading sprint, warm-up</td><td>Long enough for real progress</td></tr>
+      <tr><td>25 min</td><td>Pomodoro focus block</td><td>The duration the technique is built around</td></tr>
+      <tr><td>30 min</td><td>Workout block, meeting time-box</td><td>Fits a full routine or agenda item</td></tr>
+    </table>
+
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Expecting sound before pressing Start.</strong> Browsers block audio until you interact with the page, so the sound engine only arms on the Start click — no separate "enable sound" step is possible.</li>
+      <li><strong>Closing the tab and expecting the run to resume.</strong> Only your last duration is remembered, not a run in progress. Keep the tab open and minimized instead, or install it as an app.</li>
+      <li><strong>Setting all three fields to zero.</strong> Start stays disabled with a short notice, by design, rather than silently doing nothing.</li>
+      <li><strong>Phone on silent.</strong> The hardware silent switch and system volume sit above any web page's control.</li>
+    </ul>
+
+    <h2>What this timer doesn't do</h2>
+    <p>It runs one countdown at a time — it won't chain a work interval into a rest interval and back (a Tabata- or HIIT-style looper), so interval training means restarting the duration by hand each round. It isn't tied to wall-clock time either: it counts down a duration, it won't ring at "3:00 PM" — that needs a scheduled alarm. And like any browser timer, it's accurate to whole seconds, not milliseconds — fine for cooking or study, not competition-grade split timing.</p>
+  </section>
+  <!-- CONTENT:END -->
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/setTimeout" target="_blank" rel="noopener">MDN Web Docs — how browser timers fire and why background tabs are throttled</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide" target="_blank" rel="noopener">MDN Autoplay Guide — why alarm sound needs a user interaction first</a></li>
+      <li><a href="https://www.nist.gov/pml/time-and-frequency-division" target="_blank" rel="noopener">NIST Time and Frequency Division — official U.S. timekeeping and clock accuracy</a></li>
+      <li><a href="https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation" target="_blank" rel="noopener">USDA FSIS — safe cooking times and temperatures for kitchen timing</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/date-add-calc/"><span class="related-ico" aria-hidden="true">➕</span><span class="related-name">Date Calculator</span></a><a class="related-item" href="https://tool-hub.me/date-diff-calc/"><span class="related-ico" aria-hidden="true">🗓️</span><span class="related-name">Date Difference Calculator</span></a><a class="related-item" href="https://tool-hub.me/dday-calc/"><span class="related-ico" aria-hidden="true">📅</span><span class="related-name">D-Day Counter</span></a><a class="related-item" href="https://tool-hub.me/hours-calc/"><span class="related-ico" aria-hidden="true">🕗</span><span class="related-name">Hours Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">Is the timer accurate when the tab is in the background or minimized?</summary>
+      <p data-i18n="faq.a1">Yes. Instead of counting ticks, this countdown timer stores the exact end time when you press start and recomputes the time left from the clock on every update. Even if the browser throttles background tabs, the correct time shows the moment you return — and if the end time has already passed, the alarm rings immediately.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">I can't hear the alarm — why, and how do I fix it?</summary>
+      <p data-i18n="faq.a2">Browsers only allow sound after you interact with the page, so this online timer arms the sound the moment you press Start. If you still hear nothing, check the system volume, the tab's mute setting and the silent switch on phones. If your browser doesn't support Web Audio, a notice appears and the alert stays visual only.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How do I use the 1/3/5/10/30 minute presets for cooking, studying or workouts?</summary>
+      <p data-i18n="faq.a3">One tap sets a common time: 3 minutes for instant noodles or tea as a cooking timer, a 5 minute timer for breaks and stretching, 10 minutes for a short study sprint, 30 minutes for a focus session or workout. After a preset just press Start — your last setting is restored on your next visit.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What's the difference between a stopwatch and a countdown timer?</summary>
+      <p data-i18n="faq.a4">A stopwatch counts up from zero to measure how long something takes. A countdown timer does the opposite: you set a duration, it counts down to zero and then rings. Use a stopwatch to record times, and a timer with alarm to be reminded.</p>
+      <p><a href="https://tool-hub.me/stopwatch/" data-i18n="faq.a4link">Try the online stopwatch →</a></p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Does it keep working if the internet disconnects?</summary>
+      <p data-i18n="faq.a5">Yes. Once the page is loaded, everything runs inside your browser and nothing is sent to a server. A running online timer keeps counting down and rings even while offline, and you can install it as a PWA for offline use.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

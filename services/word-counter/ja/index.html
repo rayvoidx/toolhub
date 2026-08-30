@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-wWje9s2wxYddHQKILAaneX7pCnCTpZDQVvQgGkjdVI4=' 'sha256-grGPU1fsNYjU0ap47g5C2o+CXP/wWBoZ6SlEW0LfE/A=' 'sha256-erL9e6zajhEc2dzViEeNRD8w7URCu2X6cUm/2/EFhZg='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単語カウンター — 単語・文字・文・読了時間を即計算</title>
+<meta name="description" content="無料のオンライン単語カウンター。テキストを貼り付けるだけで、単語数・文字数・文の数・段落数に加え、読む時間と話す時間の目安を即座に計算します。すべてブラウザー内で動作し、何もアップロードしません。">
+<meta name="keywords" content="word counter, 단어수 세기, word count, reading time calculator, words to time">
+<link rel="canonical" href="https://tool-hub.me/word-counter/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/word-counter/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/word-counter/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/word-counter/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/word-counter/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/word-counter/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/word-counter/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/word-counter/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/word-counter/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/word-counter/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/word-counter/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/word-counter/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/word-counter/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/word-counter/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/word-counter/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/word-counter/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="単語カウンター — 単語・文字・文・読了時間を即計算">
+<meta property="og:description" content="無料のオンライン単語カウンター。テキストを貼り付けるだけで、単語数・文字数・文の数・段落数に加え、読む時間と話す時間の目安を即座に計算します。すべてブラウザー内で動作し、何もアップロードしません。">
+<meta property="og:url" content="https://tool-hub.me/word-counter/ja/">
+<meta property="og:image" content="https://tool-hub.me/word-counter/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6366f1">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Word Counter",
+  "description": "Free online word counter. Paste your text to instantly count words, characters, sentences, and paragraphs, plus estimated reading and speaking time. Runs entirely in your browser — nothing is uploaded.",
+  "url": "https://tool-hub.me/word-counter/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Word Counter",
+      "item": "https://tool-hub.me/word-counter/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the word counter count words?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For languages that separate words with spaces — English, Spanish, Korean and most others — the word counter splits your text on whitespace. For Chinese and Japanese, which are written without spaces, each Han character and kana is counted individually, so pasted CJK text is not undercounted. A whitespace-separated token counts as a word only if it contains at least one letter or number, so numbers count while lone emoji and standalone punctuation do not."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are reading time and speaking time estimated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reading time assumes an average silent reading speed, which you can set to Slow (150), Normal (200) or Fast (250) words per minute; the default is 200 wpm. Speaking time uses about 130 words per minute, a comfortable pace for presentations and voice-overs. Both are shown as minutes:seconds and update instantly as you type, so it doubles as a words-to-time and reading-time calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Word counter or character counter — which do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use this word counter when your limit is in words — essays, blog posts, article briefs, SEO copy and social captions. Use a character counter when your limit is in characters or bytes — tweets, meta descriptions, SMS or cover-letter fields with a strict character cap. This tool shows both word and character totals, so you are covered either way. Open the Character Counter →"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are sentences and paragraphs counted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A sentence ends at a period, question mark or exclamation mark (or their full-width CJK equivalents 。！？), and the final sentence is still counted even without closing punctuation. A paragraph is any non-empty line, so pressing Enter starts a new paragraph. Very long single-line text with no line breaks counts as one paragraph."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every count runs entirely inside your browser — nothing you type is ever sent to a server or shared. Your most recent text is optionally saved to this browser's local storage so it is still here when you return; untick the save option to keep it in memory for this session only, and clearing it removes the stored copy immediately."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Word Counter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#7c3aed" href="https://tool-hub.me/text-tools/">Text</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Word Counter</span></nav>
+  <section class="hero">
+    <h1>Word Counter</h1>
+    <p class="lede" data-i18n="hero.lede">Paste your text and get instant counts — words, characters, sentences, paragraphs, plus reading and speaking time.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <label for="wc-text" data-i18n="tool.textLabel">Your text</label>
+    <textarea id="wc-text" rows="8" dir="auto" autocomplete="off"
+      placeholder="Paste or type your text here…" data-i18n-placeholder="tool.textPlaceholder"
+      style="resize:vertical;line-height:1.6;"></textarea>
+
+    <div style="display:flex;align-items:center;gap:.6rem;margin-top:.9rem;flex-wrap:wrap;">
+      <label for="wc-speed" style="margin:0;white-space:nowrap;" data-i18n="tool.speedLabel">Reading speed</label>
+      <select id="wc-speed" style="width:auto;flex:1;min-width:12rem;">
+        <option value="150" data-i18n="tool.speed.slow">Slow — 150 wpm</option>
+        <option value="200" selected data-i18n="tool.speed.normal">Normal — 200 wpm</option>
+        <option value="250" data-i18n="tool.speed.fast">Fast — 250 wpm</option>
+        <option value="custom" data-i18n="tool.speed.custom">Custom…</option>
+      </select>
+      <input type="number" id="wc-wpm" min="50" max="1000" step="10" inputmode="numeric" hidden
+        placeholder="wpm" data-i18n-placeholder="tool.speed.customPlaceholder"
+        style="width:auto;max-width:8rem;margin:0;">
+    </div>
+
+    <div style="display:flex;align-items:center;gap:.6rem;margin-top:.6rem;flex-wrap:wrap;">
+      <label for="wc-speak-wpm" style="margin:0;white-space:nowrap;" data-i18n="tool.speakLabel">Speaking speed</label>
+      <input type="number" id="wc-speak-wpm" min="50" max="300" step="5" inputmode="numeric"
+        placeholder="130" style="width:auto;max-width:8rem;margin:0;">
+    </div>
+
+    <div id="wc-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.7rem;margin-top:1.1rem;">
+      <button type="button" class="stat-card" id="sc-words" title="Click to copy" data-i18n-title="tool.copyHint"
+        style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);">
+        <span style="display:block;font-size:.78rem;color:var(--muted);margin-bottom:.2rem;" data-i18n="tool.words">Words</span>
+        <span class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</span>
+      </button>
+      <button type="button" class="stat-card" id="sc-chars" title="Click to copy" data-i18n-title="tool.copyHint"
+        style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);">
+        <span style="display:block;font-size:.78rem;color:var(--muted);margin-bottom:.2rem;" data-i18n="tool.characters">Characters</span>
+        <span class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</span>
+      </button>
+      <button type="button" class="stat-card" id="sc-chars-ns" title="Click to copy" data-i18n-title="tool.copyHint"
+        style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);">
+        <span style="display:block;font-size:.78rem;color:var(--muted);margin-bottom:.2rem;" data-i18n="tool.charactersNoSpaces">Characters (no spaces)</span>
+        <span class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</span>
+      </button>
+      <button type="button" class="stat-card" id="sc-sentences" title="Click to copy" data-i18n-title="tool.copyHint"
+        style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);">
+        <span style="display:block;font-size:.78rem;color:var(--muted);margin-bottom:.2rem;" data-i18n="tool.sentences">Sentences</span>
+        <span class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</span>
+      </button>
+      <button type="button" class="stat-card" id="sc-paragraphs" title="Click to copy" data-i18n-title="tool.copyHint"
+        style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);">
+        <span style="display:block;font-size:.78rem;color:var(--muted);margin-bottom:.2rem;" data-i18n="tool.paragraphs">Paragraphs</span>
+        <span class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</span>
+      </button>
+      <button type="button" class="stat-card" id="sc-read" title="Click to copy" data-i18n-title="tool.copyHint"
+        style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);">
+        <span style="display:block;font-size:.78rem;color:var(--muted);margin-bottom:.2rem;" data-i18n="tool.readingTime">Reading time</span>
+        <span class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0:00</span>
+      </button>
+      <button type="button" class="stat-card" id="sc-speak" title="Click to copy" data-i18n-title="tool.copyHint"
+        style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);">
+        <span style="display:block;font-size:.78rem;color:var(--muted);margin-bottom:.2rem;" data-i18n="tool.speakingTime">Speaking time</span>
+        <span class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0:00</span>
+      </button>
+    </div>
+
+    <label style="display:flex;align-items:center;gap:.5rem;margin-top:1.1rem;font-weight:400;cursor:pointer;">
+      <input type="checkbox" id="wc-remember" checked style="width:auto;margin:0;">
+      <span data-i18n="tool.remember">Save my text in this browser</span>
+    </label>
+
+    <div class="result" id="wc-result">
+      <p id="wc-hint" style="margin:0" data-i18n="tool.hint">Counts update as you type. Tap any card to copy its value.</p>
+      <p id="wc-feedback" aria-live="polite" hidden style="margin:.5rem 0 0;font-weight:600;color:var(--accent);"></p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Counting words, characters, and time — and why the method matters</h2>
+    <p>A word count sounds trivial until you paste in Chinese text, face a "160-word minimum" on an assignment, or need a meta description under a character cap. Different limits measure different things: essays and articles cap words, tweets and SMS cap characters, and a presentation is really capped by time. This counter reports words, characters (with and without spaces), sentences, paragraphs, and estimated reading and speaking time together, updating live as you type, so you can check against whichever limit applies.</p>
+
+    <h3>How each number is counted</h3>
+    <p>For space-separated languages — English, Spanish, Korean and most others — text is split on whitespace, and a token counts as a word only if it contains at least one letter or number (so numbers count, but a lone dash or emoji does not). Chinese and Japanese are written without spaces, so each Han character and kana is counted individually rather than lumped into one giant "word." A sentence ends at a period, question mark, or exclamation mark, or their full-width CJK equivalents 。！？, with the final sentence counted even without closing punctuation. Any non-empty line is a paragraph.</p>
+
+    <h3>How reading and speaking time are estimated</h3>
+    <p>Reading time = word count ÷ reading speed, where you choose Slow (150), Normal (200), or Fast (250) words per minute; 200 wpm is a typical adult silent-reading pace. Speaking time uses about 130 wpm, a comfortable out-loud delivery rate for presentations and voice-overs. Both display as minutes:seconds.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example"><strong>1. A blog post.</strong> An 800-word article at the Normal 200 wpm reads in 800 ÷ 200 = 4 minutes (<strong>4:00</strong>). Read aloud at 130 wpm it runs 800 ÷ 130 ≈ 6.15 min, i.e. <strong>6:09</strong> — useful for a narrated video script.</div>
+    <div class="example"><strong>2. A conference talk.</strong> You have a 20-minute slot. At 130 wpm that is 20 × 130 = <strong>2,600 words</strong> of script — paste your draft and watch the speaking-time card to see whether you are over or under.</div>
+    <div class="example"><strong>3. A social caption.</strong> The caption "New feature drops today 🎉" counts as <strong>4 words</strong> (the emoji is not a word) and <strong>25 characters</strong> including spaces — comfortably inside a platform's character cap.</div>
+
+    <h3>Common limits to check against</h3>
+    <table>
+      <thead><tr><th>Field</th><th>Typical limit</th><th>Measured in</th></tr></thead>
+      <tbody>
+        <tr><td>SEO title tag</td><td>~60 characters</td><td>Characters</td></tr>
+        <tr><td>Meta description</td><td>~155 characters</td><td>Characters</td></tr>
+        <tr><td>Tweet / X post</td><td>280 characters</td><td>Characters</td></tr>
+        <tr><td>SMS segment</td><td>160 characters</td><td>Characters</td></tr>
+        <tr><td>College application essay</td><td>500–650 words</td><td>Words</td></tr>
+        <tr><td>Journal abstract</td><td>150–250 words</td><td>Words</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Word count or character count?</h3>
+    <ul>
+      <li><strong>Use words</strong> when the brief is in words — essays, articles, blog posts, SEO body copy.</li>
+      <li><strong>Use characters</strong> when the field has a hard character cap — titles, meta descriptions, tweets, SMS, form fields. This tool shows both, plus a "no spaces" character total for limits that exclude whitespace.</li>
+      <li><strong>Watch CJK.</strong> A "300-word" essay in Chinese is counted by characters here, which is the correct behaviour, but confirm whether your instructor means characters (글자 / 字) or Western-style words.</li>
+    </ul>
+
+    <h3>Practical notes and limits</h3>
+    <p>The counter measures the plain text exactly as pasted: it does not strip Markdown or HTML, so a <code>**bold**</code> marker counts its asterisks, and it counts characters, not bytes, so a single emoji built from several code points can occupy more bytes than the character total suggests. Everything runs in your browser; your most recent text can optionally be saved to local storage and is never uploaded.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.unicode.org/reports/tr29/" target="_blank" rel="noopener">Unicode UAX #29 — the standard definition of word and grapheme cluster boundaries in text</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter" target="_blank" rel="noopener">MDN Web Docs — Intl.Segmenter, how browsers segment text into words and characters</a></li>
+      <li><a href="https://www.w3.org/TR/i18n-glossary/" target="_blank" rel="noopener">W3C Internationalization Glossary — character, code point and CJK counting terminology</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/word-frequency-counter/"><span class="related-ico" aria-hidden="true">📊</span><span class="related-name">Word Frequency Counter</span></a><a class="related-item" href="https://tool-hub.me/words-to-pages/"><span class="related-ico" aria-hidden="true">📄</span><span class="related-name">Words to Pages Converter</span></a><a class="related-item" href="https://tool-hub.me/ad-copy-limit-check/"><span class="related-ico" aria-hidden="true">📣</span><span class="related-name">Ad Copy Length Checker</span></a><a class="related-item" href="https://tool-hub.me/binary-text-conv/"><span class="related-ico" aria-hidden="true">💻</span><span class="related-name">Binary Translator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How does the word counter count words?</summary>
+      <p data-i18n="faq.a1">For languages that separate words with spaces — English, Spanish, Korean and most others — the word counter splits your text on whitespace. For Chinese and Japanese, which are written without spaces, each Han character and kana is counted individually, so pasted CJK text is not undercounted. A whitespace-separated token counts as a word only if it contains at least one letter or number, so numbers count while lone emoji and standalone punctuation do not.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How are reading time and speaking time estimated?</summary>
+      <p data-i18n="faq.a2">Reading time assumes an average silent reading speed, which you can set to Slow (150), Normal (200) or Fast (250) words per minute; the default is 200 wpm. Speaking time uses about 130 words per minute, a comfortable pace for presentations and voice-overs. Both are shown as minutes:seconds and update instantly as you type, so it doubles as a words-to-time and reading-time calculator.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Word counter or character counter — which do I need?</summary>
+      <p data-i18n="faq.a3">Use this word counter when your limit is in words — essays, blog posts, article briefs, SEO copy and social captions. Use a character counter when your limit is in characters or bytes — tweets, meta descriptions, SMS or cover-letter fields with a strict character cap. This tool shows both word and character totals, so you are covered either way.</p>
+      <p style="margin:8px 0 4px"><a href="https://tool-hub.me/char-count/" data-i18n="faq.a3link">Open the Character Counter →</a></p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How are sentences and paragraphs counted?</summary>
+      <p data-i18n="faq.a4">A sentence ends at a period, question mark or exclamation mark (or their full-width CJK equivalents 。！？), and the final sentence is still counted even without closing punctuation. A paragraph is any non-empty line, so pressing Enter starts a new paragraph. Very long single-line text with no line breaks counts as one paragraph.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my text uploaded to a server?</summary>
+      <p data-i18n="faq.a5">No. Every count runs entirely inside your browser — nothing you type is ever sent to a server or shared. Your most recent text is optionally saved to this browser's local storage so it is still here when you return; untick the save option to keep it in memory for this session only, and clearing it removes the stored copy immediately.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

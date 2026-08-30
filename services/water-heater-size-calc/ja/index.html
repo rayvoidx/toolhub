@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-NX/SKU4YcHqkB/YKY+Ba0Z5WwZSfPcLyOwNnE9QQ5NU=' 'sha256-+z1NWWFE5xqH6QiC0pGWHHvolIZYPQ7ZibE3AtHxPkc=' 'sha256-eEs7qt/CztSujwv+6/7OaEhsmXFBdbSm0qPjOmYiQ5Y='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>給湯器サイズ計算ツール — 容量とGPM</title>
+<meta name="description" content="必要な給湯器の容量が分かります。ピーク時の使用量から貯湯タンクの容量を、地域の水温上昇幅から瞬間式のGPMを算出。無料のサイズ選定ツールです。">
+<meta name="keywords" content="water heater size calculator, what size water heater, tankless water heater size, water heater gallons, first hour rating, water heater sizing">
+<link rel="canonical" href="https://tool-hub.me/water-heater-size-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/water-heater-size-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/water-heater-size-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/water-heater-size-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/water-heater-size-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/water-heater-size-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/water-heater-size-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/water-heater-size-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/water-heater-size-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/water-heater-size-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/water-heater-size-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/water-heater-size-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/water-heater-size-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/water-heater-size-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/water-heater-size-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/water-heater-size-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="給湯器サイズ計算ツール — 容量とGPM">
+<meta property="og:description" content="必要な給湯器の容量が分かります。ピーク時の使用量から貯湯タンクの容量を、地域の水温上昇幅から瞬間式のGPMを算出。無料のサイズ選定ツールです。">
+<meta property="og:url" content="https://tool-hub.me/water-heater-size-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/water-heater-size-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0369a1">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Water Heater Size Calculator",
+  "description": "Find what size water heater you need — tank gallons from your peak-hour demand, or tankless GPM at your local temperature rise. Free sizing tool.",
+  "url": "https://tool-hub.me/water-heater-size-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Water Heater Size Calculator",
+      "item": "https://tool-hub.me/water-heater-size-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the first-hour rating on the yellow label?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The first-hour rating (FHR) is how many gallons of hot water a tank can deliver in one busy hour, starting from full. It combines stored volume with recovery speed, so it is always higher than the tank size — a 50 gal gas tank often rates near 80. Match the FHR to your peak hour, then buy whatever tank carries it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tank or tankless — which should I buy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tankless never runs out of hot water and wastes no standby heat, but it costs two to three times more installed and caps how many fixtures can run at once. A tank is cheap to fit and shrugs off simultaneous demand, yet it recovers slowly and loses heat all day. Households that stagger showers do well on tankless; homes where three fixtures run together usually do better with a large tank."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does gas or electric change the size I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, a lot. A gas tank reheats roughly twice as fast as electric, so the same volume earns a much higher first-hour rating — a 40 gal gas tank can match a 50 gal electric. For tankless, electric units are limited by your service panel and rarely beat 4 GPM at a cold-climate rise, while gas models reach 8 to 9 GPM."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I get the size wrong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Undersizing shows up as showers going cold after ten minutes, or the last person in line getting a lukewarm one; a tankless unit instead throttles its flow. Oversizing costs you quietly — a bigger tank burns standby energy every day of its life and costs more upfront. When in doubt, size one step up on tanks and exactly on tankless."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Water Heater Size Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Water Heater Size Calculator</span></nav>
+  <section class="hero">
+    <h1>Water Heater Size Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Size by your busiest hour, not by guesswork — tank gallons or tankless GPM.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .grp-label { font-weight:600; margin:16px 0 6px; }
+      #tool .use-row { display:grid; grid-template-columns:1fr auto 72px; align-items:center; gap:8px; padding:4px 0; }
+      #tool .use-row label { display:flex; align-items:center; gap:8px; margin:0; font-weight:400; cursor:pointer; }
+      #tool .use-row input[type=checkbox] { width:18px; height:18px; margin:0; flex:none; }
+      #tool .use-row .rate { font-size:13px; color:var(--muted); white-space:nowrap; }
+      #tool .use-row .qty { margin:0; padding:6px 8px; text-align:center; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .break { list-style:none; padding:0; margin:6px 0 0; font-size:14px; }
+      #tool .break li { display:flex; justify-content:space-between; border-bottom:1px solid var(--line); padding:5px 0; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="htype" data-i18n="tool.type.label">Heater type</label>
+        <select id="htype">
+          <option value="tank" data-i18n="tool.type.tank">Storage tank</option>
+          <option value="tankless" data-i18n="tool.type.tankless">Tankless (on demand)</option>
+        </select>
+      </div>
+      <div>
+        <label for="hh" data-i18n="tool.hh.label">People in the home</label>
+        <select id="hh">
+          <option value="a" data-i18n="tool.hh.a">1 to 2 people</option>
+          <option value="b" selected data-i18n="tool.hh.b">3 to 4 people</option>
+          <option value="c" data-i18n="tool.hh.c">5 or more people</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="gw-row" hidden>
+      <label for="gw" data-i18n="tool.gw.label">Incoming water temperature</label>
+      <select id="gw">
+        <option value="40" data-i18n="tool.gw.cold">Cold — northern US, Canada, UK (40F / 4C)</option>
+        <option value="55" selected data-i18n="tool.gw.mod">Moderate — mid latitudes (55F / 13C)</option>
+        <option value="65" data-i18n="tool.gw.warm">Warm — southern states, tropics (65F / 18C)</option>
+        <option value="custom" data-i18n="tool.gw.custom">Enter my own temperature</option>
+      </select>
+      <input type="number" id="gwc" hidden min="33" max="95" step="1" inputmode="decimal" autocomplete="off" placeholder="°F" aria-label="Incoming water temperature" data-i18n-aria-label="tool.gw.label" style="margin-top:8px;">
+    </div>
+
+    <div id="sl-row">
+      <label for="slen" data-i18n="tool.sl.label">Typical shower length</label>
+      <select id="slen">
+        <option value="5">5</option>
+        <option value="8" selected>8</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+      </select>
+    </div>
+
+    <p class="grp-label" id="uses-head" data-i18n="tool.use.tank">Hot water used in your busiest hour</p>
+    <div class="uses">
+      <div class="use-row">
+        <label for="c-shower"><input type="checkbox" id="c-shower" checked><span data-i18n="tool.f.shower">Shower</span></label>
+        <span class="rate" id="rate-shower">10 gal</span>
+        <input type="number" class="qty" id="n-shower" min="1" max="9" step="1" inputmode="numeric" autocomplete="off" value="2" placeholder="2" aria-label="How many" data-i18n-aria-label="tool.qty">
+      </div>
+      <div class="use-row">
+        <label for="c-bath"><input type="checkbox" id="c-bath"><span data-i18n="tool.f.bath">Bath / tub fill</span></label>
+        <span class="rate" id="rate-bath">15 gal</span>
+        <input type="number" class="qty" id="n-bath" min="1" max="9" step="1" inputmode="numeric" autocomplete="off" value="1" placeholder="1" aria-label="How many" data-i18n-aria-label="tool.qty">
+      </div>
+      <div class="use-row">
+        <label for="c-dish"><input type="checkbox" id="c-dish" checked><span data-i18n="tool.f.dish">Dishwasher</span></label>
+        <span class="rate" id="rate-dish">6 gal</span>
+        <input type="number" class="qty" id="n-dish" min="1" max="9" step="1" inputmode="numeric" autocomplete="off" value="1" placeholder="1" aria-label="How many" data-i18n-aria-label="tool.qty">
+      </div>
+      <div class="use-row">
+        <label for="c-wash"><input type="checkbox" id="c-wash" checked><span data-i18n="tool.f.wash">Washing machine</span></label>
+        <span class="rate" id="rate-wash">7 gal</span>
+        <input type="number" class="qty" id="n-wash" min="1" max="9" step="1" inputmode="numeric" autocomplete="off" value="1" placeholder="1" aria-label="How many" data-i18n-aria-label="tool.qty">
+      </div>
+      <div class="use-row">
+        <label for="c-sink"><input type="checkbox" id="c-sink" checked><span data-i18n="tool.f.sink">Sink / shaving</span></label>
+        <span class="rate" id="rate-sink">2 gal</span>
+        <input type="number" class="qty" id="n-sink" min="1" max="9" step="1" inputmode="numeric" autocomplete="off" value="2" placeholder="2" aria-label="How many" data-i18n-aria-label="tool.qty">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate size</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.size">Recommended size</div>
+          <div class="rc-val" id="r-size">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" id="r-l2" data-i18n="tool.r.fhr">First-hour rating needed</div><div class="rc-val" id="r-v2">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.class">Size class</div><div class="rc-val" id="r-v3" style="font-size:15px;">—</div></div>
+        <div class="rcard" id="rc-rise" hidden><div class="rc-label" data-i18n="tool.r.rise">Temperature rise to 105F</div><div class="rc-val" id="r-v4">—</div></div>
+      </div>
+      <p class="grp-label" data-i18n="tool.r.breakdown">Demand breakdown</p>
+      <ul class="break" id="r-break"></ul>
+      <p class="subtle" id="r-note"></p>
+      <p class="subtle" id="r-note2" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.disc" style="margin-top:12px;">A sizing guide, not a plumbing spec. Fuel type, gas line size and venting decide the final model — confirm with a licensed installer.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What size water heater do you actually need?</h2>
+    <p>Water heaters are not sized by how much hot water a household uses in a day. They are sized by the worst hour of the week — usually a weekday morning when showers, a dishwasher and a laundry load all land inside sixty minutes. Get that hour right and the heater is right; average it out across the day and you will buy something too small, or pay for a tank far bigger than the house needs.</p>
+    <p>Storage tanks and tankless units answer that hour with completely different numbers. A tank answers with gallons delivered in the first hour, the metric printed on the yellow EnergyGuide label as the first-hour rating (FHR). A tankless unit answers with flow: gallons per minute (GPM) it can raise from your incoming water temperature to a usable one. That is why this calculator switches its whole worksheet when you change the heater type.</p>
+
+    <h3>Worked example: a family of four at 7 a.m., storage tank</h3>
+    <p>Three showers back to back at roughly 10 gallons of hot water each is 30 gallons. Add a dishwasher cycle at 6, a laundry load at 7, and two quick sink or shaving uses at 2 gallons each, and the peak hour comes to 47 gallons of hot water. That number, 47, is the first-hour rating to shop for. It maps to a 50-gallon tank: a 50-gallon gas model typically carries an FHR near 80 and a 50-gallon electric near 60, so either clears 47 with headroom. A 40-gallon electric, with an FHR around 50, would only just scrape by and would leave nothing for a guest.</p>
+    <p>Note what did not happen: nobody added the family's whole daily usage of 200-plus gallons. Sixty minutes is the whole question.</p>
+
+    <h3>The same family, tankless</h3>
+    <p>Now the question changes to how many fixtures run simultaneously. Two showers at 2.0 GPM each plus a kitchen sink at 1.0 GPM is 5.0 GPM. Then comes the part most buyers skip: temperature rise. If the household is in Georgia, incoming water is around 65°F and the rise to a 105°F shower is 40°F — a small-to-mid whole-home unit handles 5 GPM there easily. If the same family lives in Minnesota or northern Britain, incoming water sits near 40°F, the rise is 65°F, and the same unit delivers far less.</p>
+
+    <h3>Temperature rise math you can check by hand</h3>
+    <p>Heating one gallon per minute by one degree Fahrenheit takes about 500 BTU per hour. So 5 GPM at a 65°F rise needs 5 × 65 × 500 = 162,500 BTU per hour of delivered heat. At 82 percent thermal efficiency the unit has to fire at roughly 198,000 BTU — which is exactly why the biggest residential gas tankless units are rated 199,000 BTU. Cold-climate homes wanting two simultaneous showers are shopping at the very top of the residential range.</p>
+    <p>Electric is stricter. One GPM per degree of rise costs about 0.1465 kW, so 5 GPM at a 65°F rise would need roughly 48 kW — more than a typical 200-amp service can spare. A 27 kW electric tankless, the common whole-home size, delivers about 2.8 GPM at that rise. That is one shower, and nothing else running.</p>
+
+    <h2>How to read the yellow label</h2>
+    <p>On a storage tank, the number that matters is the first-hour rating, printed in small type near the top of the EnergyGuide label. It is always larger than the tank volume because the burner or element keeps working while you draw. Gas recovers roughly twice as fast as electric, which is why a 40-gallon gas tank can out-deliver a 50-gallon electric one in that first hour. Compare FHR to FHR across models; comparing gallons to gallons across fuel types is misleading.</p>
+    <p>On a tankless unit, the headline GPM on the box is measured at a small rise, often 35°F. Ignore it and find the manufacturer's flow chart, then read the GPM at your own rise. Two models with identical box numbers can differ by 1.5 GPM at 65°F.</p>
+
+    <h2>When to size up</h2>
+    <p>Size a tank one step up if you have a large soaking tub, a body-spray shower, a household that grows at holidays, or a well pump feeding especially cold water. Size up if your showers routinely run 15 minutes rather than 8 — the 10-gallon figure used here assumes a low-flow head and a normal shower. Do not size up "just in case" beyond one step: every extra gallon of storage loses heat around the clock, and the running cost never stops.</p>
+    <p>For tankless, do not size up on gallons, size on simultaneous fixtures and rise. Adding a second smaller unit in parallel is often cheaper and more efficient than one oversized unit, and it gives you redundancy when one fails.</p>
+
+    <h2>Limits of this estimate</h2>
+    <p>The gallon and GPM figures here are typical residential values: 2.0 GPM showerheads, modern dishwashers, front-load washers. Old fixtures use considerably more, and a 1990s showerhead alone can hit 3.5 GPM. Recirculation loops, long uninsulated pipe runs, hard water scale and a thermostat set below 120°F all shift the answer. Use this to walk into the shop with the right number in your head, then let a licensed installer confirm gas line size, venting and electrical capacity before you commit.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.energy.gov/energysaver/sizing-new-water-heater" target="_blank" rel="noopener">U.S. Department of Energy, Energy Saver — sizing guidance for storage, tankless and heat pump water heaters</a></li>
+      <li><a href="https://www.energy.gov/energysaver/water-heating" target="_blank" rel="noopener">U.S. Department of Energy — water heating types, efficiency ratings and operating cost basics</a></li>
+      <li><a href="https://www.epa.gov/watersense" target="_blank" rel="noopener">U.S. EPA WaterSense — typical fixture flow rates for showerheads and faucets</a></li>
+      <li><a href="https://www.cdc.gov/legionella/" target="_blank" rel="noopener">U.S. CDC — why water heater storage temperature matters for Legionella control</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/wedding-budget-calc/"><span class="related-ico" aria-hidden="true">💒</span><span class="related-name">Wedding Budget Calculator</span></a><a class="related-item" href="https://tool-hub.me/wind-chill-calc/"><span class="related-ico" aria-hidden="true">🥶</span><span class="related-name">Wind Chill Calculator</span></a><a class="related-item" href="https://tool-hub.me/asphalt-calc/"><span class="related-ico" aria-hidden="true">🛣️</span><span class="related-name">Asphalt Calculator</span></a><a class="related-item" href="https://tool-hub.me/board-foot-calc/"><span class="related-ico" aria-hidden="true">🪵</span><span class="related-name">Board Foot Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the first-hour rating on the yellow label?</summary><p data-i18n="faq.a1">The first-hour rating (FHR) is how many gallons of hot water a tank can deliver in one busy hour, starting from full. It combines stored volume with recovery speed, so it is always higher than the tank size — a 50 gal gas tank often rates near 80. Match the FHR to your peak hour, then buy whatever tank carries it.</p></details>
+    <details><summary data-i18n="faq.q2">Tank or tankless — which should I buy?</summary><p data-i18n="faq.a2">Tankless never runs out of hot water and wastes no standby heat, but it costs two to three times more installed and caps how many fixtures can run at once. A tank is cheap to fit and shrugs off simultaneous demand, yet it recovers slowly and loses heat all day. Households that stagger showers do well on tankless; homes where three fixtures run together usually do better with a large tank.</p></details>
+    <details><summary data-i18n="faq.q3">Does gas or electric change the size I need?</summary><p data-i18n="faq.a3">Yes, a lot. A gas tank reheats roughly twice as fast as electric, so the same volume earns a much higher first-hour rating — a 40 gal gas tank can match a 50 gal electric. For tankless, electric units are limited by your service panel and rarely beat 4 GPM at a cold-climate rise, while gas models reach 8 to 9 GPM.</p></details>
+    <details><summary data-i18n="faq.q4">What happens if I get the size wrong?</summary><p data-i18n="faq.a4">Undersizing shows up as showers going cold after ten minutes, or the last person in line getting a lukewarm one; a tankless unit instead throttles its flow. Oversizing costs you quietly — a bigger tank burns standby energy every day of its life and costs more upfront. When in doubt, size one step up on tanks and exactly on tankless.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

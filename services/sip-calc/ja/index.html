@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-UOsfi6/gOG4jE3VL72pybsyvrmxXtPlcN6taYsPBago=' 'sha256-NKvMwPanj9/5/BlPy64E1sgWHE+rU8ozmgiOfHcFmco=' 'sha256-G5OyGLambMm3EQHTfigw4IQ+lIZ5JCF0njGc/fwOt+4='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIP計算ツール — 積立投資の運用結果</title>
+<meta name="description" content="毎月の積立投資（SIP）が満期にいくらになるかを計算します。積立額・期待年利回り・期間を入力すると満期評価額、積立元本、運用益がわかり、年次増額にも対応します。">
+<meta name="keywords" content="sip calculator, sip return calculator, mutual fund sip calculator, monthly investment calculator, step up sip calculator, sip maturity value">
+<link rel="canonical" href="https://tool-hub.me/sip-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/sip-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/sip-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/sip-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/sip-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/sip-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/sip-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/sip-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/sip-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/sip-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/sip-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/sip-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/sip-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/sip-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/sip-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/sip-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SIP計算ツール — 積立投資の運用結果">
+<meta property="og:description" content="毎月の積立投資（SIP）が満期にいくらになるかを計算します。積立額・期待年利回り・期間を入力すると満期評価額、積立元本、運用益がわかり、年次増額にも対応します。">
+<meta property="og:url" content="https://tool-hub.me/sip-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/sip-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#065f46">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "SIP Calculator",
+  "description": "Work out what a monthly SIP grows to: enter instalment, expected return and tenure for maturity value, total invested and wealth gained. Step-up included.",
+  "url": "https://tool-hub.me/sip-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "SIP Calculator",
+      "item": "https://tool-hub.me/sip-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "SIP or lumpsum — which ends up bigger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In a market that only rises, a lumpsum wins on paper because every rupee is invested for longer. A SIP wins on behaviour and in choppy markets: fixed monthly buying averages your unit cost, so you buy more units when prices fall and you never have to guess the entry point. Most investors also do not have the lumpsum sitting idle, which settles the question in practice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a 12% return guaranteed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Mutual fund SIPs are market-linked and nothing is promised. Indian equity indices have delivered roughly 11-13% annualised over multi-decade stretches, but individual ten-year windows have ranged from under 6% to over 18%. Sequence risk matters too: weak returns in the final years hurt far more than weak returns at the start, because that is when your corpus is largest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a step-up SIP actually add?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "More than most people expect, because each raise still gets years to compound. ₹10,000 a month at 12% for 20 years matures near ₹92 lakh. Add a 10% annual step-up and the same start reaches about ₹1.86 crore — you contribute more (₹68.7 lakh instead of ₹24 lakh) and your final instalment is ₹61,159, but the maturity value roughly doubles. Even a 5% step-up lifts it to about ₹1.28 crore."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is a SIP taxed when I redeem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every instalment is a separate purchase with its own holding period, so a redemption sells units bought on many different dates and each block is assessed separately. For equity funds, units held past the long-term threshold are taxed at the long-term capital gains rate with an annual exemption, and anything shorter at the short-term rate. India has changed these rates and thresholds more than once, so check the current year's rules or ask a tax adviser before redeeming."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>SIP Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">SIP Calculator</span></nav>
+  <section class="hero">
+    <h1>SIP Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">See what a monthly mutual fund SIP is worth at the end — and how much of it is compounding rather than your own money.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .hint { font-size:12px; color:var(--muted); margin:4px 0 0; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard.hero-card .rc-sub { font-size:14px; color:var(--muted); margin-top:2px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .warn { color:#b45309; font-weight:600; font-size:13px; margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="monthly" data-i18n="tool.monthly.label">Monthly investment (₹)</label>
+        <input type="number" id="monthly" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="10000">
+      </div>
+      <div>
+        <label for="ret" data-i18n="tool.return.label">Expected annual return (%)</label>
+        <input type="number" id="ret" inputmode="decimal" min="0" max="60" step="any" autocomplete="off" placeholder="12">
+        <p class="hint" data-i18n="tool.return.note">Indian equity funds have historically returned 10-14% over the long run — not guaranteed.</p>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="years" data-i18n="tool.years.label">Investment period (years)</label>
+        <input type="number" id="years" inputmode="decimal" min="1" max="50" step="any" autocomplete="off" placeholder="10">
+      </div>
+      <div>
+        <label for="stepup" data-i18n="tool.stepup.label">Annual step-up (%) — optional</label>
+        <input type="number" id="stepup" inputmode="decimal" min="0" max="50" step="any" autocomplete="off" placeholder="0">
+        <p class="hint" data-i18n="tool.stepup.note">Raise the instalment once a year in line with your salary. Leave it at 0 for a flat SIP.</p>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="infl" data-i18n="tool.infl.label">Inflation (%) — optional</label>
+        <input type="number" id="infl" inputmode="decimal" min="0" max="30" step="any" autocomplete="off" placeholder="0">
+        <p class="hint" data-i18n="tool.infl.note">Enter your expected inflation to also see the maturity value in today's money. Leave it at 0 to skip.</p>
+      </div>
+      <div>
+        <label for="lump" data-i18n="tool.lump.label">Existing lumpsum (₹) — optional</label>
+        <input type="number" id="lump" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0">
+        <p class="hint" data-i18n="tool.lump.note">Money already invested that compounds from day one alongside the SIP. Leave it at 0 if you are starting fresh.</p>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.maturity">Maturity value</div>
+          <div class="rc-val" id="r-maturity">—</div>
+          <div class="rc-sub" id="r-lakh"></div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.invested">Total invested</div><div class="rc-val" id="r-invested">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.gain">Wealth gained</div><div class="rc-val" id="r-gain">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.final">Last monthly instalment</div><div class="rc-val" id="r-final">—</div></div>
+        <div class="rcard" id="real-card" hidden><div class="rc-label" data-i18n="tool.r.real">Maturity in today's money</div><div class="rc-val" id="r-real">—</div></div>
+      </div>
+      <p class="warn" id="warn" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.xirr" style="margin-top:12px;">Money compounds monthly at (1 + r)^(1/12) − 1, so the XIRR of the whole schedule equals the annual return you typed. Calculators that divide by 12 quote a higher number for the same input.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a SIP calculator is really adding up</h2>
+    <p>A systematic investment plan is not one investment, it is a queue of them. The instalment you pay in month one compounds for the entire tenure; the one you pay in the final month compounds for a single month. A SIP calculator sums that whole queue, which is why the maturity value climbs so much faster than the money you put in once the tenure passes about ten years.</p>
+    <p>This tool converts your expected annual return into a monthly effective rate with (1 + r)^(1/12) − 1 and applies it at the start of every month, the standard annuity-due treatment for a SIP debited on a fixed date. The practical consequence: the internal rate of return (XIRR) of the entire schedule comes out exactly equal to the annual figure you typed, so the number you assume is the number you can compare against a fund factsheet.</p>
+
+    <h3>Worked example: ₹10,000 a month at 12% for 10 years</h3>
+    <p>Start with the monthly rate. Twelve per cent a year becomes 1.12^(1/12) − 1 = 0.009489, or 0.9489% a month. Your first ₹10,000 is worth ₹10,094.89 after one month — under ₹95 of growth, which is exactly why month one feels pointless. Left alone for the full 120 months, that same instalment grows by 1.12^10 = 3.106 times, to ₹31,058. The last instalment you ever pay grows by 0.9489% and nothing more.</p>
+    <p>Add all 120 instalments together and the plan matures at about ₹22,40,359 on ₹12,00,000 invested. Wealth gained is ₹10,40,359 — 46% of the final pot is growth rather than your own money. Stretch the same ₹10,000 to 20 years and maturity is roughly ₹91,98,574 on ₹24,00,000 invested: you doubled the tenure and quadrupled the result. That asymmetry is the entire argument for starting early.</p>
+
+    <h3>Why another calculator shows a bigger number</h3>
+    <p>Many SIP calculators use r/12 as the monthly rate — 1% a month for a 12% input. Compounded twelve times, 1% a month is an effective 12.68% a year, not 12%. On the example above that convention returns ₹23,23,391, about ₹83,000 more, for identical inputs. Neither approach is dishonest, but they answer different questions. If you want the result to line up with a fund's published annualised return or with your own XIRR in a spreadsheet, the effective-rate version used here is the one to trust.</p>
+
+    <h2>Step-up SIP: raising the instalment each year</h2>
+    <p>A step-up (or top-up) SIP increases the instalment once a year, usually to track a salary rise. It works because every increase still has years of compounding left. Starting at ₹10,000 a month at 12%:</p>
+    <table>
+      <thead><tr><th>Tenure</th><th>Flat SIP</th><th>5% step-up</th><th>10% step-up</th></tr></thead>
+      <tbody>
+        <tr><td>10 years</td><td>₹22.4 lakh</td><td>₹26.9 lakh</td><td>₹32.7 lakh</td></tr>
+        <tr><td>15 years</td><td>₹47.6 lakh</td><td>₹61.9 lakh</td><td>₹82.7 lakh</td></tr>
+        <tr><td>20 years</td><td>₹92.0 lakh</td><td>₹1.28 crore</td><td>₹1.86 crore</td></tr>
+      </tbody>
+    </table>
+    <p>Read the second column honestly: a 10% step-up over 20 years also raises what you contribute from ₹24 lakh to ₹68.7 lakh, and your final instalment is ₹61,159 rather than ₹10,000. It is not free money. What it does prove is that a raise you never see in your current account is the least painful way to add to a long plan, and that even a 5% step-up — smaller than typical salary growth — adds roughly 39% to the 20-year outcome.</p>
+
+    <h2>Planning backwards from a goal</h2>
+    <p>Most people arrive with a target rather than an instalment. Reverse the maths: at 12% over 15 years, every ₹1 of monthly SIP produces about ₹476 at maturity. So a ₹1 crore goal needs roughly ₹21,000 a month, and a ₹50 lakh goal needs about ₹10,500. Try the target tenure both ways in the calculator — shortening 15 years to 10 nearly doubles the required instalment, because you are removing the years that do the heaviest lifting.</p>
+
+    <h2>What this model deliberately ignores</h2>
+    <p>The return is an assumption, not a forecast. Real funds do not deliver a smooth 12%; they deliver 30% one year and −15% the next, and the order matters. A poor final three years hurts far more than a poor first three, because that is when your corpus is at its largest. Nor does the model deduct the expense ratio (assume your input is already net of it), exit loads, or capital gains tax on redemption.</p>
+    <p>Inflation is the omission that changes decisions most. That ₹92 lakh in 20 years is worth about ₹28.7 lakh in today's money at 6% inflation. If you are planning for a real-world cost — a house deposit, a degree, retirement income — inflate the goal first, then size the SIP against the inflated number. Everything else the calculator tells you is arithmetic; that step is the actual planning.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.rbi.org.in/" target="_blank" rel="noopener">Reserve Bank of India — official inflation and interest rate data for setting realistic return assumptions</a></li>
+      <li><a href="https://www.incometax.gov.in/" target="_blank" rel="noopener">Income Tax Department, India — capital gains rules that apply when you redeem mutual fund units</a></li>
+      <li><a href="https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial" target="_blank" rel="noopener">Khan Academy — compound interest and annuity maths behind SIP calculations</a></li>
+      <li><a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" target="_blank" rel="noopener">U.S. SEC Investor.gov — reference compound interest calculator for cross-checking results</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/split-bill-calc/"><span class="related-ico" aria-hidden="true">🤝</span><span class="related-name">Split Bill Calculator</span></a><a class="related-item" href="https://tool-hub.me/stamp-duty-calc/"><span class="related-ico" aria-hidden="true">🇬🇧</span><span class="related-name">Stamp Duty Calculator</span></a><a class="related-item" href="https://tool-hub.me/stock-average-calc/"><span class="related-ico" aria-hidden="true">📉</span><span class="related-name">Stock Average Calculator</span></a><a class="related-item" href="https://tool-hub.me/stock-profit-calc/"><span class="related-ico" aria-hidden="true">💹</span><span class="related-name">Stock Profit Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">SIP or lumpsum — which ends up bigger?</summary><p data-i18n="faq.a1">In a market that only rises, a lumpsum wins on paper because every rupee is invested for longer. A SIP wins on behaviour and in choppy markets: fixed monthly buying averages your unit cost, so you buy more units when prices fall and you never have to guess the entry point. Most investors also do not have the lumpsum sitting idle, which settles the question in practice.</p></details>
+    <details><summary data-i18n="faq.q2">Is a 12% return guaranteed?</summary><p data-i18n="faq.a2">No. Mutual fund SIPs are market-linked and nothing is promised. Indian equity indices have delivered roughly 11-13% annualised over multi-decade stretches, but individual ten-year windows have ranged from under 6% to over 18%. Sequence risk matters too: weak returns in the final years hurt far more than weak returns at the start, because that is when your corpus is largest.</p></details>
+    <details><summary data-i18n="faq.q3">How much does a step-up SIP actually add?</summary><p data-i18n="faq.a3">More than most people expect, because each raise still gets years to compound. ₹10,000 a month at 12% for 20 years matures near ₹92 lakh. Add a 10% annual step-up and the same start reaches about ₹1.86 crore — you contribute more (₹68.7 lakh instead of ₹24 lakh) and your final instalment is ₹61,159, but the maturity value roughly doubles. Even a 5% step-up lifts it to about ₹1.28 crore.</p></details>
+    <details><summary data-i18n="faq.q4">How is a SIP taxed when I redeem?</summary><p data-i18n="faq.a4">Every instalment is a separate purchase with its own holding period, so a redemption sells units bought on many different dates and each block is assessed separately. For equity funds, units held past the long-term threshold are taxed at the long-term capital gains rate with an annual exemption, and anything shorter at the short-term rate. India has changed these rates and thresholds more than once, so check the current year's rules or ask a tax adviser before redeeming.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

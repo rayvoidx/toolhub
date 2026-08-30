@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-46dI7K0lpxA/ECNhvrjDh2sd2SEIPVSJXngaCvNyOYw=' 'sha256-P4bpq0P1mGoeOb8G+83rA6Ej5WxECkymeCkCFPUKI3c=' 'sha256-af88LuMTYdnX6d3VQSDvlTF90UCegaPiIaH0RGY+AF0='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>排卵日計算ツール — 妊娠しやすい時期と排卵カレンダー</title>
+<meta name="description" content="無料の排卵日計算ツール。前回の生理開始日と生理周期を入力するだけで、排卵予定日・妊娠しやすい時期・次回生理予定日をカレンダーで表示し、今後3周期分もまとめて確認できます。計算はすべてブラウザ内で完結し、入力した日付が端末の外に出ることはありません。">
+<meta name="keywords" content="ovulation calculator, fertile window calculator, ovulation calendar, fertility calculator, period predictor, menstrual cycle calculator, 배란일 계산기, 가임기 계산기, 생리주기 계산, 배란일 테스트 시기">
+<link rel="canonical" href="https://tool-hub.me/ovulation-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/ovulation-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/ovulation-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/ovulation-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/ovulation-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/ovulation-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/ovulation-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/ovulation-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/ovulation-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/ovulation-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/ovulation-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/ovulation-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/ovulation-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/ovulation-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/ovulation-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/ovulation-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="排卵日計算ツール — 妊娠しやすい時期と排卵カレンダー">
+<meta property="og:description" content="無料の排卵日計算ツール。前回の生理開始日と生理周期を入力するだけで、排卵予定日・妊娠しやすい時期・次回生理予定日をカレンダーで表示し、今後3周期分もまとめて確認できます。計算はすべてブラウザ内で完結し、入力した日付が端末の外に出ることはありません。">
+<meta property="og:url" content="https://tool-hub.me/ovulation-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/ovulation-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ec4899">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Ovulation Calculator",
+  "description": "Free online ovulation calculator. Enter the start date of your last period and your cycle length to see your estimated ovulation day, fertile window and next period date on a calendar — plus a table of the next 3 cycles. Everything is calculated in your browser: your dates are never sent to a server. Estimates only, not a birth control method.",
+  "url": "https://tool-hub.me/ovulation-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-18",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ovulation Calculator",
+      "item": "https://tool-hub.me/ovulation-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is the ovulation day calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This ovulation calculator uses the standard luteal-phase method: your next period date (last period + cycle length) minus 14 days. The luteal phase — from ovulation to the next period — is the most stable part of the menstrual cycle at about 14 days, while the first half varies. So with a 28-day cycle ovulation lands near day 14, and with a 32-day cycle it is closer to day 18."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When exactly is the fertile window?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "From 5 days before ovulation to 1 day after — a 7-day window. Sperm can survive up to about 5 days in fertile cervical mucus, and the egg lives roughly 12–24 hours after release, so the days just before ovulation matter most. This fertile window calculator marks all 7 days, but the highest-chance days are the two or three before ovulation plus the day itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this as birth control?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Calendar-based (rhythm) methods have a high failure rate — with typical use, roughly 12–24 of every 100 women get pregnant within a year — because ovulation shifts with stress, illness, travel and sleep. This fertility calculator is for planning and awareness only. For contraception, ask a doctor about a proven method."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my menstrual cycle is irregular?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use your average length over the last 3–6 cycles and treat the result as a rough guide. If your cycles vary by more than a few days, or fall outside 21–45 days, a period predictor alone cannot pin down ovulation — ovulation test kits (LH strips), basal body temperature or cervical mucus tracking are more reliable. Ongoing irregularity is worth raising with a doctor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my period data sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every date is calculated in your browser with JavaScript. Your last period date and cycle length are saved only in this browser's local storage so the form is ready next time, and \"Clear saved dates\" wipes them immediately. There is no account, no upload and no tracking of what you enter."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Ovulation Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#e11d48" href="https://tool-hub.me/health-calculators/">Health</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Ovulation Calculator</span></nav>
+  <section class="hero">
+    <h1>Ovulation Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">One date — your last period — and see your ovulation day and fertile window on a calendar.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool {
+        --ov-period: #dc2626;
+        --ov-ovul: var(--accent);
+        --ov-fertile-bg: color-mix(in srgb, var(--accent) 15%, transparent);
+      }
+      [data-theme="dark"] #tool { --ov-period: #f87171; }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool { --ov-period: #f87171; } }
+
+      /* 셸 CSS 의 입력 위젯 규칙은 date 타입을 포함하지 않아 여기서만 맞춘다 */
+      #tool input[type="date"] {
+        width: 100%; padding: 12px 14px; font-size: 16px; font-family: inherit;
+        border: 1px solid var(--line); border-radius: 10px;
+        background: var(--bg); color: var(--ink);
+      }
+      #tool input[type="date"]:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: transparent; }
+
+      #tool .ov-disclaim {
+        margin: 0 0 6px; padding: 12px 14px; font-size: 13.5px; line-height: 1.55;
+        border-radius: 10px; color: var(--ink);
+        border: 1px solid color-mix(in srgb, var(--ov-period) 38%, var(--line));
+        background: color-mix(in srgb, var(--ov-period) 8%, transparent);
+      }
+      #tool .ov-hint { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+      #tool .ov-actions { margin-top: 18px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+      #tool .ov-actions .btn { margin-top: 0; }
+      #tool .ov-ghost {
+        background: none; border: 1px solid var(--line); color: var(--muted);
+        padding: 11px 18px; font-size: 14px;
+      }
+      #tool .ov-ghost:hover { background: none; border-color: var(--ov-period); color: var(--ov-period); }
+      #tool .ov-status { font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .ov-status { color: var(--accent); }
+
+      /* 결과 영역 */
+      #tool .ov-msg { margin: 0; color: var(--muted); }
+      #tool .ov-err { margin: 0; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .ov-err { color: var(--accent); }
+      #tool .ov-warn {
+        margin: 0 0 14px; padding: 10px 12px; font-size: 13px; line-height: 1.5;
+        border-radius: 8px; color: var(--ink);
+        border: 1px solid color-mix(in srgb, var(--ov-period) 30%, var(--line));
+        background: color-mix(in srgb, var(--ov-period) 7%, transparent);
+      }
+      #tool .ov-cards { display: grid; gap: 12px; grid-template-columns: 1fr; }
+      @media (min-width: 620px) { #tool .ov-cards { grid-template-columns: repeat(3, 1fr); } }
+      #tool .ov-card {
+        padding: 14px; border-radius: 10px; text-align: center;
+        border: 1px solid var(--line); background: var(--surface);
+      }
+      #tool .ov-card.is-key { border-color: var(--ov-ovul); border-width: 2px; }
+      #tool .ov-card b { display: block; font-size: 12.5px; font-weight: 700; color: var(--muted); letter-spacing: 0.01em; }
+      #tool .ov-card .ov-date {
+        display: block; margin-top: 6px; font-size: 18px; font-weight: 900;
+        letter-spacing: -0.02em; color: var(--accent-strong); font-variant-numeric: tabular-nums;
+      }
+      [data-theme="dark"] #tool .ov-card .ov-date { color: var(--accent); }
+      #tool .ov-card .ov-rel { display: block; margin-top: 4px; font-size: 12.5px; font-style: normal; color: var(--muted); }
+
+      /* 달력 */
+      #tool .ov-h3 { font-size: 15px; margin: 26px 0 10px; letter-spacing: -0.01em; }
+      #tool .ov-calhead { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+      #tool .ov-calmonth { font-size: 15px; font-weight: 800; margin: 0; }
+      #tool .ov-navbtn {
+        background: none; border: 1px solid var(--line); border-radius: 8px; cursor: pointer;
+        color: var(--ink); font-size: 16px; font-family: inherit; width: 34px; height: 34px; line-height: 1;
+      }
+      #tool .ov-navbtn:hover { border-color: var(--accent); color: var(--accent); }
+      #tool table.ov-cal { width: 100%; border-collapse: collapse; table-layout: fixed; }
+      #tool table.ov-cal th {
+        font-size: 11.5px; font-weight: 700; color: var(--muted); padding: 4px 0 8px; text-align: center;
+      }
+      #tool table.ov-cal td { padding: 2px; text-align: center; }
+      #tool .ov-day {
+        display: flex; align-items: center; justify-content: center;
+        aspect-ratio: 1 / 1; min-height: 34px; border-radius: 8px;
+        font-size: 13.5px; font-variant-numeric: tabular-nums; color: var(--ink);
+        border: 2px solid transparent;
+      }
+      #tool .ov-day.is-blank { visibility: hidden; }
+      /* 스크린리더 전용 — 달력 칸의 표시 의미를 텍스트로도 전달 (셸 CSS 에 없는 유틸이라 도구 스코프에 정의) */
+      #tool .ov-sr {
+        position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+        overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+      }
+      #tool .ov-day.is-fertile { background: var(--ov-fertile-bg); font-weight: 700; }
+      #tool .ov-day.is-ovul { background: var(--ov-ovul); color: #fff; font-weight: 900; }
+      #tool .ov-day.is-period { color: var(--ov-period); font-weight: 900; text-decoration: underline; text-underline-offset: 3px; }
+      #tool .ov-day.is-period.is-ovul { color: #fff; }
+      #tool .ov-day.is-today { border-color: var(--ink); }
+      #tool .ov-legend { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 12px 0 0; padding: 0; }
+      #tool .ov-legend li { display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--muted); }
+      #tool .ov-swatch { width: 14px; height: 14px; border-radius: 4px; border: 2px solid transparent; flex: none; }
+      #tool .ov-swatch.sw-period { background: color-mix(in srgb, var(--ov-period) 20%, transparent); border-color: var(--ov-period); }
+      #tool .ov-swatch.sw-fertile { background: var(--ov-fertile-bg); border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
+      #tool .ov-swatch.sw-ovul { background: var(--ov-ovul); }
+      #tool .ov-swatch.sw-today { border-color: var(--ink); }
+
+      /* 향후 3주기 표 */
+      #tool .ov-wrap { overflow-x: auto; }
+      #tool table.ov-tbl { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+      #tool table.ov-tbl th, #tool table.ov-tbl td {
+        padding: 9px 8px; text-align: start; border-bottom: 1px solid var(--line); white-space: nowrap;
+      }
+      #tool table.ov-tbl th { font-size: 12px; font-weight: 700; color: var(--muted); }
+      #tool table.ov-tbl td { font-variant-numeric: tabular-nums; }
+      #tool table.ov-tbl tbody th { font-weight: 800; color: var(--ink); }
+      #tool .ov-privacy { margin: 20px 0 0; font-size: 12.5px; line-height: 1.55; color: var(--muted); }
+    </style>
+
+    <p class="ov-disclaim" role="note" data-i18n="tool.disclaimer">Estimates only. Do not use this as birth control — calendar methods fail often. For medical decisions, talk to a doctor or midwife.</p>
+
+    <label for="ov-lmp" data-i18n="tool.lmp.label">First day of your last period</label>
+    <input type="date" id="ov-lmp" autocomplete="off">
+    <p class="ov-hint" data-i18n="tool.lmp.hint">The first day of actual bleeding — not the day it ended.</p>
+
+    <label for="ov-cycle" data-i18n="tool.cycle.label">Average cycle length (days)</label>
+    <input type="number" id="ov-cycle" value="28" min="21" max="60" step="1" inputmode="numeric" autocomplete="off">
+    <p class="ov-hint" data-i18n="tool.cycle.hint">From the first day of one period to the first day of the next. Most cycles run 21–45 days; 28 is the default.</p>
+
+    <label for="ov-luteal" data-i18n="tool.luteal.label">Luteal phase length (days) — optional</label>
+    <input type="number" id="ov-luteal" value="14" min="9" max="17" step="1" inputmode="numeric" autocomplete="off">
+    <p class="ov-hint" data-i18n="tool.luteal.hint">Days from ovulation to your next period. Leave at 14 unless an ovulation test or your doctor told you otherwise; 9–17 accepted.</p>
+
+    <div class="ov-actions">
+      <button type="button" class="btn" id="ov-calc" data-i18n="tool.calc">Calculate</button>
+      <button type="button" class="btn ov-ghost" id="ov-clear" data-i18n="tool.clear">Clear saved dates</button>
+      <span class="ov-status" id="ov-status" role="status"></span>
+    </div>
+
+    <div class="result" id="ov-result" aria-live="polite"></div>
+
+    <div id="ov-extra" hidden>
+      <h3 class="ov-h3" data-i18n="tool.cal.heading">Your cycle calendar</h3>
+      <div class="ov-calhead">
+        <button type="button" class="ov-navbtn" id="ov-prev" aria-label="Previous month" data-i18n-aria-label="tool.cal.prev">‹</button>
+        <p class="ov-calmonth" id="ov-calmonth" aria-live="polite"></p>
+        <button type="button" class="ov-navbtn" id="ov-next" aria-label="Next month" data-i18n-aria-label="tool.cal.next">›</button>
+      </div>
+      <table class="ov-cal" id="ov-cal"></table>
+      <ul class="ov-legend">
+        <li><span class="ov-swatch sw-period" aria-hidden="true"></span><span data-i18n="tool.legend.period">Period start</span></li>
+        <li><span class="ov-swatch sw-fertile" aria-hidden="true"></span><span data-i18n="tool.legend.fertile">Fertile window</span></li>
+        <li><span class="ov-swatch sw-ovul" aria-hidden="true"></span><span data-i18n="tool.legend.ovulation">Ovulation</span></li>
+        <li><span class="ov-swatch sw-today" aria-hidden="true"></span><span data-i18n="tool.legend.today">Today</span></li>
+      </ul>
+
+      <h3 class="ov-h3" data-i18n="tool.tbl.heading">Next 3 cycles</h3>
+      <div class="ov-wrap"><table class="ov-tbl" id="ov-tbl"></table></div>
+    </div>
+
+    <p class="ov-privacy" data-i18n="tool.privacy">Calculated in your browser. Your dates stay on this device and are never sent to a server.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What this calculator estimates</h2>
+    <p>This tool estimates the day you are most likely to ovulate, and the fertile window around it, from the calendar of your menstrual cycle. Ovulation is the point when an ovary releases an egg; conception is only possible in a short window around it. Knowing roughly when that window falls can help with planning a pregnancy and with understanding your own cycle — as long as you keep the important caveats below in mind.</p>
+
+    <h2>How to use it</h2>
+    <ol>
+      <li><strong>First day of your last period.</strong> Enter the first day of actual bleeding, which counts as day 1 of the cycle — not the day bleeding stopped.</li>
+      <li><strong>Average cycle length.</strong> Count from the first day of one period to the first day of the next. Most cycles run 21 to 45 days; 28 is a textbook average, not a rule.</li>
+    </ol>
+
+    <h2>The rule behind the estimate</h2>
+    <p>The calculation rests on one reasonably stable fact: the luteal phase — the stretch between ovulation and the next period — lasts close to 14 days for most people, even when the cycle as a whole is long or short. So ovulation is estimated by counting back 14 days from the expected next period, which is the same as cycle length minus 14, measured from the start of the cycle.</p>
+    <p>The fertile window is then the ovulation day plus the five days before it. That length is not arbitrary: sperm can survive in the reproductive tract for up to about five days, while the egg itself lives only 12 to 24 hours, so the days leading up to ovulation matter as much as the day itself.</p>
+    <div class="example">
+      <p><strong>Example 1 — a 28-day cycle.</strong> If your last period started on March 1 with a 28-day cycle, ovulation is estimated on day 28 − 14 = day 14, which is March 14. The fertile window runs day 10 to day 14 (March 10–14), and the next period is expected around March 29.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — a longer cycle.</strong> With a last period of June 1 and a 32-day cycle, ovulation moves to day 32 − 14 = day 18, June 18, with a fertile window of June 14–18. Assuming "day 14" here would have been four days too early.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — a short cycle.</strong> On a 24-day cycle, ovulation is estimated on day 24 − 14 = day 10 — far from the day 14 many people assume. That is why the same calendar date can be fertile for one person and not for another.</p>
+    </div>
+
+    <h2>Cycle length changes the ovulation day</h2>
+    <table>
+      <thead><tr><th>Cycle length</th><th>Estimated ovulation day</th><th>Fertile window (cycle days)</th></tr></thead>
+      <tbody>
+        <tr><td>21 days</td><td>Day 7</td><td>Days 3–7</td></tr>
+        <tr><td>24 days</td><td>Day 10</td><td>Days 6–10</td></tr>
+        <tr><td>26 days</td><td>Day 12</td><td>Days 8–12</td></tr>
+        <tr><td>28 days</td><td>Day 14</td><td>Days 10–14</td></tr>
+        <tr><td>30 days</td><td>Day 16</td><td>Days 12–16</td></tr>
+        <tr><td>32 days</td><td>Day 18</td><td>Days 14–18</td></tr>
+        <tr><td>35 days</td><td>Day 21</td><td>Days 17–21</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Where the estimate breaks down</h2>
+    <ul>
+      <li><strong>Irregular cycles.</strong> If your cycle length varies month to month, the ovulation day shifts with it, and a single calendar prediction can be off by several days.</li>
+      <li><strong>The day-14 myth.</strong> Ovulation on day 14 is typical only for a 28-day cycle. Assuming it for every cycle is the most common mistake.</li>
+      <li><strong>Life happens.</strong> Stress, illness, travel, and some medications can delay or suppress ovulation in a given month, and the calendar cannot see any of that.</li>
+    </ul>
+
+    <h2>Important limits</h2>
+    <p>This is a calendar estimate, not a medical test and not a form of contraception. Calendar-based methods have high real-world failure rates because ovulation timing genuinely varies. To confirm ovulation, to track a possible pregnancy, or for any decision about contraception or fertility, use ovulation tests or speak with a doctor or midwife. Your dates are calculated on your device and never leave it.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.acog.org/womens-health" target="_blank" rel="noopener">ACOG Women's Health — patient guidance on menstrual cycles, fertility and ovulation timing</a></li>
+      <li><a href="https://www.cdc.gov/reproductivehealth/" target="_blank" rel="noopener">CDC Reproductive Health — data and guidance on fertility, contraception and pregnancy</a></li>
+      <li><a href="https://www.nichd.nih.gov/health/topics/infertility" target="_blank" rel="noopener">NIH NICHD — research-based overview of fertility, ovulation and infertility</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/pace-calc/"><span class="related-ico" aria-hidden="true">👟</span><span class="related-name">Running Pace Calculator</span></a><a class="related-item" href="https://tool-hub.me/period-calc/"><span class="related-ico" aria-hidden="true">🩸</span><span class="related-name">Period Calculator</span></a><a class="related-item" href="https://tool-hub.me/pregnancy-due-date-calc/"><span class="related-ico" aria-hidden="true">🤰</span><span class="related-name">Pregnancy Due Date Calculator</span></a><a class="related-item" href="https://tool-hub.me/pregnancy-week-calc/"><span class="related-ico" aria-hidden="true">🤰</span><span class="related-name">Pregnancy Week Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details><summary data-i18n="faq.q1">How is the ovulation day calculated?</summary><p data-i18n="faq.a1">This ovulation calculator uses the standard luteal-phase method: your next period date (last period + cycle length) minus 14 days. The luteal phase — from ovulation to the next period — is the most stable part of the menstrual cycle at about 14 days, while the first half varies. So with a 28-day cycle ovulation lands near day 14, and with a 32-day cycle it is closer to day 18.</p></details>
+    <details><summary data-i18n="faq.q2">When exactly is the fertile window?</summary><p data-i18n="faq.a2">From 5 days before ovulation to 1 day after — a 7-day window. Sperm can survive up to about 5 days in fertile cervical mucus, and the egg lives roughly 12–24 hours after release, so the days just before ovulation matter most. This fertile window calculator marks all 7 days, but the highest-chance days are the two or three before ovulation plus the day itself.</p></details>
+    <details><summary data-i18n="faq.q3">Can I use this as birth control?</summary><p data-i18n="faq.a3">No. Calendar-based (rhythm) methods have a high failure rate — with typical use, roughly 12–24 of every 100 women get pregnant within a year — because ovulation shifts with stress, illness, travel and sleep. This fertility calculator is for planning and awareness only. For contraception, ask a doctor about a proven method.</p></details>
+    <details><summary data-i18n="faq.q4">What if my menstrual cycle is irregular?</summary><p data-i18n="faq.a4">Use your average length over the last 3–6 cycles and treat the result as a rough guide. If your cycles vary by more than a few days, or fall outside 21–45 days, a period predictor alone cannot pin down ovulation — ovulation test kits (LH strips), basal body temperature or cervical mucus tracking are more reliable. Ongoing irregularity is worth raising with a doctor.</p></details>
+    <details><summary data-i18n="faq.q5">Is my period data sent to a server?</summary><p data-i18n="faq.a5">No. Every date is calculated in your browser with JavaScript. Your last period date and cycle length are saved only in this browser's local storage so the form is ready next time, and "Clear saved dates" wipes them immediately. There is no account, no upload and no tracking of what you enter.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

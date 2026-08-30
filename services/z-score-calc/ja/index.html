@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-uymj99QPUv3ATtRQxFoUnOR/V9eyo4uSJE3CrnVSfJs=' 'sha256-V0rViap9LbaTiNU5Rzy7fFlbamb0Og9U/MOL/5CeLYs=' 'sha256-iEPFunqsdF+cl2Tm+hVNA7tmp1eizUQbq0HcT6QQ3Tc='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z値計算ツール — 標準得点とパーセンタイル変換</title>
+<meta name="description" content="値・平均・標準偏差からz値を求め、パーセンタイル、両側確率、正規分布上の位置まで一度に表示します。z値から元の得点を逆算する計算にも対応します。">
+<meta name="keywords" content="z score calculator, z score to percentile, standard score calculator, z table calculator, normal distribution percentile, z score formula">
+<link rel="canonical" href="https://tool-hub.me/z-score-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/z-score-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/z-score-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/z-score-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/z-score-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/z-score-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/z-score-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/z-score-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/z-score-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/z-score-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/z-score-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/z-score-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/z-score-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/z-score-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/z-score-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/z-score-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Z値計算ツール — 標準得点とパーセンタイル変換">
+<meta property="og:description" content="値・平均・標準偏差からz値を求め、パーセンタイル、両側確率、正規分布上の位置まで一度に表示します。z値から元の得点を逆算する計算にも対応します。">
+<meta property="og:url" content="https://tool-hub.me/z-score-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/z-score-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6d28d9">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Z-Score Calculator",
+  "description": "Calculate a z-score from a value, mean and standard deviation, then convert it to a percentile, a two-tailed probability and a position on the bell curve.",
+  "url": "https://tool-hub.me/z-score-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Z-Score Calculator",
+      "item": "https://tool-hub.me/z-score-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does a z-score actually mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A z-score says how many standard deviations a value sits above or below the mean. A z of 2 means the value is two standard deviations above average; a z of -0.5 is half a standard deviation below. Because the units cancel out, a z-score lets you compare numbers measured on completely different scales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use a t-score instead of a z-score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use z when you know the population standard deviation, or when the sample is large (commonly n of 30 or more). With a small sample and an estimated standard deviation, the t distribution has fatter tails and gives wider, more honest intervals. The two converge as the sample grows, so for large n the difference is negligible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the 68-95-99.7 rule relate to z-scores?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In a normal distribution about 68% of values fall within z = ±1, 95% within z = ±2 and 99.7% within z = ±3. So a z of 1 lands near the 84th percentile and a z of 2 near the 97.7th. It is a fast sanity check on any percentile this calculator returns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a negative z-score mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It simply means the value is below the mean — nothing is wrong with the number. The normal curve is symmetric, so a z of -1.5 has the same tail probability as +1.5, only on the left side. A z of -1.5 sits at about the 6.7th percentile while +1.5 sits near the 93.3rd."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Z-Score Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0d9488" href="https://tool-hub.me/math-calculators/">Math &amp; Science</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Z-Score Calculator</span></nav>
+  <section class="hero">
+    <h1>Z-Score Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">How many standard deviations from the mean — and what percentile that puts you in.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 작성자 스타일의 display 가 UA 의 [hidden] 을 이기므로, 스코프 안에서 다시 눌러준다. */
+      #tool [hidden] { display:none !important; }
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard .rc-sub { font-size:12px; color:var(--muted); margin-top:3px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .bell { position:relative; height:44px; margin-top:14px; border-radius:8px;
+        background:linear-gradient(90deg,#f5f3ff 0%,#ede9fe 16%,#ddd6fe 33%,#a78bfa 50%,#ddd6fe 67%,#ede9fe 84%,#f5f3ff 100%); }
+      #tool .bell-marker { position:absolute; top:-4px; bottom:-4px; width:3px; border-radius:2px;
+        background:#6d28d9; transform:translateX(-50%); left:50%; }
+      #tool .bell-ticks { display:flex; justify-content:space-between; font-size:12px; color:var(--muted); margin-top:4px; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:12px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="mode" data-i18n="tool.mode.label">What do you want to find?</label>
+    <select id="mode">
+      <option value="z" data-i18n="tool.mode.z">Z-score from a value</option>
+      <option value="pct" data-i18n="tool.mode.pct">Percentile from a z-score</option>
+      <option value="x" data-i18n="tool.mode.x">Value from a z-score</option>
+    </select>
+
+    <div class="field-row">
+      <div id="wrap-x">
+        <label for="x" data-i18n="tool.x.label">Raw value (x)</label>
+        <input type="number" id="x" inputmode="decimal" step="any" autocomplete="off" placeholder="130">
+      </div>
+      <div id="wrap-z" hidden>
+        <label for="zin" data-i18n="tool.z.label">Z-score (z)</label>
+        <input type="number" id="zin" inputmode="decimal" step="any" autocomplete="off" placeholder="1.5">
+      </div>
+    </div>
+
+    <div class="field-row" id="wrap-ms">
+      <div>
+        <label for="mean" data-i18n="tool.mean.label">Mean (μ)</label>
+        <input type="number" id="mean" inputmode="decimal" step="any" autocomplete="off" placeholder="100">
+      </div>
+      <div>
+        <label for="sd" data-i18n="tool.sd.label">Standard deviation (σ)</label>
+        <input type="number" id="sd" inputmode="decimal" step="any" min="0" autocomplete="off" placeholder="15">
+      </div>
+      <div>
+        <label for="n" data-i18n="tool.n.label">Sample size (n) — optional</label>
+        <input type="number" id="n" inputmode="numeric" step="1" min="1" autocomplete="off" placeholder="1">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.z">Z-score</div>
+          <div class="rc-val" id="r-z">—</div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.pct">Percentile</div>
+          <div class="rc-val" id="r-pct">—</div>
+          <div class="rc-sub" id="r-better"></div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.two">Two-tailed (more extreme)</div><div class="rc-val" id="r-two">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.up">Above this z (right tail)</div><div class="rc-val" id="r-up">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.mid">Between mean and z</div><div class="rc-val" id="r-mid">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.x">Raw value (x)</div><div class="rc-val" id="r-x">—</div></div>
+      </div>
+      <div class="bell" id="bell" role="img" aria-label="Bell curve position"><div class="bell-marker" id="marker"></div></div>
+      <div class="bell-ticks"><span>-3σ</span><span>μ</span><span>+3σ</span></div>
+      <p class="subtle" id="clamp-note" data-i18n="tool.note.clamp" hidden>Beyond ±6 standard deviations the remaining tail is smaller than one in a billion, so the percentile is shown as effectively 0% or 100%.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.acc">Percentiles use the Abramowitz-Stegun error-function approximation, accurate to about four decimal places, and assume a normal bell-shaped distribution.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a z-score is actually measuring</h2>
+    <p>A raw score on its own tells you almost nothing. Scoring 130 is superb on an IQ test, unremarkable on a bowling night and impossible on a percentage exam. A z-score fixes that by re-expressing the number in a universal unit: standard deviations away from the mean. The formula is z = (x - mean) / standard deviation, and because the units of the numerator and denominator are identical, they cancel. What comes out is a pure, scale-free position.</p>
+
+    <h3>Worked example: an IQ of 130, all the way to a percentile</h3>
+    <p>Most modern IQ scales are built to a mean of 100 and a standard deviation of 15. Plug in a score of 130: z = (130 - 100) / 15 = 30 / 15 = 2. The score sits exactly two standard deviations above the mean. Now turn that into a percentile. The normal cumulative distribution at z = 2 is 0.97725, so the percentile is 97.7250% — that score is higher than roughly 97.7% of the population, and about 2.3 people in 100 score at or above it.</p>
+    <p>The other two numbers this calculator returns come from the same curve. The two-tailed figure doubles the remaining tail: 2 x (1 - 0.97725) = 0.0455, or 4.55%. That is the probability of being at least two standard deviations from the mean in <em>either</em> direction, which is the number a hypothesis test cares about. The "between mean and z" figure is 97.7250 - 50 = 47.725%, the slice of the curve sitting between the average and your score — the value old printed z-tables listed.</p>
+
+    <h3>The CDF, without any calculus</h3>
+    <p>Picture the bell curve as a pile of sand with a total weight of exactly 1. The cumulative distribution function asks a simple question: if you slice the pile at position z, how much sand is to the left? At z = 0 you cut through the middle and get 0.5. At z = 1 you have swept up 0.841 of it. At z = 2, 0.977. There is no closed-form answer to that slicing question, which is why generations of students used printed z-tables. This tool uses the Abramowitz-Stegun approximation to the error function instead — a five-term polynomial that reproduces the table to about four decimal places, more precision than any textbook table ever printed.</p>
+
+    <h2>The real use case: comparing different scales</h2>
+    <p>Suppose one applicant scored 1350 on the SAT and another scored 30 on the ACT. Which is stronger? Raw numbers cannot answer that. Using recent norms of roughly mean 1050 with a standard deviation of 200 for the SAT, and mean 20.5 with a standard deviation of 5.5 for the ACT: the SAT taker gets z = (1350 - 1050) / 200 = 1.50, landing at the 93.3rd percentile. The ACT taker gets z = (30 - 20.5) / 5.5 = 1.73, landing at the 95.8th. The apparently smaller number is the stronger performance. The same trick works for comparing a UK GCSE grade distribution against an A-level one, a manufacturing tolerance against a lab measurement, or your marathon time against your cycling FTP.</p>
+
+    <h2>The empirical rule, as an eyeball check</h2>
+    <table>
+      <thead><tr><th>Range</th><th>Share inside</th><th>Outside (two-tailed)</th><th>Percentile at the top</th></tr></thead>
+      <tbody>
+        <tr><td>z = ±1</td><td>68.27%</td><td>31.73%</td><td>84.13</td></tr>
+        <tr><td>z = ±1.645</td><td>90.00%</td><td>10.00%</td><td>95.00</td></tr>
+        <tr><td>z = ±1.96</td><td>95.00%</td><td>5.00%</td><td>97.50</td></tr>
+        <tr><td>z = ±2</td><td>95.45%</td><td>4.55%</td><td>97.72</td></tr>
+        <tr><td>z = ±2.576</td><td>99.00%</td><td>1.00%</td><td>99.50</td></tr>
+        <tr><td>z = ±3</td><td>99.73%</td><td>0.27%</td><td>99.87</td></tr>
+      </tbody>
+    </table>
+    <p>Two of those rows do the heavy lifting in practice. A z of 1.96 marks the classic 95% confidence boundary, and 2.576 marks the 99% one. If a result you are checking sits beyond 1.96, its two-tailed probability has dropped under 0.05 — the conventional significance threshold in most journals.</p>
+
+    <h2>Where z-scores stop being trustworthy</h2>
+    <p>Every percentile on this page assumes the underlying data is roughly normal. Income, house prices, response times and insurance claims are all right-skewed, so a z of 2 in those distributions does not mean the 97.7th percentile — it can be far off. Second, if you calculated the standard deviation from a small sample rather than knowing it for the population, you should be using the t distribution, which widens the tails to pay for that uncertainty; below about 30 observations the difference is worth caring about. Third, a z-score describes position, not quality: an outlier at z = 4 may be a genuinely exceptional case or simply a typo in your spreadsheet, and only looking at the raw data will tell you which.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.itl.nist.gov/div898/handbook/" target="_blank" rel="noopener">NIST/SEMATECH e-Handbook of Statistical Methods — normal distribution, standard scores and critical values</a></li>
+      <li><a href="https://dlmf.nist.gov/7" target="_blank" rel="noopener">NIST Digital Library of Mathematical Functions — the error function behind the normal CDF</a></li>
+      <li><a href="https://www.khanacademy.org/math/statistics-probability" target="_blank" rel="noopener">Khan Academy Statistics &amp; Probability — worked z-score and percentile lessons</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/attendance-calc/"><span class="related-ico" aria-hidden="true">🎓</span><span class="related-name">Attendance Percentage Calculator</span></a><a class="related-item" href="https://tool-hub.me/cgpa-to-percentage/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">CGPA to Percentage Calculator</span></a><a class="related-item" href="https://tool-hub.me/density-calc/"><span class="related-ico" aria-hidden="true">🧊</span><span class="related-name">Density Calculator</span></a><a class="related-item" href="https://tool-hub.me/dilution-calc/"><span class="related-ico" aria-hidden="true">🧪</span><span class="related-name">Dilution Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What does a z-score actually mean?</summary><p data-i18n="faq.a1">A z-score says how many standard deviations a value sits above or below the mean. A z of 2 means the value is two standard deviations above average; a z of -0.5 is half a standard deviation below. Because the units cancel out, a z-score lets you compare numbers measured on completely different scales.</p></details>
+    <details><summary data-i18n="faq.q2">When should I use a t-score instead of a z-score?</summary><p data-i18n="faq.a2">Use z when you know the population standard deviation, or when the sample is large (commonly n of 30 or more). With a small sample and an estimated standard deviation, the t distribution has fatter tails and gives wider, more honest intervals. The two converge as the sample grows, so for large n the difference is negligible.</p></details>
+    <details><summary data-i18n="faq.q3">How does the 68-95-99.7 rule relate to z-scores?</summary><p data-i18n="faq.a3">In a normal distribution about 68% of values fall within z = ±1, 95% within z = ±2 and 99.7% within z = ±3. So a z of 1 lands near the 84th percentile and a z of 2 near the 97.7th. It is a fast sanity check on any percentile this calculator returns.</p></details>
+    <details><summary data-i18n="faq.q4">What does a negative z-score mean?</summary><p data-i18n="faq.a4">It simply means the value is below the mean — nothing is wrong with the number. The normal curve is symmetric, so a z of -1.5 has the same tail probability as +1.5, only on the left side. A z of -1.5 sits at about the 6.7th percentile while +1.5 sits near the 93.3rd.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

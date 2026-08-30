@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-N6ovGuth7pmJxw9VRqYg2907sFPsy3E5TD+S6hOjyow=' 'sha256-HxRzhXFRbdWAjuMyDCZobzvXhNbePcfoPFNvLucecFs=' 'sha256-LbZLwPc3zSITrgo+xv0kfzNA5rm658zZ4KQ+ASbteOc='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APR・APY 換算ツール — 実効年利計算</title>
+<meta name="description" content="APRをAPYに、APYをAPRに換算します。日次・月次・四半期・年1回に加え連続複利にも対応し、1万ドルあたりの利息差も表示します。">
+<meta name="keywords" content="apr to apy calculator, apy calculator, effective annual rate calculator, apr vs apy, compound interest rate converter">
+<link rel="canonical" href="https://tool-hub.me/apr-apy-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/apr-apy-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/apr-apy-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/apr-apy-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/apr-apy-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/apr-apy-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/apr-apy-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/apr-apy-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/apr-apy-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/apr-apy-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/apr-apy-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/apr-apy-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/apr-apy-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/apr-apy-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/apr-apy-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/apr-apy-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="APR・APY 換算ツール — 実効年利計算">
+<meta property="og:description" content="APRをAPYに、APYをAPRに換算します。日次・月次・四半期・年1回に加え連続複利にも対応し、1万ドルあたりの利息差も表示します。">
+<meta property="og:url" content="https://tool-hub.me/apr-apy-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/apr-apy-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c3aed">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "APR to APY Calculator",
+  "description": "Convert APR to APY or APY back to APR at any compounding frequency — daily, monthly, quarterly or continuous — and see what the gap is worth in dollars.",
+  "url": "https://tool-hub.me/apr-apy-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "APR to APY Calculator",
+      "item": "https://tool-hub.me/apr-apy-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do banks advertise APY on savings but APR on loans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because each one is the flattering number for that side of the deal. APY is always the larger figure, so it makes a deposit look better; APR is always the smaller one, so it makes credit look cheaper. US rules lock it in: the Truth in Savings Act requires APY on deposit accounts and the Truth in Lending Act requires APR on credit, so you are rarely shown both for the same product."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does compounding frequency actually matter much?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Less than most people assume at ordinary rates. A 5% APR is 5.000% APY compounded annually, 5.095% quarterly, 5.116% monthly and 5.127% daily — the whole range is about a tenth of a percentage point. The frequency only becomes significant at high rates, which is exactly where credit cards live."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is APR the true cost of a loan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not by itself. For mortgages and instalment loans the disclosed APR folds in points and origination fees but ignores intra-year compounding. For credit cards the APR ignores fees and compounds daily, so the real annual cost is the APY. This tool converts rate to rate only — annual fees, closing costs and penalty pricing sit outside it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is continuous compounding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the limit you approach as compounding periods get infinitely short: APY = e^r − 1, and going the other way APR = ln(1 + APY). Almost no retail product uses it, but it is the standard in options pricing and academic finance. At 5% it gives 5.1271% against 5.1267% for daily compounding, so in practice daily and continuous are the same answer."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>APR to APY Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">APR to APY Calculator</span></nav>
+  <section class="hero">
+    <h1>APR to APY Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">APR and APY only ever disagree for one reason: how often interest compounds.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard .rc-sub { font-size:13px; color:var(--muted); margin-top:4px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="dir" data-i18n="tool.dir.label">Conversion</label>
+    <select id="dir">
+      <option value="apr2apy" data-i18n="tool.dir.apr2apy">APR → APY (nominal to effective)</option>
+      <option value="apy2apr" data-i18n="tool.dir.apy2apr">APY → APR (effective to nominal)</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="rate" data-i18n="tool.rate.label">Interest rate %</label>
+        <input type="number" id="rate" inputmode="decimal" min="0" max="100" step="any" autocomplete="off" placeholder="5.25">
+      </div>
+      <div>
+        <label for="freq" data-i18n="tool.freq.label">Compounding frequency</label>
+        <select id="freq">
+          <option value="365" data-i18n="tool.freq.daily">Daily (365 a year)</option>
+          <option value="12" data-i18n="tool.freq.monthly">Monthly (12)</option>
+          <option value="4" data-i18n="tool.freq.quarterly">Quarterly (4)</option>
+          <option value="2" data-i18n="tool.freq.semi">Semi-annual (2)</option>
+          <option value="1" data-i18n="tool.freq.annual">Annual (1)</option>
+          <option value="cont" data-i18n="tool.freq.cont">Continuous</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="bal" data-i18n="tool.bal.label" style="margin-top:12px;display:block;">Balance or loan amount</label>
+    <input type="number" id="bal" inputmode="decimal" min="0" max="1000000000" step="any" autocomplete="off" placeholder="10000" value="10000">
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Convert</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.rate">Converted rate</div>
+          <div class="rc-val" id="r-rate">—</div>
+          <div class="rc-sub" id="r-sub">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.diff">Difference</div><div class="rc-val" id="r-diff">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.nominal">Interest on $10,000 at APR</div><div class="rc-val" id="r-nominal">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.effective">Interest on $10,000 at APY</div><div class="rc-val" id="r-effective">—</div></div>
+      </div>
+      <p class="subtle" id="note-annual" data-i18n="tool.note.annual" style="margin-top:10px;" hidden>Annual compounding leaves nothing to compound, so APY equals APR exactly.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.fees" style="margin-top:12px;">Rate conversion only. A quoted loan APR may also include fees, which this does not model.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>APR and APY are the same interest, counted differently</h2>
+    <p>APR is a nominal rate: the periodic rate multiplied by the number of periods in a year, with no allowance for interest earning interest. APY (the effective annual rate, sometimes written EAR) is what you actually end up with after that compounding happens. The gap between them is created entirely by the compounding frequency, which is why a single 5% figure can mean four slightly different things depending on the fine print.</p>
+    <p>The maths is short. Going from nominal to effective: <strong>APY = (1 + APR/n)^n − 1</strong>, where n is the number of compounding periods per year. Going back the other way: <strong>APR = n × ((1 + APY)^(1/n) − 1)</strong>. When compounding is continuous the formulas collapse to <strong>APY = e^APR − 1</strong> and <strong>APR = ln(1 + APY)</strong>. Set n to 1 and both formulas return the input unchanged — annual compounding gives you nothing to compound.</p>
+
+    <h3>Worked example 1: comparing two savings accounts</h3>
+    <p>Bank A advertises 4.85% APR compounded monthly. Bank B advertises 4.80% APY. The headline numbers say A wins, but they are not the same unit, so convert first. For A: 4.85/12 = 0.404167% a month, and (1.00404167)^12 − 1 = 4.959%. That is A's true APY, which does beat B's 4.80% — but by 0.159 percentage points, not the 0.05 the raw comparison suggested. On a $25,000 balance held for a year that is 
+
+  ,239.82 with A against 
+
+  ,200.00 with B: roughly $40 a year. Always restate both offers as APY before choosing.</p>
+
+    <h3>Worked example 2: what a credit card really costs</h3>
+    <p>A card quoting 22.9% APR almost always compounds daily on the average balance. Convert it: (1 + 0.229/365)^365 − 1 = 25.725% APY. Carry $5,000 for a full year and you pay about 
+
+  ,286 in interest, not the 
+
+  ,145 the APR implies — an extra 
+
+  41 that never appears in the advertising. This is the one place where the APR-to-APY gap is large enough to change a decision, and it is also the one place where issuers are permitted to advertise only the APR.</p>
+
+    <h3>Worked example 3: reversing a quoted APY</h3>
+    <p>A CD offers 5.00% APY and you want to know the nominal rate the bank is actually applying daily. Use the reverse formula: 365 × ((1.05)^(1/365) − 1) = 4.879% APR. That is the number to compare against another bank quoting a daily nominal rate, and it is also the figure you would use in a spreadsheet that compounds day by day.</p>
+
+    <h2>How much frequency changes the answer</h2>
+    <table>
+      <thead><tr><th>Nominal APR</th><th>Annual</th><th>Quarterly</th><th>Monthly</th><th>Daily</th></tr></thead>
+      <tbody>
+        <tr><td>2%</td><td>2.000%</td><td>2.015%</td><td>2.018%</td><td>2.020%</td></tr>
+        <tr><td>5%</td><td>5.000%</td><td>5.095%</td><td>5.116%</td><td>5.127%</td></tr>
+        <tr><td>10%</td><td>10.000%</td><td>10.381%</td><td>10.471%</td><td>10.516%</td></tr>
+        <tr><td>22.9%</td><td>22.900%</td><td>24.943%</td><td>25.463%</td><td>25.725%</td></tr>
+      </tbody>
+    </table>
+    <p>Two things stand out. The frequency effect grows with the square of the rate, roughly, so it is nearly irrelevant on a 2% savings account and material on a 23% card. And most of the benefit arrives by monthly compounding — the jump from monthly to daily is worth about one basis point at 5%. Marketing that shouts about daily compounding on a savings account is selling you a rounding error.</p>
+
+    <h2>When to use which number</h2>
+    <p>Use APY to compare anything you earn: savings accounts, CDs, money market funds. Use APR to compare the sticker cost of anything you borrow, but convert it to APY when the balance revolves — cards, HELOC draws, and any loan where interest accrues daily on an unpaid balance. For amortising loans such as mortgages and car finance the payment schedule already reflects compounding, so the disclosed APR is the more useful comparison figure there.</p>
+
+    <h2>Limitations of this calculator</h2>
+    <p>This converts a rate to a rate and nothing else. It does not add annual card fees, origination points, closing costs or account maintenance charges, all of which raise the real cost of borrowing above any APR. It assumes the rate holds for a full year, so promotional and teaser rates — a 5.50% intro APY that drops to 3.00% after six months — need to be blended by hand before conversion. Variable rates are treated as fixed, tiered balances are ignored, and tax on interest earned is not modelled. It also uses a 365-day year for daily compounding; a few institutions use 360, which shifts the effective rate slightly in their favour.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.consumerfinance.gov/rules-policy/regulations/1030/" target="_blank" rel="noopener">CFPB Regulation DD (Truth in Savings) &mdash; the rule requiring deposit accounts to be quoted as APY</a></li>
+      <li><a href="https://www.consumerfinance.gov/rules-policy/regulations/1026/" target="_blank" rel="noopener">CFPB Regulation Z (Truth in Lending) &mdash; how APR must be calculated and disclosed on credit</a></li>
+      <li><a href="https://www.federalreserve.gov/releases/h15/" target="_blank" rel="noopener">Federal Reserve H.15 Selected Interest Rates &mdash; benchmark nominal rates for comparison</a></li>
+      <li><a href="https://www.fdic.gov/resources/bankers/national-rates/" target="_blank" rel="noopener">FDIC National Rates and Rate Caps &mdash; published average deposit APYs by product</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/apy-calc/"><span class="related-ico" aria-hidden="true">🏦</span><span class="related-name">APY Calculator</span></a><a class="related-item" href="https://tool-hub.me/barista-fire-calc/"><span class="related-ico" aria-hidden="true">☕</span><span class="related-name">Barista FIRE Calculator</span></a><a class="related-item" href="https://tool-hub.me/biweekly-mortgage-calc/"><span class="related-ico" aria-hidden="true">🏦</span><span class="related-name">Biweekly Mortgage Calculator</span></a><a class="related-item" href="https://tool-hub.me/break-even-calc/"><span class="related-ico" aria-hidden="true">⚖️</span><span class="related-name">Break-Even Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why do banks advertise APY on savings but APR on loans?</summary><p data-i18n="faq.a1">Because each one is the flattering number for that side of the deal. APY is always the larger figure, so it makes a deposit look better; APR is always the smaller one, so it makes credit look cheaper. US rules lock it in: the Truth in Savings Act requires APY on deposit accounts and the Truth in Lending Act requires APR on credit, so you are rarely shown both for the same product.</p></details>
+    <details><summary data-i18n="faq.q2">Does compounding frequency actually matter much?</summary><p data-i18n="faq.a2">Less than most people assume at ordinary rates. A 5% APR is 5.000% APY compounded annually, 5.095% quarterly, 5.116% monthly and 5.127% daily — the whole range is about a tenth of a percentage point. The frequency only becomes significant at high rates, which is exactly where credit cards live.</p></details>
+    <details><summary data-i18n="faq.q3">Is APR the true cost of a loan?</summary><p data-i18n="faq.a3">Not by itself. For mortgages and instalment loans the disclosed APR folds in points and origination fees but ignores intra-year compounding. For credit cards the APR ignores fees and compounds daily, so the real annual cost is the APY. This tool converts rate to rate only — annual fees, closing costs and penalty pricing sit outside it.</p></details>
+    <details><summary data-i18n="faq.q4">What is continuous compounding?</summary><p data-i18n="faq.a4">It is the limit you approach as compounding periods get infinitely short: APY = e^r − 1, and going the other way APR = ln(1 + APY). Almost no retail product uses it, but it is the standard in options pricing and academic finance. At 5% it gives 5.1271% against 5.1267% for daily compounding, so in practice daily and continuous are the same answer.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

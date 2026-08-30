@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-hIhTFFoJSVOGEtls3qsSUI0ycrdHMJpdnrb77iyp5FU=' 'sha256-IzoAuI7Drvx78Anqj+v1rS2kk23YF+88+UdMwARVKCE=' 'sha256-H9u2hFCi0niOmyFUdFFvkmTlQVWUGiF8FJ6Hcy4usTs='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鉄筋計算ツール — スラブの配筋・間隔・本数</title>
+<meta name="description" content="コンクリートスラブに必要な鉄筋量を算出します。間隔ごとの配筋本数、総延長、購入する定尺本数、結束点とスペーサー数量までまとめて表示します。">
+<meta name="keywords" content="rebar calculator, how much rebar for slab, rebar spacing calculator, rebar grid, concrete slab rebar, rebar estimator">
+<link rel="canonical" href="https://tool-hub.me/rebar-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/rebar-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/rebar-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/rebar-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/rebar-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/rebar-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/rebar-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/rebar-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/rebar-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/rebar-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/rebar-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/rebar-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/rebar-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/rebar-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/rebar-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/rebar-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="鉄筋計算ツール — スラブの配筋・間隔・本数">
+<meta property="og:description" content="コンクリートスラブに必要な鉄筋量を算出します。間隔ごとの配筋本数、総延長、購入する定尺本数、結束点とスペーサー数量までまとめて表示します。">
+<meta property="og:url" content="https://tool-hub.me/rebar-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/rebar-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#52525b">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Rebar Calculator",
+  "description": "Work out how much rebar a concrete slab needs: grid bar counts by spacing, total linear feet, 20 ft sticks to buy, tie points and chair supports.",
+  "url": "https://tool-hub.me/rebar-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Rebar Calculator",
+      "item": "https://tool-hub.me/rebar-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Rebar or wire mesh for a concrete slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The usual dividing line is thickness and load. Slabs under about 5 inches carrying foot traffic or a light shed do fine with welded wire mesh or fibre reinforcement, while 5 inches and thicker under vehicles wants #3 or #4 rebar on a grid. Mesh is cheaper and faster but only helps if it stays at mid-depth, which is exactly where it ends up getting stepped flat. Rebar on chairs holds its position, so for driveways and garage floors most crews use bar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use #3 or #4 rebar in a slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "#3 bar is 3/8 inch and suits patios, walkways and shed pads at 16 to 24 inch spacing. #4 bar is 1/2 inch and is the standard choice for residential driveways, garage slabs and anything a car or truck parks on, usually at 16 to 18 inch centres. Going to #4 adds roughly 75% more steel weight for the same grid but costs far less than a cracked driveway. Bar size does not change the counts this calculator gives — only the weight and price per foot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should a rebar lap splice be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The common field rule is 40 bar diameters, so a #3 bar laps about 15 inches and a #4 bar about 20 inches. Some inspectors want 30 diameters for slab-on-grade and others insist on 48 in tension zones, so check local code before ordering. Wire the overlapping bars together at both ends of the lap and stagger splices so they do not all line up on one grid line. This tool adds 5% to the stick count to cover that overlap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does every slab-on-grade need rebar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A 4 inch patio on well-compacted gravel often performs perfectly with fibre-mesh concrete and no steel at all. What actually controls cracking is the subgrade, the water content of the mix and control joints cut within 24 hours at intervals of two to three times the slab thickness in feet. Rebar does not stop concrete cracking; it holds the crack tight so the slab keeps acting as one piece. Add it when vehicles, expansive clay or freeze-thaw are in play."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Rebar Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Rebar Calculator</span></nav>
+  <section class="hero">
+    <h1>Rebar Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter the slab size and bar spacing — get the grid, the linear footage and how many sticks to order.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="unit" data-i18n="tool.unit.label">Slab units</label>
+    <select id="unit">
+      <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+      <option value="m" data-i18n="tool.unit.m">Metres</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="len" data-i18n="tool.len.label">Slab length</label>
+        <input type="number" id="len" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="20">
+      </div>
+      <div>
+        <label for="wid" data-i18n="tool.wid.label">Slab width</label>
+        <input type="number" id="wid" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="10">
+      </div>
+    </div>
+
+    <label for="spacing" data-i18n="tool.spacing.label">Grid spacing (centre to centre)</label>
+    <select id="spacing">
+      <option value="12" data-i18n="tool.spacing.12">12 in — 300 mm (heavy load)</option>
+      <option value="16" data-i18n="tool.spacing.16">16 in — 400 mm</option>
+      <option value="18" selected data-i18n="tool.spacing.18">18 in — 450 mm (typical driveway)</option>
+      <option value="24" data-i18n="tool.spacing.24">24 in — 600 mm (light patio)</option>
+      <option value="custom" data-i18n="tool.spacing.custom">Custom spacing…</option>
+    </select>
+
+    <div id="custom-wrap" hidden>
+      <label for="spacing-custom" data-i18n="tool.spacing.customlabel">Custom spacing (inches)</label>
+      <input type="number" id="spacing-custom" inputmode="decimal" min="2" max="48" step="any" autocomplete="off" placeholder="10">
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="stick" data-i18n="tool.stick.label">Rebar stick length</label>
+        <select id="stick">
+          <option value="10" data-i18n="tool.stick.10">10 ft stock length</option>
+          <option value="20" selected data-i18n="tool.stick.20">20 ft stock length</option>
+          <option value="40" data-i18n="tool.stick.40">40 ft stock length</option>
+        </select>
+      </div>
+      <div>
+        <label for="clear" data-i18n="tool.clear.label">Edge clearance (inches)</label>
+        <input type="number" id="clear" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="3">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="size" data-i18n="tool.size.label">Bar size</label>
+        <select id="size">
+          <option value="0.376" data-i18n="tool.size.3">#3 — 3/8 in (10 mm)</option>
+          <option value="0.668" selected data-i18n="tool.size.4">#4 — 1/2 in (13 mm)</option>
+          <option value="1.043" data-i18n="tool.size.5">#5 — 5/8 in (16 mm)</option>
+          <option value="1.502" data-i18n="tool.size.6">#6 — 3/4 in (19 mm)</option>
+        </select>
+      </div>
+      <div>
+        <label for="price" data-i18n="tool.price.label">Price per stick (optional)</label>
+        <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate rebar</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.linear">Total rebar length</div>
+          <div class="rc-val" id="r-linear">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.sticks">Sticks to buy</div><div class="rc-val" id="r-sticks">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.barsL">Bars running lengthwise</div><div class="rc-val" id="r-barsL">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.barsW">Bars running widthwise</div><div class="rc-val" id="r-barsW">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.ties">Tie points (intersections)</div><div class="rc-val" id="r-ties">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.chairs">Chairs / supports</div><div class="rc-val" id="r-chairs">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.weight">Estimated steel weight</div><div class="rc-val" id="r-weight">—</div></div>
+        <div class="rcard" id="cost-card" hidden><div class="rc-label" data-i18n="tool.r.cost">Estimated steel cost</div><div class="rc-val" id="r-cost">—</div></div>
+      </div>
+      <p class="subtle" id="note-min" hidden data-i18n="tool.note.minbars">Your spacing is wider than the slab, so the grid falls back to the two-bar minimum per direction.</p>
+      <p class="subtle" data-i18n="tool.note.lap">Stick count adds 5% for lap splices and offcuts. Rebar is sold in whole sticks, so round up at the yard.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.disclaim">A planning estimate for slab-on-grade work such as patios, sheds and driveways. Engineered or structural slabs follow a stamped drawing.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How much rebar does a concrete slab actually need?</h2>
+    <p>Rebar in a slab-on-grade is not there to carry the load — the compacted subgrade does that. Steel is there to hold the two halves of an inevitable crack tightly together so the slab keeps behaving like one rigid plate instead of two tilting ones. That single idea explains every decision on this page: the grid, the spacing, the edge clearance and why the bars have to sit in the middle of the concrete rather than on the ground.</p>
+    <p>The quantity itself is simple geometry. You lay bars in two directions, count them, add up their lengths, then divide by the length of the sticks the yard sells. Everything else is trade practice layered on top: a couple of inches of cover at the edges so the steel does not rust out through the side of the slab, a 5% allowance for lap splices, and enough chairs to stop the whole mat being trodden into the base.</p>
+
+    <h3>Worked example: a 20 ft x 10 ft driveway strip</h3>
+    <p>Take a typical single-car driveway apron, 20 ft long by 10 ft wide, reinforced at 18 in centres with 3 in of clearance at every edge. Clearance comes off both ends of each dimension, so the steel actually covers 19.5 ft by 9.5 ft.</p>
+    <p>Bars running lengthwise are spaced across the 9.5 ft width: 9.5 ft is 114 in, and 114 / 18 = 6.33, so you fit 6 full gaps plus the starting bar — 7 bars, each 19.5 ft long. Bars running widthwise are spaced along the 19.5 ft length: 234 in / 18 = 13 gaps, plus the starting bar — 14 bars, each 9.5 ft long. That is 7 x 19.5 + 14 x 9.5 = 136.5 + 133 = 269.5 linear feet of steel.</p>
+    <p>Add 5% for laps and offcuts and you need 283 ft, which at 20 ft per stick is 14.1 sticks — order 15. The two directions cross 7 x 14 = 98 times, so budget about 100 tie wires or clips, and at roughly one chair per 4 sq ft of mat you want around 47 supports. Buy a few spare of everything; nobody has ever finished a pour wishing they had fewer ties.</p>
+
+    <h3>What tightening the spacing costs</h3>
+    <p>Run the same slab at 12 in centres and the counts jump to 10 bars lengthwise and 20 widthwise: 385 linear feet, 21 sticks, 200 intersections. You have added 43% more steel and roughly doubled the tying labour. That is the right call under a heavy vehicle, a shop floor or expansive clay, and the wrong call for a garden patio. For most residential driveways 18 in centres with #4 bar is the sweet spot, and 24 in centres is fine for patios and shed pads.</p>
+
+    <h3>Chairs matter more than people expect</h3>
+    <p>Steel laid straight on the gravel does almost nothing. To work in bending it needs to sit near the middle of the slab depth — for a 4 in slab, about 2 in up. Rebar chairs, dobies or precast blocks hold that height while the concrete goes in. The old habit of hooking the mat up with a rake mid-pour is unreliable: parts of it drop straight back down and you cannot see where. Chairs at roughly 3 to 4 ft in each direction, which is what the one-per-4-sq-ft estimate reflects, keep the mat where the calculation assumed it would be.</p>
+
+    <h3>Cutting, bending and lapping on site</h3>
+    <p>#3 and #4 bar cut cleanly with a portable band saw, an angle grinder and cut-off wheel, or a manual rebar cutter for the smaller sizes. Bend corner bars rather than butting them: an L-shaped bar around a corner is stronger than two straight bars tied together. Where sticks have to meet, overlap them by 40 bar diameters — about 15 in for #3, 20 in for #4 — tie both ends of the lap, and stagger the joints so they do not all land on the same grid line.</p>
+
+    <h2>Limits of this estimate</h2>
+    <p>These numbers describe a plain rectangular slab-on-grade with a single mat of bar. They do not cover thickened edges and footings, which need their own longitudinal bars and stirrups; two-layer mats in structural slabs; post-tensioned slabs; or anything an engineer has stamped, where the drawing overrules any rule of thumb. Local codes also vary on cover, lap length and minimum bar size, and inspectors in freeze-thaw regions are often stricter. Check the permit conditions before you order steel — a phone call is cheaper than a rejected inspection.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nist.gov/el" target="_blank" rel="noopener">NIST Engineering Laboratory — research on concrete, reinforcing steel and structural performance</a></li>
+      <li><a href="https://www.iso.org/committee/49898.html" target="_blank" rel="noopener">ISO/TC 71 Concrete and reinforced concrete — international standards for reinforcement and cover</a></li>
+      <li><a href="https://www.gov.uk/building-regulations-approval" target="_blank" rel="noopener">GOV.UK Building Regulations approval — when slab and foundation work needs permission or inspection</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/recipe-scaler/"><span class="related-ico" aria-hidden="true">🍲</span><span class="related-name">Recipe Scaler</span></a><a class="related-item" href="https://tool-hub.me/retaining-wall-calc/"><span class="related-ico" aria-hidden="true">🧱</span><span class="related-name">Retaining Wall Calculator</span></a><a class="related-item" href="https://tool-hub.me/roof-pitch-calc/"><span class="related-ico" aria-hidden="true">🏚️</span><span class="related-name">Roof Pitch Calculator</span></a><a class="related-item" href="https://tool-hub.me/sand-calc/"><span class="related-ico" aria-hidden="true">🏝️</span><span class="related-name">Sand Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Rebar or wire mesh for a concrete slab?</summary><p data-i18n="faq.a1">The usual dividing line is thickness and load. Slabs under about 5 inches carrying foot traffic or a light shed do fine with welded wire mesh or fibre reinforcement, while 5 inches and thicker under vehicles wants #3 or #4 rebar on a grid. Mesh is cheaper and faster but only helps if it stays at mid-depth, which is exactly where it ends up getting stepped flat. Rebar on chairs holds its position, so for driveways and garage floors most crews use bar.</p></details>
+    <details><summary data-i18n="faq.q2">Should I use #3 or #4 rebar in a slab?</summary><p data-i18n="faq.a2">#3 bar is 3/8 inch and suits patios, walkways and shed pads at 16 to 24 inch spacing. #4 bar is 1/2 inch and is the standard choice for residential driveways, garage slabs and anything a car or truck parks on, usually at 16 to 18 inch centres. Going to #4 adds roughly 75% more steel weight for the same grid but costs far less than a cracked driveway. Bar size does not change the counts this calculator gives — only the weight and price per foot.</p></details>
+    <details><summary data-i18n="faq.q3">How long should a rebar lap splice be?</summary><p data-i18n="faq.a3">The common field rule is 40 bar diameters, so a #3 bar laps about 15 inches and a #4 bar about 20 inches. Some inspectors want 30 diameters for slab-on-grade and others insist on 48 in tension zones, so check local code before ordering. Wire the overlapping bars together at both ends of the lap and stagger splices so they do not all line up on one grid line. This tool adds 5% to the stick count to cover that overlap.</p></details>
+    <details><summary data-i18n="faq.q4">Does every slab-on-grade need rebar?</summary><p data-i18n="faq.a4">No. A 4 inch patio on well-compacted gravel often performs perfectly with fibre-mesh concrete and no steel at all. What actually controls cracking is the subgrade, the water content of the mix and control joints cut within 24 hours at intervals of two to three times the slab thickness in feet. Rebar does not stop concrete cracking; it holds the crack tight so the slab keeps acting as one piece. Add it when vehicles, expansive clay or freeze-thaw are in play.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

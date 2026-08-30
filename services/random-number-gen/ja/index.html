@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-a8pdTCR1gqMpom66vu9qkIU56/re7yzyEpEiAmgm4aY=' 'sha256-AZlJADZiLtGWPhI5ttLaIayxcSyJBiirguYAoo7AtHo=' 'sha256-3QVT2roJactKHXHMqR1Ge7hIn70NOxPC8GxHpRL3evo='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>乱数ジェネレーター</title>
+<meta name="description" content="無料の乱数ジェネレーター。任意の範囲から数字を抽出し、重複なし・並べ替えのオプションも。Powerball・Mega Millions・EuroMillions・ロト6/45 のクイックピックにも対応。暗号学的に安全で、広告なし、すべてブラウザ内で完結します。">
+<meta name="keywords" content="random number generator, lottery number generator, random number picker, powerball number generator, 랜덤 숫자 생성기, 로또 번호 생성기, 난수 생성기">
+<link rel="canonical" href="https://tool-hub.me/random-number-gen/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/random-number-gen/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/random-number-gen/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/random-number-gen/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/random-number-gen/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/random-number-gen/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/random-number-gen/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/random-number-gen/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/random-number-gen/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/random-number-gen/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/random-number-gen/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/random-number-gen/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/random-number-gen/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/random-number-gen/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/random-number-gen/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/random-number-gen/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="乱数ジェネレーター">
+<meta property="og:description" content="無料の乱数ジェネレーター。任意の範囲から数字を抽出し、重複なし・並べ替えのオプションも。Powerball・Mega Millions・EuroMillions・ロト6/45 のクイックピックにも対応。暗号学的に安全で、広告なし、すべてブラウザ内で完結します。">
+<meta property="og:url" content="https://tool-hub.me/random-number-gen/ja/">
+<meta property="og:image" content="https://tool-hub.me/random-number-gen/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d97706">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Random Number Generator",
+  "description": "Free random number generator. Pick numbers in any range with no-repeat and sort options, or get lottery quick picks for Powerball, Mega Millions, EuroMillions, and Lotto 6/45. Cryptographically secure, ad-free, and nothing leaves your browser.",
+  "url": "https://tool-hub.me/random-number-gen/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Random Number Generator",
+      "item": "https://tool-hub.me/random-number-gen/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How are the numbers generated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every number comes from your browser's cryptographic random source (crypto.getRandomValues) with rejection sampling to remove modulo bias, so each value in the range is equally likely. That is stronger than the ordinary Math.random(), which is fast but not built to be unpredictable or perfectly uniform. This random number generator never falls back to Math.random()."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do quick picks improve my odds of winning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every combination has exactly the same chance, whether you choose it yourself or use a quick pick — the draw has no idea how the numbers were picked. For scale, the odds of matching all six Powerball numbers are about 1 in 292,201,338. A lottery number generator only saves you time; it cannot beat the odds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my numbers stored or sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Everything runs inside your browser and nothing is uploaded — no server ever sees your numbers. Only your last settings (range, count, options and chosen lottery) are kept in this browser's localStorage so the tool remembers them; the generated numbers themselves are never stored."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which lottery rules are used, and are they current?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The four presets are accurate as of July 2026: Powerball draws 5 numbers from 1–69 plus 1 Powerball from 1–26; Mega Millions draws 5 from 1–70 plus 1 Mega Ball from 1–24 (the April 2025 revision); EuroMillions draws 5 from 1–50 plus 2 Lucky Stars from 1–12; and Korea's Lotto 6/45 draws 6 from 1–45. Bonus balls are drawn from their own separate pool, exactly like the official machines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I turn duplicates off?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Turn duplicates off whenever each result must be unique — drawing raffle or giveaway winners, assigning seats or turn order, or splitting people into teams — so no number can repeat. Leave duplicates on for things like dice rolls or independent picks, where the same number can legitimately come up again."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Random Number Generator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#c026d3" href="https://tool-hub.me/random-generators/">Random</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Random Number Generator</span></nav>
+  <section class="hero">
+    <h1>Random Number Generator</h1>
+    <p class="lede" data-i18n="hero.lede">Set a range, choose how many, and get unbiased random numbers instantly — or grab lottery quick picks for Powerball, Mega Millions, EuroMillions, and Lotto 6/45.</p>
+  </section>
+
+  <!-- TOOL:START — Random number generator + lottery quick pick. Engine: crypto.getRandomValues
+       with rejection sampling (100% client-side). Every visible string carries a data-i18n hook;
+       keys live in js/locales.js (all 14 locales). Dynamic strings go through window.I18N.t(),
+       and re-render on the "i18n:change" event. -->
+  <style>
+    .rng-tabs { display:flex; gap:6px; margin-bottom:4px; }
+    .rng-tab { flex:1; padding:11px 8px; border:1px solid var(--line); border-radius:10px;
+               background:var(--bg); color:var(--muted); font-weight:700; font-size:15px;
+               font-family:inherit; cursor:pointer; }
+    .rng-tab[aria-selected="true"] { background:var(--accent); color:#fff; border-color:var(--accent); }
+    .rng-row { display:flex; flex-wrap:wrap; gap:14px; }
+    .rng-col { flex:1 1 130px; }
+    .tool-card .rng-check { display:flex; align-items:center; gap:9px; font-weight:400;
+                            font-size:15px; margin:14px 0 0; cursor:pointer; }
+    .rng-check input[type="checkbox"] { width:18px; height:18px; accent-color:var(--accent); }
+    .rng-notice > div { color:var(--accent-strong); font-size:13.5px; font-weight:600; margin:0 0 6px; }
+    [data-theme="dark"] .rng-notice > div, [data-theme="auto"] .rng-notice > div { color:var(--accent); }
+    .rng-numbers { display:flex; flex-wrap:wrap; gap:8px; }
+    .rng-num { display:inline-flex; align-items:center; justify-content:center; min-width:46px;
+               height:46px; padding:0 12px; border-radius:11px; background:var(--surface);
+               border:1px solid color-mix(in srgb, var(--accent) 32%, var(--line));
+               font-weight:800; font-size:19px; color:var(--ink); }
+    .rng-play { display:flex; flex-wrap:wrap; align-items:center; gap:7px; margin:0 0 12px; }
+    .rng-play:last-child { margin-bottom:0; }
+    .rng-play-label { font-size:12.5px; color:var(--muted); min-width:54px; font-weight:600; }
+    .rng-ball { display:inline-flex; align-items:center; justify-content:center; width:42px;
+                height:42px; border-radius:50%; font-weight:800; font-size:16px; color:#fff;
+                box-shadow: inset 0 -3px 5px rgba(0,0,0,0.18); }
+    .rng-star { border-radius:0; width:46px; height:46px; font-size:14px;
+                clip-path: polygon(50% 2%,61% 35%,97% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,3% 35%,39% 35%); }
+    .rng-btn-sec { background:none; color:var(--accent); border:1px solid var(--accent);
+                   border-radius:10px; padding:9px 18px; font-weight:700; font-size:14px;
+                   font-family:inherit; cursor:pointer; margin:14px 8px 0 0; }
+    .rng-btn-sec:hover { background:color-mix(in srgb, var(--accent) 10%, transparent); }
+  </style>
+  <section class="tool-card" id="tool" aria-live="polite">
+    <div class="rng-tabs" role="tablist">
+      <button id="tab-range" class="rng-tab" type="button" role="tab" aria-selected="true"
+              aria-controls="panel-range" data-i18n="tool.tab.range">Number range</button>
+      <button id="tab-lottery" class="rng-tab" type="button" role="tab" aria-selected="false"
+              aria-controls="panel-lottery" data-i18n="tool.tab.lottery">Lottery quick pick</button>
+    </div>
+
+    <!-- Number range -->
+    <div id="panel-range" role="tabpanel" aria-labelledby="tab-range">
+      <div class="rng-row">
+        <div class="rng-col">
+          <label for="rng-min" data-i18n="tool.range.minLabel">Minimum</label>
+          <input type="number" id="rng-min" value="1" step="1" inputmode="numeric">
+        </div>
+        <div class="rng-col">
+          <label for="rng-max" data-i18n="tool.range.maxLabel">Maximum</label>
+          <input type="number" id="rng-max" value="100" step="1" inputmode="numeric">
+        </div>
+      </div>
+      <label for="rng-count" data-i18n="tool.range.countLabel">How many</label>
+      <input type="number" id="rng-count" value="1" min="1" max="500" step="1" inputmode="numeric">
+      <label class="rng-check"><input type="checkbox" id="rng-dup" checked>
+        <span data-i18n="tool.range.dupLabel">Allow duplicates</span></label>
+      <label class="rng-check"><input type="checkbox" id="rng-sort">
+        <span data-i18n="tool.range.sortLabel">Sort ascending</span></label>
+      <button id="rng-generate" class="btn" type="button" data-i18n="tool.range.generate">Generate</button>
+
+      <div class="result" id="rng-result">
+        <div class="rng-notice" id="rng-notice" hidden></div>
+        <div class="rng-numbers" id="rng-numbers"></div>
+        <div id="rng-actions" hidden>
+          <button id="rng-copy" class="rng-btn-sec" type="button" data-i18n="tool.range.copy">Copy</button>
+          <button id="rng-regen" class="rng-btn-sec" type="button" data-i18n="tool.range.regenerate">Regenerate</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lottery quick pick -->
+    <div id="panel-lottery" role="tabpanel" aria-labelledby="tab-lottery" hidden>
+      <label for="lot-preset" data-i18n="tool.lottery.presetLabel">Lottery game</label>
+      <select id="lot-preset">
+        <option value="powerball" data-i18n="tool.lottery.preset.powerball">Powerball (USA)</option>
+        <option value="mega" data-i18n="tool.lottery.preset.mega">Mega Millions (USA)</option>
+        <option value="euro" data-i18n="tool.lottery.preset.euro">EuroMillions (Europe)</option>
+        <option value="uk" data-i18n="tool.lottery.preset.uk">Lotto 6/59 (UK)</option>
+        <option value="lotto645" data-i18n="tool.lottery.preset.lotto645">Lotto 6/45 (Korea)</option>
+      </select>
+      <label for="lot-plays" data-i18n="tool.lottery.playsLabel">Number of plays</label>
+      <input type="number" id="lot-plays" value="1" min="1" max="10" step="1" inputmode="numeric">
+      <button id="lot-pick" class="btn" type="button" data-i18n="tool.lottery.pick">Pick numbers</button>
+
+      <div class="result" id="lot-result">
+        <p id="lot-rules" style="margin:0 0 14px;font-size:13.5px;color:var(--muted)"></p>
+        <div id="lot-plays-out"></div>
+        <div id="lot-actions" hidden>
+          <button id="lot-copy" class="rng-btn-sec" type="button" data-i18n="tool.lottery.copy">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin:16px 0 0;font-size:13.5px;color:var(--muted)" data-i18n="tool.privacy">Numbers are generated with your browser's cryptographic RNG and never sent anywhere.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English enrichment (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>How the random number generator picks numbers</h2>
+    <p>Every number this tool produces comes from your browser's cryptographic random source (crypto.getRandomValues), not the ordinary Math.random(). Math.random() is fast and fine for animations, but it is not designed to be unpredictable and its output can be slightly uneven. The cryptographic source is built to be both unpredictable and uniform, which matters whenever fairness counts — draws, giveaways, sampling, or splitting people into groups.</p>
+    <p>Uniformity hides a subtle trap called modulo bias. If you take a random byte (0–255) and simply reduce it to a range that does not divide evenly, some outcomes become more likely than others. To avoid this the tool uses rejection sampling: it discards the few values that would skew the range and draws again, so every number in your range ends up exactly equally likely.</p>
+
+    <div class="example">
+      <strong>Example 1 — Why bias happens.</strong> Mapping a byte (256 possible values) onto 1–6 with a plain remainder is uneven, because 256 ÷ 6 leaves a remainder of 4. Four of the six faces would come up slightly more often. Rejection sampling throws those leftover values away, restoring a fair 1-in-6 chance for each face.
+    </div>
+    <div class="example">
+      <strong>Example 2 — Unique picks.</strong> To put 20 people in a random order, set the range to 1–20, the count to 20, and turn <em>duplicates off</em>. Everyone gets a distinct number with none repeated — the same trick handles raffle order, seat assignments, or teams.
+    </div>
+    <div class="example">
+      <strong>Example 3 — Lottery odds.</strong> A quick pick does not improve your chances. Matching all five main Powerball numbers plus the Powerball is about 1 in 292,201,338 — the 11,238,513 ways to choose 5 of 69 multiplied by the 26 Powerball options. A generator only saves you time filling in the slip.
+    </div>
+
+    <h3>When to allow duplicates</h3>
+    <p>Leave duplicates <em>on</em> when each draw is independent and repeats are legitimate — rolling dice, flipping coins, or picking a random day several times. Turn them <em>off</em> when every result must be distinct, such as choosing winners, ordering a list, or dealing unique tickets. With duplicates off, the count cannot exceed the size of the range, because you cannot draw 30 unique numbers from a pool of 20.</p>
+
+    <h3>Built-in lottery presets</h3>
+    <p>The lottery tab fills in the official rules for five popular games so you do not have to look them up. Bonus balls are drawn from their own separate pool, exactly as the real machines do. These figures are accurate as of July 2026.</p>
+    <table>
+      <thead><tr><th>Game</th><th>Main pool</th><th>Bonus pool</th></tr></thead>
+      <tbody>
+        <tr><th>Powerball (USA)</th><td>5 of 1–69</td><td>1 of 1–26</td></tr>
+        <tr><th>Mega Millions (USA)</th><td>5 of 1–70</td><td>1 of 1–24</td></tr>
+        <tr><th>EuroMillions (Europe)</th><td>5 of 1–50</td><td>2 of 1–12</td></tr>
+        <tr><th>Lotto 6/59 (UK)</th><td>6 of 1–59</td><td>—</td></tr>
+        <tr><th>Lotto 6/45 (Korea)</th><td>6 of 1–45</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Privacy and repeatability</h3>
+    <p>Numbers are generated entirely inside your browser and are never sent anywhere; only your last settings are remembered so the form is ready next time. One consequence of a true random source is that results are not repeatable — there is no seed to type in that would reproduce a past draw. If you need an auditable sequence for a formal prize draw, record the output at the moment you generate it, because the same settings will produce fresh numbers every time.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues" target="_blank" rel="noopener">MDN Web Docs — Crypto.getRandomValues(), the browser API behind cryptographically strong random numbers</a></li>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc4086" target="_blank" rel="noopener">RFC 4086 — Randomness Requirements for Security, on entropy sources and unbiased range selection</a></li>
+      <li><a href="https://csrc.nist.gov/projects/random-bit-generation" target="_blank" rel="noopener">NIST Random Bit Generation project — SP 800-90 standards for random number generators</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/random-team-gen/"><span class="related-ico" aria-hidden="true">👥</span><span class="related-name">Random Team Generator</span></a><a class="related-item" href="https://tool-hub.me/secret-santa-generator/"><span class="related-ico" aria-hidden="true">🎁</span><span class="related-name">Secret Santa Generator</span></a><a class="related-item" href="https://tool-hub.me/wheel-spinner/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">Random Wheel Spinner</span></a><a class="related-item" href="https://tool-hub.me/coin-flipper/"><span class="related-ico" aria-hidden="true">☯️</span><span class="related-name">Coin Flip</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — 5 Q&As, keys faq.q1-5/a1-5 in js/locales.js (all 14 locales) -->
+    <details>
+      <summary data-i18n="faq.q1">How are the numbers generated?</summary>
+      <p data-i18n="faq.a1">Every number comes from your browser's cryptographic random source (crypto.getRandomValues) with rejection sampling to remove modulo bias, so each value in the range is equally likely. That is stronger than the ordinary Math.random(), which is fast but not built to be unpredictable or perfectly uniform. This random number generator never falls back to Math.random().</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Do quick picks improve my odds of winning?</summary>
+      <p data-i18n="faq.a2">No. Every combination has exactly the same chance, whether you choose it yourself or use a quick pick — the draw has no idea how the numbers were picked. For scale, the odds of matching all six Powerball numbers are about 1 in 292,201,338. A lottery number generator only saves you time; it cannot beat the odds.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Are my numbers stored or sent anywhere?</summary>
+      <p data-i18n="faq.a3">No. Everything runs inside your browser and nothing is uploaded — no server ever sees your numbers. Only your last settings (range, count, options and chosen lottery) are kept in this browser's localStorage so the tool remembers them; the generated numbers themselves are never stored.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Which lottery rules are used, and are they current?</summary>
+      <p data-i18n="faq.a4">The four presets are accurate as of July 2026: Powerball draws 5 numbers from 1–69 plus 1 Powerball from 1–26; Mega Millions draws 5 from 1–70 plus 1 Mega Ball from 1–24 (the April 2025 revision); EuroMillions draws 5 from 1–50 plus 2 Lucky Stars from 1–12; and Korea's Lotto 6/45 draws 6 from 1–45. Bonus balls are drawn from their own separate pool, exactly like the official machines.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">When should I turn duplicates off?</summary>
+      <p data-i18n="faq.a5">Turn duplicates off whenever each result must be unique — drawing raffle or giveaway winners, assigning seats or turn order, or splitting people into teams — so no number can repeat. Leave duplicates on for things like dice rolls or independent picks, where the same number can legitimately come up again.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

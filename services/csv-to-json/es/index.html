@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-LuRIkeLuoIF0izSiH0BD5XL/dIPXIOJDoLyB1nPBiLs=' 'sha256-f4MGgP0Qrmmu1fY8PX2AVC02ItXnlssgwNOwNqqkQOk=' 'sha256-z20v7Ys2tcyK2RJoRFXh/Hc40jic71NzvEalDTXbo4c='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversor de CSV a JSON — Pega, convierte, descarga</title>
+<meta name="description" content="Conversor gratuito de CSV a JSON: pega o suelta un archivo .csv y obtén un array JSON de objetos limpio al instante. Maneja campos entre comillas con comas y saltos de línea, detecta automáticamente coma/punto y coma/tabulador, e infiere números y booleanos. Todo se ejecuta en tu navegador — nada se sube a ningún servidor.">
+<meta name="keywords" content="csv to json, csv to json converter, convert csv to json online, csv parser, csv to json array">
+<link rel="canonical" href="https://tool-hub.me/csv-to-json/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/csv-to-json/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/csv-to-json/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/csv-to-json/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/csv-to-json/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/csv-to-json/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/csv-to-json/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/csv-to-json/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/csv-to-json/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/csv-to-json/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/csv-to-json/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/csv-to-json/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/csv-to-json/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/csv-to-json/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/csv-to-json/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/csv-to-json/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Conversor de CSV a JSON — Pega, convierte, descarga">
+<meta property="og:description" content="Conversor gratuito de CSV a JSON: pega o suelta un archivo .csv y obtén un array JSON de objetos limpio al instante. Maneja campos entre comillas con comas y saltos de línea, detecta automáticamente coma/punto y coma/tabulador, e infiere números y booleanos. Todo se ejecuta en tu navegador — nada se sube a ningún servidor.">
+<meta property="og:url" content="https://tool-hub.me/csv-to-json/es/">
+<meta property="og:image" content="https://tool-hub.me/csv-to-json/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b45309">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CSV to JSON Converter",
+  "description": "Free CSV to JSON converter: paste or drop a .csv file to get a clean JSON array of objects. Handles quoted fields with commas and line breaks, auto-detects comma/semicolon/tab, and infers numbers and booleans. Runs entirely in your browser — nothing is uploaded.",
+  "url": "https://tool-hub.me/csv-to-json/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "CSV to JSON Converter", "item": "https://tool-hub.me/csv-to-json/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does this tool handle commas or line breaks inside a CSV field?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Real-world CSV often has a comma, a line break, or a quote mark inside a single value — for example a company name written \"Smith, Jones & Co.\" or a multi-line address. This converter implements the CSV quoting rule from RFC 4180 itself as a small state machine, instead of just splitting the text on every comma. A field wrapped in double quotes can safely contain commas and line breaks, and a literal double quote inside a quoted field is written as two double quotes (\"\"), which this tool turns back into a single \". So a row like \"Smith, Jones & Co.\",\"New York, NY\" becomes two clean values, not four broken ones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between \"First row is header\" on and off?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With \"First row is header\" on (the default), the first line is treated as field names and every following row becomes a JSON object such as {\"name\": \"Ada\", \"age\": 36} — the usual shape for CSV to JSON. Turn it off if your CSV has no header row and every row is just data: the output becomes an array of arrays instead, like [\"Ada\", 36], with nothing guessed or renamed. Duplicate header names are automatically made unique (name, name_2, name_3…) so one column never silently overwrites another."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does \"007\" stay a string but \"7\" becomes a number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When type detection is on, this converter turns a cell into a JSON number only if it looks like a plain number with no leading zero — so 7, -3 and 0.5 become numbers, but 007, 01 and similar values stay as text. That's deliberate: a leading zero almost always means the value is really an identifier, like a ZIP code, an employee number or a phone extension, and converting \"00501\" to the number 501 would silently lose data. The same care applies to true/false, which are only converted when a cell is exactly \"true\" or \"false\" (any letter case) — a word like \"Truex\" is left alone as text."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the delimiter (comma, semicolon or tab) detected, and can I override it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many countries export CSV with a semicolon instead of a comma — common where the decimal separator is itself a comma — and some exports use tabs (TSV). This tool samples the first several non-empty lines and picks whichever of comma, semicolon or tab appears the same number of times on every one of them, which is a far stronger signal than just counting the single most common character. If your file is unusual, or auto-detect guesses wrong, the Delimiter dropdown lets you force comma, semicolon or tab directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my CSV file uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Parsing, type conversion and JSON generation all run locally in this browser's own JavaScript engine — a pasted CSV or a dropped file is never sent anywhere, which matters if your spreadsheet contains names, emails or other personal or business data. Only your option choices (header row, type detection, delimiter, pretty/minified) are kept in this browser's local storage so they're remembered next time; the CSV content itself is never saved, even locally."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>CSV to JSON Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">CSV to JSON Converter</span></nav>
+  <section class="hero">
+    <h1>CSV to JSON Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Paste your CSV or drop a file — get a clean JSON array of objects instantly, with quoted fields, delimiters and number types handled for you.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="CSV to JSON converter" data-i18n-aria-label="tool.aria" aria-live="polite">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool label { margin-top: 0; }
+      #tool textarea { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .85rem; line-height: 1.5; resize: vertical; }
+
+      #tool .cj-drop { margin: 10px 0 0; border: 1px dashed var(--line); border-radius: 10px; padding: 14px;
+        text-align: center; color: var(--muted); font-size: 13.5px; }
+      #tool .cj-drop.is-over { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+      #tool .cj-drop p { margin: 0 0 8px; }
+      #tool .cj-browse { padding: 7px 14px; font-size: 13px; font-weight: 700; font-family: inherit;
+        border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--accent); cursor: pointer; }
+      #tool .cj-browse:hover { border-color: var(--accent); }
+
+      #tool .cj-opts { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: 16px; }
+      #tool .cj-check { display: flex; align-items: center; gap: 8px; margin: 0; font-weight: 600; font-size: 14.5px; cursor: pointer; }
+      #tool .cj-check input { width: auto; flex: 0 0 auto; }
+      #tool .cj-inline { display: flex; align-items: center; gap: 8px; }
+      #tool .cj-inline label { margin: 0; font-weight: 600; font-size: 14.5px; white-space: nowrap; }
+      #tool .cj-inline select { width: auto; padding: 8px 10px; }
+
+      #tool .cj-tabs { display: flex; gap: 6px; border: 1px solid var(--line); border-radius: 10px; padding: 4px; margin-top: 16px; max-width: 260px; }
+      #tool .cj-tab { flex: 1 1 0; padding: 8px; font-size: 13.5px; font-weight: 700; font-family: inherit;
+        border: none; border-radius: 7px; background: none; color: var(--muted); cursor: pointer; }
+      #tool .cj-tab.is-on { background: var(--accent); color: #fff; }
+
+      #tool .cj-stats { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 13.5px; color: var(--muted); margin-bottom: 10px; }
+      #tool .cj-stat b { color: var(--ink); font-weight: 800; }
+      #tool .cj-msg { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
+      #tool .cj-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+      #tool .cj-actions .btn { margin-top: 0; width: auto; }
+      #tool .cj-link { background: none; border: none; color: var(--muted); font-size: 13.5px; font-family: inherit;
+        font-weight: 600; cursor: pointer; text-decoration: underline; padding: 6px 2px; }
+      #tool .cj-link:hover { color: var(--accent); }
+      #tool .cj-notes { list-style: none; margin: 12px 0 0; padding: 0; }
+      #tool .cj-notes li { font-size: 12.5px; color: var(--muted); padding: 3px 0 3px 16px; position: relative; }
+      #tool .cj-notes li::before { content: "•"; position: absolute; inset-inline-start: 2px; }
+      #tool .cj-privacy { font-size: 12.5px; color: var(--muted); margin: 18px 0 0; text-align: center; }
+      #tool #cj-empty b { color: var(--accent-strong); }
+
+      @media (max-width: 420px) {
+        #tool .cj-opts { gap: 10px 14px; }
+        #tool .cj-inline { width: 100%; }
+        #tool .cj-inline select { flex: 1 1 auto; }
+      }
+    </style>
+
+    <label for="cj-input" data-i18n="tool.inputLabel">CSV input</label>
+    <textarea id="cj-input" rows="8" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off"
+      placeholder="name,age,active&#10;Ada,36,true&#10;Grace,41,false" data-i18n-placeholder="tool.inputPlaceholder"></textarea>
+
+    <div class="cj-drop" id="cj-drop">
+      <p data-i18n="tool.drop">…or drop a CSV file here</p>
+      <button type="button" class="cj-browse" id="cj-browse" data-i18n="tool.browse">Choose a file</button>
+      <input type="file" id="cj-file" accept=".csv,.tsv,.txt,text/csv,text/tab-separated-values,text/plain" hidden>
+    </div>
+
+    <div class="cj-opts">
+      <label class="cj-check"><input type="checkbox" id="cj-header" checked><span data-i18n="tool.opt.header">First row is header</span></label>
+      <label class="cj-check"><input type="checkbox" id="cj-types" checked><span data-i18n="tool.opt.types">Detect numbers &amp; booleans</span></label>
+      <div class="cj-inline">
+        <label for="cj-delim" data-i18n="tool.opt.delimLabel">Delimiter</label>
+        <select id="cj-delim">
+          <option value="auto" data-i18n="tool.opt.delim.auto">Auto-detect</option>
+          <option value=",">Comma (,)</option>
+          <option value=";">Semicolon (;)</option>
+          <option value="&#9;">Tab</option>
+          <option value="|">Pipe (|)</option>
+          <option value="custom" data-i18n="tool.opt.delim.custom">Other…</option>
+        </select>
+        <input type="text" id="cj-delim-custom" maxlength="1" size="1" hidden
+          aria-label="Custom delimiter character" data-i18n-aria-label="tool.opt.delim.customAria"
+          style="width:3.5rem;text-align:center;">
+      </div>
+    </div>
+
+    <div class="cj-tabs" role="group">
+      <button type="button" class="cj-tab is-on" id="cj-style-pretty" aria-pressed="true" data-i18n="tool.style.pretty">Pretty</button>
+      <button type="button" class="cj-tab" id="cj-style-min" aria-pressed="false" data-i18n="tool.style.minified">Minified</button>
+    </div>
+
+    <div class="result" id="cj-result" aria-live="polite">
+      <p id="cj-empty" data-i18n="tool.placeholder" style="margin:0;color:var(--muted);">Paste CSV above or drop a file to see the JSON output.</p>
+      <div id="cj-out-wrap" hidden>
+        <div class="cj-stats" id="cj-stats"></div>
+        <label for="cj-output" data-i18n="tool.outputLabel">JSON output</label>
+        <textarea id="cj-output" readonly rows="10" spellcheck="false"
+          placeholder="Converted JSON appears here." data-i18n-placeholder="tool.outputPlaceholder"></textarea>
+        <p id="cj-message" hidden class="cj-msg"></p>
+        <div class="cj-actions">
+          <button type="button" class="btn" id="cj-copy" data-i18n="tool.copy">Copy JSON</button>
+          <button type="button" class="btn" id="cj-download" data-i18n="tool.download" style="background:var(--bg);color:var(--ink);border:1px solid var(--line);">Download .json</button>
+          <button type="button" class="cj-link" id="cj-sample" data-i18n="tool.sample">Load a sample CSV</button>
+        </div>
+        <ul class="cj-notes" id="cj-notes" hidden></ul>
+      </div>
+    </div>
+
+    <p class="cj-privacy" data-i18n="tool.privacy">Your CSV is converted entirely inside this browser. Nothing is uploaded, and neither the file nor its contents are saved anywhere — only your option choices (header, types, delimiter, style) are remembered.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}
+    </style>
+
+    <h2>Why a simple split(",") breaks real CSV</h2>
+    <p>The most common way people write a "quick" CSV parser is <code>line.split(",")</code>, and it works right up until a value contains a comma of its own — an address, a company name like "Smith, Jones &amp; Co.", or a number formatted "1,234". At that point the row silently splits into the wrong number of fields, and everything after the break shifts one column to the right. This tool avoids that failure mode entirely by implementing the CSV quoting rule defined in the RFC 4180 specification as a small character-by-character state machine, the same approach spreadsheet software uses internally.</p>
+
+    <h2>The three rules that make quoting work</h2>
+    <ul>
+      <li><strong>A field can be wrapped in double quotes.</strong> <code>"Smith, Jones &amp; Co."</code> is one field, not two, even though it contains a comma.</li>
+      <li><strong>A quoted field can contain real line breaks.</strong> A multi-line address pasted into one cell stays as one field instead of breaking into extra rows.</li>
+      <li><strong>A literal double quote inside a quoted field is doubled.</strong> <code>"She said ""hello"""</code> parses to the value <code>She said "hello"</code> — the parser sees <code>""</code> and outputs a single <code>"</code>, only ending the field when a quote is <em>not</em> followed by another one.</li>
+    </ul>
+
+    <h2>Worked examples</h2>
+    <div class="example">
+      <p><strong>Example 1 — a comma inside a quoted value.</strong> The row <code>"Turing, Alan",39,"Manchester, UK"</code> has three real fields — a naive comma split would see four. This tool correctly reads it as <code>["Turing, Alan", "39", "Manchester, UK"]</code>, then with a header row and type detection on, the age becomes the JSON number <code>39</code>.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — semicolon-delimited export.</strong> A spreadsheet saved from a locale where the decimal separator is a comma often exports <code>name;price;inStock</code> with semicolons instead of commas. Auto-detect samples the first lines, sees a semicolon appearing the same number of times on every row, and parses the file correctly without you choosing anything — or you can force Semicolon from the Delimiter dropdown.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — an identifier that looks like a number.</strong> A column of US ZIP codes containing <code>00501</code> stays the exact string <code>"00501"</code> with type detection on, because a leading zero means "this is an identifier, not an arithmetic quantity" — converting it to the number <code>501</code> would silently throw away a digit every time someone re-reads the JSON.</p>
+    </div>
+
+    <h2>Header row vs. array output</h2>
+    <p>With "First row is header" on, each row becomes a JSON object keyed by the header names — the shape almost every API and database import expects. Rows with too few columns get the missing keys filled with <code>null</code> (or an empty string, if type detection is off); rows with extra trailing columns keep the extra values under <code>extra_1</code>, <code>extra_2</code>… instead of silently discarding them. Turn the option off for headerless CSV — each row becomes a plain array like <code>["Ada", 36, true]</code>, preserving column order with no guessing.</p>
+
+    <h2>Common CSV export quirks this tool handles</h2>
+    <table>
+      <thead><tr><th>Quirk</th><th>Where it's common</th><th>How this tool handles it</th></tr></thead>
+      <tbody>
+        <tr><td>Semicolon delimiter</td><td>Locales where "," is the decimal separator (much of Europe, Latin America)</td><td>Auto-detected, or force it from the dropdown</td></tr>
+        <tr><td>Tab-separated (TSV)</td><td>Copy-paste out of spreadsheets and database tools</td><td>Auto-detected the same way as comma/semicolon</td></tr>
+        <tr><td>EUC-KR encoding</td><td>CSV exported from the Korean edition of Excel</td><td>Detected on upload with a fallback and a visible notice</td></tr>
+        <tr><td>Leading-zero IDs</td><td>ZIP/postal codes, employee IDs, phone extensions</td><td>Left as exact strings, never coerced to a number</td></tr>
+        <tr><td>Ragged rows</td><td>Manually edited spreadsheets, hand-written CSV</td><td>Padded with null or preserved under extra_N — never silently dropped</td></tr>
+      </tbody>
+    </table>
+
+    <h2>What "Detect numbers &amp; booleans" actually changes</h2>
+    <p>Every CSV cell is plain text — there is no such thing as a "number cell" in the file format itself. When type detection is on, a cell becomes a JSON number only if it matches a plain numeric pattern with no leading zero (so <code>7</code>, <code>-3</code> and <code>0.5</code> convert, but <code>007</code> does not), and becomes a JSON boolean only if it is exactly <code>true</code> or <code>false</code> in any letter case. An empty cell becomes JSON <code>null</code> rather than an empty string, which is usually what downstream code expects for "no value." Turn type detection off for a lossless, purely textual conversion — useful when every value, including numbers, needs to stay a string for an exact round trip.</p>
+
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Assuming a comma always separates fields</strong> — a quoted comma inside a value is data, not a delimiter; this tool's quoting-aware parser is what tells the difference.</li>
+      <li><strong>Converting ID-like numbers</strong> — ZIP codes, SKUs and phone extensions with a leading zero should usually stay strings; leave type detection on and trust the leading-zero rule, or turn it off entirely if every column is an identifier.</li>
+      <li><strong>Forgetting the header check</strong> — pasting a headerless export with "First row is header" left on turns your first real data row into field names by mistake.</li>
+      <li><strong>Not checking the notes list</strong> — ragged rows, duplicate header names and possible precision loss are reported after conversion instead of failing silently.</li>
+    </ul>
+
+    <h2>Runs entirely in your browser</h2>
+    <p>Parsing, delimiter detection, type inference and JSON generation all happen locally in this browser's own JavaScript engine. Nothing you paste or drop is uploaded anywhere, which matters for spreadsheets containing customer names, emails, or other personal or business data. Only your option choices are remembered in local storage for next time — the CSV content itself is never saved.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc4180" target="_blank" rel="noopener">RFC 4180 (IETF) — the common format and MIME type for CSV files, including quoting rules</a></li>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc8259" target="_blank" rel="noopener">RFC 8259 (IETF) — the JSON data interchange format specification</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank" rel="noopener">MDN Web Docs — how JavaScript parses and serializes JSON values</a></li>
+      <li><a href="https://www.w3.org/TR/tabular-data-model/" target="_blank" rel="noopener">W3C Model for Tabular Data — headers, data types and metadata for CSV on the web</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/download-time-calc/"><span class="related-ico" aria-hidden="true">⬇️</span><span class="related-name">Download Time Calculator</span></a><a class="related-item" href="https://tool-hub.me/gradient-generator/"><span class="related-ico" aria-hidden="true">🌈</span><span class="related-name">CSS Gradient Generator</span></a><a class="related-item" href="https://tool-hub.me/hash-gen/"><span class="related-ico" aria-hidden="true">#️⃣</span><span class="related-name">Hash Generator</span></a><a class="related-item" href="https://tool-hub.me/html-entity-conv/"><span class="related-ico" aria-hidden="true">🔣</span><span class="related-name">HTML Entity Encoder / Decoder</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How does this tool handle commas or line breaks inside a CSV field?</summary>
+      <p data-i18n="faq.a1">Real-world CSV often has a comma, a line break, or a quote mark inside a single value — for example a company name written "Smith, Jones &amp; Co." or a multi-line address. This converter implements the CSV quoting rule from RFC 4180 itself as a small state machine, instead of just splitting the text on every comma. A field wrapped in double quotes can safely contain commas and line breaks, and a literal double quote inside a quoted field is written as two double quotes (""), which this tool turns back into a single ". So a row like "Smith, Jones &amp; Co.","New York, NY" becomes two clean values, not four broken ones.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What's the difference between "First row is header" on and off?</summary>
+      <p data-i18n="faq.a2">With "First row is header" on (the default), the first line is treated as field names and every following row becomes a JSON object such as {"name": "Ada", "age": 36} — the usual shape for CSV to JSON. Turn it off if your CSV has no header row and every row is just data: the output becomes an array of arrays instead, like ["Ada", 36], with nothing guessed or renamed. Duplicate header names are automatically made unique (name, name_2, name_3…) so one column never silently overwrites another.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why does "007" stay a string but "7" becomes a number?</summary>
+      <p data-i18n="faq.a3">When type detection is on, this converter turns a cell into a JSON number only if it looks like a plain number with no leading zero — so 7, -3 and 0.5 become numbers, but 007, 01 and similar values stay as text. That's deliberate: a leading zero almost always means the value is really an identifier, like a ZIP code, an employee number or a phone extension, and converting "00501" to the number 501 would silently lose data. The same care applies to true/false, which are only converted when a cell is exactly "true" or "false" (any letter case) — a word like "Truex" is left alone as text.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How is the delimiter (comma, semicolon or tab) detected, and can I override it?</summary>
+      <p data-i18n="faq.a4">Many countries export CSV with a semicolon instead of a comma — common where the decimal separator is itself a comma — and some exports use tabs (TSV). This tool samples the first several non-empty lines and picks whichever of comma, semicolon or tab appears the same number of times on every one of them, which is a far stronger signal than just counting the single most common character. If your file is unusual, or auto-detect guesses wrong, the Delimiter dropdown lets you force comma, semicolon or tab directly.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my CSV file uploaded to a server?</summary>
+      <p data-i18n="faq.a5">No. Parsing, type conversion and JSON generation all run locally in this browser's own JavaScript engine — a pasted CSV or a dropped file is never sent anywhere, which matters if your spreadsheet contains names, emails or other personal or business data. Only your option choices (header row, type detection, delimiter, pretty/minified) are kept in this browser's local storage so they're remembered next time; the CSV content itself is never saved, even locally.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

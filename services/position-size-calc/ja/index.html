@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-pxO86yI1tag5dxJxwgypAH9dn1FFHa9Fv5F+nBRPA/k=' 'sha256-ORSNNafebYjEeaipGQrwft5/VAsB0BvGGKOXT+5t+f4=' 'sha256-HWmz3QATowSIl7A3avR3LA6uz3V+RVN1c2UJ/djL5tE='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ポジションサイズ計算ツール — 1トレードのリスク</title>
+<meta name="description" content="口座資金・1トレードのリスク割合・損切り幅から適正な株数を計算します。1回の負けの損失額を一定に抑える定率ポジションサイジングです。">
+<meta name="keywords" content="position size calculator, position sizing, risk per trade calculator, stop loss position size, share size calculator, fixed fractional position sizing">
+<link rel="canonical" href="https://tool-hub.me/position-size-calc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/position-size-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/position-size-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/position-size-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/position-size-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/position-size-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/position-size-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/position-size-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/position-size-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/position-size-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/position-size-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/position-size-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/position-size-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/position-size-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/position-size-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/position-size-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ポジションサイズ計算ツール — 1トレードのリスク">
+<meta property="og:description" content="口座資金・1トレードのリスク割合・損切り幅から適正な株数を計算します。1回の負けの損失額を一定に抑える定率ポジションサイジングです。">
+<meta property="og:url" content="https://tool-hub.me/position-size-calc/ja/">
+<meta property="og:image" content="https://tool-hub.me/position-size-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0c4a6e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Position Size Calculator",
+  "description": "Work out how many shares to trade from your account size, risk per trade and stop-loss distance. Fixed-fractional sizing that caps every single loss.",
+  "url": "https://tool-hub.me/position-size-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Position Size Calculator",
+      "item": "https://tool-hub.me/position-size-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why risk a fixed 1% per trade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fixed-fractional sizing keeps every loss the same fraction of a shrinking account, so a losing streak scales itself down instead of wiping you out. Ten straight losses at 1% leave you about 9.6% down; the same ten at 5% leave you 40% down and needing a 67% gain just to get back. Losing streaks that long are statistically normal even with a genuine edge, so the smaller number is what keeps you in the game."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I set the stop first or the size first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stop first, always. Decide where price would prove the trade wrong — below the swing low, outside the range, under the moving average — and only then let the calculator turn that distance into a share count. Choosing the size first and squeezing the stop to fit it is how traders get shaken out by ordinary noise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a tight stop justify a huge position?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A 20-cent stop on a 50-dollar stock mathematically allows an enormous position, but a gap, a halt or a fast market can jump straight through that stop and the real loss ends up far above 1%. Most desks add a concentration cap on top of the risk rule — for example no single position above 20-25% of equity — precisely because the stop is a plan, not a guarantee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this apply to long-term investing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not really. Sizing against a stop is a trading discipline; buy-and-hold investors control risk through diversification, asset allocation and time horizon instead. If you have no stop and no exit plan there is nothing here to compute, and a portfolio allocation approach is the right tool."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Position Size Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Position Size Calculator</span></nav>
+  <section class="hero">
+    <h1>Position Size Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">The stop sets your risk per share. The account sets how much you can afford to be wrong.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard .rc-sub { font-size:12px; color:var(--muted); margin-top:3px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .warn { color:#b45309; font-size:13px; font-weight:600; margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="account" data-i18n="tool.account.label">Account size</label>
+        <input type="number" id="account" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="25000">
+      </div>
+      <div>
+        <label for="risk" data-i18n="tool.risk.label">Risk per trade</label>
+        <select id="risk">
+          <option value="0.5" data-i18n="tool.risk.opt05">0.5% — conservative</option>
+          <option value="1" selected data-i18n="tool.risk.opt1">1% — standard</option>
+          <option value="2" data-i18n="tool.risk.opt2">2% — aggressive</option>
+          <option value="custom" data-i18n="tool.risk.optcustom">Custom %</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="risk-custom-wrap" hidden>
+      <label for="risk-custom" data-i18n="tool.risk.customlabel">Custom risk %</label>
+      <input type="number" id="risk-custom" inputmode="decimal" min="0.01" max="100" step="any" autocomplete="off" placeholder="1.5">
+    </div>
+    <div>
+      <label for="frac"><input type="checkbox" id="frac"> <span data-i18n="tool.frac.label">Allow fractional shares</span></label>
+    </div>
+    <p class="subtle" data-i18n="tool.risk.note">Professionals rarely risk more than 1–2% of account equity on a single trade.</p>
+
+    <div class="field-row">
+      <div>
+        <label for="entry" data-i18n="tool.entry.label">Entry price</label>
+        <input type="number" id="entry" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="50.00">
+      </div>
+      <div>
+        <label for="stop" data-i18n="tool.stop.label">Stop-loss price</label>
+        <input type="number" id="stop" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="47.50">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate position size</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.shares">Position size (shares)</div>
+          <div class="rc-val" id="r-shares">—</div>
+          <div class="rc-sub" id="r-dir"></div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.risk">Risk on this trade</div><div class="rc-val" id="r-risk">—</div></div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.value">Position value</div>
+          <div class="rc-val" id="r-value">—</div>
+          <div class="rc-sub" id="r-pct"></div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.pershare">Risk per share</div><div class="rc-val" id="r-pershare">—</div></div>
+      </div>
+      <p class="warn" id="warn-margin" hidden data-i18n="tool.note.margin">Position value is above your account equity — this size would need margin. Cap it at what you can actually fund.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.risk" style="margin-top:12px;">Educational risk-management maths, not advice. Trading involves risk of loss, and gaps or slippage can make the real loss larger than the figure shown.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>Position sizing in one sentence</h2>
+    <p>Decide in advance how much of the account you are willing to lose if the trade fails, then buy the number of shares that makes that loss come true exactly — no more. Everything else in this calculator is arithmetic around that one decision. The size is an output, never an input, and the moment you start choosing the size first you have swapped a risk rule for a hunch.</p>
+
+    <h3>The worked example behind the default numbers</h3>
+    <p>Say the account holds 25,000 and you use the standard 1% rule. Your risk budget for this trade is 25,000 x 0.01 = 250. You want to buy at 50.00 and the chart says the idea is broken below 47.50, so risk per share is 50.00 - 47.50 = 2.50. Shares = 250 / 2.50 = 100. The position is worth 100 x 50 = 5,000, which is 20% of the account — a fifth of your capital deployed, but only 1% of it actually at risk. Those two numbers are different and confusing them is the most common beginner error.</p>
+    <p>Now widen the stop to 45.00 because the real structural low sits there. Risk per share becomes 5.00, shares drop to 50, and position value halves to 2,500. The dollar risk stays at 250. That is the whole point of the method: the stop moves, the size compensates, and the loss stays constant.</p>
+
+    <h2>Why 1% and not 5%</h2>
+    <p>Losing streaks are not a sign that something has gone wrong; they are the normal behaviour of any strategy with a win rate below 100%. A system that wins 50% of the time will produce a run of seven or more losses roughly once every few hundred trades. The question is not whether the streak arrives but what the account looks like when it does.</p>
+    <table>
+      <thead><tr><th>Consecutive losses</th><th>At 1% risk</th><th>At 2% risk</th><th>At 5% risk</th></tr></thead>
+      <tbody>
+        <tr><td>5</td><td>-4.9%</td><td>-9.6%</td><td>-22.6%</td></tr>
+        <tr><td>10</td><td>-9.6%</td><td>-18.3%</td><td>-40.1%</td></tr>
+        <tr><td>15</td><td>-14.0%</td><td>-26.1%</td><td>-53.7%</td></tr>
+        <tr><td>20</td><td>-18.2%</td><td>-33.2%</td><td>-64.2%</td></tr>
+        <tr><td>Gain needed to recover 20 losses</td><td>22%</td><td>50%</td><td>179%</td></tr>
+      </tbody>
+    </table>
+    <p>The bottom row is the one that ends careers. Drawdowns and recoveries are not symmetrical: lose 50% and you need 100% to get back. At 1% risk a twenty-trade losing streak is an unpleasant month. At 5% it is a rebuild from scratch, and most traders abandon the strategy long before the maths gets a chance to work.</p>
+
+    <h3>R-multiple thinking</h3>
+    <p>Once every trade risks the same amount, that amount becomes your unit of measurement — one R. A trade that gains three times the initial risk is +3R whether the account is 5,000 or 500,000. Suddenly you can compare trades across instruments and time, and you can ask the only question that matters: is my average result positive in R? A system with a 40% win rate and an average winner of 2.5R makes money; a system with a 70% win rate and an average winner of 0.3R does not. Position sizing is what makes that comparison possible in the first place, because without it every trade is measured in a different currency.</p>
+
+    <h2>The stop-first workflow</h2>
+    <p>In practice the sequence looks like this. First, identify the level that invalidates your idea — the swing low, the far side of the range, the point where the pattern stops being a pattern. Second, place the stop slightly beyond it so ordinary noise cannot reach it. Third, feed entry and stop into this calculator and take whatever share count comes out. Fourth, sanity-check the position value against a concentration cap: many traders refuse to put more than 20-25% of equity into one name regardless of how tight the stop is.</p>
+    <p>Reversing steps one and three is where damage happens. If you decide you want 500 shares and then hunt for a stop that fits, you will end up with a stop 30 cents away on a stock that swings a dollar a day, and you will be flat before the idea has had time to work.</p>
+
+    <h2>Honest limitations</h2>
+    <p>A stop-loss defines your intended risk, not your guaranteed risk. Overnight gaps ignore stops entirely — an earnings miss can open 15% below your level and your 1% trade becomes a 6% trade. Fast markets, halts and thin pre-market books produce slippage in the same direction. Commissions and spread are not modelled here either, and on small accounts with many trades they matter.</p>
+    <p>Two practical adjustments follow. Cut size before scheduled binary events, or accept a wider effective risk on them. And treat the 1% figure as a ceiling on a normal trade rather than a target to hit on every idea — the strongest setups deserve the full unit, marginal ones do not. Used that way, position sizing stops being a formula and becomes the thing that keeps you trading long enough for an edge to show up.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.investor.gov/" target="_blank" rel="noopener">SEC Investor.gov — investor education on trading risk, stop orders and account protection</a></li>
+      <li><a href="https://www.sec.gov/" target="_blank" rel="noopener">U.S. Securities and Exchange Commission — rules and alerts on market volatility, halts and order handling</a></li>
+      <li><a href="https://www.cftc.gov/" target="_blank" rel="noopener">U.S. Commodity Futures Trading Commission — leverage and risk-disclosure guidance for futures and forex traders</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/ppf-calc/"><span class="related-ico" aria-hidden="true">🏛️</span><span class="related-name">PPF Calculator</span></a><a class="related-item" href="https://tool-hub.me/prorated-rent-calc/"><span class="related-ico" aria-hidden="true">🗓️</span><span class="related-name">Prorated Rent Calculator</span></a><a class="related-item" href="https://tool-hub.me/rd-calc/"><span class="related-ico" aria-hidden="true">🏦</span><span class="related-name">RD Calculator</span></a><a class="related-item" href="https://tool-hub.me/refinance-calc/"><span class="related-ico" aria-hidden="true">🔄</span><span class="related-name">Refinance Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why risk a fixed 1% per trade?</summary><p data-i18n="faq.a1">Fixed-fractional sizing keeps every loss the same fraction of a shrinking account, so a losing streak scales itself down instead of wiping you out. Ten straight losses at 1% leave you about 9.6% down; the same ten at 5% leave you 40% down and needing a 67% gain just to get back. Losing streaks that long are statistically normal even with a genuine edge, so the smaller number is what keeps you in the game.</p></details>
+    <details><summary data-i18n="faq.q2">Should I set the stop first or the size first?</summary><p data-i18n="faq.a2">Stop first, always. Decide where price would prove the trade wrong — below the swing low, outside the range, under the moving average — and only then let the calculator turn that distance into a share count. Choosing the size first and squeezing the stop to fit it is how traders get shaken out by ordinary noise.</p></details>
+    <details><summary data-i18n="faq.q3">Does a tight stop justify a huge position?</summary><p data-i18n="faq.a3">No. A 20-cent stop on a 50-dollar stock mathematically allows an enormous position, but a gap, a halt or a fast market can jump straight through that stop and the real loss ends up far above 1%. Most desks add a concentration cap on top of the risk rule — for example no single position above 20-25% of equity — precisely because the stop is a plan, not a guarantee.</p></details>
+    <details><summary data-i18n="faq.q4">Does this apply to long-term investing?</summary><p data-i18n="faq.a4">Not really. Sizing against a stop is a trading discipline; buy-and-hold investors control risk through diversification, asset allocation and time horizon instead. If you have no stop and no exit plan there is nothing here to compute, and a portfolio allocation approach is the right tool.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

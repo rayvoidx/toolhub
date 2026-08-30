@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-Cs9Yatw3CsfbA27/NWRi9Ru7wLsCZ3loNvIAJK2jL/c=' 'sha256-cN6XpBqeMZy/tvHTluz/W50wSRkMvUdERU9N2/v3oZs=' 'sha256-DosfQh01pVY6P+FqFyQIDWfbluhQhLiEVhLnFT7jR/E='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de asfalto — toneladas, volumen y coste</title>
+<meta name="description" content="Calcula cuánto asfalto en caliente necesitas en toneladas y metros cúbicos. Introduce largo, ancho y espesor compactado del camino, aparcamiento o refuerzo.">
+<meta name="keywords" content="asphalt calculator, asphalt tonnage calculator, how much asphalt do i need, hot mix asphalt, asphalt driveway cost, tons of asphalt per square foot">
+<link rel="canonical" href="https://tool-hub.me/asphalt-calc/es/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/asphalt-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/asphalt-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/asphalt-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/asphalt-calc/ja/">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/asphalt-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/asphalt-calc/es/">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/asphalt-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/asphalt-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/asphalt-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/asphalt-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/asphalt-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/asphalt-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/asphalt-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/asphalt-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/asphalt-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de asfalto — toneladas, volumen y coste">
+<meta property="og:description" content="Calcula cuánto asfalto en caliente necesitas en toneladas y metros cúbicos. Introduce largo, ancho y espesor compactado del camino, aparcamiento o refuerzo.">
+<meta property="og:url" content="https://tool-hub.me/asphalt-calc/es/">
+<meta property="og:image" content="https://tool-hub.me/asphalt-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#262626">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Asphalt Calculator",
+  "description": "Work out how much hot mix asphalt you need in tons and cubic yards. Enter length, width and compacted thickness for a driveway, lot or overlay, plus cost.",
+  "url": "https://tool-hub.me/asphalt-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-27",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toolhub",
+    "url": "https://tool-hub.me/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Asphalt Calculator",
+      "item": "https://tool-hub.me/asphalt-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many square feet does a ton of asphalt cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At the standard 145 lb per cubic foot, one ton of hot mix is about 13.8 cubic feet of compacted material. That covers roughly 83 sq ft at 2 in thick, 55 sq ft at 3 in, and 41 sq ft at 4 in. Divide your square footage by those figures for a quick sanity check on the tonnage shown here."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What goes under the asphalt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Asphalt is only the wearing course. Under it you need 6 to 8 in of compacted crushed aggregate base on stable subgrade, and 8 to 12 in where frost heave or soft clay is a problem. This calculator prices the asphalt alone — the base stone is a separate order and usually the larger volume."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Overlay or full-depth replacement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 2 in overlay works when the existing surface is structurally sound: hairline cracks, no potholes, drainage still working. Alligator cracking means the base below has failed, and paving over it simply telegraphs the same failure through the new mat within a year or two. In that case remove and rebuild full depth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How thick should a residential driveway be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two to three inches compacted is the norm for cars, laid over 6 to 8 in of compacted base. Go to 4 in where trucks, RVs or skips will park. The thickness in this calculator is always compacted thickness — loose hot mix loses roughly 20 to 25 per cent of its depth once it is rolled."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Asphalt Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Asphalt Calculator</span></nav>
+  <section class="hero">
+    <h1>Asphalt Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">How much asphalt do you need? Tonnage, volume and material cost from length, width and compacted thickness.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .u { color:var(--muted); font-weight:400; font-size:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .warn { color:#b45309; font-size:13px; font-weight:600; margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="unit" data-i18n="tool.unit.label">Measurement units</label>
+    <select id="unit">
+      <option value="ft" data-i18n="tool.unit.ft">Feet and inches (US)</option>
+      <option value="m" data-i18n="tool.unit.m">Metres and centimetres</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="len"><span data-i18n="tool.len.label">Length</span> <span class="u" id="u-len">ft</span></label>
+        <input type="number" id="len" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="40">
+      </div>
+      <div>
+        <label for="wid"><span data-i18n="tool.wid.label">Width</span> <span class="u" id="u-wid">ft</span></label>
+        <input type="number" id="wid" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12">
+      </div>
+    </div>
+
+    <label for="thick" data-i18n="tool.thick.label">Compacted thickness</label>
+    <select id="thick">
+      <option value="2" data-i18n="tool.thick.t2">2 in / 5 cm — overlay on a sound base</option>
+      <option value="3" selected data-i18n="tool.thick.t3">3 in / 7.5 cm — residential driveway</option>
+      <option value="4" data-i18n="tool.thick.t4">4 in / 10 cm — trucks, parking lot</option>
+      <option value="custom" data-i18n="tool.thick.custom">Custom thickness</option>
+    </select>
+
+    <div id="f-custom" hidden>
+      <label for="tcustom"><span data-i18n="tool.thick.customlabel">Custom thickness</span> <span class="u" id="u-thick">in</span></label>
+      <input type="number" id="tcustom" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="3">
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="density"><span data-i18n="tool.density.label">Mix density (optional)</span> <span class="u" id="u-density">lb/ft3</span></label>
+        <input type="number" id="density" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="145">
+      </div>
+      <div>
+        <label for="price" data-i18n="tool.price.label">Price per ton (optional)</label>
+        <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="100">
+      </div>
+    </div>
+
+    <label for="waste" data-i18n="tool.waste.label">Waste allowance % (optional)</label>
+    <input type="number" id="waste" inputmode="decimal" min="0" max="50" step="any" autocomplete="off" placeholder="0">
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate asphalt</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.tons">Hot mix asphalt needed</div>
+          <div class="rc-val" id="r-tons">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.volume">Volume</div><div class="rc-val" id="r-volume">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Area paved</div><div class="rc-val" id="r-area">—</div></div>
+        <div class="rcard" id="c-order" hidden><div class="rc-label" data-i18n="tool.r.order">Order this much</div><div class="rc-val" id="r-order">—</div></div>
+        <div class="rcard" id="c-cost" hidden><div class="rc-label" data-i18n="tool.r.cost">Estimated material cost</div><div class="rc-val" id="r-cost">—</div></div>
+      </div>
+      <p class="subtle" id="r-cover"></p>
+      <p class="warn" id="warn" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.density" style="margin-top:12px;">Leave density blank to use 145 lb/ft3 (2,322 kg/m3), the standard for compacted hot mix. Open-graded and lightweight mixes run 5 to 10 per cent lower.</p>
+    <p class="subtle" data-i18n="tool.note.order">Tonnage is compacted in-place weight. Add 5 to 10 per cent for edges, wedges and hand work, and confirm the mix density with your plant.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How much asphalt do I need? A 40 x 12 ft driveway, worked end to end</h2>
+    <p>Asphalt is sold by weight, but you measure the job by volume, and that mismatch is where most DIY estimates go wrong. The chain is always the same: area, then volume, then weight, then money. Take a typical single-car driveway of 40 ft by 12 ft finished at 3 in compacted, which is the standard residential specification in both the US and the UK.</p>
+
+    <h3>Step 1 — volume</h3>
+    <p>Area is 40 x 12 = 480 sq ft. Thickness has to be converted from inches to feet, so 3 in becomes 3 / 12 = 0.25 ft. Volume is 480 x 0.25 = 120 cubic feet, which is 120 / 27 = 4.44 cubic yards. Everything on the calculator above is this one line with unit handling attached.</p>
+
+    <h3>Step 2 — tonnage</h3>
+    <p>Compacted hot mix asphalt weighs about 145 lb per cubic foot. Multiply: 120 x 145 = 17,400 lb, and 17,400 / 2,000 = 8.7 US tons. A plant will round that to a 9-ton order because trucks are loaded in whole tons and a partial load still costs a delivery. Order 5 to 10 per cent extra anyway — edges, the wedge where the driveway meets the road, and hand-raked areas around a garage apron always eat more than the flat calculation suggests.</p>
+
+    <h3>Step 3 — cost</h3>
+    <p>At a plant price of 
+
+  00 per ton, 8.7 tons is $870 in material. Delivered and laid by a contractor, the same driveway typically runs $3 to $7 per square foot in the US, or roughly £45 to £75 per square metre for tarmac in the UK, because labour, plant hire, base stone and the roller dominate the bill. Material is usually a third or less of an installed price — use the tonnage figure to sanity-check a quote, not to replace it.</p>
+
+    <h3>The same driveway at other thicknesses</h3>
+    <p>Doubling the thickness doubles the tonnage exactly. At 2 in the driveway needs 80 cubic feet and 5.8 tons; at 3 in, 8.7 tons; at 4 in, 11.6 tons. In metric that 12.2 m by 3.66 m drive at 7.5 cm works out at 3.35 m3 and about 7.8 tonnes at 2,322 kg/m3. The coverage line under the results is the fastest field check there is: at 145 lb/ft3 one ton covers roughly 83 sq ft at 2 in, 55 sq ft at 3 in and 41 sq ft at 4 in.</p>
+
+    <h2>Density and compaction — what "compacted thickness" really means</h2>
+    <p>The 145 lb/ft3 figure is the density of asphalt after it has been rolled. Loose out of the truck, the same mix is far lighter and deeper: a mat placed at roughly 3.75 in loose finishes at about 3 in once compacted, a loss of 20 to 25 per cent. Always specify and calculate compacted thickness, which is what this tool uses, or you will under-order by a fifth.</p>
+    <p>Density varies with the mix. Dense-graded surface course sits near 145 to 150 lb/ft3. Open-graded friction course and lightweight or recycled-heavy mixes come in 5 to 10 per cent lower, while some binder courses run slightly higher. If the plant gives you a number, put it in the density field; the tonnage moves proportionally.</p>
+
+    <h2>The base is where driveways actually fail</h2>
+    <p>Asphalt is only the wearing course. It flexes and spreads load, but it cannot bridge a soft spot. Underneath you want 6 to 8 in of compacted crushed aggregate — MOT Type 1 in the UK, dense-graded aggregate base in the US — on a subgrade that has been proof-rolled and drains. In frost-heave regions, or over soft clay, that goes to 8 to 12 in, sometimes with a geotextile separator to stop the stone from pumping down into the mud.</p>
+    <p>Nearly every ruined driveway you see is a base failure, not an asphalt failure: standing water at the edges, alligator cracking in the wheel tracks, a dip where the delivery lorry parks. Adding another inch of asphalt over a failing base is the most expensive way to buy two more years. Price the stone separately, and if the budget is tight, take it out of the asphalt thickness rather than the base depth.</p>
+
+    <h2>After the paving: sealing and the first year</h2>
+    <p>New asphalt needs to cure before it is sealed. Give it 6 to 12 months so the volatile oils oxidise off; sealcoating a fresh mat traps them and leaves a surface that scuffs and prints under tyres in hot weather. After that, sealcoat every 3 to 5 years, and crack-fill as soon as cracks open past hairline width — water in a crack, then freezing, is what turns a crack into a pothole. Avoid turning the steering wheel of a parked car on a hot new drive, and keep jack stands and trailer jacks on a spreader plate for the first summer.</p>
+
+    <h2>Limits of this estimate</h2>
+    <p>The calculator assumes a rectangular area of uniform thickness at a single density. For irregular shapes, split the job into rectangles and add the tonnages. For a crown or a taper, use the average thickness. It does not include the tack coat between layers, the base stone, milling and haul-away of the old surface, or a wedge course to fix bad grades — those are separate line items on any real quote. Confirm the mix, density and minimum load with your supplier before ordering.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.fhwa.dot.gov/pavement/" target="_blank" rel="noopener">FHWA Pavements — federal guidance on asphalt pavement design, thickness and construction</a></li>
+      <li><a href="https://www.epa.gov/smm" target="_blank" rel="noopener">EPA Sustainable Materials Management — reuse of reclaimed asphalt pavement and aggregate</a></li>
+      <li><a href="https://www.gov.uk/government/organisations/national-highways" target="_blank" rel="noopener">National Highways (UK) — road surfacing standards and specifications for tarmac works</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/board-foot-calc/"><span class="related-ico" aria-hidden="true">🪵</span><span class="related-name">Board Foot Calculator</span></a><a class="related-item" href="https://tool-hub.me/bra-size-calc/"><span class="related-ico" aria-hidden="true">📏</span><span class="related-name">Bra Size Calculator</span></a><a class="related-item" href="https://tool-hub.me/brick-calc/"><span class="related-ico" aria-hidden="true">🧱</span><span class="related-name">Brick Calculator</span></a><a class="related-item" href="https://tool-hub.me/btu-calc/"><span class="related-ico" aria-hidden="true">❄️</span><span class="related-name">BTU Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How many square feet does a ton of asphalt cover?</summary><p data-i18n="faq.a1">At the standard 145 lb per cubic foot, one ton of hot mix is about 13.8 cubic feet of compacted material. That covers roughly 83 sq ft at 2 in thick, 55 sq ft at 3 in, and 41 sq ft at 4 in. Divide your square footage by those figures for a quick sanity check on the tonnage shown here.</p></details>
+    <details><summary data-i18n="faq.q2">What goes under the asphalt?</summary><p data-i18n="faq.a2">Asphalt is only the wearing course. Under it you need 6 to 8 in of compacted crushed aggregate base on stable subgrade, and 8 to 12 in where frost heave or soft clay is a problem. This calculator prices the asphalt alone — the base stone is a separate order and usually the larger volume.</p></details>
+    <details><summary data-i18n="faq.q3">Overlay or full-depth replacement?</summary><p data-i18n="faq.a3">A 2 in overlay works when the existing surface is structurally sound: hairline cracks, no potholes, drainage still working. Alligator cracking means the base below has failed, and paving over it simply telegraphs the same failure through the new mat within a year or two. In that case remove and rebuild full depth.</p></details>
+    <details><summary data-i18n="faq.q4">How thick should a residential driveway be?</summary><p data-i18n="faq.a4">Two to three inches compacted is the norm for cars, laid over 6 to 8 in of compacted base. Go to 4 in where trucks, RVs or skips will park. The thickness in this calculator is always compacted thickness — loose hot mix loses roughly 20 to 25 per cent of its depth once it is rolled.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>
