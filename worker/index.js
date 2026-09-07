@@ -19,6 +19,16 @@ export default {
     }
 
     /*
+     * 2026-09-07: 언어별 정적 하위 페이지(/<slug>/ko|ja|es/)를 폐기했다 — 본문 가이드가 영어 원문
+     * 그대로여서 984 URL 이 중복 페이지로 색인됐고 AdSense 저가치 콘텐츠 판정을 받았다.
+     * 잔존 북마크·색인 URL 은 런타임 i18n 이 지원하는 ?lang= 로 영구 이동시킨다.
+     */
+    const langPage = url.pathname.match(/^\/([^/]+)\/(ko|ja|es)\/?$/);
+    if (langPage) {
+      return Response.redirect(`${url.origin}/${langPage[1]}/?lang=${langPage[2]}`, 301);
+    }
+
+    /*
      * 외부 공개 URL:
      *   /loan-calc/
      *
