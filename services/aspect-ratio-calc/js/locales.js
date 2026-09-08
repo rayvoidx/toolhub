@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
       "meta.title": "Aspect Ratio Calculator — Resize Without Distortion",
-    "meta.description": "Enter your original width and height, then one new dimension — get the other instantly, plus the simplified ratio (16:9, 4:3, 21:9). Free, works in your browser.",
+    "meta.description": "Enter your original width and height, then one new dimension — get the other instantly, plus the simplified ratio (16:9, 4:3, 21:9).",
     "hero.lede": "Keep the proportions. Type one new dimension and get the matching one.",
     "tool.w.label": "Original width",
     "tool.h.label": "Original height",

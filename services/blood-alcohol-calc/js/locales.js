@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Blood Alcohol Calculator (BAC) — Widmark Formula Estimate",
-    "meta.description": "Free blood alcohol content (BAC) calculator using the Widmark formula. Enter your sex, weight, the drinks you had and hours elapsed to estimate your current BAC and how long until it drops below common legal limits. Educational estimate only — never use it to decide to drive.",
+    "meta.description": "Free blood alcohol content (BAC) calculator using the Widmark formula.",
     "hero.lede": "Enter your drinks and see an estimated BAC — an educational guide, never a green light to drive.",
     "tool.banner": "Estimate only — never use this tool to decide whether to drive. If you have been drinking, do not drive.",
     "tool.sex.label": "Sex",

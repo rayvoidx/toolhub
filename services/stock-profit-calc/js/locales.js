@@ -20,7 +20,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Stock Profit Calculator — Net Profit & Break-Even",
-    "meta.description": "Free stock profit calculator: enter buy price, sell price, and quantity for realized net profit, return %, and break-even sell price — with fees, transaction tax, and capital gains tax broken out.",
+    "meta.description": "Free stock profit calculator: enter your buy price, sell price, and quantity to get realized net profit, return %, and break-even sell price — with buy/sell.",
     "hero.lede": "Sold a stock and want to know what you really made? Enter your buy price, sell price, and shares to see net profit, return %, and break-even in seconds — then add buy/sell fees, transaction tax, and capital gains tax for the after-tax number. Works in any currency.",
     "tool.buy.label": "Buy price (per share)",
     "tool.buy.ph": "e.g. 100",

@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Inventory Turnover & Dead Stock Finder — Drop your stock CSV",
-    "meta.description": "Free browser-only inventory analyzer. Drop an ERP stock CSV to get per-SKU turnover, days on hand, and a ranked dead-stock list with the cash each SKU ties up. Adjustable thresholds, 365/360-day basis, COGS or sales denominator. Your data never leaves the browser.",
+    "meta.description": "Free browser-only inventory analyzer. Drop an ERP stock CSV to get per-SKU turnover, days on hand, and a ranked dead-stock list with the cash each SKU ties up.",
     "hero.lede": "Per-SKU turnover, days on hand, and the money your slow movers are holding — computed in your browser.",
     "faq.q1": "Should inventory turnover use COGS or sales as the numerator?",
     "faq.a1": "Cost of goods sold is the correct numerator: inventory sits on the balance sheet at cost, so dividing COGS by average inventory value compares like with like. Sales revenue includes your margin, so a sales-based ratio is inflated by roughly one plus the margin — a shop with a 40% margin looks about 1.7× faster than it is. This inventory turnover calculator offers both because sales-based turnover is still common practice in wholesale and retail, but the sales option is badged \"reference only\". If you have no cost column at all, use the quantity basis: units shipped ÷ average units on hand is unit-consistent and never mixes money with pieces.",

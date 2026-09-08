@@ -14,7 +14,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Text Diff Checker — Compare Two Texts Online, Line by Line",
-    "meta.description": "Paste two texts and instantly see every added, removed and changed line or word. Ignore-case and whitespace options included — free, computed entirely in your browser.",
+    "meta.description": "Paste two texts and instantly see every added, removed and changed line or word.",
     "hero.lede": "Paste your original and changed text below to see exactly what was added, removed, and changed — line by line, word by word.",
     "tool.aria": "Text diff checker",
     "tool.original.label": "Original text",

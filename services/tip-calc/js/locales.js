@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Tip Calculator — Tip, total & per-person split in 3 seconds",
-    "meta.description": "Enter the bill, pick a tip percentage, set the number of people — get the tip amount, grand total, and each person's share instantly. Free, no ads, computed locally in your browser.",
+    "meta.description": "Enter the bill, pick a tip percentage, set the number of people — get the tip amount, grand total, and each person's share instantly.",
     "hero.lede": "How much should I tip? Enter the bill amount and the tip plus each person's share appear instantly.",
     "tool.aria": "Tip calculator",
     "tool.country.label": "Country you're paying in",

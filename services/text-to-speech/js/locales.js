@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Text to Speech — Free Online Text Reader with Natural Voices",
-    "meta.description": "Paste any text and hear it read aloud using your browser's built-in voices. Choose a voice, adjust speed and pitch, then play, pause, or stop — free, no upload, everything runs in your browser.",
+    "meta.description": "Paste any text and hear it read aloud using your browser's built-in voices.",
     "hero.lede": "Turn any text into speech instantly. Paste your text, pick a voice, adjust the speed and pitch, and press play — everything runs right in your browser tab.",
     "tool.aria": "Text to speech tool",
     "tool.text.label": "Text to read aloud",

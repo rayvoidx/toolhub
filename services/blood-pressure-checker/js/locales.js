@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Blood Pressure Checker — Find Your ACC/AHA Category",
-    "meta.description": "Enter systolic and diastolic numbers to see your blood pressure category — normal, elevated, stage 1/2, or crisis — per ACC/AHA guidelines. Free and browser-only.",
+    "meta.description": "Enter systolic and diastolic numbers to see your blood pressure category — normal, elevated, stage 1/2, or crisis — per ACC/AHA guidelines.",
     "hero.lede": "Enter your systolic and diastolic numbers to see your ACC/AHA blood pressure category instantly.",
     "tool.aria": "Blood pressure checker",
     "tool.systolic.label": "Systolic (top number)",

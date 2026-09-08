@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Unix Timestamp Converter — paste a timestamp",
-    "meta.description": "Free online Unix timestamp converter. Paste an epoch timestamp and read it as your local time and UTC at once — seconds, milliseconds and microseconds detected automatically — plus date → timestamp conversion and the current Unix time. Runs in your browser, ad-free.",
+    "meta.description": "Free online Unix timestamp converter. Paste an epoch timestamp and read it as your local time and UTC at once — seconds, milliseconds and microseconds detected.",
     "hero.lede": "Paste the number you copied out of a log. We work out the unit for you.",
     "tool.nowLabel": "Current Unix timestamp (seconds)",
     "tool.copy": "Copy",

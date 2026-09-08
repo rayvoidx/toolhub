@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Temperature Converter — Celsius, Fahrenheit & Kelvin at Once",
-    "meta.description": "Free temperature converter. Type any number and Celsius, Fahrenheit and Kelvin update instantly. Perfect for US recipe oven temps, travel weather and science homework — all in your browser, no ads.",
+    "meta.description": "Type one number and Celsius, Fahrenheit, and Kelvin update instantly.",
     "hero.lede": "Type in any field — the other two update instantly.",
     "tool.celsius.label": "Celsius (°C)",
     "tool.fahrenheit.label": "Fahrenheit (°F)",

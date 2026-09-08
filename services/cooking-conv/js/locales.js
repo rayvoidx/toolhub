@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
       "meta.title": "Cups to Grams Converter — Cooking Measurement Calculator",
-    "meta.description": "Convert cups, tablespoons and teaspoons into grams, ounces and millilitres for flour, sugar, butter, rice and more. Ingredient-aware, because a cup of flour is not a cup of sugar.",
+    "meta.description": "Convert cups, tablespoons and teaspoons into grams, ounces and millilitres for flour, sugar, butter, rice and more.",
     "hero.lede": "Volume to weight, per ingredient — the only way cup measurements convert honestly.",
     "tool.amount.label": "Amount",
     "tool.unit.label": "Unit",

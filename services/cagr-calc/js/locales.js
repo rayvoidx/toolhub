@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "CAGR Calculator — Compound Annual Growth Rate",
-    "meta.description": "Free CAGR calculator: enter a beginning value, ending value, and period to get the compound annual growth rate, total return, absolute gain, and growth multiple — with a year-by-year growth schedule. No login, no ads, computed in your browser.",
+    "meta.description": "Free CAGR calculator: enter a beginning value, ending value, and period to get the compound annual growth rate, total return, absolute gain, and growth.",
     "hero.lede": "Bought at one value and sold at another? Enter your beginning and ending value and the period to get the compound annual growth rate (CAGR), total return, and growth multiple in seconds. Enter years or dates. Works in any currency.",
     "tool.v0.label": "Beginning value",
     "tool.v0.ph": "e.g. 10,000",

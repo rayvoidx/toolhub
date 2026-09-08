@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
       "meta.title": "Dog Age Calculator — Dog Years to Human Years",
-    "meta.description": "Convert your dog's age into human years using size-adjusted veterinary charts and the epigenetic clock formula. Small, medium, large and giant breeds age at different rates.",
+    "meta.description": "Convert your dog's age into human years using size-adjusted veterinary charts and the epigenetic clock formula.",
     "hero.lede": "The multiply-by-seven rule is wrong. Size and life stage change everything.",
     "tool.age.label": "Dog's age",
     "tool.ageunit.years": "Years",

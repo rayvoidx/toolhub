@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
       "meta.title": "JWT Decoder — Read Header and Payload Locally",
-    "meta.description": "Paste a JSON Web Token to decode its header and payload, see expiry and issued-at times in readable form, and check whether the token has expired. Nothing leaves your browser.",
+    "meta.description": "Paste a JSON Web Token to decode its header and payload, see expiry and issued-at times in readable form, and check whether the token has expired.",
     "hero.lede": "Decode a token, read the claims, see when it expires — without sending it anywhere.",
     "tool.input.label": "JWT",
     "tool.calc": "Decode",

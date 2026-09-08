@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Speed Converter — km/h to mph, knots, m/s, Mach at once",
-    "meta.description": "Free online speed converter. Type one number and instantly see it in meters per second, kilometers per hour, miles per hour, feet per second, knots and Mach — all in your browser.",
+    "meta.description": "Free online speed converter. Type one number and instantly see it in meters per second, kilometers per hour, miles per hour, feet per second, knots and Mach.",
     "hero.lede": "Type a number once — see it in every speed unit instantly.",
     "tool.value.label": "Value",
     "tool.value.placeholder": "e.g. 1",

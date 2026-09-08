@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Sleep Cycle Calculator — Best bedtimes to wake up refreshed",
-    "meta.description": "Free sleep cycle calculator that finds the best times to go to bed or wake up so you complete full 90-minute sleep cycles and wake up refreshed instead of groggy. Enter your wake-up time to see recommended bedtimes, or tap 'Sleep now' for the best wake-up times. Adjustable fall-asleep time, no sign-up, computed entirely in your browser.",
+    "meta.description": "Free sleep cycle calculator that finds the best times to go to bed or wake up so you complete full 90-minute sleep cycles and wake up refreshed instead of.",
     "hero.lede": "When should you go to bed to wake up refreshed? Get bedtimes that finish full 90-minute sleep cycles in seconds.",
     "tool.aria": "Sleep cycle calculator",
     "tool.modeAria": "What do you want to calculate",

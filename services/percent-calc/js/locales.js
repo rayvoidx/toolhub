@@ -20,7 +20,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Percentage Calculator — Increase, Decrease and Change",
-    "meta.description": "Work out what percent A is of B, the result after an X% increase or decrease, and the percent change from A to B — three percentage questions answered instantly. Free and ad-free.",
+    "meta.description": "Work out what percent A is of B, the result after an X% increase or decrease, and the percent change from A to B — three percentage questions answered.",
     "hero.lede": "No formulas to memorize. Type the numbers and the answer appears instantly.",
     "tool.tablabel": "Select calculation type",
     "tool.tab.ratio": "What % is A of B",

@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Area Converter — square feet to square meters",
-    "meta.description": "Free online area converter. Type one number and instantly see it in square millimeters, centimeters, meters, kilometers, hectares, square inches, feet, yards, acres — plus Korean pyeong — all in your browser.",
+    "meta.description": "Free online area converter. Type one number and instantly see it in square millimeters, centimeters, meters, kilometers, hectares, square inches, feet, yards.",
     "hero.lede": "Type a number once — see it in every area unit instantly.",
     "tool.value.label": "Value",
     "tool.value.placeholder": "e.g. 1",

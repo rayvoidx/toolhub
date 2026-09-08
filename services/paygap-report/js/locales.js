@@ -14,7 +14,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Gender Pay Gap Report Builder — mean, median, quartiles",
-    "meta.description": "Compute the six UK statutory gender pay gap figures — mean and median hourly and bonus gaps, bonus proportion and pay quartiles — plus EU category gaps, from a payroll CSV. Browser-only, no upload.",
+    "meta.description": "Free browser-only gender pay gap report builder. Drop a payroll CSV to get the six UK statutory figures (mean and median hourly pay gap, mean and median bonus.",
     "hero.lede": "Drop a payroll CSV and get the statutory mean/median pay gaps, bonus gaps and pay quartiles — computed entirely in your browser, never uploaded.",
     "tool.privacy": "Your payroll data never leaves this browser tab. Nothing is uploaded — open DevTools › Network, then load a file and calculate: zero requests.",
     "tool.scope": "Hourly pay is read from an hourly-pay column, or derived as base pay ÷ hours worked for the period — you prepare the ordinary-pay figures, this tool only computes the gaps. Gender uses the statutory men/women binary; anything else is counted separately, never forced or dropped.",

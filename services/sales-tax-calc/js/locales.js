@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
       "meta.title": "Sales Tax Calculator — Add or Remove Tax by State",
-    "meta.description": "Enter a price and pick a US state to get the sales tax and total, or work backwards from a receipt total to the pre-tax price. Add your local county or city rate on top.",
+    "meta.description": "Enter a price and pick a US state to get the sales tax and total, or work backwards from a receipt total to the pre-tax price.",
     "hero.lede": "Price to total, or total back to price — with every state's base rate built in.",
     "tool.mode.label": "What do you have?",
     "tool.mode.add": "Price before tax",

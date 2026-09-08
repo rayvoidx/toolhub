@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Barista FIRE Calculator: Your Barista FIRE Number",
-    "meta.description": "Free Barista FIRE calculator — enter your spending, expected part-time income and withdrawal rate to see the smaller Barista FIRE number you need, how much less it is than full FIRE, and whether your savings can coast to it.",
+    "meta.description": "Free Barista FIRE calculator: enter your annual spending, expected part-time (barista) income, and withdrawal rate to see the smaller portfolio you need when.",
     "hero.lede": "Barista FIRE means semi-retiring on a smaller portfolio because part-time work covers some of your spending, so your investments only have to fund the rest. Enter your spending, expected part-time income, and target to see your reduced Barista FIRE number, how much less you need than full FIRE, and whether your savings are on track. Works in any currency.",
     "tool.age.label": "Current age",
     "tool.age.ph": "e.g. 35",

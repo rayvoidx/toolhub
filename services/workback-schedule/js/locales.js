@@ -21,7 +21,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Workback Schedule Builder — Paste your task list",
-    "meta.description": "Set a fixed deadline, paste your task list from Excel, and get the latest possible start and finish date for every task — counted backwards in business days with weekends and your country's public holidays excluded. Tells you immediately whether starting today is already too late. Free, ad-free, no account: your schedule never leaves the browser.",
+    "meta.description": "Set a fixed deadline, paste your task list from Excel, and get the latest possible start and finish date for every task — counted backwards in business days.",
     "hero.lede": "Set the deadline, paste the tasks. We count backwards in business days and tell you if you are already late.",
     "faq.q1": "What is a workback schedule, and how is it different from a normal schedule?",
     "faq.a1": "A normal schedule starts today and asks \"when will we finish?\". A workback schedule — also called a reverse or backwards schedule — starts from a deadline that cannot move and counts backwards to answer the question you actually have: \"what is the latest we can start?\". That is the everyday situation when a launch, bid submission, event or audit date is already fixed. Unlike a template you fill in by hand, this reverse schedule calculator counts the whole chain backwards in business days, so weekends and public holidays can't quietly eat your buffer.",

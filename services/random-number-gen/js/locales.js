@@ -20,7 +20,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Random Number Generator — Truly random numbers in any range",
-    "meta.description": "Free random number generator. Pick numbers in any range with no-repeat and sort options, or get lottery quick picks for Powerball, Mega Millions, EuroMillions, and Lotto 6/45. Cryptographically secure, ad-free, and nothing leaves your browser.",
+    "meta.description": "Free random number generator. Pick numbers in any range with no-repeat and sort options, or get lottery quick picks for Powerball, Mega Millions, EuroMillions.",
     "hero.lede": "Set a range, choose how many, and get unbiased random numbers instantly — or grab lottery quick picks for Powerball, Mega Millions, EuroMillions, and Lotto 6/45.",
     "tool.tab.range": "Number range",
     "tool.tab.lottery": "Lottery quick pick",

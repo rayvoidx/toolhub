@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Data Size Converter — MB to GB, bytes, KB, TB (decimal",
-    "meta.description": "Free online data size converter. Type one number and instantly see it in bits, bytes, KB, MB, GB, TB and PB — with decimal (SI, 1000) and binary (IEC, KiB/MiB/GiB, 1024) side by side, all in your browser.",
+    "meta.description": "Free online data size converter. Type one number and instantly see it in bits, bytes, KB, MB, GB, TB and PB — with decimal (SI, 1000) and binary (IEC.",
     "hero.lede": "Type a number once — see it in every data unit, decimal and binary, instantly.",
     "tool.value.label": "Value",
     "tool.value.placeholder": "e.g. 1",

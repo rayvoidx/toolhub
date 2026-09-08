@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Remove Line Breaks — Join Lines and Fix PDF Copy-Paste",
-    "meta.description": "Paste text to remove line breaks — join with a space or nothing, or use Smart mode to keep paragraphs while unwrapping PDF copy-paste lines. Free, private, browser-only.",
+    "meta.description": "Paste text to remove line breaks — join with a space or nothing, or use Smart mode to keep paragraphs while unwrapping PDF copy-paste lines.",
     "hero.lede": "Paste text with line breaks and instantly join it into one clean block — with a space, with nothing, or Smart mode that keeps paragraphs and fixes PDF copy-paste wrapping.",
     "tool.aria": "Remove line breaks tool",
     "tool.input.label": "Text with line breaks",

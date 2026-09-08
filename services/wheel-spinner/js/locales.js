@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
       "meta.title": "Random Wheel Spinner — Pick a Name Fairly",
-    "meta.description": "Paste a list of names or options, spin and get one fair random pick. Remove winners as you go, keep a history of results, and upload nothing — it all runs in your browser.",
+    "meta.description": "Paste a list of names or options, spin and get one fair random pick.",
     "hero.lede": "One entry per line, one spin, one winner — with the option to remove them and go again.",
     "tool.entries.label": "Entries (one per line)",
     "tool.spin": "Spin",

@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Standard Deviation Calculator — Sample & Population Std Dev",
-    "meta.description": "Paste or type a list of numbers to get the sample and population standard deviation, variance, mean, count, and sum of squares — plus a step-by-step deviation table. Free, no login, computed in your browser.",
+    "meta.description": "Paste or type a list of numbers to get the sample and population standard deviation, variance, mean, count, and sum of squares — plus a step-by-step deviation.",
     "hero.lede": "Paste a list of numbers and instantly get the sample and population standard deviation, variance, mean, and sum of squares — with an expandable step-by-step deviation table. Every calculation runs in your browser.",
     "tool.aria": "Standard deviation calculator",
     "tool.input.label": "Numbers",

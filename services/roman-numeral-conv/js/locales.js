@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Roman Numeral Converter — Convert numbers ↔ Roman numerals",
-    "meta.description": "Free online Roman numeral converter. Instantly turn numbers into Roman numerals and Roman numerals back into numbers, see the step-by-step breakdown, and go beyond 3,999 with vinculum (overline) notation up to 3,999,999. 100% in your browser — no ads, no server.",
+    "meta.description": "Free online Roman numeral converter. Instantly turn numbers into Roman numerals and Roman numerals back into numbers, see the step-by-step breakdown, and go.",
     "hero.lede": "Type a number or a Roman numeral — get the other instantly, with the breakdown.",
     "faq.q1": "How do Roman numerals work — what do I, V, X, L, C, D, M mean?",
     "faq.a1": "Each letter is a fixed value: I = 1, V = 5, X = 10, L = 50, C = 100, D = 500 and M = 1000. You add letters from largest to smallest (MMXV = 2015), but when a smaller letter sits before a larger one you subtract it — this is subtractive notation, which gives IV = 4, IX = 9, XL = 40, XC = 90, CD = 400 and CM = 900. This Roman numeral converter builds and validates every numeral by those exact rules.",

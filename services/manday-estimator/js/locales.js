@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Man-Month Effort Calculator — Paste a WBS",
-    "meta.description": "Free browser-only effort calculator for software and agency estimates. Paste a WBS or task list from Excel and convert man-hours and man-days into man-months (M/M), rolled up by role and by phase, with labor cost from your own rate table. Built-in conversion presets (Korea: KOSA 20.5 days per man-month; Japan: 160 hours) so you never look the constant up again. No account, no ads: your estimate never leaves the browser.",
+    "meta.description": "Free browser-only effort calculator for software and agency estimates.",
     "hero.lede": "Paste the WBS. Man-hours, man-days and man-months roll up by role and phase — with cost.",
     "faq.q1": "How many days is one man-month — 20.5, 21, 22, or 160 hours?",
     "faq.a1": "There is no universal answer, which is exactly why estimates disagree. In Korea, KOSA derives its published daily wage by dividing the monthly wage by 20.5 days for the 2026 figures, so 20.5 is the number consistent with the official rate table. The widely repeated “1 M/M = 21 days” is not a KOSA rule — it is a rounded rule of thumb, and 22 days is another common convention that simply counts weekdays. Japan instead defines the month by hours: 160 h (8 h × 20 days). Note that KOSA's divisor moves a little every year (20.8 in 2022, 20.6 in 2024, 20.5 in 2026), so a man month calculator that hard-codes one constant silently goes stale. This tool keeps all of them as presets with the source year on the label, and you can set a custom hours/day and days/month pair.",

@@ -30,7 +30,7 @@ window.I18N_LOCALES = {
     "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "Hash Generator — MD5, SHA-1, SHA-256, SHA-384 & SHA-512",
-    "meta.description": "Free online hash generator. Compute MD5, SHA-1, SHA-256, SHA-384 and SHA-512 from text or files all at once, paste an expected checksum to verify a download, and copy any result — everything runs in your browser. Nothing is uploaded.",
+    "meta.description": "Free online hash generator. Compute MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes from text or files all at once, paste an expected checksum to verify a.",
     "hero.lede": "Paste text or drop a file to get its MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hashes instantly. Verify a checksum by pasting the expected value — all in your browser.",
     "tool.tab.text": "Text",
     "tool.tab.file": "File",

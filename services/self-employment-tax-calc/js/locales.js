@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
       "meta.title": "Self-Employment Tax Calculator — 1099 & Freelance",
-    "meta.description": "Estimate 2025 self-employment tax on your 1099 or freelance profit. See the Social Security and Medicare split, the deductible half, and what to send in each quarter.",
+    "meta.description": "Estimate 2025 self-employment tax on your 1099 or freelance profit.",
     "hero.lede": "Freelance profit is taxed twice over: SE tax first, income tax on top. This is the SE tax half.",
     "tool.taxyear.label": "Tax year",
     "tool.year": "2025 tax year, United States — federal rates, US dollars.",

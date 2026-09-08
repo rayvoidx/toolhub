@@ -32,7 +32,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "GPA Calculator — Semester & Cumulative GPA on 4.0, 4.3",
-    "meta.description": "Free online GPA calculator. Add your courses, credits and grades to instantly get your semester and cumulative GPA on the 4.0, 4.3 or 4.5 scale — with weighted (AP/IB, Honors) support and scale conversion. Runs entirely in your browser, no sign-up.",
+    "meta.description": "Free online GPA calculator. Add your courses, credits and grades to instantly get your semester and cumulative GPA on the 4.0, 4.3 or 4.5 scale — with weighted.",
     "hero.lede": "Add your courses, credits and grades — get your semester and cumulative GPA instantly, on any scale.",
     "tool.scale.label": "Grading scale",
     "tool.scale.us40": "US 4.0 (letter)",

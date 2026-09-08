@@ -16,7 +16,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Timesheet Batch Aggregator — per-employee, per-week hours",
-    "meta.description": "Free browser-only timesheet aggregator. Drop a CSV of clock-in/out punches to get per-employee, per-week regular, overtime, night and holiday hours. Dirty rows are surfaced, not dropped. No signup, no upload — your attendance data never leaves the browser.",
+    "meta.description": "Free browser-only timesheet aggregator. Drop a CSV of clock-in/out punches to get per-employee, per-week regular, overtime, night and holiday hours, with.",
     "hero.lede": "Turn a raw punch CSV into per-employee, per-week regular, overtime, night and holiday hours — computed entirely in your browser, never uploaded.",
     "tool.privacy": "Your attendance data never leaves this browser tab. Nothing is uploaded — open DevTools › Network and watch: aggregating makes zero requests.",
     "tool.scope": "This tool only aggregates hours. It does not judge violations or recompute pay — the 52-hour cap check and ordinary-wage recalculation are separate tools that take this output as input.",

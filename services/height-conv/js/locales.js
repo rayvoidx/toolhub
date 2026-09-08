@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Height Converter — cm to feet and inches, instantly",
-    "meta.description": "Convert height between cm, feet and inches, and meters instantly — type in any field. Converts cm to feet, feet to cm, and parses the 5'11\" format. Free, runs in your browser.",
+    "meta.description": "Convert height between cm, feet and inches, and meters instantly — type in any field. Converts cm to feet, feet to cm, and parses the 5'11\" format.",
     "hero.lede": "Type a height in cm, feet & inches, meters, or inches — every other field updates instantly.",
     "tool.aria": "Height converter",
     "tool.cm.label": "Centimeters (cm)",

@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Mortgage Calculator — Payment, Interest & Payoff Schedule",
-    "meta.description": "Enter the loan amount (or home price and down payment), interest rate, and term to get the monthly payment, total interest, total paid, and a full amortization schedule. Free, computed in your browser.",
+    "meta.description": "Enter the loan amount (or home price and down payment), interest rate, and term to get the monthly payment, total interest, total paid, and a full amortization.",
     "hero.lede": "Enter your loan amount — or a home price and down payment — plus the interest rate and term to see your monthly payment, total interest, total cost, and a full year-by-year amortization schedule.",
     "tool.aria": "Mortgage calculator",
     "tool.mode.legend": "How do you want to enter the loan?",

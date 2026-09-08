@@ -32,7 +32,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Fuel Cost Calculator — Trip gas cost in any unit",
-    "meta.description": "Enter your trip distance, fuel economy and fuel price to instantly see how much fuel you need and what the trip will cost. Works with km or miles, km/L, L/100km and MPG (US or UK), any currency, plus round-trip and cost per passenger — all in your browser.",
+    "meta.description": "Free online fuel cost calculator. Enter your trip distance, fuel economy and fuel price to instantly see how much fuel you need and what the trip will cost.",
     "hero.lede": "How much will this trip cost in gas? Pick your country — we set the units and currency — then enter distance, fuel economy and price.",
     "tool.country.label": "Where are you driving?",
     "tool.note.us": "{country} — fuel is sold by the US gallon and cars are rated in MPG. The units below are already set for you.",

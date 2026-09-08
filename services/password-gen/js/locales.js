@@ -23,7 +23,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Password Generator — Strong Random Passwords, No Ads, No Server",
-    "meta.description": "Generate strong, cryptographically secure random passwords in your browser. Pick the length and character sets — uppercase, lowercase, numbers, symbols. No ads, nothing sent to any server. Free.",
+    "meta.description": "Generate strong, cryptographically secure random passwords in your browser. Pick the length and character sets — uppercase, lowercase, numbers, symbols.",
     "hero.lede": "Cryptographically secure random passwords — no ads, no server.",
     "tool.lengthLabel": "Password length",
     "tool.upper": "Uppercase (A-Z)",

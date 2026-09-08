@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Length Converter — cm to inches, feet to meters, miles to km",
-    "meta.description": "Free online length converter. Type one number and instantly see it in millimeters, centimeters, meters, kilometers, inches, feet, yards and miles — all in your browser.",
+    "meta.description": "Free online length converter. Type one number and instantly see it in millimeters, centimeters, meters, kilometers, inches, feet, yards and miles — all in your.",
     "hero.lede": "Type a number once — see it in all 8 length units instantly.",
     "tool.value.label": "Value",
     "tool.value.placeholder": "e.g. 1",

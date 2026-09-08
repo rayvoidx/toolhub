@@ -30,7 +30,7 @@ window.I18N_LOCALES = {
     "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "HTML Entity Encoder / Decoder — Escape & Unescape HTML Text",
-    "meta.description": "Encode text into HTML entities, named where they exist and numeric otherwise, or decode any entity soup back to text. Free, two-way, runs entirely in your browser.",
+    "meta.description": "Encode text into HTML entities, named where they exist and numeric otherwise, or decode any entity soup back to text.",
     "hero.lede": "Turn special characters into HTML entities — or turn any entity soup back into plain text. Reserved characters are always escaped safely, named entities are used where they exist, and everything runs instantly in your browser.",
     "tool.dir.encode": "Encode (Text → HTML entities)",
     "tool.dir.decode": "Decode (HTML entities → Text)",

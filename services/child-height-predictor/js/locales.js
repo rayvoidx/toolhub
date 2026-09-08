@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Child Height Predictor — How Tall Will My Child Be?",
-    "meta.description": "Free child height predictor using the sex-adjusted mid-parental (Tanner) height method. Enter the father's and mother's height and the child's sex to estimate the child's adult height with a ±8.5 cm likely range — in cm or ft/in, computed entirely in your browser.",
+    "meta.description": "Free child height predictor using the sex-adjusted mid-parental (Tanner) height method.",
     "hero.lede": "How tall will your child be? Estimate adult height from mom and dad's heights in seconds.",
     "tool.unit.label": "Units",
     "tool.unit.cm": "cm",

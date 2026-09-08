@@ -32,7 +32,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Pregnancy Week Calculator — How Many Weeks Pregnant Am I?",
-    "meta.description": "Free pregnancy week calculator. Enter the first day of your last period and your average cycle length to see how many weeks pregnant you are, your trimester and your estimated due date (Naegele's rule) — instantly, no sign-up. Everything is calculated in your browser: your dates never leave your device. Estimates only — an ultrasound is the final word.",
+    "meta.description": "Free pregnancy week calculator. Enter the first day of your last period and your average cycle length to see how many weeks pregnant you are, your trimester.",
     "hero.lede": "How many weeks along are you, and when is your baby due? One date — your last period — is all it takes.",
     "tool.lmp": "First day of your last period (LMP)",
     "tool.cycle": "Average cycle length (days)",

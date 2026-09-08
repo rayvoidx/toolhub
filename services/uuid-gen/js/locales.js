@@ -20,7 +20,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "UUID Generator — Secure v4 & v7 UUIDs",
-    "meta.description": "Free online UUID generator. Create cryptographically random UUID v4 and time-ordered UUID v7 in bulk, copy them instantly, and pick uppercase, hyphenless, or braces formats. 100% local — nothing leaves your browser.",
+    "meta.description": "Free online UUID generator. Create cryptographically random UUID v4 and time-ordered UUID v7 in bulk, copy them instantly, and pick uppercase, hyphenless, or.",
     "hero.lede": "Click generate for a fresh RFC 4122 UUID. Bulk-create up to 500 at once and copy them all.",
     "tool.warnCrypto": "Your browser does not support secure random generation, so this tool is disabled to avoid producing insecure IDs. Please update to a modern browser.",
     "tool.versionLabel": "UUID version",

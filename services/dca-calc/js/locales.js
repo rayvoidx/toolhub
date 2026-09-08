@@ -23,7 +23,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "DCA Investment Calculator — Monthly Growth Projector",
-    "meta.description": "Free dollar-cost averaging (DCA/SIP) calculator: project what your monthly investing grows into — total invested vs market gains, after tax, and in today's money. No login, no ads, all in your browser.",
+    "meta.description": "Free dollar-cost averaging (DCA/SIP) calculator: enter your monthly contribution, expected return, and time horizon to project your future portfolio — total.",
     "hero.lede": "Investing a fixed amount every month? Project your future portfolio in seconds — total invested, market gains, tax, and what it's really worth after inflation. Works in any currency.",
     "tool.initial.label": "Initial investment (optional)",
     "tool.initial.ph": "e.g. 0",

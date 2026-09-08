@@ -20,7 +20,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Split Bill Calculator — Split any bill evenly in 3 seconds",
-    "meta.description": "Enter the total and the number of people to get each person's share instantly. Add a tip, round up to avoid awkward change, and copy a ready-to-send message for the group chat.",
+    "meta.description": "Enter the total and the number of people to get each person's share instantly.",
     "hero.lede": "Total divided by people — tip and rounding handled. Copy each share to your group chat.",
     "tool.total.label": "Total bill amount",
     "tool.total.ph": "e.g. 84,500",

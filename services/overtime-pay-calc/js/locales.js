@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
       "meta.title": "Overtime Pay Calculator — Time and a Half, Double Time",
-    "meta.description": "Enter your hourly rate and hours worked to split regular, time-and-a-half and double-time pay, with the weekly total. Set your own overtime threshold and multipliers.",
+    "meta.description": "Enter your hourly rate and hours worked to split regular, time-and-a-half and double-time pay, with the weekly total.",
     "hero.lede": "Hours in, pay split out — regular, overtime and double time, with the total.",
     "tool.rate.label": "Hourly rate",
     "tool.hours.label": "Hours worked this week",

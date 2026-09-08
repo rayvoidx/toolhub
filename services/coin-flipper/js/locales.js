@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Heads or Tails Coin Flip — flip a coin online, provably fair",
-    "meta.description": "Flip a coin online for an instant heads or tails. Cryptographically fair results, flip many coins at once to see the heads/tails statistics, or rename the sides to decide anything (Yes/No, Team A/B). Ad-free and 100% in your browser — nothing is sent anywhere.",
+    "meta.description": "Flip a coin online for an instant heads or tails. Cryptographically fair results, flip many coins at once to see the heads/tails statistics, or rename the.",
     "hero.lede": "Heads or tails? Tap the coin for an instant, provably fair 50/50 result — flip many at once for the stats, or label the sides to settle any decision.",
     "tool.mode.single": "Single flip",
     "tool.mode.many": "Flip many",

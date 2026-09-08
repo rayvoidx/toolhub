@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Coast FIRE Calculator: Your Coast FIRE Number Today",
-    "meta.description": "Free Coast FIRE calculator — enter your age, retirement age, current savings and FIRE target to see if your money will coast to your number with no more contributions, in today's money.",
+    "meta.description": "Free Coast FIRE calculator: enter your age, target retirement age, current invested savings, and FIRE target to see if your money will coast to your number.",
     "hero.lede": "Coast FIRE is the point where your current investments will grow into your retirement number on their own — no more contributions needed. Enter your age, retirement age, current savings, and target to find out if you're already coasting, and how much you'd need today if you're not. Works in any currency.",
     "tool.age.label": "Current age",
     "tool.age.ph": "e.g. 35",

@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Water Intake Calculator — How Much Water Should You Drink",
-    "meta.description": "Free water intake calculator: enter your body weight and activity level to see how much water you should drink each day — in milliliters, liters, US fl oz, cups, and 500 mL bottles. Runs 100% in your browser, no sign-up.",
+    "meta.description": "Free water intake calculator: enter your body weight and activity level to see how much water you should drink each day — in milliliters, liters, US fl oz.",
     "hero.lede": "One number is all it takes. See how much water to drink today — in cups and bottles.",
     "tool.unit.label": "Unit",
     "tool.unit.kg": "kg",

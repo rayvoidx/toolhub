@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Pomodoro Timer — 25 min focus + 5 min break",
-    "meta.description": "One click on Start runs 25-minute focus and 5-minute break cycles automatically. Long break every 4 pomodoros, sound alerts and a count of today's pomodoros. Free online pomodoro timer — no install, no sign-up.",
+    "meta.description": "One click on Start runs 25-minute focus and 5-minute break cycles automatically. Long break every 4 pomodoros, sound alerts and a count of today's pomodoros.",
     "hero.lede": "Focus for 25 minutes, rest for 5. The timer runs the cycle for you.",
     "tool.aria": "Pomodoro timer tool",
     "tool.remaining": "Time remaining",

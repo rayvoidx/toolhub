@@ -17,7 +17,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Credit Card Interest Calculator — See the Minimum Payment Trap",
-    "meta.description": "See exactly what your card balance costs in interest today, then simulate the minimum-payment trap: years and interest paid vs a fixed payment. Free and browser-only.",
+    "meta.description": "See exactly what your card balance costs in interest today, then simulate the minimum-payment trap: years and interest paid vs a fixed payment.",
     "hero.lede": "Enter your balance and APR to see exactly how much interest you're paying right now. Then run the minimum-payment trap simulator to compare how many years and how much interest it takes to pay off — with just the minimum payment versus keeping your payment fixed.",
     "tool.aria": "Credit card interest calculator",
     "tool.currency.label": "Currency",

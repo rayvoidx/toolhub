@@ -27,7 +27,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Character Counter — Count Letters, Words, Spaces & Bytes",
-    "meta.description": "Paste your text to instantly count characters with and without spaces, words, bytes (UTF-8 and legacy 2-byte), and manuscript pages. Track remaining characters against a goal limit. Free and ad-free.",
+    "meta.description": "Paste your text to instantly count characters with and without spaces, words, bytes (UTF-8 and legacy 2-byte), and manuscript pages.",
     "hero.lede": "Just paste your text. Character count, word count, and bytes — instantly, right in your browser.",
     "tool.inputLabel": "Text input",
     "tool.inputPh": "Paste your text here…",

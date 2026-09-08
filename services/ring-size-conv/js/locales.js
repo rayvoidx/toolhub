@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Ring Size Converter — US, UK, EU & Japan Size Chart",
-    "meta.description": "Convert ring sizes between US/CA, UK/AU letters, EU circumference (mm), and Japan/Korea (号) with a full size chart. Free, instant, and computed entirely in your browser.",
+    "meta.description": "Convert ring sizes between US/CA, UK/AU letters, EU circumference (mm), and Japan/Korea (号) with a full size chart.",
     "hero.lede": "What's my ring size in another country? Enter your size in US, UK, EU, or Japan/Korea format — or the millimeters you measured — and see every match instantly.",
     "tool.aria": "Ring size converter",
     "tool.system.label": "I know my size in",

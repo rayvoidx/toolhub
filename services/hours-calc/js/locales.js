@@ -21,7 +21,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Hours Calculator — Time Duration & Hours Between Two Times",
-    "meta.description": "Enter a start and end time for the duration in hours:minutes and decimal hours, subtract an unpaid break, and handle overnight shifts. Free, computed in your browser.",
+    "meta.description": "Enter a start and end time for the duration in hours:minutes and decimal hours, subtract an unpaid break, and handle overnight shifts.",
     "hero.lede": "How many hours between two times? Enter a start and end time to get the duration in hours and minutes plus decimal hours — an overnight shift rolls to the next day automatically and an unpaid break gets subtracted. Need to add or subtract time instead? Switch tabs.",
     "tool.aria": "Hours calculator",
     "tool.tab.duration": "Between two times",

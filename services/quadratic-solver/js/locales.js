@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Quadratic Equation Solver — Solve ax² + bx + c = 0 Instantly",
-    "meta.description": "Enter a, b, and c to solve any quadratic equation instantly: real, repeated, or complex roots, the discriminant, step-by-step substitution, and the vertex. Free and browser-only.",
+    "meta.description": "Enter a, b, and c to solve any quadratic equation instantly: real, repeated, or complex roots, the discriminant, step-by-step substitution, and the vertex.",
     "hero.lede": "Enter the coefficients a, b, and c to solve ax² + bx + c = 0 — get the roots, discriminant, step-by-step substitution, and vertex instantly.",
     "tool.aria": "Quadratic equation solver",
     "tool.a.label": "a — coefficient of x²",

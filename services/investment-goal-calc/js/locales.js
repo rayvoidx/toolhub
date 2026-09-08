@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Investment Goal Calculator — How Much to Invest Monthly",
-    "meta.description": "Free investment goal calculator: enter your target, time horizon and expected return to see the monthly investment you need — plus the lump sum alternative, your money versus market growth, and your goal in today's money. No login, no ads, all in your browser.",
+    "meta.description": "Free investment goal calculator: enter your target amount, time horizon, and expected return to see the monthly contribution you need to reach it — plus the.",
     "hero.lede": "Have a number in mind? Enter your goal, how long you have, and an expected return to find the monthly investment that gets you there — or the single lump sum you could invest today instead. See how much is your own money and how much is market growth. Works in any currency.",
     "tool.target.label": "Target amount",
     "tool.target.ph": "e.g. 100,000",

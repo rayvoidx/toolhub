@@ -38,7 +38,7 @@ window.I18N_LOCALES = {
     "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "Ad Copy Length Checker — Check every headline",
-    "meta.description": "Free ad copy character counter for Google Ads, Microsoft Ads, Meta and Naver. Paste your whole RSA sheet to check every headline and description against the real limits — Korean, Japanese and Chinese characters counted as two, like Google does. Runs entirely in your browser.",
+    "meta.description": "Free ad copy character counter for Google Ads, Microsoft Ads, Meta and Naver.",
     "hero.lede": "Paste your headlines and descriptions — see every cell checked against the real platform limits.",
 
     "tool.platform": "Platform",

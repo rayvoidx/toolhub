@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Fraction Calculator — add, subtract, multiply, divide",
-    "meta.description": "Free fraction calculator. Add, subtract, multiply or divide two fractions, or simplify one to lowest terms — exact results as a reduced fraction, mixed number and decimal, with the steps. No sign-up.",
+    "meta.description": "Free online fraction calculator. Enter two fractions and an operation to add, subtract, multiply or divide them, or simplify a single fraction to lowest terms.",
     "hero.lede": "Enter two fractions, pick an operation, and get the exact answer reduced to lowest terms — with the steps.",
     "faq.q1": "How do you add and subtract fractions?",
     "faq.a1": "Give both fractions the same (common) denominator, then add or subtract the numerators and keep the denominator. Example: 1/2 + 1/3 → 3/6 + 2/6 = 5/6. This fraction calculator does it for you and reduces the answer to lowest terms.",

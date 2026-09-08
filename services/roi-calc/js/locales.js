@@ -32,7 +32,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "ROI Calculator — Return on Investment & Annualized ROI",
-    "meta.description": "Free ROI calculator: enter the amount you invested and the amount returned to get return on investment (ROI), net profit, and return multiple — plus annualized ROI when you add a holding period. No login, no ads, computed in your browser.",
+    "meta.description": "Free ROI calculator: enter the amount you invested and the amount returned to get return on investment (ROI), net profit, and return multiple — plus annualized.",
     "hero.lede": "Enter what you invested and what you got back to see your return on investment (ROI), net profit, and return multiple in seconds. Add a holding period — in years or dates — to also get annualized ROI. Works in any currency.",
     "tool.cost.label": "Amount invested",
     "tool.cost.ph": "e.g. 10,000",

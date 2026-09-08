@@ -33,7 +33,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Date Difference Calculator — Days Between Two Dates in Years",
-    "meta.description": "Pick two dates and instantly get the total days plus the difference in years, months and weeks. Inclusive day-one counting for anniversaries, tenure and elapsed days. Free and ad-free.",
+    "meta.description": "Pick two dates and instantly get the total days plus the difference in years, months and weeks.",
     "hero.lede": "Just pick two dates. See how many days apart — and how many years and months — instantly.",
     "tool.start": "Start date",
     "tool.end": "End date",

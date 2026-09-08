@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Bulk UTM Builder — Generate every campaign URL at once",
-    "meta.description": "Free bulk UTM builder. Paste your sources, mediums and campaigns to generate hundreds of GA4-ready tracking URLs at once, with lowercase enforcement and channel-mapping warnings. Runs entirely in your browser — nothing is uploaded.",
+    "meta.description": "Free bulk UTM builder. Paste your sources, mediums and campaigns to generate hundreds of GA4-ready tracking URLs at once, with lowercase enforcement and.",
     "hero.lede": "Paste your value lists once — get every tagged campaign URL, checked against GA4 rules.",
     "tool.aria": "Bulk UTM builder",
     "tool.tab.matrix": "Matrix — cross every value",

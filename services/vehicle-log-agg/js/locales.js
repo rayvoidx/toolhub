@@ -39,7 +39,7 @@ window.I18N_LOCALES = {
     "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "Company Vehicle Log Aggregator (Korea) — Paste your vehicle",
-    "meta.description": "Free browser-only aggregator for Korean company vehicle logs (업무용승용차 운행기록부). Paste or drop a CSV of trips across every vehicle to compute business-use ratio, deductible expense, the 15M KRW no-log threshold comparison, and the 8M KRW depreciation cap. Your data never leaves the browser.",
+    "meta.description": "Free browser-only aggregator for Korean company vehicle logs (업무용승용차 운행기록부).",
     "hero.lede": "Turn thousands of trip rows across every company car into a business-use ratio and a deductible amount — entirely in your browser.",
 
     "tool.scope": "Covers passenger cars under the Korean business-use rules (업무용승용차). Light cars, 9-seaters and up, and vehicles used in a transport business are out of scope. This is a closing worksheet — your tax agent signs off on the filing.",

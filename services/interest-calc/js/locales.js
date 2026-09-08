@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Interest Calculator — Simple & Compound After-Tax Interest",
-    "meta.description": "Free deposit interest calculator: enter principal, annual rate and term to instantly get simple, monthly-compound or annual-compound interest, tax (15.4%/9.5%/0%) and the after-tax maturity payout.",
+    "meta.description": "Free deposit interest calculator: enter principal, annual rate and term to instantly get simple, monthly-compound or annual-compound interest, tax.",
     "hero.lede": "How much interest will a lump sum earn? Simple or compound, with tax deducted — see the actual payout instantly.",
     "tool.principal.label": "Principal (KRW)",
     "tool.principal.placeholder": "e.g. 10,000,000",

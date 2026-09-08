@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Square Root Calculator — Square, Cube & Nth Root Instantly",
-    "meta.description": "Calculate square, cube, and nth roots instantly, with exact answers for perfect powers and simplified radical form like √72 = 6√2. Free and computed in your browser.",
+    "meta.description": "Calculate square, cube, and nth roots instantly, with exact answers for perfect powers and simplified radical form like √72 = 6√2.",
     "hero.lede": "Enter any number to find its square root, cube root, or nth root — with exact answers and simplified radical form for perfect powers.",
     "tool.aria": "Square root calculator",
     "tool.mode.group": "Root type",

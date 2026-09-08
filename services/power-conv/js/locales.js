@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Power Converter — horsepower to kilowatts & more",
-    "meta.description": "Free online power converter. Type one number and instantly see it in watts, kilowatts, megawatts, horsepower (hp & PS), BTU/h, and ft-lb/s — all computed in your browser.",
+    "meta.description": "Free online power converter. Type one number and instantly see it in watts, kilowatts, megawatts, horsepower (hp & PS), BTU/h, and ft-lb/s — all computed in.",
     "hero.lede": "Type a number once — see it in every power unit instantly.",
     "tool.value.label": "Value",
     "tool.value.placeholder": "e.g. 1",

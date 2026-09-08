@@ -30,7 +30,7 @@ window.I18N_LOCALES = {
     "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "Base64 Encoder / Decoder — Encode & decode text and images",
-    "meta.description": "Free online Base64 encoder and decoder. Convert text to and from Base64 (UTF-8 safe, with a URL-safe option), and turn images into Base64 data URIs or decode them back — everything runs in your browser. Nothing is uploaded.",
+    "meta.description": "Free online Base64 encoder and decoder. Convert text to and from Base64 (UTF-8 safe, with a URL-safe option), and turn images into Base64 data URIs or decode.",
     "hero.lede": "Encode and decode Base64 instantly — text or images. Full UTF-8 support (Korean, emoji, CJK), a URL-safe option, and everything stays in your browser.",
     "tool.tab.text": "Text",
     "tool.tab.image": "Image",

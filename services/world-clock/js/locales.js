@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "World Clock — live time in cities worldwide with the offset",
-    "meta.description": "Free online world clock. See the live current time in New York, London, Tokyo and dozens of cities at once, with the offset from your own time, Yesterday/Today/Tomorrow labels, day/night icons and automatic daylight saving. No install, no sign-up.",
+    "meta.description": "Free online world clock. See the live current time in New York, London, Tokyo and dozens of cities at once, with the offset from your own time.",
     "hero.lede": "Add a city and it starts ticking. We handle the time difference for you.",
     "tool.yourTime": "Your time",
     "tool.addCity": "Add a city",

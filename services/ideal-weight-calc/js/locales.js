@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Ideal Weight Calculator — Your Ideal Body Weight by 4 Proven",
-    "meta.description": "Free ideal weight calculator. Enter your height and sex to see your ideal body weight from the Devine, Robinson, Miller and Hamwi formulas, plus a healthy weight range from BMI — in cm/ft and kg/lb. Add your current weight to see how far you are from a healthy range.",
+    "meta.description": "Free ideal weight calculator. Enter your height and sex to instantly see your ideal body weight from the Devine, Robinson, Miller and Hamwi formulas, plus a.",
     "hero.lede": "Your ideal weight isn't a single number — compare four trusted formulas and a healthy BMI range at a glance.",
     "tool.sex.label": "Sex",
     "tool.frame.label": "Body frame size",

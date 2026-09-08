@@ -30,7 +30,7 @@ window.I18N_LOCALES = {
     "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "JSON Formatter — Format, validate",
-    "meta.description": "Free online JSON formatter, validator and minifier. Paste JSON to beautify it with 2/4-space or tab indentation, minify it to a single line, or validate it and see the exact line and column of any syntax error. Runs entirely in your browser — your JSON, including API keys and secrets, is never uploaded.",
+    "meta.description": "Free online JSON formatter, validator and minifier. Paste JSON to beautify it with 2/4-space or tab indentation, minify it to a single line, or validate it and.",
     "hero.lede": "Paste JSON to format, validate or minify it instantly — with the exact line and column of any error. Nothing leaves your browser.",
     "tool.inputLabel": "JSON input",
     "tool.inputPlaceholder": "{ \"name\": \"Ada\", \"age\": 36, \"skills\": [\"math\", \"code\"] }",

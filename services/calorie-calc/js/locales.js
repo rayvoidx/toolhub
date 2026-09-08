@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Calories Burned Calculator — MET-based Exercise Calorie",
-    "meta.description": "Free calories burned calculator. Enter your activity, exercise duration, and body weight to instantly estimate calories burned with the MET formula, plus food equivalents and comparisons to other workouts. No sign-up, no ads.",
+    "meta.description": "Free calories burned calculator. Enter your activity, exercise duration, and body weight to instantly estimate calories burned with the MET formula, plus food.",
     "hero.lede": "How many calories did that workout burn? Three inputs, an answer in three seconds.",
     "tool.activity.label": "Activity",
     "tool.activity.placeholder": "Select an activity",

@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Packing List CBM & Chargeable Weight Calculator",
-    "meta.description": "Free browser-only batch calculator for freight packing lists. Paste carton rows straight from Excel or drop a CSV to get per-item CBM and volumetric weight, shipment chargeable weight (IATA 6,000 / courier 5,000 / road 3,000), ocean R/T (W/M), and how many 20ft, 40ft or 40HQ containers you need with loading efficiency. No account, no upload: your packing list never leaves the browser.",
+    "meta.description": "Free browser-only batch calculator for freight packing lists.",
     "hero.lede": "Paste hundreds of carton rows. Get CBM, chargeable weight, R/T and container count — without an account or an upload.",
     "faq.q1": "How do you calculate CBM, and why show cubic feet too?",
     "faq.a1": "CBM (cubic meters) = length × width × height ÷ 1,000,000 when the dimensions are in centimeters, multiplied by the number of cartons. This packing list CBM calculator runs that on every row and adds the rows up, so a 60 × 40 × 30 cm carton is 0.072 CBM and 120 of them are 8.64 CBM. Cubic feet sits next to it because 1 CBM = 35.3147 cu ft, and US and UK forwarders quote LCL and air freight in cubic feet while the rest of the trade quotes CBM — showing both means you can read your rate sheet without converting anything by hand.",

@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "WBS Weighted Progress & EVM Rollup — Paste your WBS",
-    "meta.description": "Paste a WBS from Excel and get weighted percent complete rolled up from leaf tasks to every parent level, plus earned value metrics (PV, EV, AC, SV, CV, SPI, CPI, EAC) as of your data date. Late tasks are filtered out for you and the whole table copies as Markdown straight into your weekly status report. No macros, no install, no account: your cost and schedule data never leaves the browser.",
+    "meta.description": "Paste a WBS from Excel and get weighted percent complete rolled up from leaf tasks to every parent level, plus earned value metrics (PV, EV, AC, SV, CV, SPI.",
     "hero.lede": "Paste the WBS. Weights roll up the hierarchy, late tasks surface, the weekly report table copies out.",
     "tool.input.label": "WBS — paste from Excel, or drop a CSV file",
     "tool.input.placeholder": "WBS\tTask\tWeight\tProgress %\tPlan start\tPlan end\n1\tDesign\t30\t100\t2026-06-01\t2026-06-20\n1.1\tRequirements\t40\t100\t2026-06-01\t2026-06-08",

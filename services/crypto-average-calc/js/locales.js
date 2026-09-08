@@ -20,7 +20,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Crypto Average Calculator — Cost & Break-Even",
-    "meta.description": "Free crypto average calculator: enter each buy's coin amount and price to get your weighted average cost, break-even price, and profit/loss — plus an averaging-down (DCA) planner.",
+    "meta.description": "Free crypto average calculator: enter each buy's coin amount and price to get your weighted average cost, break-even price, and profit/loss — plus an.",
     "hero.lede": "Bought a coin across several buys? Enter each one to get your weighted average price, break-even, and unrealized P/L in seconds — then plan a dip buy to lower your average. Handles fractional coins and any fiat currency.",
     "tool.lots.label": "Your buys (amount & price)",
     "tool.lots.add": "+ Add buy",

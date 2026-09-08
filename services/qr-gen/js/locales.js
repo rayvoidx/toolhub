@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "QR Code Generator — Permanent QR codes, made in your browser",
-    "meta.description": "Free QR code generator that creates permanent, never-expiring QR codes right in your browser and downloads them as PNG. No sign-up, no watermark, no server upload.",
+    "meta.description": "Free QR code generator that creates permanent, never-expiring QR codes right in your browser and downloads them as PNG.",
     "hero.lede": "Your QR code appears as you type. No sign-up, no expiration, and nothing is ever sent to a server.",
     "tool.textLabel": "URL or text",
     "tool.textPlaceholder": "https://example.com or any text",

@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Prime Number Checker — Is it prime? + Prime Factorization",
-    "meta.description": "Free online prime number checker and factorization tool. Enter any whole number to instantly see whether it's prime or composite, plus its full prime factorization in exponent form (e.g. 360 = 2³ × 3² × 5) with divisor count and sum. Handles very large numbers via BigInt and runs entirely in your browser — no ads, no sign-up.",
+    "meta.description": "Free online prime number checker and factorization tool. Enter any whole number to instantly see whether it's prime or composite, plus its full prime.",
     "hero.lede": "Enter a whole number — find out instantly if it's prime, and see its prime factorization.",
     "tool.inputLabel": "Enter a whole number",
     "tool.inputPlaceholder": "e.g. 360",

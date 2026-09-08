@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
       "meta.title": "Number Base Converter — Binary, Decimal, Hex, Octal",
-    "meta.description": "Convert between binary, octal, decimal, hexadecimal and any base from 2 to 36 at once. Shows all four common bases side by side with the number of bits required.",
+    "meta.description": "Convert between binary, octal, decimal, hexadecimal and any base from 2 to 36 at once.",
     "hero.lede": "Type a number in any base — see it in all the others immediately.",
     "tool.value.label": "Value",
     "tool.base.label": "Input base",

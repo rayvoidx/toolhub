@@ -17,7 +17,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Compare Two Lists — A-only, B-only & In Both",
-    "meta.description": "Free browser-only tool to compare two lists or CSV columns. Get A-only, B-only, intersection and union with per-panel CSV export. Country-aware name matching prevents false mismatches. Your lists never leave the browser.",
+    "meta.description": "Free browser-only tool to compare two lists or CSV columns. Paste or drop lists A and B and instantly get A-only, B-only, intersection and union with per-panel.",
     "hero.lede": "Find what's only in A, only in B, and in both — in your browser, nothing uploaded.",
     "tool.scope": "Nothing you paste is uploaded — the two lists are compared entirely in this browser, so it can be used without a security review.",
     "tool.listA": "List A",

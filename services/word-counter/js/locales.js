@@ -22,7 +22,7 @@ window.I18N_LOCALES = {
     "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "Word Counter — Count words, characters, sentences",
-    "meta.description": "Free online word counter. Paste your text to instantly count words, characters, sentences, and paragraphs, plus estimated reading and speaking time. Runs entirely in your browser — nothing is uploaded.",
+    "meta.description": "Free online word counter. Paste your text to instantly count words, characters, sentences, and paragraphs, plus estimated reading and speaking time.",
     "hero.lede": "Paste your text and get instant counts — words, characters, sentences, paragraphs, plus reading and speaking time.",
     "tool.textLabel": "Your text",
     "tool.textPlaceholder": "Paste or type your text here…",

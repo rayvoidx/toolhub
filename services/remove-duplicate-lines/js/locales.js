@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Remove Duplicate Lines — Dedupe a List Online, Free",
-    "meta.description": "Paste a list to remove duplicate lines, keeping the first occurrence of each. Case-insensitive, trim, sort, and duplicates-only options. Free, all in your browser.",
+    "meta.description": "Paste a list to remove duplicate lines, keeping the first occurrence of each. Case-insensitive, trim, sort, and duplicates-only options.",
     "hero.lede": "Paste your list below — duplicate lines disappear instantly, keeping the first occurrence of each one.",
     "tool.aria": "Remove duplicate lines tool",
     "tool.input.label": "Lines to deduplicate",

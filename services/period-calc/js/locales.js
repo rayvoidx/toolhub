@@ -15,7 +15,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Period Calculator — Next Period, Ovulation & Fertile Window",
-    "meta.description": "Enter your last period start date, average cycle length and period length to see your next 6 periods, plus estimated ovulation day and fertile window for each cycle. Free and calculated entirely in your browser.",
+    "meta.description": "Enter your last period start date, average cycle length and period length to see your next 6 periods, plus estimated ovulation day and fertile window for each.",
     "hero.lede": "One cycle, three numbers — see your next 6 periods, ovulation day and fertile window.",
     "tool.disclaimer": "Estimates only, based on your average cycle — real cycles vary from month to month. This tool is not a method of contraception. For medical concerns, talk to a doctor or midwife.",
     "tool.start.label": "First day of your last period",

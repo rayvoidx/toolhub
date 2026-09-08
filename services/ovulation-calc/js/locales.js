@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Ovulation Calculator — fertile window & ovulation calendar",
-    "meta.description": "Free ovulation calculator. Enter your last period and cycle length to see your estimated ovulation day, fertile window and next period on a calendar, plus the next 3 cycles. Calculated in your browser — your dates never leave your device.",
+    "meta.description": "Free online ovulation calculator. Enter the start date of your last period and your cycle length to see your estimated ovulation day, fertile window and next.",
     "hero.lede": "One date — your last period — and see your ovulation day and fertile window on a calendar.",
     "faq.q1": "How is the ovulation day calculated?",
     "faq.a1": "This ovulation calculator uses the standard luteal-phase method: your next period date (last period + cycle length) minus 14 days. The luteal phase — from ovulation to the next period — is the most stable part of the menstrual cycle at about 14 days, while the first half varies. So with a 28-day cycle ovulation lands near day 14, and with a 32-day cycle it is closer to day 18.",

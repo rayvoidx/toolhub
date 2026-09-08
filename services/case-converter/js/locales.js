@@ -33,7 +33,7 @@ window.I18N_LOCALES = {
     "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "Case Converter — Convert text to UPPERCASE, lowercase, Title",
-    "meta.description": "Free online case converter. Paste text to instantly convert it to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case and dot.case — copy any result with one click. Runs entirely in your browser; nothing is uploaded.",
+    "meta.description": "Free online case converter. Paste text to instantly convert it to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case.",
     "hero.lede": "Paste your text and get every case at once — UPPERCASE, lowercase, Title, camelCase, snake_case and more. Click any card to copy.",
     "tool.textLabel": "Your text",
     "tool.textPlaceholder": "Paste or type your text here…",

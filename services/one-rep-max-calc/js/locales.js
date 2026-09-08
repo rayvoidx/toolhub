@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
       "meta.title": "One Rep Max Calculator — 1RM From Any Set",
-    "meta.description": "Enter the weight you lifted and how many reps you got — see your estimated one rep max from five formulas, plus a percentage table for programming your training sets.",
+    "meta.description": "Enter the weight you lifted and how many reps you got — see your estimated one rep max from five formulas, plus a percentage table for programming your.",
     "hero.lede": "Any hard set becomes a 1RM estimate — and the working weights that follow from it.",
     "tool.weight.label": "Weight lifted",
     "tool.unit.label": "Unit",

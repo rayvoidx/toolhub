@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Stock Ledger Builder & Count Reconciliation",
-    "meta.description": "Free browser-only stock ledger builder and physical count reconciliation tool (재고수불부·재고실사 대사). Drop a CSV of stock in/out transactions to get per-SKU opening, in, out and closing balances, plus alerts for negative balances, duplicate vouchers, out-of-period dates and mixed units, and variance against your physical count. Your data never leaves the browser.",
+    "meta.description": "Free browser-only stock ledger builder and physical count reconciliation tool (재고수불부·재고실사 대사).",
     "hero.lede": "Build per-SKU opening → in → out → closing balances from your transaction log, and see exactly where the physical count disagrees — entirely in your browser.",
     "faq.q1": "What happens if I don't upload an opening stock file?",
     "faq.a1": "The stock ledger still builds — it just tells you exactly what it assumed. For every SKU the opening balance is resolved in three steps: (1) if your opening stock CSV has a value for that SKU, it is used as-is and earlier transactions are not replayed, because they are already baked into that figure; (2) if not, every transaction dated before your start date is accumulated to back-calculate the opening balance; (3) if there are no earlier transactions either, the opening is 0 and an “Opening 0 assumed” badge stays pinned to the top of the results — it never collapses or hides. That badge matters: if your stock in out register only covers one month, a closing balance built on a zero opening is a movement total, not real stock on hand.",

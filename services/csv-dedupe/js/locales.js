@@ -16,7 +16,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "CSV Duplicate Remover — Remove Duplicate Rows",
-    "meta.description": "Free browser-only tool to remove duplicate rows from a CSV or pasted spreadsheet. Pick the column(s) that define a duplicate, get a cleaned CSV plus a file of the removed rows and an exact count. Locale-aware matching catches duplicates Excel misses. Your data never leaves the browser.",
+    "meta.description": "Free browser-only tool to remove duplicate rows from a CSV or pasted spreadsheet.",
     "hero.lede": "Pick the columns that define a duplicate and clean your list — nothing uploaded, nothing silently deleted.",
     "tool.scope": "Nothing you paste or drop is uploaded — the whole table is de-duplicated inside this browser, so it can be used on customer and mailing lists without a security review.",
     "tool.input.title": "Your table",

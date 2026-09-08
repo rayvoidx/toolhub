@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Slope Calculator — Slope, Equation & Angle from 2 Points",
-    "meta.description": "Enter two points to find the slope, y-intercept, line equation y=mx+b, angle of incline, percent grade, distance, and midpoint — instantly, free, and computed entirely in your browser.",
+    "meta.description": "Enter two points to find the slope, y-intercept, line equation y=mx+b, angle of incline, percent grade, distance, and midpoint — instantly, free, and computed.",
     "hero.lede": "Enter two points (x₁, y₁) and (x₂, y₂) to get the slope, line equation, angle of incline, percent grade, distance, and midpoint — instantly, right in your browser.",
     "tool.aria": "Slope calculator",
     "tool.x1.label": "x₁",

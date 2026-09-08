@@ -31,7 +31,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "BMR Calculator — Basal Metabolic Rate & TDEE from Sex, Age",
-    "meta.description": "Free BMR calculator: enter sex, age, height and weight to instantly get your basal metabolic rate (Mifflin-St Jeor & Harris-Benedict), TDEE and daily calorie targets for cutting, maintaining and bulking.",
+    "meta.description": "Free BMR calculator: enter sex, age, height and weight to instantly get your basal metabolic rate (Mifflin-St Jeor & Harris-Benedict), TDEE and daily calorie.",
     "hero.lede": "Calories you burn just by breathing — check them accurately with two proven formulas.",
     "tool.gender.label": "Sex",
     "tool.gender.male": "Male",

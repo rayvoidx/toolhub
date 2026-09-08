@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Online Stopwatch — Lap times, 1/100s precision",
-    "meta.description": "Free online stopwatch with lap times. Start with the spacebar, measure to 1/100 of a second, highlight your best and worst laps, keep time through page refreshes, and copy results — no install, no ads.",
+    "meta.description": "Free online stopwatch with lap times. Start with the spacebar, measure to 1/100 of a second, highlight your best and worst laps, keep time through page.",
     "hero.lede": "Space to start and pause, L for laps. Stays accurate even in a background tab.",
     "tool.aria": "Stopwatch",
     "tool.elapsed": "Elapsed time",

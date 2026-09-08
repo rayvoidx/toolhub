@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Loan Calculator — Monthly Payment, Total Interest",
-    "meta.description": "Free loan calculator with amortization schedule. Enter amount, rate, and term to get your monthly payment and total interest instantly — and compare amortized, equal principal, and interest-only repayment side by side.",
+    "meta.description": "Free loan calculator with amortization schedule. Enter amount, rate, and term to get your monthly payment and total interest instantly — and compare amortized.",
     "hero.lede": "Enter loan amount, interest rate, and term — your monthly payment, total interest, and full repayment schedule appear instantly, with three repayment methods compared in one view.",
     "tool.amount.label": "Loan amount",
     "tool.amount.placeholder": "e.g. 300,000,000",

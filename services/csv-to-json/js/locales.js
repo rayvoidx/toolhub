@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "CSV to JSON Converter — Paste, Convert, Download",
-    "meta.description": "Free CSV to JSON converter: paste or drop a .csv file to get a clean JSON array of objects. Handles quoted fields with commas and line breaks, auto-detects comma/semicolon/tab, and infers numbers and booleans. Runs entirely in your browser — nothing is uploaded.",
+    "meta.description": "Free CSV to JSON converter: paste or drop a .csv file to get a clean JSON array of objects.",
     "hero.lede": "Paste your CSV or drop a file — get a clean JSON array of objects instantly, with quoted fields, delimiters and number types handled for you.",
     "tool.aria": "CSV to JSON converter",
     "tool.inputLabel": "CSV input",

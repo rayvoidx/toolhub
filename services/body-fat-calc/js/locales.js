@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Body Fat Calculator — U.S. Navy Method (Body Fat %, Fat Mass",
-    "meta.description": "Free body fat calculator using the U.S. Navy tape method. Enter your sex, height, weight and neck/waist/hip measurements to get body fat percentage, fat mass, lean body mass and your ACE fitness category — no InBody or DEXA scan needed.",
+    "meta.description": "Free body fat calculator using the U.S. Navy circumference method.",
     "hero.lede": "No InBody scan needed — estimate your body fat with just a tape measure.",
     "tool.sex.label": "Sex",
     "tool.sex.male": "Male",

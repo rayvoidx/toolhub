@@ -20,7 +20,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Color Picker & Converter — HEX, RGB, HSL, HSV",
-    "meta.description": "Free online color picker and converter. Pick a color or grab one from anywhere on screen with the eyedropper, then copy it as HEX, RGB(A), HSL(A), HSV or CMYK. Live preview, transparency and a WCAG contrast check — 100% in your browser.",
+    "meta.description": "Free online color picker and converter. Pick a color with the swatch or grab one from anywhere on your screen with the eyedropper, then copy it as HEX, RGB(A).",
     "hero.lede": "Pick a color or paste any code — get HEX, RGB, HSL, HSV and CMYK instantly, with one-click copy. Everything stays in your browser.",
     "tool.pickLabel": "Pick a color",
     "tool.swatchAria": "Color swatch",

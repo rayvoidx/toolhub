@@ -30,7 +30,7 @@ window.I18N_LOCALES = {
     "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "URL Encoder / Decoder — Percent-encode & decode URLs",
-    "meta.description": "Free online URL encoder and decoder. Percent-encode text for safe use in URLs and query strings, or decode %-encoded strings back to plain text — with component vs full-URL modes, an optional form (+) encoding toggle, and full UTF-8 support. Everything runs entirely in your browser; nothing is uploaded.",
+    "meta.description": "Free online URL encoder and decoder. Percent-encode text for safe use in URLs and query strings, or decode %-encoded strings back to plain text — with.",
     "hero.lede": "Percent-encode and decode URLs instantly. Choose component or full-URL mode, toggle form (+) encoding, and keep every character — Korean, emoji, CJK — intact. Nothing leaves your browser.",
     "tool.dir.encode": "Encode (Text → URL-encoded)",
     "tool.dir.decode": "Decode (URL-encoded → Text)",

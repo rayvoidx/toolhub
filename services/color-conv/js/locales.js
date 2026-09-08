@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
       "meta.title": "HEX to RGB Converter — HEX, RGB, HSL and Contrast",
-    "meta.description": "Paste any HEX, RGB or HSL colour and get the other two formats instantly, plus the WCAG contrast ratio against white and black so you know which text colour stays readable.",
+    "meta.description": "Paste any HEX, RGB or HSL colour and get the other two formats instantly, plus the WCAG contrast ratio against white and black so you know which text colour.",
     "hero.lede": "One colour in, all three formats out — with the contrast check designers forget.",
     "tool.input.label": "Colour value",
     "tool.input.hint": "Accepts #3366ff, 3366ff, rgb(51, 102, 255) or hsl(220, 100%, 60%).",

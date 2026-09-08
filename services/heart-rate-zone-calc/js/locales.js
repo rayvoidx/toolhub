@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
       "meta.title": "Heart Rate Zone Calculator — 5 Training Zones",
-    "meta.description": "Enter your age and resting heart rate to get five training zones by the Karvonen heart rate reserve method, with the simpler percentage-of-max zones available for comparison.",
+    "meta.description": "Enter your age and resting heart rate to get five training zones by the Karvonen heart rate reserve method, with the simpler percentage-of-max zones available.",
     "hero.lede": "Age and resting pulse in, five training zones out — with the effort each one buys.",
     "tool.age.label": "Age",
     "tool.rest.label": "Resting heart rate (bpm)",

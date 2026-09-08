@@ -21,7 +21,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Running Pace Calculator — Find Pace, Time, or Distance",
-    "meta.description": "Enter any two of distance, time, or pace to get the third — plus pace in min/km and min/mi, speed in km/h and mph, and a full split table. Free, runs in your browser.",
+    "meta.description": "Enter any two of distance, time, or pace to get the third — plus pace in min/km and min/mi, speed in km/h and mph, and a full split table.",
     "hero.lede": "Know two of distance, time, and pace? Enter them below to get the third instantly — plus your pace in min/km and min/mi, speed in km/h and mph, and a full split table for your race distance.",
     "tool.aria": "Running pace calculator",
     "tool.mode.label": "Solve for",

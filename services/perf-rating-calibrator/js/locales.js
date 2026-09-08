@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Performance Rating Calibrator — Paste review scores",
-    "meta.description": "Free browser-only performance review calibration tool. Paste or drop a CSV of review scores to normalize rater leniency bias with z-scores, apply a forced distribution, and export final ratings. Your employee data never leaves the browser.",
+    "meta.description": "Free browser-only performance review calibration tool. Paste or drop a CSV of review scores to normalize rater leniency bias with z-scores, apply a forced.",
     "hero.lede": "Normalize lenient and strict raters, then apply your grade distribution — entirely in your browser.",
     "tool.aria": "Performance rating calibrator",
     "tool.step1": "1. Paste or drop your review scores",

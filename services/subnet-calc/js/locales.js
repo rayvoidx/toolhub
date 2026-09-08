@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "IP Subnet Calculator — CIDR, Netmask & Host Range in Seconds",
-    "meta.description": "Enter an IPv4 address and CIDR prefix or netmask to get the network address, broadcast address, usable host range, wildcard mask, and a binary breakdown — instantly, free, computed in your browser.",
+    "meta.description": "Enter an IPv4 address and CIDR prefix or netmask to get the network address, broadcast address, usable host range, wildcard mask, and a binary breakdown.",
     "hero.lede": "What's my subnet? Enter an IPv4 address and CIDR prefix (or netmask) to see the network, broadcast, and usable host range instantly.",
     "tool.aria": "IP subnet calculator",
     "tool.ip.label": "IPv4 address",

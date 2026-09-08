@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Time Zone Converter — convert one time to major cities",
-    "meta.description": "Free online time zone converter. Enter one time and instantly see it in New York, London, Tokyo and more, with UTC offsets, +1 day / -1 day badges and automatic daylight saving. No install, no sign-up, ad-free.",
+    "meta.description": "Free online time zone converter. Enter one time and instantly see it in New York, London, Tokyo and more, with UTC offsets, +1 day / -1 day badges and.",
     "hero.lede": "Pick a time and a few cities. We handle the offsets and daylight saving for you.",
     "tool.baseTime": "Base time",
     "tool.baseZone": "Base time zone",

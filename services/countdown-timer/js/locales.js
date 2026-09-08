@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Countdown Timer — Set minutes and seconds, press start",
-    "meta.description": "Free online countdown timer with sound alarm. Set hours, minutes, seconds or tap a 1/3/5/10/30 minute preset. Accurate in background tabs, time left shown in the tab title. No install, no sign-up.",
+    "meta.description": "Free online countdown timer with sound alarm. Set hours, minutes, seconds or tap a 1/3/5/10/30 minute preset.",
     "hero.lede": "Set your time and press start. It rings the moment time is up — even in a background tab.",
     "tool.aria": "Countdown timer tool",
     "tool.remaining": "Time remaining",

@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Weight Converter — kg to lbs, pounds to kg, ounces to grams",
-    "meta.description": "Free online weight & mass converter. Type one number and instantly see it in milligrams, grams, kilograms, tonnes, ounces, pounds and stone — plus Korean geun and don — all in your browser.",
+    "meta.description": "Free online weight & mass converter. Type one number and instantly see it in milligrams, grams, kilograms, tonnes, ounces, pounds and stone — plus Korean geun.",
     "hero.lede": "Type a number once — see it in every mass unit instantly.",
     "tool.value.label": "Value",
     "tool.value.placeholder": "e.g. 1",

@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Safety Stock & Reorder Point Batch Calculator",
-    "meta.description": "Free browser-only batch calculator for safety stock and reorder point across hundreds of SKUs. Drop an ERP or WMS sales history CSV and it derives average daily demand and demand standard deviation per SKU for you, then applies SS = Z x sqrt(LT x sigma_d^2 + d^2 x sigma_LT^2) and ROP = d x LT + SS at your chosen service level (90/95/97.5/99%). Optional periodic-review and EOQ. No signup, no email, no upload: your sales and on-hand data never leave the browser.",
+    "meta.description": "Free browser-only batch calculator for safety stock and reorder point across hundreds of SKUs.",
     "hero.lede": "Every SKU in one table. We compute the demand deviation from your history — you never look up a Z-score.",
     "faq.q1": "Do I need to know the demand standard deviation (σd) already?",
     "faq.a1": "No — that is the whole point of this safety stock calculator. Every other free reorder point calculator asks you to type in a σd you do not have. Here you paste the sales history your ERP or WMS already exports (date, SKU, quantity) and the tool rebuilds a daily demand series per SKU, then computes the average daily demand d̄ and the sample standard deviation σd (n−1, the same result as Excel's STDEV.S) using Welford's method, which stays accurate over hundreds of thousands of rows. You only supply the lead time and the service level.",

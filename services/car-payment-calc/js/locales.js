@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
       "meta.title": "Car Payment Calculator — Auto Loan Monthly Payment",
-    "meta.description": "Work out the monthly payment on a car loan from price, down payment, trade-in, sales tax, fees, rate and term — with the total interest and the true amount financed.",
+    "meta.description": "Work out the monthly payment on a car loan from price, down payment, trade-in, sales tax, fees, rate and term — with the total interest and the true amount.",
     "hero.lede": "Sticker price to real monthly payment, including the tax and fees dealers roll in.",
     "tool.price.label": "Vehicle price",
     "tool.down.label": "Down payment",

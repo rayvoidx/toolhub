@@ -16,7 +16,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Zodiac Sign Calculator — Find Your Star Sign by Birth Date",
-    "meta.description": "Enter your date of birth to instantly find your Western zodiac sign, element, modality, and a short for-fun trait blurb — plus the date ranges for all 12 signs. Free, no ads, computed locally in your browser.",
+    "meta.description": "Enter your date of birth to instantly find your Western zodiac sign, element, modality, and a short for-fun trait blurb — plus the date ranges for all 12 signs.",
     "hero.lede": "Enter your birth date to find your Western (tropical) zodiac sign, its element and modality, and a light, for-fun trait blurb — plus the exact date range for all 12 signs.",
     "tool.aria": "Zodiac sign calculator",
     "tool.date.label": "Your date of birth",

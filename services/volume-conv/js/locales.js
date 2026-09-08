@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Volume Converter — gallons to liters, mL to fl oz",
-    "meta.description": "Free online volume converter. Type one number and instantly see it in milliliters, liters, cubic meters, US teaspoons, tablespoons, fluid ounces, cups, pints, quarts and gallons — plus UK gallons — all in your browser.",
+    "meta.description": "Free online volume converter. Type one number and instantly see it in milliliters, liters, cubic meters, US teaspoons, tablespoons, fluid ounces, cups, pints.",
     "hero.lede": "Type a number once — see it in every volume unit instantly.",
     "tool.value.label": "Value",
     "tool.value.placeholder": "e.g. 1",

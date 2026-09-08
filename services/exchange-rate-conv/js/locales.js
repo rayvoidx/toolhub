@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Currency Converter — Convert any currency at today's rate",
-    "meta.description": "Free currency converter for 16 world currencies at today's exchange rate. Always shows the rate date and keeps working offline from saved rates — no charts, no news, no ads, just the number.",
+    "meta.description": "Free currency converter for 16 world currencies at today's exchange rate.",
     "hero.lede": "Enter an amount and pick two currencies to get today's converted value instantly. The reference date is always shown, and it keeps calculating from saved rates even when you're offline.",
     "tool.amount.label": "Amount",
     "tool.amount.ph": "e.g. 1,000",

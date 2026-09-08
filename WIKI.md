@@ -92,6 +92,27 @@
   홈 타일·ItemList·locales 14언어 키 42개 제거, worker SUNSET 맵 301(하위 경로·쿼리 보존), 레지스트리
   status: sunset + sunset_redirect(SCHEMA 명문화), 소스·SERVICE.yaml·WIKI 보존. check-consistency 가 sunset 을
   "배포 없음 정상 / 배포 잔존 🔴" 로 판정. 도구 328 → 325. **이후 sunset 은 이 절차 그대로**(maintenance.md §Sunset).
+- **2026-09-09 — 서비스워커가 배포를 삼키고 있었다 (최중대 결함 박제)**: 전수 감사 중 발견. 템플릿
+  `templates/web-app/sw.js` 가 **cache-first + 고정 캐시 이름**(`var CACHE = "<slug>-v1"`, 런칭 이후 한 번도
+  안 올림, 325종 전부 v1)이었다. `caches.match(req).then(hit => hit || fetch(req))` 는 캐시에 있으면 네트워크를
+  아예 보지 않으므로, **한 번이라도 도구를 연 방문자는 그때의 HTML/JS 에 영구 고정**된다. 2026-07 이후의 모든
+  수리 — i18n 도입·퍼머링크 토큰 유출 보안수정(8/26)·CSP 강화·디자인 v2~v4·hreflang 제거(9/7)·sunset 301(9/8)
+  — 이 재방문자에게 한 번도 닿지 않았다. "배포했으니 됐다"가 거짓이었던 것(철칙 5 조용한 실패의 최악 형태).
+  수리: `factory/gen-sw.js` 신설 — HTML 내비게이션 network-first(재방문자가 항상 최신 배포를 봄),
+  동일 출처 정적 자산 stale-while-revalidate(빠르면서 스스로 회복), 교차 출처 미개입, 캐시 세대 v2 로 올려
+  오염된 v1 캐시를 activate 에서 일괄 삭제. 570파일 재작성 + 스탬프 템플릿 동반 수정(신규 도구 재발 방지)
+  + pipeline-post 편입. **교훈: 정적 사이트에서 cache-first 서비스워커는 배포 파이프라인을 무력화한다.
+  HTML 은 반드시 network-first, 캐시 이름에 세대를 넣고 전략 변경 시 올린다.**
+- **2026-09-09 — 관련도구 JS 97% 감량**: `related.js` 가 링크 4개를 그리려고 CATALOG 전체(325종 × 14언어 이름
+  = 142KB)를 325개 파일에 통째로 인라인해 페이지마다 ~200KB 를 받게 하고 있었다. 형제 선택 규칙이
+  결정적(알파벳 회전)이라 빌드 시점에 확정 가능 — `gen-link-graph.js` 가 그 도구의 형제 4종만 싣도록 변경.
+  200,773 → 5,668 바이트(도구당 −195KB). baked 정적 링크와 런타임 SIBS 가 325/325 완전 일치 실측 검증.
+- **2026-09-09 — SERP 스니펫 절단 정합화**: meta description 이 165자를 넘는 도구 104종(최대 464자),
+  `csv-diff` 는 `<title>` 이 130자("제목 — 설명"이 통째로 title 에 들어간 스탬핑 사고). 구글이 문장 중간에서
+  자르게 두지 않고 `factory/gen-meta-fit.js` 가 160자 이내 마지막 문장 경계에서 끊는다(title 62자, " — "
+  조각 단위). og/twitter 설명·locales `en` 블록까지 쌍 갱신(철칙 2). 200파일 description·2파일 title 정리.
+  한계 박제: 비영어 로케일은 건드리지 않는다 — 크롤러가 보는 건 baked EN 이고 CJK 는 문장 경계 규칙이 달라
+  기계 절단이 번역을 훼손한다.
 
 ## 7. 연관 문서
 - [팩토리 파이프라인](../../docs/PIPELINE.md)

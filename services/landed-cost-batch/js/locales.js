@@ -37,7 +37,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Landed Cost Batch Calculator — per-item import cost",
-    "meta.description": "Paste a multi-item import invoice and get landed cost per item. Apportion freight, insurance and clearance by value, weight, CBM or quantity, then add duty and VAT per country — CIF basis for Korea, Japan and the EU, FOB with MPF and HMF for the US. Runs entirely in your browser: nothing is uploaded.",
+    "meta.description": "Free browser-only landed cost calculator for multi-item import invoices.",
     "hero.lede": "Apportion freight across every line item and get per-unit landed cost — in your browser, nothing uploaded.",
     "tool.scope": "Nothing you paste is uploaded — every figure is computed in this browser. HS duty rates and official customs exchange rates are out of scope: enter them yourself.",
     "tool.step1": "1. Invoice line items",

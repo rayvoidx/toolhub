@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "Dice Roller — roll d4–d100, dice notation (2d6+3)",
-    "meta.description": "Free online dice roller. Roll d4, d6, d8, d10, d12, d20 and d100, use dice notation like 2d6+3, roll up to 100 dice at once and keep a roll history. Fair rolls from your browser's crypto RNG — no ads, no sign-up, nothing sent to a server.",
+    "meta.description": "Free online dice roller. Roll d4, d6, d8, d10, d12, d20, and d100, use dice notation like 2d6+3, roll up to 100 dice at once, and keep a roll history.",
     "hero.lede": "Pick a die and roll — or type dice notation like 2d6+3. Fair results, right in your browser.",
     "tool.aria": "Dice roller",
     "tool.dieType": "Die type",

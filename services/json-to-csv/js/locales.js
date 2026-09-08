@@ -29,7 +29,7 @@ window.I18N_LOCALES = {
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
     "meta.title": "JSON to CSV Converter — Convert JSON Arrays to CSV Free",
-    "meta.description": "Paste a JSON array of objects and get a clean CSV instantly — nested objects flattened to dot-notation columns, proper RFC 4180 quoting, comma/semicolon/tab delimiters. Free, private, runs entirely in your browser.",
+    "meta.description": "Paste a JSON array of objects and get a clean CSV instantly — nested objects flattened to dot-notation columns, proper RFC 4180 quoting, comma/semicolon/tab.",
     "hero.lede": "Paste a JSON array of objects and get a clean, properly quoted CSV instantly — nested objects flatten to dot-notation columns, headers merge across every object, and you can copy or download the result. Runs entirely in your browser.",
     "tool.aria": "JSON to CSV converter",
     "tool.input.label": "JSON input",
