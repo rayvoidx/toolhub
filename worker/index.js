@@ -23,6 +23,21 @@ export default {
      * 그대로여서 984 URL 이 중복 페이지로 색인됐고 AdSense 저가치 콘텐츠 판정을 받았다.
      * 잔존 북마크·색인 URL 은 런타임 i18n 이 지원하는 ?lang= 로 영구 이동시킨다.
      */
+    /*
+     * 2026-09-08: H1·의도 완전 중복 쌍 3 통합(sunset) — 남은 쪽으로 영구 이동(하위 경로·쿼리 보존).
+     * 근거: services/hub/WIKI.md §6. 새 sunset 은 여기 한 줄 + 레지스트리 status: sunset.
+     */
+    const SUNSET = {
+      "hourly-to-salary": "hourly-to-salary-calc",
+      "protein-calc": "protein-intake-calc",
+      "binary-translator": "binary-text-conv",
+    };
+    const head = url.pathname.split("/")[1];
+    if (SUNSET[head]) {
+      url.pathname = url.pathname.replace(`/${head}`, `/${SUNSET[head]}`);
+      return Response.redirect(url.toString(), 301);
+    }
+
     const langPage = url.pathname.match(/^\/([^/]+)\/(ko|ja|es)\/?$/);
     if (langPage) {
       return Response.redirect(`${url.origin}/${langPage[1]}/?lang=${langPage[2]}`, 301);

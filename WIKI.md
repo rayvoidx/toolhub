@@ -70,6 +70,28 @@
   로 프록시(새 도구 자동 편입, 재배포 불필요) ② CNAME 제거(301 루프 해소) ③ .assetsignore
   신설 — 기존 배포가 `/.git/config` 를 200 으로 노출하던 문제 차단. 수리 후 10개 도구
   전부 200 실측. **재발 방지: CNAME 파일을 절대 되살리지 말 것, 서비스 레포는 공개 유지.**
+- **2026-09-07 — AdSense "가치가 별로 없는 콘텐츠" 정책 위반 (원인·수리 박제)**: 사이트 검토가
+  저가치 콘텐츠로 반려됐다. 진단: ① 8/27~30 도입한 언어별 정적 페이지 /<slug>/{ko,ja,es}/ 966종이
+  <title>·meta 만 번역되고 정적 HTML 본문(UI 라벨·가이드·FAQ)은 영어 원문 — 번역은 런타임 JS
+  (locales.js + lazy guide-i18n.js)로만 일어난다. 사이트맵 1308 URL 중 984 개가 영어 페이지의 중복이면서
+  `<html lang>` 선언만 다른 상태. 번역 자체도 에이전트 자동 번역(사람 검수 없음)이라 구글 스팸 정책의
+  "검수 없는 자동 번역 콘텐츠"에 해당. ② hreflang 이 13언어 `?lang=` URL 을 언어 버전으로 선언 — 같은 HTML
+  이고 robots.txt 가 차단하는 URL. ③ macOS 복사 잔재("index 2.html"·"privacy 2.html"·"sw 2.js" 등) 159파일
+  (35종 도구)이 배포 트리에 커밋돼 라이브 노출 — 정합성 게이트가 hub 루트만 검사하던 사각. ④ 홈 ItemList
+  스키마 numberOfItems 109 (실제 328). 수리(hub 7a2f723c): 언어 하위 페이지 전량 삭제 +
+  STATIC_LANGS=[] · hreflang 전면 제거(도구·홈·카테고리 — gen-hreflang/gen-lang-pages/gen-category-pages
+  동일 규칙) · 잔재 159 삭제 + check-consistency 가 도구 디렉터리 잔재·폐기 언어 디렉터리까지 검출 ·
+  worker 301 /<slug>/(ko|ja|es)/ → /<slug>/?lang=xx · ItemList 328. 사이트맵 1308 → 342.
+  **재발 방지: 색인 대상 페이지는 정적 HTML 본문이 그 언어여야 한다 — JS 스왑 의존 페이지를 언어 버전으로
+  내지 않는다. 자동 번역은 런타임 스위처 UX 로만 쓴다. 배포 전 check-consistency 필수.**
+  잔여 후보: H1 중복 쌍 3(binary-text-conv/binary-translator · hourly-to-salary-calc/hourly-to-salary ·
+  protein-calc/protein-intake-calc) — /maintain 에서 통합(sunset+301) 판정. AdSense 재검토 요청은 콘솔 수동.
+- **2026-09-08 — 중복 도구 쌍 3 통합(sunset)**: 9/7 저가치 판정 수리의 잔여 후보. H1·검색 의도가 완전히 같은
+  쌍 — hourly-to-salary → hourly-to-salary-calc(본문 665→1035단어) · protein-calc → protein-intake-calc(키워드
+  slug·선런칭) · binary-translator → binary-text-conv(2진 전용 → 2진·16진·10진 상위집합). 배포 트리 3종 제거,
+  홈 타일·ItemList·locales 14언어 키 42개 제거, worker SUNSET 맵 301(하위 경로·쿼리 보존), 레지스트리
+  status: sunset + sunset_redirect(SCHEMA 명문화), 소스·SERVICE.yaml·WIKI 보존. check-consistency 가 sunset 을
+  "배포 없음 정상 / 배포 잔존 🔴" 로 판정. 도구 328 → 325. **이후 sunset 은 이 절차 그대로**(maintenance.md §Sunset).
 
 ## 7. 연관 문서
 - [팩토리 파이프라인](../../docs/PIPELINE.md)
