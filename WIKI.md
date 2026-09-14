@@ -114,6 +114,26 @@
   한계 박제: 비영어 로케일은 건드리지 않는다 — 크롤러가 보는 건 baked EN 이고 CJK 는 문장 경계 규칙이 달라
   기계 절단이 번역을 훼손한다.
 
+- **2026-09-14 — 전면 개선 패스: 성능·AdSense 준비·UX 결함 (Lighthouse 실측 기반)**: 사용자 지시("전체 개선 + AdSense 등록되도록 SEO").
+  진단(모바일 LH, 라이브): 홈 perf 57 (LCP 9.1s) · 도구 83 (LCP 3.9s). 원인 ① 홈 `js/locales.js` 14언어×325도구 = 933KB(br 247KB)
+  렌더 차단(1,060ms) ② 홈 AdSense 로더가 미승인 상태에서 ~250KB 서드파티 JS(adsbygoogle·show_ads_impl·sodar) + 3rd-party 쿠키 +
+  doubleclick 403 ③ body 끝 동기 스크립트 6종 파서 차단(460ms) ④ `<meta charset>` 이 동의모드/GTM 인라인 뒤(첫 1024바이트 위반)
+  ⑤ 도구 171페이지 ca-pub-0000000000000000 플레이스홀더(스탬핑 잔재) ⑥ 홈 `data-theme="dark"` 강제(도구 321종은 auto) → 다크에서
+  액센트 링크 3:1, 라이트에서 카테고리색 "View all" 3:1 (WCAG FAIL) ⑦ 도구 푸터가 도구별 privacy.html(10종 한국어 잔존)만 링크 —
+  About/Contact/Terms 는 홈 한 단계 뒤 ⑧ state 8종 `stage: qa` 잔존(레지스트리 launched·배포 존재).
+  수리: `gen-hub-locales.js`(진본 카탈로그 → `js/locales/<lang>.js` 14분할, i18n.js 허브 변형이 en 동기 + 나머지 lazy) ·
+  `gen-html-fit.js`(charset 첫 자식·`<meta name="google-adsense-account">` 1,724페이지·플레이스홀더 256 치환·로더 config
+  `adsense_loader` 토글 OFF·셸 스크립트 defer 571) · `gen-footer-nav.js`(푸터 About·Contact·Terms·Privacy 허브 1벌 570파일 +
+  locales 14언어 키 557파일) · `--link` 토큰(라이트 액센트 55%+잉크, 다크 45%+화이트 — 82액센트 최악 4.95:1) · 홈 auto 테마 ·
+  "View all" 에 sr-only 카테고리명. 세 생성기 pipeline-post 편입(15→18단계), deploy-tools/gen-category-pages 는 GTM 블록을
+  마커로 추출(charset 앞 슬라이스 의존 제거). 검증: 표준 15/15 샘플·심층 전수 325/325, i18n 게이트 552/556(FAIL 2쌍 csv-diff·dividend-calc 는
+  기존 죽은 마크업 64키 — 별건), 로컬·라이브 실브라우저(ja/ar lazy 로드·RTL·검색·계산·푸터·콘솔 0), 정합성 OK.
+  결과(라이브 LH 모바일): 홈 perf 57→89 · SEO 92→100 · a11y 95→100 · BP 71→96, LCP 9.1→3.3s, 전송 829→345KB;
+  도구 perf 83→90 · a11y 96→100, LCP 3.9→3.4s. hub 6a31c092.
+  **남은 병목 = GTM(gtm.js+게이트웨이 253KB)**. **별건 발견(레포 밖)**: GTM Google 태그 ID 가 "G-S9LBSQR5W9, GT-MKP9B7GT" 두 개 병기 →
+  게이트웨이 `/9xr5/` 400 (단일 ID 는 200 실측) → 전 페이지 콘솔 에러 2 + GA4 수집 hit 400. **GTM 콘솔에서 태그 ID 하나로 수정 필요(사용자).**
+  AdSense 승인 후: config `adsense_loader: true` → pipeline-post 가 전 페이지 로더 ON.
+
 ## 7. 연관 문서
 - [팩토리 파이프라인](../../docs/PIPELINE.md)
 - [서비스 레지스트리](../../ontology/services.yaml)
