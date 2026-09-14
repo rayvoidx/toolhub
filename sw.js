@@ -7,7 +7,7 @@ var PRECACHE = [
   "index.html",
   "css/style.css",
   "js/config.js",
-  "js/locales.js",
+  "js/locales/en.js",
   "js/i18n.js",
   "js/app.js",
   "icons/icon.svg",

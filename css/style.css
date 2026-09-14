@@ -15,6 +15,9 @@
   --maxw: 960px;
   --shadow-card: 0 1px 2px rgba(16,24,40,.04), 0 4px 16px -4px rgba(16,24,40,.06);
   --ring: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+  /* 링크·카테고리 텍스트색 — 원색은 다크에서 3:1, 카테고리색은 라이트에서 3:1 (WCAG FAIL). 섞어서 최악 4.95:1 (2026-09-14) */
+  --link: color-mix(in srgb, var(--accent) 55%, var(--ink));
+  --cat-text: color-mix(in srgb, var(--cat, var(--accent)) 55%, var(--ink));
   --ease: cubic-bezier(.2,.7,.3,1);
   --font: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
           'Apple SD Gothic Neo', 'Segoe UI', 'Malgun Gothic', sans-serif;
@@ -22,6 +25,8 @@
 [data-theme="dark"] {
   --bg: #101216;
   --surface: #17191f;
+  --link: color-mix(in srgb, var(--accent) 45%, #fff);
+  --cat-text: color-mix(in srgb, var(--cat, var(--accent)) 45%, #fff);
   --ink: #e7e9ee;
   --muted: #98a2b3;
   --line: #262a33;
@@ -32,6 +37,8 @@
   [data-theme="auto"] {
     --bg: #101216;
     --surface: #17191f;
+    --link: color-mix(in srgb, var(--accent) 45%, #fff);
+    --cat-text: color-mix(in srgb, var(--cat, var(--accent)) 45%, #fff);
     --ink: #e7e9ee;
     --muted: #98a2b3;
     --line: #262a33;
@@ -51,7 +58,7 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
 }
-a { color: var(--accent); text-decoration: none; }
+a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 .site-header {
@@ -284,7 +291,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 }
 .tool-group .tool-ico { background: color-mix(in srgb, var(--cat, var(--accent)) 14%, var(--surface)); }
 .tool-group .tool-item:hover { border-color: color-mix(in srgb, var(--cat, var(--accent)) 55%, var(--line)); }
-.tool-group .cat-more { color: var(--cat, var(--accent)) !important; }
+.tool-group .cat-more { color: var(--cat-text) !important; }
 .cat-count { font-weight: 500; color: var(--muted); margin-left: 2px; letter-spacing: 0; }
 .cat-nav button { display: inline-flex; align-items: center; gap: 7px; }
 .cat-nav button .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--cat, var(--accent)); }

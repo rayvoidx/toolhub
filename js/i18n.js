@@ -1,35 +1,45 @@
 /* ============================================================
-   i18n 엔진 — 셸 공통부. 원칙적으로 수정하지 않는다.
-   번역 데이터는 js/locales.js (window.I18N_LOCALES) 에만 있다.
-   계약 (docs/I18N.md):
-   - 번역 대상 텍스트: data-i18n="key"
-   - 번역 대상 속성:   data-i18n-placeholder / data-i18n-title / data-i18n-aria-label
-   - 카탈로그에 없는 키는 HTML에 구워진 원문(baked)으로 폴백 — 부분 번역도 깨지지 않는다.
+   i18n 엔진 — 허브 홈 변형 (2026-09-14 언어별 lazy 로드).
+   왜: 홈 js/locales.js 는 14언어 × 325도구 = 933KB 를 렌더 차단으로 매 방문 내려받았다
+       (Lighthouse: 렌더 차단 1,060ms, LCP 9.1s). 방문자는 한 언어만 본다.
+   구조: en 은 js/locales/en.js 를 동기 로드(폴백·셀렉터용), 나머지 13언어는 js/locales/<lang>.js 를
+         필요할 때만 로드한다. 진본 카탈로그는 js/locales.js(전 언어, 사람이 편집) —
+         factory/gen-hub-locales.js 가 언어별 파일을 생성하며 페이지는 진본을 직접 싣지 않는다.
+   계약 (docs/I18N.md) 은 동일:
+   - 번역 대상 텍스트: data-i18n="key" / 속성: data-i18n-placeholder|title|aria-label
+   - 카탈로그에 없는 키는 HTML 원문(baked) 폴백 — 부분 번역도 깨지지 않는다.
    - 언어 결정 우선순위: URL ?lang= → localStorage → navigator.languages → "en"
+   - 언어 파일 로드 실패 시 영어를 유지하고 콘솔에 경고한다(조용한 실패 금지).
    ============================================================ */
 (function i18n() {
   "use strict";
   var cfg = window.APP_CONFIG || {};
-  var LOCALES = window.I18N_LOCALES || {};
-  var codes = [];
-  for (var k in LOCALES) { if (LOCALES.hasOwnProperty(k)) codes.push(k); }
-  if (!codes.length) return; // 카탈로그 없으면 아무것도 하지 않음 (조용한 실패 아님 — 단일 언어 서비스)
-
+  var LOCALES = window.I18N_LOCALES = window.I18N_LOCALES || {};
+  // 지원 언어 14개 고정(docs/I18N.md) — 카탈로그를 읽지 않고도 감지·셀렉터를 채운다.
+  var LANGS = {
+    en: "English", zh: "中文", hi: "हिन्दी", es: "Español", ar: "العربية", fr: "Français", bn: "বাংলা",
+    pt: "Português", ru: "Русский", ur: "اردو", id: "Bahasa Indonesia", de: "Deutsch", ja: "日本語", ko: "한국어"
+  };
+  var codes = Object.keys(LANGS);
   var DEFAULT = "en";
-  if (codes.indexOf(DEFAULT) === -1) DEFAULT = codes[0];
   var RTL = { ar: 1, ur: 1, fa: 1, he: 1 };
   var ATTRS = ["placeholder", "title", "aria-label"];
   var storeKey = (cfg.slug || "app") + ":lang";
   var baked = {};   // 최초 적용 전 HTML 원문 스냅샷 (누락 키 폴백용)
   var current = null;
+  var loading = {};
+  var base = "js/";
+  try {
+    var si = document.querySelector('script[src$="i18n.js"]');
+    if (si) base = si.getAttribute("src").replace(/i18n\.js$/, "");
+  } catch (e) { /* noop */ }
 
   function normalize(code) {
     code = String(code || "").toLowerCase();
     if (!code) return null;
-    if (LOCALES[code]) return code;
+    if (LANGS[code]) return code;
     var primary = code.split("-")[0];
-    if (LOCALES[primary]) return primary;
-    return null;
+    return LANGS[primary] ? primary : null;
   }
 
   function detect() {
@@ -58,8 +68,31 @@
     return baked[key] != null ? baked[key] : null;
   }
 
+  // 언어 파일 lazy 로드. 같은 언어의 동시 요청은 한 번만 내려받는다.
+  function load(lang, done) {
+    if (lang === DEFAULT || LOCALES[lang]) { done(true); return; }
+    if (loading[lang]) { loading[lang].push(done); return; }
+    loading[lang] = [done];
+    var s = document.createElement("script");
+    s.src = base + "locales/" + lang + ".js";
+    s.onload = function () {
+      var cbs = loading[lang]; delete loading[lang];
+      for (var i = 0; i < cbs.length; i++) cbs[i](!!LOCALES[lang]);
+    };
+    s.onerror = function () {
+      var cbs = loading[lang]; delete loading[lang];
+      try { console.warn("i18n: locale file failed to load — " + s.src + " (English kept)"); } catch (e) { /* noop */ }
+      for (var i = 0; i < cbs.length; i++) cbs[i](false);
+    };
+    document.head.appendChild(s);
+  }
+
   function apply(lang) {
     lang = normalize(lang) || DEFAULT;
+    load(lang, function (ok) { render(ok ? lang : DEFAULT); });
+  }
+
+  function render(lang) {
     var i, el, key, val, els;
 
     // 텍스트 노드
@@ -119,7 +152,7 @@
       if (lang !== "en" && !window.GUIDES && !window.__guideLoading) {
         window.__guideLoading = true;
         var gs = document.createElement("script");
-        gs.src = "js/guide-i18n.js";
+        gs.src = base + "guide-i18n.js";
         gs.onload = applyGuide;
         gs.onerror = function () { window.GUIDES = window.GUIDES || {}; };
         document.head.appendChild(gs);
@@ -152,10 +185,9 @@
   var sel = document.getElementById("lang-select");
   if (sel) {
     for (var c = 0; c < codes.length; c++) {
-      var code = codes[c];
       var opt = document.createElement("option");
-      opt.value = code;
-      opt.textContent = (LOCALES[code] && LOCALES[code]._label) || code;
+      opt.value = codes[c];
+      opt.textContent = LANGS[codes[c]];
       sel.appendChild(opt);
     }
     sel.addEventListener("change", function () { apply(sel.value); });
