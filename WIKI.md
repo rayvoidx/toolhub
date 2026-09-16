@@ -7,9 +7,9 @@
 | slug | `hub` |
 | 아키타입 | pure-static |
 | 상태 | launched |
-| 배포 | GitHub Pages · https://rayvoidx.github.io/ |
-| 최종 갱신 | 2026-07-10 |
-| 기준 커밋 | ac47356 |
+| 배포 | Cloudflare Worker `toolhub` · https://tool-hub.me/ (모노레포 rayvoidx/toolhub, main push = Workers Builds 배포) |
+| 최종 갱신 | 2026-09-16 |
+| 기준 커밋 | 6a31c092 |
 
 ## 1. 쉽게 이해하기
 <!-- 비유 한 개 + "이것은 무엇인가" + "누가, 언제 쓰나" -->
@@ -48,8 +48,8 @@
 - 외부 의존: 없음 (도구 목록은 빌드 시점에 정적 HTML로 하드코딩, 런타임 API 호출 없음)
 
 ## 5. 배포와 운영
-- 배포: GitHub Pages (main 브랜치 push = 배포)
-- 확인 방법: https://rayvoidx.github.io/ 접속 → 도구 1회 실행 → 콘솔 에러 0 확인
+- 배포: 모노레포 rayvoidx/toolhub main push = Cloudflare Workers Builds 자동 배포 (docs/HOSTING.md)
+- 확인 방법: https://tool-hub.me/ 접속 → 도구 1회 실행 → 콘솔 에러 0 확인
 - 롤백: 직전 커밋으로 revert push
 
 ## 6. 사건 파일
