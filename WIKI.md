@@ -134,6 +134,18 @@
   게이트웨이 `/9xr5/` 400 (단일 ID 는 200 실측) → 전 페이지 콘솔 에러 2 + GA4 수집 hit 400. **GTM 콘솔에서 태그 ID 하나로 수정 필요(사용자).**
   AdSense 승인 후: config `adsense_loader: true` → pipeline-post 가 전 페이지 로더 ON.
 
+- **2026-09-17 — 추가 개선 30분: 카테고리 본문·보안 헤더·csv-diff 크래시·i18n 백필**: ① 카테고리 랜딩 10종이 프로즈 83~116단어·FAQ 없음(AdSense 얇은 콘텐츠 후보)
+  → `factory/cat-intro-data.js`(플래너 작성, 실제 타일 도구명만 언급) + gen-category-pages 가 문단 3·FAQ 3·FAQPage JSON-LD 렌더 → 475~503단어. ② 응답 보안 헤더 —
+  worker `secure()`(HSTS·nosniff·referrer·permissions·XFO). **발견: 루트 자산(홈·정책·카테고리·css/js)은 워커를 거치지 않고 자산 계층이 직접 서빙**해 워커
+  헤더가 안 닿는다 → `_headers` 파일로 동일 규칙(둘 다 라이브 실측, `/_headers` 자체는 404). ③ csv-diff `renderConfig()` 가 `bothPairs()`(객체 배열)를 인덱스로 써
+  공통 열이 있으면 항상 TypeError — 샘플 버튼이 빈 문자열을 싣던 탓에 QA 가 못 잡던 실사용 크래시. 인덱스 재계산으로 수리(양 트리). ④ i18n 죽은 마크업 백필:
+  csv-diff 108키·dividend-calc 75키 ×14언어(빌더 2 병렬), dividend-calc 배지 span 을 감싸던 훅 분리. 발견: 도구 내부 `t()` 래퍼 폴백이 "" 라 누락 키가 전 언어에서
+  공백 렌더(csv-diff 47문구) — check-i18n 이 `I18N.t(` 만 스캔하던 사각. 로컬 `t("…")` 스캔을 경고로 추가 → **22종 잔존**(apy-calc·body-fat-calc·box-shadow-generator·
+  cron-parser·date-add-calc·fuel-cost-calc·gpa-calc·gradient-generator·landed-cost-batch·oven-temp-conv·pace-calc·packing-list-cbm·paygap-report·pregnancy-due-date-calc·
+  pregnancy-week-calc·random-word-gen·stock-ledger-recon·temp-conv·timesheet-batch-agg·timesheet-calc·vehicle-log-agg·wbs-progress-rollup) — 다음 유지보수 백필 대상.
+  검증: CWV 전수 325(LCP p75 64ms·임계 초과 0·CLS 0 — defer 회귀 없음), 표준·심층 4/4, 정합성 OK, 실브라우저(카테고리 FAQ·언어 14·csv-diff en/ko 샘플 +1/−1/~2/=2·
+  dividend-calc ko 훅 35·콘솔 0), 라이브 헤더·FAQ·수리본 확인, 카테고리 LH 모바일 perf 82/SEO 100/a11y 100/BP 96. hub 7dbbd709·23685236.
+
 ## 7. 연관 문서
 - [팩토리 파이프라인](../../docs/PIPELINE.md)
 - [서비스 레지스트리](../../ontology/services.yaml)
