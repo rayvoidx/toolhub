@@ -1,0 +1,8 @@
+# Workers Static Assets 헤더 규칙 (2026-09-17). 루트 자산(홈·정책·카테고리·css/js)은 워커를 거치지 않고
+# 자산 계층이 직접 서빙하므로 worker/index.js 의 secure() 가 닿지 않는다 — 같은 보안 헤더를 여기서 준다.
+/*
+  Strict-Transport-Security: max-age=31536000
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(self)
+  X-Frame-Options: SAMEORIGIN
