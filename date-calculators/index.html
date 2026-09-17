@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-xpYcCRPB55Ia9U++equ3i1gvE+zFBaMWIa9HzF7Ldd8=' 'sha256-IoOsbE+JIUPVIy1iBlQmAWSxEv7bHnOGLmjZZPbD4+s=' 'sha256-E0n2Pudxqf97DhPwNfS2bb6ynnSS3qcQpXV130oGuNI='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-xpYcCRPB55Ia9U++equ3i1gvE+zFBaMWIa9HzF7Ldd8=' 'sha256-IoOsbE+JIUPVIy1iBlQmAWSxEv7bHnOGLmjZZPbD4+s=' 'sha256-f0UnsJf0ocO3uX51xcWXj8IzxsBmve0xIfL44dJr+pY=' 'sha256-E0n2Pudxqf97DhPwNfS2bb6ynnSS3qcQpXV130oGuNI='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
 <meta name="google-adsense-account" content="ca-pub-6324953789479730">
 <!-- Google Consent Mode v2 default (must run before the Google tag) -->
 <script>
@@ -206,6 +206,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate the number of days between two dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the Date Difference Calculator, enter the start and end dates, and it returns the total in days along with the equivalent in weeks, months and years. It counts the interval between the two dates, so if your deadline includes the start day, add one. Leap days inside the range are handled automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between calendar days and business days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Calendar days count every date on the calendar. Business days count only Monday to Friday and skip public holidays, which is how contracts, bank transfers and shipping estimates are usually written. The Business Days Calculator does the second kind. Because holiday calendars differ between the US and the UK, check the list applied before you rely on a delivery date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my age show different numbers on different sites?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most differences come from rounding. The Age Calculator gives completed years, months and days, counting a year only once the birthday has passed, which is the convention used on official forms in the US and the UK. Sites that show a decimal age divide total days by 365.25 instead, so the two can disagree by a few days around a birthday."
+      }
+    }
+  ]
+}
+</script>
 <style>
   .cat-hero { padding: 26px 0 6px; }
   .cat-hero h1 { margin: 0 0 10px; font-size: 30px; }
@@ -227,7 +259,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <nav aria-label="Breadcrumb" style="font-size:14px;"><a href="/" style="color:var(--muted);text-decoration:none;">Toolhub</a> <span aria-hidden="true">›</span> <span id="cat-crumb">Date &amp; Time Calculators</span></nav>
   <section class="cat-hero">
     <h1 id="cat-h1">Date &amp; Time Calculators</h1>
-    <p>Calendar math is easy to get wrong by hand — months have different lengths, leap years interfere, and time zones shift everything. These tools do it precisely: exact age in years, months and days; the gap between two dates; ISO week numbers; working days excluding holidays; and world-clock conversions for scheduling across regions. Everything computes locally in your browser the moment you type, so checking a date takes seconds.</p>
+    <p>Calendar arithmetic looks trivial until you try it: months run 28 to 31 days, leap years move the goalposts every fourth February, and a meeting that is fine at 9 a.m. in London lands at 4 a.m. in San Francisco. Doing it in your head invites off-by-one errors, and doing it in a spreadsheet means remembering which function treats the end date as inclusive. These tools settle the question in one step and show the units they counted.</p>
+    <p>Pick by the question you are asking. Exact age for a form or a visa application: the Age Calculator returns years, months and days rather than a rounded figure. Gap between two dates: the Date Difference Calculator. Contract or delivery deadlines that skip weekends: the Business Days Calculator. Scheduling across the Atlantic: the Time Zone Converter and World Clock. Shift work and invoicing: the Hours Calculator and Time Card Calculator total a week of start and finish times, including breaks and overnight shifts.</p>
+    <p>Two details explain most disagreements between date tools. The first is whether the start day counts: a stay from the 1st to the 5th is four nights but five days, so check which convention you need before quoting a number. The second is daylight saving, which shifts on different weekends in the US and the UK, leaving a few weeks each year when the usual offset is wrong by an hour. Business day results also depend on a holiday list, and US and UK calendars do not match.</p>
   </section>
   <p class="cat-count">21 free tools — all run entirely in your browser.</p>
   <div class="tool-grid">
@@ -254,6 +288,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="tool-item" href="https://tool-hub.me/zodiac-sign-calc/"><span class="tool-ico" aria-hidden="true">♈</span><span class="tool-name">Zodiac Sign Calculator</span></a>
   </div>
   <a class="back-home" href="/">← All 325 Toolhub tools</a>
+  <section class="faq" id="faq">
+    <h2>Frequently asked questions</h2>
+    <details>
+      <summary>How do I calculate the number of days between two dates?</summary>
+      <p>Open the Date Difference Calculator, enter the start and end dates, and it returns the total in days along with the equivalent in weeks, months and years. It counts the interval between the two dates, so if your deadline includes the start day, add one. Leap days inside the range are handled automatically.</p>
+    </details>
+    <details>
+      <summary>What is the difference between calendar days and business days?</summary>
+      <p>Calendar days count every date on the calendar. Business days count only Monday to Friday and skip public holidays, which is how contracts, bank transfers and shipping estimates are usually written. The Business Days Calculator does the second kind. Because holiday calendars differ between the US and the UK, check the list applied before you rely on a delivery date.</p>
+    </details>
+    <details>
+      <summary>Why does my age show different numbers on different sites?</summary>
+      <p>Most differences come from rounding. The Age Calculator gives completed years, months and days, counting a year only once the birthday has passed, which is the convention used on official forms in the US and the UK. Sites that show a decimal age divide total days by 365.25 instead, so the two can disagree by a few days around a birthday.</p>
+    </details>
+  </section>
 </main>
 <script>/* cat-i18n — 짧은 필드(title/desc/h1) 스왑. 우선순위: ?lang → localStorage → navigator → en */
 (function(){

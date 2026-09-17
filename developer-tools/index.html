@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-6MGsqlgcUplDS2NQKNR18WEG3TXlkJS+4VjbUbNNMtg=' 'sha256-P2EhFOmRiTMKYkRbOCCGkGUoDGYJtbtiLKs3GH9qDXk=' 'sha256-NGKc+N2tsviOUZwiG5JrptLIuzd6hu6x3mf63oaWszI='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-6MGsqlgcUplDS2NQKNR18WEG3TXlkJS+4VjbUbNNMtg=' 'sha256-P2EhFOmRiTMKYkRbOCCGkGUoDGYJtbtiLKs3GH9qDXk=' 'sha256-HzRbNU4Zl6sqQOB38LR+BIoNxiiK8mkrR5ReszYQIDQ=' 'sha256-NGKc+N2tsviOUZwiG5JrptLIuzd6hu6x3mf63oaWszI='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
 <meta name="google-adsense-account" content="ca-pub-6324953789479730">
 <!-- Google Consent Mode v2 default (must run before the Google tag) -->
 <script>
@@ -320,6 +320,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is it safe to paste production data into an online formatter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With these tools, yes, because the parsing happens in JavaScript inside your own tab and nothing is sent to a server. You can confirm it by opening the network panel, or by loading the page and then going offline. That said, follow your employer's policy: some teams prohibit pasting customer data into any browser tool regardless of where it runs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between decoding and verifying a JWT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Decoding splits the token and Base64-decodes the header and payload so you can read the claims, the issuer and the expiry. Verifying checks the signature against a secret or public key to prove the token was not altered. The JWT Decoder does the first, which is what you need when debugging; only your server should do the second."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I read a cron expression like 0 */6 * * 1-5?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paste it into the Cron Expression Parser and it describes the schedule in words and lists the next run times. The five fields are minute, hour, day of month, month and day of week, so that example runs at minute zero of every sixth hour, Monday through Friday. Note that the schedule follows the server's time zone, not yours."
+      }
+    }
+  ]
+}
+</script>
 <style>
   .cat-hero { padding: 26px 0 6px; }
   .cat-hero h1 { margin: 0 0 10px; font-size: 30px; }
@@ -341,7 +373,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <nav aria-label="Breadcrumb" style="font-size:14px;"><a href="/" style="color:var(--muted);text-decoration:none;">Toolhub</a> <span aria-hidden="true">›</span> <span id="cat-crumb">Developer Tools</span></nav>
   <section class="cat-hero">
     <h1 id="cat-h1">Developer Tools</h1>
-    <p>Utilities you reach for mid-task, without the ad-covered pages or the risk of pasting payloads into unknown servers: format or diff JSON, decode a JWT, test a regex, read a cron expression, compute a hash, plan a subnet, convert number bases. Everything executes in your browser tab — tokens, configs and dumps never leave your machine, which is the whole point for anything work-related. Bookmark the ones you use; they load instantly.</p>
+    <p>These are the small detours in a working day: a payload that needs indenting before you can read it, a token you want to inspect, a cron line somebody wrote in 2019, a subnet mask you have to justify in a review. Looking each one up costs more attention than the task deserves. Everything here runs inside the browser tab, so config files, access tokens and production dumps stay on your machine, which is the only sane default for anything work-related.</p>
+    <p>Debugging an API response: the JSON Formatter makes it readable and the JSON Diff shows what changed between two captures, while the JWT Decoder reads the claims and expiry out of a bearer token. Wiring up infrastructure: the Cron Expression Parser translates a schedule into plain English before you deploy it, and the IP Subnet Calculator returns the range, broadcast address and usable host count. For quick conversions there is Base64, the Unix Timestamp Converter and the Hash Generator.</p>
+    <p>A few results are easy to misread. Decoding a JWT is not verifying it: the payload is only Base64, and a decoder cannot tell you whether the signature is valid. Hashing is one-way, so a hash is not encryption and cannot be reversed. Regular expressions vary by engine, and a pattern that passes here may behave differently in PCRE or Go. Timestamps are shown in UTC and in your local zone, which is worth checking before you file a bug about an hour-long discrepancy.</p>
   </section>
   <p class="cat-count">40 free tools — all run entirely in your browser.</p>
   <div class="tool-grid">
@@ -387,6 +421,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="tool-item" href="https://tool-hub.me/xml-formatter/"><span class="tool-ico" aria-hidden="true">📰</span><span class="tool-name">XML Formatter</span></a>
   </div>
   <a class="back-home" href="/">← All 325 Toolhub tools</a>
+  <section class="faq" id="faq">
+    <h2>Frequently asked questions</h2>
+    <details>
+      <summary>Is it safe to paste production data into an online formatter?</summary>
+      <p>With these tools, yes, because the parsing happens in JavaScript inside your own tab and nothing is sent to a server. You can confirm it by opening the network panel, or by loading the page and then going offline. That said, follow your employer's policy: some teams prohibit pasting customer data into any browser tool regardless of where it runs.</p>
+    </details>
+    <details>
+      <summary>What is the difference between decoding and verifying a JWT?</summary>
+      <p>Decoding splits the token and Base64-decodes the header and payload so you can read the claims, the issuer and the expiry. Verifying checks the signature against a secret or public key to prove the token was not altered. The JWT Decoder does the first, which is what you need when debugging; only your server should do the second.</p>
+    </details>
+    <details>
+      <summary>How do I read a cron expression like 0 */6 * * 1-5?</summary>
+      <p>Paste it into the Cron Expression Parser and it describes the schedule in words and lists the next run times. The five fields are minute, hour, day of month, month and day of week, so that example runs at minute zero of every sixth hour, Monday through Friday. Note that the schedule follows the server's time zone, not yours.</p>
+    </details>
+  </section>
 </main>
 <script>/* cat-i18n — 짧은 필드(title/desc/h1) 스왑. 우선순위: ?lang → localStorage → navigator → en */
 (function(){

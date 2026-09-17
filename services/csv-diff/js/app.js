@@ -593,7 +593,10 @@
   /* ---- 렌더: 키/매핑 UI ---- */
   function renderConfig() {
     var wrapK = $("cd-keys"), wrapM = $("cd-map");
-    var both = bothPairs();
+    // 2026-09-17 수리: 아래 키 체크박스 렌더가 both 를 "pair 인덱스" 로 쓰는데 bothPairs() 는 pair 객체를 돌려줘
+    // columns.pairs[obj] → undefined.name TypeError — 양쪽에 공통 열이 있으면 항상 크래시(샘플·실사용 모두).
+    var both = [];
+    columns.pairs.forEach(function (p, idx) { if (p.old >= 0 && p["new"] >= 0) both.push(idx); });
     if (!columns.pairs.length || (!sides.old.table.length && !sides["new"].table.length)) {
       wrapK.hidden = true; wrapM.hidden = true; return;
     }

@@ -1,5 +1,22 @@
 const ORIGIN = "https://rayvoidx.github.io";
 
+/*
+ * 2026-09-17 보안 응답 헤더 — 정적 자산 서빙엔 기본으로 없다. CSP 는 페이지 <meta> 가 담당(gen-csp).
+ * geolocation 은 자체 도구 1종(sunrise 류)이 쓰므로 self 허용, 카메라·마이크는 어떤 도구도 안 쓴다.
+ */
+const SEC_HEADERS = {
+  "strict-transport-security": "max-age=31536000",
+  "x-content-type-options": "nosniff",
+  "referrer-policy": "strict-origin-when-cross-origin",
+  "permissions-policy": "camera=(), microphone=(), geolocation=(self)",
+  "x-frame-options": "SAMEORIGIN",
+};
+function secure(res) {
+  const h = new Headers(res.headers);
+  for (const k in SEC_HEADERS) if (!h.has(k)) h.set(k, SEC_HEADERS[k]);
+  return new Response(res.body, { status: res.status, statusText: res.statusText, headers: h });
+}
+
 const BLOCKED =
   /(^|\/)(SERVICE\.yaml|WIKI\.md|wrangler\.jsonc|\.assetsignore|\.gitignore|\.git(\/|$)|worker(\/|$))/;
 
@@ -76,7 +93,7 @@ export default {
       }
 
       if (assetResponse.status !== 404) {
-        return assetResponse;
+        return secure(assetResponse);
       }
     }
 
@@ -109,10 +126,10 @@ export default {
       nfUrl.pathname = "/404";
       const nf = await env.ASSETS.fetch(new Request(nfUrl.toString(), { headers: { accept: "text/html" } }));
       if (nf.status === 200) {
-        return new Response(nf.body, {
+        return secure(new Response(nf.body, {
           status: 404,
           headers: { "content-type": "text/html; charset=utf-8" },
-        });
+        }));
       }
       return new Response("Not Found", { status: 404 });
     }
@@ -143,6 +160,6 @@ export default {
       });
     }
 
-    return upstream;
+    return secure(upstream);
   },
 };

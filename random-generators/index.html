@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-eyiD0ICqCF8y14gigF+KuBY4p8LZZ7xUlsqAx60x3po=' 'sha256-lyvCXdA4apfvzzvuV5053cJXr3K5WMonUJTuSor+EVk=' 'sha256-gjpPSC+ybZb+y9P0ygBDji7GV8D1OH3lN4QCltMGEnI='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-eyiD0ICqCF8y14gigF+KuBY4p8LZZ7xUlsqAx60x3po=' 'sha256-lyvCXdA4apfvzzvuV5053cJXr3K5WMonUJTuSor+EVk=' 'sha256-i88in7T4QdEQBoDA9IlTA5aaC1elNrhq58+KVDAATJE=' 'sha256-gjpPSC+ybZb+y9P0ygBDji7GV8D1OH3lN4QCltMGEnI='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
 <meta name="google-adsense-account" content="ca-pub-6324953789479730">
 <!-- Google Consent Mode v2 default (must run before the Google tag) -->
 <script>
@@ -122,6 +122,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How random are these generators really?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They call the browser's crypto random number generator, the same source used for cryptographic keys, rather than a simple arithmetic sequence. The output is drawn from the operating system's entropy pool, so results are not predictable from previous draws and there is no seed you could reverse-engineer. For classroom picks, giveaways and team splits that is far beyond what the situation requires."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I run a Secret Santa draw without anyone drawing their own name?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paste the list of participants into the Secret Santa Generator and it produces a full cycle of assignments in which nobody is matched to themselves. Because the pairing happens in your browser, the organizer can see the whole list, which is the usual trade-off with a browser draw; if the organizer is playing too, have someone outside the group run it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between the wheel spinner and the name picker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The result is equally random; the presentation is not. The Random Wheel Spinner animates the draw, which is better in front of an audience because everyone watches the same moment. The Random Name Picker is faster and suits long lists or repeated draws, such as calling on students one after another. Pick based on whether anyone is watching."
+      }
+    }
+  ]
+}
+</script>
 <style>
   .cat-hero { padding: 26px 0 6px; }
   .cat-hero h1 { margin: 0 0 10px; font-size: 30px; }
@@ -143,7 +175,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <nav aria-label="Breadcrumb" style="font-size:14px;"><a href="/" style="color:var(--muted);text-decoration:none;">Toolhub</a> <span aria-hidden="true">›</span> <span id="cat-crumb">Random Generators &amp; Pickers</span></nav>
   <section class="cat-hero">
     <h1 id="cat-h1">Random Generators &amp; Pickers</h1>
-    <p>Fair randomness, when it matters that nobody can rig the draw: random numbers, dice, coin flips, prize wheels, team splits and Secret Santa assignments. These tools use the browser's cryptographic random source rather than a predictable shortcut, so classroom picks, giveaways and office draws hold up to scrutiny. The password generator applies the same principle to security — long, high-entropy, generated locally and never transmitted.</p>
+    <p>Drawing a name out of a hat works because everyone can see it is fair. Online, that trust has to be earned differently. These pickers use the cryptographic random source built into the browser rather than a shortcut that can drift into patterns, and the draw happens on the screen in front of the room, so a classroom pick, a giveaway or an office raffle holds up when somebody asks how the winner was chosen.</p>
+    <p>Match the tool to the audience. The Random Wheel Spinner is the one to share on a projector, because the spin gives people a moment to watch instead of a number appearing from nowhere. The Random Name Picker takes a pasted class list or entry list and returns one name at a time. The Random Team Generator splits a group into balanced sides for a five-a-side game or a workshop, and the Secret Santa Generator pairs a group without anyone drawing themselves.</p>
+    <p>Two things worth knowing about random results. Each draw is independent, so a run of five heads does not make tails more likely on the sixth toss; the dice and coin tools will produce streaks, and that is what genuine randomness looks like. And nothing here keeps a record, so if a prize or a grade depends on the outcome, take a screenshot or have a witness at the screen. Regulated prize draws usually require an auditable process rather than a browser tool.</p>
   </section>
   <p class="cat-count">7 free tools — all run entirely in your browser.</p>
   <div class="tool-grid">
@@ -156,6 +190,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="tool-item" href="https://tool-hub.me/secret-santa-generator/"><span class="tool-ico" aria-hidden="true">🎁</span><span class="tool-name">Secret Santa Generator</span></a>
   </div>
   <a class="back-home" href="/">← All 325 Toolhub tools</a>
+  <section class="faq" id="faq">
+    <h2>Frequently asked questions</h2>
+    <details>
+      <summary>How random are these generators really?</summary>
+      <p>They call the browser's crypto random number generator, the same source used for cryptographic keys, rather than a simple arithmetic sequence. The output is drawn from the operating system's entropy pool, so results are not predictable from previous draws and there is no seed you could reverse-engineer. For classroom picks, giveaways and team splits that is far beyond what the situation requires.</p>
+    </details>
+    <details>
+      <summary>How do I run a Secret Santa draw without anyone drawing their own name?</summary>
+      <p>Paste the list of participants into the Secret Santa Generator and it produces a full cycle of assignments in which nobody is matched to themselves. Because the pairing happens in your browser, the organizer can see the whole list, which is the usual trade-off with a browser draw; if the organizer is playing too, have someone outside the group run it.</p>
+    </details>
+    <details>
+      <summary>What is the difference between the wheel spinner and the name picker?</summary>
+      <p>The result is equally random; the presentation is not. The Random Wheel Spinner animates the draw, which is better in front of an audience because everyone watches the same moment. The Random Name Picker is faster and suits long lists or repeated draws, such as calling on students one after another. Pick based on whether anyone is watching.</p>
+    </details>
+  </section>
 </main>
 <script>/* cat-i18n — 짧은 필드(title/desc/h1) 스왑. 우선순위: ?lang → localStorage → navigator → en */
 (function(){

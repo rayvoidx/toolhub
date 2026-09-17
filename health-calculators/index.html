@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-6kA1cdGQCx02eNs4kFU5GLr2Sj/8IyCkJ+Qg1jr+HC4=' 'sha256-iwEO7QG7TwTkGpRcqk0peZaqjlW0Ms/PTvcCzk3Glcs=' 'sha256-8nTsWIg8IX/UJclITITzVT/usOxZ69P3ykTQmQqxNZA='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-6kA1cdGQCx02eNs4kFU5GLr2Sj/8IyCkJ+Qg1jr+HC4=' 'sha256-iwEO7QG7TwTkGpRcqk0peZaqjlW0Ms/PTvcCzk3Glcs=' 'sha256-w+d2C2BmXsXUJPDXdJuslZVtGYUh+9eJzWNfWZQa7Cw=' 'sha256-8nTsWIg8IX/UJclITITzVT/usOxZ69P3ykTQmQqxNZA='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
 <meta name="google-adsense-account" content="ca-pub-6324953789479730">
 <!-- Google Consent Mode v2 default (must run before the Google tag) -->
 <script>
@@ -290,6 +290,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I know how many calories I should eat a day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Run the TDEE Calculator first: it estimates resting metabolism from your height, weight, age and sex, then multiplies by an activity factor to give maintenance calories. Subtract roughly 500 a day for gradual weight loss, or use the Calorie Deficit Calculator to work backward from a target date. Adjust after two weeks based on what the scale actually does."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between BMI and body fat percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMI is weight divided by height squared, a screening ratio that ignores what the weight is made of. Body fat percentage estimates composition from tape measurements, which is why a muscular person can be flagged as overweight by BMI and read as lean on the Body Fat Calculator. Use BMI for a quick population check and body fat for a closer picture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a due date from a calculator accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a best estimate, not an appointment. The Pregnancy Due Date Calculator adds 280 days to the first day of your last period, assuming a regular 28-day cycle, so an irregular or longer cycle shifts the result. An early ultrasound dates a pregnancy more precisely, and your midwife or doctor will revise the date if the scan disagrees."
+      }
+    }
+  ]
+}
+</script>
 <style>
   .cat-hero { padding: 26px 0 6px; }
   .cat-hero h1 { margin: 0 0 10px; font-size: 30px; }
@@ -311,7 +343,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <nav aria-label="Breadcrumb" style="font-size:14px;"><a href="/" style="color:var(--muted);text-decoration:none;">Toolhub</a> <span aria-hidden="true">›</span> <span id="cat-crumb">Health &amp; Fitness Calculators</span></nav>
   <section class="cat-hero">
     <h1 id="cat-h1">Health &amp; Fitness Calculators</h1>
-    <p>Each tool here uses the published formula behind it — Mifflin-St Jeor for calories, WHO and regional cutoffs for BMI, Navy and Army methods for body fat, Karvonen zones for training — and says so, along with the limits of what a formula can tell you. Nothing you enter leaves the browser, which matters for health data. Use them to set a calorie target, plan protein intake, check a blood-pressure or cholesterol category, or pace a race. They inform decisions; your clinician makes the medical calls.</p>
+    <p>Health numbers are only useful if you know what produced them. Every calculator here names the published formula it uses: Mifflin-St Jeor for resting metabolism, the WHO categories for BMI, the US Navy and Army methods for body fat, Karvonen for heart rate zones. That matters because the formulas disagree by design, and a figure quoted without its source is impossible to check. Nothing you type is uploaded, which is the point when the input is your weight, your cycle dates or a blood test result.</p>
+    <p>Cutting or gaining weight starts with the TDEE Calculator for maintenance calories, then the Calorie Deficit Calculator for a target and the Macro Calculator or Protein Intake Calculator to split it. Training instead: the Heart Rate Zone Calculator sets effort bands, the Running Pace Calculator turns a goal time into a per-mile or per-kilometre pace, and the One Rep Max Calculator estimates a lift from a set you already completed. Tracking a pregnancy, the Pregnancy Due Date Calculator counts from the last period.</p>
+    <p>Treat every result as an estimate about a population, not a diagnosis about you. BMI cannot tell muscle from fat and misreads athletes and older adults; calorie formulas carry a spread of several hundred kilocalories a day; a due date is a midpoint, and most babies arrive within two weeks either side of it. Categories for blood pressure and cholesterol also differ between US and UK guidelines. If a number worries you or a reading is repeatedly out of range, consult a doctor or pharmacist.</p>
   </section>
   <p class="cat-count">35 free tools — all run entirely in your browser.</p>
   <div class="tool-grid">
@@ -352,6 +386,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="tool-item" href="https://tool-hub.me/wilks-calc/"><span class="tool-ico" aria-hidden="true">🏋️</span><span class="tool-name">Wilks Calculator</span></a>
   </div>
   <a class="back-home" href="/">← All 325 Toolhub tools</a>
+  <section class="faq" id="faq">
+    <h2>Frequently asked questions</h2>
+    <details>
+      <summary>How do I know how many calories I should eat a day?</summary>
+      <p>Run the TDEE Calculator first: it estimates resting metabolism from your height, weight, age and sex, then multiplies by an activity factor to give maintenance calories. Subtract roughly 500 a day for gradual weight loss, or use the Calorie Deficit Calculator to work backward from a target date. Adjust after two weeks based on what the scale actually does.</p>
+    </details>
+    <details>
+      <summary>What is the difference between BMI and body fat percentage?</summary>
+      <p>BMI is weight divided by height squared, a screening ratio that ignores what the weight is made of. Body fat percentage estimates composition from tape measurements, which is why a muscular person can be flagged as overweight by BMI and read as lean on the Body Fat Calculator. Use BMI for a quick population check and body fat for a closer picture.</p>
+    </details>
+    <details>
+      <summary>Is a due date from a calculator accurate?</summary>
+      <p>It is a best estimate, not an appointment. The Pregnancy Due Date Calculator adds 280 days to the first day of your last period, assuming a regular 28-day cycle, so an irregular or longer cycle shifts the result. An early ultrasound dates a pregnancy more precisely, and your midwife or doctor will revise the date if the scan disagrees.</p>
+    </details>
+  </section>
 </main>
 <script>/* cat-i18n — 짧은 필드(title/desc/h1) 스왑. 우선순위: ?lang → localStorage → navigator → en */
 (function(){

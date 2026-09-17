@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-P0/C/8stxXq3GfOP8wqk/LF55JMaSOXCwGCvAOF952I=' 'sha256-zcb6vUL2Yjmz6iJQqDZvZQApA4yqUdXcgUd+GtxMGTU=' 'sha256-VvskF6rFIsLuvgi+A9qOg8SpmBujQzg6SpAdAiRuR0A='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-P0/C/8stxXq3GfOP8wqk/LF55JMaSOXCwGCvAOF952I=' 'sha256-zcb6vUL2Yjmz6iJQqDZvZQApA4yqUdXcgUd+GtxMGTU=' 'sha256-oE1jQ+BvXRrbzgHAeVQ/V548OsKyORW6rlLy31SqRyk=' 'sha256-VvskF6rFIsLuvgi+A9qOg8SpmBujQzg6SpAdAiRuR0A='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
 <meta name="google-adsense-account" content="ca-pub-6324953789479730">
 <!-- Google Consent Mode v2 default (must run before the Google tag) -->
 <script>
@@ -194,6 +194,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert a US recipe to metric measurements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the Volume Converter for liquids and the Oven Temperature Converter for the bake setting. Dry ingredients are the awkward part, because a cup of flour and a cup of sugar weigh very different amounts, so a weight conversion needs the specific ingredient rather than a single factor. When a recipe matters, weighing in grams is more reliable than converting cups."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a US gallon and a UK gallon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An imperial gallon is 4.546 liters and a US liquid gallon is 3.785 liters, so the same number means about a fifth more fuel or paint in Britain. Miles per gallon figures are not comparable between the two countries for the same reason. The Fuel Economy Converter keeps them separate and converts to liters per 100 kilometers as well."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the conversion factors exact or rounded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Definitions that are exact by international agreement are applied exactly: one inch is 25.4 millimeters, one pound is 0.45359237 kilograms. Results are then rounded only for display, and you can read more decimal places when you need them. Temperature is a formula rather than a factor, so Celsius and Fahrenheit convert through an offset as well as a ratio."
+      }
+    }
+  ]
+}
+</script>
 <style>
   .cat-hero { padding: 26px 0 6px; }
   .cat-hero h1 { margin: 0 0 10px; font-size: 30px; }
@@ -215,7 +247,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <nav aria-label="Breadcrumb" style="font-size:14px;"><a href="/" style="color:var(--muted);text-decoration:none;">Toolhub</a> <span aria-hidden="true">›</span> <span id="cat-crumb">Unit Converters</span></nav>
   <section class="cat-hero">
     <h1 id="cat-h1">Unit Converters</h1>
-    <p>Unit mistakes are expensive — a recipe in ounces, a part spec in millimeters, a torque figure in newton-meters when your wrench reads foot-pounds. These converters cover the pairs people actually need, with exact conversion factors rather than rounded folklore, and they convert as you type in either direction. Each page also explains where the units come from and when precision matters, so you can sanity-check the answer instead of trusting a black box.</p>
+    <p>Britain and America both live between two measurement systems, and the seams are where mistakes happen. A recipe in cups, a bolt torque in newton-meters, body weight in stone, a tire pressure in bar on a gauge that reads PSI: each one needs a conversion before it means anything. These converters use exact factors rather than the rounded numbers people memorize, work in both directions as you type, and keep enough decimal places that the answer survives being multiplied by something.</p>
+    <p>The pairs people actually search for each have a page. Cooking from an American blog in a European kitchen: the Oven Temperature Converter handles Fahrenheit, Celsius and the gas marks British ovens still use. Working on a car: the Nm to lb-ft Converter matches a torque spec to the wrench you own. Buying abroad: the Shoe Size Converter and Ring Size Converter line up US, UK and EU scales. For rooms and flooring, the Square Footage Calculator and Area Converter go together.</p>
+    <p>Watch the units that share a name but not a size. A US gallon is about 20 percent smaller than an imperial gallon, a US pint is 16 fluid ounces against 20 in the UK, and a ton can mean 2,000 pounds, 2,240 pounds or 1,000 kilograms depending on who wrote the spec. Data size has the same trap, since a kilobyte is 1,000 bytes to a drive manufacturer and 1,024 to an operating system. Each converter labels which variant it applies.</p>
   </section>
   <p class="cat-count">19 free tools — all run entirely in your browser.</p>
   <div class="tool-grid">
@@ -240,6 +274,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="tool-item" href="https://tool-hub.me/weight-conv/"><span class="tool-ico" aria-hidden="true">🏋️</span><span class="tool-name">Weight Converter</span></a>
   </div>
   <a class="back-home" href="/">← All 325 Toolhub tools</a>
+  <section class="faq" id="faq">
+    <h2>Frequently asked questions</h2>
+    <details>
+      <summary>How do I convert a US recipe to metric measurements?</summary>
+      <p>Use the Volume Converter for liquids and the Oven Temperature Converter for the bake setting. Dry ingredients are the awkward part, because a cup of flour and a cup of sugar weigh very different amounts, so a weight conversion needs the specific ingredient rather than a single factor. When a recipe matters, weighing in grams is more reliable than converting cups.</p>
+    </details>
+    <details>
+      <summary>What is the difference between a US gallon and a UK gallon?</summary>
+      <p>An imperial gallon is 4.546 liters and a US liquid gallon is 3.785 liters, so the same number means about a fifth more fuel or paint in Britain. Miles per gallon figures are not comparable between the two countries for the same reason. The Fuel Economy Converter keeps them separate and converts to liters per 100 kilometers as well.</p>
+    </details>
+    <details>
+      <summary>Are the conversion factors exact or rounded?</summary>
+      <p>Definitions that are exact by international agreement are applied exactly: one inch is 25.4 millimeters, one pound is 0.45359237 kilograms. Results are then rounded only for display, and you can read more decimal places when you need them. Temperature is a formula rather than a factor, so Celsius and Fahrenheit convert through an offset as well as a ratio.</p>
+    </details>
+  </section>
 </main>
 <script>/* cat-i18n — 짧은 필드(title/desc/h1) 스왑. 우선순위: ?lang → localStorage → navigator → en */
 (function(){

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-Qe5Yg7xXmYZSfOFLimPDXYs5jSNpZAfmwDSc1nNeAoc=' 'sha256-WAhQTDcJQV2zipyzLOPel7ECtFIHUOPUe1r+flZi0sA=' 'sha256-aBKYhDWetLry6OnIWOvcHokiFh7A72QdU2swxrbysYw='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-Qe5Yg7xXmYZSfOFLimPDXYs5jSNpZAfmwDSc1nNeAoc=' 'sha256-WAhQTDcJQV2zipyzLOPel7ECtFIHUOPUe1r+flZi0sA=' 'sha256-g1lvE5U96ynELXmiYwBJ1Qku3x4K/Td8OJfhFSC+uaU=' 'sha256-aBKYhDWetLry6OnIWOvcHokiFh7A72QdU2swxrbysYw='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
 <meta name="google-adsense-account" content="ca-pub-6324953789479730">
 <!-- Google Consent Mode v2 default (must run before the Google tag) -->
 <script>
@@ -224,6 +224,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I count words and characters in a block of text?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paste it into the Word Counter and the totals update as you type: words, characters with and without spaces, sentences and paragraphs. The Character Counter is the better choice when a platform enforces a hard limit, since it shows the remaining allowance. Nothing is uploaded, so a confidential draft is safe to paste."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Text Diff Checker and Compare Two Lists?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Text Diff Checker compares two documents line by line and highlights insertions, deletions and edits in order, which suits contract or copy revisions. Compare Two Lists ignores order and answers a set question instead: which entries appear in both lists, and which appear in only one. Use the first for prose and the second for emails, SKUs or IDs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my word count different from the one in Microsoft Word?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Different programs apply different rules. Hyphenated terms may count as one word or two, numbers and symbols may be included or skipped, and Word can add footnotes and text boxes to the total depending on your settings. Differences of one or two percent are normal. If an assignment has a strict limit, count with the tool your marker will use."
+      }
+    }
+  ]
+}
+</script>
 <style>
   .cat-hero { padding: 26px 0 6px; }
   .cat-hero h1 { margin: 0 0 10px; font-size: 30px; }
@@ -245,7 +277,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <nav aria-label="Breadcrumb" style="font-size:14px;"><a href="/" style="color:var(--muted);text-decoration:none;">Toolhub</a> <span aria-hidden="true">›</span> <span id="cat-crumb">Text Tools</span></nav>
   <section class="cat-hero">
     <h1 id="cat-h1">Text Tools</h1>
-    <p>Paste text, get an answer — counts, case conversion, alphabetical sorting, duplicate removal, side-by-side comparison, reading level, keyword frequency. Because everything runs locally, these tools are safe for drafts, contracts and anything you would not paste into a random website. Writers use the counters and readability scores; developers and analysts use compare, sort and dedupe; students use pages-to-words before a deadline.</p>
+    <p>Editing text is mostly small mechanical jobs that nobody wants to do by hand: counting what you wrote, fixing capitalization a client changed their mind about, stripping the line breaks a PDF left behind, finding the one line that differs between two versions. Each of these tools does one of those jobs and shows the result immediately. Because the work happens in the page itself, drafts, contracts and internal documents never leave your machine, which is the difference between a convenience and a liability.</p>
+    <p>Writers and students tend to start with the Word Counter for an assignment limit and the Words to Pages Converter when the brief is given in pages instead. The Readability Checker scores a draft on the Flesch scale, which is a quick way to see whether a paragraph is heavier than the audience wants. Editors and analysts lean on the Text Diff Checker to spot what changed between two versions, the Remove Duplicate Lines tool for messy exports, and the Case Converter for headline styles.</p>
+    <p>Counts are less absolute than they look. Word processors disagree over hyphenated compounds, numbers and text inside footnotes, so a figure here can differ slightly from the one in Word or Google Docs. Character counts change depending on whether spaces are included, and platforms that impose limits usually count them. Readability scores are rough guidance built on sentence and syllable length; they cannot judge whether the writing is any good. Check the specific rule your school or platform applies before trimming to the last word.</p>
   </section>
   <p class="cat-count">24 free tools — all run entirely in your browser.</p>
   <div class="tool-grid">
@@ -275,6 +309,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="tool-item" href="https://tool-hub.me/words-to-pages/"><span class="tool-ico" aria-hidden="true">📄</span><span class="tool-name">Words to Pages Converter</span></a>
   </div>
   <a class="back-home" href="/">← All 325 Toolhub tools</a>
+  <section class="faq" id="faq">
+    <h2>Frequently asked questions</h2>
+    <details>
+      <summary>How do I count words and characters in a block of text?</summary>
+      <p>Paste it into the Word Counter and the totals update as you type: words, characters with and without spaces, sentences and paragraphs. The Character Counter is the better choice when a platform enforces a hard limit, since it shows the remaining allowance. Nothing is uploaded, so a confidential draft is safe to paste.</p>
+    </details>
+    <details>
+      <summary>What is the difference between Text Diff Checker and Compare Two Lists?</summary>
+      <p>Text Diff Checker compares two documents line by line and highlights insertions, deletions and edits in order, which suits contract or copy revisions. Compare Two Lists ignores order and answers a set question instead: which entries appear in both lists, and which appear in only one. Use the first for prose and the second for emails, SKUs or IDs.</p>
+    </details>
+    <details>
+      <summary>Why is my word count different from the one in Microsoft Word?</summary>
+      <p>Different programs apply different rules. Hyphenated terms may count as one word or two, numbers and symbols may be included or skipped, and Word can add footnotes and text boxes to the total depending on your settings. Differences of one or two percent are normal. If an assignment has a strict limit, count with the tool your marker will use.</p>
+    </details>
+  </section>
 </main>
 <script>/* cat-i18n — 짧은 필드(title/desc/h1) 스왑. 우선순위: ?lang → localStorage → navigator → en */
 (function(){

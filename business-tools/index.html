@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-qqBe0QLCkhJEF3r6DC1vRj+/9SjPU2YLNtnGrIhGoBY=' 'sha256-NSRl3gm29hGJXl7b+CGyxH2w5DhDw2leT0GE2dchBNo=' 'sha256-BrFf+9umCS//WnmHa/oMUOsV5AU3c59t2EraZKVKyhw='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-qqBe0QLCkhJEF3r6DC1vRj+/9SjPU2YLNtnGrIhGoBY=' 'sha256-NSRl3gm29hGJXl7b+CGyxH2w5DhDw2leT0GE2dchBNo=' 'sha256-bx3XkQtKm8EyTvW+cPXQagdVn4ilDymgnSh0JqPPYfI=' 'sha256-BrFf+9umCS//WnmHa/oMUOsV5AU3c59t2EraZKVKyhw='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
 <meta name="google-adsense-account" content="ca-pub-6324953789479730">
 <!-- Google Consent Mode v2 default (must run before the Google tag) -->
 <script>
@@ -248,6 +248,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I total a month of timesheets without building a spreadsheet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Export or paste the rows into the Timesheet Batch Aggregator, one line per shift, and it totals hours by person and by period instead of making you drag a formula down a thousand rows. Check the rounding rule your employer applies first, since rounding to the nearest quarter hour changes a monthly total noticeably. The file stays in your browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between safety stock and reorder point?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Safety stock is the buffer you hold to absorb demand spikes and late deliveries. The reorder point is the level that triggers a new order, calculated as expected demand during lead time plus that buffer. The Safety Stock and Reorder Point Batch Calculator returns both for every SKU in a pasted file, so you can see which lines are carrying cash unnecessarily."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to paste company data into these tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The processing runs in your browser and no file is uploaded, which you can verify by disconnecting from the network after the page loads. Even so, company policy outranks technical detail: if your organization restricts where payroll or customer data may be opened, get that cleared first. Nothing is stored, so close the tab and the data is gone."
+      }
+    }
+  ]
+}
+</script>
 <style>
   .cat-hero { padding: 26px 0 6px; }
   .cat-hero h1 { margin: 0 0 10px; font-size: 30px; }
@@ -269,7 +301,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <nav aria-label="Breadcrumb" style="font-size:14px;"><a href="/" style="color:var(--muted);text-decoration:none;">Toolhub</a> <span aria-hidden="true">›</span> <span id="cat-crumb">Business &amp; Productivity Tools</span></nav>
   <section class="cat-hero">
     <h1 id="cat-h1">Business &amp; Productivity Tools</h1>
-    <p>Operations math that normally lives in a spreadsheet nobody wants to maintain: landed cost across an import invoice, inventory turnover and safety stock, timesheet aggregation, work-back schedules, commission structures, the real cost of a recurring meeting. Several tools accept CSV paste for batch work — processed entirely in your browser, which keeps supplier prices and payroll data off third-party servers.</p>
+    <p>Every office runs on a handful of spreadsheets that one person built and nobody else fully understands. These tools replace the fragile ones: the workbook that totals timesheets, the tab that flags slow-moving stock, the sheet that works a launch date backward into deadlines. Several accept a pasted CSV and process the whole file at once, all of it inside the browser, so supplier prices, payroll hours and staff names never reach a third-party server.</p>
+    <p>Operations and logistics start with the Inventory Turnover and Dead Stock Finder, the Safety Stock and Reorder Point Batch Calculator, and the Packing List CBM and Chargeable Weight Calculator, which settles the volumetric weight argument with a freight forwarder. Project and people work is covered by the Workback Schedule Builder, the Man-Month Effort Calculator and the Meeting Cost Calculator, which prices a recurring standup in salary terms. The Password Generator, QR Code Generator and Image Compressor cover everyday admin.</p>
+    <p>Batch results are only as clean as the file you paste, so check the column mapping and the date format before trusting a total; a single European-style date in an American column will skew a whole month. Inventory formulas assume steady demand and a known lead time, which seasonal businesses should override. Reporting outputs, including pay gap figures, are a working draft for internal review rather than a filing; confirm the methodology your jurisdiction requires with your finance or legal team.</p>
   </section>
   <p class="cat-count">28 free tools — all run entirely in your browser.</p>
   <div class="tool-grid">
@@ -303,6 +337,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="tool-item" href="https://tool-hub.me/workback-schedule/"><span class="tool-ico" aria-hidden="true">🗓️</span><span class="tool-name">Workback Schedule Builder</span></a>
   </div>
   <a class="back-home" href="/">← All 325 Toolhub tools</a>
+  <section class="faq" id="faq">
+    <h2>Frequently asked questions</h2>
+    <details>
+      <summary>How do I total a month of timesheets without building a spreadsheet?</summary>
+      <p>Export or paste the rows into the Timesheet Batch Aggregator, one line per shift, and it totals hours by person and by period instead of making you drag a formula down a thousand rows. Check the rounding rule your employer applies first, since rounding to the nearest quarter hour changes a monthly total noticeably. The file stays in your browser.</p>
+    </details>
+    <details>
+      <summary>What is the difference between safety stock and reorder point?</summary>
+      <p>Safety stock is the buffer you hold to absorb demand spikes and late deliveries. The reorder point is the level that triggers a new order, calculated as expected demand during lead time plus that buffer. The Safety Stock and Reorder Point Batch Calculator returns both for every SKU in a pasted file, so you can see which lines are carrying cash unnecessarily.</p>
+    </details>
+    <details>
+      <summary>Is it safe to paste company data into these tools?</summary>
+      <p>The processing runs in your browser and no file is uploaded, which you can verify by disconnecting from the network after the page loads. Even so, company policy outranks technical detail: if your organization restricts where payroll or customer data may be opened, get that cleared first. Nothing is stored, so close the tab and the data is gone.</p>
+    </details>
+  </section>
 </main>
 <script>/* cat-i18n — 짧은 필드(title/desc/h1) 스왑. 우선순위: ?lang → localStorage → navigator → en */
 (function(){
