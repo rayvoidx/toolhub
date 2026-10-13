@@ -2,7 +2,7 @@
 <html lang="en" data-theme="auto">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-FtehDH/bN/do2SVVuYHc3eTPT28MnoceB8aR04joW/M=' 'sha256-ErpSeKVot+I5a0/gqmeBfsSyj8QWg5Fm7jPmbmb4suc=' 'sha256-5aXdWJ2W6k625Jl13F43T9F+VIo/JorZIHC4VZPZdjg='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-EvBtlj+uSGEh59TZDIrMhH1xRxvgqT4ouw7/QSCMQ5w=' 'sha256-D+kyqts2amlXRkjSFH2gBrROR6dibI2r7P+ItAjopkI=' 'sha256-5aXdWJ2W6k625Jl13F43T9F+VIo/JorZIHC4VZPZdjg='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
 <meta name="google-adsense-account" content="ca-pub-6324953789479730">
 <!-- Google Consent Mode v2 default (must run before the Google tag) -->
 <script>
@@ -69,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-13",
-  "dateModified": "2026-09-14",
+  "dateModified": "2026-09-17",
   "publisher": {
     "@type": "Organization",
     "name": "Toolhub",
@@ -91,6 +91,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {
       "@type": "ListItem",
       "position": 2,
+      "name": "Finance",
+      "item": "https://tool-hub.me/financial-calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
       "name": "Percentage Calculator",
       "item": "https://tool-hub.me/percent-calc/"
     }
@@ -160,6 +166,7 @@ main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break
 </style>
 </head>
 <body>
+<a href="#tool" class="skip-link">Skip to content</a>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -188,7 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        i18n contract (docs/I18N.md): every user-visible string carries a data-i18n hook,
        mirrored in all 14 language blocks of js/locales.js. Dynamic JS strings go through
        window.I18N.t("key"); the tool re-renders on the "i18n:change" event. -->
-  <section class="tool-card" id="tool" aria-live="polite">
+  <section class="tool-card" id="tool">
     <!-- Tab navigation -->
     <div class="tab-nav" role="tablist" aria-label="Select calculation type" data-i18n-aria-label="tool.tablabel">
       <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-ratio" id="btn-ratio" data-tab="ratio" data-i18n="tool.tab.ratio">What % is A of B</button>

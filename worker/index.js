@@ -52,12 +52,12 @@ export default {
     const head = url.pathname.split("/")[1];
     if (SUNSET[head]) {
       url.pathname = url.pathname.replace(`/${head}`, `/${SUNSET[head]}`);
-      return Response.redirect(url.toString(), 301);
+      return secure(Response.redirect(url.toString(), 301));
     }
 
     const langPage = url.pathname.match(/^\/([^/]+)\/(ko|ja|es)\/?$/);
     if (langPage) {
-      return Response.redirect(`${url.origin}/${langPage[1]}/?lang=${langPage[2]}`, 301);
+      return secure(Response.redirect(`${url.origin}/${langPage[1]}/?lang=${langPage[2]}`, 301));
     }
 
     /*
@@ -89,7 +89,7 @@ export default {
       ) {
         const loc = new URL(assetLoc, url.origin);
         loc.pathname = loc.pathname.replace(/^\/services(?=\/)/, "");
-        return Response.redirect(loc.toString(), 301);
+        return secure(Response.redirect(loc.toString(), 301));
       }
 
       if (assetResponse.status !== 404) {
@@ -151,13 +151,18 @@ export default {
         loc.hostname = url.hostname;
       }
 
+      // 2026-10-13 보안: 폴백 오리진이 외부 호스트로 3xx 를 돌려보내면 tool-hub.me 가 오픈 리다이렉트가 된다 — 허용 호스트 외엔 404.
+      if (loc.hostname !== "rayvoidx.github.io" && loc.hostname !== url.hostname) {
+        return secure(new Response("Not Found", { status: 404 }));
+      }
+
       const headers = new Headers(upstream.headers);
       headers.set("location", loc.toString());
 
-      return new Response(null, {
+      return secure(new Response(null, {
         status: upstream.status,
         headers,
-      });
+      }));
     }
 
     return secure(upstream);

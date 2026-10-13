@@ -81,6 +81,8 @@
 
   /* 4. 오류 문구 알림 역할 */
   if (errBox && !errBox.getAttribute("role")) errBox.setAttribute("role", "alert");
+  /* 4b. 결과 영역만 라이브 리전 (2026-10-13 a11y) — #tool 전체 aria-live 는 입력·타일까지 매 변경마다 낭독시켰다 */
+  if (result && !result.getAttribute("aria-live") && !result.getAttribute("role")) result.setAttribute("aria-live", "polite");
 
   /* 5. 첫 입력칸 포커스 */
   if (window.matchMedia && window.matchMedia("(pointer: fine)").matches) {

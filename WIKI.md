@@ -146,6 +146,20 @@
   검증: CWV 전수 325(LCP p75 64ms·임계 초과 0·CLS 0 — defer 회귀 없음), 표준·심층 4/4, 정합성 OK, 실브라우저(카테고리 FAQ·언어 14·csv-diff en/ko 샘플 +1/−1/~2/=2·
   dividend-calc ko 훅 35·콘솔 0), 라이브 헤더·FAQ·수리본 확인, 카테고리 LH 모바일 perf 82/SEO 100/a11y 100/BP 96. hub 7dbbd709·23685236.
 
+- **2026-10-13 — 전체 소스 분석·고도화 1시간 (리뷰어 4 병렬 + 함대 정적 스캔)**: ① **ux.js 분기 사고(최대 발견)** — 셸 공통 ux.js 에 진본이 없어 8/03
+  리빌드가 137종을 v1 로 되돌린 뒤 v2.1·v2.2·보안수정·텔레메트리가 양쪽 변종에 각각 덧붙여져 아무도 분기를 못 봤다. 배포 137·진본 150 종이 공유·입력 기억·예시·
+  방문 로그(홈 "최근 사용") 없이 두 달 운영, 템플릿은 v1(103줄). 수리: `factory/ux-canon.js` 진본 승격 + `gen-ux.js`(pipeline-post 편입) 288파일 전파.
+  템플릿 i18n.js(경로 언어 감지·제목 추종·가이드 lazy 누락)·CSS(v1) 도 함대 캔온으로 동기. ② 보안(리뷰어): exchange-rate-conv `?amount=` 무제한 길이가
+  2차 복잡도 천단위 regex 로 들어가 공유 링크 DoS 가능(50KB=1.3s 실측) → 32자 클램프; 워커 리다이렉트 4경로 보안 헤더 누락 + 폴백 오리진 외부 Location
+  패스스루(오픈 리다이렉트 잠재) → secure() 래핑·호스트 허용목록. ③ a11y(리뷰어, WCAG 2.2): `#tool` 전체 aria-live 가 입력·325 타일 토글까지 낭독(검색 매
+  키 폭주) → 제거하고 결과 영역만 라이브(ux 캔온), 홈 검색 결과 수 status(`#tool-count` "n / 325"), 스킵 링크 전 페이지(gen-html-fit + 캔온 CSS), 테마 토글
+  aria-pressed(532 app.js), RTL 셰브런·"View all" 화살표 logical property. ④ SEO(리뷰어): 홈 og:image `.jpg`(부재, 라이브 404) → `.png` 2곳, 홈 ItemList 이름
+  17건 절단 복원(도구 `<title>` 기준 재생성), BreadcrumbList 2단계 → 3단계(가시 크럼의 카테고리 href·텍스트 재사용, 567파일), 사이트맵 정책 페이지 URL 을
+  캐노니컬과 같은 확장자 없는 형태로(check-consistency 허용 규칙 추가), 404 페이지 한국어·중복 robots 메타 정리. ⑤ 생성기(리뷰어): gen-faq-schema 절대경로
+  하드코딩 제거, gen-freshness null 가드. ⑥ check-i18n 로컬 t() 스캔 오탐 — `t("tool.freq." + key)` 동적 접두어를 키로 오인(9/17 "22종 잔존"은 전부 오탐,
+  빌더 2 가 백필 거부·근거 제시) → 리터럴 종료 앵커, 진짜 누락 0. 검증: 표준 15/15·심층 전수 325/325, 정합 OK, 실브라우저(a1c-calc v2 복원·스킵 링크·
+  결과 aria-live·aria-pressed·ar RTL·검색 status, 콘솔 0). **교훈: 셸 공통 파일은 반드시 캔온+생성기 — 손 전파는 리빌드 한 번에 분기한다.**
+
 ## 7. 연관 문서
 - [팩토리 파이프라인](../../docs/PIPELINE.md)
 - [서비스 레지스트리](../../ontology/services.yaml)

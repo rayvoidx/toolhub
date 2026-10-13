@@ -17,11 +17,13 @@
   try { saved = localStorage.getItem(cfg.slug + ":theme"); } catch (e) { /* private mode */ }
   if (saved) root.setAttribute("data-theme", saved);
   if (themeBtn) {
+    themeBtn.setAttribute("aria-pressed", String((root.getAttribute("data-theme") || "auto") === "dark"));
     themeBtn.addEventListener("click", function () {
       var order = ["auto", "light", "dark"];
       var cur = root.getAttribute("data-theme") || "auto";
       var next = order[(order.indexOf(cur) + 1) % order.length];
       root.setAttribute("data-theme", next);
+      themeBtn.setAttribute("aria-pressed", String(next === "dark")); // 2026-10-13 a11y: 상태 노출
       try { localStorage.setItem(cfg.slug + ":theme", next); } catch (e) { /* noop */ }
     });
   }
@@ -203,6 +205,8 @@
   }
   /** 입력 표시 정규화: 선행 '-' 유지(음수 안내 트리거), 정수부 콤마 그룹핑, 소수부 최대 4자리 */
   function cleanAmountInput(raw) {
+    // 2026-10-13 보안: URL ?amount= 가 길이 제한 없이 천단위 regex(2차 복잡도)로 들어가 공유 링크 DoS 가능 — MAX 1e12 표시에 32자면 충분
+    raw = String(raw == null ? "" : raw).slice(0, 32);
     var neg = /^\s*-/.test(raw);
     var digitsDot = String(raw).replace(/[^\d.]/g, "");
     var firstDot = digitsDot.indexOf(".");

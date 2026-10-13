@@ -17,11 +17,13 @@
   try { saved = localStorage.getItem(cfg.slug + ":theme"); } catch (e) { /* private mode */ }
   if (saved) root.setAttribute("data-theme", saved);
   if (themeBtn) {
+    themeBtn.setAttribute("aria-pressed", String((root.getAttribute("data-theme") || "auto") === "dark"));
     themeBtn.addEventListener("click", function () {
       var order = ["auto", "light", "dark"];
       var cur = root.getAttribute("data-theme") || "auto";
       var next = order[(order.indexOf(cur) + 1) % order.length];
       root.setAttribute("data-theme", next);
+      themeBtn.setAttribute("aria-pressed", String(next === "dark")); // 2026-10-13 a11y: 상태 노출
       try { localStorage.setItem(cfg.slug + ":theme", next); } catch (e) { /* noop */ }
     });
   }
@@ -136,6 +138,9 @@
     }
 
     if (emptyEl) emptyEl.hidden = visibleCount > 0;
+    // 2026-10-13 a11y: 검색 결과 수를 독립 status 로 알린다 (언어 중립 숫자) — #tool 의 aria-live 제거와 짝
+    var countEl = document.getElementById("tool-count");
+    if (countEl) countEl.textContent = visibleCount + " / " + cards.length;
   }
 
   if (searchEl) {

@@ -2,7 +2,7 @@
 <html lang="en" data-theme="auto">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-cTWhSu42GCrEElwNgy16zoRT4W6VJ1MSsxDa7Tm1Xno=' 'sha256-yMsmeS+W3kPUrTcGE4MD0pATdfRN+Kqi6C6cVpFEUrg=' 'sha256-BvvLkm4tW6Ht34IwSr0833cFaUkKGW4C8uNGmo0jRVk='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-IYTDCKQiW5IiHsGR6sGm1UY/hQHSUpfE5WFFMz+5BKs=' 'sha256-fvUGIcE0pu8NiUC+ystXwJbdcUyXEcVwtoYWm0Segsc=' 'sha256-BvvLkm4tW6Ht34IwSr0833cFaUkKGW4C8uNGmo0jRVk='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
 <meta name="google-adsense-account" content="ca-pub-6324953789479730">
 <!-- Google Consent Mode v2 default (must run before the Google tag) -->
 <script>
@@ -69,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-09-14",
+  "dateModified": "2026-09-17",
   "publisher": {
     "@type": "Organization",
     "name": "Toolhub",
@@ -82,8 +82,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
-    { "@type": "ListItem", "position": 2, "name": "Protein Intake Calculator", "item": "https://tool-hub.me/protein-intake-calc/" }
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Health",
+      "item": "https://tool-hub.me/health-calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Protein Intake Calculator",
+      "item": "https://tool-hub.me/protein-intake-calc/"
+    }
   ]
 }
 </script>
@@ -150,6 +166,7 @@ main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break
 </style>
 </head>
 <body>
+<a href="#tool" class="skip-link">Skip to content</a>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -179,7 +196,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
          window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
          document 의 "i18n:change" 이벤트를 구독한다. -->
-  <section class="tool-card" id="tool" aria-live="polite" aria-label="Protein intake calculator" data-i18n-aria-label="tool.aria">
+  <section class="tool-card" id="tool" aria-label="Protein intake calculator" data-i18n-aria-label="tool.aria">
     <style>
       #tool .unit-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:0 0 6px;}
       #tool .unit-row label{margin:0;font-weight:600;cursor:pointer;display:inline-flex;gap:4px;align-items:center;}
