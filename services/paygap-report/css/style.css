@@ -120,11 +120,14 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 72px; }
 .crumbs .crumb-cat {
   display: inline-flex; align-items: center; gap: 6px;
   border: 1px solid color-mix(in srgb, var(--cat, var(--accent)) 35%, var(--line));
-  color: color-mix(in srgb, var(--cat, var(--accent)) 80%, var(--ink));
+  /* 2026-10-17 a11y: 80% 혼합은 13px 에서 라이트 4.12·다크 3.79(LH 실측 4.28) — 10색 전수 계산 라이트 60%+잉크 5.92, 다크 50%+화이트 7.33 */
+  color: color-mix(in srgb, var(--cat, var(--accent)) 60%, var(--ink));
   background: color-mix(in srgb, var(--cat, var(--accent)) 7%, var(--surface));
   border-radius: 999px; padding: 3px 11px; font-weight: 600;
 }
 .crumbs .crumb-cat:hover { border-color: var(--cat, var(--accent)); color: var(--cat, var(--accent)); }
+[data-theme="dark"] .crumbs .crumb-cat { color: color-mix(in srgb, var(--cat, var(--accent)) 50%, #fff); }
+@media (prefers-color-scheme: dark) { [data-theme="auto"] .crumbs .crumb-cat { color: color-mix(in srgb, var(--cat, var(--accent)) 50%, #fff); } }
 .crumb-cur { color: var(--ink); font-weight: 600; }
 
 /* 히어로 — 좌측 정렬 에디토리얼 타이포 (2026-08-22 v3: 랜딩페이지식 중앙정렬 탈피) */
