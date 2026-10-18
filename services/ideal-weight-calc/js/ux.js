@@ -8,6 +8,7 @@
  *  2. 계산 후 결과가 화면 밖이면 부드럽게 스크롤 (모바일에서 결과를 놓치는 문제)
  *  3. 결과 값 탭/클릭 복사 (.rc-val, .result-value) — 이미 복사 버튼이 있으면 붙이지 않는다
  *  4. 오류 문구에 role="alert" 부여 — 스크린리더가 즉시 읽는다
+ *  4c. 입력 제약(required/min/max/step/type) 위반 시 aria-invalid="true", 회복 시 제거 — 도구가 직접 단 값은 건드리지 않는다 (WCAG 3.3.1, 2026-10-18)
  *  5. 첫 입력칸 자동 포커스 (터치 기기 제외 — 키보드가 화면을 덮는다)
  *  6. Escape → 입력 비우고 첫 칸으로 (되돌리기 쉬운 탈출구)
  */
@@ -83,6 +84,19 @@
   if (errBox && !errBox.getAttribute("role")) errBox.setAttribute("role", "alert");
   /* 4b. 결과 영역만 라이브 리전 (2026-10-13 a11y) — #tool 전체 aria-live 는 입력·타일까지 매 변경마다 낭독시켰다 */
   if (result && !result.getAttribute("aria-live") && !result.getAttribute("role")) result.setAttribute("aria-live", "polite");
+
+  /* 4c. 입력 유효성 → aria-invalid (WCAG 3.3.1, 2026-10-18) — required/min/max/step/type 위반 시 "true", 회복 시 제거.
+     입력 중(input)엔 '비어 있음(valueMissing)' 은 묻지 않고(타이핑마다 낭독 방지) change 에서만 본다. 도구 로직 무관, 셸 공통. */
+  function markValidity(e) {
+    var el = e.target;
+    if (!el || !el.validity || el.type === "hidden") return;
+    var v = el.validity;
+    var bad = !v.valid && !(e.type === "input" && v.valueMissing);
+    if (bad) { el.setAttribute("aria-invalid", "true"); el.setAttribute("data-ux-invalid", ""); }
+    else if (el.hasAttribute("data-ux-invalid")) { el.removeAttribute("aria-invalid"); el.removeAttribute("data-ux-invalid"); }
+  }
+  tool.addEventListener("input", markValidity);
+  tool.addEventListener("change", markValidity);
 
   /* 5. 첫 입력칸 포커스 */
   if (window.matchMedia && window.matchMedia("(pointer: fine)").matches) {

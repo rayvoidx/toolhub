@@ -5,10 +5,9 @@
    en·zh·hi·es·ar·fr·bn·pt·ru·ur·id·de·ja·ko
 
    ★ 이 서비스의 특수 사정 (2026-07-16 최적화 패스)
-   - tax-calc 은 template 1.0 으로 스탬핑되어 HTML 원문(baked)이 한국어다.
-     따라서 meta.title / meta.description 키는 의도적으로 넣지 않는다 —
-     넣으면 문서 제목만 방문자 언어로 바뀌고 h1·브랜드·푸터(셸, 이번 패스 범위 밖)는
-     한국어로 남아 어긋난다. 셸 i18n 이관 시 함께 추가한다. (WIKI.md §6 참조)
+   - tax-calc 은 template 1.0 으로 스탬핑되어 HTML 원문(baked)이 한국어다(ko = 원문).
+     meta.title / meta.description 은 2026-10-18 i18n 1.1 이관으로 추가 — i18n.js 가
+     meta.title 첫 절로 h1·브랜드를 함께 바꾸므로 제목·본문이 어긋나지 않는다.
    - 국가명은 카탈로그에 넣지 않는다. Intl.DisplayNames(type:"region") 로
      현재 언어에 맞춰 렌더링한다 (docs/OPTIMIZATION.md 축4 "Intl API 활용, 하드코딩 금지").
      Intl.DisplayNames 미지원 브라우저는 app.js 의 영문명 표로 폴백.
@@ -19,6 +18,8 @@
 window.I18N_LOCALES = {
   en: {
     "_label": "English",
+    "meta.title": "VAT Calculator — Split Net and Gross Amounts Instantly",
+    "meta.description": "Enter a net or gross amount and see VAT split out instantly. Standard VAT/GST rates for 26 countries are applied automatically, all inside your browser.",
     "nav.theme": "Toggle theme",
     "nav.share": "Share",
     "nav.language": "Language",
@@ -84,6 +85,8 @@ window.I18N_LOCALES = {
   },
   zh: {
     "_label": "中文",
+    "meta.title": "增值税计算器 — 不含税价与含税价即时拆分",
+    "meta.description": "输入不含税价或含税价，即可立即拆分出增值税。自动套用 26 个国家/地区的标准增值税/GST 税率，全程在浏览器内完成。",
     "nav.theme": "切换主题",
     "nav.share": "分享",
     "nav.language": "语言",
@@ -149,6 +152,8 @@ window.I18N_LOCALES = {
   },
   hi: {
     "_label": "हिन्दी",
+    "meta.title": "VAT कैलकुलेटर — शुद्ध और कुल राशि तुरंत अलग करें",
+    "meta.description": "शुद्ध या कुल राशि डालें और VAT तुरंत अलग देखें। 26 देशों की मानक VAT/GST दरें अपने-आप लागू होती हैं, सब कुछ आपके ब्राउज़र में।",
     "nav.theme": "थीम बदलें",
     "nav.share": "शेयर करें",
     "nav.language": "भाषा",
@@ -214,6 +219,8 @@ window.I18N_LOCALES = {
   },
   es: {
     "_label": "Español",
+    "meta.title": "Calculadora de IVA — Separa base e importe total al instante",
+    "meta.description": "Introduce la base imponible o el importe total y obtén el IVA desglosado al instante. Se aplican automáticamente los tipos estándar de IVA/GST de 26 países, todo en tu navegador.",
     "nav.theme": "Cambiar tema",
     "nav.share": "Compartir",
     "nav.language": "Idioma",
@@ -279,6 +286,8 @@ window.I18N_LOCALES = {
   },
   ar: {
     "_label": "العربية",
+    "meta.title": "حاسبة ضريبة القيمة المضافة — افصل المبلغ الصافي والإجمالي فورًا",
+    "meta.description": "أدخل المبلغ الصافي أو الإجمالي لترى ضريبة القيمة المضافة مفصولة فورًا. تُطبَّق النسب القياسية لضريبة القيمة المضافة/GST في 26 دولة تلقائيًا، وكل ذلك داخل متصفحك.",
     "nav.theme": "تبديل المظهر",
     "nav.share": "مشاركة",
     "nav.language": "اللغة",
@@ -344,6 +353,8 @@ window.I18N_LOCALES = {
   },
   fr: {
     "_label": "Français",
+    "meta.title": "Calculateur de TVA — Séparez HT et TTC instantanément",
+    "meta.description": "Saisissez un montant HT ou TTC et obtenez la TVA détaillée instantanément. Les taux standard de TVA/GST de 26 pays s'appliquent automatiquement, directement dans votre navigateur.",
     "nav.theme": "Changer de thème",
     "nav.share": "Partager",
     "nav.language": "Langue",
@@ -409,6 +420,8 @@ window.I18N_LOCALES = {
   },
   bn: {
     "_label": "বাংলা",
+    "meta.title": "VAT ক্যালকুলেটর — নিট ও মোট পরিমাণ তাৎক্ষণিক আলাদা করুন",
+    "meta.description": "নিট বা মোট পরিমাণ লিখুন, সঙ্গে সঙ্গে VAT আলাদা করে দেখুন। ২৬টি দেশের মানক VAT/GST হার স্বয়ংক্রিয়ভাবে প্রয়োগ হয়, সবকিছু আপনার ব্রাউজারেই।",
     "nav.theme": "থিম পরিবর্তন",
     "nav.share": "শেয়ার করুন",
     "nav.language": "ভাষা",
@@ -474,6 +487,8 @@ window.I18N_LOCALES = {
   },
   pt: {
     "_label": "Português",
+    "meta.title": "Calculadora de IVA — Separe valor líquido e bruto na hora",
+    "meta.description": "Introduza o valor líquido ou bruto e veja o IVA discriminado na hora. As taxas normais de IVA/GST de 26 países são aplicadas automaticamente, tudo no seu navegador.",
     "nav.theme": "Alternar tema",
     "nav.share": "Compartilhar",
     "nav.language": "Idioma",
@@ -539,6 +554,8 @@ window.I18N_LOCALES = {
   },
   ru: {
     "_label": "Русский",
+    "meta.title": "Калькулятор НДС — мгновенно выделите сумму без НДС и с НДС",
+    "meta.description": "Введите сумму без НДС или с НДС и сразу получите выделенный налог. Стандартные ставки НДС/GST 26 стран применяются автоматически, всё прямо в браузере.",
     "nav.theme": "Сменить тему",
     "nav.share": "Поделиться",
     "nav.language": "Язык",
@@ -604,6 +621,8 @@ window.I18N_LOCALES = {
   },
   ur: {
     "_label": "اردو",
+    "meta.title": "VAT کیلکولیٹر — خالص اور کل رقم فوراً الگ کریں",
+    "meta.description": "خالص یا کل رقم درج کریں اور VAT فوراً الگ دیکھیں۔ 26 ممالک کی معیاری VAT/GST شرحیں خودکار طور پر لاگو ہوتی ہیں، سب کچھ آپ کے براؤزر میں۔",
     "nav.theme": "تھیم تبدیل کریں",
     "nav.share": "شیئر کریں",
     "nav.language": "زبان",
@@ -669,6 +688,8 @@ window.I18N_LOCALES = {
   },
   id: {
     "_label": "Bahasa Indonesia",
+    "meta.title": "Kalkulator PPN — Pisahkan Harga Neto dan Bruto Seketika",
+    "meta.description": "Masukkan harga neto atau bruto dan lihat PPN terpisah seketika. Tarif standar PPN/VAT/GST 26 negara diterapkan otomatis, semuanya di dalam browser Anda.",
     "nav.theme": "Ganti tema",
     "nav.share": "Bagikan",
     "nav.language": "Bahasa",
@@ -734,6 +755,8 @@ window.I18N_LOCALES = {
   },
   de: {
     "_label": "Deutsch",
+    "meta.title": "Mehrwertsteuerrechner — Netto und Brutto sofort trennen",
+    "meta.description": "Netto- oder Bruttobetrag eingeben und die Mehrwertsteuer sofort aufgeschlüsselt sehen. Die Regelsteuersätze (MwSt./VAT/GST) von 26 Ländern werden automatisch angewendet – komplett im Browser.",
     "nav.theme": "Design wechseln",
     "nav.share": "Teilen",
     "nav.language": "Sprache",
@@ -799,6 +822,8 @@ window.I18N_LOCALES = {
   },
   ja: {
     "_label": "日本語",
+    "meta.title": "消費税計算機 — 税抜・税込を一瞬で分離",
+    "meta.description": "税抜または税込の金額を入力するだけで、消費税（VAT）をすぐに分離して表示します。26か国の標準VAT/GST税率を自動適用し、すべてブラウザ内で完結します。",
     "nav.theme": "テーマ切替",
     "nav.share": "共有",
     "nav.language": "言語",
@@ -864,6 +889,8 @@ window.I18N_LOCALES = {
   },
   ko: {
     "_label": "한국어",
+    "meta.title": "부가세 계산기 — 공급가·공급대가 0.3초 즉시 분리",
+    "meta.description": "공급가 또는 공급대가만 입력하면 부가세 10%를 즉시 계산해 드립니다. 프리랜서·소상공인 세금계산서 발행 필수 도구.",
     "nav.theme": "테마 전환",
     "nav.share": "공유하기",
     "nav.language": "언어",

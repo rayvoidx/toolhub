@@ -95,20 +95,10 @@
   var SLUG = cfg.slug || "age-calc";
   var STORAGE_KEY = SLUG + ":birth";
 
-  var ZODIAC_LIST = [
-    { emoji: "🐀", name: "쥐" },
-    { emoji: "🐂", name: "소" },
-    { emoji: "🐅", name: "범" },
-    { emoji: "🐇", name: "토끼" },
-    { emoji: "🐉", name: "용" },
-    { emoji: "🐍", name: "뱀" },
-    { emoji: "🐎", name: "말" },
-    { emoji: "🐑", name: "양" },
-    { emoji: "🐒", name: "원숭이" },
-    { emoji: "🐓", name: "닭" },
-    { emoji: "🐕", name: "개" },
-    { emoji: "🐖", name: "돼지" }
-  ];
+  var t = function (k) { return (window.I18N && window.I18N.t(k)) || k; };
+
+  // 띠 이름은 렌더 시점에 t("tool.zN") 로 현지화
+  var ZODIAC_EMOJI = ["🐀", "🐂", "🐅", "🐇", "🐉", "🐍", "🐎", "🐑", "🐒", "🐓", "🐕", "🐖"];
 
   // 만 나이 계산
   function calcInternationalAge(birthYear, birthMonth, birthDay, baseYear, baseMonth, baseDay) {
@@ -151,7 +141,7 @@
   // 띠 계산 (양력 기준)
   function calcZodiac(birthYear) {
     var idx = ((birthYear - 4) % 12 + 12) % 12;
-    return ZODIAC_LIST[idx];
+    return { emoji: ZODIAC_EMOJI[idx], name: t("tool.z" + idx) };
   }
 
   // 날짜 파싱 (YYYY-MM-DD → {year, month, day})
@@ -213,15 +203,15 @@
     if (valYear) valYear.textContent = data.yearAge;
 
     if (data.dday === 0) {
-      if (valDday) valDday.textContent = "D-0";
-      if (unitDday) unitDday.textContent = "오늘이 생일입니다!";
+      if (valDday) valDday.textContent = t("tool.ddayFmt").replace("{n}", "0");
+      if (unitDday) unitDday.textContent = t("tool.birthdayToday");
     } else {
-      if (valDday) valDday.textContent = "D-" + data.dday;
-      if (unitDday) unitDday.textContent = "일 후";
+      if (valDday) valDday.textContent = t("tool.ddayFmt").replace("{n}", String(data.dday));
+      if (unitDday) unitDday.textContent = t("tool.unit.days");
     }
 
     if (zodiacEmoji) zodiacEmoji.textContent = data.zodiac.emoji;
-    if (zodiacName) zodiacName.textContent = data.zodiac.name + "띠";
+    if (zodiacName) zodiacName.textContent = t("tool.zodiacFmt").replace("{name}", data.zodiac.name);
   }
 
   function calculate() {
@@ -232,20 +222,20 @@
 
     var birthStr = birthInput.value;
     if (!birthStr) {
-      showMessage("생년월일을 입력해 주세요.");
+      showMessage(t("tool.err.empty"));
       return;
     }
 
     var birth = parseDate(birthStr);
     if (!birth) {
-      showMessage("올바른 생년월일을 입력해 주세요.");
+      showMessage(t("tool.err.birth"));
       return;
     }
 
     var baseStr = baseInput && baseInput.value ? baseInput.value : todayStr();
     var base = parseDate(baseStr);
     if (!base) {
-      showMessage("올바른 기준일을 입력해 주세요.");
+      showMessage(t("tool.err.base"));
       return;
     }
 
@@ -254,7 +244,7 @@
     var baseTime = new Date(base.year, base.month - 1, base.day).getTime();
 
     if (baseTime < birthTime) {
-      showMessage("기준일이 생년월일보다 앞입니다. 날짜를 다시 확인해 주세요.");
+      showMessage(t("tool.err.order"));
       return;
     }
 
@@ -314,6 +304,12 @@
     if (baseInput) {
       baseInput.addEventListener("change", calculate);
     }
+
+    // 언어 전환 시 보이는 결과/안내문을 새 언어로 다시 렌더
+    document.addEventListener("i18n:change", function () {
+      var r = document.getElementById("result"), m = document.getElementById("result-message");
+      if ((r && !r.hidden) || (m && !m.hidden)) calculate();
+    });
   })();
   // TOOLJS:END
 })();

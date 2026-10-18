@@ -95,6 +95,8 @@
   var SLUG = cfg.slug || "dday-calc";
   var STORAGE_KEY = SLUG + ":list";
   var MAX_CARDS = 10;
+  var t = function (k) { return (window.I18N && window.I18N.t(k)) || k; };
+  function fmt(k, o) { return t(k).replace(/\{(\w+)\}/g, function (m, n) { return o[n] != null ? o[n] : m; }); }
 
   /* ---- 날짜 유틸 ---- */
 
@@ -193,7 +195,7 @@
       sessionCards = cards;
       if (!storageWarned) {
         storageWarned = true;
-        showFormMsg("개인정보 보호 모드에서는 날짜가 세션 동안만 유지됩니다.", false);
+        showFormMsg("tool.msg.session", false);
       }
     }
   }
@@ -210,8 +212,11 @@
   var presetNewyear = document.getElementById("preset-newyear");
 
   /* ---- 안내 / 토스트 ---- */
-  function showFormMsg(msg, isError) {
+  var lastMsg = ["", false];
+  function showFormMsg(key, isError) {
     if (!formMsgEl) return;
+    lastMsg = [key, isError];
+    var msg = key ? t(key) : "";
     formMsgEl.textContent = msg;
     formMsgEl.style.display = msg ? "" : "none";
     formMsgEl.style.borderColor = isError
@@ -235,7 +240,7 @@
     if (!listEl) return;
     var cards = loadCards();
     if (cards.length === 0) {
-      listEl.innerHTML = '<p style="color:var(--muted);text-align:center;font-size:15px;">아직 추가된 날짜가 없습니다. 날짜를 선택하고 추가해 보세요.</p>';
+      listEl.innerHTML = '<p style="color:var(--muted);text-align:center;font-size:15px;">' + escHtml(t("tool.empty")) + '</p>';
       return;
     }
     var html = '<div style="display:flex;flex-direction:column;gap:14px;">';
@@ -250,11 +255,11 @@
       html += '<div>';
       html += '<div style="font-weight:700;font-size:14px;color:var(--muted);margin-bottom:4px;">' + escHtml(card.name) + '</div>';
       html += '<div style="font-size:clamp(32px,8vw,52px);font-weight:900;color:' + accentColor + ';letter-spacing:-0.04em;line-height:1.1;">' + escHtml(label) + '</div>';
-      html += '<div style="font-size:13px;color:var(--muted);margin-top:4px;">' + formatDateKo(card.date) + '</div>';
+      html += '<div style="font-size:13px;color:var(--muted);margin-top:4px;">' + formatDate(card.date) + '</div>';
       var wk = weeksLabel(diff);
       if (wk) html += '<div style="font-size:13px;color:var(--muted);margin-top:2px;">' + wk + '</div>';
       html += '</div>';
-      html += '<button type="button" data-idx="' + idx + '" class="dday-remove-btn" aria-label="' + escHtml(card.name) + ' 삭제" style="background:none;border:1px solid var(--line);border-radius:8px;color:var(--muted);font-size:18px;width:32px;height:32px;cursor:pointer;line-height:1;flex-shrink:0;">×</button>';
+      html += '<button type="button" data-idx="' + idx + '" class="dday-remove-btn" aria-label="' + escHtml(fmt("tool.removeAria", { name: card.name })) + '" style="background:none;border:1px solid var(--line);border-radius:8px;color:var(--muted);font-size:18px;width:32px;height:32px;cursor:pointer;line-height:1;flex-shrink:0;">×</button>';
       html += '</div>';
       html += '</div>';
     });
@@ -282,10 +287,11 @@
       .replace(/"/g, "&quot;");
   }
 
-  function formatDateKo(str) {
-    var parts = str.split("-");
-    var dow = "일월화수목금토".charAt(parseDate(str).getDay());
-    return parts[0] + "년 " + Number(parts[1]) + "월 " + Number(parts[2]) + "일 (" + dow + ")";
+  function formatDate(str) {
+    var d = parseDate(str);
+    try {
+      return d.toLocaleDateString((window.I18N && window.I18N.lang()) || "ko", { year: "numeric", month: "long", day: "numeric", weekday: "short" });
+    } catch (e) { return str; }
   }
 
   /** 남은/지난 일수를 주 단위로 환산한 보조 문구 */
@@ -294,8 +300,8 @@
     if (n < 7) return "";
     var w = Math.floor(n / 7);
     var d = n % 7;
-    var span = w + "주" + (d ? " " + d + "일" : "");
-    return diff > 0 ? span + " 남음" : span + " 지남";
+    var span = fmt(d ? "tool.span.wd" : "tool.span.w", { w: w, d: d });
+    return escHtml(fmt(diff > 0 ? "tool.span.left" : "tool.span.ago", { span: span }));
   }
 
   /* ---- 입력 이벤트 ---- */
@@ -304,12 +310,12 @@
       var val = dateInput.value;
       if (!val) {
         addBtn.disabled = true;
-        showFormMsg("날짜를 선택하세요.", false);
+        showFormMsg("tool.msg.pick", false);
         return;
       }
       if (!isValidDate(val)) {
         addBtn.disabled = true;
-        showFormMsg("유효하지 않은 날짜입니다. (1970-01-01 ~ 9999-12-31)", true);
+        showFormMsg("tool.err.range", true);
         return;
       }
       addBtn.disabled = false;
@@ -321,16 +327,16 @@
     addBtn.addEventListener("click", function () {
       var val = dateInput ? dateInput.value : "";
       if (!val) {
-        showFormMsg("날짜를 선택하세요.", true);
+        showFormMsg("tool.msg.pick", true);
         return;
       }
       if (!isValidDate(val)) {
-        showFormMsg("유효하지 않은 날짜입니다.", true);
+        showFormMsg("tool.err.invalid", true);
         return;
       }
       var cards = loadCards();
       if (cards.length >= MAX_CARDS) {
-        showToast("최대 " + MAX_CARDS + "개까지 추가 가능합니다.");
+        showToast(fmt("tool.err.max", { n: MAX_CARDS }));
         return;
       }
       var name = (nameInput && nameInput.value.trim()) || "D-day";
@@ -364,7 +370,7 @@
       if (parseDate(thisYearSuneung).getTime() < today.getTime()) {
         thisYearSuneung = suneungDate(year + 1);
       }
-      applyPreset(thisYearSuneung, year + "년 수능");
+      applyPreset(thisYearSuneung, fmt("tool.preset.suneungName", { y: thisYearSuneung.slice(0, 4) }));
     });
   }
 
@@ -375,21 +381,25 @@
       if (parseDate(xmas).getTime() < parseDate(todayStr()).getTime()) {
         xmas = (year + 1) + "-12-25";
       }
-      applyPreset(xmas, "크리스마스");
+      applyPreset(xmas, t("tool.preset.xmasName"));
     });
   }
 
   if (presetNewyear) {
     presetNewyear.addEventListener("click", function () {
       var year = new Date().getFullYear() + 1;
-      applyPreset(year + "-01-01", year + "년 새해");
+      applyPreset(year + "-01-01", fmt("tool.preset.newyearName", { y: year }));
     });
   }
 
   /* ---- 초기화 ---- */
   // 날짜 입력 없는 상태에서 안내 표시
-  showFormMsg("날짜를 선택하세요.", false);
+  showFormMsg("tool.msg.pick", false);
   renderCards();
+  document.addEventListener("i18n:change", function () {
+    showFormMsg(lastMsg[0], lastMsg[1]);
+    renderCards();
+  });
 
   /* ---- 실시간 갱신 (1분마다) ---- */
   var lastDate = todayStr();

@@ -92,6 +92,9 @@
   var cfg = window.APP_CONFIG || {};
   var SLUG = cfg.slug || "salary-calc";
   var LS_KEY = SLUG + ":last";
+  // i18n (docs/I18N.md) — 문구는 js/locales.js, 숫자 자리는 {n}/{net}/{ded}/{amt} 플레이스홀더
+  var t = function (k) { return (window.I18N && window.I18N.t(k)) || k; };
+  function fill(k, o) { var s = t(k); for (var x in o) s = s.split("{" + x + "}").join(o[x]); return s; }
 
   // 2026년 요율 상수 — 축3: "아는 값은 우리가 채운다".
   // 사용자에게 절대 묻지 않는다. 화면에는 상세 조정 안에서 읽기 전용으로만 노출한다.
@@ -198,12 +201,15 @@
   var NF = null;
   try { NF = new Intl.NumberFormat("ko-KR"); } catch (e) { NF = null; }
   function nf(n) { return NF ? NF.format(n) : n.toLocaleString("ko-KR"); }
-  function fmt(n) { return nf(n) + "원"; }
+  function fmt(n) { return fill("tool.fmt.won", { n: nf(n) }); }
   function pct(x) { return (Math.round(x * 1000) / 10).toFixed(1) + "%"; }
 
   // 한국식 금액 읽기 (축4): 12000만원 → "1억 2,000만원" — 자릿수 착오 방지
   function wanToKo(wan) {
     if (!isFinite(wan) || wan <= 0) return "";
+    // 억/만 읽기는 한국어 전용 — 다른 언어는 원 단위 전체 금액(KRW 유지, 환산 없음)
+    var lang = window.I18N && window.I18N.lang ? window.I18N.lang() : "ko";
+    if (lang && lang !== "ko") return fmt(Math.round(wan * 10000));
     if (wan !== Math.floor(wan)) return nf(wan) + "만원";
     var eok = Math.floor(wan / 10000), man = wan % 10000, out = [];
     if (eok) out.push(nf(eok) + "억");
@@ -250,10 +256,10 @@
     var note = $("dep-note");
     if (!note) return;
     if (isFinite(raw) && raw > MAX_DEP) {
-      note.textContent = "간이세액표 근사치는 부양가족 " + MAX_DEP + "명까지 구분합니다. " + MAX_DEP + "명 기준으로 계산했습니다.";
+      note.textContent = fill("tool.dep.maxNote", { n: MAX_DEP });
       note.hidden = false;
     } else if (isFinite(raw) && raw < 1) {
-      note.textContent = "부양가족은 본인 포함 최소 1명입니다. 1명 기준으로 계산했습니다.";
+      note.textContent = t("tool.dep.minNote");
       note.hidden = false;
     } else {
       note.hidden = true;
@@ -305,7 +311,7 @@
     var echo = $("salary-echo");
     if (echo) {
       var ko = wanToKo(wan);
-      echo.textContent = (ko ? ko + " · " : "") + "세전 월 " + fmt(r.grossMonthly);
+      echo.textContent = (ko ? ko + " · " : "") + fill("tool.echo.gross", { n: fmt(r.grossMonthly) });
       echo.hidden = false;
     }
 
@@ -324,8 +330,9 @@
     if ($("bar-net")) $("bar-net").style.width = (netRatio * 100).toFixed(1) + "%";
     if ($("bar-ded")) $("bar-ded").style.width = (dedRatio * 100).toFixed(1) + "%";
     if ($("explain")) {
-      $("explain").textContent = "세전 월급의 " + pct(netRatio) + "를 실수령하고, " +
-        pct(dedRatio) + "(" + fmt(r.totalDeduction) + ")가 공제됩니다.";
+      $("explain").textContent = fill("tool.explain", {
+        net: pct(netRatio), ded: pct(dedRatio), amt: fmt(r.totalDeduction)
+      });
     }
 
     // 맥락 인사이트 — 지금 이 결과에 해당할 때만 (장식 아님)
@@ -333,10 +340,9 @@
     if (ins) {
       var msg = "";
       if (r.taxableMonthly > RATES.pension_cap) {
-        msg = "국민연금은 기준소득 상한(월 590만원)이 있어, 연봉이 더 올라도 보험료는 월 " +
-          fmt(Math.floor(RATES.pension_cap * RATES.pension)) + "에서 멈춥니다.";
+        msg = fill("tool.insight.cap", { n: fmt(Math.floor(RATES.pension_cap * RATES.pension)) });
       } else if (v.nt < 200000) {
-        msg = "식대 비과세는 월 20만원까지 인정됩니다. 식대를 받고 있다면 '상세 조정'에서 비과세액을 올려보세요.";
+        msg = t("tool.insight.meal");
       }
       ins.textContent = msg;
       ins.hidden = !msg;
@@ -383,13 +389,13 @@
     // 빈 입력 / 0 / 음수 / 비정상 값 → 안내 후 계산 미실행
     if (!v.raw || !isFinite(wan) || wan <= 0) {
       hideResult();
-      guide("연봉을 입력하세요. (예: 4000 → 4,000만원)", false);
+      guide(t("tool.err.empty"), false);
       return;
     }
     // 극단값: 50억 = 50만 만원
     if (wan > MAX_WAN) {
       hideResult();
-      guide("지원 범위를 초과했습니다. 연봉은 50억원(50만 만원) 이하로 입력해 주세요.", true);
+      guide(t("tool.err.max"), true);
       return;
     }
 
@@ -397,7 +403,7 @@
 
     // 비과세 클리핑 경고 (결과와 함께 표시)
     if (result.nonTaxClipped) {
-      guide("비과세액이 월급여를 초과해 월급여 한도로 자동 조정되었습니다.", true);
+      guide(t("tool.err.ntClip"), true);
     } else {
       hideGuide();
     }
@@ -504,22 +510,25 @@
       function say(msg) {
         if (!hint) return;
         hint.textContent = msg;
-        setTimeout(function () { hint.textContent = "탭하면 복사"; }, 1500);
+        setTimeout(function () { hint.textContent = t("tool.copy.hint"); }, 1500);
       }
       try {
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(val).then(
-            function () { say("복사됨 ✓"); },
-            function () { say("복사할 수 없습니다 — 길게 눌러 선택하세요"); }
+            function () { say(t("tool.copy.done")); },
+            function () { say(t("tool.copy.fail")); }
           );
         } else {
-          say("복사할 수 없습니다 — 길게 눌러 선택하세요");
+          say(t("tool.copy.fail"));
         }
       } catch (e) {
-        say("복사할 수 없습니다 — 길게 눌러 선택하세요");
+        say(t("tool.copy.fail"));
       }
     });
   }
+
+  // 언어 전환 시 동적 문구 재렌더 (i18n.js 가 i18n:change 발행)
+  document.addEventListener("i18n:change", function () { updateDepNote(depRaw()); onCalc(); });
 
   // 초기 렌더 — 복원된 값이 있으면 즉시 결과, 없으면 안내 문구
   updateDepNote(depRaw());

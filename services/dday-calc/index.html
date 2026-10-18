@@ -2,7 +2,7 @@
 <html lang="ko" data-theme="auto">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-8BBTQwCqpXXhTzm+EyO+2tQUUF5EMtlekoxytpQZJ7k=' 'sha256-XGTv7T0myBHJsmx34GAhvkt6qvluV/rHOb77LxMpGYU=' 'sha256-2Z4x7fhiYtgwzhtUKE7VHMsIHsH7+tfmSrIc2RamteQ='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-O8cff9YgaDJEfHmcU2M2Gw1sNAU1dy4JILDrxCnnjZY=' 'sha256-XGTv7T0myBHJsmx34GAhvkt6qvluV/rHOb77LxMpGYU=' 'sha256-2Z4x7fhiYtgwzhtUKE7VHMsIHsH7+tfmSrIc2RamteQ='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
 <meta name="google-adsense-account" content="ca-pub-6324953789479730">
 <!-- Google Consent Mode v2 default (must run before the Google tag) -->
 <script>
@@ -70,7 +70,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "priceCurrency": "KRW"
   },
   "datePublished": "2026-07-13",
-  "dateModified": "2026-09-17",
+  "dateModified": "2026-10-17",
   "publisher": {
     "@type": "Organization",
     "name": "Toolhub",
@@ -178,39 +178,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span>디데이 계산기</span>
   </a>
   <nav class="header-actions">
-    <a class="home-btn" href="https://tool-hub.me/" aria-label="툴허브 홈" title="툴허브 홈"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" title="테마 전환">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" title="공유하기">↗</button>
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="툴허브 홈" data-i18n-aria-label="nav.home" title="툴허브 홈" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
 <main>
-  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0284c7" href="https://tool-hub.me/date-calculators/">Date &amp; Time</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">디데이 계산기</span></nav>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0284c7" href="https://tool-hub.me/date-calculators/">Date &amp; Time</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur" data-i18n="tool.name">디데이 계산기</span></nav>
   <section class="hero">
     <h1>디데이 계산기</h1>
-    <p class="lede">목표일을 선택하면 바로 셉니다. 수능, 기념일, 마감일 — 뭐든.</p>
+    <p class="lede" data-i18n="hero.lede">목표일을 선택하면 바로 셉니다. 수능, 기념일, 마감일 — 뭐든.</p>
   </section>
 
   <!-- TOOL:START — builder agent replaces everything inside this section -->
-  <section class="tool-card" id="tool" aria-label="디데이 계산기 도구">
+  <section class="tool-card" id="tool" aria-label="디데이 계산기 도구" data-i18n-aria-label="tool.region">
     <div id="dday-add-form">
       <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;">
         <div style="flex:1;min-width:160px;">
-          <label for="dday-date">목표 날짜</label>
-          <input type="date" id="dday-date" aria-label="목표 날짜 선택">
+          <label for="dday-date" data-i18n="tool.dateLabel">목표 날짜</label>
+          <input type="date" id="dday-date" aria-label="목표 날짜 선택" data-i18n-aria-label="tool.dateAria">
         </div>
         <div style="flex:1;min-width:120px;">
-          <label for="dday-name">이름 (선택)</label>
-          <input type="text" id="dday-name" maxlength="20" placeholder="예: 수능, 졸업식" aria-label="D-day 이름">
+          <label for="dday-name" data-i18n="tool.nameLabel">이름 (선택)</label>
+          <input type="text" id="dday-name" maxlength="20" placeholder="예: 수능, 졸업식" data-i18n-placeholder="tool.namePh" aria-label="D-day 이름" data-i18n-aria-label="tool.nameAria">
         </div>
         <div>
-          <button class="btn" id="dday-add-btn" type="button" disabled style="margin-top:18px;">추가</button>
+          <button class="btn" id="dday-add-btn" type="button" data-i18n="tool.addBtn" disabled style="margin-top:18px;">추가</button>
         </div>
       </div>
       <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;">
-        <button class="btn" type="button" id="preset-suneung" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">수능</button>
-        <button class="btn" type="button" id="preset-xmas" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">크리스마스</button>
-        <button class="btn" type="button" id="preset-newyear" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">새해</button>
+        <button class="btn" type="button" id="preset-suneung" data-i18n="tool.preset.suneung" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">수능</button>
+        <button class="btn" type="button" id="preset-xmas" data-i18n="tool.preset.xmas" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">크리스마스</button>
+        <button class="btn" type="button" id="preset-newyear" data-i18n="tool.preset.newyear" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">새해</button>
       </div>
       <div class="result" id="dday-form-msg" style="display:none;" aria-live="polite"></div>
     </div>
@@ -302,37 +303,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section id="related-tools" class="related"><h2>관련 도구</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/hours-calc/"><span class="related-ico" aria-hidden="true">🕗</span><span class="related-name">근무시간 계산기</span></a><a class="related-item" href="https://tool-hub.me/leap-year-checker/"><span class="related-ico" aria-hidden="true">📅</span><span class="related-name">윤년 계산기</span></a><a class="related-item" href="https://tool-hub.me/military-time-conv/"><span class="related-ico" aria-hidden="true">🎖️</span><span class="related-name">군대시간 변환기</span></a><a class="related-item" href="https://tool-hub.me/moon-phase-calc/"><span class="related-ico" aria-hidden="true">🌙</span><span class="related-name">달의 위상 계산기</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2>자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A -->
     <details>
-      <summary>D-day와 D+day는 어떻게 다른가요?</summary>
-      <p>D-day 계산기에서 <strong>D-숫자</strong>는 목표일이 오늘보다 <em>미래</em>에 있을 때 남은 일수를, <strong>D+숫자</strong>는 목표일이 이미 <em>지났을 때</em> 경과 일수를 나타냅니다. 예를 들어 D-30은 목표일까지 30일 남은 것, D+5는 목표일로부터 5일이 지난 것입니다. 당일은 <strong>D-Day</strong>로 표시됩니다. 기념일 카운트다운이나 마감일 추적 모두 방향이 자동으로 전환됩니다.</p>
+      <summary data-i18n="faq.q1">D-day와 D+day는 어떻게 다른가요?</summary>
+      <p data-i18n="faq.a1">D-day 계산기에서 <strong>D-숫자</strong>는 목표일이 오늘보다 <em>미래</em>에 있을 때 남은 일수를, <strong>D+숫자</strong>는 목표일이 이미 <em>지났을 때</em> 경과 일수를 나타냅니다. 예를 들어 D-30은 목표일까지 30일 남은 것, D+5는 목표일로부터 5일이 지난 것입니다. 당일은 <strong>D-Day</strong>로 표시됩니다. 기념일 카운트다운이나 마감일 추적 모두 방향이 자동으로 전환됩니다.</p>
     </details>
     <details>
-      <summary>수능 날짜는 어떻게 자동 계산하나요?</summary>
-      <p>수능은 매년 11월 <strong>둘째 목요일</strong>에 시행됩니다. 이 디데이 계산기는 해당 연도 11월 1일부터 날짜를 순서대로 살펴 첫 번째 목요일을 찾은 뒤 7일을 더해 둘째 목요일을 자동으로 산출합니다. 수능 프리셋 버튼을 누르면 올해 또는 내년 수능 날짜가 즉시 입력됩니다. <strong>수능 디데이</strong>를 수동으로 찾을 필요가 없습니다.</p>
+      <summary data-i18n="faq.q2">수능 날짜는 어떻게 자동 계산하나요?</summary>
+      <p data-i18n="faq.a2">수능은 매년 11월 <strong>둘째 목요일</strong>에 시행됩니다. 이 디데이 계산기는 해당 연도 11월 1일부터 날짜를 순서대로 살펴 첫 번째 목요일을 찾은 뒤 7일을 더해 둘째 목요일을 자동으로 산출합니다. 수능 프리셋 버튼을 누르면 올해 또는 내년 수능 날짜가 즉시 입력됩니다. <strong>수능 디데이</strong>를 수동으로 찾을 필요가 없습니다.</p>
     </details>
     <details>
-      <summary>여러 날짜를 동시에 추적할 수 있나요?</summary>
-      <p>네, 최대 <strong>10개</strong>의 D-day 카드를 동시에 추가해 관리할 수 있습니다. 수능 D-day, 기념일, 프로젝트 마감일 등을 한 화면에 나란히 놓고 날짜 카운트다운을 비교해 볼 수 있습니다. 10개를 초과해 추가하려 하면 안내 메시지가 표시됩니다.</p>
+      <summary data-i18n="faq.q3">여러 날짜를 동시에 추적할 수 있나요?</summary>
+      <p data-i18n="faq.a3">네, 최대 <strong>10개</strong>의 D-day 카드를 동시에 추가해 관리할 수 있습니다. 수능 D-day, 기념일, 프로젝트 마감일 등을 한 화면에 나란히 놓고 날짜 카운트다운을 비교해 볼 수 있습니다. 10개를 초과해 추가하려 하면 안내 메시지가 표시됩니다.</p>
     </details>
     <details>
-      <summary>브라우저를 닫아도 추가한 날짜가 저장되나요?</summary>
-      <p>추가한 D-day 카드 목록은 브라우저의 <strong>localStorage</strong>에 자동 저장됩니다. 창을 닫았다 다시 열어도 이전에 추가한 날짜가 그대로 복원됩니다. 단, Safari 개인정보 보호 모드처럼 localStorage를 허용하지 않는 환경에서는 세션 동안만 유지되며, 해당 상황에는 안내 문구가 표시됩니다.</p>
+      <summary data-i18n="faq.q4">브라우저를 닫아도 추가한 날짜가 저장되나요?</summary>
+      <p data-i18n="faq.a4">추가한 D-day 카드 목록은 브라우저의 <strong>localStorage</strong>에 자동 저장됩니다. 창을 닫았다 다시 열어도 이전에 추가한 날짜가 그대로 복원됩니다. 단, Safari 개인정보 보호 모드처럼 localStorage를 허용하지 않는 환경에서는 세션 동안만 유지되며, 해당 상황에는 안내 문구가 표시됩니다.</p>
     </details>
     <details>
-      <summary>기념일 100일·200일 계산에도 쓸 수 있나요?</summary>
-      <p>물론입니다. 처음 만난 날, 결혼기념일 등 과거 날짜를 입력하면 오늘까지 경과한 일수가 <strong>D+숫자</strong>로 표시됩니다. 반대로 앞으로의 100일·200일 기념일 날짜를 목표일로 설정하면 남은 일수를 카운트다운할 수 있습니다. <strong>기념일 계산기</strong>로도 활용 가능합니다.</p>
+      <summary data-i18n="faq.q5">기념일 100일·200일 계산에도 쓸 수 있나요?</summary>
+      <p data-i18n="faq.a5">물론입니다. 처음 만난 날, 결혼기념일 등 과거 날짜를 입력하면 오늘까지 경과한 일수가 <strong>D+숫자</strong>로 표시됩니다. 반대로 앞으로의 100일·200일 기념일 날짜를 목표일로 설정하면 남은 일수를 카운트다운할 수 있습니다. <strong>기념일 계산기</strong>로도 활용 가능합니다.</p>
     </details>
     <!-- FAQ:END -->
   </section>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="https://tool-hub.me/about">소개</a> · <a href="https://tool-hub.me/contact">문의</a> · <a href="https://tool-hub.me/terms">이용약관</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="https://tool-hub.me/">다른 도구 보기</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer">☕ 커피 한 잔 사주기</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="https://tool-hub.me/about" data-i18n="footer.about">소개</a> · <a href="https://tool-hub.me/contact" data-i18n="footer.contact">문의</a> · <a href="https://tool-hub.me/terms" data-i18n="footer.terms">이용약관</a> · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ 커피 한 잔 사주기</a></p>
 </footer>
 
 <script src="js/config.js" defer></script>
+<script src="js/locales.js" defer></script>
+<script src="js/i18n.js" defer></script>
 <script src="js/app.js" defer></script>
 <script src="js/ux.js" defer></script>
 <script src="js/related.js" defer></script>

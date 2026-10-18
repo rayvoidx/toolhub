@@ -16,6 +16,8 @@
   if (!codes.length) return; // 카탈로그 없으면 아무것도 하지 않음 (조용한 실패 아님 — 단일 언어 서비스)
 
   var DEFAULT = "en";
+  // baked(원문) 언어 — 로드 시점의 <html lang>. 가이드 스왑 기준: 원문 언어면 baked HTML, 아니면 GUIDES[lang] (2026-10-18: ko baked 레거시 4종이 en 에서 한국어 가이드를 보이던 결함)
+  var BAKED = (document.documentElement.getAttribute("lang") || "en").slice(0, 2).toLowerCase();
   if (codes.indexOf(DEFAULT) === -1) DEFAULT = codes[0];
   var RTL = { ar: 1, ur: 1, fa: 1, he: 1 };
   var ATTRS = ["placeholder", "title", "aria-label"];
@@ -114,15 +116,15 @@
       if (brandSpan && headWord) brandSpan.textContent = headWord;
     }
 
-    // 심화 가이드 언어 스왑 — js/guide-i18n.js 가 있으면 lazy 로드 (없으면 EN 유지)
+    // 심화 가이드 언어 스왑 — js/guide-i18n.js 가 있으면 lazy 로드 (없으면 baked 원문 유지)
     var gc = document.querySelector(".guide-content");
     if (gc) {
       if (!gc.__en) gc.__en = gc.innerHTML;
       var applyGuide = function () {
         var g = window.GUIDES || {};
-        gc.innerHTML = (lang !== "en" && g[lang]) ? g[lang] : gc.__en;
+        gc.innerHTML = (lang !== BAKED && g[lang]) ? g[lang] : gc.__en;
       };
-      if (lang !== "en" && !window.GUIDES && !window.__guideLoading) {
+      if (lang !== BAKED && !window.GUIDES && !window.__guideLoading) {
         window.__guideLoading = true;
         var gs = document.createElement("script");
         // guide-i18n.js 는 i18n.js 와 같은 디렉터리 — 자기 src 에서 base 유도(언어 정적 페이지 /<lang>/ 는 ../js/)
