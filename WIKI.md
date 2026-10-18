@@ -166,6 +166,16 @@
   다크 50%+화이트(7.33) → 325 CSS 재생성·배포(hub fef6e695). ④ 10/18 작업 예약: 로컬 세션 one-shot(09:03 KST) 등록. 클라우드 루틴은 GitHub 계정 미연결
   (401 github_token_missing)로 생성 불가 — 로컬 세션이 살아 있어야 실행된다(사용자가 /web-setup 로 연결하면 클라우드 폴백 가능).
 
+- **2026-10-18 — 무인 예약 실행 1회차(launchd + claude -p, 09:03 KST): 주간 유지보수 + 레거시 ko 4종 i18n 이관**: 사람 개입 0 으로
+  런북 v2 전 단계 그린 — 정합성 OK(325=325=325, 셸 드리프트 0) · QA 표준 15/15 · 심층 325/325 · 오라클 27/27 · CWV 325종 LCP p75 84ms 초과 0 ·
+  프로덕션 6/6 200 · 신선도 만료 1(ppf-calc PPF 금리 10/1) → 재무부 9/30 고시 Q3 FY27 7.1% 유지 확인, valid_through 2027-01-01.
+  개선 ① 레거시 ko 4종(age/dday/salary/tax-calc) i18n 1.1 이관 — locales.js 14언어 신설(age 51·dday 45·salary 64 서비스 키, tax +meta 2),
+  전 문구 data-i18n 훅·lang-select·app.js t() 재렌더, check-i18n 4/4 PASS. 이관 중 발견: dday·tax guide-i18n.js 에 en 가이드 부재(13언어만) → 추가,
+  공통 i18n.js 가 `lang==="en"` 을 baked 로 가정해 ko baked 페이지는 영어에서도 한국어 가이드 노출 → `BAKED=<html lang>` 기준으로 수정(559 전파,
+  en baked 322종 동작 동일). ② ux-canon 4c: 입력 제약 위반 시 aria-invalid 자동 토글(WCAG 3.3.1), 도구 자체 값은 data-ux-invalid 로 구분(560 전파).
+  gen-ux.js 가 i18n.js 도 전파(드리프트 게이트와 동일 기준). 변경 후 QA 표준 19/19 · 심층 325/325 · 실브라우저 age/dday en 전환·가이드 스왑·콘솔 0.
+  hub 16b4ab35. **교훈: ko baked 레거시 i18n 이관은 locales 뿐 아니라 guide-i18n en 공백·공통 i18n.js 의 en=baked 가정까지 봐야 한다. 비대화형 `claude -p` 에서도 백그라운드 에이전트·알림 정상 — 무인 병렬 위임 가능(09:03 시작, 09:33 QA 완주).**
+
 ## 7. 연관 문서
 - [팩토리 파이프라인](../../docs/PIPELINE.md)
 - [서비스 레지스트리](../../ontology/services.yaml)
