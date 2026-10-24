@@ -34,8 +34,9 @@ export function calculate(kind,input) {
  }
  if(kind==='discount'){
   const price=won(input.price,'정가'),first=number(input.first,'첫 할인',0,100),second=number(input.second,'추가 할인',0,100),coupon=won(input.coupon,'쿠폰'),shipping=won(input.shipping,'배송비');
-  const discounted=price*(1-first/100)*(1-second/100);if(coupon>discounted)throw Error('쿠폰은 할인 적용 후 상품 금액 이하여야 합니다.');
-  const goods=Math.round(discounted-coupon),total=goods+shipping;
+  const discounted=price*(1-first/100)*(1-second/100),epsilon=Math.max(1,price)*Number.EPSILON*4;
+  if(coupon-discounted>epsilon)throw Error('쿠폰은 할인 적용 후 상품 금액 이하여야 합니다.');
+  const goods=Math.round(Math.max(0,discounted-coupon)+epsilon),total=goods+shipping;
   return {price,goods,total,shipping,saved:price-goods,percent:price===0?0:(price-goods)/price*100};
  }
  if(kind==='split')return splitWon(won(input.total,'총액'),number(input.people,'인원',1,100,true));
