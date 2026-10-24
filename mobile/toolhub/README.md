@@ -36,9 +36,16 @@ xcodebuild -project ios/App/App.xcodeproj -scheme App -sdk iphonesimulator -conf
 
 저장소 루트 `.github/workflows/native-preview.yml`은 수동 실행하며 Android debug APK와 iOS simulator App을 14일간 artifact로 보관합니다. 소스·node_modules·native 산출물·개발 문서는 `.assetsignore`로 공개 웹에서 제외합니다. Capacitor CLI의 xcode 의존성에서만 사용하는 uuid를 11.1.1로 고정하여 알려진 이전 버전 문제를 피합니다.
 
+## 확인된 빌드와 운영 배포
+
+- 웹: https://tool-hub.me/workspace/ (Cloudflare version `ecf3d245-cee6-45fd-8fdc-a9dcf4cab6c5`)
+- [CI 40096640342](https://github.com/rayvoidx/toolhub/actions/runs/40096640342), 앱 코드 `4c1ab092`: Android debug APK / iOS Simulator 빌드 **모두 성공**.
+- 실제 모바일 웹에서 프로젝트 생성→계산 기록→체크리스트 완료→새로고침 복원을 확인했습니다.
+- 로컬 자동 테스트 17개 통과(추가 서비스워커 테스트 포함), 전체 npm audit 0 vulnerabilities.
+
 ## 검증 및 출시 범위
 
-`tests/core.test.mjs`: 계산 기준, 600가지 정산 합계 보존 사례, 잘못된 단위/소수 인원/쿠폰, 저장 후 수정, 백업 roundtrip, 중복 ID·과대 파일·한도 검증. `tests/package.test.mjs`: 325개 도구 보존, 로컬 native bundle 설정, 권한, 추적기 배제, iOS privacy resource 포함.
+`tests/core.test.mjs`: 계산 기준, 600가지 정산 합계 보존 사례, 잘못된 단위/소수 인원/쿠폰, 저장 후 수정, 백업 roundtrip, 중복 ID·과대 파일·한도 검증. `tests/offline.test.mjs`: 실제 생성된 서비스워커의 설치·활성화·오프라인 화면/자산 복구·기존 hub 캐시 보존. `tests/package.test.mjs`: 325개 도구 보존, 로컬 native bundle 설정, 권한, 추적기 배제, iOS privacy resource 포함.
 
 앱스토어 출시본은 아닙니다. 실제 Android/iPhone에서 Preferences 재실행 복원, 파일 선택/공유 취소, 비행기 모드 첫 실행, 키보드/화면 크기/스크린리더 확인이 필요합니다. iOS artifact는 **시뮬레이터용**으로 iPhone에 직접 설치할 수 없습니다. 배포 서명, 스토어 등록, 스크린샷, 최종 개인정보 설문, 릴리스 아이콘은 별도 출시 단계입니다. 앱 심사/AdSense 승인을 보장하지 않습니다. 기본 프리뷰 아이콘은 Capacitor 생성 템플릿, 웹 아이콘은 기존 ToolHub 자산을 사용합니다.
 
