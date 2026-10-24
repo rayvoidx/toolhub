@@ -1,7 +1,7 @@
 /* 자동 생성: node factory/gen-sw.js — 직접 수정하지 마라.
    전략: HTML=network-first(재방문자가 항상 최신 배포를 본다), 정적자산=stale-while-revalidate.
    2026-09-09 이전 세대(cache-first, 고정 v1)는 배포가 재방문자에게 닿지 않는 결함이었다. */
-var CACHE = "hub-v5";
+var CACHE = "hub-v6";
 var PRECACHE = [
   "./",
   "index.html",
