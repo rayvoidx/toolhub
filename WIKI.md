@@ -176,6 +176,8 @@
   gen-ux.js 가 i18n.js 도 전파(드리프트 게이트와 동일 기준). 변경 후 QA 표준 19/19 · 심층 325/325 · 실브라우저 age/dday en 전환·가이드 스왑·콘솔 0.
   hub 16b4ab35. **교훈: ko baked 레거시 i18n 이관은 locales 뿐 아니라 guide-i18n en 공백·공통 i18n.js 의 en=baked 가정까지 봐야 한다. 비대화형 `claude -p` 에서도 백그라운드 에이전트·알림 정상 — 무인 병렬 위임 가능(09:03 시작, 09:33 QA 완주).**
 
+- **2026-11-01 — AdSense 심사 중 무가시 감사: 죽은 폴백 오리진 제거**: 실측 — 사이트맵 344 loc 전부 파일 존재·캐노니컬 일치·noindex 0, soft-404 없음(미존재 경로 5종 전부 404), 업타임 20/20 성공. 발견: 워커가 자산에 없는 모든 경로를 rayvoidx.github.io 로 프록시했는데 오리진은 /·/loan-calc/ 포함 전 경로 404(죽음) → 404 마다 외부 서브요청 1회·응답 0.37~0.8s(히트 0.19s). 수리: 폴백 제거, 미존재 경로는 바로 404.html(status 404, 보안 헤더, HEAD 본문 없음) — 오프라인 자가검증 10케이스·외부 서브요청 0. 미수리(별건·생성기 소관): 도구 314종 apple-touch-icon·manifest 의 icons/icon-192.png 부재(404 = 워커 호출), 도구 sw.js activate 가 타 도구·허브 캐시까지 전부 삭제, /services/<slug>/ 가 200 중복 URL(캐노니컬로 완화), 도구 페이지·자산 전량이 루트 자산이 아니라 워커 경유(무료 10만 req/일 소모), SERVICE.yaml deploy.host 가 github-pages 로 낡음.
+
 ## 7. 연관 문서
 - [팩토리 파이프라인](../../docs/PIPELINE.md)
 - [서비스 레지스트리](../../ontology/services.yaml)

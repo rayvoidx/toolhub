@@ -1,5 +1,3 @@
-const ORIGIN = "https://rayvoidx.github.io";
-
 /*
  * 2026-09-17 보안 응답 헤더 — 정적 자산 서빙엔 기본으로 없다. CSP 는 페이지 <meta> 가 담당(gen-csp).
  * geolocation 은 자체 도구 1종(sunrise 류)이 쓰므로 self 허용, 카메라·마이크는 어떤 도구도 안 쓴다.
@@ -98,73 +96,21 @@ export default {
     }
 
     /*
-     * services/에도 없는 경로만 기존 GitHub Pages 프로젝트로 넘긴다.
-     * ★ 폴백 오리진(rayvoidx.github.io)은 2026-07 기준 죽어 있다("Site not found" 404).
-     *   그대로 흘려보내면 사용자가 GitHub 의 404 를 보게 되므로, 오리진이 404/5xx/실패면
-     *   우리 404 페이지(ASSETS /404)를 status 404 로 서빙한다.
+     * services/에도 없는 경로 → 우리 404 페이지를 status 404 로(soft-404 금지).
+     * 2026-11-01: rayvoidx.github.io 프록시 폴백 제거 — 2026-07 이후 오리진이 모든 경로에 404(11-01 실측 /, /loan-calc/ 포함)라
+     * 404 마다 외부 서브요청 1회·응답 +0.2~0.6s 만 쓰고 오픈 리다이렉트 표면만 남기고 있었다.
+     * ponytail: 새 도구는 이제 자산 배포(main push)로만 편입된다 — 외부 오리진 프록시가 다시 필요하면 git 이력의 폴백을 되살린다.
      */
-    let upstream = null;
-    try {
-      upstream = await fetch(
-        ORIGIN + url.pathname + url.search,
-        {
-          method: request.method,
-          headers: {
-            accept: request.headers.get("accept") || "*/*",
-          },
-          redirect: "manual",
-          cf: {
-            cacheTtl: 300,
-          },
-        }
-      );
-    } catch (e) { /* 오리진 접속 실패 — 아래 404 폴백 */ }
-
-    if (!upstream || upstream.status === 404 || upstream.status >= 500) {
-      // 허브 404.html 은 루트 자산 — html_handling 이 /404 를 404.html 로 해석한다
-      const nfUrl = new URL(request.url);
-      nfUrl.pathname = "/404";
-      const nf = await env.ASSETS.fetch(new Request(nfUrl.toString(), { headers: { accept: "text/html" } }));
-      if (nf.status === 200) {
-        return secure(new Response(nf.body, {
-          status: 404,
-          headers: { "content-type": "text/html; charset=utf-8" },
-        }));
-      }
-      return new Response("Not Found", { status: 404 });
-    }
-
-    const location = upstream.headers.get("location");
-
-    if (
-      upstream.status >= 300 &&
-      upstream.status < 400 &&
-      location
-    ) {
-      const loc = new URL(location, ORIGIN);
-
-      if (
-        loc.hostname === "rayvoidx.github.io" ||
-        loc.hostname === url.hostname
-      ) {
-        loc.protocol = "https:";
-        loc.hostname = url.hostname;
-      }
-
-      // 2026-10-13 보안: 폴백 오리진이 외부 호스트로 3xx 를 돌려보내면 tool-hub.me 가 오픈 리다이렉트가 된다 — 허용 호스트 외엔 404.
-      if (loc.hostname !== "rayvoidx.github.io" && loc.hostname !== url.hostname) {
-        return secure(new Response("Not Found", { status: 404 }));
-      }
-
-      const headers = new Headers(upstream.headers);
-      headers.set("location", loc.toString());
-
-      return secure(new Response(null, {
-        status: upstream.status,
-        headers,
+    // 허브 404.html 은 루트 자산 — html_handling 이 /404 를 404.html 로 해석한다
+    const nfUrl = new URL(request.url);
+    nfUrl.pathname = "/404";
+    const nf = await env.ASSETS.fetch(new Request(nfUrl.toString(), { headers: { accept: "text/html" } }));
+    if (nf.status === 200) {
+      return secure(new Response(request.method === "HEAD" ? null : nf.body, {
+        status: 404,
+        headers: { "content-type": "text/html; charset=utf-8" },
       }));
     }
-
-    return secure(upstream);
+    return secure(new Response("Not Found", { status: 404 }));
   },
 };
