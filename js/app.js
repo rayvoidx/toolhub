@@ -139,6 +139,7 @@
 
     if (emptyEl) emptyEl.hidden = visibleCount > 0;
     // 2026-10-13 a11y: 검색 결과 수를 독립 status 로 알린다 (언어 중립 숫자) — #tool 의 aria-live 제거와 짝
+    document.documentElement.classList.toggle("is-searching", !!query); // 검색 중 프로모 접기
     var countEl = document.getElementById("tool-count");
     if (countEl) countEl.textContent = visibleCount + " / " + cards.length;
   }
