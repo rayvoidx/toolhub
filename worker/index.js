@@ -48,7 +48,8 @@ export default {
       "binary-translator": "binary-text-conv",
     };
     const head = url.pathname.split("/")[1];
-    if (SUNSET[head]) {
+    // 자체 키만 — /constructor/·/toString·/__proto__/ 가 Object.prototype 값을 물어 엉뚱한 301 을 내던 결함
+    if (Object.hasOwn(SUNSET, head)) {
       url.pathname = url.pathname.replace(`/${head}`, `/${SUNSET[head]}`);
       return secure(Response.redirect(url.toString(), 301));
     }
