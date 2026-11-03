@@ -104,7 +104,9 @@
   // "how much protein" → [protein], "loan interest" → [loan, interest] (AND). 단일 substring 의 한계 해소.
   var STOP = { how: 1, much: 1, many: 1, what: 1, is: 1, are: 1, to: 1, a: 1, an: 1, the: 1, my: 1, of: 1, for: 1, in: 1, on: 1, calculate: 1, calculator: 1, calc: 1, online: 1, free: 1, "": 1 };
   function tokens(q) {
-    var raw = q.split(/[^a-z0-9가-힣]+/), out = [];
+    // 구분자는 ASCII 공백·구두점과 CJK/전각 구두점뿐 — 예전 [^a-z0-9가-힣] 는 일본어·중국어·러시아어 등
+    // UI 언어 검색어를 통째로 지워(토큰 0개 → 전 카드 표시) 'préstamo' 같은 악센트 단어도 쪼갰다.
+    var raw = q.split(/[\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f\s　-〿！-／]+/), out = [];
     for (var i = 0; i < raw.length; i++) if (raw[i] && !STOP[raw[i]]) out.push(raw[i]);
     return out.length ? out : raw.filter(Boolean); // 전부 불용어면 원문 토큰으로 폴백
   }
