@@ -15,6 +15,23 @@ function secure(res) {
   return new Response(res.body, { status: res.status, statusText: res.statusText, headers: h });
 }
 
+/*
+ * 2026-11-05 정적 참조 부재 폴백: 도구 HTML·manifest 는 icons/icon-192.png·icon-512.png(apple-touch-icon·PWA)와
+ * og:image <slug>/og-image.png 를 참조하지만, PNG 아이콘을 가진 도구는 12종뿐이고 og-image 는 전 도구가 .jpg 로만 존재한다
+ * (WIKI §6 2026-11-01 미수리 항목). 도구 자체 파일이 있으면 그대로 쓰고, 404 일 때만
+ * 아이콘 → 허브 루트 /icons/icon-NNN.png, og-image.png → 같은 도구의 og-image.jpg 로 대체한다.
+ * 생성기가 도구별 PNG 를 만들기 시작하면 이 폴백은 자연히 안 타게 된다.
+ */
+const ICON_FALLBACK = /^\/[^/]+\/icons\/icon-(192|512)\.png$/;
+const OG_FALLBACK = /^\/([^/]+)\/og-image\.png$/;
+function assetFallback(pathname) {
+  let m = pathname.match(ICON_FALLBACK);
+  if (m) return `/icons/icon-${m[1]}.png`;
+  m = pathname.match(OG_FALLBACK);
+  if (m) return `/services/${m[1]}/og-image.jpg`;
+  return null;
+}
+
 const BLOCKED =
   /(^|\/)(SERVICE\.yaml|WIKI\.md|wrangler\.jsonc|\.assetsignore|\.gitignore|\.git(\/|$)|worker(\/|$))/;
 
@@ -93,6 +110,16 @@ export default {
 
       if (assetResponse.status !== 404) {
         return secure(assetResponse);
+      }
+
+      const fallbackPath = assetFallback(url.pathname);
+      if (fallbackPath) {
+        const fbUrl = new URL(request.url);
+        fbUrl.pathname = fallbackPath;
+        const fb = await env.ASSETS.fetch(new Request(fbUrl.toString(), request));
+        if (fb.status === 200) {
+          return secure(fb);
+        }
       }
     }
 
