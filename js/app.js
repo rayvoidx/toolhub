@@ -185,6 +185,7 @@
     var q = normalize(search.value), raw = q.match(/[\p{L}\p{N}]+/gu) || [];
     var tokens = raw.filter(function (word) { return !stop.test(word); });
     if (q && !tokens.length) tokens = raw.length ? raw : [q];
+    document.documentElement.classList.toggle("is-searching", !!q); // 검색 중 프로모 카드 접기 (origin 83fea651 포팅)
     var recents = app.recent().map(function (r) { return r.s; });
     var saved = app.saved().map(function (r) { return r.s; });
     var matched = 0, best = -Infinity; firstResult = null;
