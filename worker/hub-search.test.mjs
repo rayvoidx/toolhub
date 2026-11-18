@@ -44,5 +44,5 @@ test("English intent queries and Korean still behave as before", () => {
   assert.deepEqual(filter("how much protein"), ["protein"]);
   assert.equal(visible("how much protein").length, 1);
   assert.equal(visible("loan").length, 1);
-  assert.equal(visible("계산기").length, 1);
+  assert.equal(visible("ローン計算機").length, 1, "CJK run without spaces matches as one token");
 });
