@@ -28,6 +28,7 @@
   var baked = {};   // 최초 적용 전 HTML 원문 스냅샷 (누락 키 폴백용)
   var current = null;
   var loading = {};
+  var renderRequest = 0;
   var base = "js/";
   try {
     var si = document.querySelector('script[src$="i18n.js"]');
@@ -48,6 +49,8 @@
       if (p) return p;
     } catch (e) { /* 구형 브라우저 */ }
     try {
+      var globalLang = normalize(localStorage.getItem("toolhub:lang"));
+      if (globalLang) return globalLang;
       var saved = normalize(localStorage.getItem(storeKey));
       if (saved) return saved;
     } catch (e) { /* private mode */ }
@@ -89,7 +92,8 @@
 
   function apply(lang) {
     lang = normalize(lang) || DEFAULT;
-    load(lang, function (ok) { render(ok ? lang : DEFAULT); });
+    var request = ++renderRequest;
+    load(lang, function (ok) { if (request === renderRequest) render(ok ? lang : DEFAULT); });
   }
 
   function render(lang) {
@@ -136,7 +140,7 @@
     if (title) {
       var headWord = title.split(/—|\||–/)[0].trim();
       var h1El = document.querySelector(".hero h1");
-      if (h1El && headWord) h1El.textContent = headWord;
+      if (h1El && !h1El.hasAttribute("data-i18n") && headWord) h1El.textContent = headWord;
       var brandSpan = document.querySelector(".brand span");
       if (brandSpan && headWord) brandSpan.textContent = headWord;
     }
@@ -164,7 +168,7 @@
     document.documentElement.dir = RTL[lang] ? "rtl" : "ltr";
 
     current = lang;
-    try { localStorage.setItem(storeKey, lang); } catch (e) { /* noop */ }
+    try { localStorage.setItem(storeKey, lang); localStorage.setItem("toolhub:lang", lang); } catch (e) { /* noop */ }
 
     // 셀렉터 동기화
     var sel = document.getElementById("lang-select");
@@ -190,7 +194,10 @@
       opt.textContent = LANGS[codes[c]];
       sel.appendChild(opt);
     }
-    sel.addEventListener("change", function () { apply(sel.value); });
+    sel.addEventListener("change", function () {
+      var url = new URL(location.href); url.searchParams.set("lang", sel.value);
+      history.replaceState(history.state, "", url); apply(sel.value);
+    });
   }
 
   window.I18N = {

@@ -10,7 +10,7 @@
  *  4. 오류 문구에 role="alert" 부여 — 스크린리더가 즉시 읽는다
  *  4c. 입력 제약(required/min/max/step/type) 위반 시 aria-invalid="true", 회복 시 제거 — 도구가 직접 단 값은 건드리지 않는다 (WCAG 3.3.1, 2026-10-18)
  *  5. 첫 입력칸 자동 포커스 (터치 기기 제외 — 키보드가 화면을 덮는다)
- *  6. Escape → 입력 비우고 첫 칸으로 (되돌리기 쉬운 탈출구)
+ *  6. Escape는 브라우저·도구의 닫기 동작에 맡긴다. 입력을 일괄 삭제하지 않는다 (2026-11-17).
  */
 (function ux() {
   "use strict";
@@ -106,17 +106,6 @@
     }
   }
 
-  /* 6. Escape 로 입력 비우기 */
-  tool.addEventListener("keydown", function (e) {
-    if (e.key !== "Escape") return;
-    var fields = tool.querySelectorAll("input:not([type=hidden]):not([readonly]):not([type=radio]):not([type=checkbox]), textarea");
-    var any = false;
-    Array.prototype.forEach.call(fields, function (f) {
-      if (f.value) { f.value = ""; f.dispatchEvent(new Event("input", { bubbles: true })); any = true; }
-    });
-    if (any && fields[0]) fields[0].focus();
-  });
-
   /* ── v2 (2026-08-02) — 대중성 디테일: 공유·예시·입력 기억·방문 로그 ── */
 
   /* 7. 공유 버튼 — 모바일 네이티브 공유, 데스크톱 링크 복사 */
@@ -136,7 +125,7 @@
     actions.insertBefore(sb, actions.firstChild);
   }
 
-  /* 9. 입력 기억 — 마지막 사용값 복원(빈 칸만), 입력 시 저장, Escape 로 삭제.
+  /* 9. 입력 기억 — 마지막 사용값 복원(빈 칸만), 입력 시 저장. Escape로 저장값을 삭제하지 않는다.
      복원을 예시 버튼 판정보다 먼저 해, 재방문자에게는 예시 버튼이 뜨지 않게 한다. */
   var memKey = "uxmem:" + location.pathname;
   try {
@@ -166,9 +155,6 @@
       });
       try { localStorage.setItem(memKey, JSON.stringify(out)); } catch (e) {}
     }, 500);
-  });
-  tool.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") { try { localStorage.removeItem(memKey); } catch (err) {} }
   });
 
   /* 8. 예시 채우기 — 첫 방문(전부 빈 칸)일 때만, 플레이스홀더를 그대로 넣고 계산 */

@@ -1,9 +1,4 @@
-const ORIGIN = "https://rayvoidx.github.io";
-
-/*
- * 2026-09-17 보안 응답 헤더 — 정적 자산 서빙엔 기본으로 없다. CSP 는 페이지 <meta> 가 담당(gen-csp).
- * geolocation 은 자체 도구 1종(sunrise 류)이 쓰므로 self 허용, 카메라·마이크는 어떤 도구도 안 쓴다.
- */
+/* Public URLs are canonical; /services/ is an internal asset layout only. */
 const SEC_HEADERS = {
   "strict-transport-security": "max-age=31536000",
   "x-content-type-options": "nosniff",
@@ -11,160 +6,54 @@ const SEC_HEADERS = {
   "permissions-policy": "camera=(), microphone=(), geolocation=(self)",
   "x-frame-options": "SAMEORIGIN",
 };
-function secure(res) {
+const BLOCKED = /(^|\/)(SERVICE\.yaml|WIKI\.md|wrangler\.jsonc|\.assetsignore|\.gitignore|\.git(\/|$)|worker(\/|$))/;
+const SUNSET = { "hourly-to-salary": "hourly-to-salary-calc", "protein-calc": "protein-intake-calc", "binary-translator": "binary-text-conv" };
+function secure(res, request) {
   const h = new Headers(res.headers);
-  for (const k in SEC_HEADERS) if (!h.has(k)) h.set(k, SEC_HEADERS[k]);
-  return new Response(res.body, { status: res.status, statusText: res.statusText, headers: h });
+  for (const key in SEC_HEADERS) h.set(key, SEC_HEADERS[key]);
+  const url = new URL(request.url);
+  if (url.searchParams.has("q") || url.searchParams.has("view") || url.searchParams.has("category")) h.set("x-robots-tag", "noindex, follow");
+  if (/\/sw\.js$/.test(url.pathname) || /text\/html/.test(h.get("content-type") || "") || url.pathname === "/manifest.webmanifest") h.set("cache-control", "no-cache");
+  if (url.pathname === "/manifest.webmanifest") h.set("content-type", "application/manifest+json; charset=utf-8");
+  return new Response(request.method === "HEAD" ? null : res.body, { status: res.status, statusText: res.statusText, headers: h });
 }
-
-const BLOCKED =
-  /(^|\/)(SERVICE\.yaml|WIKI\.md|wrangler\.jsonc|\.assetsignore|\.gitignore|\.git(\/|$)|worker(\/|$))/;
-
 export default {
   async fetch(request, env) {
-    if (request.method !== "GET" && request.method !== "HEAD") {
-      return new Response("Method Not Allowed", {
-        status: 405,
-        headers: { allow: "GET, HEAD" },
-      });
-    }
-
     const url = new URL(request.url);
-
-    if (BLOCKED.test(url.pathname)) {
-      return new Response("Not Found", { status: 404 });
+    if (request.method !== "GET" && request.method !== "HEAD") return secure(new Response("Method Not Allowed", { status: 405, headers: { allow: "GET, HEAD" } }), request);
+    let decoded;
+    try { decoded = decodeURIComponent(url.pathname); } catch { return secure(new Response("Bad Request", { status: 400 }), request); }
+    if (BLOCKED.test(decoded)) return secure(new Response("Not Found", { status: 404 }), request);
+    if (url.pathname === "/services" || url.pathname.startsWith("/services/")) {
+      url.pathname = url.pathname.replace(/^\/services(?=\/|$)/, "") || "/";
+      return secure(Response.redirect(url.href, 301), request);
     }
-
-    /*
-     * 2026-09-07: 언어별 정적 하위 페이지(/<slug>/ko|ja|es/)를 폐기했다 — 본문 가이드가 영어 원문
-     * 그대로여서 984 URL 이 중복 페이지로 색인됐고 AdSense 저가치 콘텐츠 판정을 받았다.
-     * 잔존 북마크·색인 URL 은 런타임 i18n 이 지원하는 ?lang= 로 영구 이동시킨다.
-     */
-    /*
-     * 2026-09-08: H1·의도 완전 중복 쌍 3 통합(sunset) — 남은 쪽으로 영구 이동(하위 경로·쿼리 보존).
-     * 근거: services/hub/WIKI.md §6. 새 sunset 은 여기 한 줄 + 레지스트리 status: sunset.
-     */
-    const SUNSET = {
-      "hourly-to-salary": "hourly-to-salary-calc",
-      "protein-calc": "protein-intake-calc",
-      "binary-translator": "binary-text-conv",
-    };
     const head = url.pathname.split("/")[1];
     if (SUNSET[head]) {
       url.pathname = url.pathname.replace(`/${head}`, `/${SUNSET[head]}`);
-      return secure(Response.redirect(url.toString(), 301));
+      return secure(Response.redirect(url.href, 301), request);
     }
-
     const langPage = url.pathname.match(/^\/([^/]+)\/(ko|ja|es)\/?$/);
     if (langPage) {
-      return secure(Response.redirect(`${url.origin}/${langPage[1]}/?lang=${langPage[2]}`, 301));
+      url.pathname = `/${langPage[1]}/`; url.searchParams.set("lang", langPage[2]);
+      return secure(Response.redirect(url.href, 301), request);
     }
-
-    /*
-     * 외부 공개 URL:
-     *   /loan-calc/
-     *
-     * 실제 저장소 경로:
-     *   /services/loan-calc/
-     *
-     * 브라우저 URL은 바꾸지 않고 내부 정적 파일만 services/에서 조회한다.
-     */
-    if (!url.pathname.startsWith("/services/")) {
-      const assetUrl = new URL(request.url);
-      assetUrl.pathname = `/services${url.pathname}`;
-
-      const assetRequest = new Request(assetUrl.toString(), request);
-      const assetResponse = await env.ASSETS.fetch(assetRequest);
-
-      /*
-       * html_handling 이 /age-calc 를 307 Location: /services/age-calc/ 로 돌려준다.
-       * 내부 /services/ 경로가 공개 URL 로 새면 중복 URL 색인 오염이므로
-       * 공개 경로로 되돌리고, 임시(307) 대신 영구(301)로 내보낸다.
-       */
-      const assetLoc = assetResponse.headers.get("location");
-      if (
-        assetResponse.status >= 300 &&
-        assetResponse.status < 400 &&
-        assetLoc
-      ) {
-        const loc = new URL(assetLoc, url.origin);
-        loc.pathname = loc.pathname.replace(/^\/services(?=\/)/, "");
-        return secure(Response.redirect(loc.toString(), 301));
+    // Root pages/assets first, then the tools in the internal services directory.
+    for (const prefix of ["", "/services"]) {
+      const assetURL = new URL(request.url); assetURL.pathname = prefix + url.pathname;
+      const res = await env.ASSETS.fetch(new Request(assetURL, request));
+      if (res.status >= 300 && res.status < 400 && res.headers.has("location")) {
+        const location = new URL(res.headers.get("location"), url.origin);
+        location.pathname = location.pathname.replace(/^\/services(?=\/)/, "");
+        location.search = url.search;
+        if (location.origin !== url.origin) return secure(new Response("Not Found", { status: 404 }), request);
+        return secure(Response.redirect(location.href, 301), request);
       }
-
-      if (assetResponse.status !== 404) {
-        return secure(assetResponse);
-      }
+      if (res.status !== 404) return secure(res, request);
     }
-
-    /*
-     * services/에도 없는 경로만 기존 GitHub Pages 프로젝트로 넘긴다.
-     * ★ 폴백 오리진(rayvoidx.github.io)은 2026-07 기준 죽어 있다("Site not found" 404).
-     *   그대로 흘려보내면 사용자가 GitHub 의 404 를 보게 되므로, 오리진이 404/5xx/실패면
-     *   우리 404 페이지(ASSETS /404)를 status 404 로 서빙한다.
-     */
-    let upstream = null;
-    try {
-      upstream = await fetch(
-        ORIGIN + url.pathname + url.search,
-        {
-          method: request.method,
-          headers: {
-            accept: request.headers.get("accept") || "*/*",
-          },
-          redirect: "manual",
-          cf: {
-            cacheTtl: 300,
-          },
-        }
-      );
-    } catch (e) { /* 오리진 접속 실패 — 아래 404 폴백 */ }
-
-    if (!upstream || upstream.status === 404 || upstream.status >= 500) {
-      // 허브 404.html 은 루트 자산 — html_handling 이 /404 를 404.html 로 해석한다
-      const nfUrl = new URL(request.url);
-      nfUrl.pathname = "/404";
-      const nf = await env.ASSETS.fetch(new Request(nfUrl.toString(), { headers: { accept: "text/html" } }));
-      if (nf.status === 200) {
-        return secure(new Response(nf.body, {
-          status: 404,
-          headers: { "content-type": "text/html; charset=utf-8" },
-        }));
-      }
-      return new Response("Not Found", { status: 404 });
-    }
-
-    const location = upstream.headers.get("location");
-
-    if (
-      upstream.status >= 300 &&
-      upstream.status < 400 &&
-      location
-    ) {
-      const loc = new URL(location, ORIGIN);
-
-      if (
-        loc.hostname === "rayvoidx.github.io" ||
-        loc.hostname === url.hostname
-      ) {
-        loc.protocol = "https:";
-        loc.hostname = url.hostname;
-      }
-
-      // 2026-10-13 보안: 폴백 오리진이 외부 호스트로 3xx 를 돌려보내면 tool-hub.me 가 오픈 리다이렉트가 된다 — 허용 호스트 외엔 404.
-      if (loc.hostname !== "rayvoidx.github.io" && loc.hostname !== url.hostname) {
-        return secure(new Response("Not Found", { status: 404 }));
-      }
-
-      const headers = new Headers(upstream.headers);
-      headers.set("location", loc.toString());
-
-      return secure(new Response(null, {
-        status: upstream.status,
-        headers,
-      }));
-    }
-
-    return secure(upstream);
+    // No dead GitHub origin hop, and never return the homepage for a missing tool.
+    const missingURL = new URL("/404", url.origin);
+    const missing = await env.ASSETS.fetch(new Request(missingURL));
+    return secure(new Response(missing.body, { status: 404, headers: { "content-type": "text/html; charset=utf-8" } }), request);
   },
 };

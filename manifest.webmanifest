@@ -1,16 +1,62 @@
 {
-  "name": "Toolhub",
+  "name": "Toolhub — Everyday tools",
   "short_name": "Toolhub",
-  "description": "From price comparison to character counting: free web tools that run right in your browser. No installs, no accounts.",
+  "description": "Free calculators, converters and everyday tools. Save your favorites and use opened tools offline.",
   "lang": "en",
-  "start_url": "./",
-  "scope": "./",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#f8fafc",
+  "background_color": "#f7f8fc",
   "theme_color": "#4f46e5",
   "icons": [
-    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "id": "/",
+  "categories": [
+    "utilities",
+    "productivity"
+  ],
+  "shortcuts": [
+    {
+      "name": "Find a tool",
+      "url": "/?focus=search",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Saved tools",
+      "url": "/?view=saved"
+    },
+    {
+      "name": "Recently used",
+      "url": "/?view=recent"
+    }
   ]
 }

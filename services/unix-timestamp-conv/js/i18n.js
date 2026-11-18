@@ -46,6 +46,8 @@
       if (p) return p;
     } catch (e) { /* 구형 브라우저 */ }
     try {
+      var globalLang = normalize(localStorage.getItem("toolhub:lang"));
+      if (globalLang) return globalLang;
       var saved = normalize(localStorage.getItem(storeKey));
       if (saved) return saved;
     } catch (e) { /* private mode */ }
@@ -142,7 +144,7 @@
     document.documentElement.dir = RTL[lang] ? "rtl" : "ltr";
 
     current = lang;
-    try { localStorage.setItem(storeKey, lang); } catch (e) { /* noop */ }
+    try { localStorage.setItem(storeKey, lang); localStorage.setItem("toolhub:lang", lang); } catch (e) { /* noop */ }
 
     // 셀렉터 동기화
     var sel = document.getElementById("lang-select");
@@ -169,7 +171,10 @@
       opt.textContent = (LOCALES[code] && LOCALES[code]._label) || code;
       sel.appendChild(opt);
     }
-    sel.addEventListener("change", function () { apply(sel.value); });
+    sel.addEventListener("change", function () {
+      var url = new URL(location.href); url.searchParams.set("lang", sel.value);
+      history.replaceState(history.state, "", url); apply(sel.value);
+    });
   }
 
   window.I18N = {

@@ -81,77 +81,171 @@
   }
 })();
 
-/* ============================================================
-   TOOL MODULE — 빌더 에이전트가 이 영역을 서비스 로직으로 교체한다.
-   규칙:
-   - 상태는 localStorage(키 prefix: cfg.slug + ":") 또는 URL 파라미터에만 저장
-   - 외부 API 호출 시 실패 UI(.result에 오류 문구) 필수
-   - 빈 입력/공집합도 명시적으로 처리 (조용한 실패 금지)
-   ============================================================ */
-(function tool() {
+/* Home directory: progressive enhancement over crawlable static tool links. */
+(function () {
   "use strict";
-  // TOOLJS:START
-  // Toolhub 는 계산 로직이 없는 디렉토리형 서비스다.
-  // 유일한 상호작용은 도구 카드 검색(필터)이며, 입력은 저장하지 않는다(상태 없음 — spec 참고).
-  var searchEl = document.getElementById("tool-search");
-  var listEl = document.getElementById("tool-list");
-  var emptyEl = document.getElementById("tool-empty");
-
-  function normalize(s) {
-    return (s || "").toLowerCase().trim();
+  var search = document.getElementById("tool-search");
+  var list = document.getElementById("tool-list");
+  if (!search || !list || !window.Toolhub) return;
+  var app = window.Toolhub;
+  var cards = Array.from(list.querySelectorAll(".tool-item"));
+  var groups = Array.from(list.querySelectorAll(".tool-group"));
+  var empty = document.getElementById("tool-empty");
+  var count = document.getElementById("tool-count");
+  var clear = document.getElementById("clear-search");
+  var nav = document.getElementById("cat-nav");
+  var state = { group: "all", view: "all" }, expanded = {}, timer, firstResult;
+  var stop = /^(how|much|many|what|is|are|to|a|an|the|my|of|for|in|on|calculate|calculator|calc|online|free)$/;
+  function normalize(s) { return String(s || "").normalize("NFKD").replace(/\p{M}/gu, "").toLocaleLowerCase().trim(); }
+  function translate(key) { return window.I18N && window.I18N.t(key) || key; }
+  function title(card) { return card.querySelector(".tool-name").textContent.trim(); }
+  function readURL() {
+    var params = new URLSearchParams(location.search);
+    search.value = (params.get("q") || "").slice(0, 240);
+    var group = params.get("category");
+    state.group = groups.some(function (g) { return g.dataset.group === group; }) ? group : "all";
+    state.view = ["saved", "recent"].includes(params.get("view")) ? params.get("view") : "all";
   }
-  // 의도 질의 대응: 문장을 토큰으로 쪼개고 불용어를 버린 뒤, 남은 토큰이 전부 있으면 매칭.
-  // "how much protein" → [protein], "loan interest" → [loan, interest] (AND). 단일 substring 의 한계 해소.
-  var STOP = { how: 1, much: 1, many: 1, what: 1, is: 1, are: 1, to: 1, a: 1, an: 1, the: 1, my: 1, of: 1, for: 1, in: 1, on: 1, calculate: 1, calculator: 1, calc: 1, online: 1, free: 1, "": 1 };
-  function tokens(q) {
-    var raw = q.split(/[^a-z0-9가-힣]+/), out = [];
-    for (var i = 0; i < raw.length; i++) if (raw[i] && !STOP[raw[i]]) out.push(raw[i]);
-    return out.length ? out : raw.filter(Boolean); // 전부 불용어면 원문 토큰으로 폴백
+  function syncURL(push) {
+    clearTimeout(timer);
+    var url = new URL(location.href);
+    [["q", search.value.trim()], ["category", state.group === "all" ? "" : state.group], ["view", state.view === "all" ? "" : state.view]].forEach(function (pair) {
+      if (pair[1]) url.searchParams.set(pair[0], pair[1]); else url.searchParams.delete(pair[0]);
+    });
+    url.searchParams.delete("focus");
+    if (url.href !== location.href) history[push ? "pushState" : "replaceState"](history.state, "", url);
   }
-
-  function filterCards() {
-    if (!searchEl || !listEl) return; // 카드 목록이 없는 상태에서도 조용히 실패하지 않음
-    var query = normalize(searchEl.value);
-    var toks = query ? tokens(query) : [];
-    var cards = listEl.querySelectorAll(".tool-item");
-    var visibleCount = 0;
-
-    for (var i = 0; i < cards.length; i++) {
-      var card = cards[i];
-      // data-name(영·한 키워드) + 화면에 표시된 현재 언어 텍스트 둘 다 검색 대상 — 어느 언어로 검색해도 매칭
-      var haystack = normalize((card.getAttribute("data-name") || "") + " " + card.textContent);
-      var match = true;
-      for (var k = 0; k < toks.length; k++) if (haystack.indexOf(toks[k]) === -1) { match = false; break; }
-      card.hidden = !match;
-      if (match) visibleCount++;
-    }
-
-    // 빈 검색 결과 — 조용한 실패 금지: 명시적 안내 문구를 보여준다
-    // 빈 카테고리 그룹 숨김
-
-    var groups = listEl.querySelectorAll(".tool-group");
-
-    for (var g = 0; g < groups.length; g++) {
-
-      groups[g].hidden = groups[g].querySelectorAll(".tool-item:not([hidden])").length === 0;
-
-    }
-
-    if (emptyEl) emptyEl.hidden = visibleCount > 0;
-    // 2026-10-13 a11y: 검색 결과 수를 독립 status 로 알린다 (언어 중립 숫자) — #tool 의 aria-live 제거와 짝
-    var countEl = document.getElementById("tool-count");
-    if (countEl) countEl.textContent = visibleCount + " / " + cards.length;
+  function choose(key, value) { syncURL(false); state[key] = value; expanded = {}; syncURL(true); filter(); }
+  cards.forEach(function (card, index) {
+    card._slug = new URL(card.href).pathname.split("/").filter(Boolean)[0]; card._index = index;
+    var wrapper = document.createElement("div"); wrapper.className = "tool-tile";
+    card.parentNode.insertBefore(wrapper, card); wrapper.appendChild(card);
+    var save = document.createElement("button"); save.type = "button"; save.className = "save-tool";
+    save.addEventListener("click", function () {
+      var visible = cards.filter(function (c) { return !c.hidden; });
+      var at = visible.indexOf(card), wasFocused = document.activeElement === save;
+      app.toggle(card._slug, title(card));
+      if (card.hidden && wasFocused) {
+        var next = visible.slice(at + 1).concat(visible.slice(0, at).reverse()).find(function (c) { return !c.hidden; });
+        (next ? next._save : document.querySelector('[data-view="saved"]')).focus({ preventScroll: true });
+      }
+    });
+    wrapper.appendChild(save); card._save = save; card._wrapper = wrapper;
+  });
+  groups.forEach(function (group) {
+    group._cards = Array.from(group.querySelectorAll(".tool-item")); group._grid = group.querySelector(".tool-grid");
+    var button = document.createElement("button"); button.type = "button"; button.className = "group-expand";
+    button.addEventListener("click", function (e) {
+      var next = group.querySelectorAll(".tool-item")[6];
+      expanded[group.dataset.group] = true; filter();
+      if (e.detail === 0 && next) next.focus();
+    });
+    group.appendChild(button); group._expand = button;
+  });
+  var picker = document.createElement("div"); picker.className = "category-picker";
+  var pickerLabel = document.createElement("label"); pickerLabel.htmlFor = "category-select";
+  var select = document.createElement("select"); select.id = "category-select";
+  picker.append(pickerLabel, select); nav.before(picker);
+  select.addEventListener("change", function () { choose("group", select.value); });
+  var meta = document.createElement("div"); meta.className = "directory-meta"; count.before(meta);
+  var reset = document.createElement("button"); reset.type = "button"; reset.className = "directory-reset"; reset.id = "clear-filters";
+  meta.append(reset, count);
+  function categories() {
+    nav.textContent = ""; select.textContent = ""; pickerLabel.textContent = app.t("categories");
+    [{ key: "all", label: app.t("all"), n: cards.length }].concat(groups.map(function (group) {
+      return { key: group.dataset.group, label: translate("cat." + group.dataset.group), n: group.querySelectorAll(".tool-item").length };
+    })).forEach(function (cat) {
+      var btn = document.createElement("button"); btn.type = "button"; btn.dataset.group = cat.key;
+      var dot = document.createElement("span"); dot.className = "dot"; dot.setAttribute("aria-hidden", "true");
+      var label = document.createElement("span"); label.textContent = cat.label;
+      var num = document.createElement("span"); num.className = "cat-count"; num.textContent = cat.n;
+      btn.append(dot, label, num); btn.addEventListener("click", function () { choose("group", cat.key); }); nav.appendChild(btn);
+      var option = document.createElement("option"); option.value = cat.key; option.textContent = cat.label + " · " + cat.n; select.appendChild(option);
+    });
+    nav.hidden = false;
   }
-
-  if (searchEl) {
-    searchEl.addEventListener("input", filterCards);
-    // ?q= 딥링크 — WebSite SearchAction 스키마(index.html JSON-LD)의 target 이 실제로 동작해야 한다.
-    // 스키마가 가리키는 URL 이 기능하지 않으면 구조화 데이터 스팸 신호가 된다.
-    try {
-      var q = new URLSearchParams(location.search).get("q");
-      if (q) searchEl.value = q;
-    } catch (e) { /* URLSearchParams 미지원 구형 브라우저 — 검색 자체는 정상 동작 */ }
-    filterCards();
+  function indexCards() {
+    var en = (window.I18N_LOCALES || {}).en || {};
+    cards.forEach(function (card) {
+      card._name = normalize(title(card) + " " + (en["tool." + card._slug + ".name"] || ""));
+      card._haystack = normalize((card.dataset.name || "") + " " + card.textContent + " " + (en["tool." + card._slug + ".desc"] || ""));
+    });
   }
-  // TOOLJS:END
+  function recent() {
+    var box = document.getElementById("recent-tools"); box.textContent = "";
+    var rows = app.recent().map(function (row) { return cards.find(function (c) { return c._slug === row.s; }); }).filter(Boolean).slice(0, 4);
+    box.hidden = !rows.length;
+    if (!rows.length) return;
+    var heading = document.createElement("p"); heading.className = "recent-title"; heading.textContent = app.t("recentTitle");
+    var row = document.createElement("div"); row.className = "recent-row";
+    rows.forEach(function (card) { var a = document.createElement("a"); a.href = card.href; a.textContent = title(card); row.appendChild(a); }); box.append(heading, row);
+  }
+  function filter() {
+    var focused = document.activeElement;
+    var q = normalize(search.value), raw = q.match(/[\p{L}\p{N}]+/gu) || [];
+    var tokens = raw.filter(function (word) { return !stop.test(word); });
+    if (q && !tokens.length) tokens = raw.length ? raw : [q];
+    var recents = app.recent().map(function (r) { return r.s; });
+    var saved = app.saved().map(function (r) { return r.s; });
+    var matched = 0, best = -Infinity; firstResult = null;
+    groups.forEach(function (group, groupIndex) {
+      var hits = [], groupBest = -Infinity;
+      group._cards.forEach(function (card) {
+        var match = (state.group === "all" || group.dataset.group === state.group) && tokens.every(function (word) { return card._haystack.includes(word); }) &&
+          (state.view === "all" || (state.view === "saved" ? app.has(card._slug) : recents.includes(card._slug)));
+        card.hidden = !match; card._wrapper.hidden = !match;
+        var score = q ? tokens.reduce(function (s, word) { return s + (card._name.includes(word) ? 20 : 1); }, 0) + (card._name.startsWith(q) ? 50 : 0) : 0;
+        if (!q && state.view !== "all") score = 100 - (state.view === "saved" ? saved : recents).indexOf(card._slug);
+        card._score = score;
+        if (match) { hits.push(card); groupBest = Math.max(groupBest, score); if (score > best) { best = score; firstResult = card; } }
+        var active = app.has(card._slug), label = app.t(active ? "unsave" : "save") + ": " + title(card);
+        card._save.textContent = active ? "★" : "☆"; card._save.setAttribute("aria-pressed", String(active)); card._save.setAttribute("aria-label", label); card._save.title = label;
+      });
+      group._score = groupBest; group._index = groupIndex;
+      matched += hits.length;
+      var preview = !q && state.group === "all" && state.view === "all" && !expanded[group.dataset.group];
+      if (preview) hits.slice(6).forEach(function (card) { card.hidden = true; card._wrapper.hidden = true; });
+      group.hidden = !hits.length; group._expand.hidden = !preview || hits.length <= 6;
+      group._expand.textContent = app.t("showAll") + " · " + hits.length;
+      var heading = group.querySelector(".tool-group-title"), badge = heading.querySelector(".cat-count");
+      if (!badge) { badge = document.createElement("span"); badge.className = "cat-count"; heading.appendChild(badge); } badge.textContent = hits.length;
+      var ordered = group._cards.slice().sort(function (a, b) { return (q || state.view !== "all" ? b._score - a._score : 0) || a._index - b._index; });
+      ordered.forEach(function (card, i) { if (group._grid.children[i] !== card._wrapper) group._grid.insertBefore(card._wrapper, group._grid.children[i] || null); });
+    });
+    // DOM order follows ranking too, so Tab and screen-reader order match the screen.
+    groups.slice().sort(function (a, b) { return (q || state.view !== "all" ? b._score - a._score : 0) || a._index - b._index; }).forEach(function (group, i) {
+      if (list.children[i] !== group) list.insertBefore(group, list.children[i] || null);
+    });
+    if (focused && document.activeElement !== focused && focused.isConnected && !focused.closest("[hidden]")) focused.focus({ preventScroll: true });
+    empty.hidden = matched > 0;
+    var emptyKind = !q && state.group === "all" ? state.view : "all";
+    empty.querySelector("h3").textContent = app.t(emptyKind === "saved" ? "emptySaved" : emptyKind === "recent" ? "emptyRecent" : "empty");
+    empty.querySelector("p").textContent = app.t(emptyKind === "saved" ? "emptySavedHelp" : emptyKind === "recent" ? "emptyRecentHelp" : "emptyHelp");
+    count.textContent = matched + " " + app.t("tools");
+    clear.hidden = !search.value; reset.hidden = !q && state.group === "all" && state.view === "all"; reset.textContent = app.t("reset");
+    select.value = state.group;
+    var shortcut = document.querySelector(".search-shortcut"); if (shortcut) shortcut.hidden = !!search.value;
+    document.querySelectorAll("[data-view]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.view === state.view)); });
+    nav.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.group === state.group)); });
+  }
+  search.addEventListener("input", function () { filter(); clearTimeout(timer); timer = setTimeout(function () { syncURL(false); }, 180); });
+  search.addEventListener("keydown", function (e) {
+    if (e.isComposing) return;
+    if (e.key === "Escape") { e.preventDefault(); search.value = ""; syncURL(false); filter(); }
+    if (e.key === "Enter" || e.key === "ArrowDown") { e.preventDefault(); syncURL(false); if (firstResult) firstResult.focus(); }
+  });
+  list.addEventListener("click", function (e) { if (e.target.closest("a")) syncURL(false); });
+  clear.addEventListener("click", function () { syncURL(false); search.value = ""; syncURL(true); filter(); search.focus(); });
+  document.querySelectorAll("[data-view]").forEach(function (button) { button.addEventListener("click", function () { choose("view", button.dataset.view); }); });
+  function resetFilters() { syncURL(false); state = { group: "all", view: "all" }; search.value = ""; syncURL(true); filter(); search.focus(); }
+  document.getElementById("reset-filters").addEventListener("click", resetFilters); reset.addEventListener("click", resetFilters);
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "/" && !e.defaultPrevented && !document.querySelector("dialog[open]") && !e.metaKey && !e.ctrlKey && !e.altKey && !e.target.closest("input,textarea,select,[contenteditable]")) { e.preventDefault(); search.focus(); }
+  });
+  document.addEventListener("i18n:change", function () { indexCards(); categories(); recent(); filter(); });
+  document.addEventListener("toolhub:saved", filter);
+  window.addEventListener("popstate", function () { clearTimeout(timer); readURL(); filter(); });
+  window.addEventListener("pageshow", function () { recent(); filter(); });
+  readURL(); indexCards(); categories(); recent(); filter();
+  if (new URLSearchParams(location.search).get("focus") === "search") search.focus({ preventScroll: false });
 })();
