@@ -7,6 +7,17 @@ const SEC_HEADERS = {
   "x-frame-options": "SAMEORIGIN",
 };
 const BLOCKED = /(^|\/)(SERVICE\.yaml|WIKI\.md|wrangler\.jsonc|\.assetsignore|\.gitignore|\.git(\/|$)|worker(\/|$))/;
+/* origin e733b6a2 포팅(2026-11-05): 도구 HTML·manifest 는 icons/icon-192|512.png 와 og-image.png 를 참조하지만 PNG 아이콘은 12종, og 는 .jpg 만 존재.
+   도구 자체 파일이 있으면 그대로, 404 일 때만 허브 루트 아이콘 / 같은 도구의 og-image.jpg 로 대체한다. */
+const ICON_FALLBACK = /^\/[^/]+\/icons\/icon-(192|512)\.png$/;
+const OG_FALLBACK = /^\/([^/]+)\/og-image\.png$/;
+function assetFallback(pathname) {
+  let m = pathname.match(ICON_FALLBACK);
+  if (m) return `/icons/icon-${m[1]}.png`;
+  m = pathname.match(OG_FALLBACK);
+  if (m) return `/services/${m[1]}/og-image.jpg`;
+  return null;
+}
 const SUNSET = { "hourly-to-salary": "hourly-to-salary-calc", "protein-calc": "protein-intake-calc", "binary-translator": "binary-text-conv" };
 function secure(res, request) {
   const h = new Headers(res.headers);
@@ -29,7 +40,8 @@ export default {
       return secure(Response.redirect(url.href, 301), request);
     }
     const head = url.pathname.split("/")[1];
-    if (SUNSET[head]) {
+    // 자체 키만 — /constructor/·/toString·/__proto__/ 가 Object.prototype 값을 물어 엉뚱한 301 을 내던 결함
+    if (Object.hasOwn(SUNSET, head)) {
       url.pathname = url.pathname.replace(`/${head}`, `/${SUNSET[head]}`);
       return secure(Response.redirect(url.href, 301), request);
     }
@@ -50,6 +62,12 @@ export default {
         return secure(Response.redirect(location.href, 301), request);
       }
       if (res.status !== 404) return secure(res, request);
+    }
+    const fallbackPath = assetFallback(url.pathname);
+    if (fallbackPath) {
+      const fbURL = new URL(request.url); fbURL.pathname = fallbackPath;
+      const fb = await env.ASSETS.fetch(new Request(fbURL, request));
+      if (fb.status === 200) return secure(fb, request);
     }
     // No dead GitHub origin hop, and never return the homepage for a missing tool.
     const missingURL = new URL("/404", url.origin);
