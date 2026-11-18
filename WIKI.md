@@ -181,6 +181,15 @@
 
 - **2026-11-17 — UI/UX 품질 고도화**: 모바일 첫 도구 위치를 390px 한국어 첫 방문 기준 791→551px로 개선하고, 전체 카테고리 선택 상자·카드 가독성·44px 주요 터치 영역을 적용했다. 기호 검색 전부 매칭 오류를 수정하고 이름 일치 우선 순위와 DOM/키보드 순서를 맞췄다. 필터 전환은 뒤로가기, 즐겨찾기는 확인·실행 취소·저장 실패 처리·포커스 보존을 제공한다. 언어/테마를 페이지 간 유지하고 lazy 언어 경합을 방지한다. 공통 Escape가 계산기 전체 입력을 지우던 동작을 제거했다. 회귀 19/19, 브라우저 23/23, 대표 도구 기능·심층 각 6/6, 14언어×320/390/768/1440px 가로 넘침 없음. 신규 템플릿에도 캔온/생성기로 반영. 기록: docs/worklog/261117_toolhub_ui-ux-quality.html.
 
+- **2026-11-18 — Codex 11/07·11/17 작업 수습 + origin 10커밋 합류 (프로덕션 ↔ git 괴리 해소)**: Codex 두 회차는 Wrangler 직배포(06d641ed·15f934bb)만 하고
+  커밋·푸시를 안 해 팩토리 964·허브 1345 파일이 작업 폴더에만 있었고, 허브 origin/main 에는 그 사이 타 세션 10커밋(10/24~11/05: Pocket 워크스페이스·원본 가이드·검색 우선 히어로·
+  워커 수정 4건)이 있었다. 라이브 = Codex 트리(unit-price md5 일치) → origin 의 /guides/·/workspace/ 는 라이브 404, /constructor/ 301 버그·og-image.png 404 는 라이브 잔존.
+  다음 main push 가 Workers Builds 로 Codex 작업을 되돌릴 위험. 수습: Codex 트리를 브랜치에 커밋 → origin/main 머지(충돌 19 = 생성물·홈·검색·WIKI·워커, 전부 Codex 우선) →
+  워커에 origin 의 `Object.hasOwn(SUNSET)`·아이콘/og 자산 폴백 포팅, 홈에 프로모 2종(Pocket·한국어 가이드) + 검색 중 접기(`is-searching`, hub-directory 캔온에 편입 — app.js 는
+  생성물이라 직접 패치가 재생성에 지워짐), WIKI 합집합, 검색 테스트를 Codex 검색 API 기준으로 재작성. 팩토리: gen-sitemap 루트 페이지 자동 편입(guides/·workspace/, 344 URL),
+  check-consistency 하위 경로 허용. 검증: 워커 테스트 11/11, 앱 플랫폼 19/19, ui-experience 23/23(로컬 wrangler dev), 표준 15/15, 심층 전수 325/325, i18n 1087키 패리티, 정합 OK.
+  **교훈: 다른 도구(Codex)로 작업할 때도 커밋·푸시까지가 배포다 — 직배포만 하면 다음 git 배포가 되돌린다. 생성물(js/app.js 등)은 캔온을 고친다.**
+
 ## 7. 연관 문서
 - [팩토리 파이프라인](../../docs/PIPELINE.md)
 - [서비스 레지스트리](../../ontology/services.yaml)
