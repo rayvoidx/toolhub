@@ -190,6 +190,13 @@
   check-consistency 하위 경로 허용. 검증: 워커 테스트 11/11, 앱 플랫폼 19/19, ui-experience 23/23(로컬 wrangler dev), 표준 15/15, 심층 전수 325/325, i18n 1087키 패리티, 정합 OK.
   **교훈: 다른 도구(Codex)로 작업할 때도 커밋·푸시까지가 배포다 — 직배포만 하면 다음 git 배포가 되돌린다. 생성물(js/app.js 등)은 캔온을 고친다.**
 
+- **2026-11-18 (2) — Codex 앱셸 이후 Lighthouse 회귀 수리**: 라이브 LH 모바일 홈 86/100/90/96 · 도구 76/100/93/96 — a11y 항목 4종 수리. ① 헤더 설치 버튼이 좁은 폭에서
+  라벨 span `display:none` → 접근 가능한 이름 없음(button-name) → app-shell 캔온의 텍스트 적용 루프가 버튼에도 `aria-label` 부여(583 페이지 toolhub.js). ② 홈 카테고리 제목 h3 →
+  h2(heading-order, h1 다음). ③ 가이드 프로모 킥커 `var(--accent)` 2.79:1 → `var(--link)`. ④ `.btn` 흰 글자가 액센트 82종 중 21종(앰버·시안·에메랄드)에서 4.5:1 미달(LH 4.09) →
+  캔온 `--btn-bg` 토큰 신설, gen-restyle 이 액센트별로 잉크를 5% 단위 혼합해 AA 통과하는 첫 값을 주입(59종 어두워짐, 최악 4.51, 나머지 액센트 그대로), check-consistency 드리프트
+  게이트에 토큰 반영. ⑤ 라벨 없는 `<select>` 5종(loan-calc term-unit·cap-rate rentper·csv-diff cd-tol-mode·molar-mass sample-unit·ppi diag-unit) aria-label(양 트리).
+  검증: 테스트 30/30, ui-experience 23/23(wrangler dev), 표준 10/10·심층 10/10, i18n·정합 OK. 교훈: SW stale-while-revalidate 때문에 로컬 재검증 시 SW·캐시를 지우고 봐야 한다.
+
 ## 7. 연관 문서
 - [팩토리 파이프라인](../../docs/PIPELINE.md)
 - [서비스 레지스트리](../../ontology/services.yaml)
