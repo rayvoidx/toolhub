@@ -80,7 +80,11 @@
     return btn;
   }
   function render() {
-    document.querySelectorAll("[data-app-text]").forEach(function (el) { el.textContent = t(el.dataset.appText); });
+    document.querySelectorAll("[data-app-text]").forEach(function (el) {
+      var text = t(el.dataset.appText); el.textContent = text;
+      // 2026-11-18 a11y: 좁은 폭에서 라벨 span 이 display:none 이면 버튼 이름이 비므로 버튼 자체에도 이름을 둔다 (LH button-name)
+      if (el.classList.contains("app-action-label") && el.parentNode && el.parentNode.tagName === "BUTTON") el.parentNode.setAttribute("aria-label", text);
+    });
     if (saveButton) {
       var active = has(slug);
       saveButton.querySelector(".app-action-icon").textContent = active ? "★" : "☆";
