@@ -197,6 +197,14 @@
   게이트에 토큰 반영. ⑤ 라벨 없는 `<select>` 5종(loan-calc term-unit·cap-rate rentper·csv-diff cd-tol-mode·molar-mass sample-unit·ppi diag-unit) aria-label(양 트리).
   검증: 테스트 30/30, ui-experience 23/23(wrangler dev), 표준 10/10·심층 10/10, i18n·정합 OK. 교훈: SW stale-while-revalidate 때문에 로컬 재검증 시 SW·캐시를 지우고 봐야 한다.
 
+- **2026-11-21 — AdSense 재심사 대비: 언어 자동 전환 폐기·얇은 페이지 noindex·도구 수 정정**: 브라우저 언어(navigator.languages)만으로 본문 전체를
+  검수 없는 자동 번역으로 바꾸던 동작을 폐기했다. 언어는 `?lang=` 또는 스위처 선택(새 키 `toolhub:lang-choice`, 옛 키는 자동 감지값이 섞여 있어 버림)으로만
+  바뀌고, 없으면 페이지의 baked `<html lang>`. 허브 i18n.js·도구 325종(템플릿 → gen-ux.js)·카테고리 10종·offline.js 동일 규칙. /workspace/·한국어 전용 /guides/ 와
+  가이드 3종 noindex, gen-sitemap 이 noindex 페이지를 건너뜀(344 → 339 URL). About 도구 수 "two hundred" → 325. i18n.js 가 바뀌었으므로 gen-sw.js 재실행으로
+  SW 캐시 세대 560개 갱신(허브 8ced8e43e5a2 → 80ca7b2f29f1) — 재방문자에게 새 i18n.js 가 닿게 함(9/09 교훈). hub 819e9b39·837ba4a9, 팩토리 2a4eb03e·8cb55843.
+  검증: 정합 OK, 앱 플랫폼 10/10·UI 선호 12/12·워커 11/11. 라이브(push 후 약 2분 반영, 헤드리스 ko-KR 클린 프로필): /loan-calc/ 영어 원문 렌더, `?lang=ko` 한국어 전환,
+  noindex 5페이지 확인, sitemap 339 loc·해당 페이지 부재, 홈·btu-calc·random-number-gen 콘솔 에러는 기지의 GTM `/9xr5/` 400 뿐, ads.txt 200 text/plain.
+
 ## 7. 연관 문서
 - [팩토리 파이프라인](../../docs/PIPELINE.md)
 - [서비스 레지스트리](../../ontology/services.yaml)
