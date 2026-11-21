@@ -1,0 +1,108 @@
+<!doctype html><html lang="en" data-theme="auto"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="google-adsense-account" content="ca-pub-6324953789479730">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unit prices, stacked discounts and coupons: the arithmetic — Toolhub Guides</title>
+<meta name="description" content="Worked checkout examples: unit prices across pack sizes, why 25% plus 20% off is 40%, coupon order, sales tax on coupons in two US states, and shrinkflation.">
+<link rel="canonical" href="https://tool-hub.me/guides/unit-price-and-discount-stacking/">
+<link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/guides.css"><link rel="stylesheet" href="/css/app-shell.css"><link rel="icon" href="/icons/icon.svg">
+<meta property="og:type" content="article"><meta property="og:title" content="Unit prices, stacked discounts and coupons: the arithmetic"><meta property="og:description" content="Worked checkout examples: unit prices across pack sizes, why 25% plus 20% off is 40%, coupon order, sales tax on coupons in two US states, and shrinkflation."><meta property="og:url" content="https://tool-hub.me/guides/unit-price-and-discount-stacking/"><meta property="og:image" content="https://tool-hub.me/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Unit prices, stacked discounts and coupons: the arithmetic","description":"Worked checkout examples: unit prices across pack sizes, why 25% plus 20% off is 40%, coupon order, sales tax on coupons in two US states, and shrinkflation.","datePublished":"2026-11-21","dateModified":"2026-11-21","inLanguage":"en","author":{"@type":"Person","name":"Jaehyun Park","url":"https://tool-hub.me/about"},"publisher":{"@type":"Organization","name":"Toolhub","url":"https://tool-hub.me/"},"mainEntityOfPage":"https://tool-hub.me/guides/unit-price-and-discount-stacking/"}</script>
+</head><body><header class="site-header"><a class="brand" href="/"><img src="/icons/icon.svg" alt="" width="28" height="28"><span>Toolhub</span></a><nav aria-label="Site"><a href="/guides/">Guides</a> · <a href="/about">About</a></nav></header>
+<main><article class="guide-article">
+<p class="eyebrow">Shopping · Prices and percentages</p>
+<h1>Unit prices, stacked discounts and coupons: the arithmetic</h1>
+<p class="lede">Most bad deals are not hidden; they are just percentages applied to a different base than the one you assumed. Here are the checkout calculations worth doing, with the numbers worked out.</p>
+<p class="meta">By <a href="/about">Jaehyun Park</a> (RAYV STUDIO), who builds and maintains Toolhub · Published <time datetime="2026-11-21">21 November 2026</time> · Updated <time datetime="2026-11-21">21 November 2026</time></p>
+
+<h2>Start with price per unit, not price per package</h2>
+<p>The U.S. National Institute of Standards and Technology (NIST) defines unit pricing as "the cost per unit of measure of products, such as the cost per milliliter or per ounce". Its 2025 best-practice guide for retailers (SP 1181) also says the same unit should be used for every package size in a category, and that metric and U.S. customary units should not be mixed within one category. Unit pricing is not required by federal law; NIST notes that it is decided state by state. Where shelf tags do show it, the store may still choose a unit that makes comparison awkward — which is why it is worth knowing how to do it yourself.</p>
+<p>Three ways to buy the same ground coffee, run through our <a href="/unit-price/">unit price calculator</a>:</p>
+<div class="table-wrap"><table>
+<caption>Coffee, normalised to grams</caption>
+<thead><tr><th>Option</th><th class="n">Price</th><th class="n">Net weight</th><th class="n">Per 100 g</th><th class="n">Per lb</th></tr></thead>
+<tbody>
+<tr><td>12 oz bag</td><td class="n">$8.99</td><td class="n">340.2 g</td><td class="n">$2.643</td><td class="n">$11.99</td></tr>
+<tr><td>1 kg bag</td><td class="n">$24.50</td><td class="n">1,000 g</td><td class="n">$2.450</td><td class="n">$11.11</td></tr>
+<tr><td>Twin pack, 2 × 340 g</td><td class="n">$16.49</td><td class="n">680 g</td><td class="n">$2.425</td><td class="n">$11.00</td></tr>
+</tbody></table></div>
+<p>Two things stand out. First, the biggest package is not the cheapest per gram; the twin pack beats the 1 kg bag by 1.0%. Second, the 12 oz bag looks like it is close to the 340 g packs, but 12 oz is 340.2 g, so it is a slightly larger amount at a much higher unit price. The calculator converts ounces at 28.349523125 g, the exact defined value, so rounding the conversion yourself to 28 or 28.35 is the first place a hand calculation drifts.</p>
+<p>The calculator reports the difference as "7.3% cheaper" when you compare the 1 kg bag with the 12 oz bag. Run the same pair the other way round and the 12 oz bag is 7.9% more expensive. Both are correct: the first divides the gap by the dearer price, the second by the cheaper one. When a store says "save 8%", ask which base it used.</p>
+<div class="note"><p><strong>Weight versus volume.</strong> The calculator refuses to compare a product sold in ounces with one sold in fluid ounces. That is deliberate: an ounce is mass and a fluid ounce is volume, and converting between them needs the product's density. Honey, oil and laundry detergent are often sold one way in one brand and the other way in another. If you must compare, find the net weight printed elsewhere on the label.</p></div>
+
+<h2>Multipacks and sale packs</h2>
+<p>A 24-pack of 12 fl oz cans at $11.99 works out to $0.4996 a can. Two 12-packs on sale at $5.49 each are $0.4575 a can, 8.4% cheaper, even though "buy the big pack" is the usual instinct. Promotions run on specific sizes, so the cheapest unit price moves around from week to week. The calculator handles this with its pack count field: enter 12 for the capacity and unit (fl oz) and 24 or 12 as the count.</p>
+<p>Multi-buy offers are discounts in disguise. "Buy one, get one 50% off" means paying 1.5 prices for 2 items: 25% off each, and only if you wanted two. "Buy two, get one free" is 2 prices for 3, or 33.3% off each. A 30%-off single item beats the first and loses to the second — but only the single-item discount saves you anything if you would otherwise have bought one.</p>
+
+<h2>Why 25% off plus an extra 20% off is not 45%</h2>
+<p>Stacked percentage discounts multiply; they do not add. Each one is applied to the price left over by the previous one. A $80 jacket at 25% off is $60. An extra 20% off at the register takes 20% of $60, not of $80: $12, leaving $48. Total savings: $32, which our <a href="/discount-calc/">discount calculator</a> reports as a 40% discount on the original price.</p>
+<div class="example">
+<p class="formula">combined discount = 1 − (1 − a) × (1 − b)</p>
+<p>1 − 0.75 × 0.80 = 1 − 0.60 = 0.40, so 40%. Because multiplication does not care about order, two percentage discounts give the same result whichever is applied first.</p>
+</div>
+<div class="table-wrap"><table>
+<caption>Stacked percentage discounts: what the sign says and what you get</caption>
+<thead><tr><th>Offer</th><th class="n">Sounds like</th><th class="n">Actually</th></tr></thead>
+<tbody>
+<tr><td>25% + extra 20%</td><td class="n">45%</td><td class="n">40%</td></tr>
+<tr><td>50% + extra 50%</td><td class="n">100%</td><td class="n">75%</td></tr>
+<tr><td>30% + extra 10%</td><td class="n">40%</td><td class="n">37%</td></tr>
+<tr><td>20% + 20% + 20%</td><td class="n">60%</td><td class="n">48.8%</td></tr>
+</tbody></table></div>
+<p>The gap between "sounds like" and "actually" is always the product of the two rates: 25% × 20% = 5 points. With small discounts it barely matters; with "50% off, then an extra 50%" it is the difference between free and a quarter of the price.</p>
+
+<h2>When a coupon is a dollar amount, order matters</h2>
+<p>Percentages commute with each other. A fixed amount does not commute with a percentage. Take a $60 item with a 20% sale and a $10 coupon:</p>
+<div class="table-wrap"><table>
+<caption>$60 item, 20% off and a $10 coupon</caption>
+<thead><tr><th>Order applied</th><th>Working</th><th class="n">You pay</th><th class="n">Effective discount</th></tr></thead>
+<tbody>
+<tr><td>Percentage first, then coupon</td><td>60 × 0.80 − 10</td><td class="n">$38</td><td class="n">36.7%</td></tr>
+<tr><td>Coupon first, then percentage</td><td>(60 − 10) × 0.80</td><td class="n">$40</td><td class="n">33.3%</td></tr>
+</tbody></table></div>
+<p>The difference, $2, is exactly the percentage applied to the coupon (20% of $10). Applying the coupon first lets the store's percentage discount shrink your coupon. You usually do not get to choose — the retailer's terms or the point-of-sale system decides — but knowing which order was used explains a receipt that is a couple of dollars off what you expected. Coupons with a minimum spend ("$10 off $50") add another trap: if the sale is applied first and drops the subtotal below $50, the coupon may not apply at all.</p>
+
+<h2>Sales tax and coupons: it depends on the state and the coupon</h2>
+<p>In the United States, whether a coupon reduces the amount that sales tax is charged on depends on who pays for the coupon, and state rules differ. Two state tax authorities spell it out:</p>
+<ul>
+<li><strong>New York</strong> (Tax Bulletin TB-ST-140): with a store-issued coupon the store is not reimbursed, so tax is calculated on the reduced price. With a manufacturer's coupon, "sales tax is due on the full price of the item". The bulletin's own example is a $1.00 item with a 25-cent coupon at 8%: $0.81 with a store coupon, $0.83 with a manufacturer's coupon.</li>
+<li><strong>California</strong> (Regulation 1671.1): a retailer's own discount is not included in the retailer's gross receipts, but amounts a manufacturer pays to reimburse the retailer for a manufacturer coupon are included, and the retailer may by contract collect sales tax reimbursement on them.</li>
+</ul>
+<p>Scale the New York example up to a $40 item and a $5 coupon at 8%. A store coupon gives (40 − 5) × 1.08 = $37.80. A manufacturer's coupon gives 40 × 1.08 − 5 = $38.20. The 40-cent gap is the tax on the coupon itself (8% of $5). Our <a href="/sales-tax-calc/">sales tax calculator</a> applies a rate to whatever amount you enter, so it cannot know which kind of coupon you used; enter the taxable amount the state rule gives you, not the amount you paid.</p>
+<p>The same calculator also has a mode for removing tax from a receipt total, and it divides rather than subtracts. A $54.13 total at a combined 8.25% rate came from $54.13 ÷ 1.0825 = $50.00 before tax. Multiplying by (1 − 0.0825) instead gives $49.66 — wrong, because the tax was 8.25% of the pre-tax price, not of the total.</p>
+
+<h2>Shrinkflation: same price, less product</h2>
+<p>NIST's guide describes shrinkflation as a cut in net contents without a matching price cut, and points out that unit prices are how a shopper notices it. The U.S. Bureau of Labor Statistics treats it the same way in the Consumer Price Index: the effective price is the collected price divided by size. Its worked example is a half-gallon (64 oz) of ice cream at $5.99 that becomes 60 oz at the same $5.99. Per ounce that is $0.0936 before and $0.0998 after, a 6.7% price increase that the CPI counts as inflation even though the shelf price never moved.</p>
+<p>The general rule: if the price stays the same and the contents fall from <em>old</em> to <em>new</em>, the unit price rises by old ÷ new − 1. Losing 1 part in 16 (16 oz to 15 oz) is also a 6.7% increase. You can check any such change in our <a href="/percent-calc/">percentage calculator</a> by entering the old and new unit prices as a percentage change.</p>
+
+<h2>A checklist the calculators cannot run for you</h2>
+<ul>
+<li>Compare net contents on the label, not the package size; a larger box does not always hold more.</li>
+<li>Compare usable quantity. A 1 kg bag of coffee that goes stale before you finish it costs more per cup than its unit price suggests.</li>
+<li>Read the base of every percentage: discounts compound on the reduced price, savings claims are relative to a reference price you cannot always verify.</li>
+<li>Check whether a minimum-spend coupon still applies after the other discounts.</li>
+<li>For tax, check your own state's rule; New York and California are examples, not a national standard.</li>
+<li>Round at the end. NIST recommends rounding a unit price to the nearest cent at a dollar or more, rounding fives up — so $2.425 per 100 g displays as $2.43, close enough to the $2.45 bag that freshness may matter more than price.</li>
+</ul>
+
+<h2>Tools used in this guide</h2>
+<ul class="tools-used">
+<li><a href="/unit-price/">Unit Price Calculator</a> — coffee and soda comparisons, unit conversion and the "% cheaper" figure</li>
+<li><a href="/discount-calc/">Discount Calculator</a> — stacked discount and coupon-order examples</li>
+<li><a href="/percent-calc/">Percentage Calculator</a> — percentage change for shrinkflation and the two-way "cheaper / more expensive" comparison</li>
+<li><a href="/sales-tax-calc/">Sales Tax Calculator</a> — tax on coupon examples and removing tax from a total</li>
+</ul>
+<h2>What this guide does not cover</h2>
+<p class="note">Sales tax rules outside New York and California, VAT and GST systems (see our <a href="/vat-calc/">VAT calculator</a> and <a href="/gst-calc/">GST calculator</a>), loyalty-card pricing, rebates paid after purchase, and price-tracking for "was" prices. Tax statements here describe the cited state guidance as published; they are not tax advice.</p>
+<h2>Sources</h2>
+<ol class="sources">
+<li><a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1181e2025/NIST.SP.1181e2025.html" rel="noopener">NIST SP 1181-2025, Unit Pricing Guide: A Best Practice Approach to Unit Pricing (June 2025)</a>, accessed 21 November 2026. Definition, one unit per category, rounding rule, shrinkflation.</li>
+<li><a href="https://www.tax.ny.gov/pubs_and_bulls/tg_bulletins/st/coupons_and_food_stamps.htm" rel="noopener">New York State Department of Taxation and Finance — Tax Bulletin ST-140, Coupons and Food Stamps</a>, accessed 21 November 2026. Store versus manufacturer's coupons and the $1.00 / 8% example.</li>
+<li><a href="https://www.cdtfa.ca.gov/lawguides/vol1/sutr/1671-1.html" rel="noopener">California Department of Tax and Fee Administration — Regulation 1671.1, Discounts, Coupons, Rebates, and Other Incentives</a>, accessed 21 November 2026.</li>
+<li><a href="https://www.bls.gov/opub/btn/volume-12/measuring-shrinkflation-and-its-impact-on-inflation.htm" rel="noopener">U.S. Bureau of Labor Statistics — Getting less for the same price? Explore how the CPI measures "shrinkflation" and its impact on inflation (Beyond the Numbers, vol. 12 no. 2, February 2023)</a>, accessed 21 November 2026. Ice cream example.</li>
+</ol>
+<p class="meta">Every figure above is recomputed by a script kept with the site source. Found an error? <a href="/contact">Tell us</a> with the numbers you used.</p>
+</article></main>
+<footer class="guide-footer"><a href="/">All tools</a> · <a href="/guides/">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact &amp; corrections</a> · <a href="/privacy">Privacy Policy</a></footer>
+<script src="/js/toolhub.js" defer></script>
+</body></html>

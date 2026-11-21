@@ -1,0 +1,111 @@
+<!doctype html><html lang="en" data-theme="auto"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="google-adsense-account" content="ca-pub-6324953789479730">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Return, inflation and fees: what 30 years of compounding leaves — Toolhub Guides</title>
+<meta name="description" content="How a 1% fee and 2.5% inflation shrink a 30-year savings plan, with the SEC fee example reproduced and real US CPI data. Every figure is recomputed.">
+<link rel="canonical" href="https://tool-hub.me/guides/compound-interest-inflation-fees/">
+<link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/guides.css"><link rel="stylesheet" href="/css/app-shell.css"><link rel="icon" href="/icons/icon.svg">
+<meta property="og:type" content="article"><meta property="og:title" content="Return, inflation and fees: what 30 years of compounding leaves"><meta property="og:description" content="How a 1% fee and 2.5% inflation shrink a 30-year savings plan, with the SEC fee example reproduced and real US CPI data. Every figure is recomputed."><meta property="og:url" content="https://tool-hub.me/guides/compound-interest-inflation-fees/"><meta property="og:image" content="https://tool-hub.me/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Return, inflation and fees: what 30 years of compounding leaves","description":"How a 1% fee and 2.5% inflation shrink a 30-year savings plan, with the SEC fee example reproduced and real US CPI data. Every figure is recomputed.","datePublished":"2026-11-21","dateModified":"2026-11-21","inLanguage":"en","author":{"@type":"Person","name":"Jaehyun Park","url":"https://tool-hub.me/about"},"publisher":{"@type":"Organization","name":"Toolhub","url":"https://tool-hub.me/"},"mainEntityOfPage":"https://tool-hub.me/guides/compound-interest-inflation-fees/"}</script>
+</head><body><header class="site-header"><a class="brand" href="/"><img src="/icons/icon.svg" alt="" width="28" height="28"><span>Toolhub</span></a><nav aria-label="Site"><a href="/guides/">Guides</a> · <a href="/about">About</a></nav></header>
+<main><article class="guide-article">
+<p class="eyebrow">Saving &amp; investing · Long horizons</p>
+<h1>Return, inflation and fees: what 30 years of compounding leaves</h1>
+<p class="lede">A compound interest calculator gives you one big number. Two quiet deductions decide how much of it is real: the fee taken every year, and the inflation that shrinks what each dollar buys. This guide applies both to one savings plan.</p>
+<p class="meta">By <a href="/about">Jaehyun Park</a> (RAYV STUDIO), who builds and maintains Toolhub · Published <time datetime="2026-11-21">21 November 2026</time> · Updated <time datetime="2026-11-21">21 November 2026</time></p>
+
+<h2>First, check the method against a published example</h2>
+<p>The US Securities and Exchange Commission's investor bulletin <em>How Fees and Expenses Affect Your Investment Portfolio</em> charts $100,000 growing at 4% a year for 20 years under ongoing fees of 0.25%, 0.50% and 1%. The bulletin gives the end values only as a chart, at roughly $208,000, $198,000 and $179,000. Taking the fee as a percentage of the balance after each year's growth, value = 100,000 × (1.04 × (1 − fee))<sup>20</sup>, reproduces them:</p>
+<div class="table-wrap"><table>
+<caption>$100,000, 4% a year, 20 years (SEC bulletin scenario)</caption>
+<thead><tr><th>Annual fee</th><th class="n">Ending value</th><th class="n">Lost to fees</th></tr></thead>
+<tbody>
+<tr><td>None</td><td class="n">$219,112</td><td class="n">—</td></tr>
+<tr><td>0.25%</td><td class="n">$208,413</td><td class="n">$10,699</td></tr>
+<tr><td>0.50%</td><td class="n">$198,211</td><td class="n">$20,901</td></tr>
+<tr><td>1.00%</td><td class="n">$179,213</td><td class="n">$39,899</td></tr>
+</tbody></table></div>
+<p>The SEC's point is in the last column: a 1% fee does not cost 1% of anything you would notice. It costs almost $40,000, because every dollar taken in year one would also have earned 19 more years of return. The fee compounds against you exactly as the return compounds for you.</p>
+
+<h2>The plan: $10,000 now, $500 a month, 30 years</h2>
+<p>Now a more typical saver. Start with $10,000, add $500 at the end of every month for 30 years, and assume a 7% annual return compounded monthly. The 7% is an assumption for illustration, not a forecast for any market. Over 30 years you put in $190,000. The <a href="/compound-interest-calc/">compound interest calculator</a>, which steps the balance month by month, ends at <strong>$691,150</strong>, so $501,150 of the total is growth.</p>
+<p>Notice how late that growth arrives. After 10 years the balance is $106,639, after 20 years $300,851, and more than half of the final figure is added in the last decade. Anything that trims the rate, such as a fee, does its worst damage in exactly those late years, when the balance is largest.</p>
+
+<h3>Correction one: the fee</h3>
+<p>For monthly contributions it is simplest to subtract the fee from the return and run the calculator again with the net rate, for example 6% for a fund returning 7% with a 1% fee. Over a year this differs from the SEC's multiply-after-growth method by less than a tenth of a percentage point, which does not change any conclusion below.</p>
+<div class="table-wrap"><table>
+<caption>The $10,000 + $500/month plan after 30 years at 7% gross</caption>
+<thead><tr><th>Annual fee</th><th class="n">Net rate</th><th class="n">Ending balance</th><th class="n">Lost to fees</th></tr></thead>
+<tbody>
+<tr><td>None</td><td class="n">7.00%</td><td class="n">$691,150</td><td class="n">—</td></tr>
+<tr><td>0.05% (typical of a broad index fund)</td><td class="n">6.95%</td><td class="n">$683,965</td><td class="n">$7,185</td></tr>
+<tr><td>0.25%</td><td class="n">6.75%</td><td class="n">$656,065</td><td class="n">$35,085</td></tr>
+<tr><td>0.50%</td><td class="n">6.50%</td><td class="n">$623,007</td><td class="n">$68,143</td></tr>
+<tr><td>1.00%</td><td class="n">6.00%</td><td class="n">$562,483</td><td class="n">$128,667</td></tr>
+<tr><td>1.50%</td><td class="n">5.50%</td><td class="n">$508,680</td><td class="n">$182,471</td></tr>
+</tbody></table></div>
+<p>A 1% fee removes $128,667, or 18.6% of what the plan would otherwise have reached, even though it is only one-seventh of the gross return. The loss grows with both the fee and the time each dollar stays invested, and the first $10,000 here stays for all 30 years. "Typical of a broad index fund" is a description of the fee level, not a recommendation; fund costs are disclosed in each fund's prospectus fee table, so read the actual expense ratio rather than relying on a category.</p>
+
+<h3>Correction two: inflation</h3>
+<p>$691,150 in 30 years will not buy what $691,150 buys today. To estimate how much less, look backwards. The US Consumer Price Index for All Urban Consumers (CPI-U, published by the Bureau of Labor Statistics) averaged 148.2 in 1994 and 313.7 in 2024. Prices rose by a factor of 2.117 in those 30 years, an average of 2.53% a year. The <a href="/inflation-calc/">inflation calculator</a> uses the same annual averages.</p>
+<p>If the next 30 years look like the last 30, divide each ending balance by 2.117 to express it in today's dollars:</p>
+<div class="table-wrap"><table>
+<caption>Ending balance in today's dollars, assuming 2.53% average inflation</caption>
+<thead><tr><th>Annual fee</th><th class="n">Nominal</th><th class="n">Today's dollars</th></tr></thead>
+<tbody>
+<tr><td>None</td><td class="n">$691,150</td><td class="n">$326,517</td></tr>
+<tr><td>0.05%</td><td class="n">$683,965</td><td class="n">$323,123</td></tr>
+<tr><td>0.25%</td><td class="n">$656,065</td><td class="n">$309,942</td></tr>
+<tr><td>0.50%</td><td class="n">$623,007</td><td class="n">$294,325</td></tr>
+<tr><td>1.00%</td><td class="n">$562,483</td><td class="n">$265,732</td></tr>
+<tr><td>1.50%</td><td class="n">$508,680</td><td class="n">$240,314</td></tr>
+</tbody></table></div>
+<p>Inflation more than halves the headline. Fees and inflation then interact: with a 1% fee and 2.53% inflation, only about $266,000 of today's purchasing power is left from a number that started at $691,150. That is still well above the $190,000 contributed, but the gap between "what the calculator shows" and "what you can spend" is the size of a house.</p>
+
+<h2>Real returns are divided, not subtracted</h2>
+<p>The quick rule says real return = nominal return − inflation, so 7% − 2.53% = 4.47%. The exact relation, usually credited to Irving Fisher, divides: (1 + 0.07) ÷ (1 + 0.0253) − 1 = <strong>4.36%</strong>. At low rates the two barely differ; at high inflation, the subtraction overstates real return badly.</p>
+<p>The real rate also fixes a hidden flaw in the plan above. A flat $500 a month is worth less every year, so in today's money your contributions shrink. If instead you raise the deposit with inflation each year, which keeps its real value at $500, you can run the whole plan in today's dollars by entering the real rate: $10,000 plus $500 a month at 4.36% for 30 years gives <strong>$407,085</strong> in today's money, against $326,517 for the flat plan. Indexing your contributions to prices adds more real wealth than cutting a 0.5% fee would.</p>
+
+<h2>Doubling and halving in your head</h2>
+<p>The <a href="/rule-of-72-calc/">rule of 72</a> estimates doubling time as 72 ÷ the annual rate. It works because ln 2 ≈ 0.693, and for small r, ln(1 + r) ≈ r; 72 is used instead of 69.3 because it divides evenly by many numbers and partly corrects the approximation at typical rates.</p>
+<div class="table-wrap"><table>
+<caption>Years to double: rule of 72 vs. exact (annual compounding)</caption>
+<thead><tr><th class="n">Rate</th><th class="n">72 ÷ rate</th><th class="n">Exact: ln 2 ÷ ln(1 + r)</th></tr></thead>
+<tbody>
+<tr><td class="n">2%</td><td class="n">36.00</td><td class="n">35.00</td></tr>
+<tr><td class="n">4%</td><td class="n">18.00</td><td class="n">17.67</td></tr>
+<tr><td class="n">7%</td><td class="n">10.29</td><td class="n">10.24</td></tr>
+<tr><td class="n">10%</td><td class="n">7.20</td><td class="n">7.27</td></tr>
+<tr><td class="n">12%</td><td class="n">6.00</td><td class="n">6.12</td></tr>
+</tbody></table></div>
+<p>The rule is best near 8% and drifts at the extremes. It also runs in reverse for inflation: at 2.53% a year, the rule says prices double, and cash loses half its purchasing power, in about 28.4 years; the exact figure is 27.7 years. Cash under the mattress over a working life is not safe, just slow to lose.</p>
+
+<h2>Where the arithmetic misleads</h2>
+<ul>
+<li><strong>Fixed rates are a modelling choice.</strong> Real returns arrive unevenly. A plan that averages 7% but loses heavily in the final years ends lower than the smooth calculation, because the losses hit the largest balance. Treat the output as a central case, not a promise.</li>
+<li><strong>Compounding frequency on a savings account is a minor detail.</strong> For a three-year plan of $500 a month deposited at the start of each month at 4%, the <a href="/savings-calc/">savings calculator</a> shows $1,154 of interest with monthly compounding against $1,110 with simple interest, a difference of $44. Over three years the rate matters far more than how often it compounds.</li>
+<li><strong>Fees hide in more than one place.</strong> An advisory fee charged on top of a fund's expense ratio adds to it; 0.75% plus 0.25% is the 1% row above.</li>
+<li><strong>Taxes are not in any of these numbers.</strong> Whether growth is taxed yearly, on withdrawal or not at all depends on the account type and the country, and can move the result as much as the fee does.</li>
+<li><strong>Past CPI is not future CPI.</strong> 2.53% is a 30-year US average. Other countries, and other 30-year windows, differ a great deal.</li>
+</ul>
+
+<h2>Tools used in this guide</h2>
+<ul class="tools-used">
+<li><a href="/compound-interest-calc/">Compound interest calculator</a> — month-by-month balances for every fee level and the real-rate run</li>
+<li><a href="/inflation-calc/">Inflation calculator</a> — US CPI-U annual averages behind the 2.53% figure</li>
+<li><a href="/rule-of-72-calc/">Rule of 72 calculator</a> — doubling-time estimate against the exact logarithm</li>
+<li><a href="/savings-calc/">Savings calculator</a> — simple vs. monthly compounding on a fixed deposit plan</li>
+</ul>
+<h2>What this guide does not cover</h2>
+<p class="note">Investment selection, tax-advantaged accounts and their rules in any country, sequence-of-returns risk in retirement withdrawals, and currency effects for savings held abroad. The 7% return is an assumption, and the inflation figures are US data only.</p>
+<h2>Sources</h2>
+<ol class="sources">
+<li><a href="https://www.sec.gov/investor/alerts/ib_fees_expenses.pdf" rel="noopener">US Securities and Exchange Commission, Office of Investor Education and Advocacy — Investor Bulletin: How Fees and Expenses Affect Your Investment Portfolio (PDF)</a>, accessed 21 November 2026. The $100,000 / 4% / 20-year fee scenario.</li>
+<li><a href="https://data.bls.gov/timeseries/CUUR0000SA0?years_option=all_years" rel="noopener">US Bureau of Labor Statistics — CPI-U, US city average, all items (series CUUR0000SA0)</a>, accessed 21 November 2026. Monthly index values for 1994 and 2024, averaged to 148.2 and 313.7.</li>
+</ol>
+<p class="meta">Every figure above is recomputed by a script kept with the site source. Found an error? <a href="/contact">Tell us</a> with the numbers you used.</p>
+</article></main>
+<footer class="guide-footer"><a href="/">All tools</a> · <a href="/guides/">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact &amp; corrections</a> · <a href="/privacy">Privacy Policy</a></footer>
+<script src="/js/toolhub.js" defer></script>
+</body></html>

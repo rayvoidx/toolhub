@@ -1,0 +1,93 @@
+<!doctype html><html lang="en" data-theme="auto"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="google-adsense-account" content="ca-pub-6324953789479730">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Predicting race times with Riegel's formula, and where it fails — Toolhub Guides</title>
+<meta name="description" content="How the 1.06 exponent turns a 5K or half-marathon time into a marathon forecast, why that forecast tends to be too fast, and how to read pace per km and mile.">
+<link rel="canonical" href="https://tool-hub.me/guides/predicting-race-times/">
+<link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/guides.css"><link rel="stylesheet" href="/css/app-shell.css"><link rel="icon" href="/icons/icon.svg">
+<meta property="og:type" content="article"><meta property="og:title" content="Predicting race times with Riegel's formula, and where it fails"><meta property="og:description" content="How the 1.06 exponent turns a 5K or half-marathon time into a marathon forecast, why that forecast tends to be too fast, and how to read pace per km and mile."><meta property="og:url" content="https://tool-hub.me/guides/predicting-race-times/"><meta property="og:image" content="https://tool-hub.me/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Predicting race times with Riegel's formula, and where it fails","description":"How the 1.06 exponent turns a 5K or half-marathon time into a marathon forecast, why that forecast tends to be too fast, and how to read pace per km and mile.","datePublished":"2026-11-21","dateModified":"2026-11-21","inLanguage":"en","author":{"@type":"Person","name":"Jaehyun Park","url":"https://tool-hub.me/about"},"publisher":{"@type":"Organization","name":"Toolhub","url":"https://tool-hub.me/"},"mainEntityOfPage":"https://tool-hub.me/guides/predicting-race-times/"}</script>
+</head><body><header class="site-header"><a class="brand" href="/"><img src="/icons/icon.svg" alt="" width="28" height="28"><span>Toolhub</span></a><nav aria-label="Site"><a href="/guides/">Guides</a> · <a href="/about">About</a></nav></header>
+<main><article class="guide-article">
+<p class="eyebrow">Running · Pace and prediction</p>
+<h1>Predicting race times with Riegel's formula, and where it fails</h1>
+<p class="lede">One number, the fatigue exponent, carries the whole prediction. It works well up to the half marathon. For the marathon, the best large study of recreational runners found it is usually about ten minutes too optimistic.</p>
+<p class="meta">By <a href="/about">Jaehyun Park</a> (RAYV STUDIO), who builds and maintains Toolhub · Published <time datetime="2026-11-21">21 November 2026</time> · Updated <time datetime="2026-11-21">21 November 2026</time></p>
+
+<h2>The formula in one line</h2>
+<p>In 1981 Peter Riegel fitted a single curve to world-record times across distances and published it in <em>American Scientist</em> as "Athletic Records and Human Endurance". The version every race-time calculator uses, including our <a href="/race-time-predictor/">race time predictor</a>, is:</p>
+<div class="example">
+<p class="formula">T2 = T1 × (D2 ÷ D1)<sup>k</sup>, with k = 1.06 by default</p>
+<p>T1 is a time you have actually run over distance D1. T2 is the forecast for distance D2. Only the ratio of distances matters, so kilometres and miles give the same answer as long as both distances use the same unit.</p>
+</div>
+<p>If k were exactly 1, time would scale with distance and you could hold the same pace forever. Any k above 1 builds in fatigue. The quickest way to feel what 1.06 means is to double the distance: time is multiplied by 2<sup>1.06</sup> = 2.085, so you run twice as far at a pace about 4.2% slower. At k = 1.07 the pace penalty per doubling is 5.0%, and at 1.08 it is 5.7%. Those few tenths of a percent compound over the jump from 5K to marathon, which is more than three doublings.</p>
+
+<h2>A worked runner: 25:00 for 5K</h2>
+<p>Take a runner whose recent 5K is 25:00, or 5:00 per kilometre. Our <a href="/pace-calc/">pace calculator</a> turns that into 8:03 per mile, 12 km/h or 7.46 mph. Riegel with k = 1.06 forecasts:</p>
+<div class="table-wrap"><table>
+<caption>Riegel forecasts from a 25:00 5K (k = 1.06)</caption>
+<thead><tr><th>Target</th><th class="n">Predicted time</th><th class="n">Pace per km</th><th class="n">Pace per mile</th></tr></thead>
+<tbody>
+<tr><td>10K</td><td class="n">52:07</td><td class="n">5:13</td><td class="n">8:23</td></tr>
+<tr><td>Half marathon (21.0975 km)</td><td class="n">1:55:00</td><td class="n">5:27</td><td class="n">8:46</td></tr>
+<tr><td>Marathon (42.195 km)</td><td class="n">3:59:47</td><td class="n">5:41</td><td class="n">9:09</td></tr>
+</tbody></table></div>
+<p>The marathon line is a big extrapolation: 42.195 ÷ 5 = 8.439, so the 5K time is multiplied by 8.439<sup>1.06</sup> = 9.591. Small errors in the input are multiplied too. A 24:00 5K forecasts 3:50:11, so one minute in the 5K becomes almost ten minutes in the marathon forecast. The predictor shows a caution note whenever the target is more than four times the distance you entered; even 5K to half marathon (a ratio of 4.2195) triggers it.</p>
+
+<h2>Find your own exponent from two races</h2>
+<p>If you have two recent results at different distances, you can solve the formula for k instead of assuming it:</p>
+<div class="example">
+<p class="formula">k = ln(T2 ÷ T1) ÷ ln(D2 ÷ D1)</p>
+<p>Suppose the same runner also ran 52:00 for 10K and 1:55:00 for the half marathon. Then k = ln(6900 ÷ 3120) ÷ ln(21.0975 ÷ 10) = 1.063. That is close to the default, so for this runner the standard setting is a reasonable description of how they slow down between 10K and the half.</p>
+</div>
+<p>The predictor's exponent menu offers 1.04 to 1.08, labelled from "high mileage, strong aerobic base" to "low mileage, speed-biased". Here is what that menu does to a marathon forecast from the 1:55:00 half:</p>
+<div class="table-wrap"><table>
+<caption>Marathon forecast from a 1:55:00 half marathon by exponent</caption>
+<thead><tr><th>k</th><th class="n">Marathon forecast</th><th class="n">Pace per km</th></tr></thead>
+<tbody>
+<tr><td>1.04</td><td class="n">3:56:28</td><td class="n">5:36</td></tr>
+<tr><td>1.05</td><td class="n">3:58:07</td><td class="n">5:39</td></tr>
+<tr><td>1.06</td><td class="n">3:59:46</td><td class="n">5:41</td></tr>
+<tr><td>1.07</td><td class="n">4:01:26</td><td class="n">5:43</td></tr>
+<tr><td>1.08</td><td class="n">4:03:07</td><td class="n">5:46</td></tr>
+</tbody></table></div>
+<p>The whole menu spans 6 minutes 39 seconds. Hold that number in mind for the next section.</p>
+
+<h2>Why marathon forecasts run fast</h2>
+<p>Riegel's curve was fitted to world records, set by people who were trained specifically for each distance. Most recreational runners are not equally prepared for every distance. In 2016 Andrew Vickers and Emily Vertosick tested the formula on survey data from 2,303 recreational runners (median age 35, typical weekly mileage 30) in <em>BMC Sports Science, Medicine and Rehabilitation</em>. They used k = 1.07 as their main value and also tried 1.06 and 1.08.</p>
+<p>Their findings split cleanly by distance. For 10K and the half marathon, Riegel was well calibrated. For the marathon, it was not: in the authors' words it "dramatically underestimated marathon time, giving times at least 10 min too fast for half of runners", with about a quarter of runners more than 20 minutes too fast. Switching to k = 1.08 helped only slightly, and marathon speed was still overestimated for about 75% of runners. A model that also used the runner's weekly mileage and a second race did better.</p>
+<p>Apply the study's median miss to our runner. The 1.06 forecast from the half was 3:59:46; ten minutes slower is 4:09:46, or 5:55 per kilometre. To produce that time from the half marathon, the exponent would have to be about 1.119 — far outside the predictor's menu. That is the practical lesson: the gap between "Riegel says" and "what typically happens" in the marathon is larger than the gap between any two exponent settings. The paper also reports that Riegel himself cited k values of 1.08 for elite runners and 1.05 to 1.06 for male recreational runners aged 40 to 70, so a lower k is not simply "fitter".</p>
+<p>Why the marathon in particular? A half marathon is mostly a test of aerobic speed. A marathon adds fuelling and the durability to keep running form for three to five hours, and those are things a 5K or 10K result simply does not measure. A shorter race tells the formula how fast you are; it cannot tell it how long you can last.</p>
+
+<h2>Using the forecast without being fooled by it</h2>
+<ul>
+<li><strong>Use the closest distance you have raced.</strong> A half marathon predicts a marathon better than a 5K does, and the extrapolation is only a doubling.</li>
+<li><strong>Treat a marathon forecast as the fast end of a range.</strong> If you are not doing marathon-specific long runs, plan your opening pace off something slower than the 1.06 number; the Vickers data suggest the median runner should expect about ten minutes more.</li>
+<li><strong>Enter the official distance, not your GPS reading.</strong> Certified courses are measured along the shortest legal line, and watches usually read a little long. Typing 5.12 km for a 25:00 5K produces a 3:53:49 marathon forecast, almost six minutes faster than the 3:59:47 from the official 5 km — a gain that exists only in the watch.</li>
+<li><strong>Adjust for course and weather yourself.</strong> The formula assumes the same conditions for both races. A flat, cool 10K tells you little about a hot, hilly marathon, and the calculator has no input for either.</li>
+<li><strong>Do not feed it a training run.</strong> T1 should be an all-out effort. A comfortable 5K plugged in as a race result makes every forecast too slow, the opposite problem.</li>
+</ul>
+
+<h2>Pace per kilometre, pace per mile, and the decimal trap</h2>
+<p>Pace is time per distance; speed is distance per time. They are reciprocals, which is why a pace improvement and a speed improvement do not read as the same size. Converting is a fixed factor: one mile is 1.609344 km, so a pace per km multiplied by 1.609344 gives pace per mile. Our 5:41 per km marathon pace is 9:09 per mile, or 10.56 km/h and 6.56 mph, the figures you would enter in our <a href="/speed-conv/">speed converter</a> or on a treadmill.</p>
+<p>The common error is writing pace as a decimal. "5.30 min/km" on a spreadsheet means 5.3 minutes, which is 5:18, not 5:30. Over a marathon that 12-second-per-km difference adds up to more than eight minutes. Always write pace with a colon, and convert decimal minutes by multiplying the fractional part by 60.</p>
+
+<h2>Tools used in this guide</h2>
+<ul class="tools-used">
+<li><a href="/race-time-predictor/">Race Time Predictor</a> — every Riegel forecast and the exponent table (its own time formatting is used to round the results)</li>
+<li><a href="/pace-calc/">Running Pace Calculator</a> — pace per km and per mile, km/h and mph for the 5K and marathon examples</li>
+<li><a href="/speed-conv/">Speed Converter</a> — km/h to mph for treadmill settings</li>
+</ul>
+<h2>What this guide does not cover</h2>
+<p class="note">Training plans, race-day fuelling, heat and altitude corrections, ultramarathons (the predictor accepts distances up to 1,000 km, but neither Riegel's fit nor the Vickers data say much about them), and track events under a mile.</p>
+<h2>Sources</h2>
+<ol class="sources">
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5000509/" rel="noopener">Vickers AJ, Vertosick EA. An empirical study of race times in recreational endurance runners. BMC Sports Science, Medicine and Rehabilitation 2016;8:26 (doi:10.1186/s13102-016-0052-y)</a>, accessed 21 November 2026. Sample, k = 1.07 main analysis, calibration by distance, the "at least 10 min too fast" finding and the k values Riegel cited.</li>
+<li>Riegel PS. Athletic Records and Human Endurance. American Scientist 1981;69(3):285–290. Cited for the origin of the formula as referenced by Vickers and Vertosick; the original article is behind JSTOR and was not re-read for this guide.</li>
+</ol>
+<p class="meta">Every figure above is recomputed by a script kept with the site source. Found an error? <a href="/contact">Tell us</a> with the numbers you used.</p>
+</article></main>
+<footer class="guide-footer"><a href="/">All tools</a> · <a href="/guides/">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact &amp; corrections</a> · <a href="/privacy">Privacy Policy</a></footer>
+<script src="/js/toolhub.js" defer></script>
+</body></html>
