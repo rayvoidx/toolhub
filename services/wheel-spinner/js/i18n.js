@@ -5,11 +5,13 @@
    - 번역 대상 텍스트: data-i18n="key"
    - 번역 대상 속성:   data-i18n-placeholder / data-i18n-title / data-i18n-aria-label
    - 카탈로그에 없는 키는 HTML에 구워진 원문(baked)으로 폴백 — 부분 번역도 깨지지 않는다.
-   - 언어 결정 우선순위: URL ?lang= → localStorage → navigator.languages → "en"
+   - 언어 결정 우선순위: URL ?lang= → 언어 선택기가 저장한 선택(toolhub:lang-choice) → 원문(<html lang>)
+     2026-11-21: navigator.languages 자동 전환 폐기 — 브라우저 언어만으로 본문 전체를 기계 번역으로 바꾸면
+     방문자·심사자가 원문이 아닌 자동 번역 페이지를 본다(AdSense 저가치 판정 원인 후보). 사용자가 고를 때만 바꾼다.
+     옛 키(toolhub:lang·<slug>:lang)는 자동 감지 결과까지 저장돼 있어 읽지 않는다.
    ============================================================ */
 (function i18n() {
   "use strict";
-  var cfg = window.APP_CONFIG || {};
   var LOCALES = window.I18N_LOCALES || {};
   var codes = [];
   for (var k in LOCALES) { if (LOCALES.hasOwnProperty(k)) codes.push(k); }
@@ -21,7 +23,7 @@
   if (codes.indexOf(DEFAULT) === -1) DEFAULT = codes[0];
   var RTL = { ar: 1, ur: 1, fa: 1, he: 1 };
   var ATTRS = ["placeholder", "title", "aria-label"];
-  var storeKey = (cfg.slug || "app") + ":lang";
+  var CHOICE_KEY = "toolhub:lang-choice"; // 명시적 선택(?lang=·선택기)만 기록한다
   var baked = {};   // 최초 적용 전 HTML 원문 스냅샷 (누락 키 폴백용)
   var current = null;
 
@@ -43,20 +45,20 @@
     } catch (e) { /* noop */ }
     try {
       var p = normalize(new URLSearchParams(location.search).get("lang"));
-      if (p) return p;
+      if (p) { remember(p); return p; }
     } catch (e) { /* 구형 브라우저 */ }
     try {
-      var globalLang = normalize(localStorage.getItem("toolhub:lang"));
-      if (globalLang) return globalLang;
-      var saved = normalize(localStorage.getItem(storeKey));
-      if (saved) return saved;
+      var chosen = normalize(localStorage.getItem(CHOICE_KEY));
+      if (chosen) return chosen;
     } catch (e) { /* private mode */ }
-    var navLangs = navigator.languages || [navigator.language || ""];
-    for (var i = 0; i < navLangs.length; i++) {
-      var m = normalize(navLangs[i]);
-      if (m) return m;
-    }
-    return DEFAULT;
+    return normalize(BAKED) || DEFAULT;
+  }
+
+  // 명시적 선택(?lang=·선택기·I18N.apply)만 저장한다 — 자동 감지 결과는 저장하지 않는다.
+  function remember(lang) {
+    lang = normalize(lang);
+    if (!lang) return;
+    try { localStorage.setItem(CHOICE_KEY, lang); } catch (e) { /* private mode */ }
   }
 
   function t(key, lang) {
@@ -144,7 +146,6 @@
     document.documentElement.dir = RTL[lang] ? "rtl" : "ltr";
 
     current = lang;
-    try { localStorage.setItem(storeKey, lang); localStorage.setItem("toolhub:lang", lang); } catch (e) { /* noop */ }
 
     // 셀렉터 동기화
     var sel = document.getElementById("lang-select");
@@ -173,13 +174,14 @@
     }
     sel.addEventListener("change", function () {
       var url = new URL(location.href); url.searchParams.set("lang", sel.value);
-      history.replaceState(history.state, "", url); apply(sel.value);
+      history.replaceState(history.state, "", url);
+      remember(sel.value); apply(sel.value);
     });
   }
 
   window.I18N = {
     t: function (key) { return t(key, current); },
-    apply: apply,
+    apply: function (lang) { remember(lang); apply(lang); },
     lang: function () { return current; },
     languages: codes.slice()
   };
