@@ -205,6 +205,18 @@
   검증: 정합 OK, 앱 플랫폼 10/10·UI 선호 12/12·워커 11/11. 라이브(push 후 약 2분 반영, 헤드리스 ko-KR 클린 프로필): /loan-calc/ 영어 원문 렌더, `?lang=ko` 한국어 전환,
   noindex 5페이지 확인, sitemap 339 loc·해당 페이지 부재, 홈·btu-calc·random-number-gen 콘솔 에러는 기지의 GTM `/9xr5/` 400 뿐, ads.txt 200 text/plain.
 
+- **2026-11-22 — 색인 비율 조정: 도구 85종만 색인, 240종 noindex (AdSense 스케일 콘텐츠 대응)**: 사이트맵 349 URL 중 직접 쓴 글은 가이드 9편뿐이고
+  나머지는 한 템플릿의 도구 325종이었다. `factory/gen-index-tiers.js --classify` 가 재현 가능한 규칙으로 `docs/index-tiers.json`(slug·tier·reason·metrics)을 만든다:
+  K1 색인 가이드가 링크한 도구 37 → keep / N1 답변 상자류(단순 단위 변환·타이머·난수·텍스트 변형·한 공식 수학·단순 날짜) 86 / N2 같은 공식 변형 묶음의 비대표 63 /
+  N3 셈·분기 토큰 부족 35 → noindex / 나머지 K2 는 점수(토큰+입력×4+고유 문장 단어/100)순으로 상한 85 까지 keep 48, 넘친 56 은 N4 noindex.
+  고유 문장 비율은 중앙값 100%라 변별력이 없었다(본문은 도구별로 써 있음 — 문제는 같은 형식 페이지의 수). 레포에 Search Console·애널리틱스 익스포트 없음 → 트래픽 미반영.
+  적용(pipeline-post 편입, gen-html-fit 앞): noindex 도구에 `noindex, follow`, gen-sitemap 제외, gen-html-fit 이 AdSense 메타·로더 주석 블록 제거(로더는 원래 전 페이지 OFF —
+  config adsense_loader=false), 홈 그룹 타일 keep 우선 + 가이드 카드를 디렉터리 위로, 카테고리 페이지에 관련 가이드·Featured/More 분리. 발견: gen-category-pages 가 Codex
+  tool-copy 마크업 이후 타일 0개로 파싱해 아무것도 쓰지 못하던 상태 → 정규식 수리. check-consistency: noindex 도구가 사이트맵에 있으면 🔴. 결과 sitemap 349 → 109
+  (홈 1·도구 85·가이드 10·카테고리 10·문서 3). 검증: 정합 OK, 워커 20/20·앱 플랫폼 10/10·UI 선호 12/12, qa-runner 10/10, qa-deep 325/325, 로컬 wrangler dev·라이브 헤드리스 ko-KR
+  (loan-calc 계산·length-conv 변환 동작, noindex 메타·AdSense 부재·사이트맵 부재, 홈·가이드·카테고리 콘솔 에러 0, 영어 유지, ads.txt 200). 팩토리 afbf5745, hub dce05dfe.
+  tier 수동 조정은 JSON 에 `"override": true` 로 남기면 --classify 가 보존한다.
+
 ## 7. 연관 문서
 - [팩토리 파이프라인](../../docs/PIPELINE.md)
 - [서비스 레지스트리](../../ontology/services.yaml)
