@@ -1,0 +1,4271 @@
+{
+ "generated_by": "node factory/gen-index-tiers.js --classify",
+ "criteria": {
+  "MIN_INPUTS": 3,
+  "MIN_LOGIC": 40,
+  "KEEP_MAX": 85,
+  "rules": "K1 guide-linked → N1 answer-box class → N2 same-formula family non-representative → N3 thin (tokens < MIN_LOGIC, or inputs < MIN_INPUTS and tokens < 2×MIN_LOGIC) → K2 ranked by score up to KEEP_MAX (rest N4). score = arithmetic/branch tokens + 4×inputs + unique-sentence words/100. See header of factory/gen-index-tiers.js.",
+  "ANSWER_BOX": {
+   "unit conversion": "length-conv weight-conv temp-conv volume-conv area-conv pressure-conv data-size-conv angle-conv height-conv torque-conv cooking-conv px-to-rem military-time-conv unix-timestamp-conv number-base-conv exchange-rate-conv",
+   "clock/timer": "calculator alarm-clock countdown-timer stopwatch pomodoro-timer metronome world-clock time-zone-conv online-notepad click-speed-test typing-test",
+   "random pick": "coin-flipper dice-roller random-number-gen name-picker wheel-spinner random-team-gen random-word-gen secret-santa-generator lorem-ipsum-gen uuid-gen password-gen",
+   "text transform": "reverse-text upside-down-text case-converter sort-lines remove-duplicate-lines remove-line-breaks whitespace-remover char-count word-counter words-to-pages number-to-words morse-code-translator binary-text-conv base64-conv url-encoder html-entity-conv slug-generator ascii-table text-to-speech find-replace-text",
+   "one-formula math": "square-root-calc prime-checker circle-calc pythagorean-calc slope-calc gcf-lcm-calc average-calc percent-error-calc fraction-calc ratio-calc roman-numeral-conv leap-year-checker",
+   "simple date/novelty": "age-calc dday-calc date-add-calc date-diff-calc week-number-check age-gap-calc dog-age-calc cat-age-calc zodiac-sign-calc chinese-zodiac-calc moon-phase-calc color-picker qr-gen tip-calc gratuity-calc steps-to-miles-calc"
+  },
+  "FAMILIES": {
+   "percent variants": "percent-calc marks-percentage-calc cgpa-to-percentage salary-hike-calc",
+   "price change": "discount-calc markup-calc margin-calc commission-calc",
+   "area x depth materials": "concrete-calc gravel-calc mulch-calc sand-calc topsoil-calc asphalt-calc",
+   "area x coverage materials": "tile-calc laminate-flooring-calc carpet-calc paver-calc sod-calc wallpaper-calc paint-calc drywall-calc siding-calc shingle-calc insulation-calc grass-seed-calc grout-calc square-footage-calc",
+   "pregnancy dates": "pregnancy-due-date-calc pregnancy-week-calc ovulation-calc period-calc",
+   "body composition": "body-fat-calc army-body-fat-calc lbm-calc bsa-calc",
+   "energy needs": "calorie-deficit-calc tdee-calc bmr-calc calorie-calc",
+   "simple interest/deposit": "compound-interest-calc interest-calc cd-calc rd-calc sip-calc dca-calc investment-goal-calc",
+   "grades": "gpa-calc grade-calc final-grade-calc",
+   "average cost": "crypto-average-calc stock-average-calc stock-profit-calc",
+   "car loan": "loan-calc car-payment-calc car-lease-calc",
+   "affordability": "home-affordability-calc rent-affordability-calc car-affordability-calc",
+   "json convert": "json-formatter json-to-csv json-to-yaml csv-to-json",
+   "text compare": "text-diff list-compare json-diff csv-diff csv-dedupe",
+   "image": "image-resizer image-compressor",
+   "css visual": "box-shadow-generator gradient-generator",
+   "color": "color-conv color-contrast-checker",
+   "blood tests": "a1c-calc blood-sugar-conv cholesterol-ratio-calc blood-pressure-checker",
+   "fire variants": "fire-calc coast-fire-calc barista-fire-calc",
+   "weather index": "heat-index-calc wind-chill-calc"
+  }
+ },
+ "traffic_data": "none in repo (no Search Console / analytics export) — not used",
+ "counts": {
+  "keep": 85,
+  "noindex": 240
+ },
+ "tools": [
+  {
+   "slug": "a1c-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"blood tests\", represented by blood-sugar-conv",
+   "metrics": {
+    "cat": "health",
+    "inputs": 3,
+    "logic": 38,
+    "uniqueWords": 1042,
+    "uniqueShare": 1,
+    "score": 60
+   }
+  },
+  {
+   "slug": "ad-copy-limit-check",
+   "tier": "keep",
+   "reason": "K2 7 inputs, 425 arithmetic/branch tokens, score 468",
+   "metrics": {
+    "cat": "text",
+    "inputs": 7,
+    "logic": 425,
+    "uniqueWords": 1530,
+    "uniqueShare": 1,
+    "score": 468
+   }
+  },
+  {
+   "slug": "age-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 2,
+    "logic": 40,
+    "uniqueWords": 846,
+    "uniqueShare": 1,
+    "score": 56
+   }
+  },
+  {
+   "slug": "age-gap-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 2,
+    "logic": 27,
+    "uniqueWords": 1322,
+    "uniqueShare": 0.98,
+    "score": 48
+   }
+  },
+  {
+   "slug": "alarm-clock",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (clock/timer): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 3,
+    "logic": 82,
+    "uniqueWords": 1198,
+    "uniqueShare": 1,
+    "score": 106
+   }
+  },
+  {
+   "slug": "angle-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "units",
+    "inputs": 8,
+    "logic": 130,
+    "uniqueWords": 1145,
+    "uniqueShare": 1,
+    "score": 173
+   }
+  },
+  {
+   "slug": "annuity-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 87; 5 inputs, 54 tokens)",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 54,
+    "uniqueWords": 1294,
+    "uniqueShare": 0.99,
+    "score": 87
+   }
+  },
+  {
+   "slug": "apr-apy-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide apr-vs-apy-credit-card-interest",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 4,
+    "logic": 36,
+    "uniqueWords": 1153,
+    "uniqueShare": 1,
+    "score": 64
+   }
+  },
+  {
+   "slug": "apy-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide apr-vs-apy-credit-card-interest",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 6,
+    "logic": 91,
+    "uniqueWords": 1362,
+    "uniqueShare": 0.98,
+    "score": 129
+   }
+  },
+  {
+   "slug": "area-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "units",
+    "inputs": 3,
+    "logic": 47,
+    "uniqueWords": 1264,
+    "uniqueShare": 0.89,
+    "score": 72
+   }
+  },
+  {
+   "slug": "army-body-fat-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"body composition\", represented by body-fat-calc",
+   "metrics": {
+    "cat": "health",
+    "inputs": 7,
+    "logic": 36,
+    "uniqueWords": 1364,
+    "uniqueShare": 1,
+    "score": 78
+   }
+  },
+  {
+   "slug": "ascii-table",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 1,
+    "logic": 46,
+    "uniqueWords": 1135,
+    "uniqueShare": 1,
+    "score": 61
+   }
+  },
+  {
+   "slug": "aspect-ratio-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 70; 4 inputs, 43 tokens)",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 4,
+    "logic": 43,
+    "uniqueWords": 1075,
+    "uniqueShare": 1,
+    "score": 70
+   }
+  },
+  {
+   "slug": "asphalt-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x depth materials\", represented by concrete-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 8,
+    "logic": 56,
+    "uniqueWords": 1355,
+    "uniqueShare": 1,
+    "score": 102
+   }
+  },
+  {
+   "slug": "attendance-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 82; 5 inputs, 50 tokens)",
+   "metrics": {
+    "cat": "science",
+    "inputs": 5,
+    "logic": 50,
+    "uniqueWords": 1162,
+    "uniqueShare": 1,
+    "score": 82
+   }
+  },
+  {
+   "slug": "average-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (one-formula math): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 1,
+    "logic": 71,
+    "uniqueWords": 1489,
+    "uniqueShare": 0.97,
+    "score": 90
+   }
+  },
+  {
+   "slug": "barista-fire-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"fire variants\", represented by coast-fire-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 8,
+    "logic": 109,
+    "uniqueWords": 1683,
+    "uniqueShare": 0.91,
+    "score": 158
+   }
+  },
+  {
+   "slug": "base64-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 7,
+    "logic": 94,
+    "uniqueWords": 1497,
+    "uniqueShare": 1,
+    "score": 137
+   }
+  },
+  {
+   "slug": "binary-text-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 2,
+    "logic": 70,
+    "uniqueWords": 1221,
+    "uniqueShare": 1,
+    "score": 90
+   }
+  },
+  {
+   "slug": "biweekly-mortgage-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide fixed-rate-loan-term-extra-payments",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 3,
+    "logic": 36,
+    "uniqueWords": 1418,
+    "uniqueShare": 1,
+    "score": 62
+   }
+  },
+  {
+   "slug": "blood-alcohol-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 121; 6 inputs, 80 tokens)",
+   "metrics": {
+    "cat": "health",
+    "inputs": 6,
+    "logic": 80,
+    "uniqueWords": 1739,
+    "uniqueShare": 1,
+    "score": 121
+   }
+  },
+  {
+   "slug": "blood-pressure-checker",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"blood tests\", represented by blood-sugar-conv",
+   "metrics": {
+    "cat": "health",
+    "inputs": 2,
+    "logic": 24,
+    "uniqueWords": 1552,
+    "uniqueShare": 0.99,
+    "score": 48
+   }
+  },
+  {
+   "slug": "blood-sugar-conv",
+   "tier": "noindex",
+   "reason": "N3 thin: 2 inputs, 56 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "health",
+    "inputs": 2,
+    "logic": 56,
+    "uniqueWords": 1418,
+    "uniqueShare": 0.98,
+    "score": 78
+   }
+  },
+  {
+   "slug": "bmi-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide bmi-vs-waist-to-height-ratio",
+   "metrics": {
+    "cat": "health",
+    "inputs": 4,
+    "logic": 181,
+    "uniqueWords": 1412,
+    "uniqueShare": 0.98,
+    "score": 211
+   }
+  },
+  {
+   "slug": "bmr-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"energy needs\", represented by calorie-deficit-calc",
+   "metrics": {
+    "cat": "health",
+    "inputs": 7,
+    "logic": 58,
+    "uniqueWords": 1555,
+    "uniqueShare": 0.96,
+    "score": 102
+   }
+  },
+  {
+   "slug": "board-foot-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 7 inputs, 29 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "life",
+    "inputs": 7,
+    "logic": 29,
+    "uniqueWords": 1186,
+    "uniqueShare": 1,
+    "score": 69
+   }
+  },
+  {
+   "slug": "body-fat-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide bmi-vs-waist-to-height-ratio",
+   "metrics": {
+    "cat": "health",
+    "inputs": 7,
+    "logic": 60,
+    "uniqueWords": 1307,
+    "uniqueShare": 0.97,
+    "score": 101
+   }
+  },
+  {
+   "slug": "box-shadow-generator",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"css visual\", represented by gradient-generator",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 2,
+    "logic": 67,
+    "uniqueWords": 1406,
+    "uniqueShare": 0.98,
+    "score": 89
+   }
+  },
+  {
+   "slug": "bra-size-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 3 inputs, 27 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "life",
+    "inputs": 3,
+    "logic": 27,
+    "uniqueWords": 1215,
+    "uniqueShare": 1,
+    "score": 51
+   }
+  },
+  {
+   "slug": "break-even-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 5 inputs, 27 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 27,
+    "uniqueWords": 1241,
+    "uniqueShare": 0.98,
+    "score": 59
+   }
+  },
+  {
+   "slug": "brick-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 93; 9 inputs, 43 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 9,
+    "logic": 43,
+    "uniqueWords": 1350,
+    "uniqueShare": 0.98,
+    "score": 93
+   }
+  },
+  {
+   "slug": "bsa-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"body composition\", represented by body-fat-calc",
+   "metrics": {
+    "cat": "health",
+    "inputs": 5,
+    "logic": 35,
+    "uniqueWords": 978,
+    "uniqueShare": 1,
+    "score": 65
+   }
+  },
+  {
+   "slug": "btu-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide sizing-a-room-air-conditioner",
+   "metrics": {
+    "cat": "life",
+    "inputs": 8,
+    "logic": 46,
+    "uniqueWords": 1396,
+    "uniqueShare": 0.98,
+    "score": 92
+   }
+  },
+  {
+   "slug": "budget-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 81; 6 inputs, 44 tokens)",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 6,
+    "logic": 44,
+    "uniqueWords": 1348,
+    "uniqueShare": 1,
+    "score": 81
+   }
+  },
+  {
+   "slug": "caffeine-calc",
+   "tier": "keep",
+   "reason": "K2 14 inputs, 60 arithmetic/branch tokens, score 130",
+   "metrics": {
+    "cat": "health",
+    "inputs": 14,
+    "logic": 60,
+    "uniqueWords": 1366,
+    "uniqueShare": 1,
+    "score": 130
+   }
+  },
+  {
+   "slug": "cagr-calc",
+   "tier": "keep",
+   "reason": "K2 8 inputs, 107 arithmetic/branch tokens, score 155",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 8,
+    "logic": 107,
+    "uniqueWords": 1641,
+    "uniqueShare": 0.93,
+    "score": 155
+   }
+  },
+  {
+   "slug": "calculator",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (clock/timer): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 0,
+    "logic": 198,
+    "uniqueWords": 1448,
+    "uniqueShare": 1,
+    "score": 212
+   }
+  },
+  {
+   "slug": "calorie-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"energy needs\", represented by calorie-deficit-calc",
+   "metrics": {
+    "cat": "health",
+    "inputs": 5,
+    "logic": 55,
+    "uniqueWords": 1319,
+    "uniqueShare": 0.98,
+    "score": 88
+   }
+  },
+  {
+   "slug": "calorie-deficit-calc",
+   "tier": "keep",
+   "reason": "K2 15 inputs, 89 arithmetic/branch tokens, score 163",
+   "metrics": {
+    "cat": "health",
+    "inputs": 15,
+    "logic": 89,
+    "uniqueWords": 1369,
+    "uniqueShare": 0.95,
+    "score": 163
+   }
+  },
+  {
+   "slug": "cap-rate-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 89; 6 inputs, 49 tokens)",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 6,
+    "logic": 49,
+    "uniqueWords": 1628,
+    "uniqueShare": 0.99,
+    "score": 89
+   }
+  },
+  {
+   "slug": "car-affordability-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 87; 6 inputs, 50 tokens)",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 6,
+    "logic": 50,
+    "uniqueWords": 1292,
+    "uniqueShare": 1,
+    "score": 87
+   }
+  },
+  {
+   "slug": "car-lease-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"car loan\", represented by loan-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 8,
+    "logic": 36,
+    "uniqueWords": 1225,
+    "uniqueShare": 1,
+    "score": 80
+   }
+  },
+  {
+   "slug": "car-payment-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"car loan\", represented by loan-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 8,
+    "logic": 26,
+    "uniqueWords": 651,
+    "uniqueShare": 1,
+    "score": 65
+   }
+  },
+  {
+   "slug": "carpet-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x coverage materials\", represented by wallpaper-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 7,
+    "logic": 43,
+    "uniqueWords": 1547,
+    "uniqueShare": 1,
+    "score": 86
+   }
+  },
+  {
+   "slug": "case-converter",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 2,
+    "logic": 54,
+    "uniqueWords": 1363,
+    "uniqueShare": 0.96,
+    "score": 76
+   }
+  },
+  {
+   "slug": "cat-age-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "health",
+    "inputs": 5,
+    "logic": 78,
+    "uniqueWords": 1229,
+    "uniqueShare": 0.96,
+    "score": 110
+   }
+  },
+  {
+   "slug": "cd-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"simple interest/deposit\", represented by compound-interest-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 36,
+    "uniqueWords": 1359,
+    "uniqueShare": 1,
+    "score": 70
+   }
+  },
+  {
+   "slug": "cgpa-to-percentage",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"percent variants\", represented by percent-calc",
+   "metrics": {
+    "cat": "science",
+    "inputs": 4,
+    "logic": 37,
+    "uniqueWords": 1128,
+    "uniqueShare": 1,
+    "score": 64
+   }
+  },
+  {
+   "slug": "char-count",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 3,
+    "logic": 42,
+    "uniqueWords": 1384,
+    "uniqueShare": 0.98,
+    "score": 68
+   }
+  },
+  {
+   "slug": "child-height-predictor",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 114; 10 inputs, 59 tokens)",
+   "metrics": {
+    "cat": "health",
+    "inputs": 10,
+    "logic": 59,
+    "uniqueWords": 1523,
+    "uniqueShare": 1,
+    "score": 114
+   }
+  },
+  {
+   "slug": "chinese-zodiac-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 3,
+    "logic": 37,
+    "uniqueWords": 1272,
+    "uniqueShare": 0.98,
+    "score": 62
+   }
+  },
+  {
+   "slug": "chmod-calc",
+   "tier": "keep",
+   "reason": "K2 16 inputs, 111 arithmetic/branch tokens, score 188",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 16,
+    "logic": 111,
+    "uniqueWords": 1323,
+    "uniqueShare": 1,
+    "score": 188
+   }
+  },
+  {
+   "slug": "cholesterol-ratio-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"blood tests\", represented by blood-sugar-conv",
+   "metrics": {
+    "cat": "health",
+    "inputs": 5,
+    "logic": 44,
+    "uniqueWords": 1272,
+    "uniqueShare": 1,
+    "score": 77
+   }
+  },
+  {
+   "slug": "circle-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (one-formula math): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 6,
+    "logic": 59,
+    "uniqueWords": 1028,
+    "uniqueShare": 0.98,
+    "score": 93
+   }
+  },
+  {
+   "slug": "click-speed-test",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (clock/timer): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "life",
+    "inputs": 0,
+    "logic": 72,
+    "uniqueWords": 1472,
+    "uniqueShare": 1,
+    "score": 87
+   }
+  },
+  {
+   "slug": "coast-fire-calc",
+   "tier": "keep",
+   "reason": "K2 10 inputs, 109 arithmetic/branch tokens, score 166",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 10,
+    "logic": 109,
+    "uniqueWords": 1706,
+    "uniqueShare": 0.88,
+    "score": 166
+   }
+  },
+  {
+   "slug": "coffee-ratio-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 6 inputs, 27 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "life",
+    "inputs": 6,
+    "logic": 27,
+    "uniqueWords": 1280,
+    "uniqueShare": 0.98,
+    "score": 64
+   }
+  },
+  {
+   "slug": "coin-flipper",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (random pick): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "random",
+    "inputs": 5,
+    "logic": 97,
+    "uniqueWords": 1286,
+    "uniqueShare": 1,
+    "score": 130
+   }
+  },
+  {
+   "slug": "color-contrast-checker",
+   "tier": "keep",
+   "reason": "K2 5 inputs, 137 arithmetic/branch tokens, score 171",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 5,
+    "logic": 137,
+    "uniqueWords": 1354,
+    "uniqueShare": 1,
+    "score": 171
+   }
+  },
+  {
+   "slug": "color-conv",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"color\", represented by color-contrast-checker",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 5,
+    "logic": 96,
+    "uniqueWords": 744,
+    "uniqueShare": 1,
+    "score": 123
+   }
+  },
+  {
+   "slug": "color-picker",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 4,
+    "logic": 191,
+    "uniqueWords": 1985,
+    "uniqueShare": 1,
+    "score": 227
+   }
+  },
+  {
+   "slug": "commission-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"price change\", represented by discount-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 8,
+    "logic": 47,
+    "uniqueWords": 1362,
+    "uniqueShare": 1,
+    "score": 93
+   }
+  },
+  {
+   "slug": "commute-cost-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 110; 12 inputs, 47 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 12,
+    "logic": 47,
+    "uniqueWords": 1466,
+    "uniqueShare": 1,
+    "score": 110
+   }
+  },
+  {
+   "slug": "compound-interest-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide compound-interest-inflation-fees",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 6,
+    "logic": 93,
+    "uniqueWords": 1567,
+    "uniqueShare": 0.96,
+    "score": 133
+   }
+  },
+  {
+   "slug": "concrete-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 106; 11 inputs, 48 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 11,
+    "logic": 48,
+    "uniqueWords": 1350,
+    "uniqueShare": 1,
+    "score": 106
+   }
+  },
+  {
+   "slug": "cooking-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "life",
+    "inputs": 4,
+    "logic": 39,
+    "uniqueWords": 894,
+    "uniqueShare": 1,
+    "score": 64
+   }
+  },
+  {
+   "slug": "countdown-timer",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (clock/timer): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 3,
+    "logic": 91,
+    "uniqueWords": 1283,
+    "uniqueShare": 1,
+    "score": 116
+   }
+  },
+  {
+   "slug": "credit-card-interest-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide apr-vs-apy-credit-card-interest",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 7,
+    "logic": 107,
+    "uniqueWords": 1387,
+    "uniqueShare": 0.98,
+    "score": 149
+   }
+  },
+  {
+   "slug": "cron-parser",
+   "tier": "keep",
+   "reason": "K2 2 inputs, 141 arithmetic/branch tokens, score 161",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 2,
+    "logic": 141,
+    "uniqueWords": 1192,
+    "uniqueShare": 1,
+    "score": 161
+   }
+  },
+  {
+   "slug": "crypto-average-calc",
+   "tier": "keep",
+   "reason": "K2 9 inputs, 117 arithmetic/branch tokens, score 168",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 9,
+    "logic": 117,
+    "uniqueWords": 1549,
+    "uniqueShare": 0.92,
+    "score": 168
+   }
+  },
+  {
+   "slug": "css-minifier",
+   "tier": "keep",
+   "reason": "K2 6 inputs, 173 arithmetic/branch tokens, score 210",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 6,
+    "logic": 173,
+    "uniqueWords": 1267,
+    "uniqueShare": 1,
+    "score": 210
+   }
+  },
+  {
+   "slug": "csv-dedupe",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"text compare\", represented by csv-diff",
+   "metrics": {
+    "cat": "text",
+    "inputs": 16,
+    "logic": 235,
+    "uniqueWords": 1968,
+    "uniqueShare": 0.97,
+    "score": 319
+   }
+  },
+  {
+   "slug": "csv-diff",
+   "tier": "keep",
+   "reason": "K2 20 inputs, 356 arithmetic/branch tokens, score 446",
+   "metrics": {
+    "cat": "text",
+    "inputs": 20,
+    "logic": 356,
+    "uniqueWords": 1047,
+    "uniqueShare": 0.97,
+    "score": 446
+   }
+  },
+  {
+   "slug": "csv-to-json",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"json convert\", represented by json-formatter",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 7,
+    "logic": 158,
+    "uniqueWords": 1593,
+    "uniqueShare": 1,
+    "score": 202
+   }
+  },
+  {
+   "slug": "data-size-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "units",
+    "inputs": 3,
+    "logic": 46,
+    "uniqueWords": 1415,
+    "uniqueShare": 0.92,
+    "score": 72
+   }
+  },
+  {
+   "slug": "date-add-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 4,
+    "logic": 87,
+    "uniqueWords": 1014,
+    "uniqueShare": 0.98,
+    "score": 113
+   }
+  },
+  {
+   "slug": "date-diff-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 3,
+    "logic": 82,
+    "uniqueWords": 1245,
+    "uniqueShare": 1,
+    "score": 106
+   }
+  },
+  {
+   "slug": "dca-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"simple interest/deposit\", represented by compound-interest-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 6,
+    "logic": 71,
+    "uniqueWords": 1582,
+    "uniqueShare": 0.9,
+    "score": 111
+   }
+  },
+  {
+   "slug": "dday-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 2,
+    "logic": 58,
+    "uniqueWords": 856,
+    "uniqueShare": 1,
+    "score": 75
+   }
+  },
+  {
+   "slug": "debt-payoff-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide apr-vs-apy-credit-card-interest",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 16,
+    "logic": 44,
+    "uniqueWords": 1264,
+    "uniqueShare": 1,
+    "score": 121
+   }
+  },
+  {
+   "slug": "decking-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 95; 9 inputs, 46 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 9,
+    "logic": 46,
+    "uniqueWords": 1347,
+    "uniqueShare": 1,
+    "score": 95
+   }
+  },
+  {
+   "slug": "density-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 98; 7 inputs, 58 tokens)",
+   "metrics": {
+    "cat": "science",
+    "inputs": 7,
+    "logic": 58,
+    "uniqueWords": 1222,
+    "uniqueShare": 1,
+    "score": 98
+   }
+  },
+  {
+   "slug": "dice-roller",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (random pick): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "random",
+    "inputs": 4,
+    "logic": 81,
+    "uniqueWords": 1317,
+    "uniqueShare": 1,
+    "score": 110
+   }
+  },
+  {
+   "slug": "dilution-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 83; 7 inputs, 41 tokens)",
+   "metrics": {
+    "cat": "science",
+    "inputs": 7,
+    "logic": 41,
+    "uniqueWords": 1376,
+    "uniqueShare": 1,
+    "score": 83
+   }
+  },
+  {
+   "slug": "discount-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide unit-price-and-discount-stacking",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 4,
+    "logic": 32,
+    "uniqueWords": 1172,
+    "uniqueShare": 1,
+    "score": 60
+   }
+  },
+  {
+   "slug": "dividend-calc",
+   "tier": "keep",
+   "reason": "K2 10 inputs, 151 arithmetic/branch tokens, score 200",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 10,
+    "logic": 151,
+    "uniqueWords": 876,
+    "uniqueShare": 0.94,
+    "score": 200
+   }
+  },
+  {
+   "slug": "dog-age-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "life",
+    "inputs": 3,
+    "logic": 28,
+    "uniqueWords": 860,
+    "uniqueShare": 1,
+    "score": 49
+   }
+  },
+  {
+   "slug": "download-time-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 83; 5 inputs, 51 tokens)",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 5,
+    "logic": 51,
+    "uniqueWords": 1210,
+    "uniqueShare": 1,
+    "score": 83
+   }
+  },
+  {
+   "slug": "drywall-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x coverage materials\", represented by wallpaper-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 9,
+    "logic": 65,
+    "uniqueWords": 1479,
+    "uniqueShare": 0.98,
+    "score": 116
+   }
+  },
+  {
+   "slug": "electricity-cost-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide ev-charging-vs-gasoline-cost, sizing-a-room-air-conditioner",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 30,
+    "uniqueWords": 1368,
+    "uniqueShare": 0.98,
+    "score": 64
+   }
+  },
+  {
+   "slug": "emergency-fund-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 5 inputs, 37 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 37,
+    "uniqueWords": 1333,
+    "uniqueShare": 1,
+    "score": 70
+   }
+  },
+  {
+   "slug": "energy-conv",
+   "tier": "keep",
+   "reason": "K1 linked from guide sizing-a-room-air-conditioner",
+   "metrics": {
+    "cat": "units",
+    "inputs": 3,
+    "logic": 48,
+    "uniqueWords": 1238,
+    "uniqueShare": 0.97,
+    "score": 72
+   }
+  },
+  {
+   "slug": "ev-charging-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide ev-charging-vs-gasoline-cost",
+   "metrics": {
+    "cat": "life",
+    "inputs": 8,
+    "logic": 39,
+    "uniqueWords": 1365,
+    "uniqueShare": 0.98,
+    "score": 85
+   }
+  },
+  {
+   "slug": "exchange-rate-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 3,
+    "logic": 138,
+    "uniqueWords": 1266,
+    "uniqueShare": 0.98,
+    "score": 163
+   }
+  },
+  {
+   "slug": "fence-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 117; 12 inputs, 53 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 12,
+    "logic": 53,
+    "uniqueWords": 1554,
+    "uniqueShare": 1,
+    "score": 117
+   }
+  },
+  {
+   "slug": "final-grade-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"grades\", represented by gpa-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 3,
+    "logic": 43,
+    "uniqueWords": 1530,
+    "uniqueShare": 0.99,
+    "score": 70
+   }
+  },
+  {
+   "slug": "find-replace-text",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 6,
+    "logic": 68,
+    "uniqueWords": 1022,
+    "uniqueShare": 0.98,
+    "score": 102
+   }
+  },
+  {
+   "slug": "fire-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"fire variants\", represented by coast-fire-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 6,
+    "logic": 116,
+    "uniqueWords": 1883,
+    "uniqueShare": 0.93,
+    "score": 159
+   }
+  },
+  {
+   "slug": "fraction-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (one-formula math): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 9,
+    "logic": 155,
+    "uniqueWords": 1130,
+    "uniqueShare": 1,
+    "score": 202
+   }
+  },
+  {
+   "slug": "freelance-rate-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 6 inputs, 29 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 6,
+    "logic": 29,
+    "uniqueWords": 1197,
+    "uniqueShare": 1,
+    "score": 65
+   }
+  },
+  {
+   "slug": "fuel-cost-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide ev-charging-vs-gasoline-cost",
+   "metrics": {
+    "cat": "life",
+    "inputs": 9,
+    "logic": 184,
+    "uniqueWords": 1524,
+    "uniqueShare": 0.99,
+    "score": 235
+   }
+  },
+  {
+   "slug": "fuel-economy-conv",
+   "tier": "keep",
+   "reason": "K1 linked from guide ev-charging-vs-gasoline-cost",
+   "metrics": {
+    "cat": "units",
+    "inputs": 4,
+    "logic": 63,
+    "uniqueWords": 1275,
+    "uniqueShare": 1,
+    "score": 92
+   }
+  },
+  {
+   "slug": "furnace-size-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 6 inputs, 30 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "life",
+    "inputs": 6,
+    "logic": 30,
+    "uniqueWords": 1576,
+    "uniqueShare": 0.98,
+    "score": 70
+   }
+  },
+  {
+   "slug": "gcf-lcm-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (one-formula math): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 1,
+    "logic": 65,
+    "uniqueWords": 1512,
+    "uniqueShare": 0.97,
+    "score": 84
+   }
+  },
+  {
+   "slug": "generator-size-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 13 inputs, 37 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "life",
+    "inputs": 13,
+    "logic": 37,
+    "uniqueWords": 1388,
+    "uniqueShare": 1,
+    "score": 103
+   }
+  },
+  {
+   "slug": "gold-purity-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 5 inputs, 34 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 34,
+    "uniqueWords": 1258,
+    "uniqueShare": 0.98,
+    "score": 67
+   }
+  },
+  {
+   "slug": "golf-handicap-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 24 inputs, 37 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "life",
+    "inputs": 24,
+    "logic": 37,
+    "uniqueWords": 1321,
+    "uniqueShare": 1,
+    "score": 146
+   }
+  },
+  {
+   "slug": "gpa-calc",
+   "tier": "keep",
+   "reason": "K2 4 inputs, 128 arithmetic/branch tokens, score 155",
+   "metrics": {
+    "cat": "life",
+    "inputs": 4,
+    "logic": 128,
+    "uniqueWords": 1149,
+    "uniqueShare": 0.98,
+    "score": 155
+   }
+  },
+  {
+   "slug": "grade-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"grades\", represented by gpa-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 1,
+    "logic": 104,
+    "uniqueWords": 1592,
+    "uniqueShare": 1,
+    "score": 124
+   }
+  },
+  {
+   "slug": "gradient-generator",
+   "tier": "keep",
+   "reason": "K2 3 inputs, 103 arithmetic/branch tokens, score 128",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 3,
+    "logic": 103,
+    "uniqueWords": 1348,
+    "uniqueShare": 0.98,
+    "score": 128
+   }
+  },
+  {
+   "slug": "grass-seed-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x coverage materials\", represented by wallpaper-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 8,
+    "logic": 37,
+    "uniqueWords": 1249,
+    "uniqueShare": 1,
+    "score": 81
+   }
+  },
+  {
+   "slug": "gratuity-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 3,
+    "logic": 31,
+    "uniqueWords": 1269,
+    "uniqueShare": 1,
+    "score": 56
+   }
+  },
+  {
+   "slug": "gravel-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x depth materials\", represented by concrete-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 6,
+    "logic": 46,
+    "uniqueWords": 1132,
+    "uniqueShare": 1,
+    "score": 81
+   }
+  },
+  {
+   "slug": "grout-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x coverage materials\", represented by wallpaper-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 7,
+    "logic": 37,
+    "uniqueWords": 1454,
+    "uniqueShare": 1,
+    "score": 80
+   }
+  },
+  {
+   "slug": "gst-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide unit-price-and-discount-stacking",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 50,
+    "uniqueWords": 1578,
+    "uniqueShare": 0.97,
+    "score": 86
+   }
+  },
+  {
+   "slug": "half-life-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 81; 6 inputs, 46 tokens)",
+   "metrics": {
+    "cat": "science",
+    "inputs": 6,
+    "logic": 46,
+    "uniqueWords": 1143,
+    "uniqueShare": 0.98,
+    "score": 81
+   }
+  },
+  {
+   "slug": "hash-gen",
+   "tier": "keep",
+   "reason": "K2 3 inputs, 112 arithmetic/branch tokens, score 138",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 3,
+    "logic": 112,
+    "uniqueWords": 1366,
+    "uniqueShare": 1,
+    "score": 138
+   }
+  },
+  {
+   "slug": "heart-rate-zone-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 5 inputs, 28 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "health",
+    "inputs": 5,
+    "logic": 28,
+    "uniqueWords": 715,
+    "uniqueShare": 1,
+    "score": 55
+   }
+  },
+  {
+   "slug": "heat-index-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 92; 3 inputs, 68 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 3,
+    "logic": 68,
+    "uniqueWords": 1239,
+    "uniqueShare": 1,
+    "score": 92
+   }
+  },
+  {
+   "slug": "height-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "units",
+    "inputs": 5,
+    "logic": 102,
+    "uniqueWords": 1282,
+    "uniqueShare": 1,
+    "score": 135
+   }
+  },
+  {
+   "slug": "home-affordability-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"affordability\", represented by car-affordability-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 7,
+    "logic": 33,
+    "uniqueWords": 1198,
+    "uniqueShare": 1,
+    "score": 73
+   }
+  },
+  {
+   "slug": "hourly-to-salary-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide hourly-pay-salary-overtime-us",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 79,
+    "uniqueWords": 1255,
+    "uniqueShare": 0.98,
+    "score": 112
+   }
+  },
+  {
+   "slug": "hours-calc",
+   "tier": "keep",
+   "reason": "K2 7 inputs, 117 arithmetic/branch tokens, score 160",
+   "metrics": {
+    "cat": "date",
+    "inputs": 7,
+    "logic": 117,
+    "uniqueWords": 1466,
+    "uniqueShare": 0.96,
+    "score": 160
+   }
+  },
+  {
+   "slug": "hra-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 5 inputs, 31 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 31,
+    "uniqueWords": 1262,
+    "uniqueShare": 1,
+    "score": 64
+   }
+  },
+  {
+   "slug": "html-entity-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 4,
+    "logic": 55,
+    "uniqueWords": 1464,
+    "uniqueShare": 1,
+    "score": 86
+   }
+  },
+  {
+   "slug": "http-status-lookup",
+   "tier": "noindex",
+   "reason": "N3 thin: 1 inputs, 29 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 1,
+    "logic": 29,
+    "uniqueWords": 1296,
+    "uniqueShare": 1,
+    "score": 46
+   }
+  },
+  {
+   "slug": "ideal-weight-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide bmi-vs-waist-to-height-ratio",
+   "metrics": {
+    "cat": "health",
+    "inputs": 11,
+    "logic": 83,
+    "uniqueWords": 1129,
+    "uniqueShare": 0.98,
+    "score": 138
+   }
+  },
+  {
+   "slug": "image-compressor",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"image\", represented by image-resizer",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 5,
+    "logic": 96,
+    "uniqueWords": 1796,
+    "uniqueShare": 1,
+    "score": 134
+   }
+  },
+  {
+   "slug": "image-resizer",
+   "tier": "keep",
+   "reason": "K2 7 inputs, 117 arithmetic/branch tokens, score 163",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 7,
+    "logic": 117,
+    "uniqueWords": 1780,
+    "uniqueShare": 1,
+    "score": 163
+   }
+  },
+  {
+   "slug": "inflation-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide compound-interest-inflation-fees",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 3,
+    "logic": 26,
+    "uniqueWords": 1158,
+    "uniqueShare": 0.98,
+    "score": 50
+   }
+  },
+  {
+   "slug": "insulation-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x coverage materials\", represented by wallpaper-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 9,
+    "logic": 48,
+    "uniqueWords": 1483,
+    "uniqueShare": 1,
+    "score": 99
+   }
+  },
+  {
+   "slug": "interest-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"simple interest/deposit\", represented by compound-interest-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 9,
+    "logic": 74,
+    "uniqueWords": 1110,
+    "uniqueShare": 1,
+    "score": 121
+   }
+  },
+  {
+   "slug": "inventory-turnover",
+   "tier": "keep",
+   "reason": "K2 20 inputs, 499 arithmetic/branch tokens, score 600",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 20,
+    "logic": 499,
+    "uniqueWords": 2076,
+    "uniqueShare": 1,
+    "score": 600
+   }
+  },
+  {
+   "slug": "investment-goal-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"simple interest/deposit\", represented by compound-interest-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 72,
+    "uniqueWords": 1893,
+    "uniqueShare": 0.92,
+    "score": 111
+   }
+  },
+  {
+   "slug": "json-diff",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"text compare\", represented by csv-diff",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 3,
+    "logic": 41,
+    "uniqueWords": 1074,
+    "uniqueShare": 1,
+    "score": 64
+   }
+  },
+  {
+   "slug": "json-formatter",
+   "tier": "keep",
+   "reason": "K2 4 inputs, 218 arithmetic/branch tokens, score 246",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 4,
+    "logic": 218,
+    "uniqueWords": 1210,
+    "uniqueShare": 0.98,
+    "score": 246
+   }
+  },
+  {
+   "slug": "json-to-csv",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"json convert\", represented by json-formatter",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 4,
+    "logic": 87,
+    "uniqueWords": 1223,
+    "uniqueShare": 0.98,
+    "score": 115
+   }
+  },
+  {
+   "slug": "json-to-yaml",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"json convert\", represented by json-formatter",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 3,
+    "logic": 105,
+    "uniqueWords": 1392,
+    "uniqueShare": 0.97,
+    "score": 131
+   }
+  },
+  {
+   "slug": "jwt-decoder",
+   "tier": "noindex",
+   "reason": "N3 thin: 1 inputs, 32 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 1,
+    "logic": 32,
+    "uniqueWords": 735,
+    "uniqueShare": 0.97,
+    "score": 43
+   }
+  },
+  {
+   "slug": "kinetic-energy-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 111; 7 inputs, 70 tokens)",
+   "metrics": {
+    "cat": "science",
+    "inputs": 7,
+    "logic": 70,
+    "uniqueWords": 1333,
+    "uniqueShare": 1,
+    "score": 111
+   }
+  },
+  {
+   "slug": "laminate-flooring-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x coverage materials\", represented by wallpaper-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 9,
+    "logic": 40,
+    "uniqueWords": 1214,
+    "uniqueShare": 1,
+    "score": 88
+   }
+  },
+  {
+   "slug": "landed-cost-batch",
+   "tier": "keep",
+   "reason": "K2 11 inputs, 384 arithmetic/branch tokens, score 446",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 11,
+    "logic": 384,
+    "uniqueWords": 1822,
+    "uniqueShare": 0.99,
+    "score": 446
+   }
+  },
+  {
+   "slug": "lbm-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"body composition\", represented by body-fat-calc",
+   "metrics": {
+    "cat": "health",
+    "inputs": 9,
+    "logic": 59,
+    "uniqueWords": 1357,
+    "uniqueShare": 1,
+    "score": 109
+   }
+  },
+  {
+   "slug": "leap-year-checker",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (one-formula math): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 3,
+    "logic": 77,
+    "uniqueWords": 1121,
+    "uniqueShare": 0.98,
+    "score": 100
+   }
+  },
+  {
+   "slug": "length-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "units",
+    "inputs": 3,
+    "logic": 45,
+    "uniqueWords": 933,
+    "uniqueShare": 0.89,
+    "score": 66
+   }
+  },
+  {
+   "slug": "list-compare",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"text compare\", represented by csv-diff",
+   "metrics": {
+    "cat": "text",
+    "inputs": 18,
+    "logic": 192,
+    "uniqueWords": 1782,
+    "uniqueShare": 1,
+    "score": 282
+   }
+  },
+  {
+   "slug": "loan-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide fixed-rate-loan-term-extra-payments",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 7,
+    "logic": 84,
+    "uniqueWords": 1534,
+    "uniqueShare": 1,
+    "score": 127
+   }
+  },
+  {
+   "slug": "lorem-ipsum-gen",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (random pick): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 5,
+    "logic": 62,
+    "uniqueWords": 1120,
+    "uniqueShare": 1,
+    "score": 93
+   }
+  },
+  {
+   "slug": "ltv-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 5 inputs, 36 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 36,
+    "uniqueWords": 1296,
+    "uniqueShare": 0.97,
+    "score": 69
+   }
+  },
+  {
+   "slug": "macro-calc",
+   "tier": "keep",
+   "reason": "K2 21 inputs, 102 arithmetic/branch tokens, score 200",
+   "metrics": {
+    "cat": "health",
+    "inputs": 21,
+    "logic": 102,
+    "uniqueWords": 1372,
+    "uniqueShare": 0.98,
+    "score": 200
+   }
+  },
+  {
+   "slug": "manday-estimator",
+   "tier": "keep",
+   "reason": "K2 9 inputs, 342 arithmetic/branch tokens, score 388",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 9,
+    "logic": 342,
+    "uniqueWords": 1044,
+    "uniqueShare": 1,
+    "score": 388
+   }
+  },
+  {
+   "slug": "margin-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"price change\", represented by discount-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 43,
+    "uniqueWords": 1125,
+    "uniqueShare": 0.98,
+    "score": 74
+   }
+  },
+  {
+   "slug": "markdown-preview",
+   "tier": "keep",
+   "reason": "K2 1 inputs, 235 arithmetic/branch tokens, score 249",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 1,
+    "logic": 235,
+    "uniqueWords": 964,
+    "uniqueShare": 1,
+    "score": 249
+   }
+  },
+  {
+   "slug": "markdown-table-generator",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 121; 16 inputs, 44 tokens)",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 16,
+    "logic": 44,
+    "uniqueWords": 1288,
+    "uniqueShare": 1,
+    "score": 121
+   }
+  },
+  {
+   "slug": "marks-percentage-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"percent variants\", represented by percent-calc",
+   "metrics": {
+    "cat": "science",
+    "inputs": 24,
+    "logic": 37,
+    "uniqueWords": 1319,
+    "uniqueShare": 1,
+    "score": 146
+   }
+  },
+  {
+   "slug": "markup-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"price change\", represented by discount-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 107,
+    "uniqueWords": 1119,
+    "uniqueShare": 0.96,
+    "score": 138
+   }
+  },
+  {
+   "slug": "matrix-calc",
+   "tier": "keep",
+   "reason": "K2 21 inputs, 84 arithmetic/branch tokens, score 181",
+   "metrics": {
+    "cat": "science",
+    "inputs": 21,
+    "logic": 84,
+    "uniqueWords": 1276,
+    "uniqueShare": 1,
+    "score": 181
+   }
+  },
+  {
+   "slug": "meeting-cost-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 7 inputs, 28 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 7,
+    "logic": 28,
+    "uniqueWords": 1323,
+    "uniqueShare": 0.98,
+    "score": 69
+   }
+  },
+  {
+   "slug": "meta-tag-generator",
+   "tier": "keep",
+   "reason": "K2 11 inputs, 96 arithmetic/branch tokens, score 156",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 11,
+    "logic": 96,
+    "uniqueWords": 1615,
+    "uniqueShare": 1,
+    "score": 156
+   }
+  },
+  {
+   "slug": "metronome",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (clock/timer): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "life",
+    "inputs": 4,
+    "logic": 77,
+    "uniqueWords": 1215,
+    "uniqueShare": 1,
+    "score": 105
+   }
+  },
+  {
+   "slug": "mileage-reimbursement-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 5 inputs, 34 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 34,
+    "uniqueWords": 1522,
+    "uniqueShare": 1,
+    "score": 69
+   }
+  },
+  {
+   "slug": "military-time-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 1,
+    "logic": 99,
+    "uniqueWords": 1150,
+    "uniqueShare": 0.96,
+    "score": 115
+   }
+  },
+  {
+   "slug": "molar-mass-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 80; 3 inputs, 57 tokens)",
+   "metrics": {
+    "cat": "science",
+    "inputs": 3,
+    "logic": 57,
+    "uniqueWords": 1110,
+    "uniqueShare": 1,
+    "score": 80
+   }
+  },
+  {
+   "slug": "moon-phase-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 1,
+    "logic": 52,
+    "uniqueWords": 1196,
+    "uniqueShare": 0.96,
+    "score": 68
+   }
+  },
+  {
+   "slug": "morse-code-translator",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 4,
+    "logic": 102,
+    "uniqueWords": 1203,
+    "uniqueShare": 1,
+    "score": 130
+   }
+  },
+  {
+   "slug": "mortgage-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide fixed-rate-loan-term-extra-payments",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 12,
+    "logic": 174,
+    "uniqueWords": 1572,
+    "uniqueShare": 0.98,
+    "score": 238
+   }
+  },
+  {
+   "slug": "mpg-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide ev-charging-vs-gasoline-cost",
+   "metrics": {
+    "cat": "life",
+    "inputs": 5,
+    "logic": 20,
+    "uniqueWords": 1175,
+    "uniqueShare": 0.98,
+    "score": 52
+   }
+  },
+  {
+   "slug": "mulch-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x depth materials\", represented by concrete-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 8,
+    "logic": 47,
+    "uniqueWords": 1334,
+    "uniqueShare": 1,
+    "score": 92
+   }
+  },
+  {
+   "slug": "name-picker",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (random pick): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "random",
+    "inputs": 4,
+    "logic": 66,
+    "uniqueWords": 1171,
+    "uniqueShare": 0.98,
+    "score": 94
+   }
+  },
+  {
+   "slug": "nap-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 4 inputs, 32 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "health",
+    "inputs": 4,
+    "logic": 32,
+    "uniqueWords": 1356,
+    "uniqueShare": 1,
+    "score": 62
+   }
+  },
+  {
+   "slug": "net-worth-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 100; 11 inputs, 44 tokens)",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 11,
+    "logic": 44,
+    "uniqueWords": 1165,
+    "uniqueShare": 1,
+    "score": 100
+   }
+  },
+  {
+   "slug": "npv-irr-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 123; 12 inputs, 63 tokens)",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 12,
+    "logic": 63,
+    "uniqueWords": 1212,
+    "uniqueShare": 1,
+    "score": 123
+   }
+  },
+  {
+   "slug": "number-base-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 7,
+    "logic": 23,
+    "uniqueWords": 1122,
+    "uniqueShare": 1,
+    "score": 62
+   }
+  },
+  {
+   "slug": "number-to-words",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 2,
+    "logic": 59,
+    "uniqueWords": 1147,
+    "uniqueShare": 1,
+    "score": 78
+   }
+  },
+  {
+   "slug": "ohms-law-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 4 inputs, 38 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "science",
+    "inputs": 4,
+    "logic": 38,
+    "uniqueWords": 1340,
+    "uniqueShare": 1,
+    "score": 67
+   }
+  },
+  {
+   "slug": "one-rep-max-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 5 inputs, 39 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "health",
+    "inputs": 5,
+    "logic": 39,
+    "uniqueWords": 919,
+    "uniqueShare": 1,
+    "score": 68
+   }
+  },
+  {
+   "slug": "online-notepad",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (clock/timer): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "life",
+    "inputs": 3,
+    "logic": 79,
+    "uniqueWords": 1103,
+    "uniqueShare": 1,
+    "score": 102
+   }
+  },
+  {
+   "slug": "oven-temp-conv",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 122; 5 inputs, 90 tokens)",
+   "metrics": {
+    "cat": "units",
+    "inputs": 5,
+    "logic": 90,
+    "uniqueWords": 1197,
+    "uniqueShare": 0.98,
+    "score": 122
+   }
+  },
+  {
+   "slug": "overtime-pay-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide hourly-pay-salary-overtime-us",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 6,
+    "logic": 31,
+    "uniqueWords": 685,
+    "uniqueShare": 0.97,
+    "score": 62
+   }
+  },
+  {
+   "slug": "ovulation-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"pregnancy dates\", represented by period-calc",
+   "metrics": {
+    "cat": "health",
+    "inputs": 3,
+    "logic": 81,
+    "uniqueWords": 1115,
+    "uniqueShare": 0.97,
+    "score": 104
+   }
+  },
+  {
+   "slug": "pace-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide predicting-race-times",
+   "metrics": {
+    "cat": "health",
+    "inputs": 8,
+    "logic": 138,
+    "uniqueWords": 1133,
+    "uniqueShare": 1,
+    "score": 181
+   }
+  },
+  {
+   "slug": "packing-list-cbm",
+   "tier": "keep",
+   "reason": "K2 12 inputs, 378 arithmetic/branch tokens, score 435",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 12,
+    "logic": 378,
+    "uniqueWords": 892,
+    "uniqueShare": 1,
+    "score": 435
+   }
+  },
+  {
+   "slug": "paint-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x coverage materials\", represented by wallpaper-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 9,
+    "logic": 50,
+    "uniqueWords": 1391,
+    "uniqueShare": 0.98,
+    "score": 100
+   }
+  },
+  {
+   "slug": "party-drink-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 96; 9 inputs, 46 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 9,
+    "logic": 46,
+    "uniqueWords": 1390,
+    "uniqueShare": 1,
+    "score": 96
+   }
+  },
+  {
+   "slug": "password-gen",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (random pick): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 6,
+    "logic": 44,
+    "uniqueWords": 1065,
+    "uniqueShare": 1,
+    "score": 79
+   }
+  },
+  {
+   "slug": "password-strength-checker",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 118; 3 inputs, 94 tokens)",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 3,
+    "logic": 94,
+    "uniqueWords": 1234,
+    "uniqueShare": 1,
+    "score": 118
+   }
+  },
+  {
+   "slug": "paver-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x coverage materials\", represented by wallpaper-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 9,
+    "logic": 63,
+    "uniqueWords": 1423,
+    "uniqueShare": 1,
+    "score": 113
+   }
+  },
+  {
+   "slug": "paycheck-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide hourly-pay-salary-overtime-us",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 6,
+    "logic": 32,
+    "uniqueWords": 1377,
+    "uniqueShare": 1,
+    "score": 70
+   }
+  },
+  {
+   "slug": "paygap-report",
+   "tier": "keep",
+   "reason": "K2 9 inputs, 382 arithmetic/branch tokens, score 426",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 9,
+    "logic": 382,
+    "uniqueWords": 777,
+    "uniqueShare": 0.86,
+    "score": 426
+   }
+  },
+  {
+   "slug": "percent-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide unit-price-and-discount-stacking",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 7,
+    "logic": 72,
+    "uniqueWords": 1264,
+    "uniqueShare": 1,
+    "score": 113
+   }
+  },
+  {
+   "slug": "percent-error-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (one-formula math): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "science",
+    "inputs": 4,
+    "logic": 31,
+    "uniqueWords": 1305,
+    "uniqueShare": 1,
+    "score": 60
+   }
+  },
+  {
+   "slug": "perf-rating-calibrator",
+   "tier": "keep",
+   "reason": "K2 6 inputs, 462 arithmetic/branch tokens, score 495",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 6,
+    "logic": 462,
+    "uniqueWords": 897,
+    "uniqueShare": 1,
+    "score": 495
+   }
+  },
+  {
+   "slug": "period-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 120; 5 inputs, 88 tokens)",
+   "metrics": {
+    "cat": "health",
+    "inputs": 5,
+    "logic": 88,
+    "uniqueWords": 1177,
+    "uniqueShare": 0.97,
+    "score": 120
+   }
+  },
+  {
+   "slug": "permutation-combination-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 75; 5 inputs, 42 tokens)",
+   "metrics": {
+    "cat": "science",
+    "inputs": 5,
+    "logic": 42,
+    "uniqueWords": 1258,
+    "uniqueShare": 1,
+    "score": 75
+   }
+  },
+  {
+   "slug": "plant-spacing-calc",
+   "tier": "keep",
+   "reason": "K2 8 inputs, 87 arithmetic/branch tokens, score 132",
+   "metrics": {
+    "cat": "life",
+    "inputs": 8,
+    "logic": 87,
+    "uniqueWords": 1253,
+    "uniqueShare": 1,
+    "score": 132
+   }
+  },
+  {
+   "slug": "pomodoro-timer",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (clock/timer): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 6,
+    "logic": 96,
+    "uniqueWords": 1086,
+    "uniqueShare": 1,
+    "score": 131
+   }
+  },
+  {
+   "slug": "pool-volume-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 99; 10 inputs, 46 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 10,
+    "logic": 46,
+    "uniqueWords": 1268,
+    "uniqueShare": 1,
+    "score": 99
+   }
+  },
+  {
+   "slug": "position-size-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 6 inputs, 29 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 6,
+    "logic": 29,
+    "uniqueWords": 1258,
+    "uniqueShare": 1,
+    "score": 66
+   }
+  },
+  {
+   "slug": "power-conv",
+   "tier": "keep",
+   "reason": "K1 linked from guide sizing-a-room-air-conditioner",
+   "metrics": {
+    "cat": "units",
+    "inputs": 3,
+    "logic": 47,
+    "uniqueWords": 1277,
+    "uniqueShare": 0.93,
+    "score": 72
+   }
+  },
+  {
+   "slug": "ppf-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 3 inputs, 32 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 3,
+    "logic": 32,
+    "uniqueWords": 1542,
+    "uniqueShare": 1,
+    "score": 59
+   }
+  },
+  {
+   "slug": "ppi-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 87; 4 inputs, 58 tokens)",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 4,
+    "logic": 58,
+    "uniqueWords": 1264,
+    "uniqueShare": 1,
+    "score": 87
+   }
+  },
+  {
+   "slug": "pregnancy-due-date-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"pregnancy dates\", represented by period-calc",
+   "metrics": {
+    "cat": "health",
+    "inputs": 8,
+    "logic": 72,
+    "uniqueWords": 1279,
+    "uniqueShare": 0.97,
+    "score": 117
+   }
+  },
+  {
+   "slug": "pregnancy-week-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"pregnancy dates\", represented by period-calc",
+   "metrics": {
+    "cat": "health",
+    "inputs": 3,
+    "logic": 53,
+    "uniqueWords": 798,
+    "uniqueShare": 1,
+    "score": 73
+   }
+  },
+  {
+   "slug": "pregnancy-weight-gain-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 109; 9 inputs, 61 tokens)",
+   "metrics": {
+    "cat": "health",
+    "inputs": 9,
+    "logic": 61,
+    "uniqueWords": 1223,
+    "uniqueShare": 1,
+    "score": 109
+   }
+  },
+  {
+   "slug": "pressure-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "units",
+    "inputs": 3,
+    "logic": 45,
+    "uniqueWords": 1219,
+    "uniqueShare": 0.96,
+    "score": 69
+   }
+  },
+  {
+   "slug": "prime-checker",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (one-formula math): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 1,
+    "logic": 139,
+    "uniqueWords": 988,
+    "uniqueShare": 1,
+    "score": 153
+   }
+  },
+  {
+   "slug": "propane-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 6 inputs, 26 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "life",
+    "inputs": 6,
+    "logic": 26,
+    "uniqueWords": 1426,
+    "uniqueShare": 0.99,
+    "score": 64
+   }
+  },
+  {
+   "slug": "prorated-rent-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 4 inputs, 29 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 4,
+    "logic": 29,
+    "uniqueWords": 1224,
+    "uniqueShare": 1,
+    "score": 57
+   }
+  },
+  {
+   "slug": "protein-intake-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 110; 6 inputs, 74 tokens)",
+   "metrics": {
+    "cat": "health",
+    "inputs": 6,
+    "logic": 74,
+    "uniqueWords": 1231,
+    "uniqueShare": 0.97,
+    "score": 110
+   }
+  },
+  {
+   "slug": "px-to-rem",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 5,
+    "logic": 33,
+    "uniqueWords": 1403,
+    "uniqueShare": 1,
+    "score": 67
+   }
+  },
+  {
+   "slug": "pythagorean-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (one-formula math): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 3,
+    "logic": 133,
+    "uniqueWords": 1193,
+    "uniqueShare": 0.97,
+    "score": 157
+   }
+  },
+  {
+   "slug": "qr-gen",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 4,
+    "logic": 47,
+    "uniqueWords": 995,
+    "uniqueShare": 1,
+    "score": 73
+   }
+  },
+  {
+   "slug": "quadratic-solver",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 119; 3 inputs, 95 tokens)",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 3,
+    "logic": 95,
+    "uniqueWords": 1241,
+    "uniqueShare": 1,
+    "score": 119
+   }
+  },
+  {
+   "slug": "race-time-predictor",
+   "tier": "keep",
+   "reason": "K1 linked from guide predicting-race-times",
+   "metrics": {
+    "cat": "health",
+    "inputs": 10,
+    "logic": 58,
+    "uniqueWords": 1395,
+    "uniqueShare": 1,
+    "score": 112
+   }
+  },
+  {
+   "slug": "ramp-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 75; 4 inputs, 46 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 4,
+    "logic": 46,
+    "uniqueWords": 1297,
+    "uniqueShare": 1,
+    "score": 75
+   }
+  },
+  {
+   "slug": "random-number-gen",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (random pick): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "random",
+    "inputs": 7,
+    "logic": 77,
+    "uniqueWords": 976,
+    "uniqueShare": 1,
+    "score": 115
+   }
+  },
+  {
+   "slug": "random-team-gen",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (random pick): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "random",
+    "inputs": 3,
+    "logic": 73,
+    "uniqueWords": 1129,
+    "uniqueShare": 0.98,
+    "score": 96
+   }
+  },
+  {
+   "slug": "random-word-gen",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (random pick): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 5,
+    "logic": 64,
+    "uniqueWords": 1058,
+    "uniqueShare": 1,
+    "score": 95
+   }
+  },
+  {
+   "slug": "ratio-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (one-formula math): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 10,
+    "logic": 132,
+    "uniqueWords": 1263,
+    "uniqueShare": 1,
+    "score": 185
+   }
+  },
+  {
+   "slug": "rd-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"simple interest/deposit\", represented by compound-interest-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 4,
+    "logic": 31,
+    "uniqueWords": 1288,
+    "uniqueShare": 1,
+    "score": 60
+   }
+  },
+  {
+   "slug": "readability-checker",
+   "tier": "noindex",
+   "reason": "N3 thin: 1 inputs, 56 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "text",
+    "inputs": 1,
+    "logic": 56,
+    "uniqueWords": 1225,
+    "uniqueShare": 1,
+    "score": 72
+   }
+  },
+  {
+   "slug": "rebar-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 119; 9 inputs, 69 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 9,
+    "logic": 69,
+    "uniqueWords": 1384,
+    "uniqueShare": 1,
+    "score": 119
+   }
+  },
+  {
+   "slug": "recipe-scaler",
+   "tier": "keep",
+   "reason": "K2 3 inputs, 119 arithmetic/branch tokens, score 145",
+   "metrics": {
+    "cat": "life",
+    "inputs": 3,
+    "logic": 119,
+    "uniqueWords": 1425,
+    "uniqueShare": 1,
+    "score": 145
+   }
+  },
+  {
+   "slug": "refinance-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide fixed-rate-loan-term-extra-payments",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 7,
+    "logic": 41,
+    "uniqueWords": 1285,
+    "uniqueShare": 1,
+    "score": 82
+   }
+  },
+  {
+   "slug": "regex-tester",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 105; 9 inputs, 57 tokens)",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 9,
+    "logic": 57,
+    "uniqueWords": 1228,
+    "uniqueShare": 0.98,
+    "score": 105
+   }
+  },
+  {
+   "slug": "remove-duplicate-lines",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 8,
+    "logic": 70,
+    "uniqueWords": 1105,
+    "uniqueShare": 1,
+    "score": 113
+   }
+  },
+  {
+   "slug": "remove-line-breaks",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 8,
+    "logic": 67,
+    "uniqueWords": 1326,
+    "uniqueShare": 0.98,
+    "score": 112
+   }
+  },
+  {
+   "slug": "rent-affordability-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"affordability\", represented by car-affordability-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 34,
+    "uniqueWords": 1184,
+    "uniqueShare": 1,
+    "score": 66
+   }
+  },
+  {
+   "slug": "rent-split-calc",
+   "tier": "keep",
+   "reason": "K2 15 inputs, 61 arithmetic/branch tokens, score 134",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 15,
+    "logic": 61,
+    "uniqueWords": 1326,
+    "uniqueShare": 1,
+    "score": 134
+   }
+  },
+  {
+   "slug": "resistor-color-code",
+   "tier": "noindex",
+   "reason": "N3 thin: 6 inputs, 32 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 6,
+    "logic": 32,
+    "uniqueWords": 1162,
+    "uniqueShare": 1,
+    "score": 68
+   }
+  },
+  {
+   "slug": "retaining-wall-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 123; 11 inputs, 64 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 11,
+    "logic": 64,
+    "uniqueWords": 1495,
+    "uniqueShare": 1,
+    "score": 123
+   }
+  },
+  {
+   "slug": "retirement-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 98; 10 inputs, 46 tokens)",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 10,
+    "logic": 46,
+    "uniqueWords": 1226,
+    "uniqueShare": 1,
+    "score": 98
+   }
+  },
+  {
+   "slug": "reverse-text",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 2,
+    "logic": 35,
+    "uniqueWords": 1258,
+    "uniqueShare": 0.92,
+    "score": 56
+   }
+  },
+  {
+   "slug": "ring-size-conv",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 79; 4 inputs, 47 tokens)",
+   "metrics": {
+    "cat": "units",
+    "inputs": 4,
+    "logic": 47,
+    "uniqueWords": 1553,
+    "uniqueShare": 1,
+    "score": 79
+   }
+  },
+  {
+   "slug": "robots-txt-generator",
+   "tier": "keep",
+   "reason": "K2 22 inputs, 55 arithmetic/branch tokens, score 155",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 22,
+    "logic": 55,
+    "uniqueWords": 1223,
+    "uniqueShare": 1,
+    "score": 155
+   }
+  },
+  {
+   "slug": "roi-calc",
+   "tier": "keep",
+   "reason": "K2 9 inputs, 118 arithmetic/branch tokens, score 174",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 9,
+    "logic": 118,
+    "uniqueWords": 1980,
+    "uniqueShare": 0.95,
+    "score": 174
+   }
+  },
+  {
+   "slug": "roman-numeral-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (one-formula math): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "units",
+    "inputs": 1,
+    "logic": 96,
+    "uniqueWords": 1061,
+    "uniqueShare": 0.98,
+    "score": 111
+   }
+  },
+  {
+   "slug": "roof-pitch-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 98; 7 inputs, 57 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 7,
+    "logic": 57,
+    "uniqueWords": 1272,
+    "uniqueShare": 0.97,
+    "score": 98
+   }
+  },
+  {
+   "slug": "rule-of-72-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide compound-interest-inflation-fees",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 3,
+    "logic": 26,
+    "uniqueWords": 1141,
+    "uniqueShare": 0.97,
+    "score": 49
+   }
+  },
+  {
+   "slug": "safety-stock-batch",
+   "tier": "keep",
+   "reason": "K2 22 inputs, 712 arithmetic/branch tokens, score 811",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 22,
+    "logic": 712,
+    "uniqueWords": 1063,
+    "uniqueShare": 1,
+    "score": 811
+   }
+  },
+  {
+   "slug": "salary-calc",
+   "tier": "keep",
+   "reason": "K2 4 inputs, 122 arithmetic/branch tokens, score 148",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 4,
+    "logic": 122,
+    "uniqueWords": 1046,
+    "uniqueShare": 1,
+    "score": 148
+   }
+  },
+  {
+   "slug": "salary-hike-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"percent variants\", represented by percent-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 6,
+    "logic": 50,
+    "uniqueWords": 1414,
+    "uniqueShare": 0.97,
+    "score": 88
+   }
+  },
+  {
+   "slug": "sales-tax-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide unit-price-and-discount-stacking",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 6,
+    "logic": 26,
+    "uniqueWords": 897,
+    "uniqueShare": 0.97,
+    "score": 59
+   }
+  },
+  {
+   "slug": "sand-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x depth materials\", represented by concrete-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 8,
+    "logic": 55,
+    "uniqueWords": 1347,
+    "uniqueShare": 0.98,
+    "score": 100
+   }
+  },
+  {
+   "slug": "savings-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide compound-interest-inflation-fees",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 7,
+    "logic": 69,
+    "uniqueWords": 1132,
+    "uniqueShare": 0.96,
+    "score": 108
+   }
+  },
+  {
+   "slug": "secret-santa-generator",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (random pick): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "random",
+    "inputs": 2,
+    "logic": 36,
+    "uniqueWords": 1313,
+    "uniqueShare": 1,
+    "score": 57
+   }
+  },
+  {
+   "slug": "self-employment-tax-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 79; 4 inputs, 51 tokens)",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 4,
+    "logic": 51,
+    "uniqueWords": 1206,
+    "uniqueShare": 1,
+    "score": 79
+   }
+  },
+  {
+   "slug": "shingle-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x coverage materials\", represented by wallpaper-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 7,
+    "logic": 49,
+    "uniqueWords": 1395,
+    "uniqueShare": 0.98,
+    "score": 91
+   }
+  },
+  {
+   "slug": "shoe-size-conv",
+   "tier": "noindex",
+   "reason": "N3 thin: 3 inputs, 26 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "units",
+    "inputs": 3,
+    "logic": 26,
+    "uniqueWords": 1391,
+    "uniqueShare": 1,
+    "score": 52
+   }
+  },
+  {
+   "slug": "siding-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x coverage materials\", represented by wallpaper-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 11,
+    "logic": 61,
+    "uniqueWords": 1167,
+    "uniqueShare": 0.97,
+    "score": 117
+   }
+  },
+  {
+   "slug": "sig-fig-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 87; 3 inputs, 64 tokens)",
+   "metrics": {
+    "cat": "science",
+    "inputs": 3,
+    "logic": 64,
+    "uniqueWords": 1103,
+    "uniqueShare": 1,
+    "score": 87
+   }
+  },
+  {
+   "slug": "sip-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"simple interest/deposit\", represented by compound-interest-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 6,
+    "logic": 37,
+    "uniqueWords": 1324,
+    "uniqueShare": 1,
+    "score": 74
+   }
+  },
+  {
+   "slug": "sleep-cycle-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 109; 5 inputs, 79 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 5,
+    "logic": 79,
+    "uniqueWords": 987,
+    "uniqueShare": 1,
+    "score": 109
+   }
+  },
+  {
+   "slug": "slope-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (one-formula math): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 4,
+    "logic": 110,
+    "uniqueWords": 1299,
+    "uniqueShare": 1,
+    "score": 139
+   }
+  },
+  {
+   "slug": "slug-generator",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 5,
+    "logic": 22,
+    "uniqueWords": 1214,
+    "uniqueShare": 1,
+    "score": 54
+   }
+  },
+  {
+   "slug": "smoking-cost-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 80; 6 inputs, 41 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 6,
+    "logic": 41,
+    "uniqueWords": 1479,
+    "uniqueShare": 1,
+    "score": 80
+   }
+  },
+  {
+   "slug": "sod-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x coverage materials\", represented by wallpaper-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 11,
+    "logic": 48,
+    "uniqueWords": 1307,
+    "uniqueShare": 1,
+    "score": 105
+   }
+  },
+  {
+   "slug": "solar-panel-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 79; 6 inputs, 41 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 6,
+    "logic": 41,
+    "uniqueWords": 1400,
+    "uniqueShare": 1,
+    "score": 79
+   }
+  },
+  {
+   "slug": "sort-lines",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 8,
+    "logic": 74,
+    "uniqueWords": 1103,
+    "uniqueShare": 1,
+    "score": 117
+   }
+  },
+  {
+   "slug": "speed-conv",
+   "tier": "keep",
+   "reason": "K1 linked from guide predicting-race-times",
+   "metrics": {
+    "cat": "units",
+    "inputs": 4,
+    "logic": 63,
+    "uniqueWords": 1023,
+    "uniqueShare": 0.93,
+    "score": 89
+   }
+  },
+  {
+   "slug": "split-bill-calc",
+   "tier": "keep",
+   "reason": "K2 3 inputs, 125 arithmetic/branch tokens, score 146",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 3,
+    "logic": 125,
+    "uniqueWords": 855,
+    "uniqueShare": 0.96,
+    "score": 146
+   }
+  },
+  {
+   "slug": "sql-formatter",
+   "tier": "keep",
+   "reason": "K2 5 inputs, 236 arithmetic/branch tokens, score 271",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 5,
+    "logic": 236,
+    "uniqueWords": 1476,
+    "uniqueShare": 0.98,
+    "score": 271
+   }
+  },
+  {
+   "slug": "square-footage-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x coverage materials\", represented by wallpaper-calc",
+   "metrics": {
+    "cat": "units",
+    "inputs": 11,
+    "logic": 52,
+    "uniqueWords": 829,
+    "uniqueShare": 1,
+    "score": 104
+   }
+  },
+  {
+   "slug": "square-root-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (one-formula math): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 3,
+    "logic": 104,
+    "uniqueWords": 1260,
+    "uniqueShare": 1,
+    "score": 129
+   }
+  },
+  {
+   "slug": "stair-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 86; 5 inputs, 52 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 5,
+    "logic": 52,
+    "uniqueWords": 1371,
+    "uniqueShare": 0.98,
+    "score": 86
+   }
+  },
+  {
+   "slug": "stamp-duty-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 3 inputs, 29 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 3,
+    "logic": 29,
+    "uniqueWords": 1045,
+    "uniqueShare": 1,
+    "score": 51
+   }
+  },
+  {
+   "slug": "standard-deviation-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 1 inputs, 73 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 1,
+    "logic": 73,
+    "uniqueWords": 1397,
+    "uniqueShare": 0.97,
+    "score": 91
+   }
+  },
+  {
+   "slug": "steps-to-miles-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "health",
+    "inputs": 11,
+    "logic": 207,
+    "uniqueWords": 1494,
+    "uniqueShare": 0.98,
+    "score": 266
+   }
+  },
+  {
+   "slug": "stock-average-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"average cost\", represented by crypto-average-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 9,
+    "logic": 111,
+    "uniqueWords": 613,
+    "uniqueShare": 0.77,
+    "score": 153
+   }
+  },
+  {
+   "slug": "stock-ledger-recon",
+   "tier": "keep",
+   "reason": "K2 11 inputs, 550 arithmetic/branch tokens, score 604",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 11,
+    "logic": 550,
+    "uniqueWords": 987,
+    "uniqueShare": 1,
+    "score": 604
+   }
+  },
+  {
+   "slug": "stock-profit-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"average cost\", represented by crypto-average-calc",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 9,
+    "logic": 82,
+    "uniqueWords": 709,
+    "uniqueShare": 0.91,
+    "score": 125
+   }
+  },
+  {
+   "slug": "stopwatch",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (clock/timer): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 1,
+    "logic": 94,
+    "uniqueWords": 934,
+    "uniqueShare": 1,
+    "score": 107
+   }
+  },
+  {
+   "slug": "stud-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 88; 8 inputs, 41 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 8,
+    "logic": 41,
+    "uniqueWords": 1457,
+    "uniqueShare": 0.98,
+    "score": 88
+   }
+  },
+  {
+   "slug": "subnet-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 2 inputs, 66 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 2,
+    "logic": 66,
+    "uniqueWords": 1299,
+    "uniqueShare": 1,
+    "score": 87
+   }
+  },
+  {
+   "slug": "sunrise-sunset-calc",
+   "tier": "keep",
+   "reason": "K2 6 inputs, 117 arithmetic/branch tokens, score 154",
+   "metrics": {
+    "cat": "date",
+    "inputs": 6,
+    "logic": 117,
+    "uniqueWords": 1286,
+    "uniqueShare": 0.98,
+    "score": 154
+   }
+  },
+  {
+   "slug": "tank-volume-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 117; 9 inputs, 69 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 9,
+    "logic": 69,
+    "uniqueWords": 1203,
+    "uniqueShare": 1,
+    "score": 117
+   }
+  },
+  {
+   "slug": "tax-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 119; 5 inputs, 92 tokens)",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 92,
+    "uniqueWords": 706,
+    "uniqueShare": 1,
+    "score": 119
+   }
+  },
+  {
+   "slug": "tdee-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"energy needs\", represented by calorie-deficit-calc",
+   "metrics": {
+    "cat": "health",
+    "inputs": 13,
+    "logic": 79,
+    "uniqueWords": 1243,
+    "uniqueShare": 0.93,
+    "score": 143
+   }
+  },
+  {
+   "slug": "temp-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "units",
+    "inputs": 4,
+    "logic": 83,
+    "uniqueWords": 908,
+    "uniqueShare": 0.98,
+    "score": 108
+   }
+  },
+  {
+   "slug": "text-diff",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"text compare\", represented by csv-diff",
+   "metrics": {
+    "cat": "text",
+    "inputs": 6,
+    "logic": 82,
+    "uniqueWords": 1180,
+    "uniqueShare": 1,
+    "score": 118
+   }
+  },
+  {
+   "slug": "text-to-speech",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 4,
+    "logic": 108,
+    "uniqueWords": 1086,
+    "uniqueShare": 1,
+    "score": 135
+   }
+  },
+  {
+   "slug": "tile-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x coverage materials\", represented by wallpaper-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 11,
+    "logic": 48,
+    "uniqueWords": 1411,
+    "uniqueShare": 1,
+    "score": 106
+   }
+  },
+  {
+   "slug": "time-zone-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (clock/timer): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 4,
+    "logic": 102,
+    "uniqueWords": 1151,
+    "uniqueShare": 1,
+    "score": 130
+   }
+  },
+  {
+   "slug": "timesheet-batch-agg",
+   "tier": "keep",
+   "reason": "K2 12 inputs, 434 arithmetic/branch tokens, score 490",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 12,
+    "logic": 434,
+    "uniqueWords": 789,
+    "uniqueShare": 0.85,
+    "score": 490
+   }
+  },
+  {
+   "slug": "timesheet-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide hourly-pay-salary-overtime-us",
+   "metrics": {
+    "cat": "date",
+    "inputs": 6,
+    "logic": 119,
+    "uniqueWords": 1352,
+    "uniqueShare": 0.98,
+    "score": 157
+   }
+  },
+  {
+   "slug": "tip-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 5,
+    "logic": 88,
+    "uniqueWords": 1049,
+    "uniqueShare": 0.98,
+    "score": 118
+   }
+  },
+  {
+   "slug": "tire-size-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 85; 7 inputs, 44 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 7,
+    "logic": 44,
+    "uniqueWords": 1289,
+    "uniqueShare": 1,
+    "score": 85
+   }
+  },
+  {
+   "slug": "topsoil-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"area x depth materials\", represented by concrete-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 9,
+    "logic": 54,
+    "uniqueWords": 1276,
+    "uniqueShare": 0.98,
+    "score": 103
+   }
+  },
+  {
+   "slug": "torque-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "units",
+    "inputs": 2,
+    "logic": 19,
+    "uniqueWords": 1156,
+    "uniqueShare": 1,
+    "score": 39
+   }
+  },
+  {
+   "slug": "tv-size-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 122; 6 inputs, 85 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 6,
+    "logic": 85,
+    "uniqueWords": 1281,
+    "uniqueShare": 1,
+    "score": 122
+   }
+  },
+  {
+   "slug": "typing-test",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (clock/timer): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "life",
+    "inputs": 1,
+    "logic": 96,
+    "uniqueWords": 1115,
+    "uniqueShare": 1,
+    "score": 111
+   }
+  },
+  {
+   "slug": "unit-price",
+   "tier": "keep",
+   "reason": "K1 linked from guide unit-price-and-discount-stacking",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 8,
+    "logic": 55,
+    "uniqueWords": 902,
+    "uniqueShare": 0.98,
+    "score": 96
+   }
+  },
+  {
+   "slug": "unix-timestamp-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 4,
+    "logic": 113,
+    "uniqueWords": 1185,
+    "uniqueShare": 1,
+    "score": 141
+   }
+  },
+  {
+   "slug": "upside-down-text",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 2,
+    "logic": 31,
+    "uniqueWords": 1413,
+    "uniqueShare": 0.94,
+    "score": 53
+   }
+  },
+  {
+   "slug": "url-encoder",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 6,
+    "logic": 74,
+    "uniqueWords": 1131,
+    "uniqueShare": 0.98,
+    "score": 109
+   }
+  },
+  {
+   "slug": "url-parser",
+   "tier": "noindex",
+   "reason": "N3 thin: 2 inputs, 42 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 2,
+    "logic": 42,
+    "uniqueWords": 1239,
+    "uniqueShare": 1,
+    "score": 62
+   }
+  },
+  {
+   "slug": "utm-builder",
+   "tier": "keep",
+   "reason": "K2 16 inputs, 377 arithmetic/branch tokens, score 450",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 16,
+    "logic": 377,
+    "uniqueWords": 884,
+    "uniqueShare": 1,
+    "score": 450
+   }
+  },
+  {
+   "slug": "uuid-gen",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (random pick): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 5,
+    "logic": 54,
+    "uniqueWords": 1244,
+    "uniqueShare": 1,
+    "score": 86
+   }
+  },
+  {
+   "slug": "vat-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide unit-price-and-discount-stacking",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 4,
+    "logic": 61,
+    "uniqueWords": 1104,
+    "uniqueShare": 0.98,
+    "score": 88
+   }
+  },
+  {
+   "slug": "vehicle-log-agg",
+   "tier": "keep",
+   "reason": "K2 7 inputs, 335 arithmetic/branch tokens, score 371",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 7,
+    "logic": 335,
+    "uniqueWords": 818,
+    "uniqueShare": 0.94,
+    "score": 371
+   }
+  },
+  {
+   "slug": "vo2max-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 97; 10 inputs, 42 tokens)",
+   "metrics": {
+    "cat": "health",
+    "inputs": 10,
+    "logic": 42,
+    "uniqueWords": 1450,
+    "uniqueShare": 1,
+    "score": 97
+   }
+  },
+  {
+   "slug": "volume-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "units",
+    "inputs": 3,
+    "logic": 45,
+    "uniqueWords": 1190,
+    "uniqueShare": 0.93,
+    "score": 69
+   }
+  },
+  {
+   "slug": "waist-hip-ratio-calc",
+   "tier": "keep",
+   "reason": "K1 linked from guide bmi-vs-waist-to-height-ratio",
+   "metrics": {
+    "cat": "health",
+    "inputs": 5,
+    "logic": 25,
+    "uniqueWords": 1437,
+    "uniqueShare": 0.98,
+    "score": 59
+   }
+  },
+  {
+   "slug": "wallpaper-calc",
+   "tier": "keep",
+   "reason": "K2 11 inputs, 69 arithmetic/branch tokens, score 127",
+   "metrics": {
+    "cat": "life",
+    "inputs": 11,
+    "logic": 69,
+    "uniqueWords": 1401,
+    "uniqueShare": 1,
+    "score": 127
+   }
+  },
+  {
+   "slug": "water-heater-size-calc",
+   "tier": "keep",
+   "reason": "K2 15 inputs, 63 arithmetic/branch tokens, score 137",
+   "metrics": {
+    "cat": "life",
+    "inputs": 15,
+    "logic": 63,
+    "uniqueWords": 1376,
+    "uniqueShare": 0.98,
+    "score": 137
+   }
+  },
+  {
+   "slug": "water-intake-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 79; 5 inputs, 48 tokens)",
+   "metrics": {
+    "cat": "health",
+    "inputs": 5,
+    "logic": 48,
+    "uniqueWords": 1077,
+    "uniqueShare": 0.98,
+    "score": 79
+   }
+  },
+  {
+   "slug": "wavelength-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 97; 4 inputs, 69 tokens)",
+   "metrics": {
+    "cat": "science",
+    "inputs": 4,
+    "logic": 69,
+    "uniqueWords": 1161,
+    "uniqueShare": 1,
+    "score": 97
+   }
+  },
+  {
+   "slug": "wbs-progress-rollup",
+   "tier": "keep",
+   "reason": "K2 9 inputs, 558 arithmetic/branch tokens, score 601",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 9,
+    "logic": 558,
+    "uniqueWords": 702,
+    "uniqueShare": 1,
+    "score": 601
+   }
+  },
+  {
+   "slug": "wedding-budget-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 68; 4 inputs, 41 tokens)",
+   "metrics": {
+    "cat": "life",
+    "inputs": 4,
+    "logic": 41,
+    "uniqueWords": 1129,
+    "uniqueShare": 1,
+    "score": 68
+   }
+  },
+  {
+   "slug": "week-number-check",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 2,
+    "logic": 58,
+    "uniqueWords": 1433,
+    "uniqueShare": 1,
+    "score": 80
+   }
+  },
+  {
+   "slug": "weight-conv",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (unit conversion): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "units",
+    "inputs": 3,
+    "logic": 45,
+    "uniqueWords": 1082,
+    "uniqueShare": 0.9,
+    "score": 68
+   }
+  },
+  {
+   "slug": "wheel-spinner",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (random pick): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "random",
+    "inputs": 2,
+    "logic": 23,
+    "uniqueWords": 723,
+    "uniqueShare": 1,
+    "score": 38
+   }
+  },
+  {
+   "slug": "whitespace-remover",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 9,
+    "logic": 87,
+    "uniqueWords": 1185,
+    "uniqueShare": 0.98,
+    "score": 135
+   }
+  },
+  {
+   "slug": "wilks-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 6 inputs, 35 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "health",
+    "inputs": 6,
+    "logic": 35,
+    "uniqueWords": 1222,
+    "uniqueShare": 1,
+    "score": 71
+   }
+  },
+  {
+   "slug": "wind-chill-calc",
+   "tier": "noindex",
+   "reason": "N2 same-formula family \"weather index\", represented by heat-index-calc",
+   "metrics": {
+    "cat": "life",
+    "inputs": 5,
+    "logic": 46,
+    "uniqueWords": 1263,
+    "uniqueShare": 1,
+    "score": 79
+   }
+  },
+  {
+   "slug": "word-counter",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 5,
+    "logic": 73,
+    "uniqueWords": 1024,
+    "uniqueShare": 0.98,
+    "score": 103
+   }
+  },
+  {
+   "slug": "word-frequency-counter",
+   "tier": "noindex",
+   "reason": "N3 thin: 4 inputs, 34 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "text",
+    "inputs": 4,
+    "logic": 34,
+    "uniqueWords": 1170,
+    "uniqueShare": 1,
+    "score": 62
+   }
+  },
+  {
+   "slug": "words-to-pages",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (text transform): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "text",
+    "inputs": 5,
+    "logic": 32,
+    "uniqueWords": 1177,
+    "uniqueShare": 1,
+    "score": 64
+   }
+  },
+  {
+   "slug": "workback-schedule",
+   "tier": "keep",
+   "reason": "K2 10 inputs, 304 arithmetic/branch tokens, score 352",
+   "metrics": {
+    "cat": "utility",
+    "inputs": 10,
+    "logic": 304,
+    "uniqueWords": 809,
+    "uniqueShare": 0.97,
+    "score": 352
+   }
+  },
+  {
+   "slug": "workday-calc",
+   "tier": "keep",
+   "reason": "K2 10 inputs, 202 arithmetic/branch tokens, score 254",
+   "metrics": {
+    "cat": "date",
+    "inputs": 10,
+    "logic": 202,
+    "uniqueWords": 1197,
+    "uniqueShare": 0.96,
+    "score": 254
+   }
+  },
+  {
+   "slug": "world-clock",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (clock/timer): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 1,
+    "logic": 80,
+    "uniqueWords": 1018,
+    "uniqueShare": 0.98,
+    "score": 94
+   }
+  },
+  {
+   "slug": "xml-formatter",
+   "tier": "keep",
+   "reason": "K2 3 inputs, 182 arithmetic/branch tokens, score 206",
+   "metrics": {
+    "cat": "dev",
+    "inputs": 3,
+    "logic": 182,
+    "uniqueWords": 1229,
+    "uniqueShare": 0.98,
+    "score": 206
+   }
+  },
+  {
+   "slug": "z-score-calc",
+   "tier": "noindex",
+   "reason": "N4 below keep cap of 85 (score 95; 6 inputs, 59 tokens)",
+   "metrics": {
+    "cat": "science",
+    "inputs": 6,
+    "logic": 59,
+    "uniqueWords": 1163,
+    "uniqueShare": 0.98,
+    "score": 95
+   }
+  },
+  {
+   "slug": "zakat-calc",
+   "tier": "noindex",
+   "reason": "N3 thin: 9 inputs, 33 arithmetic/branch tokens",
+   "metrics": {
+    "cat": "finance",
+    "inputs": 9,
+    "logic": 33,
+    "uniqueWords": 1298,
+    "uniqueShare": 0.98,
+    "score": 82
+   }
+  },
+  {
+   "slug": "zodiac-sign-calc",
+   "tier": "noindex",
+   "reason": "N1 answer-box class (simple date/novelty): a search engine or OS utility already answers this",
+   "metrics": {
+    "cat": "date",
+    "inputs": 1,
+    "logic": 35,
+    "uniqueWords": 1139,
+    "uniqueShare": 0.97,
+    "score": 50
+   }
+  }
+ ]
+}
