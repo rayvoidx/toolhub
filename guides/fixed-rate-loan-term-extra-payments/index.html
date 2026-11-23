@@ -1,6 +1,44 @@
 <!doctype html><html lang="en" data-theme="auto"><head><meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
 <meta name="google-adsense-account" content="ca-pub-6324953789479730">
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<!-- ADSENSE:START (config.yaml adsense_loader=false — gen-html-fit.js 가 토글. 소유 확인은 meta google-adsense-account + ads.txt)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>15, 20 or 30 years: what a fixed-rate loan really costs — Toolhub Guides</title>
 <meta name="description" content="A $300,000 fixed-rate mortgage worked through 15, 20 and 30-year terms, extra payments, biweekly plans and refinancing, with every figure recomputed.">
