@@ -40,3 +40,23 @@ test("indexed English guides carry Consent Mode v2, GTM, AdSense toggle marker, 
     }
   }
 });
+
+test("robots.txt allows AdSense crawlers and homepage ItemList contains only indexed tools", () => {
+  const root = fileURLToPath(new URL("../", import.meta.url));
+  const robots = readFileSync(root + "robots.txt", "utf8");
+  assert.match(robots, /User-agent:\s*Mediapartners-Google\s*\nAllow:\s*\//);
+  assert.match(robots, /User-agent:\s*AdsBot-Google\s*\nAllow:\s*\//);
+
+  const tiers = JSON.parse(readFileSync(root + "docs/index-tiers.json", "utf8"));
+  const keep = new Set(tiers.tools.filter((t) => t.tier === "keep").map((t) => t.slug));
+  const indexHtml = readFileSync(root + "index.html", "utf8");
+  const itemListLine = indexHtml.split("\n").find((l) => l.includes('"@type":"ItemList"'));
+  assert.ok(itemListLine, "index.html missing ItemList JSON-LD");
+  const ld = JSON.parse(itemListLine);
+  assert.equal(ld.numberOfItems, keep.size);
+  assert.equal(ld.itemListElement.length, keep.size);
+  for (const el of ld.itemListElement) {
+    const slug = el.url.replace(/\/$/, "").split("/").pop();
+    assert.ok(keep.has(slug), `noindex tool leaked into homepage ItemList: ${slug}`);
+  }
+});
