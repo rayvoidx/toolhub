@@ -1,5 +1,6 @@
 // Figures in guides/budget-50-30-20-vs-fixed-costs/.
-// Calls services/budget-calc/js/app.js splitFor() and money(), plus emergency-fund-calc ceiling pace math.
+// Directly calls services/budget-calc/js/app.js (splitFor, money) and
+// services/emergency-fund-calc/js/app.js (calc) in VM sandboxes.
 import fs from "node:fs";
 import path from "node:path";
 import vm from "node:vm";
@@ -18,6 +19,45 @@ const b = toolFns("budget-calc", ["num", "money", "pct", "splitFor"], {
   pWants: { get value() { return String(customInputs.b); } },
   pSave: { get value() { return String(customInputs.c); } },
 });
+
+// Sandbox services/emergency-fund-calc/js/app.js calc() directly
+function runEmergencyFund(essentials, months, haveSaved, monthlySave) {
+  const dom = {
+    "r-target": { textContent: "", style: {}, setAttribute() {} },
+    "gauge-fill": { textContent: "", style: {}, setAttribute() {} },
+    gauge: { textContent: "", style: {}, setAttribute() {} },
+    "r-progress": { textContent: "", style: {}, setAttribute() {} },
+    "r-gap": { textContent: "", style: {}, setAttribute() {} },
+    "r-time": { textContent: "", style: {}, setAttribute() {} },
+    "r-risk": { textContent: "", style: {}, setAttribute() {} },
+  };
+  const ef = toolFns("emergency-fund-calc", ["fail", "calc"], {
+    String,
+    exp: { value: String(essentials) },
+    saved: { value: String(haveSaved) },
+    save: { value: String(monthlySave) },
+    monthsSel: { value: String(months) },
+    customMonths: { value: String(months) },
+    MAX_EXP: 1e7,
+    MAX_AMT: 1e12,
+    result: { hidden: true },
+    errEl: { hidden: true, textContent: "" },
+    $: (id) => dom[id],
+    num: (el) => {
+      const v = parseFloat(String(el.value).replace(/[$,\s]/g, ""));
+      return isFinite(v) ? v : NaN;
+    },
+    money: (n) => Number(n).toLocaleString("en-US", { maximumFractionDigits: 0 }),
+    put: (s, o) => String(s).replace(/\{(\w+)\}/g, (m, k) => (o[k] === undefined ? m : String(o[k]))),
+    t: (k) => (k === "tool.fmt.pace" || k === "tool.fmt.pace1" ? "{n}" : k),
+  });
+  ef.calc();
+  return {
+    targetStr: dom["r-target"].textContent,
+    gapStr: dom["r-gap"].textContent,
+    monthsNeeded: Number(dom["r-time"].textContent),
+  };
+}
 
 // 1. Classic 50/30/20 table across $3,500, $5,500, $8,000
 const classic = b.splitFor("classic");
@@ -65,24 +105,20 @@ for (const [label, mode, customArr, shortLabel] of splits) {
     `${label} $${b.money(needs)} $${b.money(wants)} $${b.money(save)} $${b.money(save * 12)}`,
   );
 
-  // Emergency-fund-calc formula: target = essentials * months; pace = Math.ceil(gap / save)
-  const t3 = needs * 3;
-  const t6 = needs * 6;
-  const m3 = Math.ceil(t3 / save);
-  const m6 = Math.ceil(t6 / save);
+  const ef3 = runEmergencyFund(needs, 3, 0, save);
+  const ef6 = runEmergencyFund(needs, 6, 0, save);
   c.expect(
     `efund row ${shortLabel}`,
-    `${shortLabel} $${b.money(needs)} $${b.money(t3)} $${b.money(t6)} ${m3} months ${m6} months`,
+    `${shortLabel} $${b.money(needs)} $${ef3.targetStr} $${ef6.targetStr} ${ef3.monthsNeeded} months ${ef6.monthsNeeded} months`,
   );
 }
 
-// 4. Starter savings example ($2,000 saved against $8,250 3-month target at $1,100/mo)
-const gapWithStarter = 8250 - 2000;
-const monthsWithStarter = Math.ceil(gapWithStarter / 1100);
+// 4. Starter savings example ($2,000 saved against $8,250 3-month target at $1,100/mo) via emergency-fund-calc
+const starterEf = runEmergencyFund(2750, 3, 2000, 1100);
 c.expect("7.5 ceiling", `$8,250 ÷ $1,100 is ${(8250 / 1100).toFixed(1)} months`);
 c.expect(
   "starter 2000",
-  `remaining ${usd(gapWithStarter)} gap takes ${monthsWithStarter} months at $1,100 a month (${usd(gapWithStarter)} ÷ $1,100 = ${(gapWithStarter / 1100).toFixed(2)}, rounded up to ${monthsWithStarter})`,
+  `remaining $${starterEf.gapStr} gap takes ${starterEf.monthsNeeded} months at $1,100 a month ($${starterEf.gapStr} ÷ $1,100 = ${(6250 / 1100).toFixed(2)}, rounded up to ${starterEf.monthsNeeded})`,
 );
 c.close("multiplier 2.4x", (60 / 50) * (20 / 10), 2.4);
 c.expect("multiplier text", "1.2 × 2 = 2.4× (15 months × 2.4 = 36 months)");
