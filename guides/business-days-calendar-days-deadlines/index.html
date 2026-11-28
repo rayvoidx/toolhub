@@ -1,0 +1,158 @@
+<!doctype html><html lang="en" data-theme="auto"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="google-adsense-account" content="ca-pub-6324953789479730">
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<!-- ADSENSE:START (config.yaml adsense_loader=false — gen-html-fit.js 가 토글. 소유 확인은 meta google-adsense-account + ads.txt)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Business days vs calendar days: contract deadlines, Day 1 traps and leap years — Toolhub Guides</title>
+<meta name="description" content="Worked deadline dates for 10, 15, 30, 45 and 60 calendar vs business days, inclusive Day 1 vs exclusive interval counting, and leap-year clamping on 29 February 2028.">
+<link rel="canonical" href="https://tool-hub.me/guides/business-days-calendar-days-deadlines/">
+<link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/guides.css"><link rel="stylesheet" href="/css/app-shell.css"><link rel="icon" href="/icons/icon.svg">
+<meta property="og:type" content="article"><meta property="og:title" content="Business days vs calendar days: contract deadlines, Day 1 traps and leap years"><meta property="og:description" content="Worked deadline dates for 10, 15, 30, 45 and 60 calendar vs business days, inclusive Day 1 vs exclusive interval counting, and leap-year clamping on 29 February 2028."><meta property="og:url" content="https://tool-hub.me/guides/business-days-calendar-days-deadlines/"><meta property="og:image" content="https://tool-hub.me/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Business days vs calendar days: contract deadlines, Day 1 traps and leap years","description":"Worked deadline dates for 10, 15, 30, 45 and 60 calendar vs business days, inclusive Day 1 vs exclusive interval counting, and leap-year clamping on 29 February 2028.","datePublished":"2026-11-28","dateModified":"2026-11-28","inLanguage":"en","author":{"@type":"Person","name":"Jaehyun Park","url":"https://tool-hub.me/about"},"publisher":{"@type":"Organization","name":"Toolhub","url":"https://tool-hub.me/"},"mainEntityOfPage":"https://tool-hub.me/guides/business-days-calendar-days-deadlines/"}</script>
+</head><body><header class="site-header"><a class="brand" href="/"><img src="/icons/icon.svg" alt="" width="28" height="28"><span>Toolhub</span></a><nav aria-label="Site"><a href="/guides/">Guides</a> · <a href="/about">About</a></nav></header>
+<main><article class="guide-article">
+<p class="eyebrow">Work · Schedules and contract deadlines</p>
+<h1>Business days vs calendar days: contract deadlines, Day 1 traps and leap years</h1>
+<p class="lede">Missing a cancellation window or response deadline rarely comes from bad arithmetic. It comes from three silent ambiguities: whether weekends count, whether the trigger date itself is Day 0 or Day 1, and what "one month" means at the end of January or February.</p>
+<p class="meta">By <a href="/about">Jaehyun Park</a> (RAYV STUDIO), who builds and maintains Toolhub · Published <time datetime="2026-11-28">28 November 2026</time> · Updated <time datetime="2026-11-28">28 November 2026</time></p>
+
+<h2>30 calendar days vs 30 business days: 12 extra days on the calendar</h2>
+<p>Every five Monday-to-Friday business days consume one full seven-day week. A 30-business-day notice period is six full workweeks, so it spans at least 42 calendar days before any public holiday is even considered. Under Rule 6(a) of the U.S. Federal Rules of Civil Procedure, statutory periods stated in days default to <strong>calendar days</strong> — counting intermediate Saturdays, Sundays and legal holidays — unless the rule or contract explicitly says "business days" or "working days".</p>
+<p>Starting from Monday 2026-03-02 (excluding the trigger date, as standard forward date addition does in our <a href="/date-add-calc/">date calculator</a>):</p>
+
+<figure style="margin:24px 0;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)">
+<svg viewBox="0 0 640 206" style="width:100%;height:auto;display:block" role="img" aria-label="Span comparison showing calendar days versus weekday-plus-weekend span for 10, 15, 30, 45 and 60 business-day deadlines">
+  <text x="0" y="16" font-size="12" font-weight="700" fill="currentColor">Calendar span of N calendar days vs N business days (starting Monday 2026-03-02)</text>
+  <g transform="translate(0,32)">
+    <text x="0" y="14" font-size="12" font-weight="600" fill="currentColor">10 days</text>
+    <rect x="78" y="2" width="52" height="15" rx="3" fill="#3b82f6"/>
+    <rect x="132" y="2" width="21" height="15" rx="3" fill="#f59e0b"/>
+    <text x="161" y="14" font-size="11.5" fill="currentColor">10 cal (Mar 12) vs 14 cal span for 10 biz (Mar 16)</text>
+  </g>
+  <g transform="translate(0,64)">
+    <text x="0" y="14" font-size="12" font-weight="600" fill="currentColor">15 days</text>
+    <rect x="78" y="2" width="78" height="15" rx="3" fill="#3b82f6"/>
+    <rect x="158" y="2" width="31" height="15" rx="3" fill="#f59e0b"/>
+    <text x="197" y="14" font-size="11.5" fill="currentColor">15 cal (Mar 17) vs 21 cal span for 15 biz (Mar 23)</text>
+  </g>
+  <g transform="translate(0,96)">
+    <text x="0" y="14" font-size="12" font-weight="600" fill="currentColor">30 days</text>
+    <rect x="78" y="2" width="156" height="15" rx="3" fill="#3b82f6"/>
+    <rect x="236" y="2" width="62" height="15" rx="3" fill="#f59e0b"/>
+    <text x="306" y="14" font-size="11.5" fill="currentColor">30 cal (Apr 01) vs 42 cal span for 30 biz (Apr 13)</text>
+  </g>
+  <g transform="translate(0,128)">
+    <text x="0" y="14" font-size="12" font-weight="600" fill="currentColor">45 days</text>
+    <rect x="78" y="2" width="234" height="15" rx="3" fill="#3b82f6"/>
+    <rect x="314" y="2" width="94" height="15" rx="3" fill="#f59e0b"/>
+    <text x="416" y="14" font-size="11.5" fill="currentColor">45 cal vs 63 cal span (May 04)</text>
+  </g>
+  <g transform="translate(0,160)">
+    <text x="0" y="14" font-size="12" font-weight="600" fill="currentColor">60 days</text>
+    <rect x="78" y="2" width="312" height="15" rx="3" fill="#3b82f6"/>
+    <rect x="392" y="2" width="125" height="15" rx="3" fill="#f59e0b"/>
+    <text x="525" y="14" font-size="11.5" fill="currentColor">84 cal (May 25)</text>
+  </g>
+  <g transform="translate(78,196)" font-size="11" fill="currentColor" opacity="0.8">
+    <rect x="0" y="-9" width="10" height="10" rx="2" fill="#3b82f6"/><text x="15" y="0">Weekdays counted (Mon–Fri)</text>
+    <rect x="195" y="-9" width="10" height="10" rx="2" fill="#f59e0b"/><text x="210" y="0">Weekend days skipped (+4 days per 10 business days)</text>
+  </g>
+</svg>
+</figure>
+
+<div class="table-wrap"><table>
+<caption>Deadlines starting Monday 2026-03-02 (weekends excluded on business-day column, before holidays)</caption>
+<thead><tr><th>Stated window</th><th class="n">Calendar deadline</th><th class="n">Business-day deadline</th><th class="n">Calendar span</th><th class="n">Weekend days added</th></tr></thead>
+<tbody>
+<tr><td>10 days</td><td class="n">2026-03-12</td><td class="n">2026-03-16</td><td class="n">14 days</td><td class="n">+4 days</td></tr>
+<tr><td>15 days</td><td class="n">2026-03-17</td><td class="n">2026-03-23</td><td class="n">21 days</td><td class="n">+6 days</td></tr>
+<tr><td>30 days</td><td class="n">2026-04-01</td><td class="n">2026-04-13</td><td class="n">42 days</td><td class="n">+12 days</td></tr>
+<tr><td>45 days</td><td class="n">2026-04-16</td><td class="n">2026-05-04</td><td class="n">63 days</td><td class="n">+18 days</td></tr>
+<tr><td>60 days</td><td class="n">2026-05-01</td><td class="n">2026-05-25</td><td class="n">84 days</td><td class="n">+24 days</td></tr>
+</tbody></table></div>
+
+<div class="note"><p><strong>Watch Saturday in U.S. mortgage disclosures.</strong> "Business day" does not even have a single federal definition. Under Regulation Z (12 CFR § 1026.2(a)(6)), the general definition is a day on which the creditor's offices are open to the public for substantially all business functions — typically Monday through Friday. Yet for the three-day right of rescission on a refinance and certain TILA-RESPA waiting periods, Regulation Z switches to its "specific" rule: all calendar days except Sundays and federal legal public holidays, meaning <strong>Saturday counts as a business day</strong>.</p></div>
+
+<h2>Inclusive (Day 1) vs exclusive (Day 0): the one-day fencepost error</h2>
+<p>Ask how many days sit between 2026-03-02 and 2026-03-31 in our <a href="/date-diff-calc/">date difference calculator</a> and there are two valid answers depending on whether both endpoints belong to the set:</p>
+<div class="table-wrap"><table>
+<caption>2026-03-02 to 2026-03-31 — exclusive interval vs inclusive date range</caption>
+<thead><tr><th>Counting mode</th><th>Typical real-world use</th><th class="n">Total days</th><th class="n">Weekdays</th><th class="n">Weekend days</th></tr></thead>
+<tbody>
+<tr><td>Exclusive (interval)</td><td>Court filings, notice periods ("within 30 days after"), hotel nights (696 hours)</td><td class="n">29 days</td><td class="n">21</td><td class="n">8</td></tr>
+<tr><td>Inclusive (both ends)</td><td>PTO / vacation requests, multi-day event passes, retail policies counting delivery day as Day 1</td><td class="n">30 days</td><td class="n">22</td><td class="n">8</td></tr>
+</tbody></table></div>
+<p>Rule 6(a)(1)(A) codifies the exclusive convention for federal court deadlines: "exclude the day of the event that triggers the period." By contrast, an employee booking Monday 2026-03-02 through Tuesday 2026-03-31 off from work is absent on both the start date and the end date — 22 weekdays out of the office, not 21. Whenever a merchant's return policy says "within 30 days of delivery", check whether the carrier's delivery date is treated as Day 0 (deadline 2026-04-01) or Day 1 (deadline 2026-03-31).</p>
+
+<h2>Month-end clamping and the 2028 leap-year boundary</h2>
+<p>Under the Gregorian calendar rule maintained by the U.S. Naval Observatory and NIST, years divisible by 4 are leap years (except century years not divisible by 400), making <strong>2028</strong> the next leap year with a <strong>2028-02-29</strong>. That extra Tuesday changes both day-count intervals and month-end rollovers:</p>
+<ul>
+<li><strong>February interval length:</strong> 2027-02-01 to 2027-03-01 is 28 days (672 hours: 20 weekdays and 8 weekend days), whereas 2028-02-01 to 2028-03-01 is 29 days (696 hours: 21 weekdays and 8 weekend days).</li>
+<li><strong>End-of-month clamping:</strong> Adding 1 calendar month to 2027-01-31 clamps to 2027-02-28 because February 2027 has no 29th, 30th or 31st. Adding 1 calendar month to 2028-01-31 clamps to 2028-02-29.</li>
+<li><strong>Annual renewal from Leap Day:</strong> Adding 1 year to a contract signed on 2028-02-29 clamps to 2029-02-28, spanning 365 calendar days. Notice also that month addition is not associative: 2027-01-31 + 1 month gives 2027-02-28, and adding + 1 month again from 2027-02-28 lands on 2027-03-28, whereas adding 2 months directly to 2027-01-31 lands on 2027-03-31. Our date calculator always anchors multi-month jumps to the original start date so month-end dates do not drift inward.</li>
+</ul>
+
+<h2>Checklist before locking a contract or filing date</h2>
+<ul>
+<li><strong>Write the calendar date next to the day count.</strong> "30 calendar days (on or before 1 April 2026)" removes all Day 0 / Day 1 disputes before anyone signs.</li>
+<li><strong>Check what happens when the final day is a weekend or holiday.</strong> Courts (FRCP Rule 6(a)(1)(C)) roll forward to the next court day, while many private option-exercise and lease-termination clauses require notice <em>prior to</em> expiration — rolling backward in practice if offices are closed.</li>
+<li><strong>Subtract public holidays manually after weekday counting.</strong> Pure weekday calculators skip Saturdays and Sundays; federal, state or bank holidays push a business-day deadline out by 1 additional weekday per holiday inside the window.</li>
+<li><strong>Keep interval and target-date checks open together.</strong> Pair both date tools in <a href="/workspace/">Toolhub Workspace</a> when auditing notice clauses across multiple milestones.</li>
+</ul>
+
+<h2>Tools used in this guide</h2>
+<ul class="tools-used">
+<li><a href="/date-add-calc/">Date Add / Subtract Calculator</a> — forward and backward calendar-day, business-day, month and year deadlines with month-end clamping</li>
+<li><a href="/date-diff-calc/">Date Difference Calculator</a> — exclusive interval vs inclusive endpoint day, weekday, weekend and hour counts</li>
+<li><a href="/workspace/">Toolhub Workspace</a> — side-by-side workspace for checking multi-stage project or notice schedules</li>
+</ul>
+<h2>What this guide does not cover</h2>
+<p class="note">Country- or state-specific public holiday calendars, court-specific electronic filing cutoffs (such as local time-zone rules before midnight), or 30/360 vs Actual/365 bond day-count conventions. Legal citations illustrate published U.S. federal rules and are not legal advice.</p>
+<h2>Sources</h2>
+<ol class="sources">
+<li><a href="https://www.law.cornell.edu/rules/frcp/rule_6" rel="noopener">Federal Rules of Civil Procedure — Rule 6. Computing and Extending Time; Time for Motion Papers (Legal Information Institute, Cornell Law School)</a>, accessed 28 November 2026. Excluding the trigger day, counting intermediate weekends in calendar-day periods, and weekend/holiday roll-forward.</li>
+<li><a href="https://www.consumerfinance.gov/rules-policy/regulations/1026/2/" rel="noopener">Consumer Financial Protection Bureau (CFPB) — 12 CFR § 1026.2(a)(6) (Regulation Z Definitions: Business day)</a>, accessed 28 November 2026. General weekday business-day rule vs specific six-day rescission rule including Saturdays.</li>
+<li><a href="https://aa.usno.navy.mil/faq/calendars" rel="noopener">U.S. Naval Observatory (USNO) — Introduction to Calendars and Leap-Year Rules</a>, accessed 28 November 2026. Gregorian leap-year divisibility rule (2028 leap year vs non-leap 2027/2029).</li>
+</ol>
+<p class="meta">Every figure above is recomputed by a script kept with the site source. Found an error? <a href="/contact">Tell us</a> with the numbers you used.</p>
+</article></main>
+<footer class="guide-footer"><a href="/">All tools</a> · <a href="/guides/">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact &amp; corrections</a> · <a href="/privacy">Privacy Policy</a></footer>
+<script src="/js/toolhub.js" defer></script>
+</body></html>

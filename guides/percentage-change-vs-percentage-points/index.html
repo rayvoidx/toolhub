@@ -1,0 +1,168 @@
+<!doctype html><html lang="en" data-theme="auto"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="google-adsense-account" content="ca-pub-6324953789479730">
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<!-- ADSENSE:START (config.yaml adsense_loader=false — gen-html-fit.js 가 토글. 소유 확인은 meta google-adsense-account + ads.txt)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Percentage change vs percentage points, loss recovery and margin math — Toolhub Guides</title>
+<meta name="description" content="Why +20% then −20% leaves −4%, how much gain recovers a 50% drawdown, when to write percentage points or basis points instead of %, and markup vs gross margin.">
+<link rel="canonical" href="https://tool-hub.me/guides/percentage-change-vs-percentage-points/">
+<link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/guides.css"><link rel="stylesheet" href="/css/app-shell.css"><link rel="icon" href="/icons/icon.svg">
+<meta property="og:type" content="article"><meta property="og:title" content="Percentage change vs percentage points, loss recovery and margin math"><meta property="og:description" content="Why +20% then −20% leaves −4%, how much gain recovers a 50% drawdown, when to write percentage points or basis points instead of %, and markup vs gross margin."><meta property="og:url" content="https://tool-hub.me/guides/percentage-change-vs-percentage-points/"><meta property="og:image" content="https://tool-hub.me/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Percentage change vs percentage points, loss recovery and margin math","description":"Why +20% then −20% leaves −4%, how much gain recovers a 50% drawdown, when to write percentage points or basis points instead of %, and markup vs gross margin.","datePublished":"2026-11-28","dateModified":"2026-11-28","inLanguage":"en","author":{"@type":"Person","name":"Jaehyun Park","url":"https://tool-hub.me/about"},"publisher":{"@type":"Organization","name":"Toolhub","url":"https://tool-hub.me/"},"mainEntityOfPage":"https://tool-hub.me/guides/percentage-change-vs-percentage-points/"}</script>
+</head><body><header class="site-header"><a class="brand" href="/"><img src="/icons/icon.svg" alt="" width="28" height="28"><span>Toolhub</span></a><nav aria-label="Site"><a href="/guides/">Guides</a> · <a href="/about">About</a></nav></header>
+<main><article class="guide-article">
+<p class="eyebrow">Money · Rates, margins and percentages</p>
+<h1>Percentage change vs percentage points, loss recovery and margin math</h1>
+<p class="lede">Three everyday errors share the same root cause: dividing by the wrong base. Moving from 4% to 6% is either 2 percentage points or 50%, a 20% gain followed by a 20% drop loses 4%, and a 25% markup is only a 20% gross margin.</p>
+<p class="meta">By <a href="/about">Jaehyun Park</a> (RAYV STUDIO), who builds and maintains Toolhub · Published <time datetime="2026-11-28">28 November 2026</time> · Updated <time datetime="2026-11-28">28 November 2026</time></p>
+
+<h2>Why +20% followed by −20% is −4%, not break-even</h2>
+<p>Every percentage step multiplies the value immediately before it. Start with $100.00 in our <a href="/percent-calc/">percentage calculator</a>: a 20% increase adds $20.00 to reach $120.00. A 20% decrease next takes one-fifth of $120.00 — $24.00, not $20.00 — leaving $96.00, a net −4.00% loss. Reversing the sequence gives the identical answer: −20% takes $100.00 down to $80.00, and +20% of $80.00 adds $16.00 to finish at $96.00.</p>
+
+<div class="example">
+<p class="formula">(1 + r) × (1 − r) = 1 − r²</p>
+<p>Equal percentage gains and losses always leave a net loss of r². At r = 20% (0.20), r² = 0.04, so 4.00% disappears; at r = 50% (0.50), r² = 0.25, leaving $75.00 (−25.00%).</p>
+</div>
+
+<p>To get back to the original starting value after a drop of <em>d</em>, the recovery gain has to act on the smaller base 1 − <em>d</em>, so the required gain is <em>d</em> ÷ (1 − <em>d</em>):</p>
+
+<figure style="margin:24px 0;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)">
+<svg viewBox="0 0 640 210" style="width:100%;height:auto;display:block" role="img" aria-label="Asymmetric drawdown vs recovery chart showing required gain rising nonlinearly from +11.11% at -10% loss to +300.00% at -75% loss">
+  <text x="0" y="16" font-size="12" font-weight="700" fill="currentColor">Asymmetry of drawdowns — percentage gain needed just to return to $100</text>
+  <g transform="translate(0,32)">
+    <text x="0" y="14" font-size="12" font-weight="600" fill="currentColor">−10% ($90)</text>
+    <rect x="104" y="2" width="14" height="16" rx="3" fill="#e11d48" opacity="0.8"/>
+    <rect x="122" y="2" width="16" height="16" rx="3" fill="#10b981"/>
+    <text x="146" y="14" font-size="11.5" fill="currentColor">+11.11% to break even</text>
+  </g>
+  <g transform="translate(0,66)">
+    <text x="0" y="14" font-size="12" font-weight="600" fill="currentColor">−20% ($80)</text>
+    <rect x="104" y="2" width="28" height="16" rx="3" fill="#e11d48" opacity="0.8"/>
+    <rect x="136" y="2" width="35" height="16" rx="3" fill="#10b981"/>
+    <text x="179" y="14" font-size="11.5" fill="currentColor">+25.00% to break even</text>
+  </g>
+  <g transform="translate(0,100)">
+    <text x="0" y="14" font-size="12" font-weight="600" fill="currentColor">−40% ($60)</text>
+    <rect x="104" y="2" width="56" height="16" rx="3" fill="#e11d48" opacity="0.8"/>
+    <rect x="164" y="2" width="93" height="16" rx="3" fill="#10b981"/>
+    <text x="265" y="14" font-size="11.5" fill="currentColor">+66.67% to break even</text>
+  </g>
+  <g transform="translate(0,134)">
+    <text x="0" y="14" font-size="12" font-weight="600" fill="currentColor">−50% ($50)</text>
+    <rect x="104" y="2" width="70" height="16" rx="3" fill="#e11d48" opacity="0.8"/>
+    <rect x="178" y="2" width="140" height="16" rx="3" fill="#10b981"/>
+    <text x="326" y="14" font-size="11.5" fill="currentColor">+100.00% to break even</text>
+  </g>
+  <g transform="translate(0,168)">
+    <text x="0" y="14" font-size="12" font-weight="600" fill="currentColor">−75% ($25)</text>
+    <rect x="104" y="2" width="105" height="16" rx="3" fill="#e11d48" opacity="0.8"/>
+    <rect x="213" y="2" width="280" height="16" rx="3" fill="#10b981"/>
+    <text x="501" y="14" font-size="11.5" fill="currentColor">+300.00%</text>
+  </g>
+</svg>
+</figure>
+
+<div class="table-wrap"><table>
+<caption>Drawdown on $100 and exact percentage gain needed to recover</caption>
+<thead><tr><th>Initial loss</th><th class="n">Value left</th><th class="n">Dollar gap</th><th class="n">Gain needed to break even</th></tr></thead>
+<tbody>
+<tr><td>−10%</td><td class="n">$90.00</td><td class="n">$10.00</td><td class="n">+11.11%</td></tr>
+<tr><td>−20%</td><td class="n">$80.00</td><td class="n">$20.00</td><td class="n">+25.00%</td></tr>
+<tr><td>−25%</td><td class="n">$75.00</td><td class="n">$25.00</td><td class="n">+33.33%</td></tr>
+<tr><td>−40%</td><td class="n">$60.00</td><td class="n">$40.00</td><td class="n">+66.67%</td></tr>
+<tr><td>−50%</td><td class="n">$50.00</td><td class="n">$50.00</td><td class="n">+100.00%</td></tr>
+<tr><td>−75%</td><td class="n">$25.00</td><td class="n">$75.00</td><td class="n">+300.00%</td></tr>
+</tbody></table></div>
+
+<h2>Percentage change vs percentage points (and basis points)</h2>
+<p>When the number moving is <em>already</em> a percentage — an interest rate, a tax rate, an unemployment rate, or a website conversion rate — subtracting the two figures gives <strong>percentage points</strong>, whereas dividing the change by the starting rate gives a <strong>relative percentage change</strong>. Both the U.S. Bureau of Labor Statistics and the UK Office for National Statistics specify writing "percentage points" in full whenever you subtract two rates, because writing "rose by 2%" is ambiguous.</p>
+<p>In bond and mortgage markets, 1 percentage point is split into 100 <strong>basis points (bps)</strong> so traders never confuse an additive move with a relative one. Moving a mortgage rate from 4.0% to 6.0% is +2.0 percentage points (+200 bps), which increases the interest rate itself by +50.0% relative to 4.0%:</p>
+<div class="table-wrap"><table>
+<caption>Subtracting two rates (percentage points) vs dividing by the starting rate (relative %)</caption>
+<thead><tr><th>Metric</th><th class="n">From → To</th><th class="n">Percentage points</th><th class="n">Basis points</th><th class="n">Relative change</th></tr></thead>
+<tbody>
+<tr><td>Checkout conversion</td><td class="n">2.5% → 3.0%</td><td class="n">+0.5 pp</td><td class="n">+50 bps</td><td class="n">+20.0%</td></tr>
+<tr><td>Mortgage or CD rate</td><td class="n">4.0% → 6.0%</td><td class="n">+2.0 pp</td><td class="n">+200 bps</td><td class="n">+50.0%</td></tr>
+<tr><td>Manufacturing defect rate</td><td class="n">5.0% → 4.0%</td><td class="n">−1.0 pp</td><td class="n">−100 bps</td><td class="n">−20.0%</td></tr>
+<tr><td>Combined fee or tax rate</td><td class="n">10.0% → 12.5%</td><td class="n">+2.5 pp</td><td class="n">+250 bps</td><td class="n">+25.0%</td></tr>
+</tbody></table></div>
+
+<h2>Markup vs gross margin: same dollar profit, two denominators</h2>
+<p>Retailers and freelancers run into the exact same base shift when pricing goods. <strong>Markup</strong> divides gross profit by unit <em>cost</em>; <strong>gross margin</strong> divides the same dollar profit by selling <em>price</em>. Because selling price is larger than cost whenever you make a profit, gross margin is always a smaller percentage than markup.</p>
+<p>Take a product that costs $80.00 to make or buy, and run five pricing targets through our <a href="/margin-calc/">margin and markup calculator</a>:</p>
+<div class="table-wrap"><table>
+<caption>$80.00 unit cost — markup on cost vs gross margin on selling price</caption>
+<thead><tr><th>Pricing rule</th><th class="n">Selling price</th><th class="n">Gross profit</th><th class="n">Markup</th><th class="n">Gross margin</th></tr></thead>
+<tbody>
+<tr><td>+15.0% markup</td><td class="n">$92.00</td><td class="n">$12.00</td><td class="n">15.0%</td><td class="n">13.0%</td></tr>
+<tr><td>+25.0% markup</td><td class="n">$100.00</td><td class="n">$20.00</td><td class="n">25.0%</td><td class="n">20.0%</td></tr>
+<tr><td>25.0% target margin</td><td class="n">$106.67</td><td class="n">$26.67</td><td class="n">33.3%</td><td class="n">25.0%</td></tr>
+<tr><td>+50.0% markup</td><td class="n">$120.00</td><td class="n">$40.00</td><td class="n">50.0%</td><td class="n">33.3%</td></tr>
+<tr><td>+100.0% markup (keystone)</td><td class="n">$160.00</td><td class="n">$80.00</td><td class="n">100.0%</td><td class="n">50.0%</td></tr>
+</tbody></table></div>
+<p>Confusing the two is expensive when you run a sale. If you mark an $80.00 item up by 25.0% to $100.00 believing you have a "25% cushion", and then run a 20% storewide promotion in our <a href="/discount-calc/">discount calculator</a>, 20% off $100.00 cuts $20.00 from the ticket — dropping revenue right back to $80.00 and wiping out 100% of your gross profit ($0.00 left). Discounts come off selling price, so your maximum break-even discount equals your <strong>gross margin</strong> (20.0%), never your markup (25.0%). If you need a true 25.0% gross margin on $80.00 cost, divide cost by (1 − 0.25) = $106.67, which is a 33.3% markup.</p>
+
+<h2>Quick sanity rules before quoting a percentage</h2>
+<ul>
+<li><strong>Name the denominator whenever a rate changes.</strong> Write "up 2.0 percentage points (from 4.0% to 6.0%, a 50.0% relative jump)" so neither reading can mislead.</li>
+<li><strong>Never average multi-year percentage returns with a simple mean.</strong> A +50% year followed by a −50% year has an arithmetic average of 0%, yet $100.00 becomes $75.00 (−25.00% cumulative).</li>
+<li><strong>Compare discount rates against gross margin, not markup.</strong> Any promotional % off that exceeds gross margin sells every unit below cost.</li>
+</ul>
+
+<h2>Tools used in this guide</h2>
+<ul class="tools-used">
+<li><a href="/percent-calc/">Percentage Calculator</a> — percentage of a base, forward increase/decrease, and relative % change between two values</li>
+<li><a href="/margin-calc/">Margin Calculator</a> — selling price from target gross margin, and side-by-side gross margin vs markup</li>
+<li><a href="/discount-calc/">Discount Calculator</a> — promotional markdowns against list price</li>
+<li><a href="/workspace/">Toolhub Workspace</a> — run margin and promotional discount checks side by side</li>
+</ul>
+<h2>What this guide does not cover</h2>
+<p class="note">Time-weighted vs money-weighted portfolio returns (IRR), logarithmic continuous returns, payment-processing fees or shipping deductions from net margin, and state sales-tax rules on discounts (covered in our <a href="/guides/unit-price-and-discount-stacking/">unit prices and stacked discounts guide</a>).</p>
+<h2>Sources</h2>
+<ol class="sources">
+<li><a href="https://www.bls.gov/cpi/factsheets/calculating-index-point-changes.htm" rel="noopener">U.S. Bureau of Labor Statistics (BLS) — Calculating Index Point Changes and Percentage Changes</a>, accessed 28 November 2026. Arithmetic difference in points versus relative percentage change.</li>
+<li><a href="https://style.ons.gov.uk/writing-for-the-web/numbers/percentages/" rel="noopener">UK Office for National Statistics (ONS) — Style Guide: Percentages and percentage points</a>, accessed 28 November 2026. Distinction between percentage change and percentage-point change.</li>
+<li><a href="https://www.sba.gov/business-guide/manage-your-business/manage-your-finances" rel="noopener">U.S. Small Business Administration (SBA) — Manage your finances</a>, accessed 28 November 2026. Gross profit, gross margin on revenue, and cost-based markup conventions.</li>
+</ol>
+<p class="meta">Every figure above is recomputed by a script kept with the site source. Found an error? <a href="/contact">Tell us</a> with the numbers you used.</p>
+</article></main>
+<footer class="guide-footer"><a href="/">All tools</a> · <a href="/guides/">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact &amp; corrections</a> · <a href="/privacy">Privacy Policy</a></footer>
+<script src="/js/toolhub.js" defer></script>
+</body></html>
