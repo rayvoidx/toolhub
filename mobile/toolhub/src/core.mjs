@@ -1,4 +1,4 @@
-export const KINDS = ['unit', 'discount', 'split', 'trip', 'compound', 'convert', 'health'];
+export const KINDS = ['unit', 'discount', 'split', 'trip', 'compound', 'salary', 'loan', 'convert', 'health'];
 export const LIMITS = { projects: 30, entries: 30, tasks: 30, backup: 1500000 };
 export const LABELS = {
   unit: '장보기 비교',
@@ -6,6 +6,8 @@ export const LABELS = {
   split: '모임 정산',
   trip: '여행 예산',
   compound: '복리·적금',
+  salary: '연봉 실수령',
+  loan: '대출 상환',
   convert: '단위 변환',
   health: 'BMI·칼로리',
 };
@@ -15,6 +17,8 @@ export const defaults = {
   split: { total: 50000, people: 3 },
   trip: { distance: 320, efficiency: 12, fuel: 1700, toll: 15000, parking: 10000, people: 4 },
   compound: { principal: 10000000, monthly: 300000, rate: 5, years: 10 },
+  salary: { annual: 50000000, nonTaxMonthly: 200000, dependents: 1 },
+  loan: { amount: 100000000, rate: 4.5, years: 20 },
   convert: { category: 'length', value: 100, unit: 'cm' },
   health: { height: 172, weight: 68, age: 32, sex: 'male', activity: 1.55 },
 };
@@ -64,13 +68,40 @@ function signedNumber(value, name, min, max) {
   if (!Number.isFinite(n) || n < min || n > max) throw Error(`${name}: ${min}~${max} 범위를 입력하세요.`);
   return n;
 }
-function won(v, n) { return number(v, n, 0, 1e9, true); }
+function won(v, n, max = 1e9) { return number(v, n, 0, max, true); }
 export function splitWon(total, people) {
   total = number(total, '총액', 0, 1e12, true);
   people = number(people, '인원', 1, 100, true);
   const base = Math.floor(total / people), extra = total % people;
   return { total, people, base, extra, shares: Array.from({ length: people }, (_, i) => base + (i < extra ? 1 : 0)) };
 }
+
+function krAnnualIncomeTax(taxable) {
+  if (taxable <= 0) return 0;
+  const brackets = [
+    [14000000, 0.06, 0],
+    [50000000, 0.15, 1260000],
+    [88000000, 0.24, 5760000],
+    [150000000, 0.35, 15440000],
+    [300000000, 0.38, 19940000],
+    [500000000, 0.40, 25940000],
+    [1000000000, 0.42, 35940000],
+    [Infinity, 0.45, 65940000],
+  ];
+  for (const [cap, rate, sub] of brackets) {
+    if (taxable <= cap) return Math.max(0, taxable * rate - sub);
+  }
+  return 0;
+}
+
+function earnedIncomeDeduction(annual) {
+  if (annual <= 5000000) return annual * 0.7;
+  if (annual <= 15000000) return 3500000 + (annual - 5000000) * 0.4;
+  if (annual <= 45000000) return 7500000 + (annual - 15000000) * 0.15;
+  if (annual <= 100000000) return 12000000 + (annual - 45000000) * 0.05;
+  return Math.min(20000000, 14750000 + (annual - 100000000) * 0.02);
+}
+
 export function calculate(kind, input) {
   if (!KINDS.includes(kind) || !input || typeof input !== 'object') throw Error('지원하지 않는 계산입니다.');
   if (kind === 'unit') {
@@ -121,6 +152,59 @@ export function calculate(kind, input) {
     const gainPct = contributed === 0 ? 0 : (totalInterest / contributed) * 100;
     return { principal, monthly, rate, years, contributed, totalInterest, finalBalance, gainPct, series };
   }
+  if (kind === 'salary') {
+    const annual = number(input.annual, '연봉', 1000000, 1e10, true);
+    const nonTaxMonthly = won(input.nonTaxMonthly, '비과세 식대(월)', 2000000);
+    const dependents = number(input.dependents, '부양가족 수(본인 포함)', 1, 11, true);
+    const grossMonthly = Math.round(annual / 12);
+    const taxableMonthly = Math.max(0, grossMonthly - nonTaxMonthly);
+    const pensionBase = Math.min(6170000, Math.max(390000, taxableMonthly));
+    const pension = taxableMonthly === 0 ? 0 : Math.floor((pensionBase * 0.045) / 10) * 10;
+    const health = Math.floor((taxableMonthly * 0.03545) / 10) * 10;
+    const care = Math.floor((health * 0.1295) / 10) * 10;
+    const employment = Math.floor((taxableMonthly * 0.009) / 10) * 10;
+    const insurance = pension + health + care + employment;
+    const taxableAnnual = Math.max(0, taxableMonthly * 12);
+    const earnedDed = earnedIncomeDeduction(taxableAnnual);
+    const personalDed = dependents * 1500000;
+    const pensionDed = pension * 12;
+    const taxBase = Math.max(0, taxableAnnual - earnedDed - personalDed - pensionDed - 130000);
+    const rawAnnualTax = krAnnualIncomeTax(taxBase);
+    const taxCredit = rawAnnualTax <= 1300000 ? rawAnnualTax * 0.55 : 715000 + (rawAnnualTax - 1300000) * 0.30;
+    const cappedCredit = Math.min(taxCredit, taxableAnnual <= 33000000 ? 740000 : taxableAnnual <= 70000000 ? 660000 : 500000);
+    const incomeTax = Math.floor(Math.max(0, rawAnnualTax - cappedCredit) / 12 / 10) * 10;
+    const localTax = Math.floor((incomeTax * 0.1) / 10) * 10;
+    const tax = incomeTax + localTax;
+    const totalDeduction = insurance + tax;
+    const netMonthly = Math.max(0, grossMonthly - totalDeduction);
+    const effectiveRate = grossMonthly === 0 ? 0 : (totalDeduction / grossMonthly) * 100;
+    return { annual, grossMonthly, nonTaxMonthly, dependents, pension, health, care, employment, insurance, incomeTax, localTax, tax, totalDeduction, netMonthly, effectiveRate };
+  }
+  if (kind === 'loan') {
+    const amount = number(input.amount, '대출 원금', 100000, 1e11, true);
+    const rate = number(input.rate, '연 이자율', 0, 50);
+    const years = number(input.years, '상환 기간(년)', 1, 50, true);
+    const n = years * 12;
+    const r = rate / 100 / 12;
+    const amortMonthly = r === 0 ? Math.round(amount / n) : Math.round((amount * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1));
+    const amortTotal = amortMonthly * n;
+    const amortInterest = Math.max(0, amortTotal - amount);
+    const equalPrincipal = amount / n;
+    const equalFirst = Math.round(equalPrincipal + amount * r);
+    const equalLast = Math.round(equalPrincipal + equalPrincipal * r);
+    const equalInterest = Math.round((amount * r * (n + 1)) / 2);
+    const equalTotal = amount + equalInterest;
+    const bulletMonthly = Math.round(amount * r);
+    const bulletInterest = bulletMonthly * n;
+    const bulletTotal = amount + bulletInterest;
+    return {
+      amount, rate, years, months: n,
+      amortized: { monthly: amortMonthly, interest: amortInterest, total: amortTotal },
+      equal: { first: equalFirst, last: equalLast, interest: equalInterest, total: equalTotal },
+      bullet: { monthly: bulletMonthly, interest: bulletInterest, total: bulletTotal },
+      savedEqualVsAmort: Math.max(0, amortInterest - equalInterest),
+    };
+  }
   if (kind === 'convert') {
     const category = input.category;
     const table = CONVERT_TABLE[category];
@@ -163,7 +247,7 @@ export function calculate(kind, input) {
     healthyMax: Math.round(22.9 * hM * hM * 10) / 10,
   };
 }
-export function emptyState() { return { version: 1, projects: [], favorites: ['unit', 'compound'], recent: [] }; }
+export function emptyState() { return { version: 1, projects: [], favorites: ['unit', 'salary', 'compound'], recent: [] }; }
 export function id() { return globalThis.crypto.randomUUID(); }
 function str(v, max, name) { if (typeof v !== 'string' || v.length > max || !v.trim()) throw Error(`${name} 형식이 잘못되었습니다.`); return v; }
 function date(v) { str(v, 40, '날짜'); if (!Number.isFinite(Date.parse(v))) throw Error('날짜 형식이 잘못되었습니다.'); return v; }
@@ -215,6 +299,8 @@ export function summary(kind, input) {
   if (kind === 'split') return `${f(r.total)}원 / ${r.people}명 · ${r.extra ? `${r.extra}명 ${f(r.base + 1)}원, ${r.people - r.extra}명 ${f(r.base)}원` : `1인 ${f(r.base)}원`}`;
   if (kind === 'trip') return `총 ${f(r.total)}원 · 연료 ${f(r.fuelCost)}원 · ${r.split.people}명 분담`;
   if (kind === 'compound') return `${r.years}년 후 ${f(r.finalBalance)}원 · 원금 ${f(r.contributed)}원 + 이자 ${f(r.totalInterest)}원 (+${f(r.gainPct)}%)`;
+  if (kind === 'salary') return `월 실수령 ${f(r.netMonthly)}원 · 총 공제 ${f(r.totalDeduction)}원 (실효 공제율 ${f(r.effectiveRate)}%)`;
+  if (kind === 'loan') return `원리금균등 월 ${f(r.amortized.monthly)}원 · 총이자 ${f(r.amortized.interest)}원 (원금균등 시 ${f(r.savedEqualVsAmort)}원 절감)`;
   if (kind === 'convert') return `${f(r.sourceValue)} ${r.sourceUnit} → ${r.items.filter(x => x.code !== r.sourceUnit).slice(0, 2).map(x => `${f(x.value)} ${x.code}`).join(' · ')}`;
   return `BMI ${f(r.bmi)} (${r.band}) · 유지 ${f(r.tdee)}kcal · 기초대사 ${f(r.bmr)}kcal`;
 }

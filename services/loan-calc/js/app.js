@@ -324,8 +324,60 @@
       balloonLineEl.hidden = true;
     }
 
+    renderLoanVisual(state.P, m, sel);
     renderCompare(all, sel);
     renderSchedule(m.rows);
+  }
+
+  function renderLoanVisual(principal, m, sel) {
+    var host = $("th-loan-chart");
+    if (!host) {
+      host = document.createElement("div");
+      host.id = "th-loan-chart";
+      host.style.cssText = "margin:14px 0 18px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);";
+      if (compareEl && compareEl.parentNode) compareEl.parentNode.insertBefore(host, compareEl);
+      else bodyEl.appendChild(host);
+    }
+    var total = Math.max(m.totalPayment, 1);
+    var pShare = Math.min(100, Math.round((principal / total) * 100));
+    var iShare = Math.max(0, 100 - pShare);
+    var circ = 2 * Math.PI * 34;
+    var pLen = (principal / total) * circ;
+    var iLen = Math.max(0, circ - pLen);
+
+    // Sample balance payoff curve up to 24 points
+    var rows = m.rows || [];
+    var step = Math.max(1, Math.floor(rows.length / 24));
+    var pts = [{ k: 0, bal: principal }];
+    for (var idx = step - 1; idx < rows.length; idx += step) pts.push({ k: rows[idx].k, bal: rows[idx].balance });
+    if (rows.length && pts[pts.length - 1].k !== rows[rows.length - 1].k) {
+      pts.push({ k: rows[rows.length - 1].k, bal: rows[rows.length - 1].balance });
+    }
+    var bw = 220, bh = 86, maxB = Math.max(principal, 1), n = Math.max(pts.length - 1, 1);
+    var poly = [];
+    for (var pi = 0; pi < pts.length; pi++) {
+      var x = 6 + (pi / n) * (bw - 12);
+      var y = 10 + (1 - pts[pi].bal / maxB) * (bh - 24);
+      poly.push(x.toFixed(1) + "," + y.toFixed(1));
+    }
+    var area = "6," + (bh - 14) + " " + poly.join(" ") + " " + (bw - 6) + "," + (bh - 14);
+    host.innerHTML =
+      "<div style=\"display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;\">" +
+      "<svg viewBox=\"0 0 92 92\" style=\"width:88px;height:88px;flex-shrink:0;\" role=\"img\" aria-label=\"Principal vs interest share\">" +
+      "<circle cx=\"46\" cy=\"46\" r=\"34\" fill=\"none\" stroke=\"var(--line)\" stroke-width=\"12\"/>" +
+      "<circle cx=\"46\" cy=\"46\" r=\"34\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"12\" stroke-dasharray=\"" + pLen.toFixed(1) + " " + circ.toFixed(1) + "\" transform=\"rotate(-90 46 46)\"/>" +
+      "<circle cx=\"46\" cy=\"46\" r=\"34\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"12\" stroke-dasharray=\"" + iLen.toFixed(1) + " " + circ.toFixed(1) + "\" stroke-dashoffset=\"" + (-pLen).toFixed(1) + "\" transform=\"rotate(-90 46 46)\"/>" +
+      "<text x=\"46\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\">" + iShare + "%</text></svg>" +
+      "<div style=\"min-width:0;\">" +
+      "<div style=\"display:flex;gap:12px;flex-wrap:wrap;font-size:12px;margin-bottom:6px;\">" +
+      "<span><span style=\"display:inline-block;width:8px;height:8px;border-radius:50%;background:#0284c7;margin-right:5px;\"></span>Principal <b style=\"color:var(--ink);font-size:12px;\">" + pShare + "%</b></span>" +
+      "<span><span style=\"display:inline-block;width:8px;height:8px;border-radius:50%;background:#f59e0b;margin-right:5px;\"></span>Interest <b style=\"color:var(--ink);font-size:12px;\">" + iShare + "%</b> (" + methodName(sel) + ")</span></div>" +
+      "<svg viewBox=\"0 0 " + bw + " " + bh + "\" style=\"width:100%;max-height:84px;display:block;\" role=\"img\" aria-label=\"Remaining balance curve\">" +
+      "<polygon points=\"" + area + "\" fill=\"#0284c7\" fill-opacity=\"0.16\"/>" +
+      "<polyline points=\"" + poly.join(" ") + "\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>" +
+      "<text x=\"6\" y=\"" + (bh - 2) + "\" font-size=\"10\" fill=\"currentColor\" opacity=\"0.6\">Start</text>" +
+      "<text x=\"" + (bw - 6) + "\" y=\"" + (bh - 2) + "\" text-anchor=\"end\" font-size=\"10\" fill=\"currentColor\" opacity=\"0.6\">" + rows.length + " mo</text></svg>" +
+      "</div></div>";
   }
 
   // 입력을 읽어 계산 상태를 만든다. 실패 시 showError 후 null.

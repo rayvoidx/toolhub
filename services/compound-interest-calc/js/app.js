@@ -311,6 +311,50 @@
     $("r-contrib").textContent = money(r.totalContributed, cur);
     $("r-interest").textContent = money(r.totalInterest, cur);
 
+    // Interactive SVG growth curve (Principal vs. Final Balance)
+    var chartHost = $("th-compound-chart");
+    if (!chartHost) {
+      chartHost = document.createElement("div");
+      chartHost.id = "th-compound-chart";
+      chartHost.style.cssText = "margin:16px 0;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);";
+      var firstTable = bodyEl.querySelector("table, details");
+      if (firstTable && firstTable.parentNode === bodyEl) bodyEl.insertBefore(chartHost, firstTable);
+      else bodyEl.appendChild(chartHost);
+    }
+    var pts = [{ yearLabel: 0, contributed: r.principal, balance: r.principal }].concat(r.rows);
+    var maxVal = Math.max(r.finalBalance, r.totalContributed, 1);
+    var cw = 420, ch = 148, padL = 8, padR = 8, padT = 14, padB = 24;
+    var uw = cw - padL - padR, uh = ch - padT - padB;
+    var lastIdx = Math.max(pts.length - 1, 1);
+    var bPts = [], cPts = [];
+    for (var pi = 0; pi < pts.length; pi++) {
+      var px = padL + (pi / lastIdx) * uw;
+      var by = padT + uh - (safe(pts[pi].balance) / maxVal) * uh;
+      var cy = padT + uh - (safe(pts[pi].contributed) / maxVal) * uh;
+      bPts.push(px.toFixed(1) + "," + by.toFixed(1));
+      cPts.push(px.toFixed(1) + "," + cy.toFixed(1));
+    }
+    var baseY = (padT + uh).toFixed(1);
+    var bArea = padL + "," + baseY + " " + bPts.join(" ") + " " + (padL + uw) + "," + baseY;
+    var cArea = padL + "," + baseY + " " + cPts.join(" ") + " " + (padL + uw) + "," + baseY;
+    var intShare = r.finalBalance > 0 ? Math.round((r.totalInterest / r.finalBalance) * 100) : 0;
+    chartHost.innerHTML =
+      "<div style=\"display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;font-size:12px;color:var(--muted);\">" +
+      "<strong style=\"color:var(--ink);font-size:13px;\">Growth Curve · Principal vs. Compound Balance</strong>" +
+      "<span>Interest share: <strong style=\"color:#059669;\">" + intShare + "%</strong></span></div>" +
+      "<svg viewBox=\"0 0 " + cw + " " + ch + "\" style=\"width:100%;height:auto;display:block;\" role=\"img\" aria-label=\"Compound interest growth chart\">" +
+      "<polygon points=\"" + bArea + "\" fill=\"#10b981\" fill-opacity=\"0.24\"/>" +
+      "<polygon points=\"" + cArea + "\" fill=\"#6366f1\" fill-opacity=\"0.20\"/>" +
+      "<polyline points=\"" + cPts.join(" ") + "\" fill=\"none\" stroke=\"#6366f1\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/>" +
+      "<polyline points=\"" + bPts.join(" ") + "\" fill=\"none\" stroke=\"#059669\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>" +
+      "<text x=\"" + padL + "\" y=\"" + (ch - 6) + "\" font-size=\"11\" fill=\"currentColor\" opacity=\"0.65\">0y</text>" +
+      "<text x=\"" + (padL + uw / 2).toFixed(1) + "\" y=\"" + (ch - 6) + "\" text-anchor=\"middle\" font-size=\"11\" fill=\"currentColor\" opacity=\"0.65\">" + numFmt(r.years / 2, 1) + "y</text>" +
+      "<text x=\"" + (padL + uw) + "\" y=\"" + (ch - 6) + "\" text-anchor=\"end\" font-size=\"11\" fill=\"currentColor\" opacity=\"0.75\">" + numFmt(r.years, 1) + "y · " + money(r.finalBalance, cur) + "</text>" +
+      "</svg>" +
+      "<div style=\"display:flex;gap:14px;flex-wrap:wrap;margin-top:6px;font-size:11.5px;color:var(--muted);\">" +
+      "<span><span style=\"display:inline-block;width:9px;height:9px;border-radius:50%;background:#059669;margin-right:5px;\"></span>Final balance</span>" +
+      "<span><span style=\"display:inline-block;width:9px;height:9px;border-radius:50%;background:#6366f1;margin-right:5px;\"></span>Total contributed</span></div>";
+
     var FREQ_KEYS = { 365: "tool.freq.daily", 52: "tool.freq.weekly", 12: "tool.freq.monthly",
       4: "tool.freq.quarterly", 2: "tool.freq.semiannually", 1: "tool.freq.annually" };
     var freqKey = FREQ_KEYS[freq] || "tool.freq.monthly";

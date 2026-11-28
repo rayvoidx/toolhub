@@ -246,9 +246,28 @@
     var per = perLabel(catA);
     var factor = catA === "count" ? 1 : 100;
 
+    var rateA = priceA * factor;
+    var rateB = priceB * factor;
+    var maxRate = Math.max(rateA, rateB, 1e-9);
+    var wA = Math.max(10, Math.round((rateA / maxRate) * 260));
+    var wB = Math.max(10, Math.round((rateB / maxRate) * 260));
+    var colA = priceA <= priceB ? "#059669" : "#94a3b8";
+    var colB = priceB <= priceA ? "#059669" : "#94a3b8";
+
+    var chartHtml = "<div style=\"margin:12px 0;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface);\">"
+      + "<svg viewBox=\"0 0 320 74\" style=\"width:100%;height:auto;display:block;\" role=\"img\" aria-label=\"Unit price comparison chart\">"
+      + "<text x=\"0\" y=\"15\" font-size=\"11\" font-weight=\"700\" fill=\"currentColor\">" + escHtml(nameA) + " · " + escHtml(nf(rateA)) + " / " + escHtml(per) + "</text>"
+      + "<rect x=\"0\" y=\"21\" width=\"300\" height=\"12\" rx=\"6\" fill=\"var(--line)\"/>"
+      + "<rect x=\"0\" y=\"21\" width=\"" + wA + "\" height=\"12\" rx=\"6\" fill=\"" + colA + "\"/>"
+      + "<text x=\"0\" y=\"51\" font-size=\"11\" font-weight=\"700\" fill=\"currentColor\">" + escHtml(nameB) + " · " + escHtml(nf(rateB)) + " / " + escHtml(per) + "</text>"
+      + "<rect x=\"0\" y=\"57\" width=\"300\" height=\"12\" rx=\"6\" fill=\"var(--line)\"/>"
+      + "<rect x=\"0\" y=\"57\" width=\"" + wB + "\" height=\"12\" rx=\"6\" fill=\"" + colB + "\"/>"
+      + "</svg></div>";
+
     var lineTpl = t("tool.r.line");
-    var html = "<p>" + escHtml(fmt(lineTpl, { name: nameA, price: nf(priceA * factor), per: per })) + "</p>"
-      + "<p>" + escHtml(fmt(lineTpl, { name: nameB, price: nf(priceB * factor), per: per })) + "</p>";
+    var html = chartHtml
+      + "<p>" + escHtml(fmt(lineTpl, { name: nameA, price: nf(rateA), per: per })) + "</p>"
+      + "<p>" + escHtml(fmt(lineTpl, { name: nameB, price: nf(rateB), per: per })) + "</p>";
 
     if (priceA === priceB) {
       html += "<p><strong>" + escHtml(t("tool.r.same")) + "</strong></p>";

@@ -1,6 +1,6 @@
 import './style.css';
 import { KINDS, LABELS, CONVERT_TABLE, defaults, calculate, emptyState, id, validateState, parseBackup, mergeBackup, addEntry, summary, projectText } from './core.mjs';
-import { unitBarSvg, discountWaterfallSvg, tripDonutSvg, compoundAreaSvg, bmiGaugeSvg } from './charts.mjs';
+import { unitBarSvg, discountWaterfallSvg, tripDonutSvg, compoundAreaSvg, bmiGaugeSvg, salaryDonutSvg, loanCompareSvg } from './charts.mjs';
 import { native, storage, exportFile, shareText, setupBack } from './platform.js';
 
 const el = document.querySelector('#app');
@@ -17,6 +17,8 @@ const description = {
   split: '남는 1원까지 빠짐없이 공평하게',
   trip: '연료·통행·주차 비중과 1인 분담금',
   compound: '원금과 월 적립금의 연도별 복리 성장 곡선',
+  salary: '4대보험·세금 공제 도넛 차트와 월 실수령액',
+  loan: '원리금·원금균등·만기일시 총이자 시각 비교',
   convert: '길이·무게·평수·온도를 한눈에 동시 변환',
   health: 'BMI 위치 게이지와 기초대사·목표 칼로리',
 };
@@ -27,6 +29,8 @@ const iconSvg = {
   split: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="6.5" r="2" fill="currentColor"/><circle cx="12" cy="17.5" r="2" fill="currentColor"/></svg>',
   trip: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 18L19 6M11 6h8v8" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   compound: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 18c4-.5 7-3 10-7.5 1.7-2.5 3.5-4.3 6-5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M4 20h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+  salary: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none"><rect x="3" y="6" width="18" height="12" rx="2.5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.8" stroke="currentColor" stroke-width="2"/></svg>',
+  loan: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M3 10l9-6 9 6M5 10v9M19 10v9M9 19v-6h6v6M3 19h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   convert: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none"><rect x="3" y="8" width="18" height="8" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 8v3M12 8v5M16 8v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
   health: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>',
 };
@@ -61,7 +65,9 @@ function inputs() {
   if (kind === 'discount') return `<div class="fields">${field('price', '정가 · 원', { step: 1 })}${field('first', '첫 할인 · %', { max: 100 })}${field('second', '추가 할인 · %', { max: 100 })}${field('coupon', '할인 후 정액 쿠폰 · 원', { step: 1 })}${field('shipping', '배송비 · 원', { step: 1 })}</div>`;
   if (kind === 'split') return `<div class="fields">${field('total', '나눌 총금액 · 원', { step: 1 })}${field('people', '인원', { step: 1, min: 1, max: 100 })}</div>`;
   if (kind === 'trip') return `<div class="fields">${field('distance', '총 주행거리 · km', { hint: '왕복 여행은 왕복 거리를 입력', max: 100000 })}${field('efficiency', '차량 연비 · km/L', { min: 0.1, max: 1000 })}${field('fuel', '리터당 연료 가격 · 원', { step: 1 })}${field('toll', '총 통행료 · 원', { step: 1 })}${field('parking', '총 주차비 · 원', { step: 1 })}${field('people', '함께 나눌 인원', { step: 1, min: 1, max: 100 })}</div>`;
-  if (kind === 'compound') return `<div class="fields">${field('principal', '초기 원금 · 원', { step: 10000 })}${field('monthly', '매월 추가 적립 · 원', { step: 10000 })}${field('rate', '연 수익률 · %', { max: 50, hint: '세전 월 복리 기준' })}${field('years', '기간 · 년', { step: 1, min: 1, max: 50 })}</div>`;
+  if (kind === 'compound') return `<div class="fields">${field('principal', '초기 원금 · 원', { step: 1 })}${field('monthly', '매월 추가 적립 · 원', { step: 1 })}${field('rate', '연 수익률 · %', { max: 50, hint: '세전 월 복리 기준' })}${field('years', '기간 · 년', { step: 1, min: 1, max: 50 })}</div>`;
+  if (kind === 'salary') return `<div class="fields">${field('annual', '연봉 · 원', { step: 1, min: 1000000, max: 10000000000, hint: '퇴직금 별도 기준' })}${field('nonTaxMonthly', '월 비과세 식대 등 · 원', { step: 1, max: 2000000 })}${field('dependents', '부양가족 수 (본인 포함)', { step: 1, min: 1, max: 11 })}</div>`;
+  if (kind === 'loan') return `<div class="fields">${field('amount', '대출 원금 · 원', { step: 1, min: 100000, max: 100000000000 })}${field('rate', '연 이자율 · %', { max: 50 })}${field('years', '상환 기간 · 년', { step: 1, min: 1, max: 50 })}</div>`;
   if (kind === 'convert') {
     const cat = drafts.convert.category || 'length';
     const unitList = CONVERT_TABLE[cat] || CONVERT_TABLE.length;
@@ -77,6 +83,8 @@ const rules = {
   split: '총액을 인원으로 나눈 몫을 기본 금액으로 정하고, 나머지 원만큼의 사람이 1원씩 더 내 총액 오차 0원을 유지합니다.',
   trip: '연료비 = 총 주행거리 ÷ 연비 × 유가(원 단위 반올림). 통행료·주차비를 합산해 비중 도넛 차트와 1인 분담금을 보여줍니다.',
   compound: '매월 말 적립·월 복리 세전 추정치입니다. 실제 금융 상품의 이자소득세·수수료·변동 금리는 별도 확인이 필요합니다.',
+  salary: '국민연금(4.5%, 월 상한 617만원)·건강보험(3.545%)·장기요양(12.95%)·고용보험(0.9%) 및 간이 근로소득세 추정치입니다. 실제 급여명세서의 회사별 공제 항목과 차이가 날 수 있습니다.',
+  loan: '고정금리 기준 원금균등·원리금균등·만기일시 상환을 한 번에 비교합니다. 중도상환수수료·변동금리·거치기간은 포함하지 않습니다.',
   convert: '표준 국제 단위계(SI) 및 1평 = 3.305785㎡ 환산 계수를 사용합니다. 입력 즉시 같은 분류의 모든 단위를 한 번에 보여줍니다.',
   health: 'BMI는 대한비만학회 기준(정상 18.5~22.9), 기초대사량(BMR)은 Mifflin-St Jeor 공식을 사용합니다. 의료 진단 목적이 아닙니다.',
 };
@@ -98,6 +106,10 @@ function resultHTML() {
     content = `<p class="eyebrow">예상 이동 예산</p><h3>${fmt(result.total, 0)}<small> 원</small></h3>${tripDonutSvg(result)}${splitDetail(result.split)}`;
   } else if (kind === 'compound') {
     content = `<p class="eyebrow">${result.years}년 후 예상 잔액 (세전 월복리)</p><h3>${fmt(result.finalBalance, 0)}<small> 원</small></h3>${compoundAreaSvg(result)}<div class="metrics"><span>총 납입 원금<strong>${fmt(result.contributed, 0)}원</strong></span><span>누적 이자 수익<strong>+${fmt(result.totalInterest, 0)}원</strong></span><span>누적 수익률<strong>+${fmt(result.gainPct, 1)}%</strong></span></div>`;
+  } else if (kind === 'salary') {
+    content = `<p class="eyebrow">예상 월 실수령액 (세후)</p><h3>${fmt(result.netMonthly, 0)}<small> 원 / 월</small></h3>${salaryDonutSvg(result)}<div class="metrics"><span>세전 월급<strong>${fmt(result.grossMonthly, 0)}원</strong></span><span>총 공제액<strong>-${fmt(result.totalDeduction, 0)}원</strong></span><span>실효 공제율<strong>${fmt(result.effectiveRate, 1)}%</strong></span></div><p class="muted">국민연금 ${fmt(result.pension, 0)} · 건강보험 ${fmt(result.health, 0)} · 장기요양 ${fmt(result.care, 0)} · 고용보험 ${fmt(result.employment, 0)} · 소득세 ${fmt(result.incomeTax, 0)} · 지방세 ${fmt(result.localTax, 0)}원</p>`;
+  } else if (kind === 'loan') {
+    content = `<p class="eyebrow">원리금균등 월 납입액 (${result.months}개월)</p><h3>${fmt(result.amortized.monthly, 0)}<small> 원 / 월</small></h3>${loanCompareSvg(result)}<div class="metrics"><span>원금균등 (첫달→막달)<strong>${fmt(result.equal.first, 0)} → ${fmt(result.equal.last, 0)}</strong></span><span>만기일시 월 이자<strong>${fmt(result.bullet.monthly, 0)}원</strong></span><span>원금균등 이자 절감<strong>${fmt(result.savedEqualVsAmort, 0)}원</strong></span></div>`;
   } else if (kind === 'convert') {
     content = `<p class="eyebrow">한눈에 보는 단위 변환</p><h3>${fmt(result.sourceValue, 4)} <small>${esc(result.sourceUnit)}</small></h3><div class="conv-grid">${result.items.map((it) => `<div class="conv-card ${it.code === result.sourceUnit ? 'base' : ''}"><span>${esc(it.label)}</span><strong>${fmt(it.value, 4)}</strong></div>`).join('')}</div>`;
   } else {
@@ -111,7 +123,7 @@ function projectPicker() {
 }
 
 function calcPage() {
-  return `<section class="hero"><div><p class="eyebrow">VISUAL OFFLINE TOOLKIT</p><h1>그래프로 한눈에.<br>기록은 내 기기에.</h1><p>장보기·할인·정산·여행부터 복리 성장, 단위 변환, BMI 칼로리까지. <br class="desktop">시각 차트로 바로 비교하고 프로젝트에 쌓아 두세요.</p></div><div class="hero-card"><span>MY POCKET</span><strong>${state.projects.length}<small>개 프로젝트</small></strong><svg viewBox="0 0 220 44" class="hero-spark" aria-hidden="true"><path d="M4 38 C42 36, 86 27, 134 17 C168 10, 194 7, 216 4" fill="none" stroke="#b9e37b" stroke-width="3" stroke-linecap="round"/><circle cx="216" cy="4" r="4" fill="#b9e37b"/></svg><div><i></i>${native ? '설치된 앱 · 7종 오프라인 도구' : '이 기기에 저장 · 계정 없이 시작'}</div><p>시각 비교 → 기록 → 체크 → 공유</p></div></section><div class="section-title"><h2>시각 생활 도구</h2><span>${KINDS.length}개의 오프라인 도구</span></div><div class="tool-grid">${KINDS.map((k) => `<article class="tool ${kind === k ? 'active' : ''}"><button data-action="tool" data-kind="${k}" class="tool-open" aria-pressed="${kind === k}"><span class="tool-icon ${k}">${iconSvg[k]}</span><strong>${LABELS[k]}</strong><small>${description[k]}</small></button><button class="favorite" data-action="favorite" data-kind="${k}" aria-label="${LABELS[k]} 즐겨찾기 ${state.favorites.includes(k) ? '해제' : '추가'}" aria-pressed="${state.favorites.includes(k)}">${state.favorites.includes(k) ? '★' : '☆'}</button></article>`).join('')}</div>${state.recent.length ? `<div class="recent"><span>최근 기록한 도구</span>${state.recent.map((k) => `<button data-action="tool" data-kind="${k}">${LABELS[k]} →</button>`).join('')}</div>` : ''}${state.favorites.length ? `<div class="recent"><span>★ 즐겨찾기</span>${state.favorites.map((k) => `<button data-action="tool" data-kind="${k}">${LABELS[k]}</button>`).join('')}</div>` : ''}${projectPicker()}<section class="calculator panel" id="calculator"><div class="section-title"><div><p class="eyebrow">${editing ? 'SAVED RECORD · 수정 중' : 'VISUAL CALCULATOR'}</p><h2>${LABELS[kind]}</h2></div><button class="quiet" data-action="example">예시값 불러오기</button></div><form id="calculate">${inputs()}<button class="primary calculate">${LABELS[kind]} 계산 · 그래프 보기 <span>→</span></button></form><div id="result">${resultHTML()}</div><details class="guide" open><summary>계산 방식과 사용 기준</summary><p>${rules[kind]}</p></details></section>`;
+  return `<section class="hero"><div><p class="eyebrow">VISUAL OFFLINE TOOLKIT</p><h1>그래프로 한눈에.<br>기록은 내 기기에.</h1><p>장보기·할인·정산·여행부터 복리 성장, 단위 변환, BMI 칼로리까지. <br class="desktop">시각 차트로 바로 비교하고 프로젝트에 쌓아 두세요.</p></div><div class="hero-card"><span>MY POCKET</span><strong>${state.projects.length}<small>개 프로젝트</small></strong><svg viewBox="0 0 220 44" class="hero-spark" aria-hidden="true"><path d="M4 38 C42 36, 86 27, 134 17 C168 10, 194 7, 216 4" fill="none" stroke="#b9e37b" stroke-width="3" stroke-linecap="round"/><circle cx="216" cy="4" r="4" fill="#b9e37b"/></svg><div><i></i>${native ? '설치된 앱 · 9종 오프라인 도구' : '이 기기에 저장 · 계정 없이 시작'}</div><p>시각 비교 → 기록 → 체크 → 공유</p></div></section><div class="section-title"><h2>시각 생활 도구</h2><span>${KINDS.length}개의 오프라인 도구</span></div><div class="tool-grid">${KINDS.map((k) => `<article class="tool ${kind === k ? 'active' : ''}"><button data-action="tool" data-kind="${k}" class="tool-open" aria-pressed="${kind === k}"><span class="tool-icon ${k}">${iconSvg[k]}</span><strong>${LABELS[k]}</strong><small>${description[k]}</small></button><button class="favorite" data-action="favorite" data-kind="${k}" aria-label="${LABELS[k]} 즐겨찾기 ${state.favorites.includes(k) ? '해제' : '추가'}" aria-pressed="${state.favorites.includes(k)}">${state.favorites.includes(k) ? '★' : '☆'}</button></article>`).join('')}</div>${state.recent.length ? `<div class="recent"><span>최근 기록한 도구</span>${state.recent.map((k) => `<button data-action="tool" data-kind="${k}">${LABELS[k]} →</button>`).join('')}</div>` : ''}${state.favorites.length ? `<div class="recent"><span>★ 즐겨찾기</span>${state.favorites.map((k) => `<button data-action="tool" data-kind="${k}">${LABELS[k]}</button>`).join('')}</div>` : ''}${projectPicker()}<section class="calculator panel" id="calculator"><div class="section-title"><div><p class="eyebrow">${editing ? 'SAVED RECORD · 수정 중' : 'VISUAL CALCULATOR'}</p><h2>${LABELS[kind]}</h2></div><button class="quiet" data-action="example">예시값 불러오기</button></div><form id="calculate">${inputs()}<button class="primary calculate">${LABELS[kind]} 계산 · 그래프 보기 <span>→</span></button></form><div id="result">${resultHTML()}</div><details class="guide" open><summary>계산 방식과 사용 기준</summary><p>${rules[kind]}</p></details></section>`;
 }
 
 function projectsPage() {
@@ -124,7 +136,7 @@ function helpPage() {
 }
 
 function render() {
-  el.innerHTML = `<header><a class="brand" href="${native ? '#' : '/workspace/'}"><span class="brand-icon">th</span><span>ToolHub <b>Pocket</b><small>시각 생활 계산 워크스페이스</small></span></a><button id="install" class="secondary" ${!installPrompt ? 'hidden' : ''}>홈 화면에 설치</button><span class="connection">${native ? '기기 저장' : '브라우저 저장'} <i></i></span></header><nav aria-label="주 메뉴">${[['calculate', '시각 계산기', '01'], ['projects', '내 프로젝트', '02'], ['help', '백업·안내', '03']].map(([v, t, n]) => `<button data-tab="${v}" aria-current="${tab === v ? 'page' : 'false'}" class="${tab === v ? 'active' : ''}"><span>${n}</span>${t}</button>`).join('')}</nav><main><div id="notice" role="status" aria-live="polite" class="notice ${error ? 'error' : ''}" ${!message ? 'hidden' : ''}>${esc(message)}</div>${locked ? '<div class="notice error">기기 저장소를 읽지 못해 저장을 잠갔습니다. 계산은 계속할 수 있습니다. 백업·안내에서 복구하세요.</div>' : ''}${tab === 'calculate' ? calcPage() : tab === 'projects' ? projectsPage() : helpPage()}</main><footer><strong>ToolHub Pocket</strong><span>시각 차트와 기록으로 남기는 오프라인 생활 도구.</span><small>v0.2 · ${native ? 'Android / iOS' : 'Web'} · 7 Tools</small></footer>`;
+  el.innerHTML = `<header><a class="brand" href="${native ? '#' : '/workspace/'}"><span class="brand-icon">th</span><span>ToolHub <b>Pocket</b><small>시각 생활 계산 워크스페이스</small></span></a><button id="install" class="secondary" ${!installPrompt ? 'hidden' : ''}>홈 화면에 설치</button><span class="connection">${native ? '기기 저장' : '브라우저 저장'} <i></i></span></header><nav aria-label="주 메뉴">${[['calculate', '시각 계산기', '01'], ['projects', '내 프로젝트', '02'], ['help', '백업·안내', '03']].map(([v, t, n]) => `<button data-tab="${v}" aria-current="${tab === v ? 'page' : 'false'}" class="${tab === v ? 'active' : ''}"><span>${n}</span>${t}</button>`).join('')}</nav><main><div id="notice" role="status" aria-live="polite" class="notice ${error ? 'error' : ''}" ${!message ? 'hidden' : ''}>${esc(message)}</div>${locked ? '<div class="notice error">기기 저장소를 읽지 못해 저장을 잠갔습니다. 계산은 계속할 수 있습니다. 백업·안내에서 복구하세요.</div>' : ''}${tab === 'calculate' ? calcPage() : tab === 'projects' ? projectsPage() : helpPage()}</main><footer><strong>ToolHub Pocket</strong><span>시각 차트와 기록으로 남기는 오프라인 생활 도구.</span><small>v0.3 · ${native ? 'Android / iOS' : 'Web'} · 9 Tools</small></footer>`;
 }
 
 function refreshResult() { document.querySelector('#result').innerHTML = resultHTML(); }
