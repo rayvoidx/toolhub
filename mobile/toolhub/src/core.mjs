@@ -1,4 +1,4 @@
-export const KINDS = ['unit', 'discount', 'split', 'trip', 'compound', 'salary', 'loan', 'convert', 'health'];
+export const KINDS = ['unit', 'discount', 'split', 'trip', 'compound', 'salary', 'loan', 'budget', 'date', 'percent', 'convert', 'health'];
 export const LIMITS = { projects: 30, entries: 30, tasks: 30, backup: 1500000 };
 export const LABELS = {
   unit: '장보기 비교',
@@ -8,6 +8,9 @@ export const LABELS = {
   compound: '복리·적금',
   salary: '연봉 실수령',
   loan: '대출 상환',
+  budget: '월 예산 배분',
+  date: 'D-Day·날짜',
+  percent: '퍼센트·증감',
   convert: '단위 변환',
   health: 'BMI·칼로리',
 };
@@ -19,6 +22,9 @@ export const defaults = {
   compound: { principal: 10000000, monthly: 300000, rate: 5, years: 10 },
   salary: { annual: 50000000, nonTaxMonthly: 200000, dependents: 1 },
   loan: { amount: 100000000, rate: 4.5, years: 20 },
+  budget: { income: 3500000, needs: 50, wants: 30, save: 20 },
+  date: { start: '2026-11-28', end: '2026-12-31', includeStart: 'no' },
+  percent: { mode: 'change', a: 100000, b: 15 },
   convert: { category: 'length', value: 100, unit: 'cm' },
   health: { height: 172, weight: 68, age: 32, sex: 'male', activity: 1.55 },
 };
@@ -205,6 +211,70 @@ export function calculate(kind, input) {
       savedEqualVsAmort: Math.max(0, amortInterest - equalInterest),
     };
   }
+  if (kind === 'budget') {
+    const income = number(input.income, '월 실수령 소득', 10000, 1e10, true);
+    const needs = number(input.needs, '필수 지출 비율(%)', 0, 100);
+    const wants = number(input.wants, '여가·소비 비율(%)', 0, 100);
+    const save = number(input.save, '저축·투자 비율(%)', 0, 100);
+    if (Math.abs(needs + wants + save - 100) > 1e-6) {
+      throw Error('필수·여가·저축 비율의 합은 정확히 100%여야 합니다.');
+    }
+    const needsWon = Math.round((income * needs) / 100);
+    const wantsWon = Math.round((income * wants) / 100);
+    const saveWon = Math.max(0, income - needsWon - wantsWon);
+    return { income, needs, wants, save, needsWon, wantsWon, saveWon, annualSave: saveWon * 12 };
+  }
+  if (kind === 'date') {
+    const parseIso = (v, label) => {
+      if (typeof v !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(v.trim())) throw Error(`${label}: YYYY-MM-DD 형식의 날짜를 입력하세요.`);
+      const [y, m, d] = v.trim().split('-').map(Number);
+      const dt = new Date(Date.UTC(y, m - 1, d));
+      if (dt.getUTCFullYear() !== y || dt.getUTCMonth() !== m - 1 || dt.getUTCDate() !== d) throw Error(`${label}: 존재하지 않는 날짜입니다.`);
+      return dt;
+    };
+    const sRaw = parseIso(input.start, '시작일');
+    const eRaw = parseIso(input.end, '종료일');
+    const includeStart = input.includeStart === 'yes';
+    const swapped = sRaw.getTime() > eRaw.getTime();
+    const s = swapped ? eRaw : sRaw;
+    const e = swapped ? sRaw : eRaw;
+    const diff = Math.round((e.getTime() - s.getTime()) / 86400000);
+    if (diff > 36525) throw Error('날짜 간격은 최대 100년(36,525일) 이하로 입력하세요.');
+    const total = diff + (includeStart ? 1 : 0);
+    let business = 0;
+    let weekend = 0;
+    const cur = new Date(s.getTime());
+    const steps = includeStart ? diff + 1 : diff;
+    for (let i = 0; i < steps; i++) {
+      const dow = cur.getUTCDay();
+      if (dow === 0 || dow === 6) weekend++;
+      else business++;
+      cur.setUTCDate(cur.getUTCDate() + 1);
+    }
+    const weeks = Math.floor(total / 7);
+    const remDays = total % 7;
+    const toIso = (d) => d.toISOString().slice(0, 10);
+    return { start: toIso(s), end: toIso(e), includeStart, swapped, diff, total, weeks, remDays, business, weekend };
+  }
+  if (kind === 'percent') {
+    const mode = input.mode;
+    if (!['ratio', 'change', 'rate'].includes(mode)) throw Error('퍼센트 계산 방식을 선택하세요.');
+    const a = signedNumber(input.a, '기준값 A', -1e12, 1e12);
+    const b = signedNumber(input.b, '비교/비율값 B', -1e12, 1e12);
+    if (mode === 'ratio') {
+      if (b === 0) throw Error('전체값 B는 0이 될 수 없습니다.');
+      const pct = (a / b) * 100;
+      return { mode, a, b, result: pct, delta: a, label: `${a} ÷ ${b}` };
+    }
+    if (mode === 'change') {
+      const delta = Math.round(((a * b) / 100) * 1e10) / 1e10;
+      const after = Math.round((a + delta) * 1e10) / 1e10;
+      return { mode, a, b, result: after, delta, label: `${b >= 0 ? '+' : ''}${b}% 적용` };
+    }
+    if (a === 0) throw Error('시작값 A는 0이 될 수 없습니다.');
+    const rate = ((b - a) / a) * 100;
+    return { mode, a, b, result: rate, delta: b - a, label: `${a} → ${b}` };
+  }
   if (kind === 'convert') {
     const category = input.category;
     const table = CONVERT_TABLE[category];
@@ -301,6 +371,9 @@ export function summary(kind, input) {
   if (kind === 'compound') return `${r.years}년 후 ${f(r.finalBalance)}원 · 원금 ${f(r.contributed)}원 + 이자 ${f(r.totalInterest)}원 (+${f(r.gainPct)}%)`;
   if (kind === 'salary') return `월 실수령 ${f(r.netMonthly)}원 · 총 공제 ${f(r.totalDeduction)}원 (실효 공제율 ${f(r.effectiveRate)}%)`;
   if (kind === 'loan') return `원리금균등 월 ${f(r.amortized.monthly)}원 · 총이자 ${f(r.amortized.interest)}원 (원금균등 시 ${f(r.savedEqualVsAmort)}원 절감)`;
+  if (kind === 'budget') return `필수 ${f(r.needsWon)}원(${r.needs}%) · 여가 ${f(r.wantsWon)}원(${r.wants}%) · 저축 ${f(r.saveWon)}원(${r.save}%)`;
+  if (kind === 'date') return `${r.start} ~ ${r.end} · 총 ${f(r.total)}일 (${r.weeks}주 ${r.remDays}일 · 평일 ${f(r.business)}일)`;
+  if (kind === 'percent') return r.mode === 'ratio' ? `${f(r.a)}은(는) ${f(r.b)}의 ${f(r.result)}%` : r.mode === 'change' ? `${f(r.a)}에서 ${r.b >= 0 ? '+' : ''}${f(r.b)}% → ${f(r.result)}` : `${f(r.a)} → ${f(r.b)} (${r.result >= 0 ? '+' : ''}${f(r.result)}%)`;
   if (kind === 'convert') return `${f(r.sourceValue)} ${r.sourceUnit} → ${r.items.filter(x => x.code !== r.sourceUnit).slice(0, 2).map(x => `${f(x.value)} ${x.code}`).join(' · ')}`;
   return `BMI ${f(r.bmi)} (${r.band}) · 유지 ${f(r.tdee)}kcal · 기초대사 ${f(r.bmr)}kcal`;
 }

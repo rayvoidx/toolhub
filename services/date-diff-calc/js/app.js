@@ -293,6 +293,21 @@
     if (inc) html += ' <span class="ddc-dayth">' + escHtml(fmt(t("tool.v.dayth"), { n: nf(r.total) })) + "</span>";
     html += "</div>";
 
+    // 시각 타임라인 & 평일·주말 비율 SVG 바
+    var totalSpan = Math.max(r.business + r.weekend, 1);
+    var bizPct = Math.round((r.business / totalSpan) * 100);
+    var wkdPct = Math.max(0, 100 - bizPct);
+    var bizW = Math.round((r.business / totalSpan) * 320);
+    html += '<div id="th-datediff-chart" style="margin:12px 0 14px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface);">' +
+      '<svg viewBox="0 0 320 56" style="width:100%;height:auto;display:block;" role="img" aria-label="Business days vs weekend days span">' +
+      '<text x="0" y="13" font-size="11" font-weight="600" fill="currentColor" opacity="0.8">' + escHtml(r.startStr) + "</text>" +
+      '<text x="320" y="13" text-anchor="end" font-size="11" font-weight="600" fill="currentColor" opacity="0.8">' + escHtml(r.endStr) + "</text>" +
+      '<rect x="0" y="21" width="320" height="14" rx="7" fill="#f59e0b"/>' +
+      '<rect x="0" y="21" width="' + bizW + '" height="14" rx="7" fill="#0284c7"/>' +
+      '<circle cx="6" cy="48" r="4" fill="#0284c7"/><text x="14" y="51" font-size="10.5" fill="currentColor" opacity="0.8">Weekdays ' + bizPct + '% (' + escHtml(nf(r.business)) + "d)</text>" +
+      '<circle cx="172" cy="48" r="4" fill="#f59e0b"/><text x="180" y="51" font-size="10.5" fill="currentColor" opacity="0.8">Weekends ' + wkdPct + '% (' + escHtml(nf(r.weekend)) + "d)</text>" +
+      "</svg></div>";
+
     // 분해 카드 3종 (구간 기준)
     html += '<dl class="ddc-cards">';
     html += '<div class="ddc-cell"><dt>' + escHtml(t("tool.k.ymd")) + "</dt><dd>" +

@@ -63,3 +63,32 @@ export function loanCompareSvg(r) {
   const wBu = Math.max(10, Math.round((r.bullet.interest / maxI) * 280));
   return `<figure class="chart-card"><figcaption>상환 방식별 총 이자 비교 (${r.years}년 · 연 ${r.rate}%)</figcaption><svg viewBox="0 0 320 116" class="chart-svg" role="img" aria-label="대출 3방식 총이자 비교 막대 그래프"><text x="0" y="15" class="svg-label">원금균등 · 총이자 ${fmt(r.equal.interest, 0)}원</text><rect x="0" y="21" width="300" height="12" rx="6" fill="#dce5d6"/><rect x="0" y="21" width="${wEq}" height="12" rx="6" fill="#2e7d57"/><text x="0" y="53" class="svg-label">원리금균등 · 총이자 ${fmt(r.amortized.interest, 0)}원</text><rect x="0" y="59" width="300" height="12" rx="6" fill="#dce5d6"/><rect x="0" y="59" width="${wAm}" height="12" rx="6" fill="#17343c"/><text x="0" y="91" class="svg-label">만기일시 · 총이자 ${fmt(r.bullet.interest, 0)}원</text><rect x="0" y="97" width="300" height="12" rx="6" fill="#dce5d6"/><rect x="0" y="97" width="${wBu}" height="12" rx="6" fill="#e48159"/></svg></figure>`;
 }
+
+export function budgetDonutSvg(r) {
+  const total = Math.max(r.income, 1);
+  const circ = 2 * Math.PI * 36;
+  const nLen = (r.needsWon / total) * circ;
+  const wLen = (r.wantsWon / total) * circ;
+  const sLen = Math.max(0, circ - nLen - wLen);
+  return `<figure class="chart-card chart-donut-row"><svg viewBox="0 0 100 100" class="donut-svg" role="img" aria-label="월 예산 배분 도넛 차트"><circle cx="50" cy="50" r="36" fill="none" stroke="#dce5d6" stroke-width="14"/><circle cx="50" cy="50" r="36" fill="none" stroke="#17343c" stroke-width="14" stroke-dasharray="${nLen.toFixed(1)} ${circ.toFixed(1)}" transform="rotate(-90 50 50)"/><circle cx="50" cy="50" r="36" fill="none" stroke="#e48159" stroke-width="14" stroke-dasharray="${wLen.toFixed(1)} ${circ.toFixed(1)}" stroke-dashoffset="${(-nLen).toFixed(1)}" transform="rotate(-90 50 50)"/><circle cx="50" cy="50" r="36" fill="none" stroke="#2e7d57" stroke-width="14" stroke-dasharray="${sLen.toFixed(1)} ${circ.toFixed(1)}" stroke-dashoffset="${(-(nLen + wLen)).toFixed(1)}" transform="rotate(-90 50 50)"/><text x="50" y="53" text-anchor="middle" class="svg-center">${Math.round(r.save)}%</text></svg><div class="donut-legend"><p><i class="dot-ink"></i>필수 지출 <strong>${fmt(r.needsWon, 0)}원</strong> (${r.needs}%)</p><p><i class="dot-coral"></i>여가·소비 <strong>${fmt(r.wantsWon, 0)}원</strong> (${r.wants}%)</p><p><i class="dot-green"></i>저축·투자 <strong>${fmt(r.saveWon, 0)}원</strong> (${r.save}%)</p></div></figure>`;
+}
+
+export function dateSpanSvg(r) {
+  const total = Math.max(r.business + r.weekend, 1);
+  const bizW = Math.round((r.business / total) * 320);
+  const bizPct = Math.round((r.business / total) * 100);
+  const wkdPct = Math.max(0, 100 - bizPct);
+  return `<figure class="chart-card"><figcaption>기간 타임라인 · 평일 vs 주말 비율</figcaption><svg viewBox="0 0 320 62" class="chart-svg" role="img" aria-label="시작일에서 종료일까지 평일과 주말 비율 막대"><text x="0" y="13" class="svg-label">${r.start}</text><text x="320" y="13" text-anchor="end" class="svg-label">${r.end}</text><rect x="0" y="22" width="320" height="16" rx="8" fill="#e48159"/><rect x="0" y="22" width="${bizW}" height="16" rx="8" fill="#17343c"/><circle cx="7" cy="53" r="4" fill="#17343c"/><text x="16" y="57" class="svg-sub">평일 ${bizPct}% (${fmt(r.business, 0)}일)</text><circle cx="166" cy="53" r="4" fill="#e48159"/><text x="175" y="57" class="svg-sub">주말 ${wkdPct}% (${fmt(r.weekend, 0)}일)</text></svg></figure>`;
+}
+
+export function percentBarSvg(r) {
+  const val1 = r.mode === 'ratio' ? r.b : r.a;
+  const val2 = r.mode === 'ratio' ? r.a : r.mode === 'change' ? r.result : r.b;
+  const label1 = r.mode === 'ratio' ? `전체 B · ${fmt(val1, 2)}` : `기준 A · ${fmt(val1, 2)}`;
+  const label2 = r.mode === 'ratio' ? `부분 A · ${fmt(val2, 2)} (${fmt(r.result, 1)}%)` : r.mode === 'change' ? `적용 후 · ${fmt(val2, 2)}` : `변경 후 B · ${fmt(val2, 2)} (${r.result >= 0 ? '+' : ''}${fmt(r.result, 1)}%)`;
+  const maxV = Math.max(Math.abs(val1), Math.abs(val2), 1e-9);
+  const w1 = Math.max(10, Math.round((Math.abs(val1) / maxV) * 280));
+  const w2 = Math.max(10, Math.round((Math.abs(val2) / maxV) * 280));
+  const c2 = val2 >= val1 ? '#2e7d57' : '#e48159';
+  return `<figure class="chart-card"><figcaption>기준값 vs 결과값 시각 비교</figcaption><svg viewBox="0 0 320 82" class="chart-svg" role="img" aria-label="퍼센트 기준값과 결과값 막대 비교"><text x="0" y="16" class="svg-label">${label1}</text><rect x="0" y="22" width="300" height="14" rx="7" fill="#dce5d6"/><rect x="0" y="22" width="${w1}" height="14" rx="7" fill="#17343c"/><text x="0" y="56" class="svg-label">${label2}</text><rect x="0" y="62" width="300" height="14" rx="7" fill="#dce5d6"/><rect x="0" y="62" width="${w2}" height="14" rx="7" fill="${c2}"/></svg></figure>`;
+}

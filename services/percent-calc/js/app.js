@@ -129,9 +129,36 @@
     el.innerHTML = msg;
     el.className = "result result--error";
     el.hidden = false;
+    var chart = document.getElementById("th-pct-chart-" + el.id);
+    if (chart) chart.hidden = true;
 
     var hintEl = document.getElementById("copy-hint");
     if (hintEl) hintEl.hidden = true;
+  }
+
+  function renderPctVisual(el, labelA, valA, labelB, valB, colorB) {
+    if (!el || !el.parentNode) return;
+    var cid = "th-pct-chart-" + el.id;
+    var host = document.getElementById(cid);
+    if (!host) {
+      host = document.createElement("div");
+      host.id = cid;
+      host.style.cssText = "margin:10px 0 0;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface);";
+      el.parentNode.insertBefore(host, el.nextSibling);
+    }
+    var maxV = Math.max(Math.abs(valA), Math.abs(valB), 1e-9);
+    var wA = Math.max(8, Math.round((Math.abs(valA) / maxV) * 280));
+    var wB = Math.max(8, Math.round((Math.abs(valB) / maxV) * 280));
+    host.hidden = false;
+    host.innerHTML =
+      "<svg viewBox=\"0 0 320 74\" style=\"width:100%;height:auto;display:block;\" role=\"img\" aria-label=\"Percentage visual comparison\">" +
+      "<text x=\"0\" y=\"14\" font-size=\"11\" font-weight=\"600\" fill=\"currentColor\" opacity=\"0.85\">" + labelA + "</text>" +
+      "<rect x=\"0\" y=\"20\" width=\"300\" height=\"12\" rx=\"6\" fill=\"var(--line)\"/>" +
+      "<rect x=\"0\" y=\"20\" width=\"" + wA + "\" height=\"12\" rx=\"6\" fill=\"#6366f1\"/>" +
+      "<text x=\"0\" y=\"50\" font-size=\"11\" font-weight=\"600\" fill=\"currentColor\" opacity=\"0.85\">" + labelB + "</text>" +
+      "<rect x=\"0\" y=\"56\" width=\"300\" height=\"12\" rx=\"6\" fill=\"var(--line)\"/>" +
+      "<rect x=\"0\" y=\"56\" width=\"" + wB + "\" height=\"12\" rx=\"6\" fill=\"" + colorB + "\"/>" +
+      "</svg>";
   }
 
   /* 결과 클릭 시 클립보드 복사 */
@@ -201,6 +228,7 @@
     var result = (numA / numB) * 100;
     if (!isFinite(result)) { showError(ratioResult, t("tool.errNaN")); return; }
     showResult(ratioResult, fmt(result) + " %", "value");
+    renderPctVisual(ratioResult, "Base (B): " + fmt(numB), numB, "Part (A): " + fmt(numA) + " (" + fmt(result) + "%)", numA, "#059669");
   }
 
   if (ratioCalcBtn) ratioCalcBtn.addEventListener("click", calcRatio);
@@ -269,6 +297,14 @@
       fmt(result) + " <small>(" + dispSign + fmt(displayDelta) + ")</small>" + warningHtml,
       currentChangeMode === "increase" ? "increase" : "decrease"
     );
+    renderPctVisual(
+      changeResult,
+      "Before: " + fmt(numA),
+      numA,
+      "After (" + dispSign + fmt(numX) + "%): " + fmt(result),
+      result,
+      currentChangeMode === "increase" ? "#059669" : "#e11d48"
+    );
   }
 
   if (changeCalcBtn) changeCalcBtn.addEventListener("click", calcChange);
@@ -312,6 +348,14 @@
       rateResult,
       sign + fmt(displayRate) + " %",
       rate > 0 ? "increase" : "decrease"
+    );
+    renderPctVisual(
+      rateResult,
+      "From (A): " + fmt(numA),
+      numA,
+      "To (B): " + fmt(numB) + " (" + sign + fmt(displayRate) + "%)",
+      numB,
+      rate > 0 ? "#059669" : "#e11d48"
     );
   }
 

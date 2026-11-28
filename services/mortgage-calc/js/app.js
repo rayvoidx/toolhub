@@ -481,7 +481,59 @@
       rNewPayoff.textContent = fmtDuration(r.payoffMonths);
     }
 
+    renderMortgageVisual(r, cur);
     renderSchedule(r.schedule);
+  }
+
+  function renderMortgageVisual(r, cur) {
+    var host = $("th-mortgage-chart");
+    if (!host) {
+      host = document.createElement("div");
+      host.id = "th-mortgage-chart";
+      host.style.cssText = "margin:14px 0 18px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);";
+      if (extraResultEl && extraResultEl.parentNode) extraResultEl.parentNode.insertBefore(host, extraResultEl.nextSibling);
+      else bodyEl.appendChild(host);
+    }
+    var totalPaid = Math.max(r.hasExtra ? r.totalPaidExtra : r.totalPaidBase, 1);
+    var totalInt = r.hasExtra ? r.totalInterestExtra : r.totalInterestBase;
+    var pShare = Math.min(100, Math.round((r.principal / totalPaid) * 100));
+    var iShare = Math.max(0, 100 - pShare);
+    var circ = 2 * Math.PI * 34;
+    var pLen = (r.principal / totalPaid) * circ;
+    var iLen = Math.max(0, circ - pLen);
+
+    var annual = buildAnnualSchedule(r.schedule || []);
+    var pts = [{ y: 0, bal: r.principal }];
+    for (var i = 0; i < annual.length; i++) pts.push({ y: annual[i].year, bal: annual[i].balance });
+    var bw = 220, bh = 86, maxB = Math.max(r.principal, 1), n = Math.max(pts.length - 1, 1);
+    var poly = [];
+    for (var pi = 0; pi < pts.length; pi++) {
+      var x = 6 + (pi / n) * (bw - 12);
+      var y = 10 + (1 - pts[pi].bal / maxB) * (bh - 24);
+      poly.push(x.toFixed(1) + "," + y.toFixed(1));
+    }
+    var area = "6," + (bh - 14) + " " + poly.join(" ") + " " + (bw - 6) + "," + (bh - 14);
+    var extraTag = r.hasExtra
+      ? "<span style=\"color:#059669;font-weight:700;\">Saved " + money(r.interestSaved, cur) + "</span>"
+      : "";
+    host.innerHTML =
+      "<div style=\"display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;\">" +
+      "<svg viewBox=\"0 0 92 92\" style=\"width:88px;height:88px;flex-shrink:0;\" role=\"img\" aria-label=\"Mortgage principal vs interest breakdown\">" +
+      "<circle cx=\"46\" cy=\"46\" r=\"34\" fill=\"none\" stroke=\"var(--line)\" stroke-width=\"12\"/>" +
+      "<circle cx=\"46\" cy=\"46\" r=\"34\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"12\" stroke-dasharray=\"" + pLen.toFixed(1) + " " + circ.toFixed(1) + "\" transform=\"rotate(-90 46 46)\"/>" +
+      "<circle cx=\"46\" cy=\"46\" r=\"34\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"12\" stroke-dasharray=\"" + iLen.toFixed(1) + " " + circ.toFixed(1) + "\" stroke-dashoffset=\"" + (-pLen).toFixed(1) + "\" transform=\"rotate(-90 46 46)\"/>" +
+      "<text x=\"46\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\">" + iShare + "%</text></svg>" +
+      "<div style=\"min-width:0;\">" +
+      "<div style=\"display:flex;gap:10px;flex-wrap:wrap;font-size:12px;margin-bottom:6px;\">" +
+      "<span><span style=\"display:inline-block;width:8px;height:8px;border-radius:50%;background:#0284c7;margin-right:5px;\"></span>Principal <b style=\"color:var(--ink);font-size:12px;\">" + pShare + "%</b></span>" +
+      "<span><span style=\"display:inline-block;width:8px;height:8px;border-radius:50%;background:#f59e0b;margin-right:5px;\"></span>Interest <b style=\"color:var(--ink);font-size:12px;\">" + iShare + "%</b> (" + money(totalInt, cur) + ")</span>" +
+      extraTag + "</div>" +
+      "<svg viewBox=\"0 0 " + bw + " " + bh + "\" style=\"width:100%;max-height:84px;display:block;\" role=\"img\" aria-label=\"Mortgage balance payoff curve\">" +
+      "<polygon points=\"" + area + "\" fill=\"#0284c7\" fill-opacity=\"0.16\"/>" +
+      "<polyline points=\"" + poly.join(" ") + "\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>" +
+      "<text x=\"6\" y=\"" + (bh - 2) + "\" font-size=\"10\" fill=\"currentColor\" opacity=\"0.6\">Year 0</text>" +
+      "<text x=\"" + (bw - 6) + "\" y=\"" + (bh - 2) + "\" text-anchor=\"end\" font-size=\"10\" fill=\"currentColor\" opacity=\"0.6\">" + fmtDuration(r.payoffMonths) + "</text></svg>" +
+      "</div></div>";
   }
 
   /* ---- 상태 저장/복원 (프로세스 밖 — 철칙 1) ---- */
